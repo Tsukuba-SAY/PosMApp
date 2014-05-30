@@ -10,6 +10,6 @@ public class MainActivity extends DroidGap {
     public void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        super.loadUrl("file:///android_asset/www/helloworld.html");
+        super.loadUrl("file:///android_asset/www/index.html");
     }
 }

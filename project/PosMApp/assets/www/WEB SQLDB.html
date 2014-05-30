@@ -2,52 +2,56 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Web SQL Database Sample</title>
-<style>
-#message { margin:1em; width:500px; border:1px solid gray; padding:1em; }
-</style>
+<title></title>
 <script>
-function print(msg) {
-    document.getElementById("message").innerHTML += msg + "<br>";
+
+//get default pic URL
+var dpicURL = "";
+
+function changeColor(td){
+	//該当列がチェックしている状態、普通状態に戻る
+	if(td.style.backgroundImage != dpicURL){
+		td.style.backgroundImage = 'url(img/dpic.png)';
+	}else{
+	//該当列が普通状態、チェック状態になる
+		resetTableColor();
+		td.style.backgroundImage = 'url(img/tpic.png)'; 
+	}
 }
-function test() {
-    var id = document.getElementById("id").value;
-    var context = document.getElementById("context").value;
-    alert("id:"+id+"  context:"+context);
-    var db = openDatabase("testDB", "", "Test Database", 1000);
-    db.transaction(
-        function(tr) {
-	    tr.executeSql("CREATE TABLE IF NOT EXISTS test ( id, name )", [],
-                function() { print("CREATE TABLE SUCCESS"); },
-                function() { print("CREATE TABLE ERROR"); }
-            );
-            tr.executeSql("INSERT INTO test VALUES ( ?, ? )", [ id, context ],
-                function() { print("INSERT DATA YAMADA SUCCESS"); },
-                function() { print("INSERT DATA YAMADA ERROR"); }
-            );
-            tr.executeSql("SELECT * FROM test", [],
-                function(rt, rs) {
-                    print("SELECT: SUCCESS");
-                    for (var i = 0; i < rs.rows.length; i++) {
-                        var row = rs.rows.item(i);
-                        print(row.id + " / " + row.name);
-                    }
-                },
-                function() { print("SELECT: ERROR"); }
-            );
-            print("CALLBACK END");
-        },
-        function(err) { print("TRANSACTION ERROR"); },
-        function(   ) { print("TRANSACTION SUCCESS"); }
-    );
-    print("FUNCSTION END");
+
+function getTpicURL(){
+	var table = document.getElementById("table");
+	dpicURL = table.rows[0].cells[0].style.backgroundImage;
 }
+
+function resetTableColor(){
+	var tds = document.getElementsByTagName("td");
+	for(var i=0;i<tds.length;i++){
+			tds[i].style.backgroundImage = 'url(img/dpic.png)';
+	}
+}
+
 </script>
 </head>
-<body>
+<body onload="getTpicURL()">
 id:<input type="text" id="id"></input>
 context:<input type="text" id="context"></input>
 <button onclick="test()">Insert</button>
 <div id="message"></div>
+<table id="table" width = "200" cellspacing="10">
+<tr>
+	<td style="background-image: url(img/dpic.png);text-align:center;background-size:contain;background-position:50% 50%;background-repeat:no-repeat;" onclick=changeColor(this)>1</td>
+	<td style="background-image: url(img/dpic.png);text-align:center;background-size:contain;background-position:50% 50%;background-repeat:no-repeat;" onclick=changeColor(this)>2</td>
+</tr>
+<tr>
+	<td style="background-image: url(img/dpic.png);text-align:center;background-size:contain;background-position:50% 50%;background-repeat:no-repeat;" onclick=changeColor(this)>3</td>
+	<td style="background-image: url(img/dpic.png);text-align:center;background-size:contain;background-position:50% 50%;background-repeat:no-repeat;" onclick=changeColor(this)>4</td>
+</tr>
+<tr>
+	<td style="background-image: url(img/dpic.png);text-align:center;background-size:contain;background-position:50% 50%;background-repeat:no-repeat;" onclick=changeColor(this)>5</td>
+	<td style="background-image: url(img/dpic.png);text-align:center;background-size:contain;background-position:50% 50%;background-repeat:no-repeat;" onclick=changeColor(this)>6</td>
+</tr>
+</table>
+<button onclick="loadXMLFile()">ReadXML</button>
 </body>
 </html>
