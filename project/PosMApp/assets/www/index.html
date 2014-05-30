@@ -6,8 +6,33 @@
 	<!--<link rel="stylesheet" type="text/css" href="touch-2.3.1/resources/css/sencha-touch.css" />
 	<script type="text/javascript" src="touch-2.3.1/sencha-touch-all-debug.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>-->
+	<script>
+		var dpicURL = "";
+
+		function getURL() {
+			var icon = document.getElementById("icon1");
+			dpicURL = icon.src;
+		}
+
+		function changeImage(icon) {
+			var image = icon.getElementsByTagName("img")[0];
+			if (image.src.indexOf("dpic") != -1) {
+				resetIcons();
+				image.src = "img/tpic.png";
+			} else {
+				image.src = "img/dpic.png";
+			}
+		}
+
+		function resetIcons() {
+			for ($i = 1; $i <= 10; $i++) {
+				var image = document.getElementById("icon" + $i);
+				image.src = "img/dpic.png";
+			}
+		}
+	</script>
  </head>
- <body>
+ <body onload="getURL()">
  	<div style="position: relative;">
  		<div style="position: absolute;">
 	 		<div align="center">
@@ -25,14 +50,15 @@
 		 		height: 32px;
 		 		top: 10px;
 		 		left: 96px;
-		 		z-index: 3;">
+		 		z-index: 3;"
+		 		onclick="changeImage(this)">
 		 		<div style="
 		 			position: absolute;
 		 			width: 100%;
 		 			height: 100%;
 		 			text-align: center;
 		 			"><font size="+3">1</font></div>
-		 		<img src="img/dpic.png" width="100%" height="100%"></img>
+		 		<img id="icon1" src="img/dpic.png" width="100%" height="100%"></img>
 		 	</div>
 		 	<div style="
 		 		position: absolute;
@@ -40,14 +66,15 @@
 		 		height: 32px;
 		 		top: 10px;
 		 		left: 150px;
-		 		z-index: 3;">
+		 		z-index: 3;"
+		 		onclick="changeImage(this)">
 		 		<div style="
 		 			position: absolute;
 		 			width: 100%;
 		 			height: 100%;
 		 			text-align: center;
 		 			"><font size="+3">2</font></div>
-		 		<img src="img/dpic.png" width="100%" height="100%"></img>
+		 		<img id="icon2" src="img/dpic.png" width="100%" height="100%"></img>
 		 	</div>
 		 	<div style="
 		 		position: absolute;
@@ -55,14 +82,15 @@
 		 		height: 32px;
 		 		top: 50px;
 		 		left: 96px;
-		 		z-index: 3;">
+		 		z-index: 3;"
+		 		onclick="changeImage(this)">
 		 		<div style="
 		 			position: absolute;
 		 			width: 100%;
 		 			height: 100%;
 		 			text-align: center;
 		 			"><font size="+3">3</font></div>
-		 		<img src="img/dpic.png" width="100%" height="100%"></img>
+		 		<img id="icon3" src="img/dpic.png" width="100%" height="100%"></img>
 		 	</div>
 		 	<div style="
 		 		position: absolute;
@@ -70,14 +98,15 @@
 		 		height: 32px;
 		 		top: 50px;
 		 		left: 150px;
-		 		z-index: 3;">
+		 		z-index: 3;"
+		 		onclick="changeImage(this)">
 		 		<div style="
 		 			position: absolute;
 		 			width: 100%;
 		 			height: 100%;
 		 			text-align: center;
 		 			"><font size="+3">4</font></div>
-		 		<img src="img/dpic.png" width="100%" height="100%"></img>
+		 		<img id="icon4" src="img/dpic.png" width="100%" height="100%"></img>
 		 	</div>
 		 	<div style="
 		 		position: absolute;
@@ -85,14 +114,15 @@
 		 		height: 32px;
 		 		top: 90px;
 		 		left: 96px;
-		 		z-index: 3;">
+		 		z-index: 3;"
+		 		onclick="changeImage(this)">
 		 		<div style="
 		 			position: absolute;
 		 			width: 100%;
 		 			height: 100%;
 		 			text-align: center;
 		 			"><font size="+3">5</font></div>
-		 		<img src="img/dpic.png" width="100%" height="100%"></img>
+		 		<img id="icon5" src="img/dpic.png" width="100%" height="100%"></img>
 		 	</div>
 		 	<div style="
 		 		position: absolute;
@@ -100,14 +130,15 @@
 		 		height: 32px;
 		 		top: 90px;
 		 		left: 150px;
-		 		z-index: 3;">
+		 		z-index: 3;"
+		 		onclick="changeImage(this)">
 		 		<div style="
 		 			position: absolute;
 		 			width: 100%;
 		 			height: 100%;
 		 			text-align: center;
 		 			"><font size="+3">6</font></div>
-		 		<img src="img/dpic.png" width="100%" height="100%"></img>
+		 		<img id="icon6" src="img/dpic.png" width="100%" height="100%"></img>
 		 	</div>
 		 	<div style="
 		 		position: absolute;
@@ -115,14 +146,15 @@
 		 		height: 32px;
 		 		top: 130px;
 		 		left: 96px;
-		 		z-index: 3;">
+		 		z-index: 3;"
+		 		onclick="changeImage(this)">
 		 		<div style="
 		 			position: absolute;
 		 			width: 100%;
 		 			height: 100%;
 		 			text-align: center;
 		 			"><font size="+3">7</font></div>
-		 		<img src="img/dpic.png" width="100%" height="100%"></img>
+		 		<img id="icon7" src="img/dpic.png" width="100%" height="100%"></img>
 		 	</div>
 		 	<div style="
 		 		position: absolute;
@@ -130,14 +162,15 @@
 		 		height: 32px;
 		 		top: 130px;
 		 		left: 150px;
-		 		z-index: 3;">
+		 		z-index: 3;"
+		 		onclick="changeImage(this)">
 		 		<div style="
 		 			position: absolute;
 		 			width: 100%;
 		 			height: 100%;
 		 			text-align: center;
 		 			"><font size="+3">8</font></div>
-		 		<img src="img/dpic.png" width="100%" height="100%"></img>
+		 		<img id="icon8" src="img/dpic.png" width="100%" height="100%"></img>
 		 	</div>
 		 	<div style="
 		 		position: absolute;
@@ -145,14 +178,15 @@
 		 		height: 32px;
 		 		top: 170px;
 		 		left: 96px;
-		 		z-index: 3;">
+		 		z-index: 3;"
+		 		onclick="changeImage(this)">
 		 		<div style="
 		 			position: absolute;
 		 			width: 100%;
 		 			height: 100%;
 		 			text-align: center;
 		 			"><font size="+3">9</font></div>
-		 		<img src="img/dpic.png" width="100%" height="100%"></img>
+		 		<img id="icon9" src="img/dpic.png" width="100%" height="100%"></img>
 		 	</div>
 		 	<div style="
 		 		position: absolute;
@@ -160,14 +194,15 @@
 		 		height: 32px;
 		 		top: 170px;
 		 		left: 150px;
-		 		z-index: 3;">
+		 		z-index: 3;"
+		 		onclick="changeImage(this)">
 		 		<div style="
 		 			position: absolute;
 		 			width: 100%;
 		 			height: 100%;
 		 			text-align: center;
 		 			"><font size="+3">10</font></div>
-		 		<img src="img/dpic.png" width="100%" height="100%"></img>
+		 		<img id="icon10" src="img/dpic.png" width="100%" height="100%"></img>
 		 	</div>
 		</div>
 
