@@ -5,10 +5,12 @@ Ext.application({
             items: [{
                 xtype: 'panel',
                 title: 'Hello World!',    // ナビゲーションバーに表示する文字列
+                layout: 'vbox',
                 items : [
                 {
-                    xtype: 'label',
-                    html: 'This is First View'
+                    xtype: 'image',
+                    src: 'img/map_deim2014.png',
+                	flex: 1
                 },{
                     xtype: 'button',
                     text: 'Push Next View',
