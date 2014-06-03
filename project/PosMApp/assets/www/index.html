@@ -7,16 +7,59 @@
 	<script type="text/javascript" src="touch-2.3.1/sencha-touch-all-debug.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>-->
 	<script>
-		var dpicURL = "";
+		// LocalDBを開く
+		var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
-		function getURL() {
-			var icon = document.getElementById("icon1");
-			dpicURL = icon.src;
+		function initDB() {
+			db.transaction(
+				function(tr) {
+					// テーブルを作成する
+					tr.executeSql("CREATE TABLE IF NOT EXISTS basicinfo ( id, sessionid, title, presenter, belongs )");
+					
+					// 仮データを挿入する
+					tr.executeSql("DELETE FROM basicinfo");
+					tr.executeSql("INSERT INTO basicinfo VALUES ( ?, ?, ?, ?, ? )", [1, "A1-1", "ほげほげな発表１", "筑波 一郎", "筑波大学"]);
+					tr.executeSql("INSERT INTO basicinfo VALUES ( ?, ?, ?, ?, ? )", [2, "A1-2", "ほげほげな発表２", "筑波 二郎", "筑波大学"]);
+					tr.executeSql("INSERT INTO basicinfo VALUES ( ?, ?, ?, ?, ? )", [3, "A1-3", "ほげほげな発表３", "筑波 三郎", "筑波大学"]);
+					tr.executeSql("INSERT INTO basicinfo VALUES ( ?, ?, ?, ?, ? )", [4, "A1-4", "ほげほげな発表４", "筑波 四郎", "筑波大学"]);
+					tr.executeSql("INSERT INTO basicinfo VALUES ( ?, ?, ?, ?, ? )", [5, "A1-5", "ほげほげな発表５", "筑波 五郎", "筑波大学"]);
+					tr.executeSql("INSERT INTO basicinfo VALUES ( ?, ?, ?, ?, ? )", [6, "A1-6", "ほげほげな発表６", "筑波 六郎", "筑波大学"]);
+					tr.executeSql("INSERT INTO basicinfo VALUES ( ?, ?, ?, ?, ? )", [7, "A1-7", "ほげほげな発表７", "筑波 七郎", "筑波大学"]);
+					tr.executeSql("INSERT INTO basicinfo VALUES ( ?, ?, ?, ?, ? )", [8, "A1-8", "ほげほげな発表８", "筑波 八郎", "筑波大学"]);
+					tr.executeSql("INSERT INTO basicinfo VALUES ( ?, ?, ?, ?, ? )", [9, "A1-9", "ほげほげな発表９", "筑波 九郎", "筑波大学"]);
+					tr.executeSql("INSERT INTO basicinfo VALUES ( ?, ?, ?, ?, ? )", [10, "A1-10", "ほげほげな発表１０", "筑波 十郎", "筑波大学"]);
+				},
+				function(err){},
+				function(){}
+			);
 		}
 
 		function changeImage(icon) {
 			var image = icon.getElementsByTagName("img")[0];
 			if (image.src.indexOf("dpic") != -1) {
+				// 基本情報を取得する
+				var num = Number(image.id.substring(4));
+				db.transaction(
+					function(tr) {
+						tr.executeSql("SELECT * FROM basicinfo WHERE id = ?", [num], function(rt, rs){
+							if (rs.rows.length > 0) {
+								var row = rs.rows.item(0);
+
+								// (furuya)
+								// rowの中に選択したポスターのIDに対応するDB内の基本情報が入っている
+								// row.(属性名)で各属性が取り出せる (例:row.titleで発表名)
+								console.log(row.title);
+							}
+						}, function(){});
+					},
+					function(err) {
+
+					},
+					function() {
+
+					}
+				);
+
 				resetIcons();
 				image.src = "img/tpic.png";
 			} else {
@@ -33,7 +76,7 @@
 		
 	</script>
  </head>
- <body onload="getURL()">
+ <body onload="initDB()">
  	<div style="position: relative;">
  		<div style="position: absolute;">
 	 		<div align="center">
