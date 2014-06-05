@@ -3,6 +3,7 @@
 <head>
 	<title>PosMApp</title>
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.2.css" />
+	<link rel="stylesheet" type="text/css" href="icon.css" />
 	<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.2.js"></script>
@@ -76,10 +77,10 @@
 				},
 				function(err){},
 				function(){}
-			);
-		}
+				);
+}
 
-		function changeImage(icon) {
+function changeImage(icon) {
 			// iconのimgタグを取得する
 			var image = icon.getElementsByTagName("img")[0];
 
@@ -146,196 +147,88 @@
 						//// 試しに詳細情報ページに遷移してみる
 						//window.location.href = "detail.html";
 					}
-				);
+					);
 
-				resetIcons();
-				image.src = "img/tpic.png";
-			} else {
-				image.src = "img/dpic.png";
-			}
-		}
+resetIcons();
+image.src = "img/tpic.png";
+} else {
+	image.src = "img/dpic.png";
+}
+}
 
-		function resetIcons() {
-			for (var i = 1; i <= 10; i++) {
-				var image = document.getElementById("icon" + i);
-				image.src = "img/dpic.png";
-			}
-		}
-		
-	</script>
- </head>
- <body onload="initDB()">
- 	<div style="position: relative;">
- 		<div style="position: absolute;">
-	 		<div align="center">
-		 		<img src="img/postermap.png" border="0" width="100%"
-		 		style="
-		 			position: relative;
-		 			z-index: 1;"></img>
-		 	</div>
+function resetIcons() {
+	for (var i = 1; i <= 10; i++) {
+		var image = document.getElementById("icon" + i);
+		image.src = "img/dpic.png";
+	}
+}
+
+</script>
+</head>
+<body onload="initDB()">
+	<div style="position: relative;">
+		<div style="position: absolute;">
+			<div align="center">
+				<img src="img/postermap.png" border="0" height="100%" width="100%"
+				style="
+				position: relative;
+				z-index: 1;"></img>
+			</div>
 		</div>
 
 		<div style="position: absolute;">
-		 	<div style="
-		 		position: absolute;
-		 		width: 32px;
-		 		height: 32px;
-		 		top: 175px;
-		 		left: 70px;
-		 		z-index: 3;"
-		 		onclick="changeImage(this)">
-		 		<div style="
-		 			position: absolute;
-		 			width: 100%;
-		 			height: 100%;
-		 			text-align: center;
-		 			"><font size="+3">1</font></div>
-		 		<img id="icon1" src="img/dpic.png" width="100%" height="100%"></img>
-		 	</div>
-		 	<div style="
-		 		position: absolute;
-		 		width: 32px;
-		 		height: 32px;
-		 		top: 585px;
-		 		left: 70px;
-		 		z-index: 3;"
-		 		onclick="changeImage(this)">
-		 		<div style="
-		 			position: absolute;
-		 			width: 100%;
-		 			height: 100%;
-		 			text-align: center;
-		 			"><font size="+3">2</font></div>
-		 		<img id="icon2" src="img/dpic.png" width="100%" height="100%"></img>
-		 	</div>
-		 	<div style="
-		 		position: absolute;
-		 		width: 32px;
-		 		height: 32px;
-		 		top: 50px;
-		 		left: 180px;
-		 		z-index: 3;"
-		 		onclick="changeImage(this)">
-		 		<div style="
-		 			position: absolute;
-		 			width: 100%;
-		 			height: 100%;
-		 			text-align: center;
-		 			"><font size="+3">3</font></div>
-		 		<img id="icon3" src="img/dpic.png" width="100%" height="100%"></img>
-		 	</div>
-		 	<div style="
-		 		position: absolute;
-		 		width: 32px;
-		 		height: 32px;
-		 		top: 50px;
-		 		left: 370px;
-		 		z-index: 3;"
-		 		onclick="changeImage(this)">
-		 		<div style="
-		 			position: absolute;
-		 			width: 100%;
-		 			height: 100%;
-		 			text-align: center;
-		 			"><font size="+3">4</font></div>
-		 		<img id="icon4" src="img/dpic.png" width="100%" height="100%"></img>
-		 	</div>
-		 	<div style="
-		 		position: absolute;
-		 		width: 32px;
-		 		height: 32px;
-		 		top: 345px;
-		 		left: 180px;
-		 		z-index: 3;"
-		 		onclick="changeImage(this)">
-		 		<div style="
-		 			position: absolute;
-		 			width: 100%;
-		 			height: 100%;
-		 			text-align: center;
-		 			"><font size="+3">5</font></div>
-		 		<img id="icon5" src="img/dpic.png" width="100%" height="100%"></img>
-		 	</div>
-		 	<div style="
-		 		position: absolute;
-		 		width: 32px;
-		 		height: 32px;
-		 		top: 345px;
-		 		left: 370px;
-		 		z-index: 3;"
-		 		onclick="changeImage(this)">
-		 		<div style="
-		 			position: absolute;
-		 			width: 100%;
-		 			height: 100%;
-		 			text-align: center;
-		 			"><font size="+3">6</font></div>
-		 		<img id="icon6" src="img/dpic.png" width="100%" height="100%"></img>
-		 	</div>
-		 	<div style="
-		 		position: absolute;
-		 		width: 32px;
-		 		height: 32px;
-		 		top: 420px;
-		 		left: 180px;
-		 		z-index: 3;"
-		 		onclick="changeImage(this)">
-		 		<div style="
-		 			position: absolute;
-		 			width: 100%;
-		 			height: 100%;
-		 			text-align: center;
-		 			"><font size="+3">7</font></div>
-		 		<img id="icon7" src="img/dpic.png" width="100%" height="100%"></img>
-		 	</div>
-		 	<div style="
-		 		position: absolute;
-		 		width: 32px;
-		 		height: 32px;
-		 		top: 420px;
-		 		left: 370px;
-		 		z-index: 3;"
-		 		onclick="changeImage(this)">
-		 		<div style="
-		 			position: absolute;
-		 			width: 100%;
-		 			height: 100%;
-		 			text-align: center;
-		 			"><font size="+3">8</font></div>
-		 		<img id="icon8" src="img/dpic.png" width="100%" height="100%"></img>
-		 	</div>
-		 	<div style="
-		 		position: absolute;
-		 		width: 32px;
-		 		height: 32px;
-		 		top: 700px;
-		 		left: 180px;
-		 		z-index: 3;"
-		 		onclick="changeImage(this)">
-		 		<div style="
-		 			position: absolute;
-		 			width: 100%;
-		 			height: 100%;
-		 			text-align: center;
-		 			"><font size="+3">9</font></div>
-		 		<img id="icon9" src="img/dpic.png" width="100%" height="100%"></img>
-		 	</div>
-		 	<div style="
-		 		position: absolute;
-		 		width: 32px;
-		 		height: 32px;
-		 		top: 700px;
-		 		left: 370px;
-		 		z-index: 3;"
-		 		onclick="changeImage(this)">
-		 		<div style="
-		 			position: absolute;
-		 			width: 100%;
-		 			height: 100%;
-		 			text-align: center;
-		 			"><font size="+3">10</font></div>
-		 		<img id="icon10" src="img/dpic.png" width="100%" height="100%"></img>
-		 	</div>
+			<div class="vertical" id="iconNo1" onclick="changeImage(this)">
+				<img id="icon1" src="img/dpic.png" width="100%" height="100%"></img>
+				<div class="iconindexver">1</div>
+
+			</div>
+			<div class="vertical" id="iconNo2" onclick="changeImage(this)">
+
+				<img id="icon2" src="img/dpic.png" width="100%" height="100%"></img>
+				<div class="iconindexver">2</div>
+			</div>
+			<div class="horizontal" id="iconNo3" onclick="changeImage(this)">
+				<img id="icon3" src="img/dpic.png" width="100%" height="100%"></img>
+				<div class="iconindexhor">3</div>
+
+			</div>
+			<div class="horizontal" id="iconNo4" onclick="changeImage(this)">
+				<img id="icon4" src="img/dpic.png" width="100%" height="100%"></img>
+				<div class="iconindexhor">4</div>
+
+			</div>
+			<div class="horizontal" id="iconNo5" onclick="changeImage(this)">
+				<img id="icon5" src="img/dpic.png" width="100%" height="100%"></img>
+				<div class="iconindexhor">5</div>
+
+			</div>
+			<div class="horizontal" id="iconNo6" onclick="changeImage(this)">
+				<img id="icon6" src="img/dpic.png" width="100%" height="100%"></img>
+				<div class="iconindexhor">6</div>
+
+			</div>
+			<div class="horizontal" id="iconNo7" onclick="changeImage(this)">
+				<img id="icon7" src="img/dpic.png" width="100%" height="100%"></img>
+				<div class="iconindexhor">7</div>
+
+			</div>
+			<div class="horizontal" id="iconNo8" onclick="changeImage(this)">
+				<img id="icon8" src="img/dpic.png" width="100%" height="100%"></img>
+				<div class="iconindexhor">8</div>
+
+			</div>
+			<div class="horizontal" id="iconNo9" onclick="changeImage(this)">
+				<img id="icon9" src="img/dpic.png" width="100%" height="100%"></img>
+				<div class="iconindexhor">9</div>
+
+			</div>
+			<div class="horizontal" id="iconNo10" onclick="changeImage(this)">
+				<img id="icon10" src="img/dpic.png" width="100%" height="100%"></img>
+				<div class="iconindexhor">10</div>
+
+			</div>
+
+
 		</div>
 
 
