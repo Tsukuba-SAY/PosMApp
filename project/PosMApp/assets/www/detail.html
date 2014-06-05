@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script>
+		var posterid = sessionStorage.getItem("posterid");
+		var sessionid = sessionStorage.getItem("sessionid");
+		var title = sessionStorage.getItem("title");
+		var abstract = sessionStorage.getItem("abstract");
+		var authorname = sessionStorage.getItem("authorname");
+		var authorbelongs = sessionStorage.getItem("authorbelongs");
+		var authors = sessionStorage.getItem("authors");
+		var keywords = sessionStorage.getItem("keywords");
+	</script>
+	<title></title>
+</head>
+<body>
+	<script>
+		document.write("No. " + posterid + " [" + sessionid + "]");
+	</script>
+	<h1>
+		<script>
+			document.write(title);
+		</script>
+	</h1>
+	<ul>
+		<script>
+			document.write("<li>著者： " + authors + "</li>");
+			document.write("<li>所属： " + authorbelongs + "</li>");
+			document.write("<li>発表者： " + authorname + "</li>");
+			document.write("<li>キーワード： " + keywords + "</li>");
+		</script>
+	</ul>
+	<h2>概要</h2>
+	<p>
+		<script>document.write(abstract);</script>
+	</p>
+
+
+</body>
+</head>

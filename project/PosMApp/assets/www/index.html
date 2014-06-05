@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>PhoneGap</title>
+	<title>PosMApp</title>
 	<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
 	<!--<link rel="stylesheet" type="text/css" href="touch-2.3.1/resources/css/sencha-touch.css" />
 	<script type="text/javascript" src="touch-2.3.1/sencha-touch-all-debug.js"></script>
@@ -83,12 +83,13 @@
 			// 強調表示されているかどうかで場合分け
 			// 画像ファイルの名前で判断している
 			if (image.src.indexOf("dpic") != -1) {
+
 				// 基本情報を取得する
-				var num = Number(image.id.substring(4));
+				var posterid = Number(image.id.substring(4));
 				db.transaction(
-					function(tr) {
-						// ポスターの基本情報を取得する
-						tr.executeSql("SELECT * FROM poster WHERE id = ?", [num], function(transaction, returnSet){
+					function(tr) {						
+						// ポスターの情報を取得する
+						tr.executeSql("SELECT * FROM poster WHERE id = ?", [posterid], function(transaction, returnSet){
 							if (returnSet.rows.length > 0) {
 								var row = returnSet.rows.item(0);
 
@@ -96,11 +97,19 @@
 								// rowの中に選択したポスターのIDに対応するDB内の基本情報が入っている
 								// row.(属性名)で各属性が取り出せる (例:row.titleで発表名)
 								console.log(row.title);
+
+								// Session Storageに保存
+								sessionStorage.setItem("posterid", posterid);
+								sessionStorage.setItem("sessionid", row.sessionid);
+								sessionStorage.setItem("title", row.title);
+								sessionStorage.setItem("abstract", row.abstract);
+								sessionStorage.setItem("authorname", row.authorname);
+								sessionStorage.setItem("authorbelongs", row.authorbelongs);
 							}
 						}, function(){});
 
 						// ポスターの発表者一覧を取得する
-						tr.executeSql("SELECT * FROM poster, author WHERE poster.id = author.posterid AND poster.id = ?", [num], function(tr, rs) {
+						tr.executeSql("SELECT * FROM poster, author WHERE poster.id = author.posterid AND poster.id = ?", [posterid], function(tr, rs) {
 							// 発表者を保存するArray
 							var authors = new Array();
 
@@ -109,10 +118,13 @@
 								authors.push(row.name);
 							}
 							console.log(authors);
+
+							// Session Storageに保存
+							sessionStorage.setItem("authors", authors);
 						}, function(){});
 
 						//　ポスターのキーワード一覧を取得する
-						tr.executeSql("SELECT * FROM poster, keyword WHERE poster.id = keyword.posterid AND poster.id = ?", [num], function(tr, rs){
+						tr.executeSql("SELECT * FROM poster, keyword WHERE poster.id = keyword.posterid AND poster.id = ?", [posterid], function(tr, rs){
 							// キーワードを保存するArray
 							var keywords = new Array();
 
@@ -121,13 +133,15 @@
 								keywords.push(row.keyword);
 							}
 							console.log(keywords);
+
+							// Session Storageに保存
+							sessionStorage.setItem("keywords", keywords);
 						}, function(){});
 					},
-					function(err) {
-
-					},
+					function(err) {},
 					function() {
-
+						//// 試しに詳細情報ページに遷移してみる
+						//window.location.href = "detail.html";
 					}
 				);
 
@@ -139,8 +153,8 @@
 		}
 
 		function resetIcons() {
-			for ($i = 1; $i <= 10; $i++) {
-				var image = document.getElementById("icon" + $i);
+			for (var i = 1; i <= 10; i++) {
+				var image = document.getElementById("icon" + i);
 				image.src = "img/dpic.png";
 			}
 		}
