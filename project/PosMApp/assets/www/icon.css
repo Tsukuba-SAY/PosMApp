@@ -10,12 +10,12 @@
 }
 
 .horizontal{
-	position: absolute;
+	position: absolute; 
 	width:103px;
 	height:43px;
 	text-align:center;
 	vertical-align:middle;
-		font-size: xx-large;
+	font-size: xx-large;
 
 	z-index: 3;
 }
@@ -30,7 +30,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	top:8px;
+	top:3px;
 	z-index: 4;
 }
 
@@ -42,36 +42,39 @@
 	top : 570px;
 	left: 72px;
 }
+
+
 #iconNo3{
 	top : 51px;
-	left: 155px;
-
-}
-#iconNo4{
-	top : 51px;
-	left: 250px;
+	left: 152px;
 }
 #iconNo5{
 	top : 343px;
-	left: 155px;
-}
-#iconNo6{
-	top : 340px;
-	left: 410px;
+	left: 152px;
 }
 #iconNo7{
-	top : 420px;
-	left: 155px;
-}
-#iconNo8{
-	top : 420px;
-	left: 410px;
+	top : 432px;
+	left: 152px;
 }
 #iconNo9{
-	top : 700px;
-	left: 155px;
+	top : 705px;
+	left: 152px;
+}
+
+
+#iconNo4{
+	top : 51px;
+	left: 341px;
+}
+#iconNo6{
+	top : 343px;
+	left: 341px;
+}
+#iconNo8{ 
+	top : 432px;
+	left: 341px;
 }
 #iconNo10{
-	top : 700px;
-	left: 410px;
+	top : 705px;
+	left: 341px;
 }
