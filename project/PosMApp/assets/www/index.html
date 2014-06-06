@@ -11,75 +11,12 @@
 	<!--<link rel="stylesheet" type="text/css" href="touch-2.3.1/resources/css/sencha-touch.css" />
 	<script type="text/javascript" src="touch-2.3.1/sencha-touch-all-debug.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>-->
+	<script type="text/javascript" charset="utf-8" src="js/initdb.js"></script>
+
 	<script>
 		// LocalDBを開く
 		var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
-		// DBを初期化する
-		function initDB() {
-			db.transaction(
-				function(tr) {
-					// テーブルを作成する
-					tr.executeSql("DROP TABLE IF EXISTS poster");
-					tr.executeSql("DROP TABLE IF EXISTS author");
-					tr.executeSql("DROP TABLE IF EXISTS keyword");
-					tr.executeSql("CREATE TABLE IF NOT EXISTS poster ( id, sessionid, title, abstract, authorname, authorbelongs )");
-					tr.executeSql("CREATE TABLE IF NOT EXISTS author ( id, posterid, name, belongs, first )");
-					tr.executeSql("CREATE TABLE IF NOT EXISTS keyword ( id, posterid, keyword )");
-
-					// テーブルを作成に関して制約を含めてちゃんと書いたやつですが、うまく動作しない(furuya)
-					/*tr.executeSql("CREATE TABLE IF NOT EXISTS poster ( id INTEGER NOT NULL PRIMARY KEY UNSIGNED AUTO_INCREMENT, sessionid TEXT, title TEXT, abstract TEXT, authorname TEXT, authorbelongs TEXT )");
-					tr.executeSql("CREATE TABLE IF NOT EXISTS author ( id INTEGER NOT NULL PRIMARY KEY UNSIGNED AUTO_INCREMENT, posterid INTEGER, name TEXT, belongs TEXT, first INTEGER, FOREIGN KEY (posterid) REFERENCES poster (id) )");
-					tr.executeSql("CREATE TABLE IF NOT EXISTS keyword ( id INTEGER NOT NULL PRIMARY KEY UNSIGNED AUTO_INCREMENT, posterid INTEGER, keyword TEXT, FOREIGN KEY (posterid) REFERENCES poster (id) )");*/ 
-					
-					// 仮データを挿入する (poster)
-					tr.executeSql("DELETE FROM poster");
-					tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [1, "A1-1", "ほげほげな発表１", "概要１", "筑波 一郎", "筑波大学"]);
-					tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [2, "A1-2", "ほげほげな発表２", "概要２", "筑波 二郎", "筑波大学"]);
-					tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [3, "A1-3", "ほげほげな発表３", "概要３", "筑波 三郎", "筑波大学"]);
-					tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [4, "A1-4", "ほげほげな発表４", "概要４", "筑波 四郎", "筑波大学"]);
-					tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [5, "A1-5", "ほげほげな発表５", "概要５", "筑波 五郎", "筑波大学"]);
-					tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [6, "A1-6", "ほげほげな発表６", "概要６", "筑波 六郎", "筑波大学"]);
-					tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [7, "A1-7", "ほげほげな発表７", "概要7", "筑波 七郎", "筑波大学"]);
-					tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [8, "A1-8", "ほげほげな発表８", "概要８", "筑波 八郎", "筑波大学"]);
-					tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [9, "A1-9", "ほげほげな発表９", "概要９", "筑波 九郎", "筑波大学"]);
-					tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [10, "A1-10", "ほげほげな発表１０", "概要１０", "筑波 十郎", "筑波大学"]);
-
-					// 仮データを挿入する (author)
-					tr.executeSql("DELETE FROM author");
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [1, 1, "筑波 一郎", "筑波大学", 1]);
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [2, 1, "筑波 一太郎", "筑波大学", 0]);
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [3, 2, "筑波 二郎", "筑波大学", 1]);
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [4, 3, "筑波 三郎", "筑波大学", 1]);
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [5, 4, "筑波 四郎", "筑波大学", 1]);
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [6, 5, "筑波 五郎", "筑波大学", 1]);
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [7, 6, "筑波 六郎", "筑波大学", 1]);
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [8, 7, "筑波 七郎", "筑波大学", 1]);
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [9, 8, "筑波 八郎", "筑波大学", 1]);
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [10, 9, "筑波 九郎", "筑波大学", 1]);
-					tr.executeSql("INSERT INTO author VALUES ( ?, ?, ?, ?, ? )", [11, 10, "筑波 十郎", "筑波大学", 1]);
-
-					// 仮データを挿入する (keyword)
-					tr.executeSql("DELETE FROM keyword");
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [1, 1, "キーワード１"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [2, 1, "キーワード２"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [3, 2, "キーワード３"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [4, 2, "キーワード４"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [5, 3, "キーワード５"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [6, 3, "キーワード６"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [7, 4, "キーワード７"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [8, 5, "キーワード８"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [9, 6, "キーワード９"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [10, 7, "キーワード１０"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [11, 8, "キーワード１１"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [12, 9, "キーワード１２"]);
-					tr.executeSql("INSERT INTO keyword VALUES ( ?, ?, ? )", [13, 10, "キーワード１３"]);
-
-				},
-				function(err){},
-				function(){}
-			);
-		}
 		function showDetailInfoPage() {
 			window.location.href = "detail.html";
 		}
