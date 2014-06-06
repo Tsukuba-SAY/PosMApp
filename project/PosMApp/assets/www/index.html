@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>PosMApp</title>
-	<link rel="stylesheet" href="css/jquery.mobile-1.4.2.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.css" />
 	<link rel="stylesheet" type="text/css" href="icon.css" />
 	<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.js"></script>
@@ -77,10 +77,35 @@
 				},
 				function(err){},
 				function(){}
-				);
-}
+			);
+		}
+		function showDetailInfoPage() {
+			window.location.href = "detail.html";
+		}
 
-function changeImage(icon) {
+		function changeBasicInfoPanel(flag) {
+			var basicinfopanel = document.getElementById("basicinfopanel");
+			if (flag) {
+				basicinfopanel.style.display = "inline";
+			} else {
+				basicinfopanel.style.display = "none";
+			}
+
+			var basicinfo = document.getElementById("basicinfo");
+
+			basicinfo.innerHTML = "No. " 
+				+ sessionStorage.getItem("posterid")
+				+ " ["
+				+ sessionStorage.getItem("sessionid")
+				+ "]<br />"
+				+ sessionStorage.getItem("title")
+				+ "<br />発表者： "
+				+ sessionStorage.getItem("authorname")
+				+ "<br />所属： "
+				+ sessionStorage.getItem("authorbelongs");
+		}
+
+		function getBasicInfo(icon) {
 			// iconのimgタグを取得する
 			var image = icon.getElementsByTagName("img")[0];
 
@@ -110,10 +135,11 @@ function changeImage(icon) {
 								sessionStorage.setItem("authorname", row.authorname);
 								sessionStorage.setItem("authorbelongs", row.authorbelongs);
 							}
+		
 						}, function(){});
 
 						// ポスターの発表者一覧を取得する
-						tr.executeSql("SELECT * FROM poster, author WHERE poster.id = author.posterid AND poster.id = ?", [posterid], function(tr, rs) {
+						tr.executeSql("SELECT * FROM author WHERE posterid = ?", [posterid], function(tr, rs) {
 							// 発表者を保存するArray
 							var authors = new Array();
 
@@ -128,7 +154,7 @@ function changeImage(icon) {
 						}, function(){});
 
 						//　ポスターのキーワード一覧を取得する
-						tr.executeSql("SELECT * FROM poster, keyword WHERE poster.id = keyword.posterid AND poster.id = ?", [posterid], function(tr, rs){
+						tr.executeSql("SELECT * FROM keyword WHERE posterid = ?", [posterid], function(tr, rs){
 							// キーワードを保存するArray
 							var keywords = new Array();
 
@@ -144,26 +170,29 @@ function changeImage(icon) {
 					},
 					function(err) {},
 					function() {
-						//// 試しに詳細情報ページに遷移してみる
-						//window.location.href = "detail.html";
+						changeBasicInfoPanel(true);
 					}
-					);
+				);
 
-resetIcons();
-image.src = "img/tpic.png";
-} else {
-	image.src = "img/dpic.png";
-}
-}
+				resetIcons();
+				image.src = "img/tpic.png";
 
-function resetIcons() {
-	for (var i = 1; i <= 10; i++) {
-		var image = document.getElementById("icon" + i);
-		image.src = "img/dpic.png";
-	}
-}
 
-</script>
+			} else {
+				image.src = "img/dpic.png";
+				changeBasicInfoPanel(false);
+
+			}
+		}
+
+		function resetIcons() {
+			for (var i = 1; i <= 10; i++) {
+				var image = document.getElementById("icon" + i);
+				image.src = "img/dpic.png";
+				changeBasicInfoPanel(false);
+			}
+		}
+	</script>
 </head>
 <body onload="initDB()">
 	<div style="position: relative;">
@@ -174,55 +203,89 @@ function resetIcons() {
 				position: relative;
 				z-index: 1;"></img>
 			</div>
+			<div style="position: relative;">
+				<div id="basicinfopanel" style="position: absolute;
+				width: 100%;
+				height: 100px;
+				bottom: 0px;
+				display: none;">
+					<div id="basicinfo" style="
+					position: absolute;
+					width: 100%;
+
+			 		text-align: left;
+			 		padding: 10px;
+			 		
+			 		word-break:break-all; 
+					margin:0 auto;
+			 		background-color: #ffff99;
+			 		overflow: hidden;
+			 		text-overflow: ellipsis;
+			 		z-index: 20;"
+			 		onclick="showDetailInfoPage()">
+
+					</div>
+					<div style="
+					position: absolute;
+					top: 0%;
+					right: 0px;
+					z-index: 30;
+					font-size: x-large;
+					color: #ff0000;"
+					onclick="resetIcons()">
+						×
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div style="position: absolute;">
-			<div class="vertical" id="iconNo1" onclick="changeImage(this)">
+			<div class="vertical" id="iconNo1" onclick="getBasicInfo(this)">
 				<img id="icon1" src="img/dpic.png" width="100%" height="100%"></img>
 				<div class="iconindexver">1</div>
 
 			</div>
-			<div class="vertical" id="iconNo2" onclick="changeImage(this)">
+			<div class="vertical" id="iconNo2" onclick="getBasicInfo(this)">
 
 				<img id="icon2" src="img/dpic.png" width="100%" height="100%"></img>
 				<div class="iconindexver">2</div>
 			</div>
-			<div class="horizontal" id="iconNo3" onclick="changeImage(this)">
+			<div class="horizontal" id="iconNo3" onclick="getBasicInfo(this)">
 				<img id="icon3" src="img/dpic.png" width="100%" height="100%"></img>
 				<div class="iconindexhor">3</div>
 
 			</div>
-			<div class="horizontal" id="iconNo4" onclick="changeImage(this)">
+			<div class="horizontal" id="iconNo4" onclick="getBasicInfo(this)">
 				<img id="icon4" src="img/dpic.png" width="100%" height="100%"></img>
 				<div class="iconindexhor">4</div>
 
 			</div>
-			<div class="horizontal" id="iconNo5" onclick="changeImage(this)">
+			<div class="horizontal" id="iconNo5" onclick="getBasicInfo(this)">
 				<img id="icon5" src="img/dpic.png" width="100%" height="100%"></img>
 				<div class="iconindexhor">5</div>
 
 			</div>
-			<div class="horizontal" id="iconNo6" onclick="changeImage(this)">
+			<div class="horizontal" id="iconNo6" onclick="getBasicInfo(this)">
 				<img id="icon6" src="img/dpic.png" width="100%" height="100%"></img>
 				<div class="iconindexhor">6</div>
 
 			</div>
-			<div class="horizontal" id="iconNo7" onclick="changeImage(this)">
+			<div class="horizontal" id="iconNo7" onclick="getBasicInfo(this)">
 				<img id="icon7" src="img/dpic.png" width="100%" height="100%"></img>
 				<div class="iconindexhor">7</div>
 
 			</div>
-			<div class="horizontal" id="iconNo8" onclick="changeImage(this)">
+			<div class="horizontal" id="iconNo8" onclick="getBasicInfo(this)">
 				<img id="icon8" src="img/dpic.png" width="100%" height="100%"></img>
 				<div class="iconindexhor">8</div>
 
 			</div>
-			<div class="horizontal" id="iconNo9" onclick="changeImage(this)">
+			<div class="horizontal" id="iconNo9" onclick="getBasicInfo(this)">
 				<img id="icon9" src="img/dpic.png" width="100%" height="100%"></img>
 				<div class="iconindexhor">9</div>
 
 			</div>
-			<div class="horizontal" id="iconNo10" onclick="changeImage(this)">
+			<div class="horizontal" id="iconNo10" onclick="getBasicInfo(this)">
 				<img id="icon10" src="img/dpic.png" width="100%" height="100%"></img>
 				<div class="iconindexhor">10</div>
 
@@ -230,8 +293,6 @@ function resetIcons() {
 
 
 		</div>
-
-
 	</div>
 </body>
 </html>
