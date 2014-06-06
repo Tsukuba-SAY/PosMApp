@@ -17,6 +17,9 @@
 
 		// DBを初期化する
 		function initDB() {
+			if(sessionStorage.getItem("posterid")!=null){
+						changeBasicInfoPanel(true);
+			}
 			db.transaction(
 				function(tr) {
 					// テーブルを作成する
