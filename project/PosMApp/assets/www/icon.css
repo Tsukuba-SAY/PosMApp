@@ -1,0 +1,77 @@
+.vertical{
+	position: absolute;
+	width:45px;
+	height:100px;
+	text-align:center;
+	vertical-align:middle;
+	font-size: xx-large;
+
+	z-index: 3;
+}
+
+.horizontal{
+	position: absolute;
+	width:103px;
+	height:43px;
+	text-align:center;
+	vertical-align:middle;
+		font-size: xx-large;
+
+	z-index: 3;
+}
+.iconindexver{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:30px;
+	z-index: 4;
+}
+.iconindexhor{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:8px;
+	z-index: 4;
+}
+
+#iconNo1{
+	top : 150px;
+	left: 72px;
+}
+#iconNo2{
+	top : 570px;
+	left: 72px;
+}
+#iconNo3{
+	top : 51px;
+	left: 155px;
+
+}
+#iconNo4{
+	top : 51px;
+	left: 250px;
+}
+#iconNo5{
+	top : 343px;
+	left: 155px;
+}
+#iconNo6{
+	top : 340px;
+	left: 410px;
+}
+#iconNo7{
+	top : 420px;
+	left: 155px;
+}
+#iconNo8{
+	top : 420px;
+	left: 410px;
+}
+#iconNo9{
+	top : 700px;
+	left: 155px;
+}
+#iconNo10{
+	top : 700px;
+	left: 410px;
+}
