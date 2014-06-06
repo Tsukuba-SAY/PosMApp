@@ -17,8 +17,11 @@
 
 		// DBを初期化する
 		function initDB() {
+			// Indexに戻る時、強調表示と基本情報表示 
 			if(sessionStorage.getItem("posterid")!=null){
 						changeBasicInfoPanel(true);
+						var iconId = "icon"+sessionStorage.getItem("posterid");
+						document.getElementById(iconId).src = "img/tpic.png";
 			}
 			db.transaction(
 				function(tr) {
