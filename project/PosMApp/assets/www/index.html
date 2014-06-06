@@ -43,6 +43,16 @@
 				+ sessionStorage.getItem("authorbelongs");
 		}
 
+		function init() {
+			if (sessionStorage.getItem("posterid") != null) {
+				changeBasicInfoPanel(true);
+				var iconid = "icon" + sessionStorage.getItem("posterid");
+				document.getElementById(iconid).src = "img/tpic.png";
+			}
+
+			initDB();
+		}
+
 		function getBasicInfo(icon) {
 			// iconのimgタグを取得する
 			var image = icon.getElementsByTagName("img")[0];
@@ -132,7 +142,7 @@
 		}
 	</script>
 </head>
-<body onload="initDB()">
+<body onload="init()">
 	<div style="position: relative;">
 		<div style="position: absolute;">
 			<div align="center">
