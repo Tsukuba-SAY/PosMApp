@@ -11,6 +11,10 @@
 		var authorbelongs = sessionStorage.getItem("authorbelongs");
 		var authors = sessionStorage.getItem("authors");
 		var keywords = sessionStorage.getItem("keywords");
+		
+		function returnIndex(){
+			window.location.href="index.html";
+		}
 	</script>
 	<title></title>
 </head>
@@ -35,6 +39,6 @@
 	<p>
 		<script>document.write(abstract);</script>
 	</p>
-	<input type="button" onclick="window.history.back()" value="戻る"></input>
+	<input type="button" onclick="returnIndex()" value="戻る"></input>
 </body>
 </head>
