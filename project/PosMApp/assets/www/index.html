@@ -11,6 +11,15 @@
 	<script type="text/javascript" charset="utf-8" src="js/initdb.js"></script>
 
 	<script>
+		$(function() {
+			$(".posterfont").on('touchstart', function(e) {
+				var icon = document.getElementById("iconNo" + e.target.id[4]);
+				getBasicInfo(icon);
+			});
+		});
+	</script>
+
+	<script>
 		// LocalDBを開く
 		var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
@@ -185,9 +194,9 @@
 		</div>
 
 		<div style="position: absolute;">
-			<div class="vertical" id="iconNo1" onclick="getBasicInfo(this)">
+			<div class="vertical" id="iconNo1">
 				<img id="icon1" src="img/dpic.png" width="100%" height="100%"></img>
-				<div class="iconindexver">1</div>
+				<div class="posterfont iconindexver" id="font1">1</div>
 
 			</div>
 			<div class="vertical" id="iconNo2" onclick="getBasicInfo(this)">
