@@ -2,6 +2,18 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css" />
+	<script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.2.min.js"></script>
+
+	<script>
+		$(function() {
+			$("#returnButton").on('touchstart', function() {
+				returnIndex();
+			});
+		});
+	</script>
+
 	<script>
 		var posterid = sessionStorage.getItem("posterid");
 		var sessionid = sessionStorage.getItem("sessionid");
@@ -39,6 +51,6 @@
 	<p>
 		<script>document.write(abstract);</script>
 	</p>
-	<input type="button" onclick="returnIndex()" value="戻る"></input>
+	<input id="returnButton" type="button" value="戻る"></input>
 </body>
 </head>
