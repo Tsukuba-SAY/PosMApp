@@ -13,6 +13,9 @@
 
 </head>
 <body onload="init()">
+	<div data-role="header">
+    	<input type="search" name="search" id="search-basic" value="" />
+	</div>
 	<div style="position: relative;">
 		<div style="position: absolute;">
 			<div align="center">
@@ -39,18 +42,16 @@
 			 		background-color: #ffff99;
 			 		overflow: hidden;
 			 		text-overflow: ellipsis;
-			 		z-index: 20;"
-			 		onclick="showDetailInfoPage()">
+			 		z-index: 20;">
 
 					</div>
-					<div style="
+					<div id="closebutton" style="
 					position: absolute;
 					top: 0%;
 					right: 0px;
 					z-index: 30;
 					font-size: 40px;
-					color: #ff0000;"
-					onclick="resetIcons()">
+					color: #ff0000;">
 						×
 					</div>
 				</div>
@@ -106,8 +107,6 @@
 				<div class="iconindexhor" id="font10">10</div>
 
 			</div>
-
-
 		</div>
 	</div>
 </body>

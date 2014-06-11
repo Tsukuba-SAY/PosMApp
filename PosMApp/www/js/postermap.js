@@ -3,6 +3,14 @@ $(function() {
 		var icon = document.getElementById("iconNo" + e.target.id.substring(4));
 		getBasicInfo(icon);
 	});
+
+	$("#basicinfo").on('touchstart', function(e) {
+		showDetailInfoPage();
+	});
+
+	$("#closebutton").on('touchstart', function(e) {
+		resetIcons();
+	});
 });
 
 // LocalDBを開く
