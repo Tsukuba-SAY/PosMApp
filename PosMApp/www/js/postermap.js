@@ -1,15 +1,23 @@
 $(function() {
+	// 各ポスターアイコンにタッチイベントをつける
 	$(".postericon").on('touchstart', function(e) {
 		var icon = document.getElementById("iconNo" + e.target.id.substring(4));
 		getBasicInfo(icon);
 	});
 
+	// 詳細情報画面を表示する
 	$("#basicinfo").on('touchstart', function(e) {
 		showDetailInfoPage();
 	});
 
+	// 基本情報画面の閉じるボタンを押す
 	$("#closebutton").on('touchstart', function(e) {
 		resetIcons();
+	});
+
+	// タイトルで検索
+	$("#search-title").bind("change", function(e, ui) {
+		searchByTitle(e.target.value);
 	});
 });
 
@@ -50,6 +58,31 @@ function init() {
 	}
 
 	initDB();
+}
+
+function searchByTitle(title) {
+	var posterids = new Array();
+
+	db.transaction(
+		function(tr) {
+			tr.executeSql("SELECT * FROM poster WHERE title LIKE ?", ["%"+title+"%"], function(tr, rs) {
+				for (var i = 0; i < rs.rows.length; i++) {
+					posterids.push(rs.rows.item(i).id);
+				}
+
+			}, function(){});
+		},
+		function(err) {
+
+		},
+		function(){
+			emphasisSearchedPosters(posterids);
+		}
+	);
+}
+
+function emphasisSearchedPosters(posterids) {
+	console.log(posterids);
 }
 
 function getBasicInfo(icon) {
