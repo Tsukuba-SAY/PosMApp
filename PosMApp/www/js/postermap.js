@@ -62,11 +62,13 @@ function init() {
 
 function searchByTitle(title) {
 	var posterids = new Array();
+	var ltitle = title.toLowerCase();
 
 	db.transaction(
 		function(tr) {
-			tr.executeSql("SELECT * FROM poster WHERE title LIKE ?", ["%"+title+"%"], function(tr, rs) {
+			tr.executeSql("SELECT id, LOWER(title) AS ltitle FROM poster WHERE ltitle LIKE ?", ["%"+ltitle+"%"], function(tr, rs) {
 				for (var i = 0; i < rs.rows.length; i++) {
+					console.log(rs.rows.item(i).id);
 					posterids.push(rs.rows.item(i).id);
 				}
 
@@ -76,13 +78,16 @@ function searchByTitle(title) {
 
 		},
 		function(){
-			emphasisSearchedPosters(posterids);
+			// 強調表示
+			// emphasisSearchedPosters(posterids);
 		}
 	);
 }
 
 function emphasisSearchedPosters(posterids) {
-	console.log(posterids);
+	for (var i = 0; i < posterids.length; i++) {
+		document.getElementById("icon" + posterids[i]).src = "img/spic.png";
+	}
 }
 
 function getBasicInfo(icon) {
