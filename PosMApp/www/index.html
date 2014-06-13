@@ -14,9 +14,14 @@
 </head>
 <body onload="init()">
 	<div data-role="header">
-    	<input id="search-title" type="search" name="search" placeholder="タイトルで検索" />
+		<div data-role="fieldcontain">
+			<!--<label for="search-title">10件見つかりました</label>-->
+    		<input id="search-title" type="search" name="search" placeholder="タイトルで検索" />
+    	</div>
 	</div>
 	<div style="position: relative;">
+		<div id="searchResult" style="position: absolute; z-index: 100;">
+		</div>
 		<div style="position: absolute;">
 			<div align="center">
 				<img src="img/postermap.png" border="0" height="100%" width="100%"

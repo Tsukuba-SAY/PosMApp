@@ -34,6 +34,8 @@ $(function() {
 					image.src = "img/dpic.png";
 				}
 			}
+
+			document.getElementById("searchResult").innerHTML = "";
 		}
 	});
 
@@ -92,6 +94,8 @@ function init() {
 
 	// DBの初期化
 	initDB();
+
+
 }
 
 function searchByTitle(title) {
@@ -114,15 +118,31 @@ function searchByTitle(title) {
 		function(){
 			// 強調表示
 			emphasisSearchedPosters(posterids);
+
+			if (posterids.length == 0) {
+				document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+			} else {
+				document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
+			}
 		}
 	);
 }
 
 function emphasisSearchedPosters(posterids) {
+
+	for (var i = 1; i <= 10; i++) {
+		var image = document.getElementById("icon" + i);
+		if (image.src.indexOf("tpic") == -1) {
+			image.src = "img/dpic.png";
+		}
+	}
+
+	document.getElementById("searchResult").innerHTML = "";
+
 	for (var i = 0; i < posterids.length; i++) {
 		var imgsrc = document.getElementById("icon" + posterids[i]).src;
 
-		if (imgsrc.indexOf("tpic") == -1 && imgsrc.indexOf("tspic") == -1) {
+		if (imgsrc.indexOf("tpic") == -1) {
 			document.getElementById("icon" + posterids[i]).src = "img/spic.png";
 		}
 	}
