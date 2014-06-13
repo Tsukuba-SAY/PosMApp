@@ -1,25 +1,44 @@
 $(function() {
-	// 各ポスターアイコンにタッチイベントをつける
-	$(".postericon").on('touchstart', function(e) {
+	// 各ポスターアイコンのタッチイベント
+	$(".postericon").on("touchstart", function(e) {
 		var icon = document.getElementById("iconNo" + e.target.id.substring(4));
 		getBasicInfo(icon);
 	});
 
 	// 詳細情報画面を表示する
-	$("#basicinfo").on('touchstart', function(e) {
+	$("#basicinfo").on("touchstart", function(e) {
 		showDetailInfoPage();
 	});
 
 	// 基本情報画面の閉じるボタンを押す
-	$("#closebutton").on('touchstart', function(e) {
+	$("#closebutton").on("touchstart", function(e) {
 		resetIcons();
 	});
 
 	// タイトルで検索
 	$("#search-title").bind("change", function(e, ui) {
-		searchByTitle(e.target.value);
+		if (e.target.value.trim() != "" && e.target.value != null) {
+			searchByTitle(e.target.value);
+
+			// 検索中フラグを立てる
+			sessionStorage.setItem("searching", "true");
+			sessionStorage.setItem("searchWord", e.target.value);
+		} else {
+			// 検索中フラグを折る
+			sessionStorage.removeItem("searching");
+			sessionStorage.removeItem("searchWord");
+
+			for (var i = 1; i <= 10; i++) {
+				var image = document.getElementById("icon" + i);
+				if (image.src.indexOf("tpic") == -1) {
+					image.src = "img/dpic.png";
+				}
+			}
+		}
 	});
+
 });
+
 
 // LocalDBを開く
 var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
@@ -34,6 +53,14 @@ function changeBasicInfoPanel(flag) {
 		basicinfopanel.style.display = "inline";
 	} else {
 		basicinfopanel.style.display = "none";
+		sessionStorage.removeItem("posterid");
+		sessionStorage.removeItem("sessionid");
+		sessionStorage.removeItem("title");
+		sessionStorage.removeItem("abstract");
+		sessionStorage.removeItem("authorname");
+		sessionStorage.removeItem("authorbelongs");
+		sessionStorage.removeItem("authors");
+		sessionStorage.removeItem("keywords");
 	}
 
 	var basicinfo = document.getElementById("basicinfo");
@@ -57,6 +84,13 @@ function init() {
 		document.getElementById(iconid).src = "img/tpic.png";
 	}
 
+	if (sessionStorage.getItem("searching") == "true") {
+		console.log("hoge");
+		document.getElementById("search-title").value = sessionStorage.getItem("searchWord");
+		searchByTitle(sessionStorage.getItem("searchWord"));
+	}
+
+	// DBの初期化
 	initDB();
 }
 
@@ -68,7 +102,7 @@ function searchByTitle(title) {
 		function(tr) {
 			tr.executeSql("SELECT id, LOWER(title) AS ltitle FROM poster WHERE ltitle LIKE ?", ["%"+ltitle+"%"], function(tr, rs) {
 				for (var i = 0; i < rs.rows.length; i++) {
-					console.log(rs.rows.item(i).id);
+					//console.log(rs.rows.item(i).id);
 					posterids.push(rs.rows.item(i).id);
 				}
 
@@ -79,14 +113,18 @@ function searchByTitle(title) {
 		},
 		function(){
 			// 強調表示
-			// emphasisSearchedPosters(posterids);
+			emphasisSearchedPosters(posterids);
 		}
 	);
 }
 
 function emphasisSearchedPosters(posterids) {
 	for (var i = 0; i < posterids.length; i++) {
-		document.getElementById("icon" + posterids[i]).src = "img/spic.png";
+		var imgsrc = document.getElementById("icon" + posterids[i]).src;
+
+		if (imgsrc.indexOf("tpic") == -1 && imgsrc.indexOf("tspic") == -1) {
+			document.getElementById("icon" + posterids[i]).src = "img/spic.png";
+		}
 	}
 }
 
@@ -96,7 +134,7 @@ function getBasicInfo(icon) {
 
 	// 強調表示されているかどうかで場合分け
 	// 画像ファイルの名前で判断している
-	if (image.src.indexOf("dpic") != -1) {
+	if (image.src.indexOf("dpic") != -1 || image.src.indexOf("spic") != -1) {
 
 		// 基本情報を取得する
 		var posterid = Number(image.id.substring(4));
@@ -155,10 +193,12 @@ function getBasicInfo(icon) {
 			},
 			function(err) {},
 			function() {
+				// 基本情報パネルを表示
 				changeBasicInfoPanel(true);
 			}
 		);
 
+		// アイコンをリセットする
 		resetIcons();
 		image.src = "img/tpic.png";
 
@@ -167,13 +207,31 @@ function getBasicInfo(icon) {
 		image.src = "img/dpic.png";
 		changeBasicInfoPanel(false);
 
+		// Session Storageに保存されている基本情報をクリア
+		sessionStorage.removeItem("posterid");
+		sessionStorage.removeItem("sessionid");
+		sessionStorage.removeItem("title");
+		sessionStorage.removeItem("abstract");
+		sessionStorage.removeItem("authorname");
+		sessionStorage.removeItem("authorbelongs");
+		sessionStorage.removeItem("authors");
+		sessionStorage.removeItem("keyword");
+
+		if (sessionStorage.getItem("searching") == "true") {
+			searchByTitle(sessionStorage.getItem("searchWord"));
+		}
 	}
 }
 
 function resetIcons() {
+
 	for (var i = 1; i <= 10; i++) {
 		var image = document.getElementById("icon" + i);
 		image.src = "img/dpic.png";
 		changeBasicInfoPanel(false);
+	}
+
+	if (sessionStorage.getItem("searching")) {
+		searchByTitle(sessionStorage.getItem("searchWord"));
 	}
 }
