@@ -39,7 +39,7 @@
 #basicinfo{
 	position:fixed;
 	width: 100%;
-	height: 90px;
+	height: 100px;
 	bottom: 0px;
 	text-align: left;
 
@@ -56,7 +56,7 @@
 #closebutton{
 	position: fixed;
 	right:10px;
-	bottom: 68px;
+	bottom: 65px;
 	z-index: 30;
 	font-size: 40px;
 	color: #ff0000;
