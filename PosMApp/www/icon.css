@@ -36,6 +36,29 @@
 	z-index: 4;
 }
 
+#basicinfo{
+	position: absolute;
+	width: 100%;
+
+	text-align: left;
+
+
+	/*word-break:break-all; */
+	margin:0 auto;
+	background-color: #ffff99;
+	word-wrap:break-word;
+	z-index: 20;
+}
+
+#closebutton{
+	position: absolute;
+	top: 0%;
+	right:0px;
+	z-index: 30;
+	font-size: 40px;
+	color: #ff0000;
+}
+
 #iconNo1{
 	top : 150px;
 	left: 72px;
