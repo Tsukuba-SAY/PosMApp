@@ -23,6 +23,7 @@ $(function() {
 			// 検索中フラグを立てる
 			sessionStorage.setItem("searching", "true");
 			sessionStorage.setItem("searchWord", e.target.value);
+
 		} else {
 			// 検索中フラグを折る
 			sessionStorage.removeItem("searching");
@@ -37,6 +38,8 @@ $(function() {
 
 			document.getElementById("searchResult").innerHTML = "";
 		}
+
+		this.blur();
 	});
 
 });
