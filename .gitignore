@@ -743,3 +743,5 @@ PosMApp/platforms/android/res/xml/config.xml
 PosMApp/platforms/android/src/jp/ac/tsukuba/cs/sit/say/posmapp/PosMApp.java
 PosMApp/plugins/android.json
 PosMApp/www/spec/test_initdb.js
+PosMApp/platforms/android/CordovaLib/ant-build/AndroidManifest.xml
+PosMApp/platforms/android/ant-build/AndroidManifest.xml
