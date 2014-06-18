@@ -232,10 +232,10 @@ function searchByTitle(title) {
 
 // 検索されたポスターを強調表示する
 function emphasisSearchedPosters(posterids) {
+
+	console.log("emphasis"+pflag);
 	for (var i = 1; i <= ptotal; i++) {
-		if (pflag[i] == "t") {
-			pflag[i] = "e";
-		} else {
+		if (pflag[i] != "e") {
 			pflag[i] = "d";
 		}
 	}
@@ -334,21 +334,6 @@ function selectPoster(posterid) {
 		}
 
 		changeBasicInfoPanel(false);
-	}
-}
-
-// アイコンをリセットする
-function resetIcons(posterid) {
-	for (var i = 1; i <= ptotal; i++) {
-		pflag[i] = "d";
-	}
-
-	changeBasicInfoPanel(false);
-
-	showPosterIcons();
-
-	if (sessionStorage.getItem("searching")) {
-		searchByTitle(sessionStorage.getItem("searchWord"));
 	}
 }
 
