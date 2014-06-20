@@ -745,3 +745,4 @@ PosMApp/plugins/android.json
 PosMApp/www/spec/test_initdb.js
 PosMApp/platforms/android/CordovaLib/ant-build/AndroidManifest.xml
 PosMApp/platforms/android/ant-build/AndroidManifest.xml
+PosMApp/platforms/android/assets/www/phonegap.js
