@@ -152,18 +152,26 @@ function showPosterIcons() {
 // ポスターをタッチ
 // return : タッチしたポスターの次の状態
 function touchPoster(posterid) {
+	console.log(posterid);
+	console.log(pflag[posterid]);
+	console.log(sessionStorage.getItem("searching"));
+	console.log(pflag[posterid] == "t");
 	if (sessionStorage.getItem("searching") == "true") {
-		if (pflag[posterid] == "s") {
-			unselectPoster();
-			selectPoster(posterid);
-			return "e";
-		} else if (pflag[posterid] == "d") {
+		if (pflag[posterid] == "d") {
 			unselectPoster();
 			selectPoster(posterid);
 			return "t";
-		} else {
-			unselectPoster();
+		} else if (pflag[posterid] == "t") {
 			changeBasicInfoPanel(false);
+			unselectPoster();
+			return "d";
+		} else if (pflag[posterid] == "s") {
+			unselectPoster();
+			selectPoster(posterid);
+			return "e";
+		} else if (pflag[posterid] == "e") {
+			changeBasicInfoPanel(false);
+			unselectPoster();
 			return "s";
 		}
 	} else {
@@ -171,9 +179,9 @@ function touchPoster(posterid) {
 			unselectPoster();
 			selectPoster(posterid);
 			return "t";
-		} else {
-			unselectPoster();
+		} else if (pflag[posterid] == "t") {
 			changeBasicInfoPanel(false);
+			unselectPoster();
 			return "d";
 		}
 	}
@@ -220,7 +228,7 @@ function searchByTitle(title) {
 			tr.executeSql("SELECT id, LOWER(title) AS ltitle FROM poster WHERE ltitle LIKE ?", ["%"+ltitle+"%"], 
 			function(tr, rs) {
 				for (var i = 0; i < rs.rows.length; i++) {
-					//console.log(rs.rows.item(i).id);
+					console.log(rs.rows.item(i).id);
 					posterids.push(rs.rows.item(i).id);
 				}
 			}, function(){});
@@ -229,7 +237,7 @@ function searchByTitle(title) {
 		},
 		function() {
 			emphasisSearchedPosters(posterids);
-			
+
 			if (posterids.length == 0) {
 				document.getElementById("searchResult").innerHTML = "見つかりませんでした";
 			} else {
@@ -251,11 +259,11 @@ function emphasisSearchedPosters(posterids) {
 		}
 	}
 
-	for (var i = 1; i <= posterids.length; i++) {
+	posterids.forEach(function(i) {
 		if (pflag[i] != "e") {
 			pflag[i] = "s";
 		}
-	}
+	})
 
 	showPosterIcons();
 }
