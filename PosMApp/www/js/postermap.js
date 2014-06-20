@@ -11,7 +11,7 @@ var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 // ポスターの総件数
 var ptotal;
 
-$(function() {
+function init() {
 	// ポスターの件数をセットする
 	// 現在はハードコーディングで10件、要訂正
 	//setPosterTotal();
@@ -23,6 +23,10 @@ $(function() {
 	for (var i = 1; i <= ptotal; i++) {
 		pflag[i] = "d";
 	}
+}
+
+$(function() {
+	init();
 
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") != null) {
@@ -224,22 +228,23 @@ function searchByTitle(title) {
 		function(err) {
 		},
 		function() {
+			emphasisSearchedPosters(posterids);
+			
 			if (posterids.length == 0) {
 				document.getElementById("searchResult").innerHTML = "見つかりませんでした";
 			} else {
 				document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
 			}
-			emphasisSearchedPosters(posterids);
 		}
 	);
 
-	return posterids;
+	return pflag;
 }
 
 // 検索されたポスターを強調表示する
 function emphasisSearchedPosters(posterids) {
 
-	console.log("emphasis"+pflag);
+	// 再検索対策
 	for (var i = 1; i <= ptotal; i++) {
 		if (pflag[i] != "e") {
 			pflag[i] = "d";
