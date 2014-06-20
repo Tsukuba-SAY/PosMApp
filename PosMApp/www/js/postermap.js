@@ -5,6 +5,8 @@
 // e：検索中の強調表示（赤）
 var pflag;
 
+var test;
+
 // LocalDBを開く
 var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
@@ -16,6 +18,8 @@ function init() {
 	// 現在はハードコーディングで10件、要訂正
 	//setPosterTotal();
 	ptotal = 10;
+
+	test = false;
 
 	// pflagを初期化
 	pflag = new Array(ptotal + 1);
@@ -57,6 +61,8 @@ $(function() {
 		// var iconName = image.src.substring(image.src.indexOf("img/")+4, image.src.indexOf("img/")+8);
 
 		// var posterid = Number(image.id.substring(4));
+
+
 
 		var nextFlag = touchPoster(posterid);
 		pflag[posterid] = nextFlag;
@@ -152,6 +158,10 @@ function showPosterIcons() {
 // ポスターをタッチ
 // return : タッチしたポスターの次の状態
 function touchPoster(posterid) {
+	if (posterid < 1 || posterid > ptotal) {
+		throw new Exception();
+	}
+
 	if (sessionStorage.getItem("searching") == "true") {
 		if (pflag[posterid] == "d") {
 			unselectPoster();
@@ -179,39 +189,53 @@ function touchPoster(posterid) {
 			changeBasicInfoPanel(false);
 			unselectPoster();
 			return "d";
-		}
+		} 
 	}
 }
 
 // 基本情報パネルを変更する
 function changeBasicInfoPanel(flag) {
-	var basicinfopanel = document.getElementById("basicinfopanel");
-	if (flag) {
-		basicinfopanel.style.display = "inline";
+	if (!test) {
+
+		var basicinfopanel = document.getElementById("basicinfopanel");
+		if (flag) {
+			basicinfopanel.style.display = "inline";
+		} else {
+			basicinfopanel.style.display = "none";
+			sessionStorage.removeItem("posterid");
+			sessionStorage.removeItem("sessionid");
+			sessionStorage.removeItem("title");
+			sessionStorage.removeItem("abstract");
+			sessionStorage.removeItem("authorname");
+			sessionStorage.removeItem("authorbelongs");
+			sessionStorage.removeItem("authors");
+			sessionStorage.removeItem("keywords");
+		}
+
+		var basicinfo = document.getElementById("basicinfo");
+
+		basicinfo.innerHTML = "No. " 
+			+ sessionStorage.getItem("posterid")
+			+ " ["
+			+ sessionStorage.getItem("sessionid")
+			+ "]<br />"
+			+ sessionStorage.getItem("title")
+			+ "<br />発表者： "
+			+ sessionStorage.getItem("authorname")
+			+ "<br />所属： "
+			+ sessionStorage.getItem("authorbelongs");
 	} else {
-		basicinfopanel.style.display = "none";
-		sessionStorage.removeItem("posterid");
-		sessionStorage.removeItem("sessionid");
-		sessionStorage.removeItem("title");
-		sessionStorage.removeItem("abstract");
-		sessionStorage.removeItem("authorname");
-		sessionStorage.removeItem("authorbelongs");
-		sessionStorage.removeItem("authors");
-		sessionStorage.removeItem("keywords");
+		if (!flag) {
+			sessionStorage.removeItem("posterid");
+			sessionStorage.removeItem("sessionid");
+			sessionStorage.removeItem("title");
+			sessionStorage.removeItem("abstract");
+			sessionStorage.removeItem("authorname");
+			sessionStorage.removeItem("authorbelongs");
+			sessionStorage.removeItem("authors");
+			sessionStorage.removeItem("keywords");
+		}
 	}
-
-	var basicinfo = document.getElementById("basicinfo");
-
-	basicinfo.innerHTML = "No. " 
-		+ sessionStorage.getItem("posterid")
-		+ " ["
-		+ sessionStorage.getItem("sessionid")
-		+ "]<br />"
-		+ sessionStorage.getItem("title")
-		+ "<br />発表者： "
-		+ sessionStorage.getItem("authorname")
-		+ "<br />所属： "
-		+ sessionStorage.getItem("authorbelongs");
 }
 
 // タイトルで検索
@@ -396,4 +420,8 @@ function setPosterTotal(){
 		function(err) {},
 		function() {}
 	);
+}
+
+function touchPosterTest(posterid) {
+
 }

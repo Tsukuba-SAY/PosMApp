@@ -1,4 +1,4 @@
-describe("検索機能（searchByTitle）の単体テスト", function() {
+describe("タイトルでキーワード検索をする", function() {
 	beforeEach(function() {
 		console.log("beforeEach");
 		init();
