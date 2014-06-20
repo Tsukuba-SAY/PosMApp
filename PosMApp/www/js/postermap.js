@@ -1,57 +1,175 @@
+// ポスターの状態を表すフラグ
+// d：デフォルト（青）
+// t：強調表示（赤）
+// s：検索ヒット（緑）
+// e：検索中の強調表示（赤）
+var pflag;
+
+// LocalDBを開く
+var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
+
+// ポスターの総件数
+var ptotal;
+
 $(function() {
+	// ポスターの件数をセットする
+	// 現在はハードコーディングで10件、要訂正
+	//setPosterTotal();
+	ptotal = 10;
+
+	// pflagを初期化
+	pflag = new Array(ptotal + 1);
+	pflag[0] = null;
+	for (var i = 1; i <= ptotal; i++) {
+		pflag[i] = "d";
+	}
+
+	// 基本情報が選択されていたらそのポスターを強調表示
+	if (sessionStorage.getItem("posterid") != null) {
+		changeBasicInfoPanel(true);
+		pflag[sessionStorage.getItem("posterid")] = "t";
+	}
+
+	// 検索中状態だったら検索にヒットしたポスターを強調表示
+	if (sessionStorage.getItem("searching") == "true") {
+		document.getElementById("search-title").value = sessionStorage.getItem("searchWord");
+		searchByTitle(sessionStorage.getItem("searchWord"));
+	}
+
+	// DBの初期化
+	initDB();
+
+	// ポスターアイコンを表示
+	showPosterIcons();
+
 	// 各ポスターアイコンのタッチイベント
 	$(".postericon").on("touchstart", function(e) {
-		var icon = document.getElementById("iconNo" + e.target.id.substring(4));
-		getBasicInfo(icon);
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(4));
+
+		// var icon = document.getElementById("iconNo" + e.target.id.substring(4));
+		// // iconのimgタグを取得する
+		// var image = icon.getElementsByTagName("img")[0];
+		// var iconName = image.src.substring(image.src.indexOf("img/")+4, image.src.indexOf("img/")+8);
+
+		// var posterid = Number(image.id.substring(4));
+
+		var nextFlag = touchPoster(posterid);
+		pflag[posterid] = nextFlag;
+
+		showPosterIcons();
 	});
 
 	// 詳細情報画面を表示する
 	$("#basicinfo").on("touchstart", function(e) {
-		showDetailInfoPage();
+		window.location.href = "detail.html";
 	});
 
 	// 基本情報画面の閉じるボタンを押す
 	$("#closebutton").on("touchstart", function(e) {
-		resetIcons();
+		changeBasicInfoPanel(false);
+		resetAllIcons();
 	});
 
 	// タイトルで検索
 	$("#search-title").bind("change", function(e, ui) {
 		if (e.target.value.trim() != "" && e.target.value != null) {
+			
+			// 検索し、強調表示する
 			searchByTitle(e.target.value);
+
+			// if (posterids.length == 0) {
+			// 	document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+			// } else {
+			// 	document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
+			// }
 
 			// 検索中フラグを立てる
 			sessionStorage.setItem("searching", "true");
 			sessionStorage.setItem("searchWord", e.target.value);
+
+			// ポスターのフラグを検索中状態に変更する
+			for (var i = 1; i <= ptotal; i++) {
+				if (pflag[i] == "t") {
+					pflag[i] = "e";
+				}
+			}
 
 		} else {
 			// 検索中フラグを折る
 			sessionStorage.removeItem("searching");
 			sessionStorage.removeItem("searchWord");
 
-			for (var i = 1; i <= 10; i++) {
-				var image = document.getElementById("icon" + i);
-				if (image.src.indexOf("tpic") == -1) {
-					image.src = "img/dpic.png";
+			for (var i = 1; i <= ptotal; i++) {
+				if (pflag[i] == "e") {
+					pflag[i] = "t";
+				} else if (pflag[i] == "s") {
+					pflag[i] = "d";
 				}
 			}
 
 			document.getElementById("searchResult").innerHTML = "";
 		}
 
+
+		showPosterIcons();
 		this.blur();
 	});
-
 });
 
+// 現在のフラグを元にポスターのアイコンを表示する
+function showPosterIcons() {
+	var imageSrc;
+	for (var i = 1; i <= ptotal; i++) {
+		switch (pflag[i]) {
+			case "d":
+				imageSrc = "img/dpic.png";
+				break;
+			case "t":
+				imageSrc = "img/tpic.png";
+				break;
+			case "s":
+				imageSrc = "img/spic.png";
+				break;
+			case "e":
+				imageSrc = "img/epic.png";
+				break;
+			default:
+				break;
+		}
+		document.getElementById("icon" + i).src = imageSrc;
+	}
 
-// LocalDBを開く
-var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
-
-function showDetailInfoPage() {
-	window.location.href = "detail.html";
+	console.log(pflag);
 }
 
+// ポスターをタッチ
+// return : タッチしたポスターの次の状態
+function touchPoster(posterid) {
+	if (sessionStorage.getItem("searching") == "true") {
+		if (pflag[posterid] == "s") {
+			unselectPoster();
+			selectPoster(posterid);
+			return "e";
+		} else {
+			unselectPoster();
+			changeBasicInfoPanel(false);
+			return "s";
+		}
+	} else {
+		if (pflag[posterid] == "d") {
+			unselectPoster();
+			selectPoster(posterid);
+			return "t";
+		} else {
+			unselectPoster();
+			changeBasicInfoPanel(false);
+			return "d";
+		}
+	}
+}
+
+// 基本情報パネルを変更する
 function changeBasicInfoPanel(flag) {
 	var basicinfopanel = document.getElementById("basicinfopanel");
 	if (flag) {
@@ -82,85 +200,63 @@ function changeBasicInfoPanel(flag) {
 		+ sessionStorage.getItem("authorbelongs");
 }
 
-function init() {
-	if (sessionStorage.getItem("posterid") != null) {
-		changeBasicInfoPanel(true);
-		var iconid = "icon" + sessionStorage.getItem("posterid");
-		document.getElementById(iconid).src = "img/tpic.png";
-	}
-
-	if (sessionStorage.getItem("searching") == "true") {
-		console.log("hoge");
-		document.getElementById("search-title").value = sessionStorage.getItem("searchWord");
-		searchByTitle(sessionStorage.getItem("searchWord"));
-	}
-
-	// DBの初期化
-	initDB();
-
-
-}
-
+// タイトルで検索
 function searchByTitle(title) {
 	var posterids = new Array();
 	var ltitle = title.toLowerCase();
 
 	db.transaction(
 		function(tr) {
-			tr.executeSql("SELECT id, LOWER(title) AS ltitle FROM poster WHERE ltitle LIKE ?", ["%"+ltitle+"%"], function(tr, rs) {
+			tr.executeSql("SELECT id, LOWER(title) AS ltitle FROM poster WHERE ltitle LIKE ?", ["%"+ltitle+"%"], 
+			function(tr, rs) {
 				for (var i = 0; i < rs.rows.length; i++) {
 					//console.log(rs.rows.item(i).id);
 					posterids.push(rs.rows.item(i).id);
 				}
-
 			}, function(){});
 		},
 		function(err) {
-
 		},
-		function(){
-			// 強調表示
-			emphasisSearchedPosters(posterids);
-
+		function() {
 			if (posterids.length == 0) {
 				document.getElementById("searchResult").innerHTML = "見つかりませんでした";
 			} else {
 				document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
 			}
+			emphasisSearchedPosters(posterids);
 		}
 	);
+
+	return posterids;
 }
 
+// 検索されたポスターを強調表示する
 function emphasisSearchedPosters(posterids) {
 
-	for (var i = 1; i <= 10; i++) {
-		var image = document.getElementById("icon" + i);
-		if (image.src.indexOf("tpic") == -1) {
-			image.src = "img/dpic.png";
+	console.log("emphasis"+pflag);
+	for (var i = 1; i <= ptotal; i++) {
+		if (pflag[i] != "e") {
+			pflag[i] = "d";
 		}
 	}
 
-	document.getElementById("searchResult").innerHTML = "";
-
-	for (var i = 0; i < posterids.length; i++) {
-		var imgsrc = document.getElementById("icon" + posterids[i]).src;
-
-		if (imgsrc.indexOf("tpic") == -1) {
-			document.getElementById("icon" + posterids[i]).src = "img/spic.png";
+	for (var i = 1; i <= posterids.length; i++) {
+		if (pflag[i] != "e") {
+			pflag[i] = "s";
 		}
 	}
+
+	showPosterIcons();
 }
 
-function getBasicInfo(icon) {
-	// iconのimgタグを取得する
-	var image = icon.getElementsByTagName("img")[0];
+// ポスターを選択する
+function selectPoster(posterid) {
 
-	// 強調表示されているかどうかで場合分け
-	// 画像ファイルの名前で判断している
-	if (image.src.indexOf("dpic") != -1 || image.src.indexOf("spic") != -1) {
+	// ポスターの状態で判断
+	if (pflag[posterid] == "d" || pflag[posterid] == "s") {
 
 		// 基本情報を取得する
-		var posterid = Number(image.id.substring(4));
+		//var posterid = Number(image.id.substring(4));
 		db.transaction(
 			function(tr) {						
 				// ポスターの情報を取得する
@@ -221,15 +317,7 @@ function getBasicInfo(icon) {
 			}
 		);
 
-		// アイコンをリセットする
-		resetIcons();
-		image.src = "img/tpic.png";
-
-
 	} else {
-		image.src = "img/dpic.png";
-		changeBasicInfoPanel(false);
-
 		// Session Storageに保存されている基本情報をクリア
 		sessionStorage.removeItem("posterid");
 		sessionStorage.removeItem("sessionid");
@@ -241,20 +329,43 @@ function getBasicInfo(icon) {
 		sessionStorage.removeItem("keyword");
 
 		if (sessionStorage.getItem("searching") == "true") {
-			searchByTitle(sessionStorage.getItem("searchWord"));
+			pflag[posterid] = "s";
+			//searchByTitle(sessionStorage.getItem("searchWord"));
+		}
+
+		changeBasicInfoPanel(false);
+	}
+}
+
+// 強調表示を解除する
+function unselectPoster() {
+	for (var i = 1; i <= ptotal; i++) {
+		if (pflag[i] == "t") { 
+			pflag[i] = "d"; 
+		} else if (pflag[i] == "e") {
+			pflag[i] = "s";
 		}
 	}
 }
 
-function resetIcons() {
-
-	for (var i = 1; i <= 10; i++) {
-		var image = document.getElementById("icon" + i);
-		image.src = "img/dpic.png";
-		changeBasicInfoPanel(false);
+// すべてのアイコンをデフォルトに戻す
+function resetAllIcons() {
+	for (var i = 1; i <= ptotal; i++) {
+		pflag[i] = "d";
 	}
+	showPosterIcons();
+}
 
-	if (sessionStorage.getItem("searching")) {
-		searchByTitle(sessionStorage.getItem("searchWord"));
-	}
+// ポスターの数を取得する
+function setPosterTotal(){
+	db.transaction(
+		function(tr) {
+			tr.executeSql("SELECT count(*) AS total FROM poster", [], function(tr, rs) {
+				ptotal = rs.rows.item(0).total;
+				sessionStorage.setItem("posterTotal", ptotal);
+			}, function(){});
+		},
+		function(err) {},
+		function() {}
+	);
 }
