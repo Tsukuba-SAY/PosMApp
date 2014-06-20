@@ -29,7 +29,7 @@ describe("searchByTitleの単体テスト", function() {
 		waits(100);
 
 		runs(function() {
-			expect(posterids.length).toEqual(10);
+			expect(posterids.length2	).toEqual(10);
 		});
 	});
 	it("1件だけヒットする", function() {
@@ -69,6 +69,32 @@ describe("searchByTitleの単体テスト", function() {
 
 		runs(function() {
 			expect(posterids.length).toEqual(1);
+		});
+	});
+});
+
+describe("ポスターの詳細情報を表示する", function() {
+	beforeEach(function() {
+		var pflag;
+		var ptotal=10;
+
+		// pflagを初期化
+		pflag = new Array(ptotal + 1);
+		pflag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			pflag[i] = "d";
+		}			
+	});
+	describe("touchPosterの単体テスト", function() {
+		it("デフォルトの状態で1番目のポスターをタップすると1番目の情報が取得できる", function() {
+			var Table=new Array(11);
+			runs(function(){
+				selectPoster(1);
+				expect(pflag[1]).toEqual("t");
+				for (var i = 2; i < pflag.length; i++) {
+					expected(pflag[i]).toEqual("d");
+				}
+			});
 		});
 	});
 });
