@@ -152,10 +152,6 @@ function showPosterIcons() {
 // ポスターをタッチ
 // return : タッチしたポスターの次の状態
 function touchPoster(posterid) {
-	console.log(posterid);
-	console.log(pflag[posterid]);
-	console.log(sessionStorage.getItem("searching"));
-	console.log(pflag[posterid] == "t");
 	if (sessionStorage.getItem("searching") == "true") {
 		if (pflag[posterid] == "d") {
 			unselectPoster();
@@ -220,6 +216,14 @@ function changeBasicInfoPanel(flag) {
 
 // タイトルで検索
 function searchByTitle(title) {
+	if (title == null || title.trim() == "") {
+		return pflag;
+	}
+
+	if (title.length >= 1024) {
+		throw new Exception();
+	}
+
 	var posterids = new Array();
 	var ltitle = title.toLowerCase();
 
@@ -252,16 +256,21 @@ function searchByTitle(title) {
 // 検索されたポスターを強調表示する
 function emphasisSearchedPosters(posterids) {
 
-	// 再検索対策
+	// 前回の検索結果をリセットする
 	for (var i = 1; i <= ptotal; i++) {
-		if (pflag[i] != "e") {
+		if (pflag[i] != "t" && pflag[i] != "e") {
 			pflag[i] = "d";
 		}
 	}
 
-	posterids.forEach(function(i) {
-		if (pflag[i] != "e") {
-			pflag[i] = "s";
+	// ヒットしたポスターを強調表示する
+	posterids.forEach(function(id) {
+		// すでに選択されていれば、検索ヒット中の強調表示にする
+		if (pflag[id] == "t") {
+			pflag[id] = "e";
+		// 検索ヒット中の強調表示になっていない限り、検索ヒットにする
+		} else if (pflag[id] != "e") {
+			pflag[id] = "s";
 		}
 	})
 
