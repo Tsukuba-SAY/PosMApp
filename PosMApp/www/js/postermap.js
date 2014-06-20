@@ -68,7 +68,9 @@ $(function() {
 	// 基本情報画面の閉じるボタンを押す
 	$("#closebutton").on("touchstart", function(e) {
 		changeBasicInfoPanel(false);
-		resetAllIcons();
+		unselectPoster();
+		showPosterIcons();
+		//resetAllIcons();
 	});
 
 	// タイトルで検索
@@ -151,6 +153,10 @@ function touchPoster(posterid) {
 			unselectPoster();
 			selectPoster(posterid);
 			return "e";
+		} else if (pflag[posterid] == "d") {
+			unselectPoster();
+			selectPoster(posterid);
+			return "t";
 		} else {
 			unselectPoster();
 			changeBasicInfoPanel(false);
