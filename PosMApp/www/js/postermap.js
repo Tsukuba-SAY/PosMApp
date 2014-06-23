@@ -100,13 +100,6 @@ $(function() {
 			sessionStorage.setItem("searching", "true");
 			sessionStorage.setItem("searchWord", e.target.value);
 
-			// ポスターのフラグを検索中状態に変更する
-			for (var i = 1; i <= ptotal; i++) {
-				if (pflag[i] == "t") {
-					pflag[i] = "e";
-				}
-			}
-
 		} else {
 			// 検索中フラグを折る
 			sessionStorage.removeItem("searching");
@@ -296,7 +289,7 @@ function emphasisSearchedPosters(posterids) {
 		} else if (pflag[id] != "e") {
 			pflag[id] = "s";
 		}
-	})
+	});
 
 	showPosterIcons();
 }
