@@ -15,13 +15,14 @@ var ptotal;
 
 function init() {
 	// ポスターの件数をセットする
-	// 現在はハードコーディングで10件、要訂正
-	//setPosterTotal();
+	// TODO:ポスター件数をハードコーディングしているため別の取得方法を考えておく
+	// TODO:setPosterTotal();
 	ptotal = 10;
 
 	test = false;
 
 	// pflagを初期化
+	// pflagの添字をポスター番号と対応させるため pflag[0]=nullとしている
 	pflag = new Array(ptotal + 1);
 	pflag[0] = null;
 	for (var i = 1; i <= ptotal; i++) {
@@ -29,6 +30,7 @@ function init() {
 	}
 }
 
+//HTMLが呼ばれた時の処理
 $(function() {
 	init();
 
@@ -39,6 +41,7 @@ $(function() {
 	}
 
 	// 検索中状態だったら検索にヒットしたポスターを強調表示
+	// FIXME:もう一度検索しているので読み込み時遅くなる
 	if (sessionStorage.getItem("searching") == "true") {
 		document.getElementById("search-title").value = sessionStorage.getItem("searchWord");
 		searchByTitle(sessionStorage.getItem("searchWord"));
@@ -48,25 +51,16 @@ $(function() {
 	initDB();
 
 	// ポスターアイコンを表示
+	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
 
 	// 各ポスターアイコンのタッチイベント
 	$(".postericon").on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(4));
-
-		// var icon = document.getElementById("iconNo" + e.target.id.substring(4));
-		// // iconのimgタグを取得する
-		// var image = icon.getElementsByTagName("img")[0];
-		// var iconName = image.src.substring(image.src.indexOf("img/")+4, image.src.indexOf("img/")+8);
-
-		// var posterid = Number(image.id.substring(4));
-
-
-
 		var nextFlag = touchPoster(posterid);
-		pflag[posterid] = nextFlag;
 
+		pflag[posterid] = nextFlag;
 		showPosterIcons();
 	});
 
@@ -150,6 +144,7 @@ function showPosterIcons() {
 
 // ポスターをタッチ
 // return : タッチしたポスターの次の状態
+//TODO:パターンを導入しようか・・・
 function touchPoster(posterid) {
 	if (posterid < 1 || posterid > ptotal) {
 		throw new Exception();
@@ -244,6 +239,8 @@ function searchByTitle(title) {
 	var posterids = new Array();
 	var ltitle = title.toLowerCase();
 
+	//すべて小文字にした検索キーワードと
+	//すべて小文字にした
 	db.transaction(
 		function(tr) {
 			tr.executeSql("SELECT id, LOWER(title) AS ltitle FROM poster WHERE ltitle LIKE ?", ["%"+ltitle+"%"], 
@@ -259,6 +256,9 @@ function searchByTitle(title) {
 		function() {
 			emphasisSearchedPosters(posterids);
 
+			//注意:ここでreturnしてもこのdb.transactionの返り値にはならない
+			//TODO:トランザクションの非同期実行のために
+			//     ここでHTMLを書いているけどなんか解決法がありそう
 			if (posterids.length == 0) {
 				document.getElementById("searchResult").innerHTML = "見つかりませんでした";
 			} else {
@@ -402,6 +402,8 @@ function resetAllIcons() {
 }
 
 // ポスターの数を取得する
+// TODO:トランザクションが非同期実行なのでreturnを使えないため
+// 　　　　別の方法で調べたほうがよさそう
 function setPosterTotal(){
 	db.transaction(
 		function(tr) {
@@ -413,8 +415,4 @@ function setPosterTotal(){
 		function(err) {},
 		function() {}
 	);
-}
-
-function touchPosterTest(posterid) {
-
 }

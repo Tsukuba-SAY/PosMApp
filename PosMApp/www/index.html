@@ -2,9 +2,12 @@
 <html>
 <head>
 	<title>PosMApp</title>
+	<!-- metaで文字コードを指定しないと文字化けする -->
 	<meta charset="UTF-8">
+
 	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css" />
 	<link rel="stylesheet" type="text/css" href="icon.css" />
+
 	<script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js">
 	</script>
 	<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.2.min.js">
@@ -14,26 +17,33 @@
 	<script type="text/javascript" charset="utf-8" src="js/postermap.js">
 	</script>
 </head>
+
 <body>
 	<div data-role="header">
+		<!-- type="search" といれて検索ウィンドウを呼んでいる-->
     	<input id="search-title" type="search" name="search" placeholder="タイトルで検索" />
 	</div>
 	<div style="position: relative;">
+		<!-- 検索結果件数 -->
 		<div id="searchResult" style="position: absolute; z-index: 100;">
 		</div>
 		<div style="position: absolute;">
 			<div align="center">
+			<!-- ポスターマップ表示 -->
 				<img src="img/postermap.png" border="0"  width="100%"
 					style="position: relative; z-index: 1;"></img>
 			</div>
+			<!-- 基本情報パネル -->
 			<div style="position: relative;">
-				<div id="basicinfopanel" style="display:none;">
+				<div id="basicinfopanel" style="display:none; position:fixed;">
 					<div id="basicinfo"></div>
 					<div id="closebutton">×</div>
 				</div>
 			</div>
 		</div>
 
+		<!-- ポスターアイコン -->
+		<!-- TODO:jsでアイコンの生成までやっちゃったらいいんじゃない？ -->
 		<div style="position: absolute;">
 			<div class="postericon vertical" id="iconNo1">
 				<img id="icon1" src="img/dpic.png" width="100%" height="100%"></img>
