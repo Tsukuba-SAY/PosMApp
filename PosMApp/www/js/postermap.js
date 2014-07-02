@@ -416,3 +416,7 @@ function setPosterTotal(){
 		function() {}
 	);
 }
+
+function touchPosterTest(posterid) {
+
+}
