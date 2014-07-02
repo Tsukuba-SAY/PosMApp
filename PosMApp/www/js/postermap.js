@@ -5,7 +5,7 @@
 // e：検索中の強調表示（赤）
 var pflag;
 
-var test;
+var test = false;
 
 // LocalDBを開く
 var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
