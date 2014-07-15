@@ -1,5 +1,5 @@
 // DBを初期化する
-function initDB(xml, status) {
+function initDB() {
 	var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
 	db.transaction(
@@ -15,17 +15,8 @@ function initDB(xml, status) {
 			
 			// 仮データを挿入する (poster)
 			tr.executeSql("DELETE FROM poster"); //ポスター列の初期化
-			// $(xml).find("poster").each(function() {
-			// 	var id = $(this).find("id").text();
-			// 	var sessionid = $(this).find("sessionid").text();
-			// 	var title = $(this).find("title").text();
-			// 	var abstract = $(this).find("abstract").text();
-			// 	var authorname = $(this).find("authorname").text();
-			// 	var authorbelongs = $(this).find("authorbelongs").text();
-
-			// 	tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", 
-			// 		[id, sessionid, title, abstract, authorname, authorbelongs]);
-			// });
+			tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", 
+				[id, sessionid, title, abstract, authorname, authorbelongs]);
 			tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [1, "A1-1", "YAGOを用いた拡張固有表現抽出における新出語のクラス推定精度の検証", "概要１", "真嶋 温佳", "大阪大学"]);
 			tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [2, "A1-4", "XML部分文書検索技術の Web 文書への適用", "概要２", "欅 惇志", "奈良先端科学技術大学院大学"]);
 			tr.executeSql("INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )", [3, "B1-1", " 配信型授業のコミュニケーションを支援するコメント共有手法の提案", "概要３", "川上 未来", "筑波大学"]);
@@ -39,9 +30,6 @@ function initDB(xml, status) {
 
 			// 仮データを挿入する (author)
 			tr.executeSql("DELETE FROM author"); //author列の初期化
-			// $(xml).find("author").each(function() {
-
-			// })
 			tr.executeSql("INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )", [1, "真嶋 温佳", "大阪大学", 1]);
 			tr.executeSql("INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )", [1, "白川 真澄", "大阪大学", 0]);
 			tr.executeSql("INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )", [1, "原 隆浩", "大阪大学", 0]);
@@ -99,7 +87,6 @@ function initDB(xml, status) {
 
 		},
 		function(err){},
-		//c
 		function(){}
 	);
 }
