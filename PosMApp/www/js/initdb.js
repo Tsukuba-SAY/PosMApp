@@ -8,25 +8,9 @@ function initDB() {
 			tr.executeSql("DROP TABLE IF EXISTS poster");
 			tr.executeSql("DROP TABLE IF EXISTS author");
 			tr.executeSql("DROP TABLE IF EXISTS keyword");
-			tr.executeSql("CREATE TABLE IF NOT EXISTS poster ( 
-				id 				INTEGER NOT NULL UNIQUE PRIMARY KEY,
-				sessionid 		TEXT,
-				title 			TEXT,
-				abstract 		TEXT,
-				authorname 		TEXT,
-				authorbelongs 	TEXT )");
-			tr.executeSql("CREATE TABLE IF NOT EXISTS author (
-				id 			INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT,
-				posterid 	INTEGER NOT NULL,
-				name 		TEXT,
-				belongs 	TEXT,
-				first 		INTEGER,
-				FOREIGN KEY (posterid) REFERENCES poster (id) )");
-			tr.executeSql("CREATE TABLE IF NOT EXISTS keyword (
-				id 			INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT,
-				posterid 	INTEGER NOT NULL,
-				keyword 	TEXT,
-				FOREIGN KEY (posterid) REFERENCES poster (id) )");
+			tr.executeSql("CREATE TABLE IF NOT EXISTS poster ( id INTEGER NOT NULL UNIQUE PRIMARY KEY, sessionid TEXT, title TEXT, abstract TEXT, authorname TEXT, authorbelongs TEXT )");
+			tr.executeSql("CREATE TABLE IF NOT EXISTS author ( id INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, posterid INTEGER NOT NULL, name TEXT, belongs TEXT, first INTEGER, FOREIGN KEY (posterid) REFERENCES poster (id) )");
+			tr.executeSql("CREATE TABLE IF NOT EXISTS keyword ( id INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, posterid INTEGER NOT NULL, keyword TEXT, FOREIGN KEY (posterid) REFERENCES poster (id) )");
 			
 			// 仮データを挿入する (poster)
 			tr.executeSql("DELETE FROM poster"); //ポスター列の初期化
