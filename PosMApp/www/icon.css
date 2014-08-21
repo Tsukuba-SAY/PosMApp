@@ -1,39 +1,19 @@
-/*TODO:縦横とiconindexはひとつまとめられそう（I）*/
-.vertical{
-	position: absolute;
-	width:45px;
-	height:100px;
-	text-align:center;
-	vertical-align:middle; /*垂直方向のセンタリング*/
-	font-size: xx-large;
-
-	z-index: 3;
-}
-
 .horizontal{
 	position: absolute; 
-	width:103px;
-	height:43px;
+	width:90px;
+	height:40px;
 	text-align:center;
 	vertical-align:middle;
 	font-size: xx-large;
 
 	z-index: 3;
 }
-.iconindexver{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	line-height: 100px;
-	z-index: 4;
-}
 .iconindexhor{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0px;
-	line-height: 45px;
+	line-height: 40px;
 	z-index: 4;
 }
 
@@ -62,47 +42,92 @@
 
 
 /*TODO:jsでのアイコン生成時にここもjsに取り込む*/
-#iconNo1{
-	top : 150px;
-	left: 72px;
+/*1列目*/
+
+#iconNo6{
+	top : 160px;
+	left: 110px;
 }
+#iconNo8{
+	top : 160px;
+	left: 245px;
+}
+#iconNo15{
+	top : 160px;
+	left: 370px;
+}
+/*2列目*/
+#iconNo10{
+	top : 260px;
+	left: 110px;
+}
+#iconNo12{
+	top : 260px;
+	left: 245px;
+}
+#iconNo16{
+	top : 260px;
+	left: 370px;
+}
+
+
+/*3列目*/
+#iconNo13{
+	top : 360px;
+	left: 110px;
+}
+#iconNo14{
+	top : 360px;
+	left: 245px;
+}
+#iconNo17{
+	top : 360px;
+	left: 370px;
+}
+
+/*4列目*/
 #iconNo2{
-	top : 570px;
-	left: 72px;
-}
-
-
-#iconNo3{
-	top : 51px;
-	left: 152px;
-}
-#iconNo5{
-	top : 343px;
-	left: 152px;
+	top : 460px;
+	left: 110px;
 }
 #iconNo7{
-	top : 432px;
-	left: 152px;
+	top : 460px;
+	left: 245px;
+}
+#iconNo18{
+	top : 460px;
+	left: 370px;
+}
+
+
+/*5列目*/
+#iconNo1{
+	top : 560px;
+	left: 110px;
+}
+#iconNo3{
+	top : 560px;
+	left: 215px;
 }
 #iconNo9{
-	top : 705px;
-	left: 152px;
+	top : 560px;
+	left: 330px;
+}
+#iconNo19{
+	top : 560px;
+	left: 440px;
 }
 
-
+/*6列目*/
 #iconNo4{
-	top : 51px;
-	left: 341px;
+	top : 660px;
+	left: 110px;
 }
-#iconNo6{
-	top : 343px;
-	left: 341px;
+#iconNo5{
+	top : 660px;
+	left: 225px;
 }
-#iconNo8{ 
-	top : 432px;
-	left: 341px;
-}
-#iconNo10{
-	top : 705px;
-	left: 341px;
+#iconNo11{
+	top : 660px;
+	left: 350px;
 }

@@ -17,7 +17,7 @@ function init() {
 	// ポスターの件数をセットする
 	// TODO:ポスター件数をハードコーディングしているため別の取得方法を考えておく
 	// TODO:setPosterTotal();
-	ptotal = 10;
+	ptotal = 19;
 
 	test = false;
 
@@ -202,9 +202,10 @@ function changeBasicInfoPanel(flag) {
 
 		var basicinfo = document.getElementById("basicinfo");
 
-		basicinfo.innerHTML = "No. " 
-			+ sessionStorage.getItem("posterid")
-			+ " ["
+		basicinfo.innerHTML = 
+			// "No. " 
+			// + sessionStorage.getItem("posterid")+
+			 " ["
 			+ sessionStorage.getItem("sessionid")
 			+ "]<br />"
 			+ sessionStorage.getItem("title")
