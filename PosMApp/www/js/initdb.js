@@ -8,7 +8,7 @@ function initDB() {
 			tr.executeSql("DROP TABLE IF EXISTS poster");
 			tr.executeSql("DROP TABLE IF EXISTS author");
 			tr.executeSql("DROP TABLE IF EXISTS keyword");
-			tr.executeSql("CREATE TABLE IF NOT EXISTS poster ( id INTEGER NOT NULL UNIQUE PRIMARY KEY, sessionid TEXT, title TEXT, abstract TEXT, authorname TEXT, authorbelongs TEXT )");
+			tr.executeSql("CREATE TABLE IF NOT EXISTS poster ( id INTEGER NOT NULL UNIQUE PRIMARY KEY, sessionid TEXT, title TEXT, abstract TEXT, authorname TEXT, authorbelongs TEXT, bookmark INTEGER )");
 			tr.executeSql("CREATE TABLE IF NOT EXISTS author ( id INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, posterid INTEGER NOT NULL, name TEXT, belongs TEXT, first INTEGER, FOREIGN KEY (posterid) REFERENCES poster (id) )");
 			tr.executeSql("CREATE TABLE IF NOT EXISTS keyword ( id INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, posterid INTEGER NOT NULL, keyword TEXT, FOREIGN KEY (posterid) REFERENCES poster (id) )");
 			
@@ -16,13 +16,14 @@ function initDB() {
 			tr.executeSql("DELETE FROM poster"); //ポスター列の初期化
 			// posterdata.js 内のJSON(posterdata)からDBへ挿入
 			for (var i in poster) {
-				tr.executeSql("INSERT INTO poster VALUES (?, ?, ?, ?, ?, ?)", [
+				tr.executeSql("INSERT INTO poster VALUES (?, ?, ?, ?, ?, ?, ?)", [
 					poster[i].id,
 					poster[i].sessionid,
 					poster[i].title,
 					poster[i].abstract,
 					poster[i].authorname,
-					poster[i].authorbelongs]);
+					poster[i].authorbelongs,
+					poster[i].bookmark]);
 			}
 
 			// 仮データを挿入する (author)

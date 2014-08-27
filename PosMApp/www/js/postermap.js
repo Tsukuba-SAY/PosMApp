@@ -196,6 +196,7 @@ function changeBasicInfoPanel(flag) {
 			sessionStorage.removeItem("abstract");
 			sessionStorage.removeItem("authorname");
 			sessionStorage.removeItem("authorbelongs");
+			sessionStorage.removeItem("bookmark");
 			sessionStorage.removeItem("authors");
 			sessionStorage.removeItem("keywords");
 		}
@@ -221,6 +222,7 @@ function changeBasicInfoPanel(flag) {
 			sessionStorage.removeItem("abstract");
 			sessionStorage.removeItem("authorname");
 			sessionStorage.removeItem("authorbelongs");
+			sessionStorage.removeItem("bookmark");
 			sessionStorage.removeItem("authors");
 			sessionStorage.removeItem("keywords");
 		}
@@ -322,6 +324,7 @@ function selectPoster(posterid) {
 						sessionStorage.setItem("abstract", row.abstract);
 						sessionStorage.setItem("authorname", row.authorname);
 						sessionStorage.setItem("authorbelongs", row.authorbelongs);
+						sessionStorage.setItem("bookmark", row.bookmark);
 					}
 
 				}, function(){});
@@ -371,6 +374,7 @@ function selectPoster(posterid) {
 		sessionStorage.removeItem("abstract");
 		sessionStorage.removeItem("authorname");
 		sessionStorage.removeItem("authorbelongs");
+		sessionStorage.removeItem("bookmark");
 		sessionStorage.removeItem("authors");
 		sessionStorage.removeItem("keyword");
 
