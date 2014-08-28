@@ -3,7 +3,7 @@
 // t：強調表示（赤）
 // s：検索ヒット（緑）
 // e：検索中の強調表示（赤）
-var pflag;
+var pflag; 
 
 var test = false;
 
@@ -197,6 +197,7 @@ function changeBasicInfoPanel(flag) {
 			sessionStorage.removeItem("authorname");
 			sessionStorage.removeItem("authorbelongs");
 			sessionStorage.removeItem("bookmark");
+			sessionStorage.removeItem("star");
 			sessionStorage.removeItem("authors");
 			sessionStorage.removeItem("keywords");
 		}
@@ -223,6 +224,7 @@ function changeBasicInfoPanel(flag) {
 			sessionStorage.removeItem("authorname");
 			sessionStorage.removeItem("authorbelongs");
 			sessionStorage.removeItem("bookmark");
+			sessionStorage.removeItem("star");
 			sessionStorage.removeItem("authors");
 			sessionStorage.removeItem("keywords");
 		}
@@ -325,6 +327,7 @@ function selectPoster(posterid) {
 						sessionStorage.setItem("authorname", row.authorname);
 						sessionStorage.setItem("authorbelongs", row.authorbelongs);
 						sessionStorage.setItem("bookmark", row.bookmark);
+						sessionStorage.setItem("star");
 					}
 
 				}, function(){});
@@ -375,6 +378,7 @@ function selectPoster(posterid) {
 		sessionStorage.removeItem("authorname");
 		sessionStorage.removeItem("authorbelongs");
 		sessionStorage.removeItem("bookmark");
+		sessionStorage.removeItem("star");
 		sessionStorage.removeItem("authors");
 		sessionStorage.removeItem("keyword");
 
