@@ -40,6 +40,14 @@
 	color: #ff0000;
 }
 
+/* アイコンラベルの文字列変更ボタン */
+/* 念のため背景色白にしておく */
+#changelabel{
+	position: absolute;
+	right:5px;
+	top: 5px;
+	z-index: 100;
+}
 
 /*TODO:jsでのアイコン生成時にここもjsに取り込む*/
 /*1列目*/
