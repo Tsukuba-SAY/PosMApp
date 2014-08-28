@@ -40,94 +40,83 @@
 	color: #ff0000;
 }
 
+/* アイコンラベルの文字列変更ボタン */
+/* 念のため背景色白にしておく */
+#changelabel{
+	position: absolute;
+	right:5px;
+	top: 5px;
+	z-index: 100;
+}
 
 /*TODO:jsでのアイコン生成時にここもjsに取り込む*/
 /*1列目*/
 
-#iconNo6{
+#iconNo1{
 	top : 160px;
 	left: 110px;
 }
-#iconNo8{
+#iconNo3{
 	top : 160px;
 	left: 245px;
 }
-#iconNo15{
+#iconNo10{
 	top : 160px;
 	left: 370px;
 }
 /*2列目*/
-#iconNo10{
+#iconNo5{
 	top : 260px;
 	left: 110px;
 }
-#iconNo12{
+#iconNo7{
 	top : 260px;
 	left: 245px;
 }
-#iconNo16{
+#iconNo11{
 	top : 260px;
 	left: 370px;
 }
 
 
 /*3列目*/
-#iconNo13{
+#iconNo8{
 	top : 360px;
 	left: 110px;
 }
-#iconNo14{
+#iconNo9{
 	top : 360px;
 	left: 245px;
 }
-#iconNo17{
+#iconNo12{
 	top : 360px;
 	left: 370px;
 }
 
 /*4列目*/
-#iconNo2{
+#iconNo4{
 	top : 460px;
 	left: 110px;
 }
-#iconNo7{
+
+#iconNo2{
 	top : 460px;
 	left: 245px;
 }
-#iconNo18{
+#iconNo13{
 	top : 460px;
 	left: 370px;
 }
 
 
 /*5列目*/
-#iconNo1{
+#iconNo6{
 	top : 560px;
-	left: 110px;
+	left: 245px;
 }
-#iconNo3{
+#iconNo14{
 	top : 560px;
-	left: 215px;
-}
-#iconNo9{
-	top : 560px;
-	left: 330px;
-}
-#iconNo19{
-	top : 560px;
-	left: 440px;
+	left: 370px;
 }
 
 /*6列目*/
-#iconNo4{
-	top : 660px;
-	left: 110px;
-}
-#iconNo5{
-	top : 660px;
-	left: 225px;
-}
-#iconNo11{
-	top : 660px;
-	left: 350px;
-}

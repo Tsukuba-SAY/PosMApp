@@ -464,6 +464,43 @@ function setPosterTotal(){
 	);
 }
 
+//BookMarkの削除
+function deleteBookMark(posterid){
+	db.transaction(
+		function(tr) {
+			tr.executeSql("UPDATE poster SET bookmark = 0 WHERE id = ?", [posterid], function(tr, rs) {
+			}, function(){});
+		},
+		function(err) {},
+		function() {}
+	);
+}
+
+//BookMarkを付ける
+function addBookMark(posterid){
+	db.transaction(
+		function(tr) {
+			tr.executeSql("UPDATE poster SET bookmark = 1 WHERE id = ?", [posterid], function(tr, rs) {
+			}, function(){});
+		},
+		function(err) {},
+		function() {}
+	);
+}
+
+//BookMark状態を変更するメソッド
+//先ず、DBの更新、次は星のアイコンを変える
+function changeBookMark(){
+	if(sessionStorage.getItem("bookmark") == 0){
+		addBookMark(sessionStorage.getItem("posterid"));
+		sessionStorage.setItem("bookmark", 1);
+	}else{
+		deleteBookMark(sessionStorage.getItem("posterid"));
+		sessionStorage.setItem("bookmark", 0);
+	}
+
+}
+
 function touchPosterTest(posterid) {
 
 }
