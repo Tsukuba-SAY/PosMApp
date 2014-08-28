@@ -17,7 +17,7 @@ function init() {
 	// ポスターの件数をセットする
 	// TODO:ポスター件数をハードコーディングしているため別の取得方法を考えておく
 	// TODO:setPosterTotal();
-	ptotal = 19;
+	ptotal = 14;
 
 	test = false;
 
