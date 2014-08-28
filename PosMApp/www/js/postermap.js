@@ -451,6 +451,7 @@ function addBookMark(posterid){
 }
 
 //BookMark状態を変更するメソッド
+//先ず、DBの更新、次は星のアイコンを変える
 function changeBookMark(){
 	if(sessionStorage.getItem("bookmark") == 0){
 		addBookMark(sessionStorage.getItem("posterid"));
@@ -459,7 +460,7 @@ function changeBookMark(){
 		deleteBookMark(sessionStorage.getItem("posterid"));
 		sessionStorage.setItem("bookmark", 0);
 	}
-	window.location.reload();
+
 }
 
 function touchPosterTest(posterid) {
