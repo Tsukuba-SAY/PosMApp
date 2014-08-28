@@ -19,6 +19,8 @@ function init() {
 	// TODO:setPosterTotal();
 	ptotal = 14;
 
+	// テスト用フラグ
+	// JasmineからのみTrueにする
 	test = false;
 
 	// pflagを初期化
@@ -50,19 +52,21 @@ $(function() {
 	// DBの初期化
 	initDB();
 
+	createPostericons(ptotal);
+
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
 
-	// 各ポスターアイコンのタッチイベント
-	$(".postericon").on("touchstart", function(e) {
-		// ポスターのIDを取得する
-		var posterid = Number(e.target.id.substring(4));
-		var nextFlag = touchPoster(posterid);
+	// // 各ポスターアイコンのタッチイベント
+	// $(".postericon").on("touchstart", function(e) {
+	// 	// ポスターのIDを取得する
+	// 	var posterid = Number(e.target.id.substring(4));
+	// 	var nextFlag = touchPoster(posterid);
 
-		pflag[posterid] = nextFlag;
-		showPosterIcons();
-	});
+	// 	pflag[posterid] = nextFlag;
+	// 	showPosterIcons();
+	// });
 
 	// 詳細情報画面を表示する
 	$("#basicinfo").on("touchstart", function(e) {
@@ -115,6 +119,40 @@ $(function() {
 		this.blur();
 	});
 });
+
+function createPostericons(ptotal) {
+	document.getElementById("posters").value ="hogehoge";
+	db.transaction(
+		function(tr) {
+			tr.executeSql("SELECT * FROM poster", [], function(tr, rs) {
+				var str = "";
+				for (var i = 1; i <= rs.rows.length; i++) {
+
+					str += "<div class=\"postericon horizontal\" id=\"iconNo" + i + "\">\n";
+					str += "	<img id=\"icon" + i + "\" src=\"img/dpic.png\" "
+							+ "width=\"100%\" height=\"100%\"></img>\n";
+					str += "	<div class=\"iconindexhor\" id=\"font" + i + "\">"
+							+ rs.rows.item(i-1).sessionid + "</div>\n";
+					str += "</div>\n";
+				}
+				document.getElementById("posters").innerHTML = str;
+
+			}, function(){});
+		},
+		function(err) {},
+		function() {
+			// 各ポスターアイコンのタッチイベント
+			$(".postericon").on("touchstart", function(e) {
+				// ポスターのIDを取得する
+				var posterid = Number(e.target.id.substring(4));
+				var nextFlag = touchPoster(posterid);
+
+				pflag[posterid] = nextFlag;
+				showPosterIcons();
+			});
+		}
+	);
+}
 
 // 現在のフラグを元にポスターのアイコンを表示する
 function showPosterIcons() {
