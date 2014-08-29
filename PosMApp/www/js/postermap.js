@@ -73,13 +73,18 @@ $(function() {
 		window.location.href = "detail.html";
 	});
 
-	// 基本情報画面の閉じるボタンを押す
-	$("#closebutton").on("touchstart", function(e) {
-		changeBasicInfoPanel(false);
-		unselectPoster();
-		showPosterIcons();
-		//resetAllIcons();
+	//bookmarkイベント
+	$("#changebookmark").on("touchstart", function(e) {
+		changeBookMark();
 	});
+
+	// 基本情報画面の閉じるボタンを押す
+	//$("#closebutton").on("touchstart", function(e) {
+		//changeBasicInfoPanel(false);
+		//unselectPoster();
+		//showPosterIcons();
+		  //resetAllIcons();
+	//});
 
 	// タイトルで検索
 	$("#search-title").bind("change", function(e, ui) {
@@ -253,6 +258,14 @@ function changeBasicInfoPanel(flag) {
 			+ sessionStorage.getItem("authorname")
 			+ "<br />所属： "
 			+ sessionStorage.getItem("authorbelongs");
+
+			var bookmarkIcon = document.getElementById("changebookmark");
+
+			if(sessionStorage.getItem("bookmark") == 0){
+				bookmarkIcon.src = "img/unbookmark.png";
+			}else{
+				bookmarkIcon.src = "img/bookmark.png";
+			}
 	} else {
 		if (!flag) {
 			sessionStorage.removeItem("posterid");
@@ -491,14 +504,16 @@ function addBookMark(posterid){
 //BookMark状態を変更するメソッド
 //先ず、DBの更新、次は星のアイコンを変える
 function changeBookMark(){
+	var bookmarkIcon = document.getElementById("changebookmark");
 	if(sessionStorage.getItem("bookmark") == 0){
 		addBookMark(sessionStorage.getItem("posterid"));
 		sessionStorage.setItem("bookmark", 1);
+		bookmarkIcon.src="img/bookmark.png";
 	}else{
 		deleteBookMark(sessionStorage.getItem("posterid"));
 		sessionStorage.setItem("bookmark", 0);
+		bookmarkIcon.src="img/unbookmark.png";
 	}
-
 }
 
 function touchPosterTest(posterid) {
