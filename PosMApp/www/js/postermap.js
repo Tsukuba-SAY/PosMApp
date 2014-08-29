@@ -67,57 +67,6 @@ $(function() {
 	// 	pflag[posterid] = nextFlag;
 	// 	showPosterIcons();
 	// });
-
-	// 詳細情報画面を表示する
-	$("#basicinfo").on("touchstart", function(e) {
-		window.location.href = "detail.html";
-	});
-
-	// 基本情報画面の閉じるボタンを押す
-	$("#closebutton").on("touchstart", function(e) {
-		changeBasicInfoPanel(false);
-		unselectPoster();
-		showPosterIcons();
-		//resetAllIcons();
-	});
-
-	// タイトルで検索
-	$("#search-title").bind("change", function(e, ui) {
-		if (e.target.value.trim() != "" && e.target.value != null) {
-			
-			// 検索し、強調表示する
-			searchByTitle(e.target.value);
-
-			// if (posterids.length == 0) {
-			// 	document.getElementById("searchResult").innerHTML = "見つかりませんでした";
-			// } else {
-			// 	document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
-			// }
-
-			// 検索中フラグを立てる
-			sessionStorage.setItem("searching", "true");
-			sessionStorage.setItem("searchWord", e.target.value);
-
-		} else {
-			// 検索中フラグを折る
-			sessionStorage.removeItem("searching");
-			sessionStorage.removeItem("searchWord");
-
-			for (var i = 1; i <= ptotal; i++) {
-				if (pflag[i] == "e") {
-					pflag[i] = "t";
-				} else if (pflag[i] == "s") {
-					pflag[i] = "d";
-				}
-			}
-
-			document.getElementById("searchResult").innerHTML = "";
-		}
-
-
-		showPosterIcons();
-		this.blur();
-	});
 });
 
 function createPostericons(ptotal) {
@@ -149,6 +98,119 @@ function createPostericons(ptotal) {
 
 				pflag[posterid] = nextFlag;
 				showPosterIcons();
+			});
+
+			// タイトルで検索
+			$("#search-title").bind("change", function(e, ui) {
+				if (e.target.value.trim() != "" && e.target.value != null) {
+					
+					// 検索し、強調表示する
+					searchByTitle(e.target.value);
+
+					// if (posterids.length == 0) {
+					// 	document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+					// } else {
+					// 	document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
+					// }
+
+					// 検索中フラグを立てる
+					sessionStorage.setItem("searching", "true");
+					sessionStorage.setItem("searchWord", e.target.value);
+
+				} else {
+					// 検索中フラグを折る
+					sessionStorage.removeItem("searching");
+					sessionStorage.removeItem("searchWord");
+
+					for (var i = 1; i <= ptotal; i++) {
+						if (pflag[i] == "e") {
+							pflag[i] = "t";
+						} else if (pflag[i] == "s") {
+							pflag[i] = "d";
+						}
+					}
+
+					document.getElementById("searchResult").innerHTML = "";
+				}
+
+				showPosterIcons();
+				this.blur();
+			});
+
+			// 詳細情報画面を表示する
+			$("#basicinfo").on("touchstart", function(e) {
+				window.location.href = "detail.html";
+			});
+
+			// 基本情報画面の閉じるボタンを押す
+			$("#closebutton").on("touchstart", function(e) {
+				console.log("hogehoge");
+				changeBasicInfoPanel(false);
+				unselectPoster();
+				showPosterIcons();
+				//resetAllIcons();
+			});
+
+			// タイトルで検索
+			$("#search-title").bind("change", function(e, ui) {
+				if (e.target.value.trim() != "" && e.target.value != null) {
+					
+					// 検索し、強調表示する
+					searchByTitle(e.target.value);
+
+					// if (posterids.length == 0) {
+					// 	document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+					// } else {
+					// 	document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
+					// }
+
+					// 検索中フラグを立てる
+					sessionStorage.setItem("searching", "true");
+					sessionStorage.setItem("searchWord", e.target.value);
+
+				} else {
+					// 検索中フラグを折る
+					sessionStorage.removeItem("searching");
+					sessionStorage.removeItem("searchWord");
+
+					for (var i = 1; i <= ptotal; i++) {
+						if (pflag[i] == "e") {
+							pflag[i] = "t";
+						} else if (pflag[i] == "s") {
+							pflag[i] = "d";
+						}
+					}
+
+					document.getElementById("searchResult").innerHTML = "";
+				}
+
+				showPosterIcons();
+				this.blur();
+			});
+
+			// ダイアログのボタンを押したときの挙動 : ID
+			$("#label-id").on("touchstart", function() {
+				console.log("ID");
+			});
+
+			// ダイアログのボタンを押したときの挙動 : セッションID
+			$("#label-sessionid").on("touchstart", function() {
+				console.log("セッションID");
+			});
+
+			// ダイアログのボタンを押したときの挙動 : タイトル
+			$("#label-title").on("touchstart", function() {
+				console.log("タイトル");
+			});
+
+			// ダイアログのボタンを押したときの挙動 : 代表者名
+			$("#label-authorname").on("touchstart", function() {
+				console.log("代表者名");
+			});
+
+			// ダイアログのボタンを押したときの挙動 : 団体名
+			$("#label-authorbelong").on("touchstart", function() {
+				console.log("団体名");
 			});
 		}
 	);
