@@ -365,7 +365,7 @@ function selectPoster(posterid) {
 						sessionStorage.setItem("authorname", row.authorname);
 						sessionStorage.setItem("authorbelongs", row.authorbelongs);
 						sessionStorage.setItem("bookmark", row.bookmark);
-						sessionStorage.setItem("star");
+						sessionStorage.setItem("star", row.star);
 					}
 
 				}, function(){});
