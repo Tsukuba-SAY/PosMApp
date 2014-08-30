@@ -141,12 +141,17 @@ function createPostericons(ptotal) {
 			});
 
 			// 詳細情報画面を表示する
-			$("#basicinfo").on("touchstart", function(e) {
+			$("#detailinfobutton").on("touchstart", function(e) {
 				window.location.href = "detail.html";
 			});
 
+			//bookmarkイベント
+			$("#bookmarkbutton").on("touchstart", function(e) {
+				changeBookMark();
+			});
+
 			// 基本情報画面の閉じるボタンを押す
-			$("#closebutton").on("touchstart", function(e) {
+			$("#basicinfo").on("touchstart", function(e) {
 				console.log("hogehoge");
 				changeBasicInfoPanel(false);
 				unselectPoster();
@@ -398,6 +403,14 @@ function changeBasicInfoPanel(flag) {
 			+ sessionStorage.getItem("authorname")
 			+ "<br />所属： "
 			+ sessionStorage.getItem("authorbelongs");
+
+			var bookmarkIcon = document.getElementById("bookmarkbutton");
+
+			if(sessionStorage.getItem("bookmark") == 0){
+				bookmarkIcon.src = "img/unbookmark.png";
+			}else{
+				bookmarkIcon.src = "img/bookmark.png";
+			}
 	} else {
 		if (!flag) {
 			sessionStorage.removeItem("posterid");
@@ -609,7 +622,7 @@ function setPosterTotal(){
 	);
 }
 
-//BookMarkの削除
+//BookMarkから削除する
 function deleteBookMark(posterid){
 	db.transaction(
 		function(tr) {
@@ -621,7 +634,7 @@ function deleteBookMark(posterid){
 	);
 }
 
-//BookMarkを付ける
+//BookMarkに追加する
 function addBookMark(posterid){
 	db.transaction(
 		function(tr) {
@@ -633,17 +646,19 @@ function addBookMark(posterid){
 	);
 }
 
-//BookMark状態を変更するメソッド
-//先ず、DBの更新、次は星のアイコンを変える
+//BookMark状態を変更する
+//DB更新後にアイコンをスイッチする
 function changeBookMark(){
+	var bookmarkIcon = document.getElementById("bookmarkbutton");
 	if(sessionStorage.getItem("bookmark") == 0){
 		addBookMark(sessionStorage.getItem("posterid"));
 		sessionStorage.setItem("bookmark", 1);
+		bookmarkIcon.src="img/bookmark.png";
 	}else{
 		deleteBookMark(sessionStorage.getItem("posterid"));
 		sessionStorage.setItem("bookmark", 0);
+		bookmarkIcon.src="img/unbookmark.png";
 	}
-
 }
 
 function touchPosterTest(posterid) {
