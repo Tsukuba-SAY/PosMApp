@@ -162,7 +162,7 @@ $(function() {
 	// ラベルを変更する
 	$(".changelabel").on("touchstart", function() {
 		var id = $(this).attr("id");
-		changeLabel(id.substr(id.indexOf("-")+1));
+		changeLabel(id.substr(id.indexOf("-") + 1));
 	})
 
 	// ポスターアイコンを表示
@@ -176,7 +176,7 @@ function changeLabel(column) {
 	sessionStorage.setItem("label", column);
 
 	for (var i = 1; i <= ptotal; i++) {
-		var str = poster[i-1][column];
+		var str = poster[i - 1][column];
 		if (str.length > labelmax) {
 			str = str.substring(0, labelmax) + "...";
 		}
@@ -476,7 +476,7 @@ function changeBookMark(){
 		addBookMark(sessionStorage.getItem("posterid"));
 		sessionStorage.setItem("bookmark", 1);
 		bookmarkIcon.src="img/bookmark.png";
-	}else{
+	} else {
 		deleteBookMark(sessionStorage.getItem("posterid"));
 		sessionStorage.setItem("bookmark", 0);
 		bookmarkIcon.src="img/unbookmark.png";
