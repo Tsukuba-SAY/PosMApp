@@ -470,18 +470,38 @@ function addBookMark(posterid){
 
 //BookMark状態を変更する
 //DB更新後にアイコンをスイッチする
-function changeBookmark() {
+function changeBookmark(){
+	//bookmarkされたポスターIDを保存する
+	var bookmarks;
 	var bookmarkIcon = document.getElementById("bookmarkbutton");
-
-	if (sessionStorage.getItem("bookmark") == 0) {
-		addBookMark(sessionStorage.getItem("posterid"));
-		sessionStorage.setItem("bookmark", 1);
-		bookmarkIcon.src = "img/bookmark.png";
-	} else {
-		deleteBookMark(sessionStorage.getItem("posterid"));
-		sessionStorage.setItem("bookmark", 0);
-		bookmarkIcon.src = "img/unbookmark.png";
+	var posterid = sessionStorage.getItem("posterid");
+	var location = -1;
+	if(!localStorage.getItem("bookmarks")){
+		bookmarks = posterid;
+		bookmarkIcon.src="img/bookmark.png";
+		localStorage.setItem("bookmarks",bookmarks);
+	}else{
+		bookmarks = localStorage.getItem("bookmarks");
+		var bookmarkArr = bookmarks.split(",");
+		for(var i = 0;i < bookmarkArr.length; i++){
+			//該当ポスターがブックマークリストに存在しているかどうか確認する
+			if(parseInt(posterid) == parseInt(bookmarkArr[i])){
+				location = i;
+				break;
+			}
+		}
+		if(location != -1){
+			//存在しているIDを削除する
+			bookmarkArr.splice(location,1);
+			bookmarkIcon.src="img/unbookmark.png";
+		}else{
+			bookmarkArr.push(posterid);
+			bookmarkIcon.src="img/bookmark.png";
+		}
+		bookmarks = bookmarkArr.join(",");
+		localStorage.setItem("bookmarks",bookmarks);
 	}
+	
 }
 
 function touchPosterTest(posterid) {
