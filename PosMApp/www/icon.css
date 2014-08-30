@@ -33,6 +33,7 @@
 	height: 100px;
 	bottom: 0px;
 	text-align: left;
+	padding-top: 20px;
 	padding-right: 40px;
 	background-color: #ffff99;
 	word-wrap:break-word; 
@@ -41,22 +42,31 @@
 
 
 /*TODO:押しにくいから改善したほうがいいかも*/
-#closebutton{
-	position: fixed;
-	right:10px;
-	bottom: 65px;
-	z-index: 30;
-	font-size: 40px;
-	color: #ff0000;
+#bookmarkbutton{
+	padding  : 5px; 
+	position : fixed;
+	z-index  : 30;
+	width    : 25px;
+	height   : 25px;
+	right    : 50px;
+	bottom   : 85px;
+}
+
+#detailinfobutton{
+	position : fixed;
+	z-index  : 30;
+	zoom     : 150%;
+	right    : 5px;
+	bottom   : 25px;
 }
 
 /* アイコンラベルの文字列変更ボタン */
 /* 念のため背景色白にしておく */
 #changelabel{
-	position: absolute;
-	right:5px;
-	top: 5px;
-	z-index: 100;
+	position : absolute;
+	right 	 : 5px;
+	top      : 5px;
+	z-index  : 100;
 }
 
 /* ブックマークされたアイコンにつける☆ */
@@ -67,27 +77,38 @@
 /* star-left  : 左 : 4 */
 
 .star-top{
-	top:5px;
-	text-align: center;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 5px;
+	left: 65px;
 	font-size: 15px;
 }
 
 .star-right{
-	right:5px;
-		top:41px;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	right: 5px;
+	top: 41px;
 	font-size: 15px;
 }
 
 .star-bottom{
+	position: absolute;
+	width: 15px;
+	height: 15px;
 	bottom: 5px;
-	text-align: center;
+	left: 65px;
 	font-size: 15px;
 }
 
 .star-left{
+	position: absolute;
+	width: 15px;
+	height: 15px;
 	left: 5px;
-	top:41px;
-
+	top: 41px;
 	font-size: 15px;
 }
 
