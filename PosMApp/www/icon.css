@@ -1,3 +1,11 @@
+.postericonframe{
+	position: absolute; 
+	z-index: 3;
+	width: 140px; /*iconの横＋30px*/
+	height: 90px; /*iconの縦＋30px*/
+	/*border: solid 1px #000000;*/
+}
+
 .horizontal{
 	position: absolute; 
 	width:90px;
@@ -5,6 +13,8 @@
 	text-align:center;
 	vertical-align:middle;
 	font-size: xx-large;
+	top: 25px;
+	left: 25px;
 
 	z-index: 3;
 }
@@ -49,74 +59,106 @@
 	z-index: 100;
 }
 
+/* ブックマークされたアイコンにつける☆ */
+/*  */
+/* star-up    : 上 : 1 */
+/* star-right : 右 : 2 */
+/* star-down  : 下 : 3 */
+/* star-left  : 左 : 4 */
+
+.star-top{
+	top:5px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.star-right{
+	right:5px;
+		top:41px;
+	font-size: 15px;
+}
+
+.star-bottom{
+	bottom: 5px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.star-left{
+	left: 5px;
+	top:41px;
+
+	font-size: 15px;
+}
+
 /*TODO:jsでのアイコン生成時にここもjsに取り込む*/
 /*1列目*/
 
 #iconNo1{
-	top : 160px;
-	left: 110px;
+	top : 135px;
+	left: 85px;
 }
 #iconNo3{
-	top : 160px;
-	left: 245px;
+	top : 135px;
+	left: 220px;
 }
 #iconNo10{
-	top : 160px;
-	left: 370px;
+	top : 135px;
+	left: 345px;
 }
 /*2列目*/
 #iconNo5{
-	top : 260px;
-	left: 110px;
+	top : 235px;
+	left: 85px;
 }
 #iconNo7{
-	top : 260px;
-	left: 245px;
+	top : 235px;
+	left: 220px;
 }
 #iconNo11{
-	top : 260px;
-	left: 370px;
+	top : 235px;
+	left: 345px;
 }
 
 
 /*3列目*/
 #iconNo8{
-	top : 360px;
-	left: 110px;
+	top : 335px;
+	left: 85px;
 }
 #iconNo9{
-	top : 360px;
-	left: 245px;
+	top : 335px;
+	left: 220px;
 }
 #iconNo12{
-	top : 360px;
-	left: 370px;
+	top : 335px;
+	left: 345px;
 }
 
 /*4列目*/
 #iconNo4{
-	top : 460px;
-	left: 110px;
+	top : 435px;
+	left: 85px;
 }
 
 #iconNo2{
-	top : 460px;
-	left: 245px;
+	top : 435px;
+	left: 220px;
 }
 #iconNo13{
-	top : 460px;
-	left: 370px;
+	top : 435px;
+	left: 345px;
 }
 
 
 /*5列目*/
 #iconNo6{
-	top : 560px;
-	left: 245px;
+	top : 535px;
+	left: 220px;
 }
 #iconNo14{
-	top : 560px;
-	left: 370px;
+	top : 535px;
+	left: 345px;
 }
 
 /*6列目*/
