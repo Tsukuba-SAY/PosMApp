@@ -116,7 +116,6 @@ $(function() {
 
 	// 基本情報画面の閉じるボタンを押す
 	$("#basicinfo").on("touchstart", function(e) {
-		console.log("hogehoge");
 		changeBasicInfoPanel(false);
 		unselectPoster();
 		showPosterIcons();
@@ -276,13 +275,21 @@ function changeBasicInfoPanel(flag) {
 			+ "<br />所属： "
 			+ sessionStorage.getItem("authorbelongs");
 
-			var bookmarkIcon = document.getElementById("bookmarkbutton");
-
-			if(sessionStorage.getItem("bookmark") == 0){
-				bookmarkIcon.src = "img/unbookmark.png";
-			}else{
-				bookmarkIcon.src = "img/bookmark.png";
+		var bookmarkIcon = document.getElementById("bookmarkbutton");
+		var bookmarkArr = localStorage.getItem("bookmarks").split(",");
+		var foundBookmark = false;
+		console.log(sessionStorage.getItem("posterid"));
+		for (var i = 0; i < bookmarkArr.length; i++) {
+			if (parseInt(sessionStorage.getItem("posterid")) == parseInt(bookmarkArr[i])) {
+				foundBookmark = true;
+				break;
 			}
+		}
+		if (foundBookmark) {
+			bookmarkIcon.src = "img/bookmark.png";
+		} else {
+			bookmarkIcon.src = "img/unbookmark.png";
+		}
 	} else {
 		if (!flag) {
 			removeAllPosterInfo();
@@ -444,30 +451,6 @@ function removeAllPosterInfo() {
 	sessionStorage.removeItem("keyword");
 }
 
-//BookMarkから削除する
-function deleteBookMark(posterid){
-	db.transaction(
-		function(tr) {
-			tr.executeSql("UPDATE poster SET bookmark = 0 WHERE id = ?", [posterid], function(tr, rs) {
-			}, function(){});
-		},
-		function(err) {},
-		function() {}
-	);
-}
-
-//BookMarkに追加する
-function addBookMark(posterid){
-	db.transaction(
-		function(tr) {
-			tr.executeSql("UPDATE poster SET bookmark = 1 WHERE id = ?", [posterid], function(tr, rs) {
-			}, function(){});
-		},
-		function(err) {},
-		function() {}
-	);
-}
-
 //BookMark状態を変更する
 //DB更新後にアイコンをスイッチする
 function changeBookmark(){
@@ -476,27 +459,27 @@ function changeBookmark(){
 	var bookmarkIcon = document.getElementById("bookmarkbutton");
 	var posterid = sessionStorage.getItem("posterid");
 	var location = -1;
-	if(!localStorage.getItem("bookmarks")){
+	if (!localStorage.getItem("bookmarks")) {
 		bookmarks = posterid;
-		bookmarkIcon.src="img/bookmark.png";
+		bookmarkIcon.src = "img/bookmark.png";
 		localStorage.setItem("bookmarks",bookmarks);
-	}else{
+	} else {
 		bookmarks = localStorage.getItem("bookmarks");
 		var bookmarkArr = bookmarks.split(",");
-		for(var i = 0;i < bookmarkArr.length; i++){
+		for (var i = 0; i < bookmarkArr.length; i++) {
 			//該当ポスターがブックマークリストに存在しているかどうか確認する
-			if(parseInt(posterid) == parseInt(bookmarkArr[i])){
+			if (parseInt(posterid) == parseInt(bookmarkArr[i])) {
 				location = i;
 				break;
 			}
 		}
-		if(location != -1){
+		if (location != -1) {
 			//存在しているIDを削除する
-			bookmarkArr.splice(location,1);
-			bookmarkIcon.src="img/unbookmark.png";
-		}else{
+			bookmarkArr.splice(location, 1);
+			bookmarkIcon.src = "img/unbookmark.png";
+		} else {
 			bookmarkArr.push(posterid);
-			bookmarkIcon.src="img/bookmark.png";
+			bookmarkIcon.src = "img/bookmark.png";
 		}
 		bookmarks = bookmarkArr.join(",");
 		localStorage.setItem("bookmarks",bookmarks);
