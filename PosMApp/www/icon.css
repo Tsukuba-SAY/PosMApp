@@ -3,7 +3,7 @@
 	z-index: 3;
 	width: 140px; /*iconの横＋30px*/
 	height: 90px; /*iconの縦＋30px*/
-	border: solid 1px #000000;
+	/*border: solid 1px #000000;*/
 }
 
 .horizontal{

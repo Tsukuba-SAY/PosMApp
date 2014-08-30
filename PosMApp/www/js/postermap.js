@@ -64,10 +64,10 @@ $(function() {
 		str += "		<img id='icon" + i + "' src='img/dpic.png' " + "width='100%' height='100%'></img>\n";
 		str += "		<div class='iconindexhor' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
 		str += "	</div>\n";
-		str += "	<div id='starTopNo" + i +"' class='star-top'><img src='img/bookmark.png' style='width:15px;height:15px;'></img></div>\n";
-		str += "    <div id='starRightNo" + i + "' class='star-right'><img src='img/bookmark.png' style='width:15px;height:15px;'></img></div>\n";
-		str += "	<div id='starBottomNo" + i + "' class='star-bottom'><img src='img/bookmark.png' style='width:15px;height:15px;'></img></div>\n";
-		str += "	<div id='starLeftNo" + i + "' class='star-left'><img src='img/bookmark.png' style='width:15px;height:15px;'></img></div>\n";
+		str += "	<div id='starTopNo" + i +"' class='star-top'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
+		str += "    <div id='starRightNo" + i + "' class='star-right'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
+		str += "	<div id='starBottomNo" + i + "' class='star-bottom'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
+		str += "	<div id='starLeftNo" + i + "' class='star-left'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
 		str += "</div>\n";
 	}
 	document.getElementById("posters").innerHTML = str;
@@ -75,6 +75,36 @@ $(function() {
 	// もしラベルが変更されていたらそれに変更
 	if (sessionStorage.getItem("label") != null) {
 		changeLabel(sessionStorage.getItem("label"));
+	}
+
+	// ブックマークが保存されていればマップ上に星をつける
+	// for (var i = 1; i <= ptotal; i++) {
+	// 	document.getElementById("starTopNo" + i)
+	// 		.childNodes[0]
+	// }
+	var bookmarkArr = localStorage.getItem("bookmarks").split(",");
+	for (var i = 0; i < bookmarkArr.length; i++) {
+		var posterid = parseInt(bookmarkArr[i]);
+		if (!isNaN(posterid)) {
+			var p = poster[posterid-1];
+			switch (p.star) {
+				case 1:
+				starelem = document.getElementById("starTopNo" + posterid);
+				break;
+				case 2:
+				starelem = document.getElementById("starRightNo" + posterid);
+				break;
+				case 3:
+				starelem = document.getElementById("starBottomNo" + posterid);
+				break;
+				case 4:
+				starelem = document.getElementById("starLeftNo" + posterid);
+				default:
+				console.log("Error");
+			}
+			starelem.childNodes[0].style.display = "block";
+		}
+
 	}
 
 	// 各ポスターアイコンのタッチイベント
@@ -478,14 +508,40 @@ function changeBookmark(){
 			break;
 		}
 	}
+
+	var starstatus;
+
 	if (location != -1) {
+		// ない場合
 		//存在しているIDを削除する
 		bookmarkArr.splice(location, 1);
 		bookmarkIcon.src = "img/unbookmark.png";
+		starstatus = "none";
 	} else {
+		// ある場合
 		bookmarkArr.push(posterid);
 		bookmarkIcon.src = "img/bookmark.png";
+		starstatus = "block";
 	}
+
+	var p = poster[posterid-1];
+	switch (p.star) {
+		case 1:
+		starelem = document.getElementById("starTopNo" + posterid);
+		break;
+		case 2:
+		starelem = document.getElementById("starRightNo" + posterid);
+		break;
+		case 3:
+		starelem = document.getElementById("starBottomNo" + posterid);
+		break;
+		case 4:
+		starelem = document.getElementById("starLeftNo" + posterid);
+		default:
+		console.log("Error");
+	}
+	starelem.childNodes[0].style.display = starstatus;
+
 	bookmarks = bookmarkArr.join(",");
 	localStorage.setItem("bookmarks",bookmarks);
 	
