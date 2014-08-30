@@ -114,11 +114,6 @@ $(function() {
 		window.location.href = "detail.html";
 	});
 
-	//bookmarkイベント
-	$("#bookmarkbutton").on("touchstart", function(e) {
-		changeBookMark();
-	});
-
 	// 基本情報画面の閉じるボタンを押す
 	$("#basicinfo").on("touchstart", function(e) {
 		console.log("hogehoge");
@@ -160,10 +155,15 @@ $(function() {
 	});
 
 	// ラベルを変更する
-	$(".changelabel").on("touchstart", function() {
+	$(".changelabel").on("touchstart", function(e) {
 		var id = $(this).attr("id");
 		changeLabel(id.substr(id.indexOf("-") + 1));
 	})
+
+	// ブックマークを追加・削除する
+	$("#bookmarkbutton").on("touchstart", function(e) {
+		changeBookmark();
+	});
 
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
@@ -470,16 +470,17 @@ function addBookMark(posterid){
 
 //BookMark状態を変更する
 //DB更新後にアイコンをスイッチする
-function changeBookMark(){
+function changeBookmark() {
 	var bookmarkIcon = document.getElementById("bookmarkbutton");
-	if(sessionStorage.getItem("bookmark") == 0){
+
+	if (sessionStorage.getItem("bookmark") == 0) {
 		addBookMark(sessionStorage.getItem("posterid"));
 		sessionStorage.setItem("bookmark", 1);
-		bookmarkIcon.src="img/bookmark.png";
+		bookmarkIcon.src = "img/bookmark.png";
 	} else {
 		deleteBookMark(sessionStorage.getItem("posterid"));
 		sessionStorage.setItem("bookmark", 0);
-		bookmarkIcon.src="img/unbookmark.png";
+		bookmarkIcon.src = "img/unbookmark.png";
 	}
 }
 
