@@ -7,6 +7,9 @@ var pflag;
 
 var test = false;
 
+// アイコンのラベル何文字まで表示するか
+var labelmax = 5;
+
 // LocalDBを開く
 var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
@@ -190,27 +193,107 @@ function createPostericons(ptotal) {
 
 			// ダイアログのボタンを押したときの挙動 : ID
 			$("#label-id").on("touchstart", function() {
-				console.log("ID");
+				sessionStorage.setItem("label", "id");
+				db.transaction(
+					function(tr) {
+						tr.executeSql("SELECT * FROM poster", [], function(tr, rs) {
+							for (var i = 1; i <= rs.rows.length; i++) {
+								var str = rs.rows.item(i-1).id;
+								if (str.length > labelmax) {
+									str = str.substring(0, labelmax) + "...";
+								}
+								document.getElementById("font" + i)
+								.innerHTML = str;
+							}
+						}, function(){});
+					},
+					function(err) {},
+					function() {}
+				);
 			});
 
 			// ダイアログのボタンを押したときの挙動 : セッションID
 			$("#label-sessionid").on("touchstart", function() {
-				console.log("セッションID");
+				sessionStorage.setItem("sessionid");
+				db.transaction(
+					function(tr) {
+						tr.executeSql("SELECT * FROM poster", [], function(tr, rs) {
+							for (var i = 1; i <= rs.rows.length; i++) {
+								var str = rs.rows.item(i-1).sessionid;
+								if (str.length > labelmax) {
+									str = str.substring(0, labelmax) + "...";
+								}
+								document.getElementById("font" + i)
+								.innerHTML = str;
+							}
+						}, function(){});
+					},
+					function(err) {},
+					function() {}
+				);
 			});
 
 			// ダイアログのボタンを押したときの挙動 : タイトル
 			$("#label-title").on("touchstart", function() {
-				console.log("タイトル");
+				sessionStorage.setItem("label", "title");
+				db.transaction(
+					function(tr) {
+						tr.executeSql("SELECT * FROM poster", [], function(tr, rs) {
+							for (var i = 1; i <= rs.rows.length; i++) {
+								var str = rs.rows.item(i-1).title;
+								if (str.length > labelmax) {
+									str = str.substring(0, labelmax) + "...";
+								}
+								document.getElementById("font" + i)
+								.innerHTML = str;
+							}
+						}, function(){});
+					},
+					function(err) {},
+					function() {}
+				);
 			});
 
 			// ダイアログのボタンを押したときの挙動 : 代表者名
 			$("#label-authorname").on("touchstart", function() {
-				console.log("代表者名");
+				sessionStorage.setItem("label", "authorname");
+				db.transaction(
+					function(tr) {
+						tr.executeSql("SELECT * FROM poster", [], function(tr, rs) {
+							for (var i = 1; i <= rs.rows.length; i++) {
+								var str = rs.rows.item(i-1).authorname;
+								if (str.length > labelmax) {
+									str = str.substring(0, labelmax) + "...";
+								}
+								document.getElementById("font" + i)
+								.innerHTML = str;
+							}
+						}, function(){});
+					},
+					function(err) {},
+					function() {}
+				);
 			});
 
 			// ダイアログのボタンを押したときの挙動 : 団体名
-			$("#label-authorbelong").on("touchstart", function() {
-				console.log("団体名");
+			$("#label-authorbelongs").on("touchstart", function() {
+				sessionStorage.setItem("label", "authorbelongs");
+				db.transaction(
+					function(tr) {
+						tr.executeSql("SELECT * FROM poster", [], function(tr, rs) {
+							for (var i = 1; i <= rs.rows.length; i++) {
+								var str = rs.rows.item(i-1).authorbelongs;
+								if (str.length > labelmax) {
+									str = str.substring(0, labelmax) + "...";
+								}
+								document.getElementById("font" + i)
+								.innerHTML = str;
+							}
+						}, function(){});
+					},
+					function(err) {},
+					function() {}
+				);
 			});
 		}
 	);
