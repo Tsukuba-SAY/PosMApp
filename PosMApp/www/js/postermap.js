@@ -59,11 +59,13 @@ $(function() {
 	// TODO:直書きからDOMをいじくる形にする
 	var str = "";
 	for (var i = 1; i <= poster.length; i++) {
-		str += "<div class=\"postericon horizontal\" id=\"iconNo" + i + "\">\n";
-		str += "	<img id=\"icon" + i + "\" src=\"img/dpic.png\" "
+		str += "<div class=\"postericonframe\" id=\"iconNo" + i + "\">\n";
+		str += "	<div class=\"postericon horizontal\">\n";
+		str += "		<img id=\"icon" + i + "\" src=\"img/dpic.png\" "
 				+ "width=\"100%\" height=\"100%\"></img>\n";
-		str += "	<div class=\"iconindexhor\" id=\"font" + i + "\">"
+		str += "		<div class=\"iconindexhor\" id=\"font" + i + "\">"
 				+ poster[i-1].sessionid + "</div>\n";
+		str += "	</div>\n";
 		str += "</div>\n";
 	}
 	document.getElementById("posters").innerHTML = str;
