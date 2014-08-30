@@ -159,30 +159,11 @@ $(function() {
 		this.blur();
 	});
 
-	// ダイアログのボタンを押したときの挙動 : ID
-	$("#label-id").on("touchstart", function() {
-		changeLabel("id");
-	});
-
-	// ダイアログのボタンを押したときの挙動 : セッションID
-	$("#label-sessionid").on("touchstart", function() {
-		changeLabel("sessionid");
-	});
-
-	// ダイアログのボタンを押したときの挙動 : タイトル
-	$("#label-title").on("touchstart", function() {
-		changeLabel("title");
-	});
-
-	// ダイアログのボタンを押したときの挙動 : 代表者名
-	$("#label-authorname").on("touchstart", function() {
-		changeLabel("authorname");
-	});
-
-	// ダイアログのボタンを押したときの挙動 : 団体名
-	$("#label-authorbelongs").on("touchstart", function() {
-		changeLabel("authorbelongs");
-	});
+	// ラベルを変更する
+	$(".changelabel").on("touchstart", function() {
+		var id = $(this).attr("id");
+		changeLabel(id.substr(id.indexOf("-")+1));
+	})
 
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
