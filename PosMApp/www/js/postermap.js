@@ -145,11 +145,6 @@ function createPostericons(ptotal) {
 				window.location.href = "detail.html";
 			});
 
-			//bookmarkイベント
-			$("#bookmarkbutton").on("touchstart", function(e) {
-				changeBookMark();
-			});
-
 			// 基本情報画面の閉じるボタンを押す
 			$("#basicinfo").on("touchstart", function(e) {
 				console.log("hogehoge");
