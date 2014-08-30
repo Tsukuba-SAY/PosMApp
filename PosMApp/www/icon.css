@@ -77,27 +77,38 @@
 /* star-left  : 左 : 4 */
 
 .star-top{
-	top:5px;
-	text-align: center;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 5px;
+	left: 65px;
 	font-size: 15px;
 }
 
 .star-right{
-	right:5px;
-		top:41px;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	right: 5px;
+	top: 41px;
 	font-size: 15px;
 }
 
 .star-bottom{
+	position: absolute;
+	width: 15px;
+	height: 15px;
 	bottom: 5px;
-	text-align: center;
+	left: 65px;
 	font-size: 15px;
 }
 
 .star-left{
+	position: absolute;
+	width: 15px;
+	height: 15px;
 	left: 5px;
-	top:41px;
-
+	top: 41px;
 	font-size: 15px;
 }
 
