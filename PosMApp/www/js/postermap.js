@@ -48,6 +48,11 @@ $(function() {
 	// LocalDBの初期化
 	initDB();
 
+	// もしLocal Storageにbookmarksがなければ追加
+	if (localStorage.getItem("bookmarks") == null) {
+		localStorage.setItem("bookmarks", "");
+	}
+
 	// ポスターアイコンの作成
 	// JSONから直接呼び出す感じで
 	// とりあえずデフォルトはセッションID
@@ -459,31 +464,26 @@ function changeBookmark(){
 	var bookmarkIcon = document.getElementById("bookmarkbutton");
 	var posterid = sessionStorage.getItem("posterid");
 	var location = -1;
-	if (!localStorage.getItem("bookmarks")) {
-		bookmarks = posterid;
-		bookmarkIcon.src = "img/bookmark.png";
-		localStorage.setItem("bookmarks",bookmarks);
-	} else {
-		bookmarks = localStorage.getItem("bookmarks");
-		var bookmarkArr = bookmarks.split(",");
-		for (var i = 0; i < bookmarkArr.length; i++) {
-			//該当ポスターがブックマークリストに存在しているかどうか確認する
-			if (parseInt(posterid) == parseInt(bookmarkArr[i])) {
-				location = i;
-				break;
-			}
+
+	bookmarks = localStorage.getItem("bookmarks");
+	var bookmarkArr = bookmarks.split(",");
+	for (var i = 0; i < bookmarkArr.length; i++) {
+		//該当ポスターがブックマークリストに存在しているかどうか確認する
+		if (parseInt(posterid) == parseInt(bookmarkArr[i])) {
+			location = i;
+			break;
 		}
-		if (location != -1) {
-			//存在しているIDを削除する
-			bookmarkArr.splice(location, 1);
-			bookmarkIcon.src = "img/unbookmark.png";
-		} else {
-			bookmarkArr.push(posterid);
-			bookmarkIcon.src = "img/bookmark.png";
-		}
-		bookmarks = bookmarkArr.join(",");
-		localStorage.setItem("bookmarks",bookmarks);
 	}
+	if (location != -1) {
+		//存在しているIDを削除する
+		bookmarkArr.splice(location, 1);
+		bookmarkIcon.src = "img/unbookmark.png";
+	} else {
+		bookmarkArr.push(posterid);
+		bookmarkIcon.src = "img/bookmark.png";
+	}
+	bookmarks = bookmarkArr.join(",");
+	localStorage.setItem("bookmarks",bookmarks);
 	
 }
 
