@@ -3,7 +3,6 @@
 	z-index: 3;
 	width: 140px; /*iconの横＋30px*/
 	height: 90px; /*iconの縦＋30px*/
-	/*border: solid 1px #000000;*/
 }
 
 .horizontal{
@@ -12,7 +11,7 @@
 	height:40px;
 	text-align:center;
 	vertical-align:middle;
-	font-size: large;
+	font-size: 15px;
 	top: 25px;
 	left: 25px;
 
@@ -35,6 +34,8 @@
 	text-align: left;
 	padding-top: 20px;
 	padding-right: 40px;
+	padding-left: 40px;
+
 	background-color: #ffff99;
 	word-wrap:break-word; 
 	z-index: 20;
@@ -43,20 +44,22 @@
 
 /*TODO:押しにくいから改善したほうがいいかも*/
 #bookmarkbutton{
-	padding  : 5px; 
+	padding  : 15px; 
 	position : fixed;
 	z-index  : 30;
-	width    : 25px;
-	height   : 25px;
-	right    : 50px;
-	bottom   : 85px;
+	width    : 30px;
+	height   : 30px;
+	left     : 0px;
+	bottom   : 95px;
 }
 
 #detailinfobutton{
+	padding  : 15px; 
 	position : fixed;
 	z-index  : 30;
-	zoom     : 150%;
-	right    : 5px;
+	right    : 0px;
+	height   : 35px;
+	width    : 35px; 
 	bottom   : 25px;
 }
 
