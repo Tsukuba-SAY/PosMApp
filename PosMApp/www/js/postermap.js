@@ -57,6 +57,7 @@ $(function() {
 	// JSONから直接呼び出す感じで
 	// とりあえずデフォルトはセッションID
 	// TODO:直書きからDOMをいじくる形にする
+	// => jQueryでも結局直書きにする構文あるしこれでもいいんじゃない？
 	var str = "";
 	for (var i = 1; i <= poster.length; i++) {
 		str += "<div class='postericonframe' id='iconNo" + i + "''>\n";
