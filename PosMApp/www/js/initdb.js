@@ -1,4 +1,9 @@
-// DBを初期化する
+/**
+ * データベースを初期化するためのするためのメソッド。
+ * 初期化のため、各テーブルを一度DELETEした後、生成する。
+ * テーブル生成後、posterdata.js内にあるjsonオブジェクトからそれぞれ挿入する。
+ * @module initDB
+ **/
 function initDB() {
 	var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 

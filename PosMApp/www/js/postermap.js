@@ -77,16 +77,15 @@ $(function() {
 		changeLabel(sessionStorage.getItem("label"));
 	}
 
-	// ブックマークが保存されていればマップ上に星をつける
-	// for (var i = 1; i <= ptotal; i++) {
-	// 	document.getElementById("starTopNo" + i)
-	// 		.childNodes[0]
-	// }
+	// ブックマークがLocal Storageに保存されていればマップ上に星をつける
+	// カンマ区切りでポスターIDが保存されているのでそれを区切った配列を生成する
 	var bookmarkArr = localStorage.getItem("bookmarks").split(",");
 	for (var i = 0; i < bookmarkArr.length; i++) {
 		var posterid = parseInt(bookmarkArr[i]);
 		if (!isNaN(posterid)) {
 			var p = poster[posterid-1];
+			// ポスターのstar属性によって配置する位置を決定する
+			// 1が上で時計回り
 			switch (p.star) {
 				case 1:
 				starelem = document.getElementById("starTopNo" + posterid);
@@ -102,6 +101,7 @@ $(function() {
 				default:
 				console.log("Error");
 			}
+			// 該当する星要素を表示する
 			starelem.childNodes[0].style.display = "block";
 		}
 
@@ -111,41 +111,11 @@ $(function() {
 	$(".postericon").on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(4));
+
 		var nextFlag = touchPoster(posterid);
 
 		pflag[posterid] = nextFlag;
 		showPosterIcons();
-	});
-
-	// タイトルで検索
-	$("#search-title").bind("change", function(e, ui) {
-		if (e.target.value.trim() != "" && e.target.value != null) {
-			
-			// 検索し、強調表示する
-			searchByTitle(e.target.value);
-
-			// 検索中フラグを立てる
-			sessionStorage.setItem("searching", "true");
-			sessionStorage.setItem("searchWord", e.target.value);
-
-		} else {
-			// 検索中フラグを折る
-			sessionStorage.removeItem("searching");
-			sessionStorage.removeItem("searchWord");
-
-			for (var i = 1; i <= ptotal; i++) {
-				if (pflag[i] == "e") {
-					pflag[i] = "t";
-				} else if (pflag[i] == "s") {
-					pflag[i] = "d";
-				}
-			}
-
-			document.getElementById("searchResult").innerHTML = "";
-		}
-
-		showPosterIcons();
-		this.blur();
 	});
 
 	// 詳細情報画面を表示する
@@ -177,7 +147,9 @@ $(function() {
 			sessionStorage.removeItem("searching");
 			sessionStorage.removeItem("searchWord");
 
+			// 各ポスターに対して検索中状態から未検索状態へフラグを変化させる
 			for (var i = 1; i <= ptotal; i++) {
+				// 検索中強調表示ならばただの強調表示に、ヒット状態なら元に戻す
 				if (pflag[i] == "e") {
 					pflag[i] = "t";
 				} else if (pflag[i] == "s") {
@@ -194,7 +166,9 @@ $(function() {
 
 	// ラベルを変更する
 	$(".changelabel").on("touchstart", function(e) {
+		// 押されたボタンのidを取得する
 		var id = $(this).attr("id");
+		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
 		changeLabel(id.substr(id.indexOf("-") + 1));
 	})
 
@@ -211,10 +185,13 @@ $(function() {
 
 // ラベルを変更する
 function changeLabel(column) {
+	// Session Storageから対応する属性の値を取り出す
 	sessionStorage.setItem("label", column);
 
+	// 各ポスターに対してラベルを変更する
 	for (var i = 1; i <= ptotal; i++) {
 		var str = poster[i - 1][column];
+		// 長さがlabelmax文字以上になっていたら短縮する
 		if (str.length > labelmax) {
 			str = str.substring(0, labelmax) + "...";
 		}
@@ -251,7 +228,7 @@ function showPosterIcons() {
 
 // ポスターをタッチ
 // return : タッチしたポスターの次の状態
-//TODO:パターンを導入しようか・・・
+// TODO: パターンを導入しようか・・・
 function touchPoster(posterid) {
 	if (posterid < 1 || posterid > ptotal) {
 		throw new Exception();
@@ -490,10 +467,10 @@ function removeAllPosterInfo() {
 	sessionStorage.removeItem("keyword");
 }
 
-//BookMark状態を変更する
-//DB更新後にアイコンをスイッチする
+// BookMark状態を変更する
+// DB更新後にアイコンをスイッチする
 function changeBookmark(){
-	//bookmarkされたポスターIDを保存する
+	// bookmarkされたポスターIDを保存する
 	var bookmarks;
 	var bookmarkIcon = document.getElementById("bookmarkbutton");
 	var posterid = sessionStorage.getItem("posterid");
@@ -513,7 +490,7 @@ function changeBookmark(){
 
 	if (location != -1) {
 		// ない場合
-		//存在しているIDを削除する
+		// 存在しているIDを削除する
 		bookmarkArr.splice(location, 1);
 		bookmarkIcon.src = "img/unbookmark.png";
 		starstatus = "none";
