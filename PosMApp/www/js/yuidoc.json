@@ -1,0 +1,10 @@
+{
+	"name": "PosMApp Documentation",
+	"description": "The documentation for PosMApp",
+	"version": "Release 2",
+	"url": "",
+	"options": {
+		"outdir": "./docs",
+		"paths": ["./"]
+	}
+}

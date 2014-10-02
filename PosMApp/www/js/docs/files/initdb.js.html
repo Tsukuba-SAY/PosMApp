@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>initdb.js - PosMApp Documentation</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title="PosMApp Documentation"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: Release 2</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/initDB.html">initDB</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: initdb.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * データベースを初期化するためのするためのメソッド。
+ * 初期化のため、各テーブルを一度DELETEした後、生成する。
+ * テーブル生成後、posterdata.js内にあるjsonオブジェクトからそれぞれ挿入する。
+ * @module initDB
+ **/
+function initDB() {
+	var db = openDatabase(&quot;PosMAppDB&quot;, &quot;&quot;, &quot;PosMAppDB&quot;, 1000);
+
+	db.transaction(
+		function(tr) {
+			// テーブルを作成する
+			tr.executeSql(&quot;DROP TABLE IF EXISTS poster&quot;);
+			tr.executeSql(&quot;DROP TABLE IF EXISTS author&quot;);
+			tr.executeSql(&quot;DROP TABLE IF EXISTS keyword&quot;);
+			tr.executeSql(&quot;CREATE TABLE IF NOT EXISTS poster ( id INTEGER NOT NULL UNIQUE PRIMARY KEY, sessionid TEXT, title TEXT, abstract TEXT, authorname TEXT, authorbelongs TEXT, bookmark INTEGER )&quot;);
+			tr.executeSql(&quot;CREATE TABLE IF NOT EXISTS author ( id INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, posterid INTEGER NOT NULL, name TEXT, belongs TEXT, first INTEGER, FOREIGN KEY (posterid) REFERENCES poster (id) )&quot;);
+			tr.executeSql(&quot;CREATE TABLE IF NOT EXISTS keyword ( id INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, posterid INTEGER NOT NULL, keyword TEXT, FOREIGN KEY (posterid) REFERENCES poster (id) )&quot;);
+			
+			// 仮データを挿入する (poster)
+			tr.executeSql(&quot;DELETE FROM poster&quot;); //ポスター列の初期化
+			// posterdata.js 内のJSON(posterdata)からDBへ挿入
+			for (var i in poster) {
+				tr.executeSql(&quot;INSERT INTO poster VALUES (?, ?, ?, ?, ?, ?, ?)&quot;, [
+					poster[i].id,
+					poster[i].sessionid,
+					poster[i].title,
+					poster[i].abstract,
+					poster[i].authorname,
+					poster[i].authorbelongs,
+					poster[i].bookmark]);
+			}
+
+			// 仮データを挿入する (author)
+			tr.executeSql(&quot;DELETE FROM author&quot;); //author列の初期化
+			for (var i in author) {
+				tr.executeSql(&quot;INSERT INTO author VALUES (NULL, ?, ?, ?, ?)&quot;, [
+					author[i].posterid,
+					author[i].name,
+					author[i].belongs,
+					author[i].first]);
+			}
+
+			// 仮データを挿入する (keyword)
+			tr.executeSql(&quot;DELETE FROM keyword&quot;);
+			for (var i in keyword) {
+				tr.executeSql(&quot;INSERT INTO keyword VALUES (NULL, ?, ?)&quot;, [
+					keyword[i].posterid,
+					keyword[i].keyword]);
+			}
+		},
+		function(err){},
+		function(){}
+	);
+}
+
+
+
+// 以下は旧バージョン (release 1)
+// DBを初期化する
+/*
+function initDB() {
+	db.transaction(
+		function(tr) {
+			// テーブルを作成する
+			tr.executeSql(&quot;DROP TABLE IF EXISTS poster&quot;);
+			tr.executeSql(&quot;DROP TABLE IF EXISTS author&quot;);
+			tr.executeSql(&quot;DROP TABLE IF EXISTS keyword&quot;);
+			tr.executeSql(&quot;CREATE TABLE IF NOT EXISTS poster ( id INTEGER NOT NULL UNIQUE PRIMARY KEY, sessionid TEXT, title TEXT, abstract TEXT, authorname TEXT, authorbelongs TEXT )&quot;);
+			tr.executeSql(&quot;CREATE TABLE IF NOT EXISTS author ( id INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, posterid INTEGER NOT NULL, name TEXT, belongs TEXT, first INTEGER, FOREIGN KEY (posterid) REFERENCES poster (id) )&quot;);
+			tr.executeSql(&quot;CREATE TABLE IF NOT EXISTS keyword ( id INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, posterid INTEGER NOT NULL, keyword TEXT, FOREIGN KEY (posterid) REFERENCES poster (id) )&quot;);
+			
+			// 仮データを挿入する (poster)
+			tr.executeSql(&quot;DELETE FROM poster&quot;); //ポスター列の初期化
+			tr.executeSql(&quot;INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )&quot;, [1, &quot;A1-1&quot;, &quot;YAGOを用いた拡張固有表現抽出における新出語のクラス推定精度の検証&quot;, &quot;概要１&quot;, &quot;真嶋 温佳&quot;, &quot;大阪大学&quot;]);
+			tr.executeSql(&quot;INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )&quot;, [2, &quot;A1-4&quot;, &quot;XML部分文書検索技術の Web 文書への適用&quot;, &quot;概要２&quot;, &quot;欅 惇志&quot;, &quot;奈良先端科学技術大学院大学&quot;]);
+			tr.executeSql(&quot;INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )&quot;, [3, &quot;B1-1&quot;, &quot; 配信型授業のコミュニケーションを支援するコメント共有手法の提案&quot;, &quot;概要３&quot;, &quot;川上 未来&quot;, &quot;筑波大学&quot;]);
+			tr.executeSql(&quot;INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )&quot;, [4, &quot;B1-3&quot;, &quot;円滑な人脈形成のためのSNS投稿に着目した仲介者探索手法&quot;, &quot;概要４&quot;, &quot;小松 恭子&quot;, &quot;KDDI研究所&quot;]);
+			tr.executeSql(&quot;INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )&quot;, [5, &quot;C1-3&quot;, &quot;三事象間の因果関係分析のための因果関係ネットワーク構築の一手法&quot;, &quot;概要５&quot;, &quot;津川 敦朗&quot;, &quot;岡山大学&quot;]);
+			tr.executeSql(&quot;INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )&quot;, [6, &quot;C1-4&quot;, &quot;テキストデータにおける予定変更情報の獲得および未来に起こり得る派生事象の予測&quot;, &quot;概要６&quot;, &quot;栗原 俊明&quot;, &quot;東京大学&quot;]);
+			tr.executeSql(&quot;INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )&quot;, [7, &quot;D1-1&quot;, &quot;Hadoop Cassandra とCassandraを用いた並列分散処理機構の性能比較&quot;, &quot;概要7&quot;, &quot;菱沼 直子&quot;, &quot;お茶の水女子大学&quot;]);
+			tr.executeSql(&quot;INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )&quot;, [8, &quot;D1-2&quot;, &quot;分散NMFにおけるAdaptive差分更新手法の適用&quot;, &quot;概要８&quot;, &quot;牧野 浩之&quot;, &quot;NTT&quot;]);
+			tr.executeSql(&quot;INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )&quot;, [9, &quot;E1-5&quot;, &quot;Twitterタイムラインの話題の可視化の一手法&quot;, &quot;概要９&quot;, &quot;松尾 哉太&quot;, &quot;岡山大学&quot;]);
+			tr.executeSql(&quot;INSERT INTO poster VALUES ( ?, ?, ?, ?, ?, ? )&quot;, [10, &quot;E1-6&quot;, &quot;スポーツ競技戦略決定支援のための移動軌跡のマイニングと可視化システム&quot;, &quot;概要１０&quot;, &quot;谷 俊廣&quot;, &quot;立命館大学&quot;]);
+
+			// 仮データを挿入する (author)
+			tr.executeSql(&quot;DELETE FROM author&quot;); //author列の初期化
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [1, &quot;真嶋 温佳&quot;, &quot;大阪大学&quot;, 1]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [1, &quot;白川 真澄&quot;, &quot;大阪大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [1, &quot;原 隆浩&quot;, &quot;大阪大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [1, &quot;西尾 章治郎&quot;, &quot;大阪大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [2, &quot;欅 惇志&quot;, &quot;奈良先端科学技術大学院大学&quot;, 1]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [2, &quot;宮崎 純&quot;, &quot;東京工業大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [2, &quot;波多野 賢治&quot;, &quot;同志社大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [2, &quot;山本 豪志朗&quot;, &quot;奈良先端科学技術大学院大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [2, &quot;武富 貴史&quot;, &quot;奈良先端科学技術大学院大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [2, &quot;加藤 博一&quot;, &quot;奈良先端科学技術大学院大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [3, &quot;川上 未来&quot;, &quot;筑波大学&quot;, 1]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [3, &quot;佐藤 哲司&quot;, &quot;筑波大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [4, &quot;小松 恭子&quot;, &quot;KDDI研究所&quot;, 1]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [4, &quot;中澤 昌美&quot;, &quot;KDDI研究所&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [4, &quot;池田 和史&quot;, &quot;KDDI研究所&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [4, &quot;服部 元&quot;, &quot;KDDI研究所&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [4, &quot;滝嶋 康弘&quot;, &quot;KDDI研究所&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [5, &quot;津川 敦朗&quot;, &quot;岡山大学&quot;, 1]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [5, &quot;新妻 弘崇&quot;, &quot;岡山大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [5, &quot;太田 学&quot;, &quot;岡山大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [6, &quot;栗原 俊明&quot;, &quot;東京大学&quot;, 1]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [6, &quot;豊田 正史&quot;, &quot;東京大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [6, &quot;喜連川 優&quot;, &quot;東京大学／国立情報学研究所&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [7, &quot;菱沼 直子&quot;, &quot;お茶の水女子大学&quot;, 1]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [7, &quot;竹房 あつ子&quot;, &quot;産業技術総合研究所&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [7, &quot;中田 秀基&quot;, &quot;産業技術総合研究所&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [7, &quot;小口 正人&quot;, &quot;お茶の水女子大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [8, &quot;牧野 浩之&quot;, &quot;NTT&quot;, 1]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [8, &quot;鬼塚 真&quot;, &quot;NTT&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [9, &quot;松尾 哉太&quot;, &quot;岡山大学&quot;, 1]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [9, &quot;新妻 弘崇&quot;, &quot;岡山大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [9, &quot;太田 学&quot;, &quot;岡山大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [10, &quot;谷 俊廣&quot;, &quot;立命館大学&quot;, 1]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [10, &quot;黄 宏軒&quot;, &quot;立命館大学&quot;, 0]);
+			tr.executeSql(&quot;INSERT INTO author VALUES ( NULL, ?, ?, ?, ? )&quot;, [10, &quot;川越 恭二&quot;, &quot;立命館大学&quot;, 0]);
+
+
+
+			// 仮データを挿入する (keyword)
+			tr.executeSql(&quot;DELETE FROM keyword&quot;);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [1, &quot;Wikipedia&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [1, &quot;XML&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [2, &quot;Wikipedia&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [2, &quot;XML&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [3, &quot;SNS&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [4, &quot;SNS&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [5, &quot;Web情報抽出&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [6, &quot;Web情報抽出&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [7, &quot;MapReduce&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [7, &quot;分散処理&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [8, &quot;MapReduce&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [8, &quot;分散処理&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [9, &quot;情報可視化&quot;]);
+			tr.executeSql(&quot;INSERT INTO keyword VALUES ( NULL, ?, ? )&quot;, [10, &quot;情報可視化&quot;]);
+
+		},
+		function(err){},
+		//c
+		function(){}
+	);
+}
+*/
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

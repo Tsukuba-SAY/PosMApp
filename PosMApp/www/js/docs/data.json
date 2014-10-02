@@ -1,0 +1,442 @@
+{
+    "project": {
+        "name": "PosMApp Documentation",
+        "description": "The documentation for PosMApp",
+        "version": "Release 2",
+        "url": ""
+    },
+    "files": {
+        "initdb.js": {
+            "name": "initdb.js",
+            "modules": {
+                "initDB": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "jquery-2.1.1.js": {
+            "name": "jquery-2.1.1.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "initDB": {
+            "name": "initDB",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "initdb.js",
+            "line": 1,
+            "description": "データベースを初期化するためのするためのメソッド。\n初期化のため、各テーブルを一度DELETEした後、生成する。\nテーブル生成後、posterdata.js内にあるjsonオブジェクトからそれぞれ挿入する。"
+        }
+    },
+    "classes": {},
+    "classitems": [
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 846,
+            "description": "Create key-value caches of limited size",
+            "return": {
+                "description": "Returns the Object data after storing it on itself with\n\tproperty name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)\n\tdeleting the oldest entry",
+                "type": "Function(string, Object)"
+            },
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 866,
+            "description": "Mark a function for special use by Sizzle",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "The function to mark",
+                    "type": "Function"
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 875,
+            "description": "Support testing using an element",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "Passed the created div and expects a boolean result",
+                    "type": "Function"
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 896,
+            "description": "Adds the same handler for all of the specified attrs",
+            "params": [
+                {
+                    "name": "attrs",
+                    "description": "Pipe-separated list of attributes",
+                    "type": "String"
+                },
+                {
+                    "name": "handler",
+                    "description": "The method that will be applied",
+                    "type": "Function"
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 910,
+            "description": "Checks document order of two siblings",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "b",
+                    "description": "",
+                    "type": "Element"
+                }
+            ],
+            "return": {
+                "description": "Returns less than 0 if a precedes b, greater than 0 if a follows b",
+                "type": "Number"
+            },
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 939,
+            "description": "Returns a function to use in pseudos for input types",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 950,
+            "description": "Returns a function to use in pseudos for buttons",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 961,
+            "description": "Returns a function to use in pseudos for positionals",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 983,
+            "description": "Checks a node for validity as a Sizzle context",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element|Object="
+                }
+            ],
+            "return": {
+                "description": "The input node if acceptable, otherwise a falsy value",
+                "type": "Element|Object|Boolean"
+            },
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 995,
+            "description": "Detects XML nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "An element or a document",
+                    "type": "Element|Object"
+                }
+            ],
+            "return": {
+                "description": "True iff elem is a non-HTML XML node",
+                "type": "Boolean"
+            },
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 1007,
+            "description": "Sets document-related variables once based on the current document",
+            "params": [
+                {
+                    "name": "doc",
+                    "description": "An element or document object to use to set the document",
+                    "type": "Element|Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Returns the current document",
+                "type": "Object"
+            },
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 1440,
+            "description": "Document sorting and removing duplicates",
+            "params": [
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "ArrayLike"
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 1473,
+            "description": "Utility function for retrieving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 2440,
+            "description": "A low-level selection function that works with Sizzle's compiled\n selector functions",
+            "params": [
+                {
+                    "name": "selector",
+                    "description": "A selector or a pre-compiled\n selector function built with Sizzle.compile",
+                    "type": "String|Function"
+                },
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "Array",
+                    "optional": true
+                },
+                {
+                    "name": "seed",
+                    "description": "A set of elements to match against",
+                    "type": "Array",
+                    "optional": true
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 3401,
+            "description": "The ready event handler and self cleanup method",
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 3494,
+            "description": "Determines whether an object can have data",
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 5454,
+            "description": "Retrieve the actual display of a element",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "nodeName of the element",
+                    "type": "String"
+                },
+                {
+                    "name": "doc",
+                    "description": "Document object",
+                    "type": "Object"
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 5478,
+            "description": "Try to determine the default display value of an element",
+            "params": [
+                {
+                    "name": "nodeName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 8823,
+            "description": "Load a url into a page",
+            "class": "",
+            "module": "initDB"
+        },
+        {
+            "file": "jquery-2.1.1.js",
+            "line": 8897,
+            "description": "Gets a window from an element",
+            "class": "",
+            "module": "initDB"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " jquery-2.1.1.js:846"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " jquery-2.1.1.js:910"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " jquery-2.1.1.js:983"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " jquery-2.1.1.js:995"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " jquery-2.1.1.js:1007"
+        },
+        {
+            "message": "Missing item type\nCreate key-value caches of limited size",
+            "line": " jquery-2.1.1.js:846"
+        },
+        {
+            "message": "Missing item type\nMark a function for special use by Sizzle",
+            "line": " jquery-2.1.1.js:866"
+        },
+        {
+            "message": "Missing item type\nSupport testing using an element",
+            "line": " jquery-2.1.1.js:875"
+        },
+        {
+            "message": "Missing item type\nAdds the same handler for all of the specified attrs",
+            "line": " jquery-2.1.1.js:896"
+        },
+        {
+            "message": "Missing item type\nChecks document order of two siblings",
+            "line": " jquery-2.1.1.js:910"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for input types",
+            "line": " jquery-2.1.1.js:939"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for buttons",
+            "line": " jquery-2.1.1.js:950"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for positionals",
+            "line": " jquery-2.1.1.js:961"
+        },
+        {
+            "message": "Missing item type\nChecks a node for validity as a Sizzle context",
+            "line": " jquery-2.1.1.js:983"
+        },
+        {
+            "message": "Missing item type\nDetects XML nodes",
+            "line": " jquery-2.1.1.js:995"
+        },
+        {
+            "message": "Missing item type\nSets document-related variables once based on the current document",
+            "line": " jquery-2.1.1.js:1007"
+        },
+        {
+            "message": "Missing item type\nDocument sorting and removing duplicates",
+            "line": " jquery-2.1.1.js:1440"
+        },
+        {
+            "message": "Missing item type\nUtility function for retrieving the text value of an array of DOM nodes",
+            "line": " jquery-2.1.1.js:1473"
+        },
+        {
+            "message": "Missing item type\nA low-level selection function that works with Sizzle's compiled\n selector functions",
+            "line": " jquery-2.1.1.js:2440"
+        },
+        {
+            "message": "Missing item type\nThe ready event handler and self cleanup method",
+            "line": " jquery-2.1.1.js:3401"
+        },
+        {
+            "message": "Missing item type\nDetermines whether an object can have data",
+            "line": " jquery-2.1.1.js:3494"
+        },
+        {
+            "message": "Missing item type\nRetrieve the actual display of a element",
+            "line": " jquery-2.1.1.js:5454"
+        },
+        {
+            "message": "Missing item type\nTry to determine the default display value of an element",
+            "line": " jquery-2.1.1.js:5478"
+        },
+        {
+            "message": "Missing item type\nLoad a url into a page",
+            "line": " jquery-2.1.1.js:8823"
+        },
+        {
+            "message": "Missing item type\nGets a window from an element",
+            "line": " jquery-2.1.1.js:8897"
+        }
+    ]
+}

@@ -1,10 +1,19 @@
+.postericonframe{
+	position: absolute; 
+	z-index: 3;
+	width: 140px; /*iconの横＋30px*/
+	height: 90px; /*iconの縦＋30px*/
+}
+
 .horizontal{
 	position: absolute; 
 	width:90px;
 	height:40px;
 	text-align:center;
 	vertical-align:middle;
-	font-size: xx-large;
+	font-size: 15px;
+	top: 25px;
+	left: 25px;
 
 	z-index: 3;
 }
@@ -23,7 +32,10 @@
 	height: 100px;
 	bottom: 0px;
 	text-align: left;
+	padding-top: 20px;
 	padding-right: 40px;
+	padding-left: 40px;
+
 	background-color: #ffff99;
 	word-wrap:break-word; 
 	z-index: 20;
@@ -31,103 +43,146 @@
 
 
 /*TODO:押しにくいから改善したほうがいいかも*/
-#closebutton{
-	position: fixed;
-	right:10px;
-	bottom: 65px;
-	z-index: 30;
-	font-size: 40px;
-	color: #ff0000;
+#bookmarkbutton{
+	padding  : 15px; 
+	position : fixed;
+	z-index  : 30;
+	width    : 30px;
+	height   : 30px;
+	left     : 0px;
+	bottom   : 95px;
 }
 
+#detailinfobutton{
+	padding  : 15px; 
+	position : fixed;
+	z-index  : 30;
+	right    : 0px;
+	height   : 35px;
+	width    : 35px; 
+	bottom   : 25px;
+}
+
+/* アイコンラベルの文字列変更ボタン */
+/* 念のため背景色白にしておく */
+#changelabel{
+	position : absolute;
+	right 	 : 5px;
+	top      : 5px;
+	z-index  : 100;
+}
+
+/* ブックマークされたアイコンにつける☆ */
+/*  */
+/* star-up    : 上 : 1 */
+/* star-right : 右 : 2 */
+/* star-down  : 下 : 3 */
+/* star-left  : 左 : 4 */
+
+.star-top{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 5px;
+	left: 65px;
+	font-size: 15px;
+}
+
+.star-right{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	right: 5px;
+	top: 41px;
+	font-size: 15px;
+}
+
+.star-bottom{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	bottom: 5px;
+	left: 65px;
+	font-size: 15px;
+}
+
+.star-left{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 5px;
+	top: 41px;
+	font-size: 15px;
+}
 
 /*TODO:jsでのアイコン生成時にここもjsに取り込む*/
 /*1列目*/
 
-#iconNo6{
-	top : 160px;
-	left: 110px;
+#iconNo1{
+	top : 135px;
+	left: 85px;
 }
-#iconNo8{
-	top : 160px;
-	left: 245px;
+#iconNo3{
+	top : 135px;
+	left: 220px;
 }
-#iconNo15{
-	top : 160px;
-	left: 370px;
+#iconNo10{
+	top : 135px;
+	left: 345px;
 }
 /*2列目*/
-#iconNo10{
-	top : 260px;
-	left: 110px;
+#iconNo5{
+	top : 235px;
+	left: 85px;
 }
-#iconNo12{
-	top : 260px;
-	left: 245px;
+#iconNo7{
+	top : 235px;
+	left: 220px;
 }
-#iconNo16{
-	top : 260px;
-	left: 370px;
+#iconNo11{
+	top : 235px;
+	left: 345px;
 }
 
 
 /*3列目*/
-#iconNo13{
-	top : 360px;
-	left: 110px;
+#iconNo8{
+	top : 335px;
+	left: 85px;
 }
-#iconNo14{
-	top : 360px;
-	left: 245px;
+#iconNo9{
+	top : 335px;
+	left: 220px;
 }
-#iconNo17{
-	top : 360px;
-	left: 370px;
+#iconNo12{
+	top : 335px;
+	left: 345px;
 }
 
 /*4列目*/
+#iconNo4{
+	top : 435px;
+	left: 85px;
+}
+
 #iconNo2{
-	top : 460px;
-	left: 110px;
+	top : 435px;
+	left: 220px;
 }
-#iconNo7{
-	top : 460px;
-	left: 245px;
-}
-#iconNo18{
-	top : 460px;
-	left: 370px;
+#iconNo13{
+	top : 435px;
+	left: 345px;
 }
 
 
 /*5列目*/
-#iconNo1{
-	top : 560px;
-	left: 110px;
+#iconNo6{
+	top : 535px;
+	left: 220px;
 }
-#iconNo3{
-	top : 560px;
-	left: 215px;
-}
-#iconNo9{
-	top : 560px;
-	left: 330px;
-}
-#iconNo19{
-	top : 560px;
-	left: 440px;
+#iconNo14{
+	top : 535px;
+	left: 345px;
 }
 
 /*6列目*/
-#iconNo4{
-	top : 660px;
-	left: 110px;
-}
-#iconNo5{
-	top : 660px;
-	left: 225px;
-}
-#iconNo11{
-	top : 660px;
-	left: 350px;
-}
