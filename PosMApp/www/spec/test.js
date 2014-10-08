@@ -6,13 +6,16 @@ describe("変数の確認", function() {
 });
 
 describe("ポスターの詳細情報を表示する", function() {
+	initDB();
 	beforeEach(function() {
-		var pflag;
-		var ptotal=poster.length;
+		init();	
 		test = true;
 	});
 
 	it("デフォルトの状態で1番目のポスターをタップすると1番目の情報が取得できる", function() {
+		
+		//var ptotal=poster.length;
+		test = true;
 		var beforeFlag = new Array(ptotal+1);
 		var expectFlag = new Array(ptotal+1);
 		var posterid = 1;
@@ -36,14 +39,14 @@ describe("ポスターの詳細情報を表示する", function() {
 
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
-			expect(sessionStorage.getItem("posterid")).toEqual(poster[0].id);
+			expect(sessionStorage.getItem("posterid")).toEqual(poster[0].id.toString());
 			expect(sessionStorage.getItem("sessionid")).toEqual(poster[0].sessionid);
 			expect(sessionStorage.getItem("title")).toEqual(poster[0].title);
 			expect(sessionStorage.getItem("abstract")).toEqual(poster[0].abstract);
 			expect(sessionStorage.getItem("authorname")).toEqual(poster[0].authorname);
 			expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[0].authorbelongs);
-			expect(sessionStorage.getItem("authors")).toEqual(poster[0].authors);
-			expect(sessionStorage.getItem("keywords")).toEqual(poster[0].keywords);
+			expect(sessionStorage.getItem("authors")).toEqual(getAuthors(1));
+			expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(1));
 		});
 	});
 
@@ -75,14 +78,14 @@ describe("ポスターの詳細情報を表示する", function() {
 
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
-			expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id);
+			expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id.toString());
 			expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 			expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 			expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
 			expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
 			expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
-			expect(sessionStorage.getItem("authors")).toEqual(poster[1].authors);
-			expect(sessionStorage.getItem("keywords")).toEqual(poster[1].keywords);
+			expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
+			expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 		});
 	});
 
@@ -233,14 +236,14 @@ describe("ポスターの詳細情報を表示する", function() {
 
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
-			expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id);
+			expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id.toString());
 			expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 			expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 			expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
 			expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
 			expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
-			expect(sessionStorage.getItem("authors")).toEqual(poster[1].authors);
-			expect(sessionStorage.getItem("keywords")).toEqual(poster[1].keywords);
+			expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
+			expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 		});
 	});
 
@@ -278,14 +281,14 @@ describe("ポスターの詳細情報を表示する", function() {
 
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
-			expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id);
+			expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id.toString());
 			expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 			expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 			expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
 			expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
 			expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
-			expect(sessionStorage.getItem("authors")).toEqual(poster[1].authors);
-			expect(sessionStorage.getItem("keywords")).toEqual(poster[1].keywords);
+			expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
+			expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 		});
 	});
 
@@ -324,14 +327,14 @@ describe("ポスターの詳細情報を表示する", function() {
 
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
-			expect(sessionStorage.getItem("posterid")).toEqual(poster[0].id);
+			expect(sessionStorage.getItem("posterid")).toEqual(poster[0].id.toString());
 			expect(sessionStorage.getItem("sessionid")).toEqual(poster[0].sessionid);
 			expect(sessionStorage.getItem("title")).toEqual(poster[0].title);
 			expect(sessionStorage.getItem("abstract")).toEqual(poster[0].abstract);
 			expect(sessionStorage.getItem("authorname")).toEqual(poster[0].authorname);
 			expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[0].authorbelongs);
-			expect(sessionStorage.getItem("authors")).toEqual(poster[0].authors);
-			expect(sessionStorage.getItem("keywords")).toEqual(poster[0].keywords);
+			expect(sessionStorage.getItem("authors")).toEqual(getAuthors(1));
+			expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(1));
 
 			sessionStorage.setItem("searching", "false");
 		});
@@ -373,14 +376,14 @@ describe("ポスターの詳細情報を表示する", function() {
 
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
-			expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id);
+			expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id.toString());
 			expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 			expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 			expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
 			expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
 			expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
-			expect(sessionStorage.getItem("authors")).toEqual(poster[1].authors);
-			expect(sessionStorage.getItem("keywords")).toEqual(poster[1].keywords);
+			expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
+			expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 
 			sessionStorage.setItem("searching", "false");
 		});
@@ -420,14 +423,14 @@ describe("ポスターの詳細情報を表示する", function() {
 
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
-			expect(sessionStorage.getItem("posterid")).toEqual(poster[2].id);
+			expect(sessionStorage.getItem("posterid")).toEqual(poster[2].id.toString());
 			expect(sessionStorage.getItem("sessionid")).toEqual(poster[2].sessionid);
 			expect(sessionStorage.getItem("title")).toEqual(poster[2].title);
 			expect(sessionStorage.getItem("abstract")).toEqual(poster[2].abstract);
 			expect(sessionStorage.getItem("authorname")).toEqual(poster[2].authorname);
 			expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[2].authorbelongs);
-			expect(sessionStorage.getItem("authors")).toEqual(poster[2].authors);
-			expect(sessionStorage.getItem("keywords")).toEqual(poster[2].keywords);
+			expect(sessionStorage.getItem("authors")).toEqual(getAuthors(3));
+			expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(3));
 			sessionStorage.setItem("searching", "false");
 		});
 	});
@@ -467,14 +470,14 @@ describe("ポスターの詳細情報を表示する", function() {
 
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
-			expect(sessionStorage.getItem("posterid")).toEqual(poster[6].id);
+			expect(sessionStorage.getItem("posterid")).toEqual(poster[6].id.toString());
 			expect(sessionStorage.getItem("sessionid")).toEqual(poster[6].sessionid);
 			expect(sessionStorage.getItem("title")).toEqual(poster[6].title);
 			expect(sessionStorage.getItem("abstract")).toEqual(poster[6].abstract);
 			expect(sessionStorage.getItem("authorname")).toEqual(poster[6].authorname);
 			expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[6].authorbelongs);
-			expect(sessionStorage.getItem("authors")).toEqual(poster[6].authors);
-			expect(sessionStorage.getItem("keywords")).toEqual(poster[6].keywords);
+			expect(sessionStorage.getItem("authors")).toEqual(getAuthors(7));
+			expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(7));
 			sessionStorage.setItem("searching", "false");
 		});
 	});
@@ -530,6 +533,7 @@ describe("ポスターの詳細情報を表示する", function() {
 });
 
 describe("タイトルでキーワード検索をする", function() {
+	initDB();
 	beforeEach(function() {
 		console.log("beforeEach");
 		init();
@@ -540,13 +544,15 @@ describe("タイトルでキーワード検索をする", function() {
 		var expectFlag = new Array(ptotal+1);
 
 		runs(function() {
-			expectFlag[0] = null;
-			expectFlag[1] = "s";
-			expectFlag[6] = "s";
-			expectFlag[10] = "s";
-			expectFlag[11] = "s";
-			expectFlag[12] = "s";
-			expectFlag[13] = "s";
+			for(var i = 0 ; i < expectFlag.length ; i++){
+				if(i == 0){
+					expectFlag[i] = null;
+				}else if(i == 1 && i == 6 && i == 10 && i == 11 && i == 12 && i == 13){
+					expectFlag[i] = "s";
+				}else{
+					expectFlag[i] = "d";
+				}
+			}
 			
 		});
 
@@ -574,6 +580,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("ポスター");
 		});
 
+		waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -594,6 +601,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("スター");
 		});
 
+		waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -614,6 +622,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("Twitter");
 		});
 
+		waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -634,6 +643,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("twitter");
 		});
 
+		waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -653,6 +663,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("$");
 		});
 
+		waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -672,6 +683,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle(" ");
 		});
 
+		waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -691,6 +703,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle(null);
 		});
 
+		waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -714,6 +727,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("ポスター");
 		});
 
+		waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -736,6 +750,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("ポスター");
 		});
 
+		waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -765,3 +780,39 @@ describe("タイトルでキーワード検索をする", function() {
 		})
 	});
 });
+
+describe("テスト用のファンクションのテスト", function() {
+	it("getAuthors,getKeywordsファンクションのテスト", function() {
+		expect(getAuthors(1)).toEqual("浦井 智之,小池 泰輔,小宮山 哲俊,原 清貴");
+		expect(getKeywords(1)).toEqual("スタンダードコース");
+	});
+});
+
+
+
+function getAuthors(posterid){
+
+	var Atotal=author.length;
+	var authorlist = "";
+	for (var i = 0; i < Atotal; i++) {
+        if (author[i].posterid == posterid){
+        	authorlist = authorlist + author[i].name + ",";
+        }
+	}
+	authorlist=authorlist.substring(0,authorlist.length-1);
+	return authorlist;
+}
+
+
+function getKeywords(posterid){
+
+	var Ktotal=keyword.length;
+	var keywordlist = "";
+	for (var i = 0; i < Ktotal; i++) {
+        if (keyword[i].posterid == posterid){
+        	keywordlist = keywordlist + keyword[i].keyword + ",";
+        }
+	}
+	keywordlist=keywordlist.substring(0,keywordlist.length-1);
+	return keywordlist;
+}
