@@ -20,17 +20,11 @@ var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 var ptotal;
 
 //HTMLが呼ばれた時の初期化処理
-$(function() {
-	// ポスターの件数をセットする
-	ptotal = poster.length;
 
-	// pflagを初期化
-	// pflagの添字をポスター番号と対応させるため pflag[0]=nullとしている
-	pflag = new Array(ptotal + 1);
-	pflag[0] = null;
-	for (var i = 1; i <= ptotal; i++) {
-		pflag[i] = "d";
-	}
+$(function() {
+	init();
+
+	initDB();
 
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") != null) {
@@ -45,9 +39,6 @@ $(function() {
 		searchByTitle(sessionStorage.getItem("searchWord"));
 	}
 
-	// LocalDBの初期化
-	initDB();
-
 	// もしLocal Storageにbookmarksがなければ追加
 	if (localStorage.getItem("bookmarks") == null) {
 		localStorage.setItem("bookmarks", "");
@@ -58,6 +49,7 @@ $(function() {
 	// とりあえずデフォルトはセッションID
 	// TODO:直書きからDOMをいじくる形にする
 	var str = "";
+
 	for (var i = 1; i <= poster.length; i++) {
 		str += "<div class='postericonframe' id='iconNo" + i + "''>\n";
 		str += "	<div class='postericon horizontal'>\n";
@@ -180,8 +172,24 @@ $(function() {
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
-
 });
+
+function init() {
+
+	// ポスターの件数をセットする
+	ptotal = poster.length;
+
+	// pflagを初期化
+	// pflagの添字をポスター番号と対応させるため pflag[0]=nullとしている
+	pflag = new Array(ptotal + 1);
+	pflag[0] = null;
+	for (var i = 1; i <= ptotal; i++) {
+		pflag[i] = "d";
+	}
+
+	
+
+}
 
 // ラベルを変更する
 function changeLabel(column) {
@@ -464,7 +472,7 @@ function removeAllPosterInfo() {
 	sessionStorage.removeItem("bookmark");
 	sessionStorage.removeItem("star");
 	sessionStorage.removeItem("authors");
-	sessionStorage.removeItem("keyword");
+	sessionStorage.removeItem("keywords");
 }
 
 // BookMark状態を変更する
