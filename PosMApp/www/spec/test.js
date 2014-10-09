@@ -544,10 +544,9 @@ describe("タイトルでキーワード検索をする", function() {
 		var expectFlag = new Array(ptotal+1);
 
 		runs(function() {
-			for(var i = 0 ; i < expectFlag.length ; i++){
-				if(i == 0){
-					expectFlag[i] = null;
-				}else if(i == 1 && i == 6 && i == 10 && i == 11 && i == 12 && i == 13){
+			expectFlag[0] = null;
+			for(var i = 1 ; i <= ptotal ; i++){
+				if(i == 1 ||i == 6 || i == 10 || i == 11 || i == 12 || i == 13){
 					expectFlag[i] = "s";
 				}else{
 					expectFlag[i] = "d";
@@ -560,6 +559,8 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("システム");
 		});
 
+		waits(100);
+		
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		});
@@ -789,24 +790,42 @@ describe("テスト用のファンクションのテスト", function() {
 });
 
 describe("ラベルの表示切り替え機能", function() {
+	beforeEach(function() {
+		init();	
+		test = true;
+	});
 	it("「ID」ボタンを押すとラベルがIDに切り替わる", function() {
-		
+		var labels = changeLabel("id");
+		var testlabel = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
+		expect(labels).toEqual(testlabel);
+
 	});
 	it("「セッションID」ボタンを押すとラベルがセッションIDに切り替わる", function() {
+		var labels = changeLabel("sessionid");
+		var testlabel = ["S01","S02","S03","S04","S05","S06","S07","S08","S09","SIT01","SIT02","SIT03","SIT04","SIT05"];
 
 	});
 	it("「タイトル」ボタンを押すとラベルがタイトルに切り替わる", function() {
-
+		var labels = changeLabel("title");
+		var testlabel = ["防災・避難...","画像リプラ...","ハッシュタ...","ワインマッ...","コロコロジ...","中古教科書...","地図を用い...","予定や天候...","iBeac...","600人規...","テニススク...","施設内での...","スマートフ...","小規模グル..."];
 	});
 	it("「チーム名」ボタンを押すとラベルがチーム名に切り替わる", function() {
+		var labels = changeLabel("authorname");
+		var testlabel = ["OU-LA...","_:(*'...","チームNo...","Primt...","コロジャー","りばて","ef","おちゃねこ","Rabbi...","S.A.Y...","TOMs","TKS","SAG-A...","BooK-..."];
 
 	});
 	it("「大学名」ボタンを押すとラベルが大学名に切り替わる", function() {
+		var labels = changeLabel("authorbelongs");
+		var testlabel = ["千葉大学","筑波大学","筑波大学","筑波大学","筑波大学,...","東京理科大...","愛媛大学","お茶の水女...","茨城大学","筑波大学","筑波大学","筑波大学","筑波大学","筑波大学"];
 
 	});
 });
 
 describe("ブックマーク機能", function() {
+	beforeEach(function() {
+		init();	
+		test = true;
+	});
 	it("何もブックマークされていない状態で、1番の星をタップすると、1番のポスターがブックマークされる", function() {
 
 	});
@@ -826,6 +845,8 @@ describe("ブックマーク機能", function() {
 
 	});
 });
+
+
 
 
 function getAuthors(posterid){

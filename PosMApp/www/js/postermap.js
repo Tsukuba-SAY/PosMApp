@@ -196,16 +196,28 @@ function changeLabel(column) {
 	// Session Storageに対応する属性の値をセットする
 	sessionStorage.setItem("label", column);
 
+	var labels = new Array(ptotal);
+
+
+
 	// 各ポスターに対してラベルを変更する
 	for (var i = 1; i <= ptotal; i++) {
-		var str = poster[i - 1][column];
+		var str = poster[i - 1][column].toString();
 		// 長さがlabelmax文字以上になっていたら短縮する
 		if (str.length > labelmax) {
 			str = str.substring(0, labelmax) + "...";
 		}
-		document.getElementById("font" + i)
-		.innerHTML = str;
+		if (!test) {	
+			setLabel(i, str);
+		} else {
+			labels[i-1] = str;
+		}
 	}
+	return labels;
+}
+function setLabel(id, str) {
+	document.getElementById("font" + id)
+	.innerHTML = str;
 }
 
 // 現在のフラグを元にポスターのアイコンを表示する
