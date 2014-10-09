@@ -193,7 +193,7 @@ function init() {
 
 // ラベルを変更する
 function changeLabel(column) {
-	// Session Storageから対応する属性の値を取り出す
+	// Session Storageに対応する属性の値をセットする
 	sessionStorage.setItem("label", column);
 
 	// 各ポスターに対してラベルを変更する
