@@ -802,21 +802,22 @@ describe("ラベルの表示切り替え機能", function() {
 	it("「セッションID」ボタンを押すとラベルがセッションIDに切り替わる", function() {
 		var labels = changeLabel("sessionid");
 		var testlabel = ["S01","S02","S03","S04","S05","S06","S07","S08","S09","SIT01","SIT02","SIT03","SIT04","SIT05"];
-
+		expect(labels).toEqual(testlabel);
 	});
 	it("「タイトル」ボタンを押すとラベルがタイトルに切り替わる", function() {
 		var labels = changeLabel("title");
 		var testlabel = ["防災・避難...","画像リプラ...","ハッシュタ...","ワインマッ...","コロコロジ...","中古教科書...","地図を用い...","予定や天候...","iBeac...","600人規...","テニススク...","施設内での...","スマートフ...","小規模グル..."];
+		expect(labels).toEqual(testlabel);	
 	});
 	it("「チーム名」ボタンを押すとラベルがチーム名に切り替わる", function() {
 		var labels = changeLabel("authorname");
-		var testlabel = ["OU-LA...","_:(*'...","チームNo...","Primt...","コロジャー","りばて","ef","おちゃねこ","Rabbi...","S.A.Y...","TOMs","TKS","SAG-A...","BooK-..."];
-
+		var testlabel = ["OU-LA...","_:(*'...","チームNo...","Primt...","コロジャー","りばて","ef","おちゃねこ","Rabbi...","S.A.Y...","TOMs","TKS","SAG-A...","Book-..."];
+		expect(labels).toEqual(testlabel);
 	});
 	it("「大学名」ボタンを押すとラベルが大学名に切り替わる", function() {
 		var labels = changeLabel("authorbelongs");
 		var testlabel = ["千葉大学","筑波大学","筑波大学","筑波大学","筑波大学,...","東京理科大...","愛媛大学","お茶の水女...","茨城大学","筑波大学","筑波大学","筑波大学","筑波大学","筑波大学"];
-
+		expect(labels).toEqual(testlabel);
 	});
 });
 
@@ -824,6 +825,8 @@ describe("ブックマーク機能", function() {
 	beforeEach(function() {
 		init();	
 		test = true;
+
+		localStorage.removeItem("bookmarks");
 	});
 	it("何もブックマークされていない状態で、1番の星をタップすると、1番のポスターがブックマークされる", function() {
 		
