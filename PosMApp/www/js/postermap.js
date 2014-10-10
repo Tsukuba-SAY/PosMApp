@@ -1,4 +1,5 @@
 // ポスターの状態を表すフラグ
+// TODO: パターンを導入したい
 // d：デフォルト（青）
 // t：強調表示（赤）
 // s：検索ヒット（緑）
@@ -6,21 +7,20 @@
 var pflag; 
 
 // テスト用フラグ
-// Jasmineからのみtrueにする
+// テスト時、Jasmineからのみtrueにする
 var test = false;
 
-// アイコンのラベル何文字まで表示するか
-// デフォルトは5文字
+// アイコンのラベルを何文字目まで表示するか
 var labelmax = 5;
 
-// LocalDBを開く
+// Local DB (WebSQL DB) を開く
 var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
 // ポスターの総件数
 var ptotal;
 
-//HTMLが呼ばれた時の初期化処理
 
+//HTMLが呼ばれた時の初期化処理
 $(function() {
 	init();
 
@@ -47,7 +47,6 @@ $(function() {
 	// ポスターアイコンの作成
 	// JSONから直接呼び出す感じで
 	// とりあえずデフォルトはセッションID
-	// TODO:直書きからDOMをいじくる形にする
 	var str = "";
 
 	for (var i = 1; i <= poster.length; i++) {
@@ -69,35 +68,8 @@ $(function() {
 		changeLabel(sessionStorage.getItem("label"));
 	}
 
-	// ブックマークがLocal Storageに保存されていればマップ上に星をつける
-	// カンマ区切りでポスターIDが保存されているのでそれを区切った配列を生成する
-	var bookmarkArr = localStorage.getItem("bookmarks").split(",");
-	for (var i = 0; i < bookmarkArr.length; i++) {
-		var posterid = parseInt(bookmarkArr[i]);
-		if (!isNaN(posterid)) {
-			var p = poster[posterid-1];
-			// ポスターのstar属性によって配置する位置を決定する
-			// 1が上で時計回り
-			switch (p.star) {
-				case 1:
-				starelem = document.getElementById("starTopNo" + posterid);
-				break;
-				case 2:
-				starelem = document.getElementById("starRightNo" + posterid);
-				break;
-				case 3:
-				starelem = document.getElementById("starBottomNo" + posterid);
-				break;
-				case 4:
-				starelem = document.getElementById("starLeftNo" + posterid);
-				default:
-				console.log("Error");
-			}
-			// 該当する星要素を表示する
-			starelem.childNodes[0].style.display = "block";
-		}
-
-	}
+	// マップ上に星をつける
+	showBookmarkIcons();
 
 	// 各ポスターアイコンのタッチイベント
 	$(".postericon").on("touchstart", function(e) {
@@ -174,19 +146,22 @@ $(function() {
 	showPosterIcons();
 });
 
+
+// グローバル変数の初期化処理
 function init() {
 
 	// ポスターの件数をセットする
 	ptotal = poster.length;
 
 	// pflagを初期化
-	// pflagの添字をポスター番号と対応させるため pflag[0]=nullとしている
+	// ポスター件数+1なのはpflagの添字をポスター番号と対応させるため。pflag[0]はnullとしている
 	pflag = new Array(ptotal + 1);
 	pflag[0] = null;
 	for (var i = 1; i <= ptotal; i++) {
 		pflag[i] = "d";
 	}
 }
+
 
 // ラベルを変更する
 function changeLabel(column) {
@@ -211,11 +186,12 @@ function changeLabel(column) {
 	return labels;
 }
 
-// 指定されたラベルをセットする
+
+// 指定されたラベルをHTMLにセットする
 function setLabel(id, str) {
-	document.getElementById("font" + id)
-	.innerHTML = str;
+	document.getElementById("font" + id).innerHTML = str;
 }
+
 
 // 現在のフラグを元にポスターのアイコンを表示する
 function showPosterIcons() {
@@ -242,6 +218,7 @@ function showPosterIcons() {
 
 	console.log(pflag);
 }
+
 
 // ポスターをタッチ
 // return : タッチしたポスターの次の状態
@@ -281,6 +258,7 @@ function touchPoster(posterid) {
 		} 
 	}
 }
+
 
 // 基本情報パネルを変更する
 function changeBasicInfoPanel(flag) {
@@ -330,7 +308,9 @@ function changeBasicInfoPanel(flag) {
 	}
 }
 
+
 // タイトルで検索
+// SQLをかけたいのでDBにアクセスしてるけどjsonでも同じことはできる
 function searchByTitle(title) {
 	if (title == null || title.trim() == "") {
 		return pflag;
@@ -374,6 +354,7 @@ function searchByTitle(title) {
 	return pflag;
 }
 
+
 // 検索されたポスターを強調表示する
 function emphasisSearchedPosters(posterids) {
 
@@ -397,6 +378,7 @@ function emphasisSearchedPosters(posterids) {
 
 	showPosterIcons();
 }
+
 
 // ポスターを選択する
 function selectPoster(posterid) {
@@ -451,6 +433,7 @@ function selectPoster(posterid) {
 	}
 }
 
+
 // 強調表示を解除する
 function unselectPoster() {
 	for (var i = 1; i <= ptotal; i++) {
@@ -462,6 +445,7 @@ function unselectPoster() {
 	}
 }
 
+
 // すべてのアイコンをデフォルトに戻す
 function resetAllIcons() {
 	for (var i = 1; i <= ptotal; i++) {
@@ -469,6 +453,7 @@ function resetAllIcons() {
 	}
 	showPosterIcons();
 }
+
 
 // Session Storageに保存されているポスターの情報を消去する
 function removeAllPosterInfo() {
@@ -483,6 +468,41 @@ function removeAllPosterInfo() {
 	sessionStorage.removeItem("authors");
 	sessionStorage.removeItem("keywords");
 }
+
+
+// ブックマークスターを表示する
+function showBookmarkIcons() {
+	// ブックマークがLocal Storageに保存されていればマップ上に星をつける
+	// カンマ区切りでポスターIDが保存されているのでそれを区切った配列を生成する
+	var bookmarkArr = localStorage.getItem("bookmarks").split(",");
+	for (var i = 0; i < bookmarkArr.length; i++) {
+		var posterid = parseInt(bookmarkArr[i]);
+		if (!isNaN(posterid)) {
+			var p = poster[posterid-1];
+			// ポスターのstar属性によって配置する位置を決定する
+			// 1が上で時計回り
+			switch (p.star) {
+				case 1:
+				starelem = document.getElementById("starTopNo" + posterid);
+				break;
+				case 2:
+				starelem = document.getElementById("starRightNo" + posterid);
+				break;
+				case 3:
+				starelem = document.getElementById("starBottomNo" + posterid);
+				break;
+				case 4:
+				starelem = document.getElementById("starLeftNo" + posterid);
+				default:
+				console.log("Error");
+			}
+			// 該当する星要素を表示する
+			starelem.childNodes[0].style.display = "block";
+		}
+
+	}
+}
+
 
 // BookMark状態を変更する
 // DB更新後にアイコンをスイッチする
@@ -539,8 +559,4 @@ function changeBookmark(){
 	bookmarks = bookmarkArr.join(",");
 	localStorage.setItem("bookmarks",bookmarks);
 	
-}
-
-function touchPosterTest(posterid) {
-
 }
