@@ -535,7 +535,6 @@ describe("ポスターの詳細情報を表示する", function() {
 describe("タイトルでキーワード検索をする", function() {
 	initDB();
 	beforeEach(function() {
-		console.log("beforeEach");
 		init();
 	});
 
@@ -545,10 +544,10 @@ describe("タイトルでキーワード検索をする", function() {
 
 		runs(function() {
 			expectFlag[0] = null;
-			for(var i = 1 ; i <= ptotal ; i++){
-				if(i == 1 ||i == 6 || i == 10 || i == 11 || i == 12 || i == 13){
+			for (var i = 1; i <= ptotal; i++) {
+				if (i == 1 ||i == 6 || i == 10 || i == 11 || i == 12 || i == 13) {
 					expectFlag[i] = "s";
-				}else{
+				} else {
 					expectFlag[i] = "d";
 				}
 			}
@@ -827,7 +826,7 @@ describe("ブックマーク機能", function() {
 		test = true;
 	});
 	it("何もブックマークされていない状態で、1番の星をタップすると、1番のポスターがブックマークされる", function() {
-
+		
 	});
 	it("何もブックマークされていない状態で、すべての星をタップすると、すべてのポスターがブックマークされる", function() {
 
@@ -846,32 +845,28 @@ describe("ブックマーク機能", function() {
 	});
 });
 
-
-
-
 function getAuthors(posterid){
 
-	var Atotal=author.length;
+	var atotal = author.length;
 	var authorlist = "";
-	for (var i = 0; i < Atotal; i++) {
+	for (var i = 0; i < atotal; i++) {
         if (author[i].posterid == posterid){
         	authorlist = authorlist + author[i].name + ",";
         }
 	}
-	authorlist=authorlist.substring(0,authorlist.length-1);
+	authorlist = authorlist.substring(0, authorlist.length - 1);
 	return authorlist;
 }
 
-
 function getKeywords(posterid){
 
-	var Ktotal=keyword.length;
+	var ktotal = keyword.length;
 	var keywordlist = "";
-	for (var i = 0; i < Ktotal; i++) {
+	for (var i = 0; i < ktotal; i++) {
         if (keyword[i].posterid == posterid){
         	keywordlist = keywordlist + keyword[i].keyword + ",";
         }
 	}
-	keywordlist=keywordlist.substring(0,keywordlist.length-1);
+	keywordlist = keywordlist.substring(0, keywordlist.length - 1);
 	return keywordlist;
 }
