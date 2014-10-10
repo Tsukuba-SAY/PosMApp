@@ -481,7 +481,7 @@ function showBookmarkIcons() {
 	// カンマ区切りでポスターIDが保存されているのでそれを区切った配列を生成する
 	var bookmarkArr = getBookmarks();
 	for (var i = 0; i < bookmarkArr.length; i++) {
-		var posterid = parseInt(bookmarkArr[i]);
+		var posterid = bookmarkArr[i];
 		if (!isNaN(posterid)) {
 			var p = poster[posterid-1];
 			// ポスターのstar属性によって配置する位置を決定する
@@ -511,14 +511,18 @@ function showBookmarkIcons() {
 
 // ブックマークスターをタッチする（状態のスイッチ）
 function touchBookmark(posterid, bookmarkIcon){
-	// posteridに外とするポスターがブックマークリストに存在しているか確認用
+	if (posterid < 1 || posterid > ptotal || posterid == null) {
+		throw new Exception();
+	}
+
+	// posteridに該当するポスターがブックマークリストに存在しているか確認用
 	// -1だと無し、-1以外だと発見したポスターのインデックス
 	var location = -1;
 
 	var bookmarkArr = getBookmarks();
 	for (var i = 0; i < bookmarkArr.length; i++) {
 		//該当ポスターがブックマークリストに存在しているかどうか確認する
-		if (posterid == parseInt(bookmarkArr[i])) {
+		if (posterid == bookmarkArr[i]) {
 			location = i;
 			break;
 		}
@@ -536,6 +540,9 @@ function touchBookmark(posterid, bookmarkIcon){
 	} else {
 		// ある場合
 		bookmarkArr.push(posterid);
+		bookmarkArr.sort(function(a,b){
+    		return (parseInt(a) < parseInt(b)) ? -1 : 1;
+    	});
 		if (bookmarkIcon != null) {
 			bookmarkIcon.src = "img/bookmark.png";
 		}
@@ -569,7 +576,19 @@ function touchBookmark(posterid, bookmarkIcon){
 }
 
 
-// ブックマークされたポスターIDを配列で取得する
+// ブックマークされたポスターIDを数値の配列で取得する
 function getBookmarks() {
-	return localStorage.getItem("bookmarks").split(",");
+	var bookmarks = localStorage.getItem("bookmarks");
+	// 空文字列だった場合は何もブックマークされていないので空配列
+	var bookmarkArr = (bookmarks != "") ? bookmarks.split(",") : [];
+	// 中身をすべて数値にする
+	bookmarkArr.filter(function(obj) {
+		return parseInt(obj);
+	});
+	// ソート
+	bookmarkArr.sort(function(a,b){
+    	return (parseInt(a) < parseInt(b)) ? -1 : 1;
+    });
+
+	return bookmarkArr;
 }
