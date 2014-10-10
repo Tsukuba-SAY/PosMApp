@@ -1,4 +1,5 @@
 // ポスターの状態を表すフラグ
+// TODO: パターンを導入したい
 // d：デフォルト（青）
 // t：強調表示（赤）
 // s：検索ヒット（緑）
@@ -6,21 +7,20 @@
 var pflag; 
 
 // テスト用フラグ
-// Jasmineからのみtrueにする
+// テスト時、Jasmineからのみtrueにする
 var test = false;
 
-// アイコンのラベル何文字まで表示するか
-// デフォルトは5文字
+// アイコンのラベルを何文字目まで表示するか
 var labelmax = 5;
 
-// LocalDBを開く
+// Local DB (WebSQL DB) を開く
 var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
 // ポスターの総件数
 var ptotal;
 
-//HTMLが呼ばれた時の初期化処理
 
+//HTMLが呼ばれた時の初期化処理
 $(function() {
 	init();
 
@@ -47,7 +47,6 @@ $(function() {
 	// ポスターアイコンの作成
 	// JSONから直接呼び出す感じで
 	// とりあえずデフォルトはセッションID
-	// TODO:直書きからDOMをいじくる形にする
 	var str = "";
 
 	for (var i = 1; i <= poster.length; i++) {
@@ -69,35 +68,8 @@ $(function() {
 		changeLabel(sessionStorage.getItem("label"));
 	}
 
-	// ブックマークがLocal Storageに保存されていればマップ上に星をつける
-	// カンマ区切りでポスターIDが保存されているのでそれを区切った配列を生成する
-	var bookmarkArr = localStorage.getItem("bookmarks").split(",");
-	for (var i = 0; i < bookmarkArr.length; i++) {
-		var posterid = parseInt(bookmarkArr[i]);
-		if (!isNaN(posterid)) {
-			var p = poster[posterid-1];
-			// ポスターのstar属性によって配置する位置を決定する
-			// 1が上で時計回り
-			switch (p.star) {
-				case 1:
-				starelem = document.getElementById("starTopNo" + posterid);
-				break;
-				case 2:
-				starelem = document.getElementById("starRightNo" + posterid);
-				break;
-				case 3:
-				starelem = document.getElementById("starBottomNo" + posterid);
-				break;
-				case 4:
-				starelem = document.getElementById("starLeftNo" + posterid);
-				default:
-				console.log("Error");
-			}
-			// 該当する星要素を表示する
-			starelem.childNodes[0].style.display = "block";
-		}
-
-	}
+	// マップ上にブックマークスターをつける
+	showBookmarkIcons();
 
 	// 各ポスターアイコンのタッチイベント
 	$(".postericon").on("touchstart", function(e) {
@@ -164,9 +136,11 @@ $(function() {
 		changeLabel(id.substr(id.indexOf("-") + 1));
 	})
 
-	// ブックマークを追加・削除する
+	// ブックマークスターのタッチイベント
 	$("#bookmarkbutton").on("touchstart", function(e) {
-		changeBookmark();
+		var posterid = parseInt(sessionStorage.getItem("posterid"));
+		var bookmarkIcon = document.getElementById("bookmarkbutton");
+		touchBookmark(posterid, bookmarkIcon);
 	});
 
 	// ポスターアイコンを表示
@@ -174,13 +148,15 @@ $(function() {
 	showPosterIcons();
 });
 
+
+// グローバル変数の初期化処理
 function init() {
 
 	// ポスターの件数をセットする
 	ptotal = poster.length;
 
 	// pflagを初期化
-	// pflagの添字をポスター番号と対応させるため pflag[0]=nullとしている
+	// ポスター件数+1なのはpflagの添字をポスター番号と対応させるため。pflag[0]はnullとしている
 	pflag = new Array(ptotal + 1);
 	pflag[0] = null;
 	for (var i = 1; i <= ptotal; i++) {
@@ -188,11 +164,13 @@ function init() {
 	}
 }
 
+
 // ラベルを変更する
 function changeLabel(column) {
 	// Session Storageに対応する属性の値をセットする
 	sessionStorage.setItem("label", column);
 
+	// ラベルの一覧（テスト用）
 	var labels = new Array(ptotal);
 
 	// 各ポスターに対してラベルを変更する
@@ -202,6 +180,8 @@ function changeLabel(column) {
 		if (str.length > labelmax) {
 			str = str.substring(0, labelmax) + "...";
 		}
+		
+		// テスト中ならばラベルの一覧に追加していく
 		if (!test) {	
 			setLabel(i, str);
 		} else {
@@ -211,11 +191,12 @@ function changeLabel(column) {
 	return labels;
 }
 
-// 指定されたラベルをセットする
+
+// 指定されたラベルをHTMLにセットする
 function setLabel(id, str) {
-	document.getElementById("font" + id)
-	.innerHTML = str;
+	document.getElementById("font" + id).innerHTML = str;
 }
+
 
 // 現在のフラグを元にポスターのアイコンを表示する
 function showPosterIcons() {
@@ -242,6 +223,7 @@ function showPosterIcons() {
 
 	console.log(pflag);
 }
+
 
 // ポスターをタッチ
 // return : タッチしたポスターの次の状態
@@ -281,6 +263,7 @@ function touchPoster(posterid) {
 		} 
 	}
 }
+
 
 // 基本情報パネルを変更する
 function changeBasicInfoPanel(flag) {
@@ -330,7 +313,9 @@ function changeBasicInfoPanel(flag) {
 	}
 }
 
+
 // タイトルで検索
+// SQLをかけたいのでDBにアクセスしてるけどjsonでも同じことはできる
 function searchByTitle(title) {
 	if (title == null || title.trim() == "") {
 		return pflag;
@@ -374,6 +359,7 @@ function searchByTitle(title) {
 	return pflag;
 }
 
+
 // 検索されたポスターを強調表示する
 function emphasisSearchedPosters(posterids) {
 
@@ -397,6 +383,7 @@ function emphasisSearchedPosters(posterids) {
 
 	showPosterIcons();
 }
+
 
 // ポスターを選択する
 function selectPoster(posterid) {
@@ -451,6 +438,7 @@ function selectPoster(posterid) {
 	}
 }
 
+
 // 強調表示を解除する
 function unselectPoster() {
 	for (var i = 1; i <= ptotal; i++) {
@@ -462,6 +450,7 @@ function unselectPoster() {
 	}
 }
 
+
 // すべてのアイコンをデフォルトに戻す
 function resetAllIcons() {
 	for (var i = 1; i <= ptotal; i++) {
@@ -469,6 +458,7 @@ function resetAllIcons() {
 	}
 	showPosterIcons();
 }
+
 
 // Session Storageに保存されているポスターの情報を消去する
 function removeAllPosterInfo() {
@@ -484,63 +474,121 @@ function removeAllPosterInfo() {
 	sessionStorage.removeItem("keywords");
 }
 
-// BookMark状態を変更する
-// DB更新後にアイコンをスイッチする
-function changeBookmark(){
-	// bookmarkされたポスターIDを保存する
-	var bookmarks;
-	var bookmarkIcon = document.getElementById("bookmarkbutton");
-	var posterid = sessionStorage.getItem("posterid");
+
+// ブックマークスターを表示する
+function showBookmarkIcons() {
+	// ブックマークがLocal Storageに保存されていればマップ上に星をつける
+	// カンマ区切りでポスターIDが保存されているのでそれを区切った配列を生成する
+	var bookmarkArr = getBookmarks();
+	for (var i = 0; i < bookmarkArr.length; i++) {
+		var posterid = bookmarkArr[i];
+		if (!isNaN(posterid)) {
+			var p = poster[posterid-1];
+			// ポスターのstar属性によって配置する位置を決定する
+			// 1が上で時計回り
+			switch (p.star) {
+				case 1:
+				starelem = document.getElementById("starTopNo" + posterid);
+				break;
+				case 2:
+				starelem = document.getElementById("starRightNo" + posterid);
+				break;
+				case 3:
+				starelem = document.getElementById("starBottomNo" + posterid);
+				break;
+				case 4:
+				starelem = document.getElementById("starLeftNo" + posterid);
+				default:
+				console.log("Error");
+			}
+			// 該当する星要素を表示する
+			starelem.childNodes[0].style.display = "block";
+		}
+
+	}
+}
+
+
+// ブックマークスターをタッチする（状態のスイッチ）
+function touchBookmark(posterid, bookmarkIcon){
+	if (posterid < 1 || posterid > ptotal || posterid == null) {
+		throw new Exception();
+	}
+
+	// posteridに該当するポスターがブックマークリストに存在しているか確認用
+	// -1だと無し、-1以外だと発見したポスターのインデックス
 	var location = -1;
 
-	bookmarks = localStorage.getItem("bookmarks");
-	var bookmarkArr = bookmarks.split(",");
+	var bookmarkArr = getBookmarks();
 	for (var i = 0; i < bookmarkArr.length; i++) {
 		//該当ポスターがブックマークリストに存在しているかどうか確認する
-		if (parseInt(posterid) == parseInt(bookmarkArr[i])) {
+		if (posterid == bookmarkArr[i]) {
 			location = i;
 			break;
 		}
 	}
 
 	var starstatus;
-
 	if (location != -1) {
 		// ない場合
 		// 存在しているIDを削除する
 		bookmarkArr.splice(location, 1);
-		bookmarkIcon.src = "img/unbookmark.png";
+		if (bookmarkIcon != null) {
+			bookmarkIcon.src = "img/unbookmark.png";
+		}
 		starstatus = "none";
 	} else {
 		// ある場合
 		bookmarkArr.push(posterid);
-		bookmarkIcon.src = "img/bookmark.png";
+		bookmarkArr.sort(function(a,b){
+    		return (parseInt(a) < parseInt(b)) ? -1 : 1;
+    	});
+		if (bookmarkIcon != null) {
+			bookmarkIcon.src = "img/bookmark.png";
+		}
 		starstatus = "block";
 	}
 
-	var p = poster[posterid-1];
-	switch (p.star) {
-		case 1:
-		starelem = document.getElementById("starTopNo" + posterid);
-		break;
-		case 2:
-		starelem = document.getElementById("starRightNo" + posterid);
-		break;
-		case 3:
-		starelem = document.getElementById("starBottomNo" + posterid);
-		break;
-		case 4:
-		starelem = document.getElementById("starLeftNo" + posterid);
-		default:
-		console.log("Error");
+	if (bookmarkIcon != null) {
+		var p = poster[posterid-1];
+		switch (p.star) {
+			case 1:
+			starelem = document.getElementById("starTopNo" + posterid);
+			break;
+			case 2:
+			starelem = document.getElementById("starRightNo" + posterid);
+			break;
+			case 3:
+			starelem = document.getElementById("starBottomNo" + posterid);
+			break;
+			case 4:
+			starelem = document.getElementById("starLeftNo" + posterid);
+			default:
+			console.log("Error");
+		}
+		starelem.childNodes[0].style.display = starstatus;
 	}
-	starelem.childNodes[0].style.display = starstatus;
 
 	bookmarks = bookmarkArr.join(",");
-	localStorage.setItem("bookmarks",bookmarks);
-	
+	localStorage.setItem("bookmarks", bookmarks);
+
+	return bookmarks;
 }
 
-function touchPosterTest(posterid) {
 
+// ブックマークされたポスターIDを数値の配列で取得する
+function getBookmarks() {
+	var bookmarks = localStorage.getItem("bookmarks");
+	// 空文字列だった場合は何もブックマークされていないので空配列
+	var bookmarkArr = (bookmarks != "") ? bookmarks.split(",") : [];
+	// 中身をすべて数値にする
+	bookmarkArr.filter(function(obj) {
+		return parseInt(obj);
+	});
+	// ソート
+	bookmarkArr.sort(function(a,b){
+    	return (parseInt(a) < parseInt(b)) ? -1 : 1;
+    });
+
+	return bookmarkArr;
 }

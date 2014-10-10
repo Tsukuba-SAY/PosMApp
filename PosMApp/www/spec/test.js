@@ -558,7 +558,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("システム");
 		});
 
-		waits(100);
+		waits(200);
 		
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
@@ -782,8 +782,10 @@ describe("タイトルでキーワード検索をする", function() {
 });
 
 describe("テスト用のファンクションのテスト", function() {
-	it("getAuthors,getKeywordsファンクションのテスト", function() {
+	it("getAuthorsのテスト", function() {
 		expect(getAuthors(1)).toEqual("浦井 智之,小池 泰輔,小宮山 哲俊,原 清貴");
+	});
+	it("getKeywordsのテスト", function() {
 		expect(getKeywords(1)).toEqual("スタンダードコース");
 	});
 });
@@ -802,21 +804,22 @@ describe("ラベルの表示切り替え機能", function() {
 	it("「セッションID」ボタンを押すとラベルがセッションIDに切り替わる", function() {
 		var labels = changeLabel("sessionid");
 		var testlabel = ["S01","S02","S03","S04","S05","S06","S07","S08","S09","SIT01","SIT02","SIT03","SIT04","SIT05"];
-
+		expect(labels).toEqual(testlabel);
 	});
 	it("「タイトル」ボタンを押すとラベルがタイトルに切り替わる", function() {
 		var labels = changeLabel("title");
 		var testlabel = ["防災・避難...","画像リプラ...","ハッシュタ...","ワインマッ...","コロコロジ...","中古教科書...","地図を用い...","予定や天候...","iBeac...","600人規...","テニススク...","施設内での...","スマートフ...","小規模グル..."];
+		expect(labels).toEqual(testlabel);	
 	});
 	it("「チーム名」ボタンを押すとラベルがチーム名に切り替わる", function() {
 		var labels = changeLabel("authorname");
-		var testlabel = ["OU-LA...","_:(*'...","チームNo...","Primt...","コロジャー","りばて","ef","おちゃねこ","Rabbi...","S.A.Y...","TOMs","TKS","SAG-A...","BooK-..."];
-
+		var testlabel = ["OU-LA...","_:(*'...","チームNo...","Primt...","コロジャー","りばて","ef","おちゃねこ","Rabbi...","S.A.Y...","TOMs","TKS","SAG-A...","Book-..."];
+		expect(labels).toEqual(testlabel);
 	});
 	it("「大学名」ボタンを押すとラベルが大学名に切り替わる", function() {
 		var labels = changeLabel("authorbelongs");
 		var testlabel = ["千葉大学","筑波大学","筑波大学","筑波大学","筑波大学,...","東京理科大...","愛媛大学","お茶の水女...","茨城大学","筑波大学","筑波大学","筑波大学","筑波大学","筑波大学"];
-
+		expect(labels).toEqual(testlabel);
 	});
 });
 
@@ -824,24 +827,78 @@ describe("ブックマーク機能", function() {
 	beforeEach(function() {
 		init();	
 		test = true;
+
+		localStorage.setItem("bookmarks", "");
 	});
 	it("何もブックマークされていない状態で、1番の星をタップすると、1番のポスターがブックマークされる", function() {
-		
+		var bookmarks = touchBookmark(1, null);
+		var expectBookmarks = "1";
+		expect(bookmarks).toEqual(expectBookmarks);
 	});
 	it("何もブックマークされていない状態で、すべての星をタップすると、すべてのポスターがブックマークされる", function() {
-
+		var bookmarks;
+		for (var i = 1; i <= ptotal; i++) {
+			bookmarks = touchBookmark(i, null);
+		}
+		var expectBookmarks = "1,2,3,4,5,6,7,8,9,10,11,12,13,14";
+		expect(bookmarks).toEqual(expectBookmarks);
 	});
 	it("1番のポスターがブックマークされている状態で、1番の星をタップすると、何もブックされていない状態になる", function() {
-
+		localStorage.setItem("bookmarks", "1");
+		var bookmarks = touchBookmark(1, null);
+		var expectBookmarks = "";
+		expect(bookmarks).toEqual(expectBookmarks);
 	});
 	it("1番のポスターがブックマークされている状態で、2番の星をタップすると、1,2番のポスターがブックマークされた状態になる", function() {
-
+		localStorage.setItem("bookmarks", "1");
+		var bookmarks = touchBookmark(2, null);
+		var expectBookmarks = "1,2";
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("何もブックマークされていない状態で、4,5,6番の星をタップすると、4,5,6番のポスターがブックマークされた状態になる", function() {
+		var bookmarks;
+		bookmarks = touchBookmark(4, null);
+		bookmarks = touchBookmark(5, null);
+		bookmarks = touchBookmark(6, null);
+		var expectBookmarks = "4,5,6";
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("4番のポスターがブックマークされている状態で、4,5,6番の星をタップすると、5,6番のポスターがブックマークされた状態になる", function() {
+		localStorage.setItem("bookmarks", "4");
+		var bookmarks;
+		bookmarks = touchBookmark(4, null);
+		bookmarks = touchBookmark(5, null);
+		bookmarks = touchBookmark(6, null);
+		var expectBookmarks = "5,6";
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("5,6番のポスターがブックマークされている状態で、4,5,6番の星をタップすると、4番のポスターがブックマークされた状態になる", function() {
+		localStorage.setItem("bookmarks", "5,6");
+		var bookmarks;
+		bookmarks = touchBookmark(4, null);
+		bookmarks = touchBookmark(5, null);
+		bookmarks = touchBookmark(6, null);
+		var expectBookmarks = "4";
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("4,5,6番のポスターがブックマークされている状態で、4,5,6番の星をタップすると、何もブックマークされていない状態になる", function() {
+		localStorage.setItem("bookmarks", "4,5,6");
+		var bookmarks;
+		bookmarks = touchBookmark(4, null);
+		bookmarks = touchBookmark(5, null);
+		bookmarks = touchBookmark(6, null);
+		var expectBookmarks = "";
+		expect(bookmarks).toEqual(expectBookmarks);
 	});
 	it("0番の星をタップすると、例外が発生する", function() {
-
+		expect(function() {
+			var bookmarks = touchBookmark(0, null);
+		}).toThrow();
 	});
 	it("ポスター数+1番の星をタップすると、例外が発生する", function() {
-
+		expect(function() {
+			var bookmarks = touchBookmark(ptotal + 1, null);
+		}).toThrow();
 	});
 });
 
