@@ -846,32 +846,28 @@ describe("ブックマーク機能", function() {
 	});
 });
 
-
-
-
 function getAuthors(posterid){
 
-	var Atotal=author.length;
+	var atotal = author.length;
 	var authorlist = "";
-	for (var i = 0; i < Atotal; i++) {
+	for (var i = 0; i < atotal; i++) {
         if (author[i].posterid == posterid){
         	authorlist = authorlist + author[i].name + ",";
         }
 	}
-	authorlist=authorlist.substring(0,authorlist.length-1);
+	authorlist = authorlist.substring(0, authorlist.length - 1);
 	return authorlist;
 }
 
-
 function getKeywords(posterid){
 
-	var Ktotal=keyword.length;
+	var ktotal = keyword.length;
 	var keywordlist = "";
-	for (var i = 0; i < Ktotal; i++) {
+	for (var i = 0; i < ktotal; i++) {
         if (keyword[i].posterid == posterid){
         	keywordlist = keywordlist + keyword[i].keyword + ",";
         }
 	}
-	keywordlist=keywordlist.substring(0,keywordlist.length-1);
+	keywordlist = keywordlist.substring(0, keywordlist.length - 1);
 	return keywordlist;
 }
