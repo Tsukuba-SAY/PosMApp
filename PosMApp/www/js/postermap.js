@@ -186,9 +186,6 @@ function init() {
 	for (var i = 1; i <= ptotal; i++) {
 		pflag[i] = "d";
 	}
-
-	
-
 }
 
 // ラベルを変更する
@@ -197,8 +194,6 @@ function changeLabel(column) {
 	sessionStorage.setItem("label", column);
 
 	var labels = new Array(ptotal);
-
-
 
 	// 各ポスターに対してラベルを変更する
 	for (var i = 1; i <= ptotal; i++) {
@@ -210,11 +205,13 @@ function changeLabel(column) {
 		if (!test) {	
 			setLabel(i, str);
 		} else {
-			labels[i-1] = str;
+			labels[i - 1] = str;
 		}
 	}
 	return labels;
 }
+
+// 指定されたラベルをセットする
 function setLabel(id, str) {
 	document.getElementById("font" + id)
 	.innerHTML = str;
