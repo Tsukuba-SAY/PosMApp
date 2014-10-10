@@ -535,7 +535,6 @@ describe("ポスターの詳細情報を表示する", function() {
 describe("タイトルでキーワード検索をする", function() {
 	initDB();
 	beforeEach(function() {
-		console.log("beforeEach");
 		init();
 	});
 
@@ -545,10 +544,10 @@ describe("タイトルでキーワード検索をする", function() {
 
 		runs(function() {
 			expectFlag[0] = null;
-			for(var i = 1 ; i <= ptotal ; i++){
-				if(i == 1 ||i == 6 || i == 10 || i == 11 || i == 12 || i == 13){
+			for (var i = 1; i <= ptotal; i++) {
+				if (i == 1 ||i == 6 || i == 10 || i == 11 || i == 12 || i == 13) {
 					expectFlag[i] = "s";
-				}else{
+				} else {
 					expectFlag[i] = "d";
 				}
 			}
