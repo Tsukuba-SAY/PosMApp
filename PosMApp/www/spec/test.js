@@ -782,8 +782,10 @@ describe("タイトルでキーワード検索をする", function() {
 });
 
 describe("テスト用のファンクションのテスト", function() {
-	it("getAuthors,getKeywordsファンクションのテスト", function() {
+	it("getAuthorsのテスト", function() {
 		expect(getAuthors(1)).toEqual("浦井 智之,小池 泰輔,小宮山 哲俊,原 清貴");
+	});
+	it("getKeywordsのテスト", function() {
 		expect(getKeywords(1)).toEqual("スタンダードコース");
 	});
 });
