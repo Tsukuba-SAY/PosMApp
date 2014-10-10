@@ -900,6 +900,11 @@ describe("ブックマーク機能", function() {
 			var bookmarks = touchBookmark(ptotal + 1, null);
 		}).toThrow();
 	});
+	it("ポスター数にnullを指定すると、例外が発生する", function() {
+		expect(function() {
+			var bookmarks = touchBookmark(null, null);
+		}).toThrow();
+	});
 });
 
 function getAuthors(posterid){
