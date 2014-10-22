@@ -36,9 +36,6 @@
 		$(function() {
 			setLabels();
 
-			$("#returnButton").on('touchstart', function() {
-				returnIndex();
-			});
 			// 詳細情報画面を表示する
 			$("#detailinfobutton").on("touchstart", function(e) {
 				setLabels();
@@ -61,7 +58,7 @@
 
 <body>
 	<!-- ポスターマップ画面 -->
-	<div data-role="page" id="mainPage">
+	<div data-role="page" id="posterMapPage">
 		<div data-role="header">
 			<!-- 検索バー -->
 	    	<input id="search-title" type="search" name="search"
@@ -115,7 +112,7 @@
 		<p>
 			<span id="label-abstract"></span>
 		</p>
-		<a data-role="button" href="#mainPage">戻る</a>
+		<a data-role="button" href="#posterMapPage">戻る</a>
 	</div>
 
 	<!-- 表示切替ボタンのダイアログ -->
@@ -125,15 +122,15 @@
 		</div>
 		<div data-role="content">
 			<a class="changelabel" id="label-id"
-				href="#mainPage" data-role="button">ID</a>
+				href="#posterMapPage" data-role="button">ID</a>
 			<a class="changelabel" id="label-sessionid"
-				href="#mainPage" data-role="button">セッションID</a>
+				href="#posterMapPage" data-role="button">セッションID</a>
 			<a class="changelabel" id="label-title"
-				href="#mainPage" data-role="button">タイトル</a>
+				href="#posterMapPage" data-role="button">タイトル</a>
 			<a class="changelabel" id="label-authorname"
-				href="#mainPage" data-role="button">チーム名</a>
+				href="#posterMapPage" data-role="button">チーム名</a>
 			<a class="changelabel" id="label-authorbelongs"
-				href="#mainPage" data-role="button">大学名</a>
+				href="#posterMapPage" data-role="button">大学名</a>
 		</div>
 	</div>
 </body>
