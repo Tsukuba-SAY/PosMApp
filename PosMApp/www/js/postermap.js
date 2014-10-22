@@ -82,11 +82,6 @@ $(function() {
 		showPosterIcons();
 	});
 
-	// 詳細情報画面を表示する
-	$("#detailinfobutton").on("touchstart", function(e) {
-		window.location.href = "detail.html";
-	});
-
 	// 基本情報画面の閉じるボタンを押す
 	$("#basicinfo").on("touchstart", function(e) {
 		changeBasicInfoPanel(false);
