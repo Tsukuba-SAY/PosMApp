@@ -34,14 +34,28 @@
 		var keywords = sessionStorage.getItem("keywords");
 
 		$(function() {
+			setLabels();
+
 			$("#returnButton").on('touchstart', function() {
 				returnIndex();
 			});
 			// 詳細情報画面を表示する
 			$("#detailinfobutton").on("touchstart", function(e) {
-				location.href = "#detailPage";
+				setLabels();
+				window.location.href = "#detailPage";
 			});
 		});
+
+		function setLabels() {
+			$("#label-posterid").html(sessionStorage.getItem("posterid"));
+			$("#label-sessionid").html(sessionStorage.getItem("sessionid"));
+			$("#label-title").html(sessionStorage.getItem("title"));
+			$("#label-authors").html(sessionStorage.getItem("authors"));
+			$("#label-authorbelongs").html(sessionStorage.getItem("authorbelongs"));
+			$("#label-authorname").html(sessionStorage.getItem("authorname"));
+			$("#label-keywords").html(sessionStorage.getItem("keywords"));
+			$("#label-abstract").html(sessionStorage.getItem("abstract"));
+		}
 	</script>
 </head>
 
@@ -87,25 +101,19 @@
 
 	<!-- 詳細情報画面 -->
 	<div data-role="page" id="detailPage">
-		<script>
-			document.write("No. " + posterid + " [" + sessionid + "]");
-		</script>
+		No. <span id="label-posterid"></span> [<span id="label-sessionid"></span>]
 		<h1>
-			<script>
-				document.write(title);
-			</script>
+			<span id="label-title"></span>
 		</h1>
 		<ul>
-			<script>
-				document.write("<li>著者： " + authors + "</li>");
-				document.write("<li>所属： " + authorbelongs + "</li>");
-				document.write("<li>チーム名： " + authorname + "</li>");
-				document.write("<li>コース： " + keywords + "</li>");
-			</script>
+			<li>著者： <span id="label-authors"></span></li>
+			<li>所属： <span id="label-authorbelongs"></span></li>
+			<li>チーム名： <span id="label-authorname"></span></li>
+			<li>コース： <span id="keywords"></span></li>
 		</ul>
 		<h2>概要</h2>
 		<p>
-			<script>document.write(abstract);</script>
+			<span id="label-abstract"></span>
 		</p>
 		<a data-role="button" href="#mainPage">戻る</a>
 	</div>
