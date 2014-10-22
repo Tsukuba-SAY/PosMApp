@@ -20,9 +20,33 @@
 	<!-- DB用ポスターデータ -->
 	<script type="text/javascript" charset="utf-8" src="js/posterdata.js">
 	</script>
+
+	<script>
+		var posterid = sessionStorage.getItem("posterid");
+		var sessionid = sessionStorage.getItem("sessionid");
+		var title = sessionStorage.getItem("title");
+		var abstract = sessionStorage.getItem("abstract");
+		var authorname = sessionStorage.getItem("authorname");
+		var authorbelongs = sessionStorage.getItem("authorbelongs");
+		var bookmark = sessionStorage.getItem("bookmakr");
+		var star = sessionStorage.getItem("star");
+		var authors = sessionStorage.getItem("authors");
+		var keywords = sessionStorage.getItem("keywords");
+
+		$(function() {
+			$("#returnButton").on('touchstart', function() {
+				returnIndex();
+			});
+			// 詳細情報画面を表示する
+			$("#detailinfobutton").on("touchstart", function(e) {
+				location.href = "#detailPage";
+			});
+		});
+	</script>
 </head>
 
 <body>
+	<!-- ポスターマップ画面 -->
 	<div data-role="page" id="mainPage">
 		<div data-role="header">
 			<!-- 検索バー -->
@@ -34,7 +58,7 @@
 			<div id="searchResult" style="position: absolute; z-index: 100;">
 			</div>
 			<div id="changelabel" style="border:2px;">
-				<!-- 表示切替ボタン -->
+				<!-- ラベル表示切替ボタン -->
 				<a data-role="button" href="#changeLabelDialog"
 				data-inline="true" data-rel="dialog"
 				data-transition="pop">表示切替</a>
@@ -59,6 +83,31 @@
 			<!-- ポスターアイコン -->
 			<div id="posters" style="position: absolute;"></div>
 		</div>
+	</div>
+
+	<!-- 詳細情報画面 -->
+	<div data-role="page" id="detailPage">
+		<script>
+			document.write("No. " + posterid + " [" + sessionid + "]");
+		</script>
+		<h1>
+			<script>
+				document.write(title);
+			</script>
+		</h1>
+		<ul>
+			<script>
+				document.write("<li>著者： " + authors + "</li>");
+				document.write("<li>所属： " + authorbelongs + "</li>");
+				document.write("<li>チーム名： " + authorname + "</li>");
+				document.write("<li>コース： " + keywords + "</li>");
+			</script>
+		</ul>
+		<h2>概要</h2>
+		<p>
+			<script>document.write(abstract);</script>
+		</p>
+		<a data-role="button" href="#mainPage">戻る</a>
 	</div>
 
 	<!-- 表示切替ボタンのダイアログ -->
