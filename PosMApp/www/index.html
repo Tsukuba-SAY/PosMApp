@@ -17,6 +17,8 @@
 	</script>
 	<script type="text/javascript" charset="utf-8" src="js/postermap.js">
 	</script>
+	<script type="text/javascript" charset="utf-8" src="js/posterlist.js">
+	</script>
 
 	<!-- DB用ポスターデータ -->
 	<script type="text/javascript" charset="utf-8" src="js/posterdata.js">
@@ -31,7 +33,7 @@
 				setDetails();
 				window.location.href = "#detailPage";
 			});
-
+			
 			// ポスターマップ画面に遷移
 			$("#goToMap").on("touchstart", function() {
 				window.location.href = "#posterMapPage";
@@ -39,6 +41,7 @@
 
 			// リスト画面に遷移
 			$("#goToList").on("touchstart", function() {
+				showposterlist();
 				window.location.href = "#posterlist";
 			});
 		});
@@ -153,6 +156,15 @@
 			<span id="detail-abstract"></span>
 		</p>
 		<a data-role="button" href="#posterMapPage">戻る</a>
+	</div>
+
+	<!-- ポスターリスト画面 -->
+	<div data-role="page" id="posterlist">
+		<h1>ポスター一覧</h1>
+		<div style="overflow-y:scroll;height:100%;">
+		<table border="1" id="posterlist">
+		</table>
+		</div>
 	</div>
 
 	<!-- 表示切替ボタンのダイアログ -->

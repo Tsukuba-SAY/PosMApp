@@ -1,7 +1,3 @@
-$(function() {
-			  showposterlist();
-});
-
 function showposterlist(){
 	var str="";
 	//postdataをループする、各ポスターの情報を取り出す
