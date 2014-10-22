@@ -22,41 +22,34 @@
 	</script>
 
 	<script>
-		var posterid = sessionStorage.getItem("posterid");
-		var sessionid = sessionStorage.getItem("sessionid");
-		var title = sessionStorage.getItem("title");
-		var abstract = sessionStorage.getItem("abstract");
-		var authorname = sessionStorage.getItem("authorname");
-		var authorbelongs = sessionStorage.getItem("authorbelongs");
-		var bookmark = sessionStorage.getItem("bookmakr");
-		var star = sessionStorage.getItem("star");
-		var authors = sessionStorage.getItem("authors");
-		var keywords = sessionStorage.getItem("keywords");
-
 		$(function() {
-			setLabels();
+			setDetails();
 
 			// 詳細情報画面を表示する
 			$("#detailinfobutton").on("touchstart", function(e) {
-				setLabels();
+				setDetails();
 				window.location.href = "#detailPage";
 			});
 		});
 
-		function setLabels() {
-			$("#label-posterid").html(sessionStorage.getItem("posterid"));
-			$("#label-sessionid").html(sessionStorage.getItem("sessionid"));
-			$("#label-title").html(sessionStorage.getItem("title"));
-			$("#label-authors").html(sessionStorage.getItem("authors"));
-			$("#label-authorbelongs").html(sessionStorage.getItem("authorbelongs"));
-			$("#label-authorname").html(sessionStorage.getItem("authorname"));
-			$("#label-keywords").html(sessionStorage.getItem("keywords"));
-			$("#label-abstract").html(sessionStorage.getItem("abstract"));
+		function setDetails() {
+			$("#detail-posterid").html(sessionStorage.getItem("posterid"));
+			$("#detail-sessionid").html(sessionStorage.getItem("sessionid"));
+			$("#detail-title").html(sessionStorage.getItem("title"));
+			$("#detail-authors").html(sessionStorage.getItem("authors"));
+			$("#detail-authorbelongs").html(sessionStorage.getItem("authorbelongs"));
+			$("#detail-authorname").html(sessionStorage.getItem("authorname"));
+			$("#detail-keywords").html(sessionStorage.getItem("keywords"));
+			$("#detail-abstract").html(sessionStorage.getItem("abstract"));
 		}
 	</script>
 </head>
 
 <body>
+	<!-- トップメニュー画面 -->
+	<div data-role="page" id="topPage">
+	</div>
+
 	<!-- ポスターマップ画面 -->
 	<div data-role="page" id="posterMapPage">
 		<div data-role="header">
@@ -98,19 +91,19 @@
 
 	<!-- 詳細情報画面 -->
 	<div data-role="page" id="detailPage">
-		No. <span id="label-posterid"></span> [<span id="label-sessionid"></span>]
+		No. <span id="detail-posterid"></span> [<span id="detail-sessionid"></span>]
 		<h1>
-			<span id="label-title"></span>
+			<span id="detail-title"></span>
 		</h1>
 		<ul>
-			<li>著者： <span id="label-authors"></span></li>
-			<li>所属： <span id="label-authorbelongs"></span></li>
-			<li>チーム名： <span id="label-authorname"></span></li>
-			<li>コース： <span id="label-keywords"></span></li>
+			<li>著者： <span id="detail-authors"></span></li>
+			<li>所属： <span id="detail-authorbelongs"></span></li>
+			<li>チーム名： <span id="detail-authorname"></span></li>
+			<li>コース： <span id="detail-keywords"></span></li>
 		</ul>
 		<h2>概要</h2>
 		<p>
-			<span id="label-abstract"></span>
+			<span id="detail-abstract"></span>
 		</p>
 		<a data-role="button" href="#posterMapPage">戻る</a>
 	</div>
