@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css" />
-	<link rel="stylesheet" type="text/css" href="icon.css" />
+	<link rel="stylesheet" type="text/css" href="css/icon.css" />
+	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
 
 	<script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js">
 	</script>
@@ -22,46 +23,82 @@
 	</script>
 
 	<script>
-		var posterid = sessionStorage.getItem("posterid");
-		var sessionid = sessionStorage.getItem("sessionid");
-		var title = sessionStorage.getItem("title");
-		var abstract = sessionStorage.getItem("abstract");
-		var authorname = sessionStorage.getItem("authorname");
-		var authorbelongs = sessionStorage.getItem("authorbelongs");
-		var bookmark = sessionStorage.getItem("bookmakr");
-		var star = sessionStorage.getItem("star");
-		var authors = sessionStorage.getItem("authors");
-		var keywords = sessionStorage.getItem("keywords");
-
 		$(function() {
-			setLabels();
+			setDetails();
 
-			$("#returnButton").on('touchstart', function() {
-				returnIndex();
-			});
 			// 詳細情報画面を表示する
 			$("#detailinfobutton").on("touchstart", function(e) {
-				setLabels();
+				setDetails();
 				window.location.href = "#detailPage";
+			});
+
+			// ポスターマップ画面に遷移
+			$("#goToMap").on("touchstart", function() {
+				window.location.href = "#posterMapPage";
+			});
+
+			// リスト画面に遷移
+			$("#goToList").on("touchstart", function() {
+				window.location.href = "#posterlist";
 			});
 		});
 
-		function setLabels() {
-			$("#label-posterid").html(sessionStorage.getItem("posterid"));
-			$("#label-sessionid").html(sessionStorage.getItem("sessionid"));
-			$("#label-title").html(sessionStorage.getItem("title"));
-			$("#label-authors").html(sessionStorage.getItem("authors"));
-			$("#label-authorbelongs").html(sessionStorage.getItem("authorbelongs"));
-			$("#label-authorname").html(sessionStorage.getItem("authorname"));
-			$("#label-keywords").html(sessionStorage.getItem("keywords"));
-			$("#label-abstract").html(sessionStorage.getItem("abstract"));
+		function setDetails() {
+			$("#detail-posterid").html(sessionStorage.getItem("posterid"));
+			$("#detail-sessionid").html(sessionStorage.getItem("sessionid"));
+			$("#detail-title").html(sessionStorage.getItem("title"));
+			$("#detail-authors").html(sessionStorage.getItem("authors"));
+			$("#detail-authorbelongs").html(sessionStorage.getItem("authorbelongs"));
+			$("#detail-authorname").html(sessionStorage.getItem("authorname"));
+			$("#detail-keywords").html(sessionStorage.getItem("keywords"));
+			$("#detail-abstract").html(sessionStorage.getItem("abstract"));
 		}
 	</script>
 </head>
 
 <body>
+	<!-- トップメニュー画面 -->
+	<div data-role="page" id="topPage">
+		<div data-role="header">
+			<h1>PosMApp</h1>
+		</div>
+		<div align="center">
+			<h2>日本語 | <span style="text-decoration:line-through;">English</span></h2>
+		</div>
+		<table class="table-topmenu" align="center">
+			<tr>
+				<td>
+					<div align="center">
+						<img id="goToMap" class="topmenuicon" src="img/topmenu/map.png" align="center"></img><br/>
+						会場マップ
+					</div>
+				</td>
+				<td>
+					<div align="center">
+						<img id="goToList" class="topmenuicon" src="img/topmenu/list.png"></img><br/>
+						セッションリスト
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div align="center">
+						<img id="goToBookmark" class="topmenuicon" src="img/topmenu/bookmark_gray.png"></img><br/>
+						ブックマークリスト
+					</div>
+				</td>
+				<td>
+					<div align="center">
+						<img id="goToInformation" class="topmenuicon" src="img/topmenu/information_gray.png"></img><br/>
+						情報
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
 	<!-- ポスターマップ画面 -->
-	<div data-role="page" id="mainPage">
+	<div data-role="page" id="posterMapPage">
 		<div data-role="header">
 			<!-- 検索バー -->
 	    	<input id="search-title" type="search" name="search"
@@ -101,21 +138,21 @@
 
 	<!-- 詳細情報画面 -->
 	<div data-role="page" id="detailPage">
-		No. <span id="label-posterid"></span> [<span id="label-sessionid"></span>]
+		No. <span id="detail-posterid"></span> [<span id="detail-sessionid"></span>]
 		<h1>
-			<span id="label-title"></span>
+			<span id="detail-title"></span>
 		</h1>
 		<ul>
-			<li>著者： <span id="label-authors"></span></li>
-			<li>所属： <span id="label-authorbelongs"></span></li>
-			<li>チーム名： <span id="label-authorname"></span></li>
-			<li>コース： <span id="label-keywords"></span></li>
+			<li>著者： <span id="detail-authors"></span></li>
+			<li>所属： <span id="detail-authorbelongs"></span></li>
+			<li>チーム名： <span id="detail-authorname"></span></li>
+			<li>コース： <span id="detail-keywords"></span></li>
 		</ul>
 		<h2>概要</h2>
 		<p>
-			<span id="label-abstract"></span>
+			<span id="detail-abstract"></span>
 		</p>
-		<a data-role="button" href="#mainPage">戻る</a>
+		<a data-role="button" href="#posterMapPage">戻る</a>
 	</div>
 
 	<!-- 表示切替ボタンのダイアログ -->
@@ -125,15 +162,15 @@
 		</div>
 		<div data-role="content">
 			<a class="changelabel" id="label-id"
-				href="#mainPage" data-role="button">ID</a>
+				href="#posterMapPage" data-role="button">ID</a>
 			<a class="changelabel" id="label-sessionid"
-				href="#mainPage" data-role="button">セッションID</a>
+				href="#posterMapPage" data-role="button">セッションID</a>
 			<a class="changelabel" id="label-title"
-				href="#mainPage" data-role="button">タイトル</a>
+				href="#posterMapPage" data-role="button">タイトル</a>
 			<a class="changelabel" id="label-authorname"
-				href="#mainPage" data-role="button">チーム名</a>
+				href="#posterMapPage" data-role="button">チーム名</a>
 			<a class="changelabel" id="label-authorbelongs"
-				href="#mainPage" data-role="button">大学名</a>
+				href="#posterMapPage" data-role="button">大学名</a>
 		</div>
 	</div>
 </body>
