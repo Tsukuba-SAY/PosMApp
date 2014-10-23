@@ -1,7 +1,15 @@
 describe("変数の確認", function() {
 	it("posterdata.jsでposterが宣言されている", function() {
-		
 		expect(poster.length).toEqual(14);
+	});
+});
+
+describe("トップページを表示する", function() {
+	it("トップページからポスターマップ画面に遷移できる", function() {
+		
+	});
+	it("トップページからポスターリスト画面に遷移できる", function() {
+
 	});
 });
 
