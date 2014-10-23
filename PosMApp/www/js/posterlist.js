@@ -10,7 +10,7 @@ function showposterlist(){
 		
 	}
 	//テーブルに配置する
-	document.getElementById("posterlistTable").innerHTML = str;
+	document.getElementById("posterlistTableTab").innerHTML = str;
 }
 
 //ポスターの発表者を獲得する
