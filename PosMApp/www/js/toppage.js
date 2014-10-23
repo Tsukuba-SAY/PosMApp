@@ -32,4 +32,5 @@ function setDetails() {
 
 function changePage(pagename) {
 	window.location.href = pagename;
+	return pagename;
 }
