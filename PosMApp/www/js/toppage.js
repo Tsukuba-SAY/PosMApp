@@ -4,18 +4,18 @@ $(function() {
 	// 詳細情報画面を表示する
 	$("#detailinfobutton").on("touchstart", function(e) {
 		setDetails();
-		window.location.href = "#detailPage";
+		changePage("#detailPage");
 	});
 	
 	// ポスターマップ画面に遷移
 	$("#goToMap").on("touchstart", function() {
-		window.location.href = "#posterMapPage";
+		changePage("#posterMapPage");
 	});
 
 	// リスト画面に遷移
 	$("#goToList").on("touchstart", function() {
 		showposterlist();
-		window.location.href = "#posterlist";
+		changePage("#posterListPage");
 	});
 });
 
@@ -28,4 +28,8 @@ function setDetails() {
 	$("#detail-authorname").html(sessionStorage.getItem("authorname"));
 	$("#detail-keywords").html(sessionStorage.getItem("keywords"));
 	$("#detail-abstract").html(sessionStorage.getItem("abstract"));
+}
+
+function changePage(pagename) {
+	window.location.href = pagename;
 }
