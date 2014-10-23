@@ -95,6 +95,8 @@ $(function() {
 		if (e.target.value.trim() != "" && e.target.value != null) {
 			
 			// 検索し、強調表示する
+			console.log("search");
+			alert("search");
 			searchByTitle(e.target.value);
 
 			// 検索中フラグを立てる

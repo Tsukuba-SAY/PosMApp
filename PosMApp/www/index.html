@@ -71,6 +71,21 @@
 
 	<!-- ポスターマップ画面 -->
 	<div data-role="page" id="posterMapPage">
+		<!-- タブバー -->
+		<div class="ui-grid-c">
+			<div class="ui-block-a">
+				<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
+			</div>
+			<div class="ui-block-b">
+				<a class="posterListPageButton" data-role="button" href="#posterListPage">一覧</a>
+			</div>
+			<div class="ui-block-c">
+				<a data-role="button" href="" class="ui-disabled">ブックマーク</a>
+			</div>
+			<div class="ui-block-d">
+				<a data-role="button" href="" class="ui-disabled">情報</a>
+			</div>			
+		</div>
 		<div data-role="header">
 			<!-- 検索バー -->
 	    	<input id="search-title" type="search" name="search"
@@ -110,6 +125,21 @@
 
 	<!-- 詳細情報画面 -->
 	<div data-role="page" id="detailPage">
+		<!-- タブバー -->
+		<div class="ui-grid-c">
+			<div class="ui-block-a">
+				<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
+			</div>
+			<div class="ui-block-b">
+				<a class="posterListPageButton" data-role="button" href="#posterListPage">一覧</a>
+			</div>
+			<div class="ui-block-c">
+				<a data-role="button" href="" class="ui-disabled">ブックマーク</a>
+			</div>
+			<div class="ui-block-d">
+				<a data-role="button" href="" class="ui-disabled">情報</a>
+			</div>			
+		</div>
 		No. <span id="detail-posterid"></span> [<span id="detail-sessionid"></span>]
 		<h1>
 			<span id="detail-title"></span>
@@ -129,6 +159,21 @@
 
 	<!-- ポスターリスト画面 -->
 	<div data-role="page" id="posterListPage">
+		<!-- タブバー -->
+		<div class="ui-grid-c">
+			<div class="ui-block-a">
+				<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
+			</div>
+			<div class="ui-block-b">
+				<a class="posterListPageButton" data-role="button" href="#posterListPage">一覧</a>
+			</div>
+			<div class="ui-block-c">
+				<a data-role="button" href="" class="ui-disabled">ブックマーク</a>
+			</div>
+			<div class="ui-block-d">
+				<a data-role="button" href="" class="ui-disabled">情報</a>
+			</div>			
+		</div>
 		<h1>ポスター一覧</h1>
 		<div style="overflow-y:scroll;height:100%;">
 			<table border="1" id="posterlistTableTab"></table>
