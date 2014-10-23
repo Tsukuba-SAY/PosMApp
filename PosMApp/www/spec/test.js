@@ -6,10 +6,12 @@ describe("変数の確認", function() {
 
 describe("トップページを表示する", function() {
 	it("トップページからポスターマップ画面に遷移できる", function() {
-		
+		var nextPage = changePage("#posterMapPage");
+		expect(nextPage).toEqual("#posterMapPage");
 	});
 	it("トップページからポスターリスト画面に遷移できる", function() {
-
+		var nextPage = changePage("#posterListPage");
+		expect(nextPage).toEqual("#posterListPage");
 	});
 });
 
