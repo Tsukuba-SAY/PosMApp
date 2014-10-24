@@ -13,8 +13,6 @@
 	</script>
 	<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.2.min.js">
 	</script>
-	<script type="text/javascript" charset="utf-8" src="js/initdb.js">
-	</script>
 	<script type="text/javascript" charset="utf-8" src="js/toppage.js">
 	</script>
 	<script type="text/javascript" charset="utf-8" src="js/postermap.js">
@@ -24,6 +22,10 @@
 
 	<!-- DB用ポスターデータ -->
 	<script type="text/javascript" charset="utf-8" src="js/posterdata.js">
+	</script>
+
+	<script type="text/javascript" charset="utf-8">
+
 	</script>
 
 </head>
@@ -69,6 +71,7 @@
 		</table>
 	</div>
 
+
 	<!-- ポスターマップ画面 -->
 	<div data-role="page" id="posterMapPage">
 		<!-- タブバー -->
@@ -87,9 +90,8 @@
 			</div>			
 		</div>
 		<div data-role="header">
-			<!-- 検索バー -->
-	    	<input id="search-title" type="search" name="search"
-	    	placeholder="タイトルで検索" />
+			<input type="search" id="search-bar-title"
+		    	placeholder="タイトルで検索" onchange="searchChanged(this)"/>
 		</div>
 		<div style="position: relative;">
 			<!-- 検索結果件数 -->

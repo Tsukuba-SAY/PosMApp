@@ -37,7 +37,7 @@ $(function() {
 	// 検索中状態だったら検索にヒットしたポスターを強調表示
 	// FIXME:もう一度検索しているので読み込み時遅くなる
 	if (sessionStorage.getItem("searching") == "true") {
-		document.getElementById("search-title").value = sessionStorage.getItem("searchWord");
+		document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
 		searchByTitle(sessionStorage.getItem("searchWord"));
 	}
 
@@ -92,40 +92,6 @@ $(function() {
 		//resetAllIcons();
 	});
 
-	// タイトルで検索
-	$("#search-title").bind("change", function(e, ui) {
-		if (e.target.value.trim() != "" && e.target.value != null) {
-			
-			// 検索し、強調表示する
-			console.log("search");
-			searchByTitle(e.target.value);
-
-			// 検索中フラグを立てる
-			sessionStorage.setItem("searching", "true");
-			sessionStorage.setItem("searchWord", e.target.value);
-
-		} else {
-			// 検索中フラグを折る
-			sessionStorage.removeItem("searching");
-			sessionStorage.removeItem("searchWord");
-
-			// 各ポスターに対して検索中状態から未検索状態へフラグを変化させる
-			for (var i = 1; i <= ptotal; i++) {
-				// 検索中強調表示ならばただの強調表示に、ヒット状態なら元に戻す
-				if (pflag[i] == "e") {
-					pflag[i] = "t";
-				} else if (pflag[i] == "s") {
-					pflag[i] = "d";
-				}
-			}
-
-			document.getElementById("searchResult").innerHTML = "";
-		}
-
-		showPosterIcons();
-		this.blur();
-	});
-
 	// ラベルを変更する
 	$(".changelabel").on("touchstart", function(e) {
 		// 押されたボタンのidを取得する
@@ -145,7 +111,6 @@ $(function() {
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
 });
-
 
 // グローバル変数の初期化処理
 function init() {
@@ -580,3 +545,40 @@ function getBookmarks() {
 
 	return bookmarkArr;
 }
+
+
+// 検索バーが変更されたとき
+// TODO: jQueryを使うとbindされない原因をつきとめてjQueryに戻す
+function searchChanged(bar) {
+	if (bar.value.trim() != "" && bar.value != null) {
+		
+		// 検索し、強調表示する
+		console.log("search");
+		searchByTitle(bar.value);
+
+		// 検索中フラグを立てる
+		sessionStorage.setItem("searching", "true");
+		sessionStorage.setItem("searchWord", bar.value);
+
+	} else {
+		// 検索中フラグを折る
+		sessionStorage.removeItem("searching");
+		sessionStorage.removeItem("searchWord");
+
+		// 各ポスターに対して検索中状態から未検索状態へフラグを変化させる
+		for (var i = 1; i <= ptotal; i++) {
+			// 検索中強調表示ならばただの強調表示に、ヒット状態なら元に戻す
+			if (pflag[i] == "e") {
+				pflag[i] = "t";
+			} else if (pflag[i] == "s") {
+				pflag[i] = "d";
+			}
+		}
+
+		document.getElementById("searchResult").innerHTML = "";
+	}
+
+	showPosterIcons();
+	bar.blur();
+}
+
