@@ -14,7 +14,8 @@ var test = false;
 var labelmax = 5;
 
 // Local DB (WebSQL DB) を開く
-var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
+// 現在未使用
+// var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
 // ポスターの総件数
 var ptotal;
@@ -24,7 +25,8 @@ var ptotal;
 $(function() {
 	init();
 
-	initDB();
+	// 現在はWebSQLは使用していない
+	// initDB();
 
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") != null) {
