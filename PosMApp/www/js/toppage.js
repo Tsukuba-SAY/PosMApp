@@ -26,6 +26,7 @@ $(function() {
 	// タブのボタン
 	// ポスターマップ画面ボタン
 	$(".posterMapPageButton").on("click", function() {
+
 		changePage("#posterMapPage");
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");

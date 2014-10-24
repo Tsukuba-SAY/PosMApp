@@ -15,6 +15,17 @@ describe("トップページを表示する", function() {
 	});
 });
 
+describe("タブバーを表示する", function() {
+	it("「マップ」ボタンを押すとポスターマップ画面に遷移する", function() {
+		var nextPage = changePage("#posterMapPage");
+		expect(nextPage).toEqual("#posterMapPage");
+	});
+	it("「リスト」ボタンを押すとポスターマップ画面に遷移する", function() {
+		var nextPage = changePage("#posterListPage");
+		expect(nextPage).toEqual("#posterListPage");
+	});
+});
+
 describe("ポスターの詳細情報を表示する", function() {
 	initDB();
 	beforeEach(function() {
