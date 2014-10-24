@@ -10,12 +10,33 @@ $(function() {
 	// ポスターマップ画面に遷移
 	$("#goToMap").on("touchstart", function() {
 		changePage("#posterMapPage");
+		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 	});
 
 	// リスト画面に遷移
 	$("#goToList").on("touchstart", function() {
 		showposterlist();
 		changePage("#posterListPage");
+		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
+	});
+
+
+	// タブのボタン
+	// ポスターマップ画面ボタン
+	$(".posterMapPageButton").on("click", function() {
+
+		changePage("#posterMapPage");
+		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
+	});
+	// リスト画面ボタン
+	$(".posterListPageButton").on("click", function() {
+		showposterlist();
+		changePage("#posterListPage");
+		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
 	});
 });
 

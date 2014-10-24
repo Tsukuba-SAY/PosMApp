@@ -14,7 +14,8 @@ var test = false;
 var labelmax = 5;
 
 // Local DB (WebSQL DB) を開く
-var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
+// 現在未使用
+// var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
 // ポスターの総件数
 var ptotal;
@@ -24,7 +25,8 @@ var ptotal;
 $(function() {
 	init();
 
-	initDB();
+	// 現在はWebSQLは使用していない
+	// initDB();
 
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") != null) {
@@ -35,7 +37,7 @@ $(function() {
 	// 検索中状態だったら検索にヒットしたポスターを強調表示
 	// FIXME:もう一度検索しているので読み込み時遅くなる
 	if (sessionStorage.getItem("searching") == "true") {
-		document.getElementById("search-title").value = sessionStorage.getItem("searchWord");
+		document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
 		searchByTitle(sessionStorage.getItem("searchWord"));
 	}
 
@@ -90,39 +92,6 @@ $(function() {
 		//resetAllIcons();
 	});
 
-	// タイトルで検索
-	$("#search-title").bind("change", function(e, ui) {
-		if (e.target.value.trim() != "" && e.target.value != null) {
-			
-			// 検索し、強調表示する
-			searchByTitle(e.target.value);
-
-			// 検索中フラグを立てる
-			sessionStorage.setItem("searching", "true");
-			sessionStorage.setItem("searchWord", e.target.value);
-
-		} else {
-			// 検索中フラグを折る
-			sessionStorage.removeItem("searching");
-			sessionStorage.removeItem("searchWord");
-
-			// 各ポスターに対して検索中状態から未検索状態へフラグを変化させる
-			for (var i = 1; i <= ptotal; i++) {
-				// 検索中強調表示ならばただの強調表示に、ヒット状態なら元に戻す
-				if (pflag[i] == "e") {
-					pflag[i] = "t";
-				} else if (pflag[i] == "s") {
-					pflag[i] = "d";
-				}
-			}
-
-			document.getElementById("searchResult").innerHTML = "";
-		}
-
-		showPosterIcons();
-		this.blur();
-	});
-
 	// ラベルを変更する
 	$(".changelabel").on("touchstart", function(e) {
 		// 押されたボタンのidを取得する
@@ -142,7 +111,6 @@ $(function() {
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
 });
-
 
 // グローバル変数の初期化処理
 function init() {
@@ -323,33 +291,21 @@ function searchByTitle(title) {
 	var posterids = new Array();
 	var ltitle = title.toLowerCase();
 
-	//すべて小文字にした検索キーワードと
-	//すべて小文字にした
-	db.transaction(
-		function(tr) {
-			tr.executeSql("SELECT id, LOWER(title) AS ltitle FROM poster WHERE ltitle LIKE ?", ["%"+ltitle+"%"], 
-			function(tr, rs) {
-				for (var i = 0; i < rs.rows.length; i++) {
-					console.log(rs.rows.item(i).id);
-					posterids.push(rs.rows.item(i).id);
-				}
-			}, function(){});
-		},
-		function(err) {
-		},
-		function() {
-			emphasisSearchedPosters(posterids);
-
-			//注意:ここでreturnしてもこのdb.transactionの返り値にはならない
-			//TODO:トランザクションの非同期実行のために
-			//     ここでHTMLを書いているけどなんか解決法がありそう
-			if (posterids.length == 0) {
-				document.getElementById("searchResult").innerHTML = "見つかりませんでした";
-			} else {
-				document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
-			}
+	poster.forEach(function(aPoster) {
+		if (aPoster.title.toLowerCase().indexOf(ltitle) != -1) {
+			posterids.push(aPoster.id);
 		}
-	);
+	});
+
+	emphasisSearchedPosters(posterids);
+
+	if (!test) {
+		if (posterids.length == 0) {
+			document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+		} else {
+			document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
+		}
+	}
 
 	return pflag;
 }
@@ -376,7 +332,9 @@ function emphasisSearchedPosters(posterids) {
 		}
 	});
 
-	showPosterIcons();
+	if (!test) {
+		showPosterIcons();
+	}
 }
 
 
@@ -587,3 +545,40 @@ function getBookmarks() {
 
 	return bookmarkArr;
 }
+
+
+// 検索バーが変更されたとき
+// TODO: jQueryを使うとbindされない原因をつきとめてjQueryに戻す
+function searchChanged(bar) {
+	if (bar.value.trim() != "" && bar.value != null) {
+		
+		// 検索し、強調表示する
+		console.log("search");
+		searchByTitle(bar.value);
+
+		// 検索中フラグを立てる
+		sessionStorage.setItem("searching", "true");
+		sessionStorage.setItem("searchWord", bar.value);
+
+	} else {
+		// 検索中フラグを折る
+		sessionStorage.removeItem("searching");
+		sessionStorage.removeItem("searchWord");
+
+		// 各ポスターに対して検索中状態から未検索状態へフラグを変化させる
+		for (var i = 1; i <= ptotal; i++) {
+			// 検索中強調表示ならばただの強調表示に、ヒット状態なら元に戻す
+			if (pflag[i] == "e") {
+				pflag[i] = "t";
+			} else if (pflag[i] == "s") {
+				pflag[i] = "d";
+			}
+		}
+
+		document.getElementById("searchResult").innerHTML = "";
+	}
+
+	showPosterIcons();
+	bar.blur();
+}
+

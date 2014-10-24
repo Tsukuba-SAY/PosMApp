@@ -15,6 +15,17 @@ describe("トップページを表示する", function() {
 	});
 });
 
+describe("タブバーを表示する", function() {
+	it("「マップ」ボタンを押すとポスターマップ画面に遷移する", function() {
+		var nextPage = changePage("#posterMapPage");
+		expect(nextPage).toEqual("#posterMapPage");
+	});
+	it("「リスト」ボタンを押すとポスターマップ画面に遷移する", function() {
+		var nextPage = changePage("#posterListPage");
+		expect(nextPage).toEqual("#posterListPage");
+	});
+});
+
 describe("ポスターの詳細情報を表示する", function() {
 	initDB();
 	beforeEach(function() {
@@ -568,7 +579,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("システム");
 		});
 
-		waits(200);
+		//waits(200);
 		
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
@@ -590,7 +601,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("ポスター");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -611,7 +622,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("スター");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -632,7 +643,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("Twitter");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -653,7 +664,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("twitter");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -673,7 +684,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("$");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -693,7 +704,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle(" ");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -713,7 +724,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle(null);
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -737,7 +748,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("ポスター");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -760,7 +771,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("ポスター");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
