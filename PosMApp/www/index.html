@@ -75,6 +75,7 @@
 	<!-- ポスターマップ画面 -->
 	<div data-role="page" id="posterMapPage">
 		<!-- タブバー -->
+		<!--
 		<div class="ui-grid-c">
 			<div class="ui-block-a">
 				<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
@@ -89,6 +90,7 @@
 				<a data-role="button" href="" class="ui-disabled">情報</a>
 			</div>			
 		</div>
+		-->
 		<div data-role="header">
 			<input type="search" id="search-bar-title"
 		    	placeholder="タイトルで検索" onchange="searchChanged(this)"/>
@@ -119,66 +121,60 @@
 					</div>
 				</div>
 			</div>
-
 			<!-- ポスターアイコン -->
 			<div id="posters" style="position: absolute;"></div>
+		</div>
+		<!-- タブバー -->
+		<div data-role="footer" data-position="fixed">
+			<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
+			<a class="posterListPageButton" data-role="button" href="#posterListPage">一覧</a>
+			<a data-role="button" href="" class="ui-disabled">ブックマーク</a>
+			<a data-role="button" href="" class="ui-disabled">情報</a>
 		</div>
 	</div>
 
 	<!-- 詳細情報画面 -->
 	<div data-role="page" id="detailPage">
-		<!-- タブバー -->
-		<div class="ui-grid-c">
-			<div class="ui-block-a">
-				<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
-			</div>
-			<div class="ui-block-b">
-				<a class="posterListPageButton" data-role="button" href="#posterListPage">一覧</a>
-			</div>
-			<div class="ui-block-c">
-				<a data-role="button" href="" class="ui-disabled">ブックマーク</a>
-			</div>
-			<div class="ui-block-d">
-				<a data-role="button" href="" class="ui-disabled">情報</a>
-			</div>			
+		<div data-role="content">
+			No. <span id="detail-posterid"></span> [<span id="detail-sessionid"></span>]
+			<h1>
+				<span id="detail-title"></span>
+			</h1>
+			<ul>
+				<li>著者： <span id="detail-authors"></span></li>
+				<li>所属： <span id="detail-authorbelongs"></span></li>
+				<li>チーム名： <span id="detail-authorname"></span></li>
+				<li>コース： <span id="detail-keywords"></span></li>
+			</ul>
+			<h2>概要</h2>
+			<p>
+				<span id="detail-abstract"></span>
+			</p>
+			<a data-role="button" href="#posterMapPage">戻る</a>
 		</div>
-		No. <span id="detail-posterid"></span> [<span id="detail-sessionid"></span>]
-		<h1>
-			<span id="detail-title"></span>
-		</h1>
-		<ul>
-			<li>著者： <span id="detail-authors"></span></li>
-			<li>所属： <span id="detail-authorbelongs"></span></li>
-			<li>チーム名： <span id="detail-authorname"></span></li>
-			<li>コース： <span id="detail-keywords"></span></li>
-		</ul>
-		<h2>概要</h2>
-		<p>
-			<span id="detail-abstract"></span>
-		</p>
-		<a data-role="button" href="#posterMapPage">戻る</a>
+		<!-- タブバー -->
+		<div data-role="footer" data-position="fixed">
+			<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
+			<a class="posterListPageButton" data-role="button" href="#posterListPage">一覧</a>
+			<a data-role="button" href="" class="ui-disabled">ブックマーク</a>
+			<a data-role="button" href="" class="ui-disabled">情報</a>
+		</div>
 	</div>
 
 	<!-- ポスターリスト画面 -->
-	<div data-role="page" id="posterListPage">
-		<!-- タブバー -->
-		<div class="ui-grid-c">
-			<div class="ui-block-a">
-				<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
+	<div data-role="page" id="posterListPage" data-position="fixed">
+		<div data-role="content">
+			<h1>ポスター一覧</h1>
+			<div style="overflow-y:scroll;height:100%;">
+				<table border="1" id="posterlistTableTab"></table>
 			</div>
-			<div class="ui-block-b">
-				<a class="posterListPageButton" data-role="button" href="#posterListPage">一覧</a>
-			</div>
-			<div class="ui-block-c">
-				<a data-role="button" href="" class="ui-disabled">ブックマーク</a>
-			</div>
-			<div class="ui-block-d">
-				<a data-role="button" href="" class="ui-disabled">情報</a>
-			</div>			
 		</div>
-		<h1>ポスター一覧</h1>
-		<div style="overflow-y:scroll;height:100%;">
-			<table border="1" id="posterlistTableTab"></table>
+		<!-- タブバー -->
+		<div data-role="footer" data-position="fixed">
+			<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
+			<a class="posterListPageButton" data-role="button" href="#posterListPage">一覧</a>
+			<a data-role="button" href="" class="ui-disabled">ブックマーク</a>
+			<a data-role="button" href="" class="ui-disabled">情報</a>
 		</div>
 	</div>
 

@@ -30,7 +30,7 @@
 	position: fixed;
 	width: 100%;
 	height: 100px;
-	bottom: 0px;
+	bottom: 50px; /* タブバーの幅 */
 	text-align: left;
 	padding-top: 20px;
 	padding-right: 40px;
@@ -50,7 +50,7 @@
 	width    : 30px;
 	height   : 30px;
 	left     : 0px;
-	bottom   : 95px;
+	bottom   : 145px; /* オフセット+タブバーの幅 */
 }
 
 #detailinfobutton{
@@ -60,7 +60,7 @@
 	right    : 0px;
 	height   : 35px;
 	width    : 35px; 
-	bottom   : 25px;
+	bottom   : 75px; /* オフセット+タブバーの幅 */
 }
 
 /* アイコンラベルの文字列変更ボタン */
