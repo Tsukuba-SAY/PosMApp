@@ -16,6 +16,10 @@ describe("トップページを表示する", function() {
 });
 
 describe("タブバーを表示する", function() {
+	it("「トップ」ボタンを押すとトップページに遷移する", function() {
+		var nextPage = changePage("#topPage");
+		expect(nextPage).toEqual("#topPage");
+	});
 	it("「マップ」ボタンを押すとポスターマップ画面に遷移する", function() {
 		var nextPage = changePage("#posterMapPage");
 		expect(nextPage).toEqual("#posterMapPage");
