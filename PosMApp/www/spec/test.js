@@ -568,7 +568,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("システム");
 		});
 
-		waits(200);
+		//waits(200);
 		
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
@@ -590,7 +590,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("ポスター");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -611,7 +611,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("スター");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -632,7 +632,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("Twitter");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -653,7 +653,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("twitter");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -673,7 +673,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("$");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -693,7 +693,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle(" ");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -713,7 +713,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle(null);
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -737,7 +737,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("ポスター");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})
@@ -760,7 +760,7 @@ describe("タイトルでキーワード検索をする", function() {
 			searchByTitle("ポスター");
 		});
 
-		waits(100);
+		//waits(100);
 		runs(function() {
 			expect(pflag).toEqual(expectFlag);
 		})

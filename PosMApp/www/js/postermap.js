@@ -96,7 +96,6 @@ $(function() {
 			
 			// 検索し、強調表示する
 			console.log("search");
-			alert("search");
 			searchByTitle(e.target.value);
 
 			// 検索中フラグを立てる
@@ -325,33 +324,50 @@ function searchByTitle(title) {
 	var posterids = new Array();
 	var ltitle = title.toLowerCase();
 
-	//すべて小文字にした検索キーワードと
-	//すべて小文字にした
-	db.transaction(
-		function(tr) {
-			tr.executeSql("SELECT id, LOWER(title) AS ltitle FROM poster WHERE ltitle LIKE ?", ["%"+ltitle+"%"], 
-			function(tr, rs) {
-				for (var i = 0; i < rs.rows.length; i++) {
-					console.log(rs.rows.item(i).id);
-					posterids.push(rs.rows.item(i).id);
-				}
-			}, function(){});
-		},
-		function(err) {
-		},
-		function() {
-			emphasisSearchedPosters(posterids);
+	// // すべて小文字にした検索キーワードと
+	// // すべて小文字にした
+	// db.transaction(
+	// 	function(tr) {
+	// 		tr.executeSql("SELECT id, LOWER(title) AS ltitle FROM poster WHERE ltitle LIKE ?", ["%"+ltitle+"%"], 
+	// 		function(tr, rs) {
+	// 			for (var i = 0; i < rs.rows.length; i++) {
+	// 				console.log(rs.rows.item(i).id);
+	// 				posterids.push(rs.rows.item(i).id);
+	// 			}
+	// 		}, function(){});
+	// 	},
+	// 	function(err) {
+	// 	},
+	// 	function() {
+	// 		emphasisSearchedPosters(posterids);
 
-			//注意:ここでreturnしてもこのdb.transactionの返り値にはならない
-			//TODO:トランザクションの非同期実行のために
-			//     ここでHTMLを書いているけどなんか解決法がありそう
-			if (posterids.length == 0) {
-				document.getElementById("searchResult").innerHTML = "見つかりませんでした";
-			} else {
-				document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
-			}
+	// 		//注意:ここでreturnしてもこのdb.transactionの返り値にはならない
+	// 		//TODO:トランザクションの非同期実行のために
+	// 		//     ここでHTMLを書いているけどなんか解決法がありそう
+	// 		if (posterids.length == 0) {
+	// 			document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+	// 		} else {
+	// 			document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
+	// 		}
+	// 	}
+	// );
+
+	//var re = new RegExp(ltitle, "i");
+	poster.forEach(function(aPoster) {
+		if (aPoster.title.toLowerCase().indexOf(ltitle) != -1) {
+			posterids.push(aPoster.id);
 		}
-	);
+	});
+
+	emphasisSearchedPosters(posterids);
+
+	if (!test) {
+		if (posterids.length == 0) {
+			document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+		} else {
+			document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
+		}
+	}
 
 	return pflag;
 }
@@ -378,7 +394,9 @@ function emphasisSearchedPosters(posterids) {
 		}
 	});
 
-	showPosterIcons();
+	if (!test) {
+		showPosterIcons();
+	}
 }
 
 
