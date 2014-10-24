@@ -1,5 +1,6 @@
 function showposterlist(){
 	var str="";
+	document.getElementById("posterlistTableTab").innerHTML = "";
 	//postdataをループする、各ポスターの情報を取り出す
 	for (var i = 0; i < poster.length; i++) {
 		
