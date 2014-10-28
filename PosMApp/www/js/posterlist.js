@@ -22,10 +22,9 @@ function showposterlist(){
 		
 	}
 	if (!test) {
-	//テーブルに配置する
+		//テーブルに配置する
 		document.getElementById("posterlistTableTab").innerHTML = str;
 	}
-	console.log(str);
 
 	return posters;
 }
