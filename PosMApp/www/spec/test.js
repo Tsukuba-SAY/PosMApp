@@ -810,7 +810,7 @@ describe("タイトルでキーワード検索をする", function() {
 		runs(function() {
 			expect(function() {
 				searchByTitle(str);
-				wait(100);
+				//wait(100);
 			}).toThrow();
 			expect(pflag).toEqual(expectFlag);
 		})

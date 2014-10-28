@@ -1,0 +1,1 @@
+script: phantomjs PosMApp/www/js/phantomjs/run-jasmine.js PosMApp/www/spec.html
