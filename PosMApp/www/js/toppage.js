@@ -6,6 +6,7 @@ $(function() {
 	$(".listToDetailBtn").on("click", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(9));
+		sessionStorage.setItem("previousPage", "posterListPage");
 		listToDetail(posterid);
 	});
 
@@ -18,6 +19,7 @@ $(function() {
 
 	// 詳細情報画面を表示する
 	$("#detailinfobutton").on("touchstart", function(e) {
+		sessionStorage.setItem("previousPage", "posterListPage");
 		setDetails();
 		changePage("#detailPage");
 	});
