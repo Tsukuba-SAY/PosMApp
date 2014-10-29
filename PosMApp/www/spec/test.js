@@ -42,7 +42,6 @@ describe("ポスターリストを表示する", function() {
 });
 
 describe("ポスターの詳細情報を表示する", function() {
-	initDB();
 	beforeEach(function() {
 		init();	
 		test = true;
@@ -569,7 +568,6 @@ describe("ポスターの詳細情報を表示する", function() {
 });
 
 describe("タイトルでキーワード検索をする", function() {
-	initDB();
 	beforeEach(function() {
 		init();
 	});
