@@ -6,6 +6,7 @@ $(function() {
 	$(".listToDetailBtn").on("click", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(9));
+		sessionStorage.setItem("previousPage", "posterListPage");
 		listToDetail(posterid);
 	});
 
@@ -18,8 +19,18 @@ $(function() {
 
 	// 詳細情報画面を表示する
 	$("#detailinfobutton").on("touchstart", function(e) {
+		sessionStorage.setItem("previousPage", "posterMapPage");
 		setDetails();
 		changePage("#detailPage");
+	});
+
+	// 詳細情報画面の戻るボタンをおした時の挙動
+	$("#detailBackButton").on("click", function(e) {
+		var prev = sessionStorage.getItem("previousPage");
+		if (prev == null || prev == undefined) {
+			prev = "posterMapPage";
+		}
+		window.location.href = "#" + prev;
 	});
 	
 	// ポスターマップ画面に遷移
