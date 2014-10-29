@@ -1,6 +1,8 @@
 $(function() {
 	setDetails();
 
+	showposterlist();
+
 	// 詳細情報画面を表示する
 	$("#detailinfobutton").on("touchstart", function(e) {
 		setDetails();
@@ -17,7 +19,6 @@ $(function() {
 
 	// リスト画面に遷移
 	$("#goToList").on("touchstart", function() {
-		showposterlist();
 		changePage("#posterListPage");
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
