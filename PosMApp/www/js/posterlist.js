@@ -15,10 +15,12 @@ function showposterlist(){
 		posters["sessionid"].push(poster[i].sessionid);
 		posters["title"].push(poster[i].title);
 		posters["author"].push(getAuthors(i+1));
-		str += "<tr><td><div>ID:" + poster[i].id + "</div>";
-		str += "<div>Sessionid:" + poster[i].sessionid + "</div>";
-		str += "<div>Title:" + poster[i].title + "</div>";
-		str += "<div>Author:" + getAuthors(i+1) + "</div></td></tr>";
+		str += "<tr>"
+		str += "	<td><div>ID:" + poster[i].id + "</div>";
+		str += "	<div>Sessionid:" + poster[i].sessionid + "</div>";
+		str += "	<div>Title:" + poster[i].title + "</div>";
+		str += "	<div>Author:" + getAuthors(i+1) + "</div></td>"
+		str += "</tr>";
 		
 	}
 	if (!test) {
