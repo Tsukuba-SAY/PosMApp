@@ -19,7 +19,10 @@ function showposterlist(){
 		str += "	<td><div>ID:" + poster[i].id + "</div>";
 		str += "	<div>Sessionid:" + poster[i].sessionid + "</div>";
 		str += "	<div>Title:" + poster[i].title + "</div>";
-		str += "	<div>Author:" + getAuthors(i+1) + "</div></td>"
+		str += "	<div>Author:" + getAuthors(i+1) + "</div>";
+		str += '	<table><tr><td><a data-role="button" class="jumpToMapFromList" id="jumpToMapFromListPoster'
+			+ poster[i].id
+			+ '">これどこ？</a></td></tr></table></td>';
 		str += "</tr>";
 		
 	}
