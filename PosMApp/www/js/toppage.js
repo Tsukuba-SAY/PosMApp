@@ -25,6 +25,13 @@ $(function() {
 		$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
 	});
 
+	// 「これどこ？」ボタンを押した時の動作
+	$(".jumpToMapFromList").on("click", function() {
+		var id = $(this).attr("id");
+		var posterid = id.substr(id.indexOf("jumpToMapFromListPoster") + 1);
+		console.log(posterid);
+	});
+
 	// タブのボタン
 	// トップページボタン
 	$(".topPageButton").on("click", function() {
