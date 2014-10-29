@@ -59,6 +59,10 @@ function getKeywords(posterid){
 
 //ポスターリストから詳細情報画面に遷移する
 function listToDetail(posterid){
+	if (posterid < 1 || posterid > poster.length || posterid == null || posterid == undefined) {
+		throw new Exception();
+	}
+
 	//sessionStorageの中に存在している情報の削除
 	removeAllPosterInfo();
 

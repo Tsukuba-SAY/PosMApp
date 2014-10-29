@@ -12,6 +12,7 @@ $(function() {
 
 	//ポスターリスト画面の各「これどこ？」ボタンをクリックする時
 	$(".listToMapBtn").on("click", function(e) {
+		console.log("fire");
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(9));
 		listToMap(posterid);

@@ -941,6 +941,35 @@ describe("ブックマーク機能", function() {
 	});
 });
 
+describe("ポスターリストから詳細情報に遷移する", function() {
+	beforeEach(function() {
+		init();	
+		test = true;
+
+		removeAllPosterInfo();
+	});
+	poster.forEach(function(p) {
+		it(p["id"].toString() + "番のポスターの詳細情報ボタンを押すと、" 
+			+ p["id"].toString() + "番のボタンの詳細情報が表示される", function() {
+			expect(sessionStorage.getItem("posterid")).toBeNull();
+			listToDetail(p["id"]);
+			expect(sessionStorage.getItem("posterid")).toEqual(p["id"].toString());
+		});
+	});
+	it("0番のポスターの詳細情報ボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToDetail(0);
+		}).toThrow();
+	});
+	it("ポスターの総数+1番のポスターの詳細情報ボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToDetail(poster.length + 1);
+		}).toThrow();
+	});
+});
+
 function getAuthors(posterid){
 
 	var atotal = author.length;
