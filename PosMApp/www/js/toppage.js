@@ -1,5 +1,20 @@
 $(function() {
 	setDetails();
+	showposterlist();
+
+	//ポスターリスト画面の各「詳細情報」ボタンをクリックする時
+	$(".listToDetailBtn").on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(9));
+		listToDetail(posterid);
+	});
+
+	//ポスターリスト画面の各「これどこ？」ボタンをクリックする時
+	$(".listToMapBtn").on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(9));
+		listToMap(posterid);
+	});
 
 	// 詳細情報画面を表示する
 	$("#detailinfobutton").on("touchstart", function(e) {
@@ -17,7 +32,6 @@ $(function() {
 
 	// リスト画面に遷移
 	$("#goToList").on("touchstart", function() {
-		showposterlist();
 		changePage("#posterListPage");
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
@@ -43,7 +57,6 @@ $(function() {
 	});
 	// リスト画面ボタン
 	$(".posterListPageButton").on("click", function() {
-		showposterlist();
 		changePage("#posterListPage");
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
