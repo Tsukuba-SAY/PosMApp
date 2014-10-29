@@ -163,28 +163,30 @@ function setLabel(id, str) {
 
 // 現在のフラグを元にポスターのアイコンを表示する
 function showPosterIcons() {
-	var imageSrc;
-	for (var i = 1; i <= ptotal; i++) {
-		switch (pflag[i]) {
-			case "d":
-				imageSrc = "img/dpic.png";
-				break;
-			case "t":
-				imageSrc = "img/tpic.png";
-				break;
-			case "s":
-				imageSrc = "img/spic.png";
-				break;
-			case "e":
-				imageSrc = "img/epic.png";
-				break;
-			default:
-				break;
+	if(!test) {
+		var imageSrc;
+		for (var i = 1; i <= ptotal; i++) {
+			switch (pflag[i]) {
+				case "d":
+					imageSrc = "img/dpic.png";
+					break;
+				case "t":
+					imageSrc = "img/tpic.png";
+					break;
+				case "s":
+					imageSrc = "img/spic.png";
+					break;
+				case "e":
+					imageSrc = "img/epic.png";
+					break;
+				default:
+					break;
+			}
+			document.getElementById("icon" + i).src = imageSrc;
 		}
-		document.getElementById("icon" + i).src = imageSrc;
-	}
 
-	console.log(pflag);
+		console.log(pflag);
+	}
 }
 
 
