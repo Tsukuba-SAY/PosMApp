@@ -38,7 +38,6 @@ $(function() {
 		$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
 	});
 
-
 	// タブのボタン
 	// トップページボタン
 	$(".topPageButton").on("click", function() {
