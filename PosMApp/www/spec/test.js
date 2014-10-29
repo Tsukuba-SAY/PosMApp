@@ -950,7 +950,7 @@ describe("ポスターリストから詳細情報に遷移する", function() {
 	});
 	poster.forEach(function(p) {
 		it(p["id"].toString() + "番のポスターの詳細情報ボタンを押すと、" 
-			+ p["id"].toString() + "番のボタンの詳細情報が表示される", function() {
+			+ p["id"].toString() + "番のポスターの詳細情報が表示される", function() {
 			expect(sessionStorage.getItem("posterid")).toBeNull();
 			listToDetail(p["id"]);
 			expect(sessionStorage.getItem("posterid")).toEqual(p["id"].toString());
@@ -966,6 +966,35 @@ describe("ポスターリストから詳細情報に遷移する", function() {
 		expect(sessionStorage.getItem("posterid")).toBeNull();
 		expect(function() {
 			listToDetail(poster.length + 1);
+		}).toThrow();
+	});
+});
+
+describe("ポスターリストからポスターマップに遷移する", function() {
+	beforeEach(function() {
+		init();
+		test = true;
+
+		removeAllPosterInfo();
+	});
+	poster.forEach(function(p) {
+		it(p["id"].toString() + "番のポスターのマップボタンを押すと、" 
+			+ p["id"].toString() + "番のポスターがマップ上で強調表示される", function() {
+			expect(sessionStorage.getItem("posterid")).toBeNull();
+			listToMap(p["id"]);
+			expect(sessionStorage.getItem("posterid")).toEqual(p["id"].toString());
+		});
+	});
+	it("0番のポスターのマップボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToMap(0);
+		}).toThrow();
+	});
+	it("ポスターの総数+1番のポスターのマップボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToMap(poster.length + 1);
 		}).toThrow();
 	});
 });
