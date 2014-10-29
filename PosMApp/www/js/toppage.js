@@ -3,14 +3,14 @@ $(function() {
 	showposterlist();
 
 	//ポスターリスト画面の各「詳細情報」ボタンをクリックする時
-	$(".listToDetailBtn").on("touchstart", function(e) {
+	$(".listToDetailBtn").on("click", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(9));
 		listToDetail(posterid);
 	});
 
 	//ポスターリスト画面の各「これどこ？」ボタンをクリックする時
-	$(".listToMapBtn").on("touchstart", function(e) {
+	$(".listToMapBtn").on("click", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(9));
 		listToMap(posterid);
