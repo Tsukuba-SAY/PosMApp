@@ -1,5 +1,5 @@
 function showposterlist(){
-	var str="";
+	var str = "";
 	var posters = new Array();
 	posters["id"] = new Array();
 	posters["sessionid"] = new Array();
@@ -81,12 +81,12 @@ function listToDetail(posterid){
 		}
 	}
 
-	//画面遷移ファクションを呼び出す、がめんを遷移する
+	//画面遷移ファクションを呼び出す
 	setDetails();
 	changePage("#detailPage");
 }
 
-//ポスターリストから地図画面に遷移する
+//ポスターリストからマップ画面に遷移する
 function listToMap(posterid){
 	if (posterid < 1 || posterid > poster.length || posterid == null || posterid == undefined) {
 		throw new Exception();
