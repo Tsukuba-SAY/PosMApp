@@ -11,7 +11,7 @@ $(function() {
 			listToMap(posterid);
 		});
 	}
-	$("listToMapBtn").jumpToMapPage();
+	$(".listToMapBtn").jumpToMapPage();
 
 	//ポスターリスト画面の各「詳細情報」ボタンをクリックする時
 	$.fn.jumpToDetailPage = function() {
@@ -22,7 +22,7 @@ $(function() {
 			listToDetail(posterid);
 		});
 	}
-	$("listToDetailBtn").jumpToDetailPage();
+	$(".listToDetailBtn").jumpToDetailPage();
 
 	// 詳細情報画面の戻るボタンをおした時の挙動
 	$.fn.backToPreviousPage = function() {
@@ -34,7 +34,7 @@ $(function() {
 			window.location.href = "#" + prev;
 		});
 	}
-	$("detailBackButton").backToPreviousPage();
+	$("#detailBackButton").backToPreviousPage();
 	
 	// ポスターマップ画面に遷移
 	$.fn.goToMapPage = function(ev) {
