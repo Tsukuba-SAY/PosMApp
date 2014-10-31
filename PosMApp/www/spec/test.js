@@ -43,18 +43,6 @@ describe("タブバー", function() {
 	});
 });
 
-describe("ポスターリスト", function() {
-	beforeEach(function() {
-		test = true;
-	});
-	it("正しい順番（ID順）でポスターの一覧が表示されている", function() {
-		$testdiv = $("<div>");
-		var posters = $testdiv.showPosterList();
-		var expectIds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
-		expect(expectIds).toEqual(posters["id"]);
-	});
-});
-
 describe("ポスターマップ", function() {
 	beforeEach(function() {
 		init();	
@@ -582,29 +570,36 @@ describe("ポスターマップ", function() {
 });
 
 describe("詳細情報", function() {
-	it("マップ画面から1番のポスターの詳細情報を表示し、戻るボタンを押すとマップ画面に戻る", function() {
+	it("マップ画面から1番のポスターの詳細情報画面を表示し、戻るボタンを押すとマップ画面に戻る", function() {
 		var $page = $("<div>");
 
 		$page.goToTopPage("touchstart");
 		$page.trigger("touchstart");
-		console.log(window.location.hash);
 
 		$page.goToMapPage("touchstart");
 		$page.trigger("touchstart");
-		console.log(window.location.hash);
 		expect(window.location.hash).toEqual("#posterMapPage");
 
 		touchPoster(1);
 		var $detailbtn = $("<div>");
 		$detailbtn.goToDetailPage("touchstart");
 		$detailbtn.trigger("touchstart");
-		console.log(window.location.hash);
 		expect(window.location.hash).toEqual("#detailPage");
 
 		var $backbtn = $("<div>");
 		$backbtn.backToPreviousPage();
 		$backbtn.trigger("touchstart");
-		console.log(window.location.hash);
+		expect(window.location.hash).toEqual("#posterMapPage");
+	});
+	it("マップ画面を経由せず直接詳細情報画面を表示して戻るボタンを押すとマップ画面に戻る", function() {
+		var $page = $("<div>");
+		$page.goToDetailPage("touchstart");
+		$page.trigger("touchstart");
+		expect(window.location.hash).toEqual("#detailPage");
+
+		var $backbtn = $("<div>");
+		$backbtn.backToPreviousPage();
+		$backbtn.trigger("touchstart");
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 });
@@ -983,13 +978,21 @@ describe("ブックマーク機能", function() {
 	});
 });
 
-describe("ポスターリストから詳細情報に遷移する", function() {
+describe("ポスターリスト", function() {
 	beforeEach(function() {
 		init();	
 		test = true;
 
 		removeAllPosterInfo();
 	});
+
+	it("正しい順番（ID順）でポスターの一覧が表示されている", function() {
+		$testdiv = $("<div>");
+		var posters = $testdiv.showPosterList();
+		var expectIds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
+		expect(expectIds).toEqual(posters["id"]);
+	});
+
 	poster.forEach(function(p) {
 		it(p["id"].toString() + "番のポスターの詳細情報ボタンを押すと、" 
 			+ p["id"].toString() + "番のポスターの詳細情報が表示される", function() {
@@ -1010,15 +1013,7 @@ describe("ポスターリストから詳細情報に遷移する", function() {
 			listToDetail(poster.length + 1);
 		}).toThrow();
 	});
-});
 
-describe("ポスターリストからポスターマップに遷移する", function() {
-	beforeEach(function() {
-		init();
-		test = true;
-
-		removeAllPosterInfo();
-	});
 	poster.forEach(function(p) {
 		it(p["id"].toString() + "番のポスターのマップボタンを押すと、" 
 			+ p["id"].toString() + "番のポスターがマップ上で強調表示される", function() {

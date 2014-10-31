@@ -1,22 +1,3 @@
-//ポスターリスト画面の各「これどこ？」ボタンをクリックする時
-$.fn.jumpToMapPage = function() {
-	$(this).on("touchstart", function(e) {
-		// ポスターのIDを取得する
-		var posterid = Number(e.target.id.substring(9));
-		listToMap(posterid);
-	});
-}
-
-//ポスターリスト画面の各「詳細情報」ボタンをクリックする時
-$.fn.jumpToDetailPage = function() {
-	$(this).on("touchstart", function(e) {
-		// ポスターのIDを取得する
-		var posterid = Number(e.target.id.substring(9));
-		sessionStorage.setItem("previousPage", "posterListPage");
-		listToDetail(posterid);
-	});
-}
-
 // 詳細情報画面の戻るボタンをおした時の挙動
 $.fn.backToPreviousPage = function() {
 	$(this).on("touchstart", function(e) {

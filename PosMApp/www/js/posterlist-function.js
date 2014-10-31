@@ -1,3 +1,4 @@
+// ポスターの一覧を表示する
 $.fn.showPosterList = function() {
 	var posters = new Array();
 	posters["id"] = new Array();
@@ -28,7 +29,27 @@ $.fn.showPosterList = function() {
 	return posters;
 }
 
-//ポスターの発表者を獲得する
+//ポスターリスト画面の各「これどこ？」ボタンをクリックする時
+$.fn.jumpToMapPage = function() {
+	$(this).on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(9));
+		listToMap(posterid);
+	});
+}
+
+//ポスターリスト画面の各「詳細情報」ボタンをクリックする時
+$.fn.jumpToDetailPage = function() {
+	$(this).on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(9));
+		sessionStorage.setItem("previousPage", "posterListPage");
+		listToDetail(posterid);
+	});
+}
+
+
+//ポスターの発表者を取得する
 function getAuthors(posterid){
 	var atotal = author.length;
 	var authorlist = "";
@@ -42,7 +63,7 @@ function getAuthors(posterid){
 	return authorlist;
 }
 
-//ポスターのキーワードを獲得する
+//ポスターのキーワードを取得する
 function getKeywords(posterid){
 	var ktotal = keyword.length;
 	var keywordlist = "";
