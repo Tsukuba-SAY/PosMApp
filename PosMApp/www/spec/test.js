@@ -1,37 +1,45 @@
 describe("変数の確認", function() {
 	it("posterdata.jsでposterが宣言されている", function() {
+		expect(poster).toBeDefined();
+	});
+	it("posterの長さが14である", function() {
 		expect(poster.length).toEqual(14);
 	});
 });
 
 describe("トップページを表示する", function() {
 	it("トップページからポスターマップ画面に遷移できる", function() {
-		var nextPage = changePage("#posterMapPage");
-		expect(nextPage).toEqual("#posterMapPage");
+		var $testdiv = $("<div>");
+		$testdiv.goToMapPage("click");
+		$testdiv.click();
+		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("トップページからポスターリスト画面に遷移できる", function() {
-		var nextPage = changePage("#posterListPage");
-		expect(nextPage).toEqual("#posterListPage");
+		var $testdiv = $("<div>");
+		$testdiv.goToListPage("click");
+		$testdiv.click();
+		expect(window.location.hash).toEqual("#posterListPage");
 	});
 });
 
 describe("タブバーを表示する", function() {
 	it("「トップ」ボタンを押すとトップページに遷移する", function() {
-		// var nextPage = changePage("#topPage");
-		// expect(nextPage).toEqual("#topPage");
-
 		var $testdiv = $("<div>");
 		var nextPage = $testdiv.goToTopPage("click");
 		$testdiv.click();
 		expect(nextPage).toEqual("#topPage");
 	});
 	it("「マップ」ボタンを押すとポスターマップ画面に遷移する", function() {
-		var nextPage = changePage("#posterMapPage");
-		expect(nextPage).toEqual("#posterMapPage");
+		var $testdiv = $("<div>");
+		$testdiv.goToMapPage("click");
+		$testdiv.click();
+		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("「リスト」ボタンを押すとポスターマップ画面に遷移する", function() {
-		var nextPage = changePage("#posterListPage");
-		expect(nextPage).toEqual("#posterListPage");
+		var $testdiv = $("<div>");
+		$testdiv.goToListPage("click");
+		$testdiv.click();
+		expect(window.location.hash).toEqual("#posterListPage");
 	});
 });
 
@@ -41,7 +49,7 @@ describe("ポスターリストを表示する", function() {
 	});
 	it("正しい順番（ID順）でポスターの一覧が表示されている", function() {
 		var expectIds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
-		var posters = showposterlist();
+		var posters = showPosterList();
 		expect(expectIds).toEqual(posters["id"]);
 	});
 });

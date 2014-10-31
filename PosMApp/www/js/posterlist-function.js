@@ -1,4 +1,4 @@
-function showposterlist(){
+function showPosterList(){
 	var str = "";
 	var posters = new Array();
 	posters["id"] = new Array();
