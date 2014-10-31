@@ -790,27 +790,56 @@ describe("ラベルの表示切り替え機能", function() {
 	it("「ID」ボタンを押すとラベルがIDに切り替わる", function() {
 		var labels = changeLabel("id");
 		var testlabel = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
-		expect(labels).toEqual(testlabel);
 
+		$testbtn = $("<div>");
+		$testbtn.attr("id", "label-id");
+		$testbtn.changeLabel();
+		$testbtn.trigger("touchstart");
+
+		expect(labels).toEqual(testlabel);
 	});
 	it("「セッションID」ボタンを押すとラベルがセッションIDに切り替わる", function() {
 		var labels = changeLabel("sessionid");
 		var testlabel = ["S01","S02","S03","S04","S05","S06","S07","S08","S09","SIT01","SIT02","SIT03","SIT04","SIT05"];
+
+		$testbtn = $("<div>");
+		$testbtn.attr("id", "label-sessionid");
+		$testbtn.changeLabel();
+		$testbtn.trigger("touchstart");
+
 		expect(labels).toEqual(testlabel);
 	});
 	it("「タイトル」ボタンを押すとラベルがタイトルに切り替わる", function() {
 		var labels = changeLabel("title");
 		var testlabel = ["防災・避難...","画像リプラ...","ハッシュタ...","ワインマッ...","コロコロジ...","中古教科書...","地図を用い...","予定や天候...","iBeac...","600人規...","テニススク...","施設内での...","スマートフ...","小規模グル..."];
+		
+		$testbtn = $("<div>");
+		$testbtn.attr("id", "label-title");
+		$testbtn.changeLabel();
+		$testbtn.trigger("touchstart");
+
 		expect(labels).toEqual(testlabel);	
 	});
 	it("「チーム名」ボタンを押すとラベルがチーム名に切り替わる", function() {
 		var labels = changeLabel("authorname");
 		var testlabel = ["OU-LA...","_:(*'...","チームNo...","Primt...","コロジャー","りばて","ef","おちゃねこ","Rabbi...","S.A.Y...","TOMs","TKS","SAG-A...","Book-..."];
+		
+		$testbtn = $("<div>");
+		$testbtn.attr("id", "label-authorname");
+		$testbtn.changeLabel();
+		$testbtn.trigger("touchstart");
+
 		expect(labels).toEqual(testlabel);
 	});
 	it("「大学名」ボタンを押すとラベルが大学名に切り替わる", function() {
 		var labels = changeLabel("authorbelongs");
 		var testlabel = ["千葉大学","筑波大学","筑波大学","筑波大学","筑波大学,...","東京理科大...","愛媛大学","お茶の水女...","茨城大学","筑波大学","筑波大学","筑波大学","筑波大学","筑波大学"];
+		
+		$testbtn = $("<div>");
+		$testbtn.attr("id", "label-authorbelongs");
+		$testbtn.changeLabel();
+		$testbtn.trigger("touchstart");
+
 		expect(labels).toEqual(testlabel);
 	});
 });
