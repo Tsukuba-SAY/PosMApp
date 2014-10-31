@@ -20,6 +20,22 @@ var labelmax = 5;
 // ポスターの総件数
 var ptotal;
 
+
+// グローバル変数の初期化処理
+function initPosterMap() {
+
+	// ポスターの件数をセットする
+	ptotal = poster.length;
+
+	// pflagを初期化
+	// ポスター件数+1なのはpflagの添字をポスター番号と対応させるため。pflag[0]はnullとしている
+	pflag = new Array(ptotal + 1);
+	pflag[0] = null;
+	for (var i = 1; i <= ptotal; i++) {
+		pflag[i] = "d";
+	}
+}
+
 // 詳細情報画面を表示する
 $.fn.goToDetailPage = function(ev) {
 	$(this).on(ev, function(e) {
@@ -30,7 +46,7 @@ $.fn.goToDetailPage = function(ev) {
 }
 
 // 各ポスターアイコンのタッチイベント
-$.fn.fireTouchPoster = function() {
+$.fn.touchPoster = function() {
 	$(this).on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(4));
@@ -53,7 +69,7 @@ $.fn.closeBasicInfo = function() {
 }
 
 // ラベルを変更する
-$.fn.fireChangeLabel = function() {
+$.fn.changeLabel = function() {
 	$(this).on("touchstart", function(e) {
 		// 押されたボタンのidを取得する
 		var id = $(this).attr("id");
@@ -63,29 +79,13 @@ $.fn.fireChangeLabel = function() {
 }
 
 // ブックマークスターのタッチイベント
-$.fn.fireTouchBookmark = function() {
+$.fn.touchBookmark = function() {
 	$(this).on("touchstart", function(e) {
 		var posterid = parseInt(sessionStorage.getItem("posterid"));
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
 		touchBookmark(posterid, bookmarkIcon);
 	});	
 }
-
-// グローバル変数の初期化処理
-function init() {
-
-	// ポスターの件数をセットする
-	ptotal = poster.length;
-
-	// pflagを初期化
-	// ポスター件数+1なのはpflagの添字をポスター番号と対応させるため。pflag[0]はnullとしている
-	pflag = new Array(ptotal + 1);
-	pflag[0] = null;
-	for (var i = 1; i <= ptotal; i++) {
-		pflag[i] = "d";
-	}
-}
-
 
 // ラベルを変更する
 function changeLabel(column) {

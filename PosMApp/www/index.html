@@ -10,27 +10,24 @@
 	<link rel="stylesheet" type="text/css" href="css/icon.css" />
 	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
 
-	<script type="text/javascript" charset="utf-8" src="js/lib/jquery-2.1.1.min.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.mobile-1.4.2.min.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/toppage.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/toppage-function.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/postermap.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/postermap-function.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/posterlist.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/posterlist-function.js">
-	</script>
-
 	<!-- DB用ポスターデータ -->
 	<script type="text/javascript" charset="utf-8" src="js/posterdata.js">
 	</script>
 
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery-2.1.1.min.js">
+	</script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.mobile-1.4.2.min.js">
+	</script>
+
+	<script type="text/javascript" charset="utf-8" src="js/toppage-function.js">
+	</script>
+	<script type="text/javascript" charset="utf-8" src="js/postermap-function.js">
+	</script>
+	<script type="text/javascript" charset="utf-8" src="js/posterlist-function.js">
+	</script>
+
+	<script type="text/javascript" charset="utf-8" src="js/index.js">
+	</script>
 </head>
 
 <body>
@@ -120,8 +117,10 @@
 				<div style="position: relative;">
 					<div id="basicinfopanel" style="display:none;">
 						<div id="basicinfo"></div>
+						<!-- ブックマークボタン -->
 						<!-- アイコンの切り替えはpostermap.jsで行う -->
 						<img id="bookmarkbutton"></img>
+						<!-- 詳細情報ボタン -->
 						<img id="detailinfobutton" src="img/detail.png"></img>
 					</div>
 				</div>
@@ -173,7 +172,8 @@
 		<div data-role="content">
 			<h1>ポスター一覧</h1>
 			<div style="overflow:auto; height:100%;">
-				<table border="1" rules="rows" id="posterlistTableTab"></table>
+				<!-- ポスターリスト -->
+				<div id="posterList"></div>
 			</div>
 		</div>
 		<!-- タブバー -->

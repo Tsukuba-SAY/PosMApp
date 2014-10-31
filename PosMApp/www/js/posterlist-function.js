@@ -1,14 +1,13 @@
-function showposterlist(){
-	var str = "";
+// ポスターの一覧を表示する
+$.fn.showPosterList = function() {
 	var posters = new Array();
 	posters["id"] = new Array();
 	posters["sessionid"] = new Array();
 	posters["title"] = new Array();
 	posters["author"] = new Array();
 
-	if (!test) {
-		document.getElementById("posterlistTableTab").innerHTML = "";
-	}
+	var str = "";
+	str += '<table border="1" rules="rows">';
 	//postdataをループする、各ポスターの情報を取り出す
 	for (var i = 0; i < poster.length; i++) {
 		posters["id"].push(poster[i].id.toString());
@@ -19,20 +18,37 @@ function showposterlist(){
 		str += "<div>Sessionid:" + poster[i].sessionid + "</div>";
 		str += "<div>Title:" + poster[i].title + "</div>";
 		str += "<div>Author:" + getAuthors(i+1) + "</div></td>";
-		str += "<td><div><img class = 'listToDetailBtn' id='listToMap"+poster[i].id.toString()+"' src='img/detailinfo.png' style='zoom: 10%;'></img></div>";
-		str += "<div><img class = 'listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 15%;'></img></div>";
+		str += "<td><div><img class='listToDetailBtn' id='listToMap"+poster[i].id.toString()+"' src='img/detailinfo.png' style='zoom: 10%;'></img></div>";
+		str += "<div><img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 15%;'></img></div>";
 		//str += '<table><tr><td><a data-role = "button" class = "listToMapBtn" id = "listToMap' + poster[i].id.toString() + '">これどこ？</a></td><td><a data-role = "button" class = "listToDetailBtn" id = "listToMap' + poster[i].id.toString() + '">詳細情報</a></td></tr></table></td></tr>';
-		
 	}
-	if (!test) {
-		//テーブルに配置する
-		document.getElementById("posterlistTableTab").innerHTML = str;
-	}
+	str += '</table>'
+
+	$(this).html(str);
 
 	return posters;
 }
 
-//ポスターの発表者を獲得する
+//ポスターリスト画面の各「詳細情報」ボタンをクリックする時
+$.fn.jumpToDetailPage = function() {
+	$(this).on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(9));
+		sessionStorage.setItem("previousPage", "posterListPage");
+		listToDetail(posterid);
+	});
+}
+
+//ポスターリスト画面の各「これどこ？」ボタンをクリックする時
+$.fn.jumpToMapPage = function() {
+	$(this).on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(9));
+		listToMap(posterid);
+	});
+}
+
+//ポスターの発表者を取得する
 function getAuthors(posterid){
 	var atotal = author.length;
 	var authorlist = "";
@@ -46,7 +62,7 @@ function getAuthors(posterid){
 	return authorlist;
 }
 
-//ポスターのキーワードを獲得する
+//ポスターのキーワードを取得する
 function getKeywords(posterid){
 	var ktotal = keyword.length;
 	var keywordlist = "";
