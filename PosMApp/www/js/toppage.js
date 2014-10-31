@@ -1,6 +1,6 @@
 $(function() {
 	setDetails();
-	showposterlist();
+	$("#posterList").showPosterList();
 
 	// トップページ
 	$("#goToMap").goToMapPage("touchstart");

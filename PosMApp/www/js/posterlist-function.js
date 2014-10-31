@@ -1,14 +1,12 @@
-function showPosterList(){
-	var str = "";
+$.fn.showPosterList = function() {
 	var posters = new Array();
 	posters["id"] = new Array();
 	posters["sessionid"] = new Array();
 	posters["title"] = new Array();
 	posters["author"] = new Array();
 
-	if (!test) {
-		document.getElementById("posterlistTableTab").innerHTML = "";
-	}
+	var str = "";
+	str += '<table border="1" rules="rows">';
 	//postdataをループする、各ポスターの情報を取り出す
 	for (var i = 0; i < poster.length; i++) {
 		posters["id"].push(poster[i].id.toString());
@@ -24,10 +22,9 @@ function showPosterList(){
 		//str += '<table><tr><td><a data-role = "button" class = "listToMapBtn" id = "listToMap' + poster[i].id.toString() + '">これどこ？</a></td><td><a data-role = "button" class = "listToDetailBtn" id = "listToMap' + poster[i].id.toString() + '">詳細情報</a></td></tr></table></td></tr>';
 		
 	}
-	if (!test) {
-		//テーブルに配置する
-		document.getElementById("posterlistTableTab").innerHTML = str;
-	}
+	str += '</table>'
+
+	$(this).html(str);
 
 	return posters;
 }
