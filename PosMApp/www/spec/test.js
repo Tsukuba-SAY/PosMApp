@@ -48,8 +48,10 @@ describe("ポスターリストを表示する", function() {
 		test = true;
 	});
 	it("正しい順番（ID順）でポスターの一覧が表示されている", function() {
+		$testdiv = $("<div>");
+		var posters = $testdiv.showPosterList();
+
 		var expectIds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
-		var posters = showPosterList();
 		expect(expectIds).toEqual(posters["id"]);
 	});
 });
