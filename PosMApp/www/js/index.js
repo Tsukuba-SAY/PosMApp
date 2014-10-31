@@ -1,7 +1,7 @@
 //HTMLが呼ばれた時の初期化処理
 $(function() {
 
-	init();
+	initPosterMap();
 
 	// 現在はWebSQLは使用していない
 	// initDB();

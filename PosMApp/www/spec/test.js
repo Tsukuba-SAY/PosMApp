@@ -45,10 +45,23 @@ describe("タブバー", function() {
 
 describe("ポスターマップ", function() {
 	beforeEach(function() {
-		init();	
+		initPosterMap();	
 		test = true;
 	});
 
+	it("基本情報に関して、開いた状態でタップすると閉じる", function() {
+		var $bpanel = $("<div>");
+		$bpanel.closeBasicInfo();
+		$bpanel.trigger("touchstart");
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(sessionStorage.getItem("sessionid")).toBeNull();
+		expect(sessionStorage.getItem("title")).toBeNull();
+		expect(sessionStorage.getItem("abstract")).toBeNull();
+		expect(sessionStorage.getItem("authorname")).toBeNull();
+		expect(sessionStorage.getItem("authorbelongs")).toBeNull();
+		expect(sessionStorage.getItem("authors")).toBeNull();
+		expect(sessionStorage.getItem("keywords")).toBeNull();
+	});
 	it("デフォルトの状態で1番目のポスターをタップすると1番目の情報が取得できる", function() {
 		
 		//var ptotal=poster.length;
@@ -605,7 +618,7 @@ describe("詳細情報", function() {
 
 describe("キーワード検索（タイトル）", function() {
 	beforeEach(function() {
-		init();
+		initPosterMap();
 	});
 
 	it("「システム」で検索すると1,6,10,11,12,13番のポスターがヒットする", function() {
@@ -862,7 +875,7 @@ describe("テスト用のファンクションのテスト", function() {
 
 describe("ラベルの表示切り替え機能", function() {
 	beforeEach(function() {
-		init();	
+		initPosterMap();	
 		test = true;
 	});
 	it("「ID」ボタンを押すとラベルがIDに切り替わる", function() {
@@ -895,7 +908,7 @@ describe("ラベルの表示切り替え機能", function() {
 
 describe("ブックマーク機能", function() {
 	beforeEach(function() {
-		init();	
+		initPosterMap();	
 		test = true;
 
 		localStorage.setItem("bookmarks", "");
@@ -979,7 +992,7 @@ describe("ブックマーク機能", function() {
 
 describe("ポスターリスト", function() {
 	beforeEach(function() {
-		init();	
+		initPosterMap();	
 		test = true;
 
 		removeAllPosterInfo();
@@ -996,7 +1009,7 @@ describe("ポスターリスト", function() {
 		it(p["id"].toString() + "番のポスターの詳細情報ボタンを押すと、" 
 			+ p["id"].toString() + "番のポスターの詳細情報が表示される", function() {
 			expect(sessionStorage.getItem("posterid")).toBeNull();
-			
+
 
 			listToDetail(p["id"]);
 			expect(sessionStorage.getItem("posterid")).toEqual(p["id"].toString());

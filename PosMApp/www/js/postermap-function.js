@@ -20,6 +20,22 @@ var labelmax = 5;
 // ポスターの総件数
 var ptotal;
 
+
+// グローバル変数の初期化処理
+function initPosterMap() {
+
+	// ポスターの件数をセットする
+	ptotal = poster.length;
+
+	// pflagを初期化
+	// ポスター件数+1なのはpflagの添字をポスター番号と対応させるため。pflag[0]はnullとしている
+	pflag = new Array(ptotal + 1);
+	pflag[0] = null;
+	for (var i = 1; i <= ptotal; i++) {
+		pflag[i] = "d";
+	}
+}
+
 // 詳細情報画面を表示する
 $.fn.goToDetailPage = function(ev) {
 	$(this).on(ev, function(e) {
@@ -70,22 +86,6 @@ $.fn.fireTouchBookmark = function() {
 		touchBookmark(posterid, bookmarkIcon);
 	});	
 }
-
-// グローバル変数の初期化処理
-function init() {
-
-	// ポスターの件数をセットする
-	ptotal = poster.length;
-
-	// pflagを初期化
-	// ポスター件数+1なのはpflagの添字をポスター番号と対応させるため。pflag[0]はnullとしている
-	pflag = new Array(ptotal + 1);
-	pflag[0] = null;
-	for (var i = 1; i <= ptotal; i++) {
-		pflag[i] = "d";
-	}
-}
-
 
 // ラベルを変更する
 function changeLabel(column) {
