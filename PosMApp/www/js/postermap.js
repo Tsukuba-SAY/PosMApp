@@ -50,39 +50,20 @@ $(function() {
 	// マップ上にブックマークスターをつける
 	showBookmarkIcons();
 
+	// 詳細情報画面を表示する
+	$("#detailinfobutton").goToDetailPage("touchstart");
+
 	// 各ポスターアイコンのタッチイベント
-	$(".postericon").on("touchstart", function(e) {
-		// ポスターのIDを取得する
-		var posterid = Number(e.target.id.substring(4));
+	$(".postericon").fireTouchPoster();
 
-		var nextFlag = touchPoster(posterid);
-
-		pflag[posterid] = nextFlag;
-		showPosterIcons();
-	});
-
-	// 基本情報画面の閉じるボタンを押す
-	$("#basicinfo").on("touchstart", function(e) {
-		changeBasicInfoPanel(false);
-		unselectPoster();
-		showPosterIcons();
-		//resetAllIcons();
-	});
+	// 基本情報画面を閉じる
+	$("#basicinfo").closeBasicInfo();
 
 	// ラベルを変更する
-	$(".changelabel").on("touchstart", function(e) {
-		// 押されたボタンのidを取得する
-		var id = $(this).attr("id");
-		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
-		changeLabel(id.substr(id.indexOf("-") + 1));
-	})
+	$(".changelabel").fireChangeLabel();
 
 	// ブックマークスターのタッチイベント
-	$("#bookmarkbutton").on("touchstart", function(e) {
-		var posterid = parseInt(sessionStorage.getItem("posterid"));
-		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		touchBookmark(posterid, bookmarkIcon);
-	});
+	$("#bookmarkbutton").fireTouchBookmark();
 
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい

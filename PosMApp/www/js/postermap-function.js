@@ -20,7 +20,57 @@ var labelmax = 5;
 // ポスターの総件数
 var ptotal;
 
+// 詳細情報画面を表示する
+$.fn.goToDetailPage = function(ev) {
+	$(this).on(ev, function(e) {
+		sessionStorage.setItem("previousPage", "posterMapPage");
+		setDetails();
+		changePage("#detailPage");
+	});
+}
 
+// 各ポスターアイコンのタッチイベント
+$.fn.fireTouchPoster = function() {
+	$(this).on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(4));
+
+		var nextFlag = touchPoster(posterid);
+
+		pflag[posterid] = nextFlag;
+		showPosterIcons();
+	});
+}
+
+// 基本情報画面を閉じる
+$.fn.closeBasicInfo = function() {
+	$(this).on("touchstart", function(e) {
+		changeBasicInfoPanel(false);
+		unselectPoster();
+		showPosterIcons();
+		//resetAllIcons();
+	});	
+}
+
+// ラベルを変更する
+$.fn.fireChangeLabel = function() {
+	$(this).on("touchstart", function(e) {
+		// 押されたボタンのidを取得する
+		var id = $(this).attr("id");
+		console.log("hogehoge");
+		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
+		changeLabel(id.substr(id.indexOf("-") + 1));
+	});
+}
+
+// ブックマークスターのタッチイベント
+$.fn.fireTouchBookmark = function() {
+	$(this).on("touchstart", function(e) {
+		var posterid = parseInt(sessionStorage.getItem("posterid"));
+		var bookmarkIcon = document.getElementById("bookmarkbutton");
+		touchBookmark(posterid, bookmarkIcon);
+	});	
+}
 
 // グローバル変数の初期化処理
 function init() {
