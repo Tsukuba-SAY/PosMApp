@@ -570,6 +570,9 @@ describe("ポスターマップ", function() {
 });
 
 describe("詳細情報", function() {
+	beforeEach(function() {
+		sessionStorage.removeItem("previousPage");
+	});
 	it("マップ画面から1番のポスターの詳細情報画面を表示し、戻るボタンを押すとマップ画面に戻る", function() {
 		var $page = $("<div>");
 
@@ -593,10 +596,6 @@ describe("詳細情報", function() {
 	});
 	it("マップ画面を経由せず直接詳細情報画面を表示して戻るボタンを押すとマップ画面に戻る", function() {
 		var $page = $("<div>");
-		$page.goToDetailPage("touchstart");
-		$page.trigger("touchstart");
-		expect(window.location.hash).toEqual("#detailPage");
-
 		var $backbtn = $("<div>");
 		$backbtn.backToPreviousPage();
 		$backbtn.trigger("touchstart");
