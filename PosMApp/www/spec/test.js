@@ -584,19 +584,27 @@ describe("ポスターマップ", function() {
 describe("詳細情報", function() {
 	it("マップ画面から1番のポスターの詳細情報を表示し、戻るボタンを押すとマップ画面に戻る", function() {
 		var $page = $("<div>");
+
+		$page.goToTopPage("touchstart");
+		$page.trigger("touchstart");
+		console.log(window.location.hash);
+
 		$page.goToMapPage("touchstart");
 		$page.trigger("touchstart");
+		console.log(window.location.hash);
 		expect(window.location.hash).toEqual("#posterMapPage");
 
 		touchPoster(1);
 		var $detailbtn = $("<div>");
-		var $backbtn = $("<div>");
 		$detailbtn.goToDetailPage("touchstart");
-		$backbtn.backToPreviousPage();
-
 		$detailbtn.trigger("touchstart");
+		console.log(window.location.hash);
 		expect(window.location.hash).toEqual("#detailPage");
+
+		var $backbtn = $("<div>");
+		$backbtn.backToPreviousPage();
 		$backbtn.trigger("touchstart");
+		console.log(window.location.hash);
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 });
