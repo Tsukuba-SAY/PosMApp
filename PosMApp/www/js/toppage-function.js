@@ -1,7 +1,6 @@
 //ポスターリスト画面の各「これどこ？」ボタンをクリックする時
 $.fn.jumpToMapPage = function() {
-	$(this).on("click", function(e) {
-		console.log("fire");
+	$(this).on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(9));
 		listToMap(posterid);
@@ -10,7 +9,7 @@ $.fn.jumpToMapPage = function() {
 
 //ポスターリスト画面の各「詳細情報」ボタンをクリックする時
 $.fn.jumpToDetailPage = function() {
-	$(this).on("click", function(e) {
+	$(this).on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(9));
 		sessionStorage.setItem("previousPage", "posterListPage");
@@ -20,7 +19,7 @@ $.fn.jumpToDetailPage = function() {
 
 // 詳細情報画面の戻るボタンをおした時の挙動
 $.fn.backToPreviousPage = function() {
-	$(this).on("click", function(e) {
+	$(this).on("touchstart", function(e) {
 		var prev = sessionStorage.getItem("previousPage");
 		if (prev == null || prev == undefined) {
 			prev = "posterMapPage";

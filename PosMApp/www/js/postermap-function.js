@@ -57,7 +57,6 @@ $.fn.fireChangeLabel = function() {
 	$(this).on("touchstart", function(e) {
 		// 押されたボタンのidを取得する
 		var id = $(this).attr("id");
-		console.log("hogehoge");
 		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
 		changeLabel(id.substr(id.indexOf("-") + 1));
 	});
