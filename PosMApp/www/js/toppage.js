@@ -2,18 +2,19 @@ $(function() {
 	setDetails();
 	showposterlist();
 
+	// トップページ
+	$("#goToMap").goToMapPage("touchstart");
+	$("#goToList").goToListPage("touchstart");
+	
+	// ポスターリスト画面のボタン
 	$(".listToMapBtn").jumpToMapPage();
 	$(".listToDetailBtn").jumpToDetailPage();
 
+	// 詳細表示画面の戻るボタン
 	$("#detailBackButton").backToPreviousPage();
 
-	$("#goToMap").goToMapPage("touchstart");
-	$("#goToList").goToListPage("touchstart");
-
+	// タブバー
 	$(".topPageButton").goToTopPage("click");
-
-	// ポスターマップ画面ボタン
 	$(".posterMapPageButton").goToMapPage("click");
-
 	$(".posterListPageButton").goToListPage("click");
 });
