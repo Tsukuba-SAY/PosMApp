@@ -1,4 +1,4 @@
 script: phantomjs PosMApp/www/js/phantomjs/run-jasmine.js PosMApp/www/spec.html
 notifications:
   email: false
-  slack: utsay:I841G2Ubcugyixv96gPisZRP
+  slack: utsay:IaiGzxNuCr2rMeOgsRc0EFPv
