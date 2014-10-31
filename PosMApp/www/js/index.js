@@ -87,7 +87,7 @@ $(function() {
 	$("#detailBackButton").backToPreviousPage();
 
 	// タブバー
-	$(".topPageButton").goToTopPage("click");
-	$(".posterMapPageButton").goToMapPage("click");
-	$(".posterListPageButton").goToListPage("click");
+	$(".topPageButton").goToTopPage("touchstart");
+	$(".posterMapPageButton").goToMapPage("touchstart");
+	$(".posterListPageButton").goToListPage("touchstart");
 });
