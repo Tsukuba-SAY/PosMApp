@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/button-icon.css" />
 	<link rel="stylesheet" type="text/css" href="css/icon.css" />
 	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
+	<link rel="stylesheet" type="text/css" href="css/list.css" />
 
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery-2.1.1.min.js">
 	</script>
@@ -125,16 +126,24 @@
 		</div>
 		<!-- タブバー -->
 		<div data-role="footer" data-position="fixed">
-			<a class="topPageButton" data-role="button" href="#topPage">トップ</a>
-			<a class="posterMapPageButton" data-role="button" data-icon="map" href="#posterMapPage">マップ</a>
-			<a class="posterListPageButton" data-role="button" data-icon="list" href="#posterListPage">一覧</a>
-			<a data-role="button" href="" data-icon="bookmarkgray" class="ui-disabled">ブックマーク</a>
-			<a data-role="button" href="" data-icon="informationgray" class="ui-disabled">情報</a>
+			<div data-role="navbar" height="100%" data-position="buttom">
+				<ul>
+			<li><a class="topPageButton" data-role="button" href="#topPage" data-icon="home-black">トップ</a></li>
+			<li><a class="posterMapPageButton" data-role="button" data-icon="map" href="#posterMapPage">マップ</a></li>
+			<li><a class="posterListPageButton" data-role="button" data-icon="list" href="#posterListPage">一覧</a></li>
+			<li><a data-role="button" href="" data-icon="bookmarkgray" class="ui-disabled">ブックマーク</a></li>
+			<li><a data-role="button" href="" data-icon="informationgray" class="ui-disabled">情報</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
 	<!-- 詳細情報画面 -->
 	<div data-role="page" id="detailPage">
+		<div data-role="header">
+			<h1 style="text-align:center"　>詳細情報</h1>
+			<a href="#" class="ui-btn-left" id="detailBackButton" >戻る</a>
+		</div>
 		<div data-role="content">
 			No. <span id="detail-posterid"></span> [<span id="detail-sessionid"></span>]
 			<h1>
@@ -150,33 +159,43 @@
 			<p>
 				<span id="detail-abstract"></span>
 			</p>
-			<a data-role="button" id="detailBackButton">戻る</a>
+			
 		</div>
 		<!-- タブバー -->
 		<div data-role="footer" data-position="fixed">
-			<a class="topPageButton" data-role="button" href="#topPage">トップ</a>
-			<a class="posterMapPageButton" data-role="button" data-icon="map" href="#posterMapPage">マップ</a>
-			<a class="posterListPageButton" data-role="button" data-icon="list" href="#posterListPage">一覧</a>
-			<a data-role="button" href="" data-icon="bookmarkgray" class="ui-disabled">ブックマーク</a>
-			<a data-role="button" href="" data-icon="informationgray" class="ui-disabled">情報</a>
+			<div data-role="navbar" height="100%" data-position="buttom">
+				<ul>
+			<li><a class="topPageButton" data-role="button" href="#topPage" data-icon="home-black">トップ</a></li>
+			<li><a class="posterMapPageButton" data-role="button" data-icon="map" href="#posterMapPage">マップ</a></li>
+			<li><a class="posterListPageButton" data-role="button" data-icon="list" href="#posterListPage">一覧</a></li>
+			<li><a data-role="button" href="" data-icon="bookmarkgray" class="ui-disabled">ブックマーク</a></li>
+			<li><a data-role="button" href="" data-icon="informationgray" class="ui-disabled">情報</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
 	<!-- ポスターリスト画面 -->
 	<div data-role="page" id="posterListPage" data-position="fixed">
+		<div data-role="header">
+			<h1 style="text-align:center"　>Poster List</h1>
+		</div>
 		<div data-role="content">
-			<h1>ポスター一覧</h1>
 			<div style="overflow:auto; height:100%;">
-				<table border="1" rules="rows" id="posterlistTableTab"></table>
+				<table border="0" rules="rows" id="posterlistTableTab" class="listcolor" width="100%"></table>
 			</div>
 		</div>
 		<!-- タブバー -->
-		<div data-role="footer" data-position="fixed">
-			<a class="topPageButton" data-role="button" href="#topPage">トップ</a>
-			<a class="posterMapPageButton" data-role="button" data-icon="map" href="#posterMapPage">マップ</a>
-			<a class="posterListPageButton" data-role="button" data-icon="list" href="#posterListPage">一覧</a>
-			<a data-role="button" href="" data-icon="bookmarkgray" class="ui-disabled">ブックマーク</a>
-			<a data-role="button" href="" data-icon="informationgray" class="ui-disabled">情報</a>
+		<div data-role="footer" data-position="buttom">
+			<div data-role="navbar" height="100%" data-position="fixed">
+				<ul>
+			<li><a class="topPageButton" data-role="button" href="#topPage" data-icon="custom">トップ</a></li>
+			<li><a class="posterMapPageButton" data-role="button" data-icon="custom" href="#posterMapPage">マップ</a></li>
+			<li><a class="posterListPageButton" data-role="button" data-icon="custom" href="#posterListPage">一覧</a></li>
+			<li><a data-role="button" href="" data-icon="custom" class="ui-disabled">ブックマーク</a></li>
+			<li><a data-role="button" href="" data-icon="custom" class="ui-disabled">情報</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 

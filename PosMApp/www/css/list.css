@@ -1,0 +1,6 @@
+.listcolor tbody tr:nth-child(odd) td {
+  background-color: #D2DEEF;
+}
+.listcolor tbody tr:nth-child(even) td {
+  background-color: #EAEFF7;
+}
