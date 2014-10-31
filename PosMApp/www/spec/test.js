@@ -610,242 +610,166 @@ describe("キーワード検索（タイトル）", function() {
 
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				if (i == 1 ||i == 6 || i == 10 || i == 11 || i == 12 || i == 13) {
-					expectFlag[i] = "s";
-				} else {
-					expectFlag[i] = "d";
-				}
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			if (i == 1 ||i == 6 || i == 10 || i == 11 || i == 12 || i == 13) {
+				expectFlag[i] = "s";
+			} else {
+				expectFlag[i] = "d";
 			}
-			
-		});
-
-		runs(function() {
-			searchByTitle("システム");
-		});
-
-		//waits(200);
+		}
 		
-		runs(function() {
-			expect(pflag).toEqual(expectFlag);
-		});
+		searchByTitle("システム");
+
+		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("「ポスター」で検索すると10番のポスターがヒットする", function() {
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				expectFlag[i] = "d";
-			}
-			expectFlag[10] = "s";
-		});
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
+		expectFlag[10] = "s";
 
-		runs(function() {
-			searchByTitle("ポスター");
-		});
+		searchByTitle("ポスター");
 
-		//waits(100);
-		runs(function() {
-			expect(pflag).toEqual(expectFlag);
-		})
+		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("「スター」で検索すると10番のポスターがヒットする", function() {
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				expectFlag[i] = "d";
-			}
-			expectFlag[10] = "s";
-		});
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
+		expectFlag[10] = "s";
 
-		runs(function() {
-			searchByTitle("スター");
-		});
+		searchByTitle("スター");
 
-		//waits(100);
-		runs(function() {
-			expect(pflag).toEqual(expectFlag);
-		})
+		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("「Twitter」で検索すると3番のポスターがヒットする", function() {
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				expectFlag[i] = "d";
-			}
-			expectFlag[3] = "s";
-		});
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
+		expectFlag[3] = "s";
 
-		runs(function() {
-			searchByTitle("Twitter");
-		});
+		searchByTitle("Twitter");
 
-		//waits(100);
-		runs(function() {
-			expect(pflag).toEqual(expectFlag);
-		})
+		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("「twitter」で検索すると3番のポスターがヒットする", function() {
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				expectFlag[i] = "d";
-			}
-			expectFlag[3] = "s";
-		});
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
+		expectFlag[3] = "s";
 
-		runs(function() {
-			searchByTitle("twitter");
-		});
+		searchByTitle("twitter");
 
-		//waits(100);
-		runs(function() {
-			expect(pflag).toEqual(expectFlag);
-		})
+		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("「$」で検索すると何もヒットしない", function() {
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				expectFlag[i] = "d";
-			}
-		});
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
 
-		runs(function() {
-			searchByTitle("$");
-		});
+		searchByTitle("$");
 
-		//waits(100);
-		runs(function() {
-			expect(pflag).toEqual(expectFlag);
-		})
+		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("半角スペースで検索すると何もヒットしない", function() {
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				expectFlag[i] = "d";
-			}
-		});
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
 
-		runs(function() {
-			searchByTitle(" ");
-		});
+		searchByTitle(" ");
 
-		//waits(100);
-		runs(function() {
-			expect(pflag).toEqual(expectFlag);
-		})
+		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("nullを入れると何もヒットしない", function() {
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				expectFlag[i] = "d";
-			}
-		});
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
 
-		runs(function() {
-			searchByTitle(null);
-		});
+		searchByTitle(null);
 
-		//waits(100);
-		runs(function() {
-			expect(pflag).toEqual(expectFlag);
-		})
+		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("1番を選択した状態で「ポスター」で検索すると10番がヒットする", function() {
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			pflag[1] = "t";
+		pflag[1] = "t";
 
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				expectFlag[i] = "d";
-			}
-			expectFlag[1] = "t";
-			expectFlag[10] = "s";
-		});
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
+		expectFlag[1] = "t";
+		expectFlag[10] = "s";
 
-		runs(function() {
-			searchByTitle("ポスター");
-		});
+		searchByTitle("ポスター");
 
-		//waits(100);
-		runs(function() {
-			expect(pflag).toEqual(expectFlag);
-		})
+		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("10番を選択した状態で「ポスター」で検索すると10番がヒットする", function() {
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			pflag[10] = "t";
+		pflag[10] = "t";
 
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				expectFlag[i] = "d";
-			}
-			expectFlag[10] = "e";
-		});
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
+		expectFlag[10] = "e";
 
-		runs(function() {
-			searchByTitle("ポスター");
-		});
+		searchByTitle("ポスター");
 
-		//waits(100);
-		runs(function() {
-			expect(pflag).toEqual(expectFlag);
-		})
+		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("何も選択してない状態で、1024文字を入れて検索すると例外が発生し、ポスターの状況は変化しない", function() {
 		var expectFlag = new Array(ptotal+1);
 
-		runs(function() {
-			var str = "";
-			for (var i = 0; i < 1024; i++) {
-				str += "a";
-			}
+		var str = "";
+		for (var i = 0; i < 1024; i++) {
+			str += "a";
+		}
 
-			expectFlag[0] = null;
-			for (var i = 1; i <= ptotal; i++) {
-				expectFlag[i] = "d";
-			}
-		});
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
 
-		runs(function() {
-			expect(function() {
-				searchByTitle(str);
-				//wait(100);
-			}).toThrow();
-			expect(pflag).toEqual(expectFlag);
-		})
+		expect(function() {
+			searchByTitle(str);
+			//wait(100);
+		}).toThrow();
+		expect(pflag).toEqual(expectFlag);
 	});
 });
 
