@@ -996,6 +996,8 @@ describe("ポスターリスト", function() {
 		it(p["id"].toString() + "番のポスターの詳細情報ボタンを押すと、" 
 			+ p["id"].toString() + "番のポスターの詳細情報が表示される", function() {
 			expect(sessionStorage.getItem("posterid")).toBeNull();
+			
+
 			listToDetail(p["id"]);
 			expect(sessionStorage.getItem("posterid")).toEqual(p["id"].toString());
 		});

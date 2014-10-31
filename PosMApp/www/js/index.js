@@ -1,5 +1,6 @@
 //HTMLが呼ばれた時の初期化処理
 $(function() {
+
 	init();
 
 	// 現在はWebSQLは使用していない
@@ -68,4 +69,25 @@ $(function() {
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
+
+
+	// ---------- 詳細情報画面 ----------
+	setDetails();
+	$("#posterList").showPosterList();
+
+	// トップページ
+	$("#goToMap").goToMapPage("touchstart");
+	$("#goToList").goToListPage("touchstart");
+	
+	// ポスターリスト画面のボタン
+	$(".listToMapBtn").jumpToMapPage();
+	$(".listToDetailBtn").jumpToDetailPage();
+
+	// 詳細表示画面の戻るボタン
+	$("#detailBackButton").backToPreviousPage();
+
+	// タブバー
+	$(".topPageButton").goToTopPage("click");
+	$(".posterMapPageButton").goToMapPage("click");
+	$(".posterListPageButton").goToListPage("click");
 });

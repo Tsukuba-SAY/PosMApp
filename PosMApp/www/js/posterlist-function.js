@@ -29,15 +29,6 @@ $.fn.showPosterList = function() {
 	return posters;
 }
 
-//ポスターリスト画面の各「これどこ？」ボタンをクリックする時
-$.fn.jumpToMapPage = function() {
-	$(this).on("touchstart", function(e) {
-		// ポスターのIDを取得する
-		var posterid = Number(e.target.id.substring(9));
-		listToMap(posterid);
-	});
-}
-
 //ポスターリスト画面の各「詳細情報」ボタンをクリックする時
 $.fn.jumpToDetailPage = function() {
 	$(this).on("touchstart", function(e) {
@@ -48,6 +39,14 @@ $.fn.jumpToDetailPage = function() {
 	});
 }
 
+//ポスターリスト画面の各「これどこ？」ボタンをクリックする時
+$.fn.jumpToMapPage = function() {
+	$(this).on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(9));
+		listToMap(posterid);
+	});
+}
 
 //ポスターの発表者を取得する
 function getAuthors(posterid){

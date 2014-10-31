@@ -1,1 +1,0 @@
-$("#posterList").showPosterList();
