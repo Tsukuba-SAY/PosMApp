@@ -46,7 +46,7 @@ $.fn.goToDetailPage = function(ev) {
 }
 
 // 各ポスターアイコンのタッチイベント
-$.fn.fireTouchPoster = function() {
+$.fn.touchPoster = function() {
 	$(this).on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(4));
@@ -69,7 +69,7 @@ $.fn.closeBasicInfo = function() {
 }
 
 // ラベルを変更する
-$.fn.fireChangeLabel = function() {
+$.fn.changeLabel = function() {
 	$(this).on("touchstart", function(e) {
 		// 押されたボタンのidを取得する
 		var id = $(this).attr("id");
@@ -79,7 +79,7 @@ $.fn.fireChangeLabel = function() {
 }
 
 // ブックマークスターのタッチイベント
-$.fn.fireTouchBookmark = function() {
+$.fn.touchBookmark = function() {
 	$(this).on("touchstart", function(e) {
 		var posterid = parseInt(sessionStorage.getItem("posterid"));
 		var bookmarkIcon = document.getElementById("bookmarkbutton");

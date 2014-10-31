@@ -55,16 +55,16 @@ $(function() {
 	$("#detailinfobutton").goToDetailPage("touchstart");
 
 	// 各ポスターアイコンのタッチイベント
-	$(".postericon").fireTouchPoster();
+	$(".postericon").touchPoster();
 
 	// 基本情報画面を閉じる
 	$("#basicinfo").closeBasicInfo();
 
 	// ラベルを変更する
-	$(".changelabel").fireChangeLabel();
+	$(".changelabel").changeLabel();
 
 	// ブックマークスターのタッチイベント
-	$("#bookmarkbutton").fireTouchBookmark();
+	$("#bookmarkbutton").touchBookmark();
 
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
