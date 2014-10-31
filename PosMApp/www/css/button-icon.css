@@ -1,43 +1,43 @@
 /* タブバーに使うjQuery Mobile用カスタムボタンアイコンを生成するCSS */
 /* ずれてるのをパーセント指定で強制的に合わせているので要修正 */
 .ui-icon-map {
-	background: url("../img/tabbar/map.png") 12% 50% no-repeat;
+	background: url("../img/tabbar/map.png") 50% 25% no-repeat;
   	background-size: 18px 18px;
   	box-shadow:none;
 }
 .ui-icon-list {
-	background: url("../img/tabbar/list.png") 12% 50% no-repeat;
+	background: url("../img/tabbar/list.png") 50% 25% no-repeat;
   	background-size: 18px 18px;
   	box-shadow:none;
 }
 .ui-icon-bookmark {
-	background: url("../img/tabbar/bookmark.png") 12% 50% no-repeat;
+	background: url("../img/tabbar/bookmark.png") 50% 25% no-repeat;
   	background-size: 18px 18px;
   	box-shadow:none;
 }
 .ui-icon-information {
-	background: url("../img/tabbar/information.png") 12% 50% no-repeat;
+	background: url("../img/tabbar/information.png") 50% 25% no-repeat;
   	background-size: 18px 18px;
   	box-shadow:none;
 }
 
 .ui-icon-mapgray {
-	background: url("../img/tabbar/map_gray.png") 12% 50% no-repeat;
+	background: url("../img/tabbar/map_gray.png") 50% 25% no-repeat;
   	background-size: 18px 18px;
   	box-shadow:none;
 }
 .ui-icon-listgray {
-	background: url("../img/tabbar/list_gray.png") 12% 50% no-repeat;
+	background: url("../img/tabbar/list_gray.png") 50% 25% no-repeat;
   	background-size: 18px 18px;
   	box-shadow:none;
 }
 .ui-icon-bookmarkgray {
-	background: url("../img/tabbar/bookmark_gray.png") 8% 50% no-repeat;
+	background: url("../img/tabbar/bookmark_gray.png") 50% 25% no-repeat;
   	background-size: 18px 18px;
   	box-shadow:none;
 }
 .ui-icon-informationgray {
-	background: url("../img/tabbar/information_gray.png") 12% 50% no-repeat;
+	background: url("../img/tabbar/information_gray.png") 50% 25% no-repeat;
   	background-size: 18px 18px;
   	box-shadow:none;
 }
