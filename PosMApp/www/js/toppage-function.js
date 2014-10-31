@@ -52,12 +52,14 @@ $.fn.goToListPage = function(ev) {
 // タブのボタン
 // トップページボタン
 $.fn.goToTopPage = function(ev) {
+	var nextPage = "#topPage";
 	$(this).on(ev, function() {
-		changePage("#topPage");
+		changePage(nextPage);
 		$(".topPageButton").addClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 	});
+	return nextPage;
 }
 
 function setDetails() {
