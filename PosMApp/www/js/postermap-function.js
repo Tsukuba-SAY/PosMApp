@@ -550,8 +550,9 @@ function windowManager () {
 	var $mapMain = $('#mapMain');
 	$mapMain.css("zoom",scale);
 
-	var mc = $mapMain.hammer();
-	mc.on(ev,function (ev) {
+	var mc = new Hammer($mapMain[0]);
+
+	mc.on('pan',function (ev) {
 		console.log(ev);
 	})
 
