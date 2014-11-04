@@ -302,54 +302,40 @@ function emphasisSearchedPosters(posterids) {
 // ポスターを選択する
 function selectPoster(posterid) {
 
-	// ポスターの状態で判断
-	if (pflag[posterid] == "d" || pflag[posterid] == "s") {
-
-		for (var i = 0; i < ptotal; i++) {
-			var p = poster[i];
-			if (p.id == posterid) {
-				sessionStorage.setItem("posterid", posterid);
-				sessionStorage.setItem("sessionid", p.sessionid);
-				sessionStorage.setItem("title", p.title);
-				sessionStorage.setItem("abstract", p.abstract);
-				sessionStorage.setItem("authorname", p.authorname);
-				sessionStorage.setItem("authorbelongs", p.authorbelongs);
-				sessionStorage.setItem("bookmark", p.bookmark);
-				sessionStorage.setItem("star", p.star);
-			}
+	for (var i = 0; i < ptotal; i++) {
+		var p = poster[i];
+		if (p.id == posterid) {
+			sessionStorage.setItem("posterid", posterid);
+			sessionStorage.setItem("sessionid", p.sessionid);
+			sessionStorage.setItem("title", p.title);
+			sessionStorage.setItem("abstract", p.abstract);
+			sessionStorage.setItem("authorname", p.authorname);
+			sessionStorage.setItem("authorbelongs", p.authorbelongs);
+			sessionStorage.setItem("bookmark", p.bookmark);
+			sessionStorage.setItem("star", p.star);
 		}
-
-		var authors = new Array();
-		for (var i = 0; i < author.length; i++) {
-			var a = author[i];
-			if (a.posterid == posterid) {
-				authors.push(a.name);
-			}
-		}
-		sessionStorage.setItem("authors", authors);
-
-		var keywords = new Array();
-		for (var i = 0; i < keyword.length; i++) {
-			var k = keyword[i];
-			if (k.posterid == posterid) {
-				keywords.push(k.keyword);
-			}
-		}
-		sessionStorage.setItem("keywords", keywords);
-
-		changeBasicInfoPanel(true);
-
-	} else {
-		// Session Storageに保存されているポスター情報をクリア
-		removeAllPosterInfo();
-
-		if (sessionStorage.getItem("searching") == "true") {
-			pflag[posterid] = "s";
-			//searchByTitle(sessionStorage.getItem("searchWord"));
-		}
-
-		changeBasicInfoPanel(false);
 	}
+
+	var authors = new Array();
+	for (var i = 0; i < author.length; i++) {
+		var a = author[i];
+		if (a.posterid == posterid) {
+			authors.push(a.name);
+		}
+	}
+	sessionStorage.setItem("authors", authors);
+
+	var keywords = new Array();
+	for (var i = 0; i < keyword.length; i++) {
+		var k = keyword[i];
+		if (k.posterid == posterid) {
+			keywords.push(k.keyword);
+		}
+	}
+	sessionStorage.setItem("keywords", keywords);
+
+	changeBasicInfoPanel(true);
+
 }
 
 
