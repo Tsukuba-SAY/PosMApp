@@ -11,3 +11,5 @@ PosMApp/jscover.log
 PosMApp/jscover.log.lck
 ios.json
 Thumbs.db
+*.db
+
