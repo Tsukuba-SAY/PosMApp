@@ -427,6 +427,52 @@ describe("ポスターマップ", function() {
 		sessionStorage.setItem("searching", "false");
 	});
 
+	it("2,3,4番目が検索にヒットしている状態かつ2番をタップしている状態で2番目のポスターをタップすると2,3,4番目が検索にヒットしている状態に戻る", function() {
+		var beforeFlag = new Array(ptotal+1);
+		var expectFlag = new Array(ptotal+1);
+		var posterid = 2;
+
+		sessionStorage.setItem("searching", "true");
+
+		beforeFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			beforeFlag[i] = "d";
+		}
+		beforeFlag[2] = "e";
+		beforeFlag[3] = "s";
+		beforeFlag[4] = "s";
+		pflag[2] = "e";
+		pflag[3] = "s";
+		pflag[4] = "s";
+
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
+		expectFlag[2] = "s";
+		expectFlag[3] = "s";
+		expectFlag[4] = "s";
+
+		expect(pflag).toEqual(beforeFlag);
+
+		var $postericon = $("<div>");
+		$postericon.attr("id", "icon" + posterid);
+		$postericon.touchPoster();
+		$postericon.trigger("touchstart");
+
+		expect(pflag).toEqual(expectFlag);
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(sessionStorage.getItem("sessionid")).toBeNull();
+		expect(sessionStorage.getItem("title")).toBeNull();
+		expect(sessionStorage.getItem("abstract")).toBeNull();
+		expect(sessionStorage.getItem("authorname")).toBeNull();
+		expect(sessionStorage.getItem("authorbelongs")).toBeNull();
+		expect(sessionStorage.getItem("authors")).toBeNull();
+		expect(sessionStorage.getItem("keywords")).toBeNull();
+
+		sessionStorage.setItem("searching", "false");
+	});
+
 	it("2,3,4番目が検索にヒットしている状態かつ2番をタップしている状態で3番目のポスターをタップすると3番目の情報が取得できる", function() {
 		var beforeFlag = new Array(ptotal+1);
 		var expectFlag = new Array(ptotal+1);
