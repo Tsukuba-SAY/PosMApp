@@ -74,61 +74,48 @@
 		</div>
 	</div>
 
-
 	<!-- ポスターマップ画面 -->
 	<div data-role="page" id="posterMapPage">
-		<!-- タブバー -->
-		<!--
-		<div class="ui-grid-c">
-			<div class="ui-block-a">
-				<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
-			</div>
-			<div class="ui-block-b">
-				<a class="posterListPageButton" data-role="button" href="#posterListPage">一覧</a>
-			</div>
-			<div class="ui-block-c">
-				<a data-role="button" href="" class="ui-disabled">ブックマーク</a>
-			</div>
-			<div class="ui-block-d">
-				<a data-role="button" href="" class="ui-disabled">情報</a>
-			</div>			
-		</div>
-		-->
+
 		<div data-role="header">
 			<input type="search" id="search-bar-title"
 		    	placeholder="タイトルで検索" onchange="searchChanged(this)"/>
 		</div>
 		<div style="position: relative;">
-			<!-- 検索結果件数 -->
-			<div id="searchResult" style="position: absolute; z-index: 100;">
-			</div>
-			<div id="changelabel" style="border:2px;">
+			<div id="subheader" style="top: 0px;">
+				<!-- 検索結果件数 -->
+				<div id="searchResult"
+					style="position: fixed; z-index: 100;">
+				</div>
 				<!-- ラベル表示切替ボタン -->
-				<a data-role="button" href="#changeLabelDialog"
-				data-inline="true" data-rel="dialog"
-				data-transition="pop">ラベル表示切替</a>
+				<div id="changelabel" data-position="fixed" style="border: 2px;">
+					<a data-role="button" href="#changeLabelDialog"
+						data-inline="true" data-rel="dialog"
+						data-transition="pop">ラベル表示切替</a>
+				</div>
 			</div>
-			<div style="position: absolute;">
+			<div id="mapmain">
 				<div align="center">
-				<!-- ポスターマップ表示 -->
+					<!-- ポスターマップ表示 -->
 					<img src="img/postermap.png" border="0"  width="100%"
 						style="position: relative; z-index: 1;"></img>
 				</div>
-				<!-- 基本情報パネル -->
-				<div style="position: relative;">
-					<div id="basicinfopanel" style="display:none;">
-						<div id="basicinfo"></div>
-						<!-- ブックマークボタン -->
-						<!-- アイコンの切り替えはpostermap.jsで行う -->
-						<img id="bookmarkbutton"></img>
-						<!-- 詳細情報ボタン -->
-						<img id="detailinfobutton" src="img/detail.png"></img>
-					</div>
+				<!-- ポスターアイコン -->
+				<div id="posters"></div>
+			</div>
+			<!-- 基本情報パネル -->
+			<div style="position: relative;">
+				<div id="basicinfopanel" style="display:none;">
+					<div id="basicinfo"></div>
+					<!-- ブックマークボタン -->
+					<!-- アイコンの切り替えはpostermap.jsで行う -->
+					<img id="bookmarkbutton"></img>
+					<!-- 詳細情報ボタン -->
+					<img id="detailinfobutton" src="img/detail.png"></img>
 				</div>
 			</div>
-			<!-- ポスターアイコン -->
-			<div id="posters" style="position: absolute;"></div>
 		</div>
+
 		<!-- タブバー -->
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar" height="100%" data-position="buttom">
@@ -192,7 +179,7 @@
 			</div>
 		</div>
 		<!-- タブバー -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
 			<div data-role="navbar" height="100%" data-position="buttom">
 				<ul>
 					<li><a class="topPageButton" data-role="button" href="#topPage" data-icon="home-black">トップ</a></li>
