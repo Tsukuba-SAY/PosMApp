@@ -29,6 +29,8 @@
 
 	<script type="text/javascript" charset="utf-8" src="js/index.js">
 	</script>
+
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
 <body>
@@ -94,12 +96,11 @@
 						data-transition="pop">ラベル表示切替</a>
 				</div>
 			</div>
-			<div id="mapmain">
-				<div align="center">
-					<!-- ポスターマップ表示 -->
-					<img src="img/postermap.png" border="0"  width="100%"
-						style="position: relative; z-index: 1;"></img>
-				</div>
+			<!-- ポスターマップ本体 -->
+			<div id="mapMain">
+				<!-- ポスターマップ表示 -->
+				<img src="img/postermap.png" border="0"  width="600"
+					style="position: relative; z-index: 1;"></img>
 				<!-- ポスターアイコン -->
 				<div id="posters"></div>
 			</div>
