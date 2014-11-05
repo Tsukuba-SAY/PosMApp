@@ -40,7 +40,6 @@ $.fn.goToTopPage = function(ev) {
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 	});
-	return nextPage;
 }
 
 function setDetails() {

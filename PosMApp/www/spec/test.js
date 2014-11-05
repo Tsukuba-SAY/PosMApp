@@ -8,37 +8,43 @@ describe("変数の確認", function() {
 });
 
 describe("トップページ", function() {
+	beforeEach(function() {
+		loadFixtures("fixture-toppage.html");
+		$goToMap = $("#goToMap");
+		$goToMap.goToMapPage("click");
+		$goToList = $("#goToList");
+		$goToList.goToListPage("click");
+	});
 	it("トップページからポスターマップ画面に遷移できる", function() {
-		var $testdiv = $("<div>");
-		$testdiv.goToMapPage("click");
-		$testdiv.click();
+		$goToMap.click();
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("トップページからポスターリスト画面に遷移できる", function() {
-		var $testdiv = $("<div>");
-		$testdiv.goToListPage("click");
-		$testdiv.click();
+		$goToList.click();
 		expect(window.location.hash).toEqual("#posterListPage");
 	});
 });
 
 describe("タブバー", function() {
+	beforeEach(function() {
+		loadFixtures("fixture-tabbar.html");
+		$topButton = $(".topPageButton");
+		$topButton.goToTopPage("click");
+		$mapButton = $(".posterMapPageButton");
+		$mapButton.goToMapPage("click");
+		$listButton = $(".posterListPageButton");
+		$listButton.goToListPage("click");
+	});
 	it("「トップ」ボタンを押すとトップページに遷移する", function() {
-		var $testdiv = $("<div>");
-		var nextPage = $testdiv.goToTopPage("click");
-		$testdiv.click();
-		expect(nextPage).toEqual("#topPage");
+		$topButton.click();
+		expect(window.location.hash).toEqual("#topPage");
 	});
 	it("「マップ」ボタンを押すとポスターマップ画面に遷移する", function() {
-		var $testdiv = $("<div>");
-		$testdiv.goToMapPage("click");
-		$testdiv.click();
+		$mapButton.click();
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("「リスト」ボタンを押すとポスターマップ画面に遷移する", function() {
-		var $testdiv = $("<div>");
-		$testdiv.goToListPage("click");
-		$testdiv.click();
+		$listButton.click();
 		expect(window.location.hash).toEqual("#posterListPage");
 	});
 });
