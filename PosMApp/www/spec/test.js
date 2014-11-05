@@ -88,11 +88,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[0].id.toString());
@@ -126,11 +123,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id.toString());
@@ -163,11 +157,8 @@ describe("ポスターマップ", function() {
 		
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toBeNull();
@@ -235,7 +226,6 @@ describe("ポスターマップ", function() {
 		expect(function() {
 			var $postericon = $("<div>");
 			$postericon.attr("id", "icon" + posterid);
-
 			$postericon.touchPoster();
 			$postericon.trigger("touchstart");
 		}).toThrow();
@@ -278,7 +268,6 @@ describe("ポスターマップ", function() {
 		expect(function() {
 			var $postericon2 = $("<div>");
 			$postericon2.attr("id", "icon" + posterid);
-
 			$postericon2.touchPoster();
 			$postericon2.trigger("touchstart");
 		}).toThrow();
@@ -321,7 +310,6 @@ describe("ポスターマップ", function() {
 		expect(function() {
 			var $postericon2 = $("<div>");
 			$postericon2.attr("id", "icon" + posterid);
-
 			$postericon2.touchPoster();
 			$postericon2.trigger("touchstart");
 		}).toThrow();
@@ -366,10 +354,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[0].id.toString());
@@ -414,10 +400,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id.toString());
@@ -460,10 +444,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toBeNull();
@@ -506,10 +488,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[2].id.toString());
@@ -552,10 +532,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[6].id.toString());
@@ -599,10 +577,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 		
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toBeNull();
@@ -620,34 +596,25 @@ describe("ポスターマップ", function() {
 
 describe("詳細情報", function() {
 	beforeEach(function() {
+		loadFixtures("fixture-postermap.html", "fixture-detail.html");
+		setPosterIcons();
+		showPosterIcons();
+		$("#detailinfobutton").goToDetailPage("touchstart");
+		$("#detailBackButton").backToPreviousPage();
+
 		sessionStorage.removeItem("previousPage");
 	});
 	it("マップ画面から1番のポスターの詳細情報画面を表示し、戻るボタンを押すとマップ画面に戻る", function() {
-		var $page = $("<div>");
-
-		$page.goToTopPage("touchstart");
-		$page.trigger("touchstart");
-
-		$page.goToMapPage("touchstart");
-		$page.trigger("touchstart");
-		expect(window.location.hash).toEqual("#posterMapPage");
-
-		touchPoster(1);
-		var $detailbtn = $("<div>");
-		$detailbtn.goToDetailPage("touchstart");
-		$detailbtn.trigger("touchstart");
+		$("#icon1").touchPoster();
+		$("#icon1").trigger("touchstart");
+		$("#detailinfobutton").trigger("touchstart");
 		expect(window.location.hash).toEqual("#detailPage");
 
-		var $backbtn = $("<div>");
-		$backbtn.backToPreviousPage();
-		$backbtn.trigger("touchstart");
+		$("#detailBackButton").trigger("touchstart");
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("マップ画面を経由せず直接詳細情報画面を表示して戻るボタンを押すとマップ画面に戻る", function() {
-		var $page = $("<div>");
-		var $backbtn = $("<div>");
-		$backbtn.backToPreviousPage();
-		$backbtn.trigger("touchstart");
+		$("#detailBackButton").trigger("touchstart");
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 });
