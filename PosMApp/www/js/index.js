@@ -70,6 +70,8 @@ $(function() {
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
 
+	windowManager();
+
 
 	// ---------- 詳細情報画面 ----------
 	setDetails();

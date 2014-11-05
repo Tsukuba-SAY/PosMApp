@@ -543,3 +543,17 @@ function searchChanged(bar) {
 	bar.blur();
 }
 
+// 名前変えたい
+function windowManager () {
+	var STATIC_WIDTH =  600;
+	var scale = window.innerWidth / STATIC_WIDTH;
+	var $mapMain = $('#mapMain');
+	$mapMain.css("zoom",scale);
+
+	var mc = new Hammer($mapMain[0]);
+
+	mc.on('pan',function (ev) {
+		console.log(ev);
+	})
+
+}
