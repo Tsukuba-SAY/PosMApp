@@ -82,8 +82,8 @@
 	<!-- ポスターマップ画面 -->
 	<div data-role="page" id="posterMapPage">
 
-		<div data-role="header">
-			<input type="search" id="search-bar-title"
+		<div data-role="header" data-tap-toggle="false" data-position:"fixed">
+			<input type="search" id="search-bar-title"  
 		    	placeholder="タイトルで検索" onchange="searchChanged(this)"/>
 		</div>
 		<div style="position: relative;">
@@ -121,7 +121,7 @@
 		</div>
 
 		<!-- タブバー -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
 			<div data-role="navbar" height="100%" data-position="buttom">
 				<ul>
 					<li><a class="topPageButton" data-role="button" href="#topPage" data-icon="home-black">トップ</a></li>
