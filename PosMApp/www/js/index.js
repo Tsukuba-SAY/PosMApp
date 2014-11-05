@@ -51,7 +51,7 @@ $(function() {
 
 	// ブックマークスターのタッチイベント
 	$("#bookmarkbutton").touchBookmark();
-
+	
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();

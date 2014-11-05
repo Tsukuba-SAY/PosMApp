@@ -621,6 +621,10 @@ describe("詳細情報", function() {
 
 describe("キーワード検索（タイトル）", function() {
 	beforeEach(function() {
+		loadFixtures("fixture-postermap.html");
+		setPosterIcons();
+		showPosterIcons();
+
 		initPosterMap();
 	});
 
@@ -630,14 +634,15 @@ describe("キーワード検索（タイトル）", function() {
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= ptotal; i++) {
-			if (i == 1 ||i == 6 || i == 10 || i == 11 || i == 12 || i == 13) {
+			if (i == 1 || i == 6 || i == 10 || i == 11 || i == 12 || i == 13) {
 				expectFlag[i] = "s";
 			} else {
 				expectFlag[i] = "d";
 			}
 		}
 		
-		searchByTitle("システム");
+		$("#search-bar-title").val("システム");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -651,7 +656,8 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		expectFlag[10] = "s";
 
-		searchByTitle("ポスター");
+		$("#search-bar-title").val("ポスター");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -665,7 +671,8 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		expectFlag[10] = "s";
 
-		searchByTitle("スター");
+		$("#search-bar-title").val("スター");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -679,7 +686,8 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		expectFlag[3] = "s";
 
-		searchByTitle("Twitter");
+		$("#search-bar-title").val("Twitter");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -693,7 +701,8 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		expectFlag[3] = "s";
 
-		searchByTitle("twitter");
+		$("#search-bar-title").val("twitter");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -706,7 +715,8 @@ describe("キーワード検索（タイトル）", function() {
 			expectFlag[i] = "d";
 		}
 
-		searchByTitle("$");
+		$("#search-bar-title").val("$");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -719,7 +729,8 @@ describe("キーワード検索（タイトル）", function() {
 			expectFlag[i] = "d";
 		}
 
-		searchByTitle(" ");
+		$("#search-bar-title").val(" ");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -732,7 +743,8 @@ describe("キーワード検索（タイトル）", function() {
 			expectFlag[i] = "d";
 		}
 
-		searchByTitle(null);
+		$("#search-bar-title").val(null);
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -749,7 +761,8 @@ describe("キーワード検索（タイトル）", function() {
 		expectFlag[1] = "t";
 		expectFlag[10] = "s";
 
-		searchByTitle("ポスター");
+		$("#search-bar-title").val("ポスター");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -765,7 +778,8 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		expectFlag[10] = "e";
 
-		searchByTitle("ポスター");
+		$("#search-bar-title").val("ポスター");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
