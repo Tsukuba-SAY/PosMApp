@@ -2,7 +2,7 @@ describe("変数の確認", function() {
 	it("posterdata.jsでposterが宣言されている", function() {
 		expect(poster).toBeDefined();
 	});
-	it("posterの長さが14である", function() {
+	it("posterの数が14である", function() {
 		expect(poster.length).toEqual(14);
 	});
 });
@@ -10,17 +10,15 @@ describe("変数の確認", function() {
 describe("トップページ", function() {
 	beforeEach(function() {
 		loadFixtures("fixture-toppage.html");
-		$goToMap = $("#goToMap");
-		$goToMap.goToMapPage("click");
-		$goToList = $("#goToList");
-		$goToList.goToListPage("click");
+		$("#goToMap").goToMapPage("click");
+		$("#goToList").goToListPage("click");
 	});
 	it("トップページからポスターマップ画面に遷移できる", function() {
-		$goToMap.click();
+		$("#goToMap").click();
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("トップページからポスターリスト画面に遷移できる", function() {
-		$goToList.click();
+		$("#goToList").click();
 		expect(window.location.hash).toEqual("#posterListPage");
 	});
 });
@@ -28,29 +26,30 @@ describe("トップページ", function() {
 describe("タブバー", function() {
 	beforeEach(function() {
 		loadFixtures("fixture-tabbar.html");
-		$topButton = $(".topPageButton");
-		$topButton.goToTopPage("click");
-		$mapButton = $(".posterMapPageButton");
-		$mapButton.goToMapPage("click");
-		$listButton = $(".posterListPageButton");
-		$listButton.goToListPage("click");
+		$(".topPageButton").goToTopPage("click");
+		$(".posterMapPageButton").goToMapPage("click");
+		$(".posterListPageButton").goToListPage("click");
 	});
 	it("「トップ」ボタンを押すとトップページに遷移する", function() {
-		$topButton.click();
+		$(".topPageButton").click();
 		expect(window.location.hash).toEqual("#topPage");
 	});
 	it("「マップ」ボタンを押すとポスターマップ画面に遷移する", function() {
-		$mapButton.click();
+		$(".posterMapPageButton").click();
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("「リスト」ボタンを押すとポスターマップ画面に遷移する", function() {
-		$listButton.click();
+		$(".posterListPageButton").click();
 		expect(window.location.hash).toEqual("#posterListPage");
 	});
 });
 
 describe("ポスターマップ", function() {
 	beforeEach(function() {
+		loadFixtures("fixture-postermap.html");
+		setPosterIcons();
+		showPosterIcons();
+
 		initPosterMap();	
 		test = true;
 	});
