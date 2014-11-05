@@ -50,14 +50,14 @@ describe("ポスターマップ", function() {
 		setPosterIcons();
 		showPosterIcons();
 
+		$("#basicinfopanel").closeBasicInfo();
+
 		initPosterMap();	
 		test = true;
 	});
 
 	it("基本情報に関して、開いた状態でタップすると閉じる", function() {
-		var $bpanel = $("<div>");
-		$bpanel.closeBasicInfo();
-		$bpanel.trigger("touchstart");
+		$("#basicinfopanel").trigger("touchstart");
 		expect(sessionStorage.getItem("posterid")).toBeNull();
 		expect(sessionStorage.getItem("sessionid")).toBeNull();
 		expect(sessionStorage.getItem("title")).toBeNull();
