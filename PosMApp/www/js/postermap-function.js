@@ -498,7 +498,7 @@ function touchBookmark(posterid, bookmarkIcon){
 function getBookmarks() {
 	var bookmarks = localStorage.getItem("bookmarks");
 	// 空文字列だった場合は何もブックマークされていないので空配列
-	var bookmarkArr = (bookmarks != "") ? bookmarks.split(",") : [];
+	var bookmarkArr = (bookmarks != "" && bookmarks != null) ? bookmarks.split(",") : [];
 	// 中身をすべて数値にする
 	bookmarkArr.filter(function(obj) {
 		return parseInt(obj);
