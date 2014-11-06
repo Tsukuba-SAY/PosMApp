@@ -123,11 +123,8 @@ function changeLabel(column) {
 		}
 		
 		// テスト中ならばラベルの一覧に追加していく
-		if (!test) {	
-			setLabel(i, str);
-		} else {
-			labels[i - 1] = str;
-		}
+		setLabel(i, str);
+		labels[i - 1] = str;
 	}
 	return labels;
 }
@@ -141,30 +138,26 @@ function setLabel(id, str) {
 
 // 現在のフラグを元にポスターのアイコンを表示する
 function showPosterIcons() {
-	if(!test) {
-		var imageSrc;
-		for (var i = 1; i <= ptotal; i++) {
-			switch (pflag[i]) {
-				case "d":
-					imageSrc = "img/dpic.png";
-					break;
-				case "t":
-					imageSrc = "img/tpic.png";
-					break;
-				case "s":
-					imageSrc = "img/spic.png";
-					break;
-				case "e":
-					imageSrc = "img/epic.png";
-					break;
-				default:
-					break;
-			}
-			document.getElementById("icon" + i).src = imageSrc;
+	var imageSrc;
+	for (var i = 1; i <= ptotal; i++) {
+		switch (pflag[i]) {
+			case "d":
+				imageSrc = "img/dpic.png";
+				break;
+			case "t":
+				imageSrc = "img/tpic.png";
+				break;
+			case "s":
+				imageSrc = "img/spic.png";
+				break;
+			case "e":
+				imageSrc = "img/epic.png";
+				break;
 		}
-
-		console.log(pflag);
+		document.getElementById("icon" + i).src = imageSrc;
 	}
+
+	console.log(pflag);
 }
 
 
@@ -210,49 +203,43 @@ function touchPoster(posterid) {
 
 // 基本情報パネルを変更する
 function changeBasicInfoPanel(flag) {
-	if (!test) {
 
-		var basicinfopanel = document.getElementById("basicinfopanel");
-		if (flag) {
-			basicinfopanel.style.display = "inline";
-		} else {
-			basicinfopanel.style.display = "none";
-			removeAllPosterInfo();
-		}
-
-		var basicinfo = document.getElementById("basicinfo");
-
-		basicinfo.innerHTML = 
-			// "No. " 
-			// + sessionStorage.getItem("posterid")+
-			 " ["
-			+ sessionStorage.getItem("sessionid")
-			+ "]<br />"
-			+ sessionStorage.getItem("title")
-			+ "<br />チーム名： "
-			+ sessionStorage.getItem("authorname")
-			+ "<br />所属： "
-			+ sessionStorage.getItem("authorbelongs");
-
-		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		var bookmarkArr = localStorage.getItem("bookmarks").split(",");
-		var foundBookmark = false;
-		console.log(sessionStorage.getItem("posterid"));
-		for (var i = 0; i < bookmarkArr.length; i++) {
-			if (parseInt(sessionStorage.getItem("posterid")) == parseInt(bookmarkArr[i])) {
-				foundBookmark = true;
-				break;
-			}
-		}
-		if (foundBookmark) {
-			bookmarkIcon.src = "img/bookmark.png";
-		} else {
-			bookmarkIcon.src = "img/unbookmark.png";
-		}
+	var basicinfopanel = document.getElementById("basicinfopanel");
+	if (flag) {
+		basicinfopanel.style.display = "inline";
 	} else {
-		if (!flag) {
-			removeAllPosterInfo();
+		basicinfopanel.style.display = "none";
+		removeAllPosterInfo();
+	}
+
+	var basicinfo = document.getElementById("basicinfo");
+
+	basicinfo.innerHTML = 
+		// "No. " 
+		// + sessionStorage.getItem("posterid")+
+		 " ["
+		+ sessionStorage.getItem("sessionid")
+		+ "]<br />"
+		+ sessionStorage.getItem("title")
+		+ "<br />チーム名： "
+		+ sessionStorage.getItem("authorname")
+		+ "<br />所属： "
+		+ sessionStorage.getItem("authorbelongs");
+
+	var bookmarkIcon = document.getElementById("bookmarkbutton");
+	var bookmarkArr = localStorage.getItem("bookmarks").split(",");
+	var foundBookmark = false;
+	console.log(sessionStorage.getItem("posterid"));
+	for (var i = 0; i < bookmarkArr.length; i++) {
+		if (parseInt(sessionStorage.getItem("posterid")) == parseInt(bookmarkArr[i])) {
+			foundBookmark = true;
+			break;
 		}
+	}
+	if (foundBookmark) {
+		bookmarkIcon.src = "img/bookmark.png";
+	} else {
+		bookmarkIcon.src = "img/unbookmark.png";
 	}
 }
 
@@ -279,12 +266,10 @@ function searchByTitle(title) {
 
 	emphasisSearchedPosters(posterids);
 
-	if (!test) {
-		if (posterids.length == 0) {
-			document.getElementById("searchResult").innerHTML = "見つかりませんでした";
-		} else {
-			document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
-		}
+	if (posterids.length == 0) {
+		document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+	} else {
+		document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
 	}
 
 	return pflag;

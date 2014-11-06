@@ -48,6 +48,7 @@ describe("ポスターマップ", function() {
 	beforeEach(function() {
 		loadFixtures("fixture-postermap.html");
 		setPosterIcons();
+		showBookmarkIcons();
 		showPosterIcons();
 
 		$("#basicinfopanel").closeBasicInfo();
@@ -623,6 +624,7 @@ describe("キーワード検索（タイトル）", function() {
 	beforeEach(function() {
 		loadFixtures("fixture-postermap.html");
 		setPosterIcons();
+		showBookmarkIcons();
 		showPosterIcons();
 
 		initPosterMap();
@@ -817,6 +819,9 @@ describe("テスト用のファンクションのテスト", function() {
 describe("ラベルの表示切り替え機能", function() {
 	beforeEach(function() {
 		loadFixtures("fixture-postermap.html");
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
 		$("#label-id").changeLabel();
 		$("#label-sessionid").changeLabel();
 		$("#label-title").changeLabel();
@@ -977,7 +982,10 @@ describe("ブックマーク機能", function() {
 
 describe("ポスターリスト", function() {
 	beforeEach(function() {
-		loadFixtures("fixture-posterlist.html");
+		loadFixtures("fixture-posterlist.html","fixture-postermap.html");
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
 
 		initPosterMap();	
 		test = true;
