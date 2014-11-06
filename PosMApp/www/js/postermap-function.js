@@ -227,7 +227,11 @@ function changeBasicInfoPanel(flag) {
 		+ sessionStorage.getItem("authorbelongs");
 
 	var bookmarkIcon = document.getElementById("bookmarkbutton");
-	var bookmarkArr = localStorage.getItem("bookmarks").split(",");
+	var bookmarks = localStorage.getItem("bookmarks");
+	if (bookmarks == null || bookmarks == "") {
+		bookmarks = "";
+	}
+	var bookmarkArr = bookmarks.split(",");
 	var foundBookmark = false;
 	console.log(sessionStorage.getItem("posterid"));
 	for (var i = 0; i < bookmarkArr.length; i++) {
