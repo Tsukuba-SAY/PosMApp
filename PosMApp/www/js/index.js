@@ -27,21 +27,7 @@ $(function() {
 	// ポスターアイコンの作成
 	// JSONから直接呼び出す感じで
 	// とりあえずデフォルトはセッションID
-	var str = "";
-
-	for (var i = 1; i <= poster.length; i++) {
-		str += "<div class='postericonframe' id='iconNo" + i + "''>\n";
-		str += "	<div class='postericon horizontal'>\n";
-		str += "		<img id='icon" + i + "' src='img/dpic.png' " + "width='100%' height='100%'></img>\n";
-		str += "		<div class='iconindexhor' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
-		str += "	</div>\n";
-		str += "	<div id='starTopNo" + i +"' class='star-top'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "    <div id='starRightNo" + i + "' class='star-right'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "	<div id='starBottomNo" + i + "' class='star-bottom'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "	<div id='starLeftNo" + i + "' class='star-left'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "</div>\n";
-	}
-	document.getElementById("posters").innerHTML = str;
+	setPosterIcons();
 
 	// もしラベルが変更されていたらそれに変更
 	if (sessionStorage.getItem("label") != null) {
@@ -65,7 +51,7 @@ $(function() {
 
 	// ブックマークスターのタッチイベント
 	$("#bookmarkbutton").touchBookmark();
-
+	
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();

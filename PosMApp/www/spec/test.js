@@ -2,57 +2,63 @@ describe("変数の確認", function() {
 	it("posterdata.jsでposterが宣言されている", function() {
 		expect(poster).toBeDefined();
 	});
-	it("posterの長さが14である", function() {
+	it("posterの数が14である", function() {
 		expect(poster.length).toEqual(14);
 	});
 });
 
 describe("トップページ", function() {
+	beforeEach(function() {
+		loadFixtures("fixture-toppage.html");
+		$("#goToMap").goToMapPage("click");
+		$("#goToList").goToListPage("click");
+	});
 	it("トップページからポスターマップ画面に遷移できる", function() {
-		var $testdiv = $("<div>");
-		$testdiv.goToMapPage("click");
-		$testdiv.click();
+		$("#goToMap").click();
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("トップページからポスターリスト画面に遷移できる", function() {
-		var $testdiv = $("<div>");
-		$testdiv.goToListPage("click");
-		$testdiv.click();
+		$("#goToList").click();
 		expect(window.location.hash).toEqual("#posterListPage");
 	});
 });
 
 describe("タブバー", function() {
+	beforeEach(function() {
+		loadFixtures("fixture-tabbar.html");
+		$(".topPageButton").goToTopPage("click");
+		$(".posterMapPageButton").goToMapPage("click");
+		$(".posterListPageButton").goToListPage("click");
+	});
 	it("「トップ」ボタンを押すとトップページに遷移する", function() {
-		var $testdiv = $("<div>");
-		var nextPage = $testdiv.goToTopPage("click");
-		$testdiv.click();
-		expect(nextPage).toEqual("#topPage");
+		$(".topPageButton").click();
+		expect(window.location.hash).toEqual("#topPage");
 	});
 	it("「マップ」ボタンを押すとポスターマップ画面に遷移する", function() {
-		var $testdiv = $("<div>");
-		$testdiv.goToMapPage("click");
-		$testdiv.click();
+		$(".posterMapPageButton").click();
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("「リスト」ボタンを押すとポスターマップ画面に遷移する", function() {
-		var $testdiv = $("<div>");
-		$testdiv.goToListPage("click");
-		$testdiv.click();
+		$(".posterListPageButton").click();
 		expect(window.location.hash).toEqual("#posterListPage");
 	});
 });
 
 describe("ポスターマップ", function() {
 	beforeEach(function() {
+		loadFixtures("fixture-postermap.html");
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
+
+		$("#basicinfopanel").closeBasicInfo();
+
 		initPosterMap();	
 		test = true;
 	});
 
 	it("基本情報に関して、開いた状態でタップすると閉じる", function() {
-		var $bpanel = $("<div>");
-		$bpanel.closeBasicInfo();
-		$bpanel.trigger("touchstart");
+		$("#basicinfopanel").trigger("touchstart");
 		expect(sessionStorage.getItem("posterid")).toBeNull();
 		expect(sessionStorage.getItem("sessionid")).toBeNull();
 		expect(sessionStorage.getItem("title")).toBeNull();
@@ -83,11 +89,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[0].id.toString());
@@ -121,11 +124,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id.toString());
@@ -158,11 +158,8 @@ describe("ポスターマップ", function() {
 		
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toBeNull();
@@ -230,7 +227,6 @@ describe("ポスターマップ", function() {
 		expect(function() {
 			var $postericon = $("<div>");
 			$postericon.attr("id", "icon" + posterid);
-
 			$postericon.touchPoster();
 			$postericon.trigger("touchstart");
 		}).toThrow();
@@ -273,7 +269,6 @@ describe("ポスターマップ", function() {
 		expect(function() {
 			var $postericon2 = $("<div>");
 			$postericon2.attr("id", "icon" + posterid);
-
 			$postericon2.touchPoster();
 			$postericon2.trigger("touchstart");
 		}).toThrow();
@@ -316,7 +311,6 @@ describe("ポスターマップ", function() {
 		expect(function() {
 			var $postericon2 = $("<div>");
 			$postericon2.attr("id", "icon" + posterid);
-
 			$postericon2.touchPoster();
 			$postericon2.trigger("touchstart");
 		}).toThrow();
@@ -361,10 +355,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[0].id.toString());
@@ -409,10 +401,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[1].id.toString());
@@ -423,6 +413,50 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
+
+		sessionStorage.setItem("searching", "false");
+	});
+
+	it("2,3,4番目が検索にヒットしている状態かつ2番をタップしている状態で2番目のポスターをタップすると2,3,4番目が検索にヒットしている状態に戻る", function() {
+		var beforeFlag = new Array(ptotal+1);
+		var expectFlag = new Array(ptotal+1);
+		var posterid = 2;
+
+		sessionStorage.setItem("searching", "true");
+
+		beforeFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			beforeFlag[i] = "d";
+		}
+		beforeFlag[2] = "e";
+		beforeFlag[3] = "s";
+		beforeFlag[4] = "s";
+		pflag[2] = "e";
+		pflag[3] = "s";
+		pflag[4] = "s";
+
+		expectFlag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			expectFlag[i] = "d";
+		}
+		expectFlag[2] = "s";
+		expectFlag[3] = "s";
+		expectFlag[4] = "s";
+
+		expect(pflag).toEqual(beforeFlag);
+
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
+
+		expect(pflag).toEqual(expectFlag);
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(sessionStorage.getItem("sessionid")).toBeNull();
+		expect(sessionStorage.getItem("title")).toBeNull();
+		expect(sessionStorage.getItem("abstract")).toBeNull();
+		expect(sessionStorage.getItem("authorname")).toBeNull();
+		expect(sessionStorage.getItem("authorbelongs")).toBeNull();
+		expect(sessionStorage.getItem("authors")).toBeNull();
+		expect(sessionStorage.getItem("keywords")).toBeNull();
 
 		sessionStorage.setItem("searching", "false");
 	});
@@ -455,10 +489,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[2].id.toString());
@@ -501,10 +533,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toEqual(poster[6].id.toString());
@@ -548,10 +578,8 @@ describe("ポスターマップ", function() {
 
 		expect(pflag).toEqual(beforeFlag);
 		
-		var $postericon = $("<div>");
-		$postericon.attr("id", "icon" + posterid);
-		$postericon.touchPoster();
-		$postericon.trigger("touchstart");
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
 
 		expect(pflag).toEqual(expectFlag);
 		expect(sessionStorage.getItem("posterid")).toBeNull();
@@ -569,40 +597,36 @@ describe("ポスターマップ", function() {
 
 describe("詳細情報", function() {
 	beforeEach(function() {
+		loadFixtures("fixture-postermap.html", "fixture-detail.html");
+		setPosterIcons();
+		showPosterIcons();
+		$("#detailinfobutton").goToDetailPage("touchstart");
+		$("#detailBackButton").backToPreviousPage();
+
 		sessionStorage.removeItem("previousPage");
 	});
 	it("マップ画面から1番のポスターの詳細情報画面を表示し、戻るボタンを押すとマップ画面に戻る", function() {
-		var $page = $("<div>");
-
-		$page.goToTopPage("touchstart");
-		$page.trigger("touchstart");
-
-		$page.goToMapPage("touchstart");
-		$page.trigger("touchstart");
-		expect(window.location.hash).toEqual("#posterMapPage");
-
-		touchPoster(1);
-		var $detailbtn = $("<div>");
-		$detailbtn.goToDetailPage("touchstart");
-		$detailbtn.trigger("touchstart");
+		$("#icon1").touchPoster();
+		$("#icon1").trigger("touchstart");
+		$("#detailinfobutton").trigger("touchstart");
 		expect(window.location.hash).toEqual("#detailPage");
 
-		var $backbtn = $("<div>");
-		$backbtn.backToPreviousPage();
-		$backbtn.trigger("touchstart");
+		$("#detailBackButton").trigger("touchstart");
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("マップ画面を経由せず直接詳細情報画面を表示して戻るボタンを押すとマップ画面に戻る", function() {
-		var $page = $("<div>");
-		var $backbtn = $("<div>");
-		$backbtn.backToPreviousPage();
-		$backbtn.trigger("touchstart");
+		$("#detailBackButton").trigger("touchstart");
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 });
 
 describe("キーワード検索（タイトル）", function() {
 	beforeEach(function() {
+		loadFixtures("fixture-postermap.html");
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
+
 		initPosterMap();
 	});
 
@@ -612,14 +636,15 @@ describe("キーワード検索（タイトル）", function() {
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= ptotal; i++) {
-			if (i == 1 ||i == 6 || i == 10 || i == 11 || i == 12 || i == 13) {
+			if (i == 1 || i == 6 || i == 10 || i == 11 || i == 12 || i == 13) {
 				expectFlag[i] = "s";
 			} else {
 				expectFlag[i] = "d";
 			}
 		}
 		
-		searchByTitle("システム");
+		$("#search-bar-title").val("システム");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -633,7 +658,8 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		expectFlag[10] = "s";
 
-		searchByTitle("ポスター");
+		$("#search-bar-title").val("ポスター");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -647,7 +673,8 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		expectFlag[10] = "s";
 
-		searchByTitle("スター");
+		$("#search-bar-title").val("スター");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -661,7 +688,8 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		expectFlag[3] = "s";
 
-		searchByTitle("Twitter");
+		$("#search-bar-title").val("Twitter");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -675,7 +703,8 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		expectFlag[3] = "s";
 
-		searchByTitle("twitter");
+		$("#search-bar-title").val("twitter");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -688,7 +717,8 @@ describe("キーワード検索（タイトル）", function() {
 			expectFlag[i] = "d";
 		}
 
-		searchByTitle("$");
+		$("#search-bar-title").val("$");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -701,7 +731,8 @@ describe("キーワード検索（タイトル）", function() {
 			expectFlag[i] = "d";
 		}
 
-		searchByTitle(" ");
+		$("#search-bar-title").val(" ");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -714,7 +745,8 @@ describe("キーワード検索（タイトル）", function() {
 			expectFlag[i] = "d";
 		}
 
-		searchByTitle(null);
+		$("#search-bar-title").val(null);
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -731,7 +763,8 @@ describe("キーワード検索（タイトル）", function() {
 		expectFlag[1] = "t";
 		expectFlag[10] = "s";
 
-		searchByTitle("ポスター");
+		$("#search-bar-title").val("ポスター");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -747,7 +780,8 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		expectFlag[10] = "e";
 
-		searchByTitle("ポスター");
+		$("#search-bar-title").val("ポスター");
+		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
@@ -784,79 +818,66 @@ describe("テスト用のファンクションのテスト", function() {
 
 describe("ラベルの表示切り替え機能", function() {
 	beforeEach(function() {
+		loadFixtures("fixture-postermap.html");
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
+		$("#label-id").changeLabel();
+		$("#label-sessionid").changeLabel();
+		$("#label-title").changeLabel();
+		$("#label-authorname").changeLabel();
+		$("#label-authorbelongs").changeLabel();
+
 		initPosterMap();	
 		test = true;
 	});
 	it("「ID」ボタンを押すとラベルがIDに切り替わる", function() {
 		var labels = changeLabel("id");
 		var testlabel = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
-
-		$testbtn = $("<div>");
-		$testbtn.attr("id", "label-id");
-		$testbtn.changeLabel();
-		$testbtn.trigger("touchstart");
-
+		$("#label-id").trigger("touchstart");
 		expect(labels).toEqual(testlabel);
 	});
 	it("「セッションID」ボタンを押すとラベルがセッションIDに切り替わる", function() {
 		var labels = changeLabel("sessionid");
 		var testlabel = ["S01","S02","S03","S04","S05","S06","S07","S08","S09","SIT01","SIT02","SIT03","SIT04","SIT05"];
-
-		$testbtn = $("<div>");
-		$testbtn.attr("id", "label-sessionid");
-		$testbtn.changeLabel();
-		$testbtn.trigger("touchstart");
-
+		$("#label-sessionid").trigger("touchstart");
 		expect(labels).toEqual(testlabel);
 	});
 	it("「タイトル」ボタンを押すとラベルがタイトルに切り替わる", function() {
 		var labels = changeLabel("title");
 		var testlabel = ["防災・避難...","画像リプラ...","ハッシュタ...","ワインマッ...","コロコロジ...","中古教科書...","地図を用い...","予定や天候...","iBeac...","600人規...","テニススク...","施設内での...","スマートフ...","小規模グル..."];
-		
-		$testbtn = $("<div>");
-		$testbtn.attr("id", "label-title");
-		$testbtn.changeLabel();
-		$testbtn.trigger("touchstart");
-
+		$("#label-title").trigger("touchstart");
 		expect(labels).toEqual(testlabel);	
 	});
 	it("「チーム名」ボタンを押すとラベルがチーム名に切り替わる", function() {
 		var labels = changeLabel("authorname");
 		var testlabel = ["OU-LA...","_:(*'...","チームNo...","Primt...","コロジャー","りばて","ef","おちゃねこ","Rabbi...","S.A.Y...","TOMs","TKS","SAG-A...","Book-..."];
-		
-		$testbtn = $("<div>");
-		$testbtn.attr("id", "label-authorname");
-		$testbtn.changeLabel();
-		$testbtn.trigger("touchstart");
-
+		$("#label-authorname").trigger("touchstart");
 		expect(labels).toEqual(testlabel);
 	});
 	it("「大学名」ボタンを押すとラベルが大学名に切り替わる", function() {
 		var labels = changeLabel("authorbelongs");
 		var testlabel = ["千葉大学","筑波大学","筑波大学","筑波大学","筑波大学,...","東京理科大...","愛媛大学","お茶の水女...","茨城大学","筑波大学","筑波大学","筑波大学","筑波大学","筑波大学"];
-		
-		$testbtn = $("<div>");
-		$testbtn.attr("id", "label-authorbelongs");
-		$testbtn.changeLabel();
-		$testbtn.trigger("touchstart");
-
+		$("#label-authorbelongs").trigger("touchstart");
 		expect(labels).toEqual(testlabel);
 	});
 });
 
 describe("ブックマーク機能", function() {
 	beforeEach(function() {
-		initPosterMap();	
-		test = true;
+		loadFixtures("fixture-postermap.html");
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
 
+		initPosterMap();
+		$("#bookmarkbutton").touchBookmark();	
+		test = true;
 		localStorage.setItem("bookmarks", "");
 	});
 	it("何もブックマークされていない状態で、1番の星をタップすると、1番のポスターがブックマークされる", function() {
 		sessionStorage.setItem("posterid", 1);
-		var $teststar = $("<div>");
-		$teststar.attr("id", "#bookmarkbutton");
-		$teststar.touchBookmark();
-		$teststar.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "1";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -865,10 +886,7 @@ describe("ブックマーク機能", function() {
 	it("何もブックマークされていない状態で、すべての星をタップすると、すべてのポスターがブックマークされる", function() {
 		for (var i = 1; i <= ptotal; i++) {
 			sessionStorage.setItem("posterid", i);
-			var $teststar = $("<div>");
-			$teststar.attr("id", "#bookmarkbutton");
-			$teststar.touchBookmark();
-			$teststar.trigger("touchstart");
+			$("#bookmarkbutton").trigger("touchstart");
 		}
 		var expectBookmarks = "1,2,3,4,5,6,7,8,9,10,11,12,13,14";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -877,11 +895,7 @@ describe("ブックマーク機能", function() {
 	it("1番のポスターがブックマークされている状態で、1番の星をタップすると、何もブックされていない状態になる", function() {
 		localStorage.setItem("bookmarks", "1");
 		sessionStorage.setItem("posterid", 1);
-
-		var $teststar = $("<div>");
-		$teststar.attr("id", "#bookmarkbutton");
-		$teststar.touchBookmark();
-		$teststar.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -890,32 +904,19 @@ describe("ブックマーク機能", function() {
 	it("1番のポスターがブックマークされている状態で、2番の星をタップすると、1,2番のポスターがブックマークされた状態になる", function() {
 		localStorage.setItem("bookmarks", "1");
 		sessionStorage.setItem("posterid", 2);
-
-		var $teststar = $("<div>");
-		$teststar.attr("id", "#bookmarkbutton");
-		$teststar.touchBookmark();
-		$teststar.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "1,2";
 		var bookmarks = localStorage.getItem("bookmarks");
 		expect(bookmarks).toEqual(expectBookmarks);
 	});
 	it("何もブックマークされていない状態で、4,5,6番の星をタップすると、4,5,6番のポスターがブックマークされた状態になる", function() {
-		var $teststar1 = $("<div>");
-		var $teststar2 = $("<div>");
-		var $teststar3 = $("<div>");
-		$teststar1.attr("id", "#bookmarkbutton");
 		sessionStorage.setItem("posterid", 4);
-		$teststar1.touchBookmark();
-		$teststar1.trigger("touchstart");
-		$teststar2.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 5);
-		$teststar2.touchBookmark();
-		$teststar2.trigger("touchstart");
-		$teststar3.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 6);
-		$teststar3.touchBookmark();
-		$teststar3.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "4,5,6";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -923,21 +924,12 @@ describe("ブックマーク機能", function() {
 	});
 	it("4番のポスターがブックマークされている状態で、4,5,6番の星をタップすると、5,6番のポスターがブックマークされた状態になる", function() {
 		localStorage.setItem("bookmarks", "4");
-		var $teststar1 = $("<div>");
-		var $teststar2 = $("<div>");
-		var $teststar3 = $("<div>");
-		$teststar1.attr("id", "#bookmarkbutton");
 		sessionStorage.setItem("posterid", 4);
-		$teststar1.touchBookmark();
-		$teststar1.trigger("touchstart");
-		$teststar2.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 5);
-		$teststar2.touchBookmark();
-		$teststar2.trigger("touchstart");
-		$teststar3.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 6);
-		$teststar3.touchBookmark();
-		$teststar3.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "5,6";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -945,21 +937,12 @@ describe("ブックマーク機能", function() {
 	});
 	it("5,6番のポスターがブックマークされている状態で、4,5,6番の星をタップすると、4番のポスターがブックマークされた状態になる", function() {
 		localStorage.setItem("bookmarks", "5,6");
-		var $teststar1 = $("<div>");
-		var $teststar2 = $("<div>");
-		var $teststar3 = $("<div>");
-		$teststar1.attr("id", "#bookmarkbutton");
 		sessionStorage.setItem("posterid", 4);
-		$teststar1.touchBookmark();
-		$teststar1.trigger("touchstart");
-		$teststar2.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 5);
-		$teststar2.touchBookmark();
-		$teststar2.trigger("touchstart");
-		$teststar3.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 6);
-		$teststar3.touchBookmark();
-		$teststar3.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "4";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -967,21 +950,12 @@ describe("ブックマーク機能", function() {
 	});
 	it("4,5,6番のポスターがブックマークされている状態で、4,5,6番の星をタップすると、何もブックマークされていない状態になる", function() {
 		localStorage.setItem("bookmarks", "4,5,6");
-		var $teststar1 = $("<div>");
-		var $teststar2 = $("<div>");
-		var $teststar3 = $("<div>");
-		$teststar1.attr("id", "#bookmarkbutton");
 		sessionStorage.setItem("posterid", 4);
-		$teststar1.touchBookmark();
-		$teststar1.trigger("touchstart");
-		$teststar2.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 5);
-		$teststar2.touchBookmark();
-		$teststar2.trigger("touchstart");
-		$teststar3.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 6);
-		$teststar3.touchBookmark();
-		$teststar3.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -990,35 +964,29 @@ describe("ブックマーク機能", function() {
 	it("0番の星をタップすると、例外が発生する", function() {
 		expect(function() {
 			sessionStorage.setItem("posterid", 0);
-
-			var $teststar = $("<div>");
-			$teststar.attr("id", "#bookmarkbutton");
-			$teststar.touchBookmark();
-			$teststar.trigger("touchstart");
+			$("#bookmarkbutton").trigger("touchstart");
 		}).toThrow();
 	});
 	it("ポスター数+1番の星をタップすると、例外が発生する", function() {
 		expect(function() {
 			sessionStorage.setItem("posterid", ptotal + 1);
-
-			var $teststar = $("<div>");
-			$teststar.attr("id", "#bookmarkbutton");
-			$teststar.touchBookmark();
-			$teststar.trigger("touchstart");
+			$("#bookmarkbutton").trigger("touchstart");
 		}).toThrow();
 	});
 	it("ポスター数にnullを指定すると、例外が発生する", function() {
 		expect(function() {
-			var $teststar = $("<div>");
-			$teststar.attr("id", "#bookmarkbutton");
-			$teststar.touchBookmark();
-			$teststar.trigger("touchstart");
+			$("#bookmarkbutton").trigger("touchstart");
 		}).toThrow();
 	});
 });
 
 describe("ポスターリスト", function() {
 	beforeEach(function() {
+		loadFixtures("fixture-posterlist.html","fixture-postermap.html");
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
+
 		initPosterMap();	
 		test = true;
 
@@ -1026,8 +994,7 @@ describe("ポスターリスト", function() {
 	});
 
 	it("正しい順番（ID順）でポスターの一覧が表示されている", function() {
-		$testdiv = $("<div>");
-		var posters = $testdiv.showPosterList();
+		var posters = $("#posterList").showPosterList();
 		var expectIds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
 		expect(expectIds).toEqual(posters["id"]);
 	});
