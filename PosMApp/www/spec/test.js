@@ -860,17 +860,19 @@ describe("ラベルの表示切り替え機能", function() {
 
 describe("ブックマーク機能", function() {
 	beforeEach(function() {
-		initPosterMap();	
-		test = true;
+		loadFixtures("fixture-postermap.html");
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
 
+		initPosterMap();
+		$("#bookmarkbutton").touchBookmark();	
+		test = true;
 		localStorage.setItem("bookmarks", "");
 	});
 	it("何もブックマークされていない状態で、1番の星をタップすると、1番のポスターがブックマークされる", function() {
 		sessionStorage.setItem("posterid", 1);
-		var $teststar = $("<div>");
-		$teststar.attr("id", "#bookmarkbutton");
-		$teststar.touchBookmark();
-		$teststar.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "1";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -879,10 +881,7 @@ describe("ブックマーク機能", function() {
 	it("何もブックマークされていない状態で、すべての星をタップすると、すべてのポスターがブックマークされる", function() {
 		for (var i = 1; i <= ptotal; i++) {
 			sessionStorage.setItem("posterid", i);
-			var $teststar = $("<div>");
-			$teststar.attr("id", "#bookmarkbutton");
-			$teststar.touchBookmark();
-			$teststar.trigger("touchstart");
+			$("#bookmarkbutton").trigger("touchstart");
 		}
 		var expectBookmarks = "1,2,3,4,5,6,7,8,9,10,11,12,13,14";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -891,11 +890,7 @@ describe("ブックマーク機能", function() {
 	it("1番のポスターがブックマークされている状態で、1番の星をタップすると、何もブックされていない状態になる", function() {
 		localStorage.setItem("bookmarks", "1");
 		sessionStorage.setItem("posterid", 1);
-
-		var $teststar = $("<div>");
-		$teststar.attr("id", "#bookmarkbutton");
-		$teststar.touchBookmark();
-		$teststar.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -904,32 +899,19 @@ describe("ブックマーク機能", function() {
 	it("1番のポスターがブックマークされている状態で、2番の星をタップすると、1,2番のポスターがブックマークされた状態になる", function() {
 		localStorage.setItem("bookmarks", "1");
 		sessionStorage.setItem("posterid", 2);
-
-		var $teststar = $("<div>");
-		$teststar.attr("id", "#bookmarkbutton");
-		$teststar.touchBookmark();
-		$teststar.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "1,2";
 		var bookmarks = localStorage.getItem("bookmarks");
 		expect(bookmarks).toEqual(expectBookmarks);
 	});
 	it("何もブックマークされていない状態で、4,5,6番の星をタップすると、4,5,6番のポスターがブックマークされた状態になる", function() {
-		var $teststar1 = $("<div>");
-		var $teststar2 = $("<div>");
-		var $teststar3 = $("<div>");
-		$teststar1.attr("id", "#bookmarkbutton");
 		sessionStorage.setItem("posterid", 4);
-		$teststar1.touchBookmark();
-		$teststar1.trigger("touchstart");
-		$teststar2.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 5);
-		$teststar2.touchBookmark();
-		$teststar2.trigger("touchstart");
-		$teststar3.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 6);
-		$teststar3.touchBookmark();
-		$teststar3.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "4,5,6";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -937,21 +919,12 @@ describe("ブックマーク機能", function() {
 	});
 	it("4番のポスターがブックマークされている状態で、4,5,6番の星をタップすると、5,6番のポスターがブックマークされた状態になる", function() {
 		localStorage.setItem("bookmarks", "4");
-		var $teststar1 = $("<div>");
-		var $teststar2 = $("<div>");
-		var $teststar3 = $("<div>");
-		$teststar1.attr("id", "#bookmarkbutton");
 		sessionStorage.setItem("posterid", 4);
-		$teststar1.touchBookmark();
-		$teststar1.trigger("touchstart");
-		$teststar2.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 5);
-		$teststar2.touchBookmark();
-		$teststar2.trigger("touchstart");
-		$teststar3.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 6);
-		$teststar3.touchBookmark();
-		$teststar3.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "5,6";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -959,21 +932,12 @@ describe("ブックマーク機能", function() {
 	});
 	it("5,6番のポスターがブックマークされている状態で、4,5,6番の星をタップすると、4番のポスターがブックマークされた状態になる", function() {
 		localStorage.setItem("bookmarks", "5,6");
-		var $teststar1 = $("<div>");
-		var $teststar2 = $("<div>");
-		var $teststar3 = $("<div>");
-		$teststar1.attr("id", "#bookmarkbutton");
 		sessionStorage.setItem("posterid", 4);
-		$teststar1.touchBookmark();
-		$teststar1.trigger("touchstart");
-		$teststar2.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 5);
-		$teststar2.touchBookmark();
-		$teststar2.trigger("touchstart");
-		$teststar3.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 6);
-		$teststar3.touchBookmark();
-		$teststar3.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "4";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -981,21 +945,12 @@ describe("ブックマーク機能", function() {
 	});
 	it("4,5,6番のポスターがブックマークされている状態で、4,5,6番の星をタップすると、何もブックマークされていない状態になる", function() {
 		localStorage.setItem("bookmarks", "4,5,6");
-		var $teststar1 = $("<div>");
-		var $teststar2 = $("<div>");
-		var $teststar3 = $("<div>");
-		$teststar1.attr("id", "#bookmarkbutton");
 		sessionStorage.setItem("posterid", 4);
-		$teststar1.touchBookmark();
-		$teststar1.trigger("touchstart");
-		$teststar2.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 5);
-		$teststar2.touchBookmark();
-		$teststar2.trigger("touchstart");
-		$teststar3.attr("id", "#bookmarkbutton");
+		$("#bookmarkbutton").trigger("touchstart");
 		sessionStorage.setItem("posterid", 6);
-		$teststar3.touchBookmark();
-		$teststar3.trigger("touchstart");
+		$("#bookmarkbutton").trigger("touchstart");
 
 		var expectBookmarks = "";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -1004,29 +959,18 @@ describe("ブックマーク機能", function() {
 	it("0番の星をタップすると、例外が発生する", function() {
 		expect(function() {
 			sessionStorage.setItem("posterid", 0);
-
-			var $teststar = $("<div>");
-			$teststar.attr("id", "#bookmarkbutton");
-			$teststar.touchBookmark();
-			$teststar.trigger("touchstart");
+			$("#bookmarkbutton").trigger("touchstart");
 		}).toThrow();
 	});
 	it("ポスター数+1番の星をタップすると、例外が発生する", function() {
 		expect(function() {
 			sessionStorage.setItem("posterid", ptotal + 1);
-
-			var $teststar = $("<div>");
-			$teststar.attr("id", "#bookmarkbutton");
-			$teststar.touchBookmark();
-			$teststar.trigger("touchstart");
+			$("#bookmarkbutton").trigger("touchstart");
 		}).toThrow();
 	});
 	it("ポスター数にnullを指定すると、例外が発生する", function() {
 		expect(function() {
-			var $teststar = $("<div>");
-			$teststar.attr("id", "#bookmarkbutton");
-			$teststar.touchBookmark();
-			$teststar.trigger("touchstart");
+			$("#bookmarkbutton").trigger("touchstart");
 		}).toThrow();
 	});
 });
