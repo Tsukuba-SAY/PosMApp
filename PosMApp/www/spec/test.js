@@ -977,6 +977,8 @@ describe("ブックマーク機能", function() {
 
 describe("ポスターリスト", function() {
 	beforeEach(function() {
+		loadFixtures("fixture-posterlist.html");
+
 		initPosterMap();	
 		test = true;
 
@@ -984,8 +986,7 @@ describe("ポスターリスト", function() {
 	});
 
 	it("正しい順番（ID順）でポスターの一覧が表示されている", function() {
-		$testdiv = $("<div>");
-		var posters = $testdiv.showPosterList();
+		var posters = $("#posterList").showPosterList();
 		var expectIds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
 		expect(expectIds).toEqual(posters["id"]);
 	});
