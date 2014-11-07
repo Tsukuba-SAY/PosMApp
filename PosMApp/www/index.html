@@ -21,6 +21,8 @@
 	</script>
 	<script type="text/javascript" charset="utf-8" src="js/lib/hammer.min.js">
 	</script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.hammer.js">
+	</script>
 	
 
 	<script type="text/javascript" charset="utf-8" src="js/toppage-function.js">
@@ -82,7 +84,7 @@
 	<!-- ポスターマップ画面 -->
 	<div data-role="page" id="posterMapPage">
 
-		<div data-role="header" data-tap-toggle="false" data-position:"fixed">
+		<div data-role="header" data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
 			<input type="search" id="search-bar-title"  
 		    	placeholder="タイトルで検索" onchange="searchChanged(this)"/>
 		</div>
@@ -100,12 +102,14 @@
 				</div>
 			</div>
 			<!-- ポスターマップ本体 -->
-			<div id="mapMain">
-				<!-- ポスターマップ表示 -->
-				<img src="img/postermap.png" border="0"  width="600"
-					style="position: relative; z-index: 1;"></img>
-				<!-- ポスターアイコン -->
-				<div id="posters"></div>
+			<div id="mapFrame" style="z-index: 255;width:600;background-color:#FFFFFF">
+				<div id="mapMain">
+					<!-- ポスターマップ表示 -->
+					<img src="img/postermap.png" border="0"  width="600"
+						style="position: relative; z-index: 1;"></img>
+					<!-- ポスターアイコン -->
+					<div id="posters"></div>
+				</div>
 			</div>
 			<!-- 基本情報パネル -->
 			<div style="position: relative;">

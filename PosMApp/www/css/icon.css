@@ -26,6 +26,17 @@
 	z-index: 4;
 }
 
+#mapMain{
+	transform: scale(1, 1);
+	transition: all .3s;
+	touch-action: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none; 
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+}
+
+
 #basicinfo{
 	position: fixed;
 	width: 100%;

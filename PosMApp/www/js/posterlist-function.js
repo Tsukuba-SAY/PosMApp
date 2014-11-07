@@ -27,7 +27,7 @@ $.fn.showPosterList = function() {
 	$(this).html(str);
 
 	return posters;
-}
+};
 
 //ポスターリスト画面の各「詳細情報」ボタンをクリックする時
 $.fn.jumpToDetailPage = function() {
@@ -37,7 +37,7 @@ $.fn.jumpToDetailPage = function() {
 		sessionStorage.setItem("previousPage", "posterListPage");
 		listToDetail(posterid);
 	});
-}
+};
 
 //ポスターリスト画面の各「これどこ？」ボタンをクリックする時
 $.fn.jumpToMapPage = function() {
@@ -46,7 +46,7 @@ $.fn.jumpToMapPage = function() {
 		var posterid = Number(e.target.id.substring(9));
 		listToMap(posterid);
 	});
-}
+};
 
 //ポスターの発表者を取得する
 function getAuthors(posterid){
