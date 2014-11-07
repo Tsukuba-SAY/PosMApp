@@ -987,6 +987,10 @@ describe("ポスターリスト", function() {
 		showBookmarkIcons();
 		showPosterIcons();
 
+		$("#posterList").showPosterList();
+		$(".listToMapBtn").jumpToMapPage();
+		$(".listToDetailBtn").jumpToDetailPage();
+
 		initPosterMap();	
 		test = true;
 
@@ -1004,6 +1008,7 @@ describe("ポスターリスト", function() {
 			+ p["id"].toString() + "番のポスターの詳細情報が表示される", function() {
 			expect(sessionStorage.getItem("posterid")).toBeNull();
 
+			$("#listToDetail"+p["id"]).trigger("touchstart");
 
 			listToDetail(p["id"]);
 			expect(sessionStorage.getItem("posterid")).toEqual(p["id"].toString());
