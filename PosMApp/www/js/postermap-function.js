@@ -565,12 +565,12 @@ function windowManager () {
 
     var mc = new Hammer.Manager($("#mapFrame")[0]);
 
-    mc.add(new Hammer.Pan({ threshold: 0, pointers: 1 }));
+    mc.add(new Hammer.Pan());
     // mc.add(new Hammer.Swipe()).recognizeWith(mc.get('pan'));
     // mc.add(new Hammer.Rotate({ threshold: 0 })).recognizeWith(mc.get('pan'));
     // mc.add(new Hammer.Pinch({ threshold: 0 })).recognizeWith(mc.get('rotate'));
     mc.add(new Hammer.Pinch());
-    // mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
+    mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
     // mc.add(new Hammer.Tap());
 
     mc.on("panstart panmove", onPan);
@@ -578,7 +578,7 @@ function windowManager () {
     mc.on("pinchstart pinchmove", onPinch);
     // mc.on("swipe", onSwipe);
     // mc.on("tap", onTap);
-    // mc.on("doubletap", onDoubleTap);
+    mc.on("doubletap", onDoubleTap);
 
     el.className = 'animate';
     transform = {
@@ -678,17 +678,17 @@ function windowManager () {
     //     // requestElementUpdate();
     // }
 
-    // function onDoubleTap(ev) {
-    // 	console.log("double tap");
-    //     // transform.rx = 1;
-    //     // transform.angle = 80;
+    function onDoubleTap(ev) {
+    	console.log("double tap");
+        transform.translate = {
+            x: ev.deltaX,
+            y: ev.deltaY
+        };
+        transform.scale = window.innerWidth / STATIC_WIDTH;
 
-    //     // clearTimeout(timer);
-    //     // timer = setTimeout(function () {
-    //     //     resetElement();
-    //     // }, 500);
-    //     // requestElementUpdate();
-    // }
+
+        requestElementUpdate();
+    }
 
   //  resetElement();
 
