@@ -8,7 +8,7 @@ $.fn.backToPreviousPage = function() {
 		window.location.href = "#" + prev;
 		// window.history.back();
 	});
-}
+};
 
 // ポスターマップ画面に遷移
 $.fn.goToMapPage = function(ev) {
@@ -18,7 +18,7 @@ $.fn.goToMapPage = function(ev) {
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 	});	
-}
+};
 
 // リスト画面に遷移
 $.fn.goToListPage = function(ev) {
@@ -28,7 +28,7 @@ $.fn.goToListPage = function(ev) {
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
 	});	
-}
+};
 
 // タブのボタン
 // トップページボタン
@@ -40,7 +40,7 @@ $.fn.goToTopPage = function(ev) {
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 	});
-}
+};
 
 function setDetails() {
 	$("#detail-posterid").html(sessionStorage.getItem("posterid"));

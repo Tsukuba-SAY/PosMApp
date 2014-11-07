@@ -43,7 +43,7 @@ $.fn.goToDetailPage = function(ev) {
 		setDetails();
 		changePage("#detailPage");
 	});
-}
+};
 
 // 各ポスターアイコンのタッチイベント
 $.fn.touchPoster = function() {
@@ -56,7 +56,7 @@ $.fn.touchPoster = function() {
 		pflag[posterid] = nextFlag;
 		showPosterIcons();
 	});
-}
+};
 
 // 基本情報画面を閉じる
 $.fn.closeBasicInfo = function() {
@@ -66,7 +66,7 @@ $.fn.closeBasicInfo = function() {
 		showPosterIcons();
 		//resetAllIcons();
 	});	
-}
+};
 
 // ラベルを変更する
 $.fn.changeLabel = function() {
@@ -76,7 +76,7 @@ $.fn.changeLabel = function() {
 		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
 		changeLabel(id.substr(id.indexOf("-") + 1));
 	});
-}
+};
 
 // ブックマークスターのタッチイベント
 $.fn.touchBookmark = function() {
@@ -85,7 +85,7 @@ $.fn.touchBookmark = function() {
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
 		touchBookmark(posterid, bookmarkIcon);
 	});	
-}
+};
 
 // ポスターアイコンをセットする
 function setPosterIcons() {
@@ -541,8 +541,8 @@ function windowManager () {
 	var STATIC_WIDTH =  600;
 	var scale = window.innerWidth / STATIC_WIDTH;
 
-	var $mapMain = $('#mapMain');
-	$mapMain.css("zoom", scale);
+	// var $mapMain = $('#mapMain');
+	// $mapMain.css("zoom", scale);
 
     var reqAnimationFrame = (function () {
         return window[Hammer.prefixed(window, 'requestAnimationFrame')] || function (callback) {
@@ -583,16 +583,17 @@ function windowManager () {
     el.className = 'animate';
     transform = {
         translate: { x: START_X, y: START_Y },
-        scale: 1
+        scale: window.innerWidth / STATIC_WIDTH
     };
+    updateElementTransform();
 
-    function resetElement() {
-        // el.className = 'animate';
-        // transform = {
-        //     translate: { x: START_X, y: START_Y },
-        //     scale: 1
-        // };
-    }
+    // function resetElement() {
+    //     el.className = 'animate';
+    //     transform = {
+    //         translate: { x: START_X, y: START_Y },
+    //         scale: window.innerWidth / STATIC_WIDTH
+    //     };
+    // }
 
     function updateElementTransform() {
         var value = [
@@ -609,21 +610,18 @@ function windowManager () {
     }
 
     function requestElementUpdate() {
-        if(!ticking) {
-            reqAnimationFrame(updateElementTransform);
-            ticking = false;
-        }
+    	reqAnimationFrame(updateElementTransform);
     }
     
     function onPan(ev) {
     	console.log("pan");
         el.className = '';
         transform.translate = {
-            x: ev.deltaX,
+            x: ev.deltaX ,
             y: ev.deltaY
         };
 
-        requestElementUpdate();
+      	requestElementUpdate();
     }
 
     var initScale = 1;
@@ -681,16 +679,13 @@ function windowManager () {
     function onDoubleTap(ev) {
     	console.log("double tap");
         transform.translate = {
-            x: ev.deltaX,
-            y: ev.deltaY
+            x: START_X,
+            y: START_Y
         };
         transform.scale = window.innerWidth / STATIC_WIDTH;
 
-
         requestElementUpdate();
     }
-
-  //  resetElement();
 
 
 }
