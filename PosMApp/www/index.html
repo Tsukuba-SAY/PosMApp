@@ -10,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="css/icon.css" />
 	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
 	<link rel="stylesheet" type="text/css" href="css/list.css" />
+	<link rel="stylesheet" href="js/SlickNav-master/slicknav.css" />
+      
 
 	<!-- DB用ポスターデータ -->
 	<script type="text/javascript" charset="utf-8" src="js/posterdata.js">
@@ -40,15 +42,18 @@
 
 <body>
 	<!-- トップメニュー画面 -->
-	<div data-role="page" id="topPage">
+	<div data-role="page" id="topPage" style="background-color: #D2DEEF" >
 		<div data-role="header">
-			<h1>PosMApp</h1>
+			<h1 >PosMApp</h1>
 		</div>
-		<div data-role="content">
-		<div align="center">
-			<h2>日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></h2>
-		</div>
-		<table class="table-topmenu" align="center">
+		<div data-role="content"  >
+			<div align="center">
+            	<h1 style="color:#0033FF; font-size:500%">PosMApp<h1>
+            </div>
+			<div align="center">
+				<h2>日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></h2>
+			</div>
+		<table class="table-topmenu" align="center" >
 			<tr>
 				<td>
 					<div align="center">
@@ -83,9 +88,29 @@
 
 	<!-- ポスターマップ画面 -->
 	<div data-role="page" id="posterMapPage">
-
-		<div data-role="header" data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
-			<input type="search" id="search-bar-title"  
+		<!-- タブバー -->
+		<!--
+		<div class="ui-grid-c">
+			<div class="ui-block-a">
+				<a class="posterMapPageButton" data-role="button" href="#posterMapPage">マップ</a>
+			</div>
+			<div class="ui-block-b">
+				<a class="posterListPageButton" data-role="button" href="#posterListPage">一覧</a>
+			</div>
+			<div class="ui-block-c">
+				<a data-role="button" href="" class="ui-disabled">ブックマーク</a>
+			</div>
+			<div class="ui-block-d">
+				<a data-role="button" href="" class="ui-disabled">情報</a>
+			</div>			
+		</div>
+		-->
+		<div data-role="header">
+			<h1 style="text-align:center"　>MAP</h1>
+			
+		</div>
+		<div data-role="header"　data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
+			<input type="search" id="search-bar-title"
 		    	placeholder="タイトルで検索" onchange="searchChanged(this)"/>
 		</div>
 		<div style="position: relative;">
@@ -125,11 +150,11 @@
 		</div>
 
 		<!-- タブバー -->
-		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
-			<div data-role="navbar" height="100%" data-position="buttom">
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
+			<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
 				<ul>
 					<li><a class="topPageButton" data-role="button" href="#topPage" data-icon="home-black">トップ</a></li>
-					<li><a class="posterMapPageButton" data-role="button" data-icon="map" href="#posterMapPage">マップ</a></li>
+					<li><a class="posterMapPageButton" id="map" data-icon="custom" href="#posterMapPage">マップ</a></li>
 					<li><a class="posterListPageButton" data-role="button" data-icon="list" href="#posterListPage">一覧</a></li>
 					<li><a data-role="button" href="" data-icon="bookmarkgray" class="ui-disabled">ブックマーク</a></li>
 					<li><a data-role="button" href="" data-icon="informationgray" class="ui-disabled">情報</a></li>
@@ -142,7 +167,7 @@
 	<div data-role="page" id="detailPage">
 		<div data-role="header">
 			<h1 style="text-align:center"　>詳細情報</h1>
-			<a href="#" class="ui-btn-left" id="detailBackButton" >戻る</a>
+			<a href="#" class="ui-btn-left"  data-icon="carat-l" id="detailBackButton" >戻る</a>
 		</div>
 		<div data-role="content">
 			No. <span id="detail-posterid"></span> [<span id="detail-sessionid"></span>]
@@ -204,7 +229,7 @@
 	<div data-role="page" id="changeLabelDialog">
 		<div data-role="header">
 			<h1>ラベルの表示切り替え</h1>
-		</div>
+		</div> 
 		<div data-role="content">
 			<a class="changelabel" id="label-id"
 				href="#posterMapPage" data-role="button">ID</a>
