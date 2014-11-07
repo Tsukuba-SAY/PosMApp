@@ -68,13 +68,6 @@ $.fn.closeBasicInfo = function() {
 	});	
 };
 
-// 
-$.fn.detailBackButton = function() {
-	$(this).on("touchstart", function(e) {
-		$("#search-bar-title").toggle();
-	});
-}
-
 // ラベルを変更する
 $.fn.changeLabel = function() {
 	$(this).on("touchstart", function(e) {
@@ -258,9 +251,6 @@ function changeBasicInfoPanel(flag) {
 // タイトルで検索
 // SQLをかけたいのでDBにアクセスしてるけどjsonでも同じことはできる
 function searchByTitle(title) {
-	if (title == null || title.trim() == "") {
-		return pflag;
-	}
 
 	if (title.length >= 1024) {
 		throw new Exception();
