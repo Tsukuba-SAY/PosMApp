@@ -7,19 +7,19 @@ $.fn.showPosterList = function() {
 	posters["author"] = new Array();
 
 	var str = "";
-	str += '<table border="1" rules="rows">';
+	str += '<table border="1" rules="rows" >';
 	//postdataをループする、各ポスターの情報を取り出す
 	for (var i = 0; i < poster.length; i++) {
 		posters["id"].push(poster[i].id.toString());
 		posters["sessionid"].push(poster[i].sessionid);
 		posters["title"].push(poster[i].title);
 		posters["author"].push(getAuthors(i+1));
-		str += "<tr><td><div>ID:" + poster[i].id + "</div>";
-		str += "<div>Sessionid:" + poster[i].sessionid + "</div>";
-		str += "<div>Title:" + poster[i].title + "</div>";
-		str += "<div>Author:" + getAuthors(i+1) + "</div></td>";
-		str += "<td><div><img class='listToDetailBtn' id='listToMap"+poster[i].id.toString()+"' src='img/detailinfo.png' style='zoom: 10%;'></img></div>";
-		str += "<div><img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 15%;'></img></div>";
+		str += "<tr><td><div>ID:" + poster[i].id + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img><br>";
+		str += "Sessionid:" + poster[i].sessionid + "<br>";
+		str += "Title:" + poster[i].title + "<br>";
+		str += "Author:" + getAuthors(i+1) + "<br></td>";
+		str += "<td><div><td><img  class='listToDetailBtn' id='listToMap"+poster[i].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
+		//str += "<div><img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 15%;'></img></div>";
 		//str += '<table><tr><td><a data-role = "button" class = "listToMapBtn" id = "listToMap' + poster[i].id.toString() + '">これどこ？</a></td><td><a data-role = "button" class = "listToDetailBtn" id = "listToMap' + poster[i].id.toString() + '">詳細情報</a></td></tr></table></td></tr>';
 	}
 	str += '</table>'
