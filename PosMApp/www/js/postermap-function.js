@@ -596,6 +596,8 @@ function windowManager () {
     // }
 
     function updateElementTransform() {
+        transform.scale=(transform.scale>=2.0) ? 2.0 : transform.scale;
+        transform.scale=(transform.scale<=0.5) ? 0.5 : transform.scale;
         var value = [
         	'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
         	'scale(' + transform.scale + ', ' + transform.scale + ')'
