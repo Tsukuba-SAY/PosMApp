@@ -14,143 +14,15 @@ var test = false;
 var labelmax = 5;
 
 // Local DB (WebSQL DB) を開く
-var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
+// 現在未使用
+// var db = openDatabase("PosMAppDB", "", "PosMAppDB", 1000);
 
 // ポスターの総件数
 var ptotal;
 
 
-//HTMLが呼ばれた時の初期化処理
-$(function() {
-	init();
-
-	initDB();
-
-	// 基本情報が選択されていたらそのポスターを強調表示
-	if (sessionStorage.getItem("posterid") != null) {
-		changeBasicInfoPanel(true);
-		pflag[sessionStorage.getItem("posterid")] = "t";
-	}
-
-	// 検索中状態だったら検索にヒットしたポスターを強調表示
-	// FIXME:もう一度検索しているので読み込み時遅くなる
-	if (sessionStorage.getItem("searching") == "true") {
-		document.getElementById("search-title").value = sessionStorage.getItem("searchWord");
-		searchByTitle(sessionStorage.getItem("searchWord"));
-	}
-
-	// もしLocal Storageにbookmarksがなければ追加
-	if (localStorage.getItem("bookmarks") == null) {
-		localStorage.setItem("bookmarks", "");
-	}
-
-	// ポスターアイコンの作成
-	// JSONから直接呼び出す感じで
-	// とりあえずデフォルトはセッションID
-	var str = "";
-
-	for (var i = 1; i <= poster.length; i++) {
-		str += "<div class='postericonframe' id='iconNo" + i + "''>\n";
-		str += "	<div class='postericon horizontal'>\n";
-		str += "		<img id='icon" + i + "' src='img/dpic.png' " + "width='100%' height='100%'></img>\n";
-		str += "		<div class='iconindexhor' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
-		str += "	</div>\n";
-		str += "	<div id='starTopNo" + i +"' class='star-top'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "    <div id='starRightNo" + i + "' class='star-right'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "	<div id='starBottomNo" + i + "' class='star-bottom'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "	<div id='starLeftNo" + i + "' class='star-left'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "</div>\n";
-	}
-	document.getElementById("posters").innerHTML = str;
-
-	// もしラベルが変更されていたらそれに変更
-	if (sessionStorage.getItem("label") != null) {
-		changeLabel(sessionStorage.getItem("label"));
-	}
-
-	// マップ上にブックマークスターをつける
-	showBookmarkIcons();
-
-	// 各ポスターアイコンのタッチイベント
-	$(".postericon").on("touchstart", function(e) {
-		// ポスターのIDを取得する
-		var posterid = Number(e.target.id.substring(4));
-
-		var nextFlag = touchPoster(posterid);
-
-		pflag[posterid] = nextFlag;
-		showPosterIcons();
-	});
-
-	// 詳細情報画面を表示する
-	$("#detailinfobutton").on("touchstart", function(e) {
-		window.location.href = "detail.html";
-	});
-
-	// 基本情報画面の閉じるボタンを押す
-	$("#basicinfo").on("touchstart", function(e) {
-		changeBasicInfoPanel(false);
-		unselectPoster();
-		showPosterIcons();
-		//resetAllIcons();
-	});
-
-	// タイトルで検索
-	$("#search-title").bind("change", function(e, ui) {
-		if (e.target.value.trim() != "" && e.target.value != null) {
-			
-			// 検索し、強調表示する
-			searchByTitle(e.target.value);
-
-			// 検索中フラグを立てる
-			sessionStorage.setItem("searching", "true");
-			sessionStorage.setItem("searchWord", e.target.value);
-
-		} else {
-			// 検索中フラグを折る
-			sessionStorage.removeItem("searching");
-			sessionStorage.removeItem("searchWord");
-
-			// 各ポスターに対して検索中状態から未検索状態へフラグを変化させる
-			for (var i = 1; i <= ptotal; i++) {
-				// 検索中強調表示ならばただの強調表示に、ヒット状態なら元に戻す
-				if (pflag[i] == "e") {
-					pflag[i] = "t";
-				} else if (pflag[i] == "s") {
-					pflag[i] = "d";
-				}
-			}
-
-			document.getElementById("searchResult").innerHTML = "";
-		}
-
-		showPosterIcons();
-		this.blur();
-	});
-
-	// ラベルを変更する
-	$(".changelabel").on("touchstart", function(e) {
-		// 押されたボタンのidを取得する
-		var id = $(this).attr("id");
-		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
-		changeLabel(id.substr(id.indexOf("-") + 1));
-	})
-
-	// ブックマークスターのタッチイベント
-	$("#bookmarkbutton").on("touchstart", function(e) {
-		var posterid = parseInt(sessionStorage.getItem("posterid"));
-		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		touchBookmark(posterid, bookmarkIcon);
-	});
-
-	// ポスターアイコンを表示
-	// TODO:showじゃなくて別の単語に変えたい
-	showPosterIcons();
-});
-
-
 // グローバル変数の初期化処理
-function init() {
+function initPosterMap() {
 
 	// ポスターの件数をセットする
 	ptotal = poster.length;
@@ -164,6 +36,56 @@ function init() {
 	}
 }
 
+// 詳細情報画面を表示する
+$.fn.goToDetailPage = function(ev) {
+	$(this).on(ev, function(e) {
+		sessionStorage.setItem("previousPage", "posterMapPage");
+		setDetails();
+		changePage("#detailPage");
+	});
+}
+
+// 各ポスターアイコンのタッチイベント
+$.fn.touchPoster = function() {
+	$(this).on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(4));
+
+		var nextFlag = touchPoster(posterid);
+
+		pflag[posterid] = nextFlag;
+		showPosterIcons();
+	});
+}
+
+// 基本情報画面を閉じる
+$.fn.closeBasicInfo = function() {
+	$(this).on("touchstart", function(e) {
+		changeBasicInfoPanel(false);
+		unselectPoster();
+		showPosterIcons();
+		//resetAllIcons();
+	});	
+}
+
+// ラベルを変更する
+$.fn.changeLabel = function() {
+	$(this).on("touchstart", function(e) {
+		// 押されたボタンのidを取得する
+		var id = $(this).attr("id");
+		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
+		changeLabel(id.substr(id.indexOf("-") + 1));
+	});
+}
+
+// ブックマークスターのタッチイベント
+$.fn.touchBookmark = function() {
+	$(this).on("touchstart", function(e) {
+		var posterid = parseInt(sessionStorage.getItem("posterid"));
+		var bookmarkIcon = document.getElementById("bookmarkbutton");
+		touchBookmark(posterid, bookmarkIcon);
+	});	
+}
 
 // ラベルを変更する
 function changeLabel(column) {
@@ -200,28 +122,30 @@ function setLabel(id, str) {
 
 // 現在のフラグを元にポスターのアイコンを表示する
 function showPosterIcons() {
-	var imageSrc;
-	for (var i = 1; i <= ptotal; i++) {
-		switch (pflag[i]) {
-			case "d":
-				imageSrc = "img/dpic.png";
-				break;
-			case "t":
-				imageSrc = "img/tpic.png";
-				break;
-			case "s":
-				imageSrc = "img/spic.png";
-				break;
-			case "e":
-				imageSrc = "img/epic.png";
-				break;
-			default:
-				break;
+	if(!test) {
+		var imageSrc;
+		for (var i = 1; i <= ptotal; i++) {
+			switch (pflag[i]) {
+				case "d":
+					imageSrc = "img/dpic.png";
+					break;
+				case "t":
+					imageSrc = "img/tpic.png";
+					break;
+				case "s":
+					imageSrc = "img/spic.png";
+					break;
+				case "e":
+					imageSrc = "img/epic.png";
+					break;
+				default:
+					break;
+			}
+			document.getElementById("icon" + i).src = imageSrc;
 		}
-		document.getElementById("icon" + i).src = imageSrc;
-	}
 
-	console.log(pflag);
+		console.log(pflag);
+	}
 }
 
 
@@ -328,33 +252,21 @@ function searchByTitle(title) {
 	var posterids = new Array();
 	var ltitle = title.toLowerCase();
 
-	//すべて小文字にした検索キーワードと
-	//すべて小文字にした
-	db.transaction(
-		function(tr) {
-			tr.executeSql("SELECT id, LOWER(title) AS ltitle FROM poster WHERE ltitle LIKE ?", ["%"+ltitle+"%"], 
-			function(tr, rs) {
-				for (var i = 0; i < rs.rows.length; i++) {
-					console.log(rs.rows.item(i).id);
-					posterids.push(rs.rows.item(i).id);
-				}
-			}, function(){});
-		},
-		function(err) {
-		},
-		function() {
-			emphasisSearchedPosters(posterids);
-
-			//注意:ここでreturnしてもこのdb.transactionの返り値にはならない
-			//TODO:トランザクションの非同期実行のために
-			//     ここでHTMLを書いているけどなんか解決法がありそう
-			if (posterids.length == 0) {
-				document.getElementById("searchResult").innerHTML = "見つかりませんでした";
-			} else {
-				document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
-			}
+	poster.forEach(function(aPoster) {
+		if (aPoster.title.toLowerCase().indexOf(ltitle) != -1) {
+			posterids.push(aPoster.id);
 		}
-	);
+	});
+
+	emphasisSearchedPosters(posterids);
+
+	if (!test) {
+		if (posterids.length == 0) {
+			document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+		} else {
+			document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
+		}
+	}
 
 	return pflag;
 }
@@ -381,7 +293,9 @@ function emphasisSearchedPosters(posterids) {
 		}
 	});
 
-	showPosterIcons();
+	if (!test) {
+		showPosterIcons();
+	}
 }
 
 
@@ -592,3 +506,40 @@ function getBookmarks() {
 
 	return bookmarkArr;
 }
+
+
+// 検索バーが変更されたとき
+// TODO: jQueryを使うとbindされない原因をつきとめてjQueryに戻す
+function searchChanged(bar) {
+	if (bar.value.trim() != "" && bar.value != null) {
+		
+		// 検索し、強調表示する
+		console.log("search");
+		searchByTitle(bar.value);
+
+		// 検索中フラグを立てる
+		sessionStorage.setItem("searching", "true");
+		sessionStorage.setItem("searchWord", bar.value);
+
+	} else {
+		// 検索中フラグを折る
+		sessionStorage.removeItem("searching");
+		sessionStorage.removeItem("searchWord");
+
+		// 各ポスターに対して検索中状態から未検索状態へフラグを変化させる
+		for (var i = 1; i <= ptotal; i++) {
+			// 検索中強調表示ならばただの強調表示に、ヒット状態なら元に戻す
+			if (pflag[i] == "e") {
+				pflag[i] = "t";
+			} else if (pflag[i] == "s") {
+				pflag[i] = "d";
+			}
+		}
+
+		document.getElementById("searchResult").innerHTML = "";
+	}
+
+	showPosterIcons();
+	bar.blur();
+}
+
