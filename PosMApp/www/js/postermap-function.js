@@ -154,7 +154,7 @@ function showPosterIcons() {
 				imageSrc = "img/epic.png";
 				break;
 		}
-		document.getElementById("icon" + i).src = imageSrc;
+    	document.getElementById("icon" + i).src = imageSrc;
 	}
 
 	console.log(pflag);
