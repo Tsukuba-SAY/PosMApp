@@ -29,6 +29,8 @@
 #mapMain{
 	transform: scale(1, 1);
 	transition: all .3s;
+	-webkit-transition: all .3s;
+    -moz-transition: all .3s;
 	touch-action: none;
 	-webkit-user-select: none;
 	-webkit-user-drag: none; 

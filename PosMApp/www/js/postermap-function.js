@@ -584,11 +584,16 @@ function windowManager () {
     };
     updateElementTransform();
 
-    // mc.on("hammer.input", function(ev) {
-    //     if(ev.isFinal) {
-    //         resetElement();
-    //     }
-    // });
+    var tmpx = 0;
+    var tmpy = 0;
+
+    mc.on("hammer.input", function(ev) {
+        if(ev.isFinal) {
+            // resetElement();
+            tmpx = transform.translate.x;
+            tmpy = transform.translate.y;
+        }
+    });
 
     // function resetElement() {
     //     el.className = 'animate';
@@ -625,14 +630,14 @@ function windowManager () {
     	console.log("pan");
         el.className = '';
         transform.translate = {
-            x: START_X + ev.deltaX ,
-            y: START_Y + ev.deltaY
+            x: tmpx + ev.deltaX,
+            y: tmpy + ev.deltaY
         };
 
       	requestElementUpdate();
     }
 
-    var initScale = 1;
+    var initScale = window.innerWidth / STATIC_WIDTH;
     function onPinch(ev) {
     	console.log("pinch");
         if(ev.type == 'pinchstart') {
