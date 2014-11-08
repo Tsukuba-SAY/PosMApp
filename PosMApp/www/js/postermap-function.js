@@ -533,7 +533,7 @@ function searchChanged(bar) {
 	bar.blur();
 }
 
-// U CAN touch this
+// U "CAN" touch this
 // 名前変えたい
 function windowManager () {
 	var STATIC_WIDTH =  600;
@@ -597,6 +597,7 @@ function windowManager () {
             // resetElement();
             posx = transform.translate.x;
             posy = transform.translate.y;
+            scale = transform.scale;
         }
     });
 
@@ -701,7 +702,7 @@ function windowManager () {
             x: START_X,
             y: START_Y
         };
-        transform.scale = window.innerWidth / STATIC_WIDTH;
+        transform.scale = 1;
 
         clearTimeout(timer);
         timer = setTimeout(function () {}, 500);
