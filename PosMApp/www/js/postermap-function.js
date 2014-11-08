@@ -539,7 +539,7 @@ function windowManager () {
 	var scale = window.innerWidth / STATIC_WIDTH;
 
 	var $mapMain = $('#mapMain');
-	$mapMain.css("zoom", scale);
+	$mapMain.css("scale", scale);
 
     var reqAnimationFrame = (function () {
         return window[Hammer.prefixed(window, 'requestAnimationFrame')] || function (callback) {
@@ -584,6 +584,12 @@ function windowManager () {
     };
     updateElementTransform();
 
+    // mc.on("hammer.input", function(ev) {
+    //     if(ev.isFinal) {
+    //         resetElement();
+    //     }
+    // });
+
     // function resetElement() {
     //     el.className = 'animate';
     //     transform = {
@@ -593,8 +599,8 @@ function windowManager () {
     // }
 
     function updateElementTransform() {
-        transform.scale=(transform.scale>=2.0) ? 2.0 : transform.scale;
-        transform.scale=(transform.scale<=0.5) ? 0.5 : transform.scale;
+        transform.scale = (transform.scale >= 2.0) ? 2.0 : transform.scale;
+        transform.scale = (transform.scale <= 0.5) ? 0.5 : transform.scale;
         var value = [
         	'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
         	'scale(' + transform.scale + ', ' + transform.scale + ')'
@@ -609,15 +615,18 @@ function windowManager () {
     }
 
     function requestElementUpdate() {
-    	reqAnimationFrame(updateElementTransform);
+    	if (!ticking) {
+    		reqAnimationFrame(updateElementTransform);
+    		ticking = true;
+    	}
     }
     
     function onPan(ev) {
     	console.log("pan");
         el.className = '';
         transform.translate = {
-            x: ev.deltaX ,
-            y: ev.deltaY
+            x: START_X + ev.deltaX ,
+            y: START_Y + ev.deltaY
         };
 
       	requestElementUpdate();
@@ -683,8 +692,10 @@ function windowManager () {
         };
         transform.scale = window.innerWidth / STATIC_WIDTH;
 
+        clearTimeout(timer);
+        timer = setTimeout(function () {}, 500);
+
         requestElementUpdate();
     }
-
 
 }
