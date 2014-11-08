@@ -538,8 +538,8 @@ function windowManager () {
 	var STATIC_WIDTH =  600;
 	var scale = window.innerWidth / STATIC_WIDTH;
 
-	// var $mapMain = $('#mapMain');
-	// $mapMain.css("zoom", scale);
+	var $mapMain = $('#mapMain');
+	$mapMain.css("zoom", scale);
 
     var reqAnimationFrame = (function () {
         return window[Hammer.prefixed(window, 'requestAnimationFrame')] || function (callback) {
