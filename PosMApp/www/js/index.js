@@ -1,10 +1,20 @@
 //HTMLが呼ばれた時の初期化処理
-$(function() {
+$(init);
 
+function init() {
 	initPosterMap();
 
 	// 現在はWebSQLは使用していない
 	// initDB();
+
+	// ポスターアイコンの作成
+	// JSONから直接呼び出す感じで
+	// とりあえずデフォルトはセッションID
+	setPosterIcons();
+
+	// ポスターアイコンを表示
+	// TODO:showじゃなくて別の単語に変えたい
+	showPosterIcons();
 
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") != null) {
@@ -23,11 +33,6 @@ $(function() {
 	if (localStorage.getItem("bookmarks") == null) {
 		localStorage.setItem("bookmarks", "");
 	}
-
-	// ポスターアイコンの作成
-	// JSONから直接呼び出す感じで
-	// とりあえずデフォルトはセッションID
-	setPosterIcons();
 
 	// もしラベルが変更されていたらそれに変更
 	if (sessionStorage.getItem("label") != null) {
@@ -51,10 +56,6 @@ $(function() {
 
 	// ブックマークスターのタッチイベント
 	$("#bookmarkbutton").touchBookmark();
-	
-	// ポスターアイコンを表示
-	// TODO:showじゃなくて別の単語に変えたい
-	showPosterIcons();
 
 	windowManager();
 
@@ -78,4 +79,4 @@ $(function() {
 	$(".topPageButton").goToTopPage("touchstart");
 	$(".posterMapPageButton").goToMapPage("touchstart");
 	$(".posterListPageButton").goToListPage("touchstart");
-});
+}
