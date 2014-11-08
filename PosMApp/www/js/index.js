@@ -50,9 +50,13 @@ function init() {
 
 	// 基本情報画面を閉じる
 	$("#basicinfo").closeBasicInfo();
+	$("#basicinfo").css("width", window.innerWidth - 80);
+	$("#basicinfo").css("max-width", window.innerWidth - 80);
+
 
 	// ラベルを変更する
 	$(".changelabel").changeLabel();
+	$("#changelabel").css("zoom", window.innerWidth/600);
 
 	// ブックマークスターのタッチイベント
 	$("#bookmarkbutton").touchBookmark();
