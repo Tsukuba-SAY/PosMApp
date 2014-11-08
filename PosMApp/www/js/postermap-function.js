@@ -533,13 +533,17 @@ function searchChanged(bar) {
 	bar.blur();
 }
 
+// U "CAN" touch this
 // 名前変えたい
 function windowManager () {
 	var STATIC_WIDTH =  600;
-	var scale = window.innerWidth / STATIC_WIDTH;
+	var STATIC_HEIGHT = 800;
+	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
 
 	var $mapMain = $('#mapMain');
-	$mapMain.css("zoom", scale);
+	$mapMain.css("zoom", INIT_SCALE);
+	$mapMain.css("width", STATIC_WIDTH);
+	$mapMain.css("height", STATIC_HEIGHT);
 
     var reqAnimationFrame = (function () {
         return window[Hammer.prefixed(window, 'requestAnimationFrame')] || function (callback) {
@@ -553,8 +557,8 @@ function windowManager () {
 
     // var START_X = Math.round((window.innerWidth - el.offsetWidth) / 2);
     // var START_Y = Math.round((window.innerHeight - el.offsetHeight) / 2);
-    var START_X = 0;
-    var START_Y = 0;
+    var START_X = el.offsetWidth;
+    var START_Y = el.offsetHeight;
 
     var ticking = false;
     var transform;
@@ -580,9 +584,22 @@ function windowManager () {
     el.className = 'animate';
     transform = {
         translate: { x: START_X, y: START_Y },
-        scale: window.innerWidth / STATIC_WIDTH
+        scale: 1
     };
-    updateElementTransform();
+    // requestElementUpdate();
+
+    var posx = 0;
+    var posy = 0;
+    var scale = 1;
+
+    mc.on("hammer.input", function(ev) {
+        if(ev.isFinal) {
+            // resetElement();
+            posx = transform.translate.x;
+            posy = transform.translate.y;
+            scale = transform.scale;
+        }
+    });
 
     // function resetElement() {
     //     el.className = 'animate';
@@ -593,8 +610,9 @@ function windowManager () {
     // }
 
     function updateElementTransform() {
-        transform.scale=(transform.scale>=2.0) ? 2.0 : transform.scale;
-        transform.scale=(transform.scale<=0.5) ? 0.5 : transform.scale;
+        transform.scale = (transform.scale >= 4.0) ? 4.0 : transform.scale;
+        transform.scale = (transform.scale <= 0.5) ? 0.5 : transform.scale;
+
         var value = [
         	'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
         	'scale(' + transform.scale + ', ' + transform.scale + ')'
@@ -609,29 +627,32 @@ function windowManager () {
     }
 
     function requestElementUpdate() {
-    	reqAnimationFrame(updateElementTransform);
+    	if (!ticking) {
+    		reqAnimationFrame(updateElementTransform);
+    		ticking = true;
+    	}
     }
     
     function onPan(ev) {
     	console.log("pan");
         el.className = '';
+
         transform.translate = {
-            x: ev.deltaX ,
-            y: ev.deltaY
+            x: posx + ev.deltaX,
+            y: posy + ev.deltaY
         };
 
       	requestElementUpdate();
     }
 
-    var initScale = 1;
     function onPinch(ev) {
     	console.log("pinch");
-        if(ev.type == 'pinchstart') {
-            initScale = transform.scale || 1;
-        }
+        // if(ev.type == 'pinchstart') {
+        //     initScale = transform.scale || 1;
+        // }
 
         el.className = '';
-        transform.scale = initScale * ev.scale;
+        transform.scale = scale * ev.scale;
 
         requestElementUpdate();
     }
@@ -681,10 +702,12 @@ function windowManager () {
             x: START_X,
             y: START_Y
         };
-        transform.scale = window.innerWidth / STATIC_WIDTH;
+        transform.scale = 1;
+
+        clearTimeout(timer);
+        timer = setTimeout(function () {}, 500);
 
         requestElementUpdate();
     }
-
 
 }
