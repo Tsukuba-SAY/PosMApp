@@ -17,6 +17,8 @@
 
 	z-index: 3;
 }
+
+/*縦横両対応のため要改修・要改名*/
 .iconindexhor{
 	position: absolute;
 	width: 100%;
@@ -104,7 +106,7 @@
 	width: 15px;
 	height: 15px;
 	top: 5px;
-	left: 65px;
+	left: calc(50% - 15px/2);	
 	font-size: 15px;
 }
 
@@ -113,7 +115,7 @@
 	width: 15px;
 	height: 15px;
 	right: 5px;
-	top: 41px;
+	top: calc(50% - 15px/2);
 	font-size: 15px;
 }
 
@@ -122,7 +124,7 @@
 	width: 15px;
 	height: 15px;
 	bottom: 5px;
-	left: 65px;
+	left: calc(50% - 15px/2);
 	font-size: 15px;
 }
 
@@ -131,7 +133,7 @@
 	width: 15px;
 	height: 15px;
 	left: 5px;
-	top: 41px;
+	top: calc(50% - 15px/2);
 	font-size: 15px;
 }
 
