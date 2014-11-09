@@ -135,6 +135,11 @@
 	font-size: 15px;
 }
 
+.bookmarkstar{
+	width:15px;
+	height:15px;
+}
+
 /*TODO:jsでのアイコン生成時にここもjsに取り込む*/
 /*1列目*/
 
