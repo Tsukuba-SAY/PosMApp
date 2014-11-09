@@ -26,6 +26,11 @@
 	z-index: 4;
 }
 
+#mapFrame{
+	height: 100%;
+	overflow: hidden;
+}
+
 #mapMain{
 	transition: all .2s;
 	-webkit-transition: all .2s;
@@ -33,6 +38,8 @@
 	touch-action: none;
 	-webkit-user-select: none;
 	-webkit-user-drag: none; 
+	height: 100%;
+	overflow: hidden;
 }
 
 
