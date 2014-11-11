@@ -2,6 +2,46 @@ describe("変数の確認", function() {
 	it("posterdata.jsでposterが宣言されている", function() {
 		expect(poster).toBeDefined();
 	});
+	it("posterdata.jsでauthorが宣言されている", function() {
+		expect(author).toBeDefined();
+	});
+	it("posterdata.jsでkeywordが宣言されている", function() {
+		expect(keyword).toBeDefined();
+	});
+	it("labelmaxが宣言されている", function() {
+		expect(labelmax).toBeDefined();
+	});
+});
+
+describe("テスト用のファンクションのテスト", function() {
+	it("getAuthorsのテスト", function() {
+		expectArr = new Array();
+		author.forEach(function(a) {
+			if (a.posterid === 1) {
+				expectArr.push(a.name);
+			}
+		});
+		expect(getAuthors(1)).toEqual(expectArr.join(","));
+	});
+	it("getKeywordsのテスト", function() {
+		expectArr = new Array();
+		keyword.forEach(function(k) {
+			if(k.posterid === 1) {
+				expectArr.push(k.keyword);
+			}
+		});
+		expect(getKeywords(1)).toEqual(expectArr.join(","));
+	});
+	it("ellipsisWordsのテスト", function() {
+		str1 = "いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせすん";
+		expect(ellipsisWords(str1)).toEqual("いろはにほ...");
+		str2 = "あ";
+		expect(ellipsisWords(str2)).toEqual("あ");
+		str3 = "We Love Posters!";
+		expect(ellipsisWords(str3)).toEqual("We Lo...");
+		str4 = "600人規模のポスター展示会";
+		expect(ellipsisWords(str4)).toEqual("600人規...");
+	});
 });
 
 describe("トップページ", function() {
@@ -66,18 +106,18 @@ describe("ポスターマップ", function() {
 	});
 	it("デフォルトの状態で1番目のポスターをタップすると1番目の情報が取得できる", function() {
 		
-		//var ptotal=poster.length;
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		//var poster.length=poster.length;
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 1;
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[1] = "t";
@@ -99,20 +139,20 @@ describe("ポスターマップ", function() {
 	});
 
 	it("1番を選択中に2番を選択すると、2番の情報が取得できる", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 2;
 
 		pflag[1] = "t";
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 		beforeFlag[1] = "t";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[2] = "t";
@@ -134,20 +174,20 @@ describe("ポスターマップ", function() {
 	});
 
 	it("2番を選択中に2番を選択する最初の状態に戻る", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 2;
 
 		pflag[2] = "t";
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 		beforeFlag[2] = "t";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		
@@ -168,17 +208,17 @@ describe("ポスターマップ", function() {
 	});
 
 	it("デフォルトの状態でポスターの数＋１のポスターをタップすると例外を発生する", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
-		var posterid = ptotal+1;
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
+		var posterid = poster.length+1;
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		
@@ -203,17 +243,17 @@ describe("ポスターマップ", function() {
 	});
 
 	it("デフォルトの状態で0番目をタップすると例外を発生する", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 0;
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 
@@ -238,18 +278,18 @@ describe("ポスターマップ", function() {
 	});
 
 	it("2番がタップされている状態でポスターの数＋１のポスターをタップすると例外を発生する", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
-		var posterid = ptotal+1;
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
+		var posterid = poster.length+1;
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 		beforeFlag[2] = "t";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[2] = "t";
@@ -280,18 +320,18 @@ describe("ポスターマップ", function() {
 	});
 
 	it("2番がタップされている状態で0番目をタップすると例外を発生する", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 0;
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 		beforeFlag[2] = "t";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[2] = "t";
@@ -322,14 +362,14 @@ describe("ポスターマップ", function() {
 	});
 
 	it("2,3,4番目が検索にヒットしている状態で1番目のポスターをタップすると1番目の情報が取得できる", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 1;
 
 		sessionStorage.setItem("searching", "true");
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 		beforeFlag[2] = "s";
@@ -340,7 +380,7 @@ describe("ポスターマップ", function() {
 		pflag[4] = "s";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[1] = "t";
@@ -367,14 +407,14 @@ describe("ポスターマップ", function() {
 	});
 
 	it("2,3,4番目が検索にヒットしている状態かつ1番をタップしている状態でで2番目のポスターをタップすると2番目の情報が取得できる", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 2;
 
 		sessionStorage.setItem("searching", "true");
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 		beforeFlag[1] = "t";
@@ -387,7 +427,7 @@ describe("ポスターマップ", function() {
 		pflag[4] = "s";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[2] = "e";
@@ -413,14 +453,14 @@ describe("ポスターマップ", function() {
 	});
 
 	it("2,3,4番目が検索にヒットしている状態かつ2番をタップしている状態で2番目のポスターをタップすると2,3,4番目が検索にヒットしている状態に戻る", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 2;
 
 		sessionStorage.setItem("searching", "true");
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 		beforeFlag[2] = "e";
@@ -431,7 +471,7 @@ describe("ポスターマップ", function() {
 		pflag[4] = "s";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[2] = "s";
@@ -457,14 +497,14 @@ describe("ポスターマップ", function() {
 	});
 
 	it("2,3,4番目が検索にヒットしている状態かつ2番をタップしている状態で3番目のポスターをタップすると3番目の情報が取得できる", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 3;
 
 		sessionStorage.setItem("searching", "true");
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 		beforeFlag[2] = "e";
@@ -475,7 +515,7 @@ describe("ポスターマップ", function() {
 		pflag[4] = "s";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[2] = "s";
@@ -500,14 +540,14 @@ describe("ポスターマップ", function() {
 	});
 
 	it("2,3,4番目が検索にヒットしている状態かつ3番をタップしている状態で7番目のポスターをタップすると7番目の情報が取得できる", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 7;
 
 		sessionStorage.setItem("searching", "true");
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 		beforeFlag[2] = "s";
@@ -518,7 +558,7 @@ describe("ポスターマップ", function() {
 		pflag[4] = "s";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[2] = "s";
@@ -544,14 +584,14 @@ describe("ポスターマップ", function() {
 	});
 
 	it("2,3,4番目が検索にヒットしている状態かつ7番をタップしている状態でで7番目のポスターをタップすると2,3,4番目が検索にヒットしている状態に戻る", function() {
-		var beforeFlag = new Array(ptotal+1);
-		var expectFlag = new Array(ptotal+1);
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
 		var posterid = 7;
 
 		sessionStorage.setItem("searching", "true");
 
 		beforeFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			beforeFlag[i] = "d";
 		}
 		beforeFlag[2] = "s";
@@ -564,7 +604,7 @@ describe("ポスターマップ", function() {
 		pflag[7] = "t";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[2] = "s";
@@ -625,90 +665,92 @@ describe("キーワード検索（タイトル）", function() {
 		initPosterMap();
 	});
 
-	it("「システム」で検索すると1,6,10,11,12,13番のポスターがヒットする", function() {
+	it("「用いた」で検索すると2,4,6,7,10,11,17,18,24番のポスターがヒットする", function() {
 
-		var expectFlag = new Array(ptotal+1);
+		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
-			if (i == 1 || i == 6 || i == 10 || i == 11 || i == 12 || i == 13) {
+		expectArr = [2,4,6,7,10,11,17,18,24];
+
+		for (var i = 1; i <= poster.length; i++) {
+			if ($.inArray(i, expectArr) !== -1) {
 				expectFlag[i] = "s";
 			} else {
 				expectFlag[i] = "d";
 			}
 		}
 		
-		$("#search-bar-title").val("システム");
+		$("#search-bar-title").val("用いた");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「ポスター」で検索すると10番のポスターがヒットする", function() {
-		var expectFlag = new Array(ptotal+1);
+	it("「ニコニコ動画」で検索すると24番のポスターがヒットする", function() {
+		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[10] = "s";
+		expectFlag[24] = "s";
 
-		$("#search-bar-title").val("ポスター");
+		$("#search-bar-title").val("ニコニコ動画");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「スター」で検索すると10番のポスターがヒットする", function() {
-		var expectFlag = new Array(ptotal+1);
+	it("「ニコニコ」で検索すると10番のポスターがヒットする", function() {
+		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[10] = "s";
+		expectFlag[24] = "s";
 
-		$("#search-bar-title").val("スター");
+		$("#search-bar-title").val("ニコニコ");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「Twitter」で検索すると3番のポスターがヒットする", function() {
-		var expectFlag = new Array(ptotal+1);
+	it("「Wikipedia」で検索すると17番のポスターがヒットする", function() {
+		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[3] = "s";
+		expectFlag[17] = "s";
 
-		$("#search-bar-title").val("Twitter");
+		$("#search-bar-title").val("Wikipedia");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「twitter」で検索すると3番のポスターがヒットする", function() {
-		var expectFlag = new Array(ptotal+1);
+	it("「wikipedia」で検索すると3番のポスターがヒットする", function() {
+		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[3] = "s";
+		expectFlag[17] = "s";
 
-		$("#search-bar-title").val("twitter");
+		$("#search-bar-title").val("wikipedia");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("「$」で検索すると何もヒットしない", function() {
-		var expectFlag = new Array(ptotal+1);
+		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 
@@ -719,10 +761,10 @@ describe("キーワード検索（タイトル）", function() {
 	});
 
 	it("半角スペースで検索すると何もヒットしない", function() {
-		var expectFlag = new Array(ptotal+1);
+		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 
@@ -733,10 +775,10 @@ describe("キーワード検索（タイトル）", function() {
 	});
 
 	it("nullを入れると何もヒットしない", function() {
-		var expectFlag = new Array(ptotal+1);
+		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 
@@ -746,43 +788,43 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("1番を選択した状態で「ポスター」で検索すると10番がヒットする", function() {
-		var expectFlag = new Array(ptotal+1);
+	it("1番を選択した状態で「ニコニコ動画」で検索すると24番がヒットする", function() {
+		var expectFlag = new Array(poster.length+1);
 
 		pflag[1] = "t";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 		expectFlag[1] = "t";
-		expectFlag[10] = "s";
+		expectFlag[24] = "s";
 
-		$("#search-bar-title").val("ポスター");
+		$("#search-bar-title").val("ニコニコ動画");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("10番を選択した状態で「ポスター」で検索すると10番がヒットする", function() {
-		var expectFlag = new Array(ptotal+1);
+	it("10番を選択した状態で「ニコニコ動画」で検索すると10番がヒットする", function() {
+		var expectFlag = new Array(poster.length+1);
 
-		pflag[10] = "t";
+		pflag[24] = "t";
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[10] = "e";
+		expectFlag[24] = "e";
 
-		$("#search-bar-title").val("ポスター");
+		$("#search-bar-title").val("ニコニコ動画");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
 	it("何も選択してない状態で、1024文字を入れて検索すると例外が発生し、ポスターの状況は変化しない", function() {
-		var expectFlag = new Array(ptotal+1);
+		var expectFlag = new Array(poster.length+1);
 
 		var str = "";
 		for (var i = 0; i < 1024; i++) {
@@ -790,7 +832,7 @@ describe("キーワード検索（タイトル）", function() {
 		}
 
 		expectFlag[0] = null;
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
 
@@ -799,15 +841,6 @@ describe("キーワード検索（タイトル）", function() {
 			//wait(100);
 		}).toThrow();
 		expect(pflag).toEqual(expectFlag);
-	});
-});
-
-describe("テスト用のファンクションのテスト", function() {
-	it("getAuthorsのテスト", function() {
-		expect(getAuthors(1)).toEqual("浦井 智之,小池 泰輔,小宮山 哲俊,原 清貴");
-	});
-	it("getKeywordsのテスト", function() {
-		expect(getKeywords(1)).toEqual("スタンダードコース");
 	});
 });
 
@@ -826,34 +859,69 @@ describe("ラベルの表示切り替え機能", function() {
 		initPosterMap();	
 	});
 	it("「ID」ボタンを押すとラベルがIDに切り替わる", function() {
-		var labels = changeLabel("id");
-		var testlabel = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
 		$("#label-id").trigger("touchstart");
-		expect(labels).toEqual(testlabel);
+		var labels = new Array();
+		for (var i = 1; i <= poster.length; i++) {
+			labels.push($("#font" + i).html());
+		}
+
+		var expectLabels = new Array();
+		for (var i = 1; i <= poster.length; i++) {
+			expectLabels.push(ellipsisWords(poster[i - 1].id.toString()));
+		}
+		expect(labels).toEqual(expectLabels);
 	});
 	it("「セッションID」ボタンを押すとラベルがセッションIDに切り替わる", function() {
-		var labels = changeLabel("sessionid");
-		var testlabel = ["S01","S02","S03","S04","S05","S06","S07","S08","S09","SIT01","SIT02","SIT03","SIT04","SIT05"];
 		$("#label-sessionid").trigger("touchstart");
-		expect(labels).toEqual(testlabel);
+		var labels = new Array();
+		for (var i = 1; i <= poster.length; i++) {
+			labels.push($("#font" + i).html());
+		}
+
+		var expectLabels = new Array();
+		for (var i = 1; i <= poster.length; i++) {
+			expectLabels.push(ellipsisWords(poster[i - 1].sessionid.toString()));
+		}
+		expect(labels).toEqual(expectLabels);
 	});
 	it("「タイトル」ボタンを押すとラベルがタイトルに切り替わる", function() {
-		var labels = changeLabel("title");
-		var testlabel = ["防災・避難...","画像リプラ...","ハッシュタ...","ワインマッ...","コロコロジ...","中古教科書...","地図を用い...","予定や天候...","iBeac...","600人規...","テニススク...","施設内での...","スマートフ...","小規模グル..."];
 		$("#label-title").trigger("touchstart");
-		expect(labels).toEqual(testlabel);	
+		var labels = new Array();
+		for (var i = 1; i <= poster.length; i++) {
+			labels.push($("#font" + i).html());
+		}
+
+		var expectLabels = new Array();
+		for (var i = 1; i <= poster.length; i++) {
+			expectLabels.push(ellipsisWords(poster[i - 1].title.toString()));
+		}
+		expect(labels).toEqual(expectLabels);
 	});
 	it("「チーム名」ボタンを押すとラベルがチーム名に切り替わる", function() {
-		var labels = changeLabel("authorname");
-		var testlabel = ["OU-LA...","_:(*'...","チームNo...","Primt...","コロジャー","りばて","ef","おちゃねこ","Rabbi...","S.A.Y...","TOMs","TKS","SAG-A...","Book-..."];
 		$("#label-authorname").trigger("touchstart");
-		expect(labels).toEqual(testlabel);
+		var labels = new Array();
+		for (var i = 1; i <= poster.length; i++) {
+			labels.push($("#font" + i).html());
+		}
+
+		var expectLabels = new Array();
+		for (var i = 1; i <= poster.length; i++) {
+			expectLabels.push(ellipsisWords(poster[i - 1].authorname.toString()));
+		}
+		expect(labels).toEqual(expectLabels);
 	});
 	it("「大学名」ボタンを押すとラベルが大学名に切り替わる", function() {
-		var labels = changeLabel("authorbelongs");
-		var testlabel = ["千葉大学","筑波大学","筑波大学","筑波大学","筑波大学,...","東京理科大...","愛媛大学","お茶の水女...","茨城大学","筑波大学","筑波大学","筑波大学","筑波大学","筑波大学"];
 		$("#label-authorbelongs").trigger("touchstart");
-		expect(labels).toEqual(testlabel);
+		var labels = new Array();
+		for (var i = 1; i <= poster.length; i++) {
+			labels.push($("#font" + i).html());
+		}
+
+		var expectLabels = new Array();
+		for (var i = 1; i <= poster.length; i++) {
+			expectLabels.push(ellipsisWords(poster[i - 1].authorbelongs.toString()));
+		}
+		expect(labels).toEqual(expectLabels);
 	});
 });
 
@@ -877,13 +945,18 @@ describe("ブックマーク機能", function() {
 		expect(bookmarks).toEqual(expectBookmarks);
 	});
 	it("何もブックマークされていない状態で、すべての星をタップすると、すべてのポスターがブックマークされる", function() {
-		for (var i = 1; i <= ptotal; i++) {
+		for (var i = 1; i <= poster.length; i++) {
 			sessionStorage.setItem("posterid", i);
 			$("#bookmarkbutton").trigger("touchstart");
 		}
-		var expectBookmarks = "1,2,3,4,5,6,7,8,9,10,11,12,13,14";
 		var bookmarks = localStorage.getItem("bookmarks");
-		expect(bookmarks).toEqual(expectBookmarks);
+
+		var expectArr = new Array();
+		poster.forEach(function(p) {
+			expectArr.push(p.id);
+		});
+
+		expect(bookmarks).toEqual(expectArr.join(","));
 	});
 	it("1番のポスターがブックマークされている状態で、1番の星をタップすると、何もブックされていない状態になる", function() {
 		localStorage.setItem("bookmarks", "1");
@@ -962,7 +1035,7 @@ describe("ブックマーク機能", function() {
 	});
 	it("ポスター数+1番の星をタップすると、例外が発生する", function() {
 		expect(function() {
-			sessionStorage.setItem("posterid", ptotal + 1);
+			sessionStorage.setItem("posterid", poster.length + 1);
 			$("#bookmarkbutton").trigger("touchstart");
 		}).toThrow();
 	});
@@ -991,7 +1064,12 @@ describe("ポスターリスト", function() {
 
 	it("正しい順番（ID順）でポスターの一覧が表示されている", function() {
 		var posters = $("#posterList").showPosterList();
-		var expectIds = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"];
+
+		var expectIds = new Array();
+		poster.forEach(function(p) {
+			expectIds.push(p.id.toString());
+		});
+
 		expect(expectIds).toEqual(posters["id"]);
 	});
 
@@ -1054,7 +1132,7 @@ describe("ポスターリスト", function() {
 	});
 });
 
-function getAuthors(posterid){
+function getAuthors(posterid) {
 
 	var atotal = author.length;
 	var authorlist = "";
@@ -1067,7 +1145,7 @@ function getAuthors(posterid){
 	return authorlist;
 }
 
-function getKeywords(posterid){
+function getKeywords(posterid) {
 
 	var ktotal = keyword.length;
 	var keywordlist = "";
@@ -1078,4 +1156,11 @@ function getKeywords(posterid){
 	}
 	keywordlist = keywordlist.substring(0, keywordlist.length - 1);
 	return keywordlist;
+}
+
+function ellipsisWords(str) {
+	if (str.length > labelmax) {
+		str = str.substring(0, labelmax) + "...";
+	}
+	return str;
 }

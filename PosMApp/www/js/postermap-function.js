@@ -260,6 +260,7 @@ function searchByTitle(title) {
 			posterids.push(aPoster.id);
 		}
 	});
+	console.log("HIT : " + posterids);
 
 	emphasisSearchedPosters(posterids);
 
