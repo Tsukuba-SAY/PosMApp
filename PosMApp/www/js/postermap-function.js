@@ -6,10 +6,6 @@
 // e：検索中の強調表示（赤）
 var pflag; 
 
-// テスト用フラグ
-// テスト時、Jasmineからのみtrueにする
-var test = false;
-
 // アイコンのラベルを何文字目まで表示するか
 var labelmax = 5;
 
