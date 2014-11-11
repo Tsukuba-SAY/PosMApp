@@ -88,11 +88,10 @@ function setPosterIcons() {
 	var str = "";
 
 	for (var i = 1; i <= poster.length; i++) {
-		str += "<div class='postericonframe' id='iconNo" + i + "''>\n";
+		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+position[i].x+"px;top:"+position[i].y+"px;'"+">\n";
 		str += "	<div class='postericon horizontal'>\n";
 		str += "		<img id='icon" + i + "' src='img/dpic.png' " + "width='100%' height='100%'></img>\n";
-		str += "		<div class='iconindexhor' id='font" + i + "'";
-		str += "			style='left:"+position[i].x+"px;top:"+position[i].y+"px'>" + poster[i-1].sessionid + "</div>\n";
+		str += "		<div class='iconindexhor' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
 		str += "	</div>\n";
 
 		var pos;
