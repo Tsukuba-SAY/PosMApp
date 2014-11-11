@@ -1,3 +1,9 @@
+#conferenceName{
+	font-size: 32px;	
+	color: #0033FF;
+	text-align: center;
+}
+
 .postericonframe{
 	position: absolute; 
 	z-index: 3;
