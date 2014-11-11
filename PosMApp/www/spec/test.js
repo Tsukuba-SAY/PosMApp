@@ -1131,6 +1131,14 @@ describe("ポスターリスト", function() {
 	// 		expect(sessionStorage.getItem("posterid")).toEqual(p["id"].toString());
 	// 	});
 	// });
+	it("1番のポスターのマップボタンを押すと、マップ画面に遷移し、1番のポスターの基本情報が表示される", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+
+		$("#listToMap1").trigger("touchstart");
+
+		listToMap(1);
+		expect(sessionStorage.getItem("posterid")).toEqual("1");
+	});
 	it("1番のポスターの詳細情報ボタンを押すと、1番のポスターの詳細情報が表示される", function() {
 		expect(sessionStorage.getItem("posterid")).toBeNull();
 
@@ -1139,10 +1147,22 @@ describe("ポスターリスト", function() {
 		listToDetail(1);
 		expect(sessionStorage.getItem("posterid")).toEqual("1");
 	});
+	it("0番のポスターのマップボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToMap(0);
+		}).toThrow();
+	});
 	it("0番のポスターの詳細情報ボタンを押すと例外が発生する", function() {
 		expect(sessionStorage.getItem("posterid")).toBeNull();
 		expect(function() {
 			listToDetail(0);
+		}).toThrow();
+	});
+	it("ポスターの総数+1番のポスターのマップボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToMap(poster.length + 1);
 		}).toThrow();
 	});
 	it("ポスターの総数+1番のポスターの詳細情報ボタンを押すと例外が発生する", function() {
