@@ -90,6 +90,8 @@ describe("ポスターマップ", function() {
 
 		$("#basicinfopanel").closeBasicInfo();
 
+		sessionStorage.removeItem("searching");
+
 		initPosterMap();	
 	});
 
@@ -788,6 +790,39 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
+	it("1番のポスターが検索にヒットしている状態で、検索状態から戻ると、何もヒットしていない状態になる", function() {
+		var expectFlag = new Array(poster.length+1);
+
+		pflag[1] = "s";
+
+		expectFlag[0] = null;
+		for (var i = 1; i <= poster.length; i++) {
+			expectFlag[i] = "d";
+		}
+
+		$("#search-bar-title").val(null);
+		$("#search-bar-title").trigger("change");
+
+		expect(pflag).toEqual(expectFlag);
+	});
+
+	it("1番のポスターが強調表示された状態かつ検索にヒットしている状態で、検索状態から戻ると、1番が強調表示された状態に戻る", function() {
+		var expectFlag = new Array(poster.length+1);
+
+		pflag[1] = "e";
+
+		expectFlag[0] = null;
+		for (var i = 1; i <= poster.length; i++) {
+			expectFlag[i] = "d";
+		}
+		expectFlag[1] = "t";
+
+		$("#search-bar-title").val(null);
+		$("#search-bar-title").trigger("change");
+
+		expect(pflag).toEqual(expectFlag);
+	});
+
 	it("1番を選択した状態で「ニコニコ動画」で検索すると24番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
@@ -1026,6 +1061,18 @@ describe("ブックマーク機能", function() {
 		var expectBookmarks = "";
 		var bookmarks = localStorage.getItem("bookmarks");
 		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("1番のポスターがブックマークされている状態で、1番のポスターをタップすると、星がブックマークされた状態で表示されている", function() {
+		localStorage.setItem("bookmarks", "1");
+		$("#icon1").touchPoster();
+		$("#icon1").trigger("touchstart");
+		expect($("#bookmarkbutton").attr("src")).toEqual("img/bookmark.png");
+	});
+	it("2番のポスターがブックマークされている状態で、1番のポスターをタップすると、星がブックマークされていない状態で表示されている", function() {
+		localStorage.setItem("bookmarks", "2");
+		$("#icon1").touchPoster();
+		$("#icon1").trigger("touchstart");
+		expect($("#bookmarkbutton").attr("src")).toEqual("img/unbookmark.png");
 	});
 	it("0番の星をタップすると、例外が発生する", function() {
 		expect(function() {
