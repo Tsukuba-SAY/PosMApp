@@ -35,7 +35,7 @@
 }
 
 #mapFrame{
-	height: 100%;
+	height: calc(100% - 65px);
 	overflow: hidden;
 }
 
@@ -46,7 +46,7 @@
 	touch-action: none;
 	-webkit-user-select: none;
 	-webkit-user-drag: none; 
-	height: 100%;
+	height : calc(100% - 65px);
 	overflow: hidden;
 }
 
