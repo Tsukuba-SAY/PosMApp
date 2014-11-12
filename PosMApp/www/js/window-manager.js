@@ -55,7 +55,6 @@ function windowManager () {
     mc.on("panend pancancel", function(ev) {
         console.log("panend");
         isAnimated = false;
-        // transform = null;
         posx = transform.translate.x;
         posy = transform.translate.y;
     });
@@ -112,7 +111,6 @@ function windowManager () {
         ];
 
         value = value.join(" ");
-        //el.textContent = value;
         el.style.webkitTransform = value;
         el.style.mozTransform = value;
         el.style.transform = value;
