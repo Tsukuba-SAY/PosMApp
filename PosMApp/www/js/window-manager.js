@@ -67,6 +67,7 @@ function windowManager () {
             translate: { x: posx, y: posy },
             scale: scale
         };
+        animation();
     });
     mc.on("pinchmove", function(ev) {
         console.log("pinchmove");
