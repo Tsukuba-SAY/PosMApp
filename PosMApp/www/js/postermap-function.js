@@ -7,7 +7,7 @@
 var pflag; 
 
 // アイコンのラベルを何文字目まで表示するか
-var labelmax = 5;
+var labelmax = 7;
 
 // Local DB (WebSQL DB) を開く
 // 現在未使用
