@@ -2,6 +2,9 @@ describe("変数の確認", function() {
 	it("posterdata.jsでposterが宣言されている", function() {
 		expect(poster).toBeDefined();
 	});
+	it("icon-position.jsでpositionが宣言されている", function() {
+		expect(position).toBeDefined();
+	});
 	it("posterdata.jsでauthorが宣言されている", function() {
 		expect(author).toBeDefined();
 	});
