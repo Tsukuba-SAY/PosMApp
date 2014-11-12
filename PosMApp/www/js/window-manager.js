@@ -28,7 +28,7 @@ function windowManager () {
 
     var mc = new Hammer.Manager($("#mapFrame")[0]);
     mc.add(new Hammer.Pan());
-    mc.add(new Hammer.Pinch());
+    mc.add(new Hammer.Pinch()).recognizeWith(mc.get("pan"));
     mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
     mc.on("panstart", function(ev) {
@@ -88,6 +88,9 @@ function windowManager () {
     });
 
     function reset() {
+        posx = START_X;
+        posy = START_Y;
+        scale = 1;
         transform = {
             translate: { x: START_X, y: START_Y },
             scale: 1
