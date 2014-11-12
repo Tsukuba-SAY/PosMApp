@@ -37,13 +37,13 @@ describe("テスト用のファンクションのテスト", function() {
 	});
 	it("ellipsisWordsのテスト", function() {
 		str1 = "いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせすん";
-		expect(ellipsisWords(str1)).toEqual("いろはにほ...");
+		expect(ellipsisWords(str1)).toEqual("いろはにほへと...");
 		str2 = "あ";
 		expect(ellipsisWords(str2)).toEqual("あ");
 		str3 = "We Love Posters!";
-		expect(ellipsisWords(str3)).toEqual("We Lo...");
+		expect(ellipsisWords(str3)).toEqual("We Love...");
 		str4 = "600人規模のポスター展示会";
-		expect(ellipsisWords(str4)).toEqual("600人規...");
+		expect(ellipsisWords(str4)).toEqual("600人規模の...");
 	});
 });
 
