@@ -896,7 +896,7 @@ describe("ラベルの表示切り替え機能", function() {
 
 		initPosterMap();	
 	});
-	it("「ID」ボタンを押すとラベルがIDに切り替わる", function() {
+	it("「通し番号」ボタンを押すとラベルがIDに切り替わる", function() {
 		$("#label-id").trigger("touchstart");
 		var labels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
@@ -909,7 +909,7 @@ describe("ラベルの表示切り替え機能", function() {
 		}
 		expect(labels).toEqual(expectLabels);
 	});
-	it("「セッションID」ボタンを押すとラベルがセッションIDに切り替わる", function() {
+	it("「ポスターID」ボタンを押すとラベルがポスターIDに切り替わる", function() {
 		$("#label-sessionid").trigger("touchstart");
 		var labels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
