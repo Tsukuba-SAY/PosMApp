@@ -14,10 +14,9 @@ $.fn.showPosterList = function() {
 		posters["sessionid"].push(poster[i].sessionid);
 		posters["title"].push(poster[i].title);
 		posters["author"].push(getAuthors(i+1));
-		str += "<tr><td><div>ID:" + poster[i].id + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img><br>";
-		str += "Sessionid:" + poster[i].sessionid + "<br>";
-		str += "Title:" + poster[i].title + "<br>";
-		str += "Author:" + getAuthors(i+1) + "<br></td>";
+		str += "<tr><td><div>ポスターID: " + poster[i].sessionid + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img><br>";
+		str += "<strong>" + poster[i].title + "</strong><br>";
+		str += "著者: " + getAuthors(i+1) + "<br></td>";
 		str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+poster[i].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 		//str += "<div><img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 15%;'></img></div>";
 		//str += '<table><tr><td><a data-role = "button" class = "listToMapBtn" id = "listToMap' + poster[i].id.toString() + '">これどこ？</a></td><td><a data-role = "button" class = "listToDetailBtn" id = "listToMap' + poster[i].id.toString() + '">詳細情報</a></td></tr></table></td></tr>';
@@ -58,11 +57,11 @@ function getAuthors(posterid){
 	var authorlist = "";
 	for (var i = 0; i < atotal; i++) {
         if (author[i].posterid == posterid){
-        	authorlist = authorlist + author[i].name + ",";
+        	authorlist = authorlist + author[i].name + ", ";
         }
 	}
 	//最後の","を削除する
-	authorlist = authorlist.substring(0, authorlist.length - 1);
+	authorlist = authorlist.substring(0, authorlist.length - 2);
 	return authorlist;
 }
 
@@ -72,10 +71,10 @@ function getKeywords(posterid){
 	var keywordlist = "";
 	for (var i = 0; i < ktotal; i++) {
         if (keyword[i].posterid == posterid){
-        	keywordlist = keywordlist + keyword[i].keyword + ",";
+        	keywordlist = keywordlist + keyword[i].keyword + ", ";
         }
 	}
-	keywordlist = keywordlist.substring(0, keywordlist.length - 1);
+	keywordlist = keywordlist.substring(0, keywordlist.length - 2);
 	return keywordlist;
 }
 
