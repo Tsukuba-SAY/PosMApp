@@ -93,10 +93,16 @@ function setPosterIcons() {
 		str += "		<img id='icon" + i + "' src='img/dpic.png' " + "width='100%' height='100%'></img>\n";
 		str += "		<div class='iconindexhor' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
 		str += "	</div>\n";
-		str += "	<div id='starTopNo" + i +"' class='star-top'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
-		str += "    <div id='starRightNo" + i + "' class='star-right'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
-		str += "	<div id='starBottomNo" + i + "' class='star-bottom'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
-		str += "	<div id='starLeftNo" + i + "' class='star-left'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
+
+		var pos;
+		switch (poster[i-1].star) {
+			case 1: pos = "Top"; break;
+			case 2: pos = "Right"; break;
+			case 3: pos = "Bottom"; break;
+			case 4: pos = "Left"; break;
+		}
+
+		str += "	<div id='star" + pos + "No" + i +"' class='star-top'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
 		str += "</div>\n";
 	}
 	document.getElementById("posters").innerHTML = str;
