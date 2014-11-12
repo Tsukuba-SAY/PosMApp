@@ -223,7 +223,7 @@ function changeBasicInfoPanel(flag) {
 		+ sessionStorage.getItem("sessionid")
 		+ "]<br />"
 		+ sessionStorage.getItem("title")
-		+ "<br />チーム名： "
+		+ "<br />代表者名： "
 		+ sessionStorage.getItem("authorname")
 		+ "<br />所属： "
 		+ sessionStorage.getItem("authorbelongs");
