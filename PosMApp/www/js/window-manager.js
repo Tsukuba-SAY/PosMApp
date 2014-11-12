@@ -28,7 +28,7 @@ function windowManager () {
 
     var mc = new Hammer.Manager($("#mapFrame")[0]);
     mc.add(new Hammer.Pan());
-    mc.add(new Hammer.Pinch());
+    mc.add(new Hammer.Pinch()).recognizeWith("panmove");
     mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
     mc.on("panstart", function(ev) {
