@@ -56,7 +56,7 @@ function init() {
 
 	// ラベルを変更する
 	$(".changelabel").changeLabel();
-	$("#changelabel").css("zoom", window.innerWidth/600);
+	$("#changelabel").css("zoom", window.innerWidth/1200);
 
 	// ブックマークスターのタッチイベント
 	$("#bookmarkbutton").touchBookmark();
