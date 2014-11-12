@@ -88,6 +88,9 @@ function windowManager () {
     });
 
     function reset() {
+        posx = START_X;
+        posy = START_Y;
+        scale = 1;
         transform = {
             translate: { x: START_X, y: START_Y },
             scale: 1
