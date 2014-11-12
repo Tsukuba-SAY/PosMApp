@@ -14,7 +14,7 @@ function windowManager () {
         return window[Hammer.prefixed(window, 'requestAnimationFrame')] || function (callback) {
             window.setTimeout(callback, 1000 / 60);
         };
-    })();
+    });
 
     //$(element).hammer(options).bind("pan", myPanHandler);
 
@@ -75,12 +75,37 @@ function windowManager () {
     // }
 
     function updateElementTransform() {
+        // transform.scale = (transform.scale >= 4.0) ? 4.0 : transform.scale;
+        // transform.scale = (transform.scale <= 0.5) ? 0.5 : transform.scale;
+
+        // var value = [
+        // 	'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
+        // 	'scale(' + transform.scale + ', ' + transform.scale + ')'
+        // ];
+
+        // value = value.join(" ");
+        // //el.textContent = value;
+        // el.style.webkitTransform = value;
+        // el.style.mozTransform = value;
+        // el.style.transform = value;
+        // ticking = false;
+    }
+
+    // function requestElementUpdate() {
+    // 	if (!ticking) {
+    // 		reqAnimationFrame(updateElementTransform);
+    // 		ticking = true;
+    // 	}
+    // }
+    
+    function onPan(ev) {
+        // requestElementUpdate();
         transform.scale = (transform.scale >= 4.0) ? 4.0 : transform.scale;
         transform.scale = (transform.scale <= 0.5) ? 0.5 : transform.scale;
 
         var value = [
-        	'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
-        	'scale(' + transform.scale + ', ' + transform.scale + ')'
+            'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
+            'scale(' + transform.scale + ', ' + transform.scale + ')'
         ];
 
         value = value.join(" ");
@@ -88,17 +113,9 @@ function windowManager () {
         el.style.webkitTransform = value;
         el.style.mozTransform = value;
         el.style.transform = value;
-        ticking = false;
-    }
 
-    function requestElementUpdate() {
-    	if (!ticking) {
-    		reqAnimationFrame(updateElementTransform);
-    		ticking = true;
-    	}
-    }
-    
-    function onPan(ev) {
+        reqAnimationFrame();
+
     	console.log("pan");
         el.className = '';
 
@@ -106,11 +123,27 @@ function windowManager () {
             x: posx + ev.deltaX,
             y: posy + ev.deltaY
         };
-
-      	requestElementUpdate();
     }
 
     function onPinch(ev) {
+
+        transform.scale = (transform.scale >= 4.0) ? 4.0 : transform.scale;
+        transform.scale = (transform.scale <= 0.5) ? 0.5 : transform.scale;
+
+        var value = [
+            'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
+            'scale(' + transform.scale + ', ' + transform.scale + ')'
+        ];
+
+        value = value.join(" ");
+        //el.textContent = value;
+        el.style.webkitTransform = value;
+        el.style.mozTransform = value;
+        el.style.transform = value;
+
+        // requestElementUpdate();
+        reqAnimationFrame();
+
     	console.log("pinch");
         // if(ev.type == 'pinchstart') {
         //     initScale = transform.scale || 1;
@@ -118,8 +151,6 @@ function windowManager () {
 
         el.className = '';
         transform.scale = scale * ev.scale;
-
-        requestElementUpdate();
     }
 
     // var initAngle = 0;
@@ -162,6 +193,24 @@ function windowManager () {
     // }
 
     function onDoubleTap(ev) {
+
+        transform.scale = (transform.scale >= 4.0) ? 4.0 : transform.scale;
+        transform.scale = (transform.scale <= 0.5) ? 0.5 : transform.scale;
+
+        var value = [
+            'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
+            'scale(' + transform.scale + ', ' + transform.scale + ')'
+        ];
+
+        value = value.join(" ");
+        //el.textContent = value;
+        el.style.webkitTransform = value;
+        el.style.mozTransform = value;
+        el.style.transform = value;
+
+        // requestElementUpdate();
+        reqAnimationFrame();
+
     	console.log("double tap");
         transform.translate = {
             x: START_X,
@@ -169,10 +218,8 @@ function windowManager () {
         };
         transform.scale = 1;
 
-        clearTimeout(timer);
-        timer = setTimeout(function () {}, 500);
-
-        requestElementUpdate();
+        // clearTimeout(timer);
+        // timer = setTimeout(function () {}, 500);
     }
 
 }
