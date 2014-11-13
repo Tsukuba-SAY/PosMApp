@@ -57,7 +57,7 @@ function getAuthors(posterid){
 	var atotal = author.length;
 	var authorlist = "";
 	for (var i = 0; i < atotal; i++) {
-        if (author[i].posterid == posterid){
+        if (author[i].posterid === posterid){
         	authorlist = authorlist + author[i].name + ",";
         }
 	}
@@ -71,7 +71,7 @@ function getKeywords(posterid){
 	var ktotal = keyword.length;
 	var keywordlist = "";
 	for (var i = 0; i < ktotal; i++) {
-        if (keyword[i].posterid == posterid){
+        if (keyword[i].posterid === posterid){
         	keywordlist = keywordlist + keyword[i].keyword + ",";
         }
 	}
@@ -81,7 +81,7 @@ function getKeywords(posterid){
 
 //ポスターリストから詳細情報画面に遷移する
 function listToDetail(posterid){
-	if (posterid < 1 || posterid > poster.length || posterid == null || posterid == undefined) {
+	if (posterid < 1 || posterid > poster.length || posterid === null || posterid === undefined) {
 		throw new Exception();
 	}
 
@@ -91,7 +91,7 @@ function listToDetail(posterid){
 	//選択中ポスターの情報をsessionStorageに保存する
 	for (var i = 0; i < ptotal; i++) {
 		var p = poster[i];
-		if (p.id == posterid) {
+		if (p.id === posterid) {
 			sessionStorage.setItem("posterid", posterid);
 			sessionStorage.setItem("sessionid", p.sessionid);
 			sessionStorage.setItem("title", p.title);
@@ -110,7 +110,7 @@ function listToDetail(posterid){
 
 //ポスターリストからマップ画面に遷移する
 function listToMap(posterid){
-	if (posterid < 1 || posterid > poster.length || posterid == null || posterid == undefined) {
+	if (posterid < 1 || posterid > poster.length || posterid === null || posterid === undefined) {
 		throw new Exception();
 	}
 	//sessionStorageの中に存在している情報の削除

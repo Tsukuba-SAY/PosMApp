@@ -17,25 +17,25 @@ function init() {
 	showPosterIcons();
 
 	// 基本情報が選択されていたらそのポスターを強調表示
-	if (sessionStorage.getItem("posterid") != null) {
+	if (sessionStorage.getItem("posterid") !== null) {
 		changeBasicInfoPanel(true);
 		pflag[sessionStorage.getItem("posterid")] = "t";
 	}
 
 	// 検索中状態だったら検索にヒットしたポスターを強調表示
 	// FIXME:もう一度検索しているので読み込み時遅くなる
-	if (sessionStorage.getItem("searching") == "true") {
+	if (sessionStorage.getItem("searching") === "true") {
 		document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
 		searchByTitle(sessionStorage.getItem("searchWord"));
 	}
 
 	// もしLocal Storageにbookmarksがなければ追加
-	if (localStorage.getItem("bookmarks") == null) {
+	if (localStorage.getItem("bookmarks") === null) {
 		localStorage.setItem("bookmarks", "");
 	}
 
 	// もしラベルが変更されていたらそれに変更
-	if (sessionStorage.getItem("label") != null) {
+	if (sessionStorage.getItem("label") !== null) {
 		changeLabel(sessionStorage.getItem("label"));
 	}
 

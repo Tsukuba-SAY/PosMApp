@@ -39,11 +39,11 @@ function windowManager () {
         transform = {
             translate : { x: posx, y: posy },
             scale: scale
-        }
+        };
         animation();
     });
 
-    mc.on("panmove", function(ev) {
+    mc.on("panmove", function() {
         console.log("panmove");
 
         transform.translate = {
@@ -52,14 +52,14 @@ function windowManager () {
         };
     });
 
-    mc.on("panend pancancel", function(ev) {
+    mc.on("panend pancancel", function() {
         console.log("panend");
         isAnimated = false;
         posx = transform.translate.x;
         posy = transform.translate.y;
     });
 
-    mc.on("pinchstart", function(ev) {
+    mc.on("pinchstart", function() {
         console.log("pinchstart");
 
         isAnimated = true;
@@ -69,7 +69,7 @@ function windowManager () {
         };
         animation();
     });
-    mc.on("pinchmove", function(ev) {
+    mc.on("pinchmove", function() {
         console.log("pinchmove");
         transform.scale = scale * ev.scale;
     });
@@ -79,7 +79,7 @@ function windowManager () {
         scale = transform.scale;
     });
 
-    mc.on("doubletap", function(ev) {
+    mc.on("doubletap", function() {
         console.log("double tap");
         reset();
         isAnimated = true;

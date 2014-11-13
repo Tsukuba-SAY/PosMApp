@@ -2,7 +2,7 @@
 $.fn.backToPreviousPage = function() {
 	$(this).on("touchstart", function(e) {
 		var prev = sessionStorage.getItem("previousPage");
-		if (prev == null || prev == undefined) {
+		if (prev === null || prev === undefined) {
 			prev = "posterMapPage";
 		}
 		window.location.href = "#" + prev;

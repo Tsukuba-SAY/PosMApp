@@ -174,30 +174,30 @@ function touchPoster(posterid) {
 		throw new Exception();
 	}
 
-	if (sessionStorage.getItem("searching") == "true") {
-		if (pflag[posterid] == "d") {
+	if (sessionStorage.getItem("searching") === "true") {
+		if (pflag[posterid] === "d") {
 			unselectPoster();
 			selectPoster(posterid);
 			return "t";
-		} else if (pflag[posterid] == "t") {
+		} else if (pflag[posterid] === "t") {
 			changeBasicInfoPanel(false);
 			unselectPoster();
 			return "d";
-		} else if (pflag[posterid] == "s") {
+		} else if (pflag[posterid] === "s") {
 			unselectPoster();
 			selectPoster(posterid);
 			return "e";
-		} else if (pflag[posterid] == "e") {
+		} else if (pflag[posterid] === "e") {
 			changeBasicInfoPanel(false);
 			unselectPoster();
 			return "s";
 		}
 	} else {
-		if (pflag[posterid] == "d") {
+		if (pflag[posterid] === "d") {
 			unselectPoster();
 			selectPoster(posterid);
 			return "t";
-		} else if (pflag[posterid] == "t") {
+		} else if (pflag[posterid] === "t") {
 			changeBasicInfoPanel(false);
 			unselectPoster();
 			return "d";
@@ -233,14 +233,14 @@ function changeBasicInfoPanel(flag) {
 
 	var bookmarkIcon = document.getElementById("bookmarkbutton");
 	var bookmarks = localStorage.getItem("bookmarks");
-	if (bookmarks == null || bookmarks == "") {
+	if (bookmarks === null || bookmarks === "") {
 		bookmarks = "";
 	}
 	var bookmarkArr = bookmarks.split(",");
 	var foundBookmark = false;
 	console.log(sessionStorage.getItem("posterid"));
 	for (var i = 0; i < bookmarkArr.length; i++) {
-		if (parseInt(sessionStorage.getItem("posterid")) == parseInt(bookmarkArr[i])) {
+		if (parseInt(sessionStorage.getItem("posterid")) === parseInt(bookmarkArr[i])) {
 			foundBookmark = true;
 			break;
 		}
@@ -265,7 +265,7 @@ function searchByTitle(title) {
 	var ltitle = title.toLowerCase();
 
 	poster.forEach(function(aPoster) {
-		if (aPoster.title.toLowerCase().indexOf(ltitle) != -1) {
+		if (aPoster.title.toLowerCase().indexOf(ltitle) !== -1) {
 			posterids.push(aPoster.id);
 		}
 	});
@@ -273,7 +273,7 @@ function searchByTitle(title) {
 
 	emphasisSearchedPosters(posterids);
 
-	if (posterids.length == 0) {
+	if (posterids.length === 0) {
 		document.getElementById("searchResult").innerHTML = "見つかりませんでした";
 	} else {
 		document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
@@ -288,7 +288,7 @@ function emphasisSearchedPosters(posterids) {
 
 	// 前回の検索結果をリセットする
 	for (var i = 1; i <= ptotal; i++) {
-		if (pflag[i] != "t" && pflag[i] != "e") {
+		if (pflag[i] !== "t" && pflag[i] !== "e") {
 			pflag[i] = "d";
 		}
 	}
@@ -296,10 +296,10 @@ function emphasisSearchedPosters(posterids) {
 	// ヒットしたポスターを強調表示する
 	posterids.forEach(function(id) {
 		// すでに選択されていれば、検索ヒット中の強調表示にする
-		if (pflag[id] == "t") {
+		if (pflag[id] === "t") {
 			pflag[id] = "e";
 		// 検索ヒット中の強調表示になっていない限り、検索ヒットにする
-		} else if (pflag[id] != "e") {
+		} else if (pflag[id] !== "e") {
 			pflag[id] = "s";
 		}
 	});
@@ -314,7 +314,7 @@ function selectPoster(posterid) {
 
 	for (var i = 0; i < ptotal; i++) {
 		var p = poster[i];
-		if (p.id == posterid) {
+		if (p.id === posterid) {
 			sessionStorage.setItem("posterid", posterid);
 			sessionStorage.setItem("sessionid", p.sessionid);
 			sessionStorage.setItem("title", p.title);
@@ -329,7 +329,7 @@ function selectPoster(posterid) {
 	var authors = new Array();
 	for (var i = 0; i < author.length; i++) {
 		var a = author[i];
-		if (a.posterid == posterid) {
+		if (a.posterid === posterid) {
 			authors.push(a.name);
 		}
 	}
@@ -338,7 +338,7 @@ function selectPoster(posterid) {
 	var keywords = new Array();
 	for (var i = 0; i < keyword.length; i++) {
 		var k = keyword[i];
-		if (k.posterid == posterid) {
+		if (k.posterid === posterid) {
 			keywords.push(k.keyword);
 		}
 	}
@@ -352,9 +352,9 @@ function selectPoster(posterid) {
 // 強調表示を解除する
 function unselectPoster() {
 	for (var i = 1; i <= ptotal; i++) {
-		if (pflag[i] == "t") { 
+		if (pflag[i] === "t") { 
 			pflag[i] = "d"; 
-		} else if (pflag[i] == "e") {
+		} else if (pflag[i] === "e") {
 			pflag[i] = "s";
 		}
 	}
@@ -421,7 +421,7 @@ function showBookmarkIcons() {
 
 // ブックマークスターをタッチする（状態のスイッチ）
 function touchBookmark(posterid, bookmarkIcon){
-	if (posterid < 1 || posterid > ptotal || posterid == null) {
+	if (posterid < 1 || posterid > ptotal || posterid === null) {
 		throw new Exception();
 	}
 
@@ -432,34 +432,34 @@ function touchBookmark(posterid, bookmarkIcon){
 	var bookmarkArr = getBookmarks();
 	for (var i = 0; i < bookmarkArr.length; i++) {
 		//該当ポスターがブックマークリストに存在しているかどうか確認する
-		if (posterid == bookmarkArr[i]) {
+		if (posterid === parseInt(bookmarkArr[i])) {
 			location = i;
 			break;
 		}
 	}
 
 	var starstatus;
-	if (location != -1) {
-		// ない場合
+	if (location !== -1) {
+		// ある場合
 		// 存在しているIDを削除する
 		bookmarkArr.splice(location, 1);
-		if (bookmarkIcon != null) {
+		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/unbookmark.png";
 		}
 		starstatus = "none";
 	} else {
-		// ある場合
+		// ない場合
 		bookmarkArr.push(posterid);
 		bookmarkArr.sort(function(a,b){
     		return (parseInt(a) < parseInt(b)) ? -1 : 1;
     	});
-		if (bookmarkIcon != null) {
+		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/bookmark.png";
 		}
 		starstatus = "block";
 	}
 
-	if (bookmarkIcon != null) {
+	if (bookmarkIcon !== null) {
 		var p = poster[posterid-1];
 		switch (p.star) {
 			case 1:
@@ -490,7 +490,7 @@ function touchBookmark(posterid, bookmarkIcon){
 function getBookmarks() {
 	var bookmarks = localStorage.getItem("bookmarks");
 	// 空文字列だった場合は何もブックマークされていないので空配列
-	var bookmarkArr = (bookmarks != "" && bookmarks != null) ? bookmarks.split(",") : [];
+	var bookmarkArr = (bookmarks !== "" && bookmarks !== null) ? bookmarks.split(",") : [];
 	// 中身をすべて数値にする
 	bookmarkArr.filter(function(obj) {
 		return parseInt(obj);
@@ -507,7 +507,7 @@ function getBookmarks() {
 // 検索バーが変更されたとき
 // TODO: jQueryを使うとbindされない原因をつきとめてjQueryに戻す
 function searchChanged(bar) {
-	if (bar.value.trim() != "" && bar.value != null) {
+	if (bar.value.trim() !== "" && bar.value !== null) {
 		
 		// 検索し、強調表示する
 		console.log("search");
@@ -525,9 +525,9 @@ function searchChanged(bar) {
 		// 各ポスターに対して検索中状態から未検索状態へフラグを変化させる
 		for (var i = 1; i <= ptotal; i++) {
 			// 検索中強調表示ならばただの強調表示に、ヒット状態なら元に戻す
-			if (pflag[i] == "e") {
+			if (pflag[i] === "e") {
 				pflag[i] = "t";
-			} else if (pflag[i] == "s") {
+			} else if (pflag[i] === "s") {
 				pflag[i] = "d";
 			}
 		}
