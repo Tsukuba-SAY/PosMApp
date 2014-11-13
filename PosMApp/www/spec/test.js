@@ -996,7 +996,7 @@ describe("ブックマーク機能", function() {
 
 		expect(bookmarks).toEqual(expectArr.join(","));
 	});
-	it("1番のポスターがブックマークされている状態で、1番の星をタップすると、何もブックされていない状態になる", function() {
+	it("1番のポスターがブックマークされている状態で、1番の星をタップすると、何もブックマークされていない状態になる", function() {
 		localStorage.setItem("bookmarks", "1");
 		sessionStorage.setItem("posterid", 1);
 		$("#bookmarkbutton").trigger("touchstart");
@@ -1072,7 +1072,7 @@ describe("ブックマーク機能", function() {
 		expect($("#bookmarkbutton").attr("src")).toEqual("img/bookmark.png");
 	});
 	it("2番のポスターがブックマークされている状態で、1番のポスターをタップすると、星がブックマークされていない状態で表示されている", function() {
-		localStorage.setItem("bookmarks", "2");
+		localStorage.setItem("bookmarks", 2);
 		$("#icon1").touchPoster();
 		$("#icon1").trigger("touchstart");
 		expect($("#bookmarkbutton").attr("src")).toEqual("img/unbookmark.png");
