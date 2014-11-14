@@ -1117,7 +1117,9 @@ describe("ポスターリスト", function() {
 
 		var expectIds = new Array();
 		poster.forEach(function(p) {
-			expectIds.push(p.id.toString());
+			if (p.sessionid.indexOf("Dummy") === -1) {
+				expectIds.push(p.id.toString());
+			}
 		});
 
 		expect(expectIds).toEqual(posters["id"]);
