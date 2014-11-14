@@ -7,8 +7,6 @@
 	position: absolute; 
 	text-align:center;
 	vertical-align:middle;
-	top: 20px;
-	left: 10px;
 	z-index: 3;
 }
 
@@ -112,9 +110,7 @@
 	position: absolute;
 	width: 15px;
 	height: 15px;
-	top: 5px;
-	left: calc(50% - 15px/2);	
-	font-size: 15px;
+
 }
 
 .star-right{

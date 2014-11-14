@@ -88,10 +88,24 @@ function setPosterIcons() {
 	var str = "";
 	var STATIC_WIDTH =  108;
 	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
+	var starAngle 
 
-
+	
 	for (var i = 1; i <= poster.length; i++) {
-		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[i-1].x*INIT_SCALE-15)+"px;top:"+(position[i-1].y*INIT_SCALE-15)+"px;width:" + (position[i-1].width*INIT_SCALE+30) + "px;height:" + (position[i-1].height*INIT_SCALE+30) + "px;'>\n";
+		switch (poster[i-1].star) {
+			case 1:
+				starAngle = "top:-15px;left:30%;";
+				break;
+			case 2:
+				starAngle = "right:-15px;top:30%;";
+				break;
+			case 3:
+				starAngle = "bottom:-15px;left:30%;";
+				break;
+			case 4:
+				starAngle = "left:-15px;top:30%;"
+		}
+		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[i-1].x*INIT_SCALE)+"px;top:"+(position[i-1].y*INIT_SCALE)+"px;width:" + (position[i-1].width*INIT_SCALE) + "px;height:" + (position[i-1].height*INIT_SCALE) + "px;'>\n";
 		str += "	<div class='postericon horizontal'>\n";
 		str += "		<img class='posterimg' id='icon" + i + "' src='img/dpic.png' " + "width="+position[i-1].width*INIT_SCALE+ " height=" + position[i-1].height*INIT_SCALE + "></img>\n";
 		str += "		<div class='" + position[i-1].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
@@ -99,13 +113,21 @@ function setPosterIcons() {
 
 		var pos;
 		switch (poster[i-1].star) {
-			case 1: pos = "Top"; break;
-			case 2: pos = "Right"; break;
-			case 3: pos = "Bottom"; break;
-			case 4: pos = "Left"; break;
+			case 1:
+				pos = "Top";
+				break;
+			case 2:
+				pos = "Right";
+				break;
+			case 3:
+				pos = "Bottom";
+				break;
+			case 4:
+				pos = "Left";
+				break;
 		}
 
-		str += "	<div id='star" + pos + "No" + i +"' class='star-top'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
+		str += "	<div id='star" + pos + "No" + i +"' class='star-top' style='"+starAngle+"'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
 		str += "</div>\n";
 	}
 	document.getElementById("posters").innerHTML = str;
