@@ -1,4 +1,4 @@
-PosMApp  [![Build Status](https://travis-ci.org/Tsukuba-SAY/PosMApp.svg?branch=develop)](https://travis-ci.org/Tsukuba-SAY/PosMAppBuild/)  [![Code Climate](https://codeclimate.com/github/Tsukuba-SAY/PosMAppBuild/badges/gpa.svg)](https://codeclimate.com/github/Tsukuba-SAY/PosMAppBuild)
+PosMApp  [![Build Status](https://travis-ci.org/Tsukuba-SAY/PosMApp.svg?branch=develop)](https://travis-ci.org/Tsukuba-SAY/PosMAppBuild/)
 =======
 
 PosMAppは、ポスターセッション参加者向けのポスターマップアプリです。  
