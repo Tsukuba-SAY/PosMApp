@@ -14,45 +14,33 @@
       
 
 	<!-- DB用ポスターデータ -->
-	<script type="text/javascript" charset="utf-8" src="js/posterdata.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/icon-position.js">
-	</script>
+	<script type="text/javascript" charset="utf-8" src="js/posterdata.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/icon-position.js"></script>
 
-	<script type="text/javascript" charset="utf-8" src="js/lib/jquery-2.1.1.min.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.mobile-1.4.2.min.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/lib/hammer.min.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.hammer.js">
-	</script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.mobile-1.4.2.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/hammer.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.hammer.js"></script>
 	
+	<script type="text/javascript" charset="utf-8" src="js/toppage-function.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/postermap-function.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/posterlist-function.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/window-manager.js"></script>
 
-	<script type="text/javascript" charset="utf-8" src="js/toppage-function.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/postermap-function.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/posterlist-function.js">
-	</script>
-	<script type="text/javascript" charset="utf-8" src="js/window-manager.js">
-	</script>
-
-	<script type="text/javascript" charset="utf-8" src="js/index.js">
-	</script>
+	<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
 
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
 <body>
-	<!-- トップメニュー画面 -->
-	<div data-role="page" id="topPage" style="background-color: #D2DEEF" >
-		<div data-role="header"><h1>PosMApp</h1></div>
-		<div data-role="content">
-			<div id="conferenceName">WebDB Forum 2014<br />ポスターレセプション会場案内</div>
-			<div align="center">
-				<h4>日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></h4>
-			</div>
+<!-- トップメニュー画面 -->
+<div data-role="page" id="topPage" style="background-color: #D2DEEF" >
+	<div data-role="header"><h1>PosMApp</h1></div>
+	<div data-role="content">
+		<div id="conferenceName">WebDB Forum 2014<br />ポスターレセプション会場案内</div>
+		<div align="center">
+			<h4>日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></h4>
+		</div>
 		<table class="table-topmenu" align="center" >
 			<tr>
 				<td>
@@ -87,144 +75,144 @@
 		<div id="copyright" align="center">
 			Copyright &copy; <a href="http://www.tsukuba.ac.jp/">The University of Tsukuba</a>. All Rights Reserved.
 		</div>
-		</div>
 	</div>
+</div>
 
-	<!-- ポスターマップ画面 -->
-	<div data-role="page" id="posterMapPage">
-		<div data-role="header"　data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
-			<input type="search" id="search-bar-title"
-		    	placeholder="タイトルで検索" onchange="searchChanged(this)"/>
+<!-- ポスターマップ画面 -->
+<div data-role="page" id="posterMapPage">
+	<div data-role="header"　data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
+		<input type="search" id="search-bar-title"
+	    	placeholder="タイトルで検索" onchange="searchChanged(this)"/>
+	</div>
+	<div style="position: relative;">
+		<div id="subheader" style="top: 0px;">
+			<!-- 検索結果件数 -->
+			<div id="searchResult"
+				style="position: fixed; z-index: 100;">
+			</div>
+			<!-- ラベル表示切替ボタン -->
+			<div id="changelabel" data-position="fixed" style="border: 2px;">
+				<a data-role="button" href="#changeLabelDialog"
+					data-inline="true" data-rel="dialog"
+					data-transition="pop">ラベル切替</a>
+			</div>
 		</div>
+		<!-- ポスターマップ本体 -->
+		<div id="mapFrame" style="z-index: 255;background-color:#FFFFFF">
+			<div id="mapMain">
+				<!-- ポスターマップ表示 -->
+				<img id="mapImg" src="img/postermap.png" border="0"
+					style="position: relative; z-index: 1;"></img>
+				<!-- ポスターアイコン -->
+				<div id="posters"></div>
+			</div>
+		</div>
+		<!-- 基本情報パネル -->
 		<div style="position: relative;">
-			<div id="subheader" style="top: 0px;">
-				<!-- 検索結果件数 -->
-				<div id="searchResult"
-					style="position: fixed; z-index: 100;">
-				</div>
-				<!-- ラベル表示切替ボタン -->
-				<div id="changelabel" data-position="fixed" style="border: 2px;">
-					<a data-role="button" href="#changeLabelDialog"
-						data-inline="true" data-rel="dialog"
-						data-transition="pop">ラベル切替</a>
-				</div>
-			</div>
-			<!-- ポスターマップ本体 -->
-			<div id="mapFrame" style="z-index: 255;background-color:#FFFFFF">
-				<div id="mapMain">
-					<!-- ポスターマップ表示 -->
-					<img id="mapImg" src="img/postermap.png" border="0"
-						style="position: relative; z-index: 1;"></img>
-					<!-- ポスターアイコン -->
-					<div id="posters"></div>
-				</div>
-			</div>
-			<!-- 基本情報パネル -->
-			<div style="position: relative;">
-				<div id="basicinfopanel" style="display:none;">
-					<div id="basicinfo"></div>
-					<!-- ブックマークボタン -->
-					<!-- アイコンの切り替えはpostermap.jsで行う -->
-					<img id="bookmarkbutton"></img>
-					<!-- 詳細情報ボタン -->
-					<img id="detailinfobutton" src="img/detail.png"></img>
-				</div>
-			</div>
-		</div>
-
-		<!-- タブバー -->
-		<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
-			<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
-				<ul>
-					<li><a class="topPageButton" id="totoppage" data-icon="toppage" href="#topPage">トップ</a></li>
-					<li><a class="posterMapPageButton" id="map" data-icon="map" href="#posterMapPage">マップ</a></li>
-					<li><a class="posterListPageButton" id="list" data-icon="list" href="#posterListPage">一覧</a></li>
-					<li><a  href=""  id="bookmark"  data-icon="bookmark"  class="ui-disabled" >ブックマーク</a></li>
-					<li><a  href=""  id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
-				</ul>
+			<div id="basicinfopanel" style="display:none;">
+				<div id="basicinfo"></div>
+				<!-- ブックマークボタン -->
+				<!-- アイコンの切り替えはpostermap.jsで行う -->
+				<img id="bookmarkbutton"></img>
+				<!-- 詳細情報ボタン -->
+				<img id="detailinfobutton" src="img/detail.png"></img>
 			</div>
 		</div>
 	</div>
 
-	<!-- 詳細情報画面 -->
-	<div data-role="page" id="detailPage">
-		<div data-role="header">
-			<h1 style="text-align:center"　>詳細情報</h1>
-			<a href="#" class="ui-btn-left"  data-icon="carat-l" id="detailBackButton" >戻る</a>
-		</div>
-		<div data-role="content">
-			No. <span id="detail-posterid"></span> [<span id="detail-sessionid"></span>]
-			<h1>
-				<span id="detail-title"></span>
-			</h1>
+	<!-- タブバー -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
+		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
 			<ul>
-				<li>著者： <span id="detail-authors"></span></li>
-				<li>所属： <span id="detail-authorbelongs"></span></li>
-				<li>代表者名： <span id="detail-authorname"></span></li>
-				<li>キーワード： <span id="detail-keywords"></span></li>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage" href="#topPage">トップ</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map" href="#posterMapPage">マップ</a></li>
+				<li><a class="posterListPageButton" id="list" data-icon="list" href="#posterListPage">一覧</a></li>
+				<li><a href="" id="bookmark" data-icon="bookmark" class="ui-disabled" >ブックマーク</a></li>
+				<li><a href="" id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
 			</ul>
-			<h2>概要</h2>
-			<p>
-				<span id="detail-abstract"></span>
-			</p>
-			
-		</div>
-		<!-- タブバー -->
-		<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
-			<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
-				<ul>
-					<li><a class="topPageButton" id="totoppage" data-icon="toppage" href="#topPage">トップ</a></li>
-					<li><a class="posterMapPageButton" id="map" data-icon="map" href="#posterMapPage">マップ</a></li>
-					<li><a class="posterListPageButton" id="list" data-icon="list" href="#posterListPage">一覧</a></li>
-					<li><a  href=""  id="bookmark"  data-icon="bookmark"  class="ui-disabled" >ブックマーク</a></li>
-					<li><a  href=""  id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
-				</ul>
-			</div>
 		</div>
 	</div>
+</div>
 
-	<!-- ポスターリスト画面 -->
-	<div data-role="page" id="posterListPage" data-position="fixed">
-		<div data-role="header">
-			<h1 style="text-align:center"　>ポスター一覧</h1>
-		</div>
-		<div data-role="content">
-			<div style="overflow:auto; height:100%;">
-				<!-- ポスターリスト -->
-				<div id="posterList" class="listcolor"></div>
-			</div>
-		</div>
-		<!-- タブバー -->
-		<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
-			<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
-				<ul>
-					<li><a class="topPageButton" id="totoppage" data-icon="toppage" href="#topPage">トップ</a></li>
-					<li><a class="posterMapPageButton" id="map" data-icon="map" href="#posterMapPage">マップ</a></li>
-					<li><a class="posterListPageButton" id="list" data-icon="list" href="#posterListPage">一覧</a></li>
-					<li><a  href=""  id="bookmark"  data-icon="bookmark"  class="ui-disabled" >ブックマーク</a></li>
-					<li><a  href=""  id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
-				</ul>
-			</div>
+<!-- 詳細情報画面 -->
+<div data-role="page" id="detailPage">
+	<div data-role="header">
+		<h1 style="text-align:center"　>詳細情報</h1>
+		<a href="#" class="ui-btn-left"  data-icon="carat-l" id="detailBackButton" >戻る</a>
+	</div>
+	<div data-role="content">
+		No. <span id="detail-posterid"></span> [<span id="detail-sessionid"></span>]
+		<h1>
+			<span id="detail-title"></span>
+		</h1>
+		<ul>
+			<li>著者： <span id="detail-authors"></span></li>
+			<li>所属： <span id="detail-authorbelongs"></span></li>
+			<li>代表者名： <span id="detail-authorname"></span></li>
+			<li>キーワード： <span id="detail-keywords"></span></li>
+		</ul>
+		<h2>概要</h2>
+		<p>
+			<span id="detail-abstract"></span>
+		</p>
+		
+	</div>
+	<!-- タブバー -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
+		<div data-role="navbar" height="100%" class="nav-tabicon" data-grid="d">
+			<ul>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage" href="#topPage">トップ</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map" href="#posterMapPage">マップ</a></li>
+				<li><a class="posterListPageButton" id="list" data-icon="list" href="#posterListPage">一覧</a></li>
+				<li><a href="" id="bookmark" data-icon="bookmark" class="ui-disabled">ブックマーク</a></li>
+				<li><a href="" id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
+			</ul>
 		</div>
 	</div>
+</div>
 
-	<!-- 表示切替ボタンのダイアログ -->
-	<div data-role="page" id="changeLabelDialog">
-		<div data-role="header">
-			<h1>ラベルの表示切り替え</h1>
-		</div> 
-		<div data-role="content">
-			<a class="changelabel" id="label-id"
-				href="#posterMapPage" data-role="button">通し番号</a>
-			<a class="changelabel" id="label-sessionid"
-				href="#posterMapPage" data-role="button">ポスターID</a>
-			<a class="changelabel" id="label-title"
-				href="#posterMapPage" data-role="button">タイトル</a>
-			<a class="changelabel" id="label-authorname"
-				href="#posterMapPage" data-role="button">代表者名</a>
-			<a class="changelabel" id="label-authorbelongs"
-				href="#posterMapPage" data-role="button">所属</a>
+<!-- ポスターリスト画面 -->
+<div data-role="page" id="posterListPage" data-position="fixed">
+	<div data-role="header">
+		<h1 style="text-align:center"　>ポスター一覧</h1>
+	</div>
+	<div data-role="content">
+		<div style="overflow:auto; height:100%;">
+			<!-- ポスターリスト -->
+			<div id="posterList" class="listcolor"></div>
 		</div>
 	</div>
+	<!-- タブバー -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
+		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
+			<ul>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage" href="#topPage">トップ</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map" href="#posterMapPage">マップ</a></li>
+				<li><a class="posterListPageButton" id="list" data-icon="list" href="#posterListPage">一覧</a></li>
+				<li><a  href=""  id="bookmark"  data-icon="bookmark"  class="ui-disabled" >ブックマーク</a></li>
+				<li><a  href=""  id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- 表示切替ボタンのダイアログ -->
+<div data-role="page" id="changeLabelDialog">
+	<div data-role="header">
+		<h1>ラベルの表示切り替え</h1>
+	</div> 
+	<div data-role="content">
+		<a class="changelabel" id="label-id"
+			href="#posterMapPage" data-role="button">通し番号</a>
+		<a class="changelabel" id="label-sessionid"
+			href="#posterMapPage" data-role="button">ポスターID</a>
+		<a class="changelabel" id="label-title"
+			href="#posterMapPage" data-role="button">タイトル</a>
+		<a class="changelabel" id="label-authorname"
+			href="#posterMapPage" data-role="button">代表者名</a>
+		<a class="changelabel" id="label-authorbelongs"
+			href="#posterMapPage" data-role="button">所属</a>
+	</div>
+</div>
 </body>
 </html>
