@@ -14,6 +14,10 @@ describe("変数の確認", function() {
 	it("labelmaxが宣言されている", function() {
 		expect(labelmax).toBeDefined();
 	});
+	it("posterとpositionの要素数が等しい", function() {
+		expect(poster.length).toEqual(position.length);
+	});
+
 });
 
 describe("テスト用のファンクションのテスト", function() {
