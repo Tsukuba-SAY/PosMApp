@@ -16,4 +16,4 @@ PosMAppは、ポスターセッション参加者向けのポスターマップ�
 鄒 一民 (ZOU Yimin)  
 万 姗姗 (WAN Shanshan)  
 
-Copyright &copy; 2014 [The University of Tsukuba](http://www.tsukuba.ac.jp/) All Rights Reserved.
+Copyright &copy; 2014 [The University of Tsukuba](http://www.tsukuba.ac.jp/). All Rights Reserved.
