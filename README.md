@@ -1,4 +1,4 @@
-PosMApp
+PosMApp  [![Build Status](https://travis-ci.org/Tsukuba-SAY/PosMApp.svg?branch=develop)](https://travis-ci.org/Tsukuba-SAY/PosMAppBuild/)  [![Code Climate](https://codeclimate.com/github/Tsukuba-SAY/PosMAppBuild/badges/gpa.svg)](https://codeclimate.com/github/Tsukuba-SAY/PosMAppBuild)
 =======
 
 PosMAppは、ポスターセッション参加者向けのポスターマップアプリです。  
@@ -16,8 +16,4 @@ PosMAppは、ポスターセッション参加者向けのポスターマップ�
 鄒 一民 (ZOU Yimin)  
 万 姗姗 (WAN Shanshan)  
 
-
-
-
-[![Build Status](https://travis-ci.org/Tsukuba-SAY/PosMApp.svg?branch=develop)](https://travis-ci.org/Tsukuba-SAY/PosMAppBuild/)
-[![Code Climate](https://codeclimate.com/github/Tsukuba-SAY/PosMAppBuild/badges/gpa.svg)](https://codeclimate.com/github/Tsukuba-SAY/PosMAppBuild)
+Copyright &copy; 2014 [The University of Tsukuba](http://www.tsukuba.ac.jp/) All Rights Reserved.
