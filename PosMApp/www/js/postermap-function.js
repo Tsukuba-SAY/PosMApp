@@ -88,10 +88,14 @@ function setPosterIcons() {
 	var str = "";
 	var STATIC_WIDTH =  108;
 	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
-	var starAngle 
-
+	var starAngle ;
+	var iconWidth;
+	var iconHeight;
 	
 	for (var i = 1; i <= poster.length; i++) {
+		iconWidth = position[i-1].width*INIT_SCALE;
+		iconHeight = position[i-1].height*INIT_SCALE;
+
 		switch (poster[i-1].star) {
 			case 1:
 				starAngle = "top:-15px;left:30%;";
@@ -105,9 +109,9 @@ function setPosterIcons() {
 			case 4:
 				starAngle = "left:-15px;top:30%;"
 		}
-		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[i-1].x*INIT_SCALE)+"px;top:"+(position[i-1].y*INIT_SCALE)+"px;width:" + (position[i-1].width*INIT_SCALE) + "px;height:" + (position[i-1].height*INIT_SCALE) + "px;'>\n";
+		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[i-1].x*INIT_SCALE)+"px;top:"+(position[i-1].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "	<div class='postericon horizontal'>\n";
-		str += "		<img class='posterimg' id='icon" + i + "' src='img/dpic.png' " + "width="+position[i-1].width*INIT_SCALE+ " height=" + position[i-1].height*INIT_SCALE + "></img>\n";
+		str += "		<img class='posterimg' id='icon" + i + "' src='img/dpic.png' " + "width="+iconWidth+ " height=" + iconHeight + "></img>\n";
 		str += "		<div class='" + position[i-1].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
 		str += "	</div>\n";
 
