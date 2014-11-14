@@ -1,17 +1,15 @@
 .postericonframe{
 	position: absolute; 
 	z-index: 3;
-	width: 140px; /*iconの横＋30px*/
-	height: 90px; /*iconの縦＋30px*/
 }
 
 .horizontal{
 	position: absolute; 
-	width:90px;
-	height:40px;
+/*	width:90px;
+	height:40px;*/
 	text-align:center;
 	vertical-align:middle;
-	font-size: 9px;
+	/*font-size: 9px;*/
 	top: 20px;
 	left: 10px;
 	z-index: 3;
@@ -23,7 +21,9 @@
 	width: 100%;
 	height: 100%;
 	top: 0px;
-
+	font-size: 10px;
+	transform: scale(0.5);
+	white-space: nowrap;
 	z-index: 4;
 }
 
