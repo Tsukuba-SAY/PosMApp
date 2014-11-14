@@ -53,7 +53,11 @@ var position = [
 	{"id":53,"x":43,"y":115,"width":11,"height":6,"direction":"sideways"},
 	{"id":54,"x":55,"y":115,"width":11,"height":6,"direction":"sideways"},
 	{"id":55,"x":68,"y":115,"width":11,"height":6,"direction":"sideways"},
-	{"id":56,"x":80,"y":115,"width":11,"height":6,"direction":"sideways"},
-	{"id":49,"x":80,"y":108,"width":11,"height":6,"direction":"sideways"},
-	{"id":48,"x":68,"y":108,"width":11,"height":6,"direction":"sideways"}
+  {"id":56,"x":80,"y":115,"width":11,"height":6,"direction":"sideways"},
+  {"id":49,"x":80,"y":108,"width":11,"height":6,"direction":"sideways"},
+  {"id":48,"x":68,"y":108,"width":11,"height":6,"direction":"sideways"},
+  {"id":0,"x":343,"y":115,"width":11,"height":6,"direction":"sideways"},
+	{"id":0,"x":400,"y":115,"width":11,"height":6,"direction":"sideways"},
+	{"id":0,"x":400,"y":108,"width":11,"height":6,"direction":"sideways"},
+	{"id":0,"x":400,"y":208,"width":11,"height":6,"direction":"sideways"}
 ];
