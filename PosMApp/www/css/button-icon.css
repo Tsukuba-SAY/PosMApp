@@ -1,6 +1,10 @@
 /* タブバーに使うjQuery Mobile用カスタムボタンアイコンを生成するCSS */
 /* ずれてるのをパーセント指定で強制的に合わせているので要修正 */
-
+.ui-icon-toppage {
+  background: url("../img/tabbar/homepage_gray.png") 50% 25% no-repeat;
+    background-size: 18px 18px;
+    box-shadow:none;
+}
 .ui-icon-map {
 	background: url("../img/tabbar/map.png") 50% 25% no-repeat;
   	background-size: 18px 18px;

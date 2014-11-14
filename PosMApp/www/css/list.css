@@ -14,7 +14,8 @@
 										-webkit-box-shadow: none!important; 
 										-webkit-border-radius: 0 !important; 
 										border-radius: 0 !important; }
-#map:after { background:  url("../img/tabbar/map_gray.png") 50% 50% no-repeat; background-size: 24px 22px; }
-#list:after { background:  url("../img/tabbar/list_gray.png") 50% 50% no-repeat; background-size: 24px 16px;  }
-#bookmark:after { background:  url("../img/tabbar/bookmark_gray.png") 50% 50% no-repeat;  background-size: 12px 26px; }
-#information:after { background:  url("../img/tabbar/information_gray.png") 50% 50% no-repeat;  background-size: 22px 27px; }
+#totoppage:after {background: transparent; background-image: url("../img/tabbar/homepage_gray.png") 50% 50% no-repeat; background-size: 24px 22px; }
+#map:after {background: transparent; background-image: url("../img/tabbar/map_gray.png") 50% 50% no-repeat; background-size: 24px 22px; }
+#list:after { background: transparent; background:  url("../img/tabbar/list_gray.png") 50% 50% no-repeat; background-size: 24px 16px;  }
+#bookmark:after { background: transparent; background:  url("../img/tabbar/bookmark_gray.png") 50% 50% no-repeat;  background-size: 12px 26px; }
+#information:after { background: transparent; background:  url("../img/tabbar/information_gray.png") 50% 50% no-repeat;  background-size: 22px 27px; }
