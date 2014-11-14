@@ -32,7 +32,7 @@ function windowManager () {
     mc.add(new Hammer.Pinch()).recognizeWith(mc.get("pan"));
     mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
-    mc.on("panstart", function(ev) {
+    mc.on("panstart", function() {
         console.log("panstart");
 
         isAnimated = true;
@@ -43,7 +43,7 @@ function windowManager () {
         animation();
     });
 
-    mc.on("panmove", function() {
+    mc.on("panmove", function(ev) {
         console.log("panmove");
 
         transform.translate = {
@@ -69,7 +69,7 @@ function windowManager () {
         };
         animation();
     });
-    mc.on("pinchmove", function() {
+    mc.on("pinchmove", function(ev) {
         console.log("pinchmove");
         transform.scale = scale * ev.scale;
     });
