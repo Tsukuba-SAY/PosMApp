@@ -46,10 +46,18 @@ function setDetails() {
 	$("#detail-posterid").html(sessionStorage.getItem("posterid"));
 	$("#detail-sessionid").html(sessionStorage.getItem("sessionid"));
 	$("#detail-title").html(sessionStorage.getItem("title"));
-	$("#detail-authors").html(sessionStorage.getItem("authors"));
+	var authors = sessionStorage.getItem("authors");
+	authors = (authors !== null && authors !== "")
+		? authors
+		: "NO DATA";
+	$("#detail-authors").html(authors);
 	$("#detail-authorbelongs").html(sessionStorage.getItem("authorbelongs"));
 	$("#detail-authorname").html(sessionStorage.getItem("authorname"));
-	$("#detail-keywords").html(sessionStorage.getItem("keywords"));
+	var keywords = sessionStorage.getItem("keywords");
+	keywords = keywords !== null && keywords !== "" 
+		? keywords
+		: "NO DATA";
+	$("#detail-keywords").html(keywords);
 	$("#detail-abstract").html(sessionStorage.getItem("abstract"));
 }
 
