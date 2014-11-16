@@ -14,6 +14,9 @@ describe("変数の確認", function() {
 	it("labelmaxが宣言されている", function() {
 		expect(labelmax).toBeDefined();
 	});
+
+	// posterとpositionの要素数が合わないとindexの不整合が起こって
+	// Javascriptが止まるので画面遷移すら動かなくなる
 	it("posterとpositionの要素数が等しい", function() {
 		expect(poster.length).toEqual(position.length);
 	});
@@ -674,12 +677,12 @@ describe("キーワード検索（タイトル）", function() {
 		initPosterMap();
 	});
 
-	it("「用いた」で検索すると2,4,6,7,10,11,17,18,24番のポスターがヒットする", function() {
+	it("「用いた」で検索すると2,4,6,7,10,11,17,18,24,30,44番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [2,4,6,7,10,11,17,18,24];
+		expectArr = [2,4,6,7,10,11,17,18,24,30,44];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -1121,10 +1124,16 @@ describe("ポスターリスト", function() {
 
 		var expectIds = new Array();
 		poster.forEach(function(p) {
-			if (p.sessionid.indexOf("Dummy") === -1) {
+			//if (p.sessionid.indexOf("Dummy") === -1) {
 				expectIds.push(p.id.toString());
-			}
+			//}
 		});
+
+		// 末尾のDummyデータ4つをpopさせて消している
+		expectIds.pop();
+		expectIds.pop();
+		expectIds.pop();
+		expectIds.pop();
 
 		expect(expectIds).toEqual(posters["id"]);
 	});
