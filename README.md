@@ -25,8 +25,8 @@ iOS, Android端末でご利用いただけます。
 ## フィードバック
 このリポジトリのIssuesにて受け付けています。  
 頂ければ開発チームで対応いたします。お気軽に意見をお寄せください。  
-[新規Issueの作成はこちらから](https://github.com/Tsukuba-SAY/PosMApp/issues/new)
-
+[既存のIssueはこちらです](https://github.com/Tsukuba-SAY/PosMApp/issues)
+[新規Issueの作成はこちらからお願いします](https://github.com/Tsukuba-SAY/PosMApp/issues/new)
 ## 制作
 
 筑波大学 大学院 システム情報工学研究科 コンピュータサイエンス専攻  
