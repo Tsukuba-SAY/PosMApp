@@ -110,7 +110,7 @@ function setPosterIcons() {
 				starAngle = "left:-15px;top:30%;"
 		}
 		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[i-1].x*INIT_SCALE)+"px;top:"+(position[i-1].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-		str += "	<div class='postericon horizontal'>\n";
+		str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "		<img class='posterimg' id='icon" + i + "' src='img/dpic.png' " + "width="+iconWidth+ " height=" + iconHeight + "></img>\n";
 		str += "		<div class='" + position[i-1].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
 		str += "	</div>\n";
