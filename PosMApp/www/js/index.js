@@ -19,8 +19,7 @@ function init() {
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") !== null) {
 		changeBasicInfoPanel(true);
-		pflag[sessionStorage.getItem("posterid")] = "t";
-	}
+		pflag[sessionStorage.getItem("posterid")] = "t";	}
 
 	// 検索中状態だったら検索にヒットしたポスターを強調表示
 	// FIXME:もう一度検索しているので読み込み時遅くなる
@@ -83,4 +82,24 @@ function init() {
 	$(".topPageButton").goToTopPage("touchstart");
 	$(".posterMapPageButton").goToMapPage("touchstart");
 	$(".posterListPageButton").goToListPage("touchstart");
+
+	// タブバーの選択表示を変更
+	var currentPage = window.location.hash;
+	switch (currentPage) {
+		case "#posterMapPage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
+			break;
+		case "#posterListPage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
+			break;
+		default:
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+			break;
+	}
 }
