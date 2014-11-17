@@ -19,7 +19,9 @@ function init() {
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") !== null) {
 		changeBasicInfoPanel(true);
-		pflag[sessionStorage.getItem("posterid")] = "t";	}
+		pflag[sessionStorage.getItem("posterid")] = "t";
+		showPosterIcons();
+	}
 
 	// 検索中状態だったら検索にヒットしたポスターを強調表示
 	// FIXME:もう一度検索しているので読み込み時遅くなる
