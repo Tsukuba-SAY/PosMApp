@@ -39,4 +39,5 @@ iOS, Android端末でご利用いただけます。
 万 姗姗 (WAN Shanshan)  
 
 
-Copyright &copy; 2014 [University of Tsukuba](http://www.tsukuba.ac.jp/). All Rights Reserved.
+Copyright &copy; [筑波大学CS専攻 高度ITコース](http://www.cs.tsukuba.ac.jp/ITsoft/)  
+Team S.A.Y. ([@posmapp_say](https://twitter.com/posmapp_say))
