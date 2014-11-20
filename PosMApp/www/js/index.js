@@ -26,7 +26,8 @@ function init() {
 	// 検索中状態だったら検索にヒットしたポスターを強調表示
 	// FIXME:もう一度検索しているので読み込み時遅くなる
 	if (sessionStorage.getItem("searching") === "true") {
-		document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
+		//document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
+		$("#search-bar-title").attr("value", sessionStorage.getItem("searchWord"));
 		searchByTitle(sessionStorage.getItem("searchWord"));
 	}
 
