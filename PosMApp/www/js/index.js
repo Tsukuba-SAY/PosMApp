@@ -16,6 +16,12 @@ function init() {
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
 
+	// 固有識別IDが設定されていなければ設定する
+	if (localStorage.getItem("uid") === null) {
+		var uid = Math.floor(Math.random() * 0xFFFFFFFF).toString(16);
+		localStorage.getItem("uid", uid);
+	}
+
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") !== null) {
 		changeBasicInfoPanel(true);
