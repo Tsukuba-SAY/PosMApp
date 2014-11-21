@@ -19,7 +19,7 @@ function init() {
 	// 固有識別IDが設定されていなければ設定する
 	if (localStorage.getItem("uid") === null) {
 		var uid = Math.floor(Math.random() * 0xFFFFFFFF).toString(16);
-		localStorage.getItem("uid", uid);
+		localStorage.setItem("uid", uid);
 	}
 
 	// 基本情報が選択されていたらそのポスターを強調表示
