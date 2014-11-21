@@ -12,8 +12,14 @@ function saveLog(json) {
 
 function loadLog() {
 	var jsons = new Array();
+	var uid = localStorage.getItem("uid");
 
-
+	for (var i = 0; i < localStorage.length; i++) {
+		var k = localStorage.key(i);
+		if (k.indexOf(uid) !== -1) {
+			json.push(localStorage.getItem(k));
+		}
+	}
 
 	return jsons;
 }
