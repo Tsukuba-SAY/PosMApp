@@ -1,5 +1,11 @@
 var date = new Date();
 
+// UIDを新規に生成する
+function createUID() {
+	var uid = Math.floor(Math.random() * 0xFFFFFFFF).toString(16);
+	return uid;
+}
+
 // ログを保存
 // json : データのJSONオブジェクト
 function saveLog(json) {
