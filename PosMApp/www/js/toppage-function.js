@@ -5,7 +5,8 @@ $.fn.backToPreviousPage = function() {
 		if (prev === null || prev === undefined) {
 			prev = "posterMapPage";
 		}
-		window.location.href = "#" + prev;
+		changePage("#" + prev);
+		// window.location.href = "#" + prev;
 		// window.history.back();
 	});
 };
@@ -62,6 +63,7 @@ function setDetails() {
 }
 
 function changePage(pagename) {
+	saveLog({"showPage":pagename});
 	window.location.href = pagename;
 	return pagename;
 }

@@ -10,7 +10,13 @@ function saveLog(json) {
 	}
 }
 
-// ログの一覧を取得
+
+// ログデータを送信
+function sendLog() {
+
+}
+
+// 自分のログの一覧を取得
 // jsons : 自分のログのJSONオブジェクトの配列
 function loadLog() {
 	var jsons = new Array();
@@ -24,8 +30,4 @@ function loadLog() {
 	}
 
 	return jsons;
-}
-
-function sendLog(json) {
-
 }
