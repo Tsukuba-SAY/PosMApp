@@ -10,6 +10,8 @@ function saveLog(json) {
 	}
 }
 
+// ログの一覧を取得
+// jsons : 自分のログのJSONオブジェクトの配列
 function loadLog() {
 	var jsons = new Array();
 	var uid = localStorage.getItem("uid");
@@ -17,7 +19,7 @@ function loadLog() {
 	for (var i = 0; i < localStorage.length; i++) {
 		var k = localStorage.key(i);
 		if (k.indexOf(uid) !== -1) {
-			json.push(localStorage.getItem(k));
+			jsons.push(JSON.parse(localStorage.getItem(k)));
 		}
 	}
 
