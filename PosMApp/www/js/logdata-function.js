@@ -51,3 +51,19 @@ function loadLog() {
 
 	return json;
 }
+
+// 自分のログを全削除
+function deleteLog() {
+	var uid = localStorage.getItem("uid");
+	var delKey = new Array();
+
+	for (var i = 0; i < localStorage.length; i++) {
+		var k = localStorage.key(i);
+		if (k.indexOf(uid) !== -1) {
+			delKey.push(k);
+		}
+	}
+	delKey.forEach(function(k) {
+		localStorage.removeItem(k);
+	});
+}
