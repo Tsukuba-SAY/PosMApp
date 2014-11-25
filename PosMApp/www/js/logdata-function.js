@@ -1,5 +1,3 @@
-var date = new Date();
-
 // UIDを新規に生成する
 function createUID() {
 	var uid = Math.floor(Math.random() * 0xFFFFFFFF).toString(16);
@@ -9,31 +7,47 @@ function createUID() {
 // ログを保存
 // json : データのJSONオブジェクト
 function saveLog(json) {
+	var date = new Date();
 	var uid = localStorage.getItem("uid");
 	if (uid !== null) {
-		json["uid"] = uid;
+		// json["uid"] = uid;
 		localStorage.setItem(uid + "_" + date.getTime(), JSON.stringify(json));
 	}
 }
 
-
 // ログデータを送信
 function sendLog() {
-
+    var senddata = loadLog();
+    $.ajax({
+   		url: "http://104.236.5.92/PosLog/savelog.php",
+		type: "POST",
+		dataType: "json",
+		data: senddata,
+		timeout: 10000,
+		success: function(data) {
+			console.log("send success");
+		},
+		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			console.log("send error");
+		}
+	});
 }
 
 // 自分のログの一覧を取得
-// jsons : 自分のログのJSONオブジェクトの配列
+// json : 自分のログのJSONオブジェクトを複数所持したjson
+// jsonの中身は "uid":識別ID, 数字のキー:自分のログ(JSONオブジェクト)
 function loadLog() {
-	var jsons = new Array();
+	var json = {};
 	var uid = localStorage.getItem("uid");
 
+	json["uid"] = uid;
 	for (var i = 0; i < localStorage.length; i++) {
 		var k = localStorage.key(i);
 		if (k.indexOf(uid) !== -1) {
-			jsons.push(JSON.parse(localStorage.getItem(k)));
+			json[i.toString()] = JSON.parse(localStorage.getItem(k));
 		}
 	}
+	console.log(JSON.stringify(json));
 
-	return jsons;
+	return json;
 }
