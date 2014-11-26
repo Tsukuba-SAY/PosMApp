@@ -5,7 +5,13 @@ $.fn.showPosterList = function() {
 	posters["sessionid"] = new Array();
 	posters["title"] = new Array();
 	posters["author"] = new Array();
-
+	//ブックマークされたポスターIDを取得する
+	var bookmarkIcon = document.getElementById("bookmarkbutton");
+	var bookmarks = localStorage.getItem("bookmarks");
+	if (bookmarks === null || bookmarks === "") {
+		bookmarks = "";
+	}
+	var bookmarkArr = bookmarks.split(",");
 	var str = "";
 	str += '<table border="1" rules="rows" >';
 	//postdataをループする、各ポスターの情報を取り出す
@@ -15,7 +21,20 @@ $.fn.showPosterList = function() {
 		posters["sessionid"].push(poster[i].sessionid);
 		posters["title"].push(poster[i].title);
 		posters["author"].push(getAuthors(i+1));
-		str += "<tr><td><div>ポスターID: " + poster[i].sessionid + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img><br>";
+		str += "<tr><td><div>ポスターID: " + poster[i].sessionid + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img>";
+		//ブックマークされたかどうか判断する
+		var foundBookmark = false;
+		for (var j = 0; j < bookmarkArr.length; j++) {
+			if (parseInt(poster[i].id) === parseInt(bookmarkArr[j])) {
+				foundBookmark = true;
+				break;
+			}
+		}
+		if (foundBookmark) {
+			str += "<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/bookmark.png' style='zoom: 15%;'></img><br>";
+		} else {
+			str += "<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/unbookmark.png' style='zoom: 15%;'></img><br>";
+		}
 		str += "<strong>" + poster[i].title + "</strong><br>";
 		str += "著者: " + authors + "<br></td>";
 		str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+poster[i].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
