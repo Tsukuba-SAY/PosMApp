@@ -1317,6 +1317,30 @@ describe("ポスターリスト", function() {
 	});
 });
 
+describe("ブックマークリスト", function() {
+	beforeEach(function() {
+		loadFixtures("fixture-bookmarklist.html","fixture-postermap.html");
+
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
+		$("#bookmarkList").showBookmarkList();
+		$(".bookmarklistToMapBtn").bookmarklistToMapPage();
+		$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+		localStorage.setItem("bookmarks", "");
+		initPosterMap();	
+		removeAllPosterInfo();
+	});
+
+	it("一番のポスターがブックマークされると、ブックマークで表示される", function() {
+		localStorage.setItem("bookmarks", "1");
+		var posters = $("#bookmarkList").showBookmarkList();
+		var expectIds = new Array();
+		expectIds.push("1");
+		expect(expectIds).toEqual(posters["id"]);
+	});
+});
+
 function getAuthors(posterid) {
 
 	var atotal = author.length;
