@@ -63,7 +63,7 @@ function setDetails() {
 }
 
 function changePage(pagename) {
-	saveLog({"showPage":pagename});
+	saveLog({"show_page":pagename});
 	window.location.href = pagename;
 	return pagename;
 }
