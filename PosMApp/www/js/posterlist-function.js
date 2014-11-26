@@ -31,9 +31,9 @@ $.fn.showPosterList = function() {
 			}
 		}
 		if (foundBookmark) {
-			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/bookmark.png' style='zoom: 15%;'></img><br>";
+			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
 		} else {
-			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/unbookmark.png' style='zoom: 15%;'></img><br>";
+			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
 		}
 		str += "<strong>" + poster[i].title + "</strong><br>";
 		str += "著者: " + authors + "<br></td>";

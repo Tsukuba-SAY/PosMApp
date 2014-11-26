@@ -1103,6 +1103,101 @@ describe("ブックマーク機能", function() {
 	});
 });
 
+describe("ポスターリストからのブックマーク機能", function() {
+	beforeEach(function() {
+		loadFixtures("fixture-posterlist.html");
+		$("#posterList").showPosterList();
+		localStorage.setItem("bookmarks", "");
+	});
+	it("何もブックマークされていない状態で、リストで、1番の星をタップすると、1番のポスターがブックマークされる", function() {
+		$("#listbookmark1").listchangebookmark();
+		$("#listbookmark1").trigger("touchstart");
+		var expectBookmarks = "1";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("何もブックマークされていない状態で、リストで、すべての星をタップすると、すべてのポスターがブックマークされる", function() {
+		for (var i = 1; i <= poster.length; i++) {
+			$("#listbookmark"+i).listchangebookmark();
+			$("#listbookmark"+i).trigger("touchstart");
+		}
+		var bookmarks = localStorage.getItem("bookmarks");
+
+		var expectArr = new Array();
+		for (var i = 0; i <= poster.length - 5; i++) {
+			expectArr.push(poster[i].id);
+		};
+		expect(bookmarks).toEqual(expectArr.join(","));
+	});
+	it("1番のポスターがブックマークされている状態で、リストで、1番の星をタップすると、何もブックマークされていない状態になる", function() {
+		localStorage.setItem("bookmarks", "1");
+		$("#listbookmark1").listchangebookmark();
+		$("#listbookmark1").trigger("touchstart");
+		var expectBookmarks = "";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("1番のポスターがブックマークされている状態で、リストで、2番の星をタップすると、1,2番のポスターがブックマークされた状態になる", function() {
+		localStorage.setItem("bookmarks", "1");
+		$("#listbookmark2").listchangebookmark();
+		$("#listbookmark2").trigger("touchstart");
+
+		var expectBookmarks = "1,2";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("何もブックマークされていない状態で、リストで、4,5,6番の星をタップすると、4,5,6番のポスターがブックマークされた状態になる", function() {
+		$("#listbookmark4").listchangebookmark();
+		$("#listbookmark4").trigger("touchstart");
+		$("#listbookmark5").listchangebookmark();
+		$("#listbookmark5").trigger("touchstart");
+		$("#listbookmark6").listchangebookmark();
+		$("#listbookmark6").trigger("touchstart");
+		var expectBookmarks = "4,5,6";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("4番のポスターがブックマークされている状態で、リストで、4,5,6番の星をタップすると、5,6番のポスターがブックマークされた状態になる", function() {
+		localStorage.setItem("bookmarks", "4");
+		$("#listbookmark4").listchangebookmark();
+		$("#listbookmark4").trigger("touchstart");
+		$("#listbookmark5").listchangebookmark();
+		$("#listbookmark5").trigger("touchstart");
+		$("#listbookmark6").listchangebookmark();
+		$("#listbookmark6").trigger("touchstart");
+
+		var expectBookmarks = "5,6";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("5,6番のポスターがブックマークされている状態で、リストで、4,5,6番の星をタップすると、4番のポスターがブックマークされた状態になる", function() {
+		localStorage.setItem("bookmarks", "5,6");
+		$("#listbookmark4").listchangebookmark();
+		$("#listbookmark4").trigger("touchstart");
+		$("#listbookmark5").listchangebookmark();
+		$("#listbookmark5").trigger("touchstart");
+		$("#listbookmark6").listchangebookmark();
+		$("#listbookmark6").trigger("touchstart");
+
+		var expectBookmarks = "4";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("4,5,6番のポスターがブックマークされている状態で、リストで、4,5,6番の星をタップすると、何もブックマークされていない状態になる", function() {
+		localStorage.setItem("bookmarks", "4,5,6");
+		$("#listbookmark4").listchangebookmark();
+		$("#listbookmark4").trigger("touchstart");
+		$("#listbookmark5").listchangebookmark();
+		$("#listbookmark5").trigger("touchstart");
+		$("#listbookmark6").listchangebookmark();
+		$("#listbookmark6").trigger("touchstart");
+
+		var expectBookmarks = "";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+});
+
 describe("ポスターリスト", function() {
 	beforeEach(function() {
 		loadFixtures("fixture-posterlist.html","fixture-postermap.html");
