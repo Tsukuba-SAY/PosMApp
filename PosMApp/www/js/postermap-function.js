@@ -471,6 +471,7 @@ function touchBookmark(posterid, bookmarkIcon){
 		bookmarkArr.splice(location, 1);
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/unbookmark.png";
+			$("#listbookmark"+posterid).src = "img/unbookmark.png";
 		}
 		starstatus = "none";
 	} else {
@@ -481,6 +482,7 @@ function touchBookmark(posterid, bookmarkIcon){
     	});
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/bookmark.png";
+			$("#listbookmark"+posterid).src = "img/bookmark.png";
 		}
 		starstatus = "block";
 	}

@@ -83,6 +83,7 @@ function init() {
 	// ポスターリスト画面のボタン
 	$(".listToMapBtn").jumpToMapPage();
 	$(".listToDetailBtn").jumpToDetailPage();
+	$(".listbookmarkbutton").listchangebookmark();
 
 	// 詳細表示画面の戻るボタン
 	$("#detailBackButton").backToPreviousPage();

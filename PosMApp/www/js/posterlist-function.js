@@ -31,9 +31,9 @@ $.fn.showPosterList = function() {
 			}
 		}
 		if (foundBookmark) {
-			str += "<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/bookmark.png' style='zoom: 15%;'></img><br>";
+			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/bookmark.png' style='zoom: 15%;'></img><br>";
 		} else {
-			str += "<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/unbookmark.png' style='zoom: 15%;'></img><br>";
+			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/unbookmark.png' style='zoom: 15%;'></img><br>";
 		}
 		str += "<strong>" + poster[i].title + "</strong><br>";
 		str += "著者: " + authors + "<br></td>";
@@ -139,3 +139,13 @@ function listToMap(posterid){
 	pflag[posterid] = nextFlag;
 	showPosterIcons();
 }
+
+//ポスターリストからブックマークアイコンをクリックする
+$.fn.listchangebookmark = function() {
+	$(this).on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(12));
+		var bookmarkIcon = document.getElementById("bookmarkbutton");
+		touchBookmark(posterid, bookmarkIcon);
+	});
+};
