@@ -28,33 +28,30 @@
         <script type="text/javascript" src="spec/lib/jasmine-1.2.0/jasmine.js"></script>
         <script type="text/javascript" src="spec/lib/jasmine-1.2.0/jasmine-html.js"></script>
 
-
+        <!-- libs -->
+        <script type="text/javascript" src="spec/lib/jasmine-index.js"></script>
         <script type="text/javascript" src="js/lib/jquery-2.1.1.min.js">
         </script>
-
+        <script type="text/javascript" src="spec/lib/jasmine-jquery-1.3.1.js">
+        </script>
         <!--
             Blanket.jsではCross-Origin Resource Sharing (CORS)を使用している模様
             仕様により、ChromeではCORSは不可能
             ローカルで動かす場合、Firefoxなど他のブラウザを使わないと動かない
         -->
-        <script type="text/javascript" src="js/lib/blanket.min.js"></script>
-        <script type="text/javascript" src="js/lib/jasmine-blanket.js"></script>
-
+        <script type="text/javascript" src="spec/lib/blanket.min.js"></script>
+        <script type="text/javascript" src="spec/lib/jasmine-blanket.js"></script>
         
         <!-- include source files here... -->
-        <script type="text/javascript" src="js/lib/jasmine-index.js"></script>
-
-        <!--<script type="text/javascript" src="js/initdb.js"></script>-->
         <script type="text/javascript" src="js/toppage-function.js" data-cover></script>
         <script type="text/javascript" src="js/postermap-function.js" data-cover></script>
         <script type="text/javascript" src="js/posterlist-function.js" data-cover></script>
         <script type="text/javascript" src="js/posterdata.js" data-cover></script>
-
+        <script type="text/javascript" src="js/icon-position.js" data-cover></script>
 
         <!-- include spec files here... -->
         <script type="text/javascript" src="spec/helper.js"></script>
         <script type="text/javascript" src="spec/index.js"></script>
-        
         <script type="text/javascript" src="spec/test.js"></script>
        
 

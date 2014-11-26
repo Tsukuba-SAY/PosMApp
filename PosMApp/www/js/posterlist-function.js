@@ -7,19 +7,19 @@ $.fn.showPosterList = function() {
 	posters["author"] = new Array();
 
 	var str = "";
-	str += '<table border="1" rules="rows">';
+	str += '<table border="1" rules="rows" >';
 	//postdataをループする、各ポスターの情報を取り出す
-	for (var i = 0; i < poster.length; i++) {
+	for (var i = 0; i < poster.length-4; i++) {
+		authors = getAuthors(i+1).split(",").join(", ")
 		posters["id"].push(poster[i].id.toString());
 		posters["sessionid"].push(poster[i].sessionid);
 		posters["title"].push(poster[i].title);
 		posters["author"].push(getAuthors(i+1));
-		str += "<tr><td><div>ID:" + poster[i].id + "</div>";
-		str += "<div>Sessionid:" + poster[i].sessionid + "</div>";
-		str += "<div>Title:" + poster[i].title + "</div>";
-		str += "<div>Author:" + getAuthors(i+1) + "</div></td>";
-		str += "<td><div><img class='listToDetailBtn' id='listToMap"+poster[i].id.toString()+"' src='img/detailinfo.png' style='zoom: 10%;'></img></div>";
-		str += "<div><img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 15%;'></img></div>";
+		str += "<tr><td><div>ポスターID: " + poster[i].sessionid + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img><br>";
+		str += "<strong>" + poster[i].title + "</strong><br>";
+		str += "著者: " + authors + "<br></td>";
+		str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+poster[i].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
+		//str += "<div><img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 15%;'></img></div>";
 		//str += '<table><tr><td><a data-role = "button" class = "listToMapBtn" id = "listToMap' + poster[i].id.toString() + '">これどこ？</a></td><td><a data-role = "button" class = "listToDetailBtn" id = "listToMap' + poster[i].id.toString() + '">詳細情報</a></td></tr></table></td></tr>';
 	}
 	str += '</table>'
@@ -27,33 +27,37 @@ $.fn.showPosterList = function() {
 	$(this).html(str);
 
 	return posters;
-}
+};
 
 //ポスターリスト画面の各「詳細情報」ボタンをクリックする時
 $.fn.jumpToDetailPage = function() {
 	$(this).on("touchstart", function(e) {
 		// ポスターのIDを取得する
-		var posterid = Number(e.target.id.substring(9));
+		var posterid = Number(e.target.id.substring(12));
+		console.log(posterid);
 		sessionStorage.setItem("previousPage", "posterListPage");
 		listToDetail(posterid);
 	});
-}
+};
 
 //ポスターリスト画面の各「これどこ？」ボタンをクリックする時
 $.fn.jumpToMapPage = function() {
 	$(this).on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(9));
+		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 		listToMap(posterid);
 	});
-}
+};
 
 //ポスターの発表者を取得する
 function getAuthors(posterid){
 	var atotal = author.length;
 	var authorlist = "";
 	for (var i = 0; i < atotal; i++) {
-        if (author[i].posterid == posterid){
+        if (author[i].posterid === posterid){
         	authorlist = authorlist + author[i].name + ",";
         }
 	}
@@ -67,7 +71,7 @@ function getKeywords(posterid){
 	var ktotal = keyword.length;
 	var keywordlist = "";
 	for (var i = 0; i < ktotal; i++) {
-        if (keyword[i].posterid == posterid){
+        if (keyword[i].posterid === posterid){
         	keywordlist = keywordlist + keyword[i].keyword + ",";
         }
 	}
@@ -77,7 +81,7 @@ function getKeywords(posterid){
 
 //ポスターリストから詳細情報画面に遷移する
 function listToDetail(posterid){
-	if (posterid < 1 || posterid > poster.length || posterid == null || posterid == undefined) {
+	if (posterid < 1 || posterid > poster.length || posterid === null || posterid === undefined) {
 		throw new Exception();
 	}
 
@@ -87,7 +91,7 @@ function listToDetail(posterid){
 	//選択中ポスターの情報をsessionStorageに保存する
 	for (var i = 0; i < ptotal; i++) {
 		var p = poster[i];
-		if (p.id == posterid) {
+		if (p.id === posterid) {
 			sessionStorage.setItem("posterid", posterid);
 			sessionStorage.setItem("sessionid", p.sessionid);
 			sessionStorage.setItem("title", p.title);
@@ -106,7 +110,7 @@ function listToDetail(posterid){
 
 //ポスターリストからマップ画面に遷移する
 function listToMap(posterid){
-	if (posterid < 1 || posterid > poster.length || posterid == null || posterid == undefined) {
+	if (posterid < 1 || posterid > poster.length || posterid === null || posterid === undefined) {
 		throw new Exception();
 	}
 	//sessionStorageの中に存在している情報の削除

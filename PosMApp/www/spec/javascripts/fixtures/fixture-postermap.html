@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+	<input type="search" id="search-bar-title" placeholder="タイトルで検索" onchange="searchChanged(this)"/>
+	<div id="searchResult" style="position: fixed; z-index: 100;"></div>
+
+	<div id="mapMain">
+		<div id="posters"></div>
+	</div>
+
+	<div style="position: relative;">
+		<!-- 基本情報パネル -->
+		<div id="basicinfopanel" style="display:none;">
+			<div id="basicinfo"></div>
+			<!-- ブックマークボタン -->
+			<!-- アイコンの切り替えはpostermap.jsで行う -->
+			<img id="bookmarkbutton"></img>
+			<!-- 詳細情報ボタン -->
+			<img id="detailinfobutton" src="img/detail.png"></img>
+		</div>
+	</div>
+
+	<!-- ラベル変更ボタン -->
+	<a class="changelabel" id="label-id"
+		href="#posterMapPage" data-role="button">通し番号</a>
+	<a class="changelabel" id="label-sessionid"
+		href="#posterMapPage" data-role="button">ポスターID</a>
+	<a class="changelabel" id="label-title"
+		href="#posterMapPage" data-role="button">タイトル</a>
+	<a class="changelabel" id="label-authorname"
+		href="#posterMapPage" data-role="button">代表者名</a>
+	<a class="changelabel" id="label-authorbelongs"
+		href="#posterMapPage" data-role="button">所属</a>
+</body>
+</html>

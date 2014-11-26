@@ -2,13 +2,13 @@
 $.fn.backToPreviousPage = function() {
 	$(this).on("touchstart", function(e) {
 		var prev = sessionStorage.getItem("previousPage");
-		if (prev == null || prev == undefined) {
+		if (prev === null || prev === undefined) {
 			prev = "posterMapPage";
 		}
 		window.location.href = "#" + prev;
 		// window.history.back();
 	});
-}
+};
 
 // ポスターマップ画面に遷移
 $.fn.goToMapPage = function(ev) {
@@ -18,7 +18,7 @@ $.fn.goToMapPage = function(ev) {
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 	});	
-}
+};
 
 // リスト画面に遷移
 $.fn.goToListPage = function(ev) {
@@ -28,7 +28,7 @@ $.fn.goToListPage = function(ev) {
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
 	});	
-}
+};
 
 // タブのボタン
 // トップページボタン
@@ -40,17 +40,24 @@ $.fn.goToTopPage = function(ev) {
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 	});
-	return nextPage;
-}
+};
 
 function setDetails() {
 	$("#detail-posterid").html(sessionStorage.getItem("posterid"));
 	$("#detail-sessionid").html(sessionStorage.getItem("sessionid"));
 	$("#detail-title").html(sessionStorage.getItem("title"));
-	$("#detail-authors").html(sessionStorage.getItem("authors"));
+	var authors = sessionStorage.getItem("authors");
+	authors = (authors !== null && authors !== "")
+		? authors
+		: "NO DATA";
+	$("#detail-authors").html(authors);
 	$("#detail-authorbelongs").html(sessionStorage.getItem("authorbelongs"));
 	$("#detail-authorname").html(sessionStorage.getItem("authorname"));
-	$("#detail-keywords").html(sessionStorage.getItem("keywords"));
+	var keywords = sessionStorage.getItem("keywords");
+	keywords = keywords !== null && keywords !== "" 
+		? keywords
+		: "NO DATA";
+	$("#detail-keywords").html(keywords);
 	$("#detail-abstract").html(sessionStorage.getItem("abstract"));
 }
 

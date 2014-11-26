@@ -1,50 +1,42 @@
 //HTMLが呼ばれた時の初期化処理
-$(function() {
+$(init);
 
+function init() {
 	initPosterMap();
 
 	// 現在はWebSQLは使用していない
 	// initDB();
 
+	// ポスターアイコンの作成
+	// JSONから直接呼び出す感じで
+	// とりあえずデフォルトはセッションID
+	setPosterIcons();
+
+	// ポスターアイコンを表示
+	// TODO:showじゃなくて別の単語に変えたい
+	showPosterIcons();
+
 	// 基本情報が選択されていたらそのポスターを強調表示
-	if (sessionStorage.getItem("posterid") != null) {
+	if (sessionStorage.getItem("posterid") !== null) {
 		changeBasicInfoPanel(true);
 		pflag[sessionStorage.getItem("posterid")] = "t";
+		showPosterIcons();
 	}
 
 	// 検索中状態だったら検索にヒットしたポスターを強調表示
 	// FIXME:もう一度検索しているので読み込み時遅くなる
-	if (sessionStorage.getItem("searching") == "true") {
+	if (sessionStorage.getItem("searching") === "true") {
 		document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
 		searchByTitle(sessionStorage.getItem("searchWord"));
 	}
 
 	// もしLocal Storageにbookmarksがなければ追加
-	if (localStorage.getItem("bookmarks") == null) {
+	if (localStorage.getItem("bookmarks") === null) {
 		localStorage.setItem("bookmarks", "");
 	}
 
-	// ポスターアイコンの作成
-	// JSONから直接呼び出す感じで
-	// とりあえずデフォルトはセッションID
-	var str = "";
-
-	for (var i = 1; i <= poster.length; i++) {
-		str += "<div class='postericonframe' id='iconNo" + i + "''>\n";
-		str += "	<div class='postericon horizontal'>\n";
-		str += "		<img id='icon" + i + "' src='img/dpic.png' " + "width='100%' height='100%'></img>\n";
-		str += "		<div class='iconindexhor' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
-		str += "	</div>\n";
-		str += "	<div id='starTopNo" + i +"' class='star-top'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "    <div id='starRightNo" + i + "' class='star-right'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "	<div id='starBottomNo" + i + "' class='star-bottom'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "	<div id='starLeftNo" + i + "' class='star-left'><img src='img/bookmark.png' style='width:15px;height:15px;display:none;'></img></div>\n";
-		str += "</div>\n";
-	}
-	document.getElementById("posters").innerHTML = str;
-
 	// もしラベルが変更されていたらそれに変更
-	if (sessionStorage.getItem("label") != null) {
+	if (sessionStorage.getItem("label") !== null) {
 		changeLabel(sessionStorage.getItem("label"));
 	}
 
@@ -59,16 +51,18 @@ $(function() {
 
 	// 基本情報画面を閉じる
 	$("#basicinfo").closeBasicInfo();
+	$("#basicinfo").css("width", window.innerWidth - 80);
+	$("#basicinfo").css("max-width", window.innerWidth - 80);
+
 
 	// ラベルを変更する
 	$(".changelabel").changeLabel();
+	$("#changelabel").css("zoom", window.innerWidth/1200);
 
 	// ブックマークスターのタッチイベント
 	$("#bookmarkbutton").touchBookmark();
 
-	// ポスターアイコンを表示
-	// TODO:showじゃなくて別の単語に変えたい
-	showPosterIcons();
+	windowManager();
 
 
 	// ---------- 詳細情報画面 ----------
@@ -90,4 +84,24 @@ $(function() {
 	$(".topPageButton").goToTopPage("touchstart");
 	$(".posterMapPageButton").goToMapPage("touchstart");
 	$(".posterListPageButton").goToListPage("touchstart");
-});
+
+	// タブバーの選択表示を変更
+	var currentPage = window.location.hash;
+	switch (currentPage) {
+		case "#posterMapPage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
+			break;
+		case "#posterListPage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
+			break;
+		default:
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+			break;
+	}
+}

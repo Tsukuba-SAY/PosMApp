@@ -20,34 +20,34 @@ function initDB() {
 			// 仮データを挿入する (poster)
 			tr.executeSql("DELETE FROM poster"); //ポスター列の初期化
 			// posterdata.js 内のJSON(posterdata)からDBへ挿入
-			for (var i in poster) {
+			poster.forEach(function (p) {
 				tr.executeSql("INSERT INTO poster VALUES (?, ?, ?, ?, ?, ?, ?)", [
-					poster[i].id,
-					poster[i].sessionid,
-					poster[i].title,
-					poster[i].abstract,
-					poster[i].authorname,
-					poster[i].authorbelongs,
-					poster[i].bookmark]);
-			}
+					p[i].id,
+					p[i].sessionid,
+					p[i].title,
+					p[i].abstract,
+					p[i].authorname,
+					p[i].authorbelongs,
+					p[i].bookmark]);
+			});
 
 			// 仮データを挿入する (author)
 			tr.executeSql("DELETE FROM author"); //author列の初期化
-			for (var i in author) {
+			author.forEach(function(a) {
 				tr.executeSql("INSERT INTO author VALUES (NULL, ?, ?, ?, ?)", [
-					author[i].posterid,
-					author[i].name,
-					author[i].belongs,
-					author[i].first]);
-			}
+					a[i].posterid,
+					a[i].name,
+					a[i].belongs,
+					a[i].first]);
+			});
 
 			// 仮データを挿入する (keyword)
 			tr.executeSql("DELETE FROM keyword");
-			for (var i in keyword) {
+			keyword.forEach(function(k) {
 				tr.executeSql("INSERT INTO keyword VALUES (NULL, ?, ?)", [
-					keyword[i].posterid,
-					keyword[i].keyword]);
-			}
+					k[i].posterid,
+					k[i].keyword]);
+			});
 		},
 		function(err){},
 		function(){}

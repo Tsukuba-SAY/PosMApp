@@ -1,34 +1,58 @@
 .postericonframe{
 	position: absolute; 
 	z-index: 3;
-	width: 140px; /*iconの横＋30px*/
-	height: 90px; /*iconの縦＋30px*/
 }
 
 .horizontal{
 	position: absolute; 
-	width:90px;
-	height:40px;
 	text-align:center;
 	vertical-align:middle;
-	font-size: 15px;
-	top: 25px;
-	left: 25px;
-
 	z-index: 3;
 }
-.iconindexhor{
+
+.sideways{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0px;
-	line-height: 40px;
+	font-size: xx-small;
+	transform: scale(0.5);
+	white-space: nowrap;
+	text-align: center;
 	z-index: 4;
 }
 
+.longways{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	font-size:xx-small;
+	transform: scale(0.5);
+	white-space: nowrap;
+	z-index: 4;
+}
+
+#mapFrame{
+	height: calc(100% - 65px);
+	overflow: hidden;
+}
+
+#mapMain{
+	transition: all .2s;
+	-webkit-transition: all .2s;
+    -moz-transition: all .2s;
+	touch-action: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none; 
+	height : calc(100% - 65px);
+	overflow: hidden;
+}
+
+
 #basicinfo{
 	position: fixed;
-	width: 100%;
+	/*width: 100%;*/
 	height: 100px;
 	bottom: 50px; /* タブバーの幅 */
 	text-align: left;
@@ -37,7 +61,10 @@
 	padding-left: 40px;
 
 	background-color: #ffff99;
-	word-wrap:break-word; 
+	/*word-wrap: break-word;*/
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	z-index: 20;
 }
 
@@ -83,9 +110,7 @@
 	position: absolute;
 	width: 15px;
 	height: 15px;
-	top: 5px;
-	left: 65px;
-	font-size: 15px;
+
 }
 
 .star-right{
@@ -93,7 +118,7 @@
 	width: 15px;
 	height: 15px;
 	right: 5px;
-	top: 41px;
+	top: calc(50% - 15px/2);
 	font-size: 15px;
 }
 
@@ -102,7 +127,7 @@
 	width: 15px;
 	height: 15px;
 	bottom: 5px;
-	left: 65px;
+	left: calc(50% - 15px/2);
 	font-size: 15px;
 }
 
@@ -111,78 +136,13 @@
 	width: 15px;
 	height: 15px;
 	left: 5px;
-	top: 41px;
+	top: calc(50% - 15px/2);
 	font-size: 15px;
 }
 
-/*TODO:jsでのアイコン生成時にここもjsに取り込む*/
-/*1列目*/
-
-#iconNo1{
-	top : 135px;
-	left: 85px;
-}
-#iconNo3{
-	top : 135px;
-	left: 220px;
-}
-#iconNo10{
-	top : 135px;
-	left: 345px;
-}
-/*2列目*/
-#iconNo5{
-	top : 235px;
-	left: 85px;
-}
-#iconNo7{
-	top : 235px;
-	left: 220px;
-}
-#iconNo11{
-	top : 235px;
-	left: 345px;
+.bookmarkstar{
+	width:15px;
+	height:15px;
 }
 
 
-/*3列目*/
-#iconNo8{
-	top : 335px;
-	left: 85px;
-}
-#iconNo9{
-	top : 335px;
-	left: 220px;
-}
-#iconNo12{
-	top : 335px;
-	left: 345px;
-}
-
-/*4列目*/
-#iconNo4{
-	top : 435px;
-	left: 85px;
-}
-
-#iconNo2{
-	top : 435px;
-	left: 220px;
-}
-#iconNo13{
-	top : 435px;
-	left: 345px;
-}
-
-
-/*5列目*/
-#iconNo6{
-	top : 535px;
-	left: 220px;
-}
-#iconNo14{
-	top : 535px;
-	left: 345px;
-}
-
-/*6列目*/

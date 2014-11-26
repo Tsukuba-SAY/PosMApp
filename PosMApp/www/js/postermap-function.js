@@ -6,12 +6,8 @@
 // e：検索中の強調表示（赤）
 var pflag; 
 
-// テスト用フラグ
-// テスト時、Jasmineからのみtrueにする
-var test = false;
-
 // アイコンのラベルを何文字目まで表示するか
-var labelmax = 5;
+var labelmax = 7;
 
 // Local DB (WebSQL DB) を開く
 // 現在未使用
@@ -43,7 +39,7 @@ $.fn.goToDetailPage = function(ev) {
 		setDetails();
 		changePage("#detailPage");
 	});
-}
+};
 
 // 各ポスターアイコンのタッチイベント
 $.fn.touchPoster = function() {
@@ -56,7 +52,7 @@ $.fn.touchPoster = function() {
 		pflag[posterid] = nextFlag;
 		showPosterIcons();
 	});
-}
+};
 
 // 基本情報画面を閉じる
 $.fn.closeBasicInfo = function() {
@@ -66,7 +62,7 @@ $.fn.closeBasicInfo = function() {
 		showPosterIcons();
 		//resetAllIcons();
 	});	
-}
+};
 
 // ラベルを変更する
 $.fn.changeLabel = function() {
@@ -76,7 +72,7 @@ $.fn.changeLabel = function() {
 		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
 		changeLabel(id.substr(id.indexOf("-") + 1));
 	});
-}
+};
 
 // ブックマークスターのタッチイベント
 $.fn.touchBookmark = function() {
@@ -85,6 +81,60 @@ $.fn.touchBookmark = function() {
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
 		touchBookmark(posterid, bookmarkIcon);
 	});	
+};
+
+// ポスターアイコンをセットする
+function setPosterIcons() {
+	var str = "";
+	var STATIC_WIDTH =  108;
+	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
+	var starAngle ;
+	var iconWidth;
+	var iconHeight;
+	
+	for (var i = 1; i <= poster.length; i++) {
+		iconWidth = position[i-1].width*INIT_SCALE;
+		iconHeight = position[i-1].height*INIT_SCALE;
+
+		switch (poster[i-1].star) {
+			case 1:
+				starAngle = "top:-15px;left:30%;";
+				break;
+			case 2:
+				starAngle = "right:-15px;top:30%;";
+				break;
+			case 3:
+				starAngle = "bottom:-15px;left:30%;";
+				break;
+			case 4:
+				starAngle = "left:-15px;top:30%;"
+		}
+		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[i-1].x*INIT_SCALE)+"px;top:"+(position[i-1].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
+		str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
+		str += "		<img class='posterimg' id='icon" + i + "' src='img/dpic.png' " + "width="+iconWidth+ " height=" + iconHeight + "></img>\n";
+		str += "		<div class='" + position[i-1].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
+		str += "	</div>\n";
+
+		var pos;
+		switch (poster[i-1].star) {
+			case 1:
+				pos = "Top";
+				break;
+			case 2:
+				pos = "Right";
+				break;
+			case 3:
+				pos = "Bottom";
+				break;
+			case 4:
+				pos = "Left";
+				break;
+		}
+
+		str += "	<div id='star" + pos + "No" + i +"' class='star-top' style='"+starAngle+"'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
+		str += "</div>\n";
+	}
+	document.getElementById("posters").innerHTML = str;
 }
 
 // ラベルを変更する
@@ -104,11 +154,8 @@ function changeLabel(column) {
 		}
 		
 		// テスト中ならばラベルの一覧に追加していく
-		if (!test) {	
-			setLabel(i, str);
-		} else {
-			labels[i - 1] = str;
-		}
+		setLabel(i, str);
+		labels[i - 1] = str;
 	}
 	return labels;
 }
@@ -122,30 +169,26 @@ function setLabel(id, str) {
 
 // 現在のフラグを元にポスターのアイコンを表示する
 function showPosterIcons() {
-	if(!test) {
-		var imageSrc;
-		for (var i = 1; i <= ptotal; i++) {
-			switch (pflag[i]) {
-				case "d":
-					imageSrc = "img/dpic.png";
-					break;
-				case "t":
-					imageSrc = "img/tpic.png";
-					break;
-				case "s":
-					imageSrc = "img/spic.png";
-					break;
-				case "e":
-					imageSrc = "img/epic.png";
-					break;
-				default:
-					break;
-			}
-			document.getElementById("icon" + i).src = imageSrc;
+	var imageSrc;
+	for (var i = 1; i <= ptotal; i++) {
+		switch (pflag[i]) {
+			case "d":
+				imageSrc = "img/dpic.png";
+				break;
+			case "t":
+				imageSrc = "img/tpic.png";
+				break;
+			case "s":
+				imageSrc = "img/spic.png";
+				break;
+			case "e":
+				imageSrc = "img/epic.png";
+				break;
 		}
-
-		console.log(pflag);
+    	document.getElementById("icon" + i).src = imageSrc;
 	}
+
+	console.log(pflag);
 }
 
 
@@ -157,30 +200,30 @@ function touchPoster(posterid) {
 		throw new Exception();
 	}
 
-	if (sessionStorage.getItem("searching") == "true") {
-		if (pflag[posterid] == "d") {
+	if (sessionStorage.getItem("searching") === "true") {
+		if (pflag[posterid] === "d") {
 			unselectPoster();
 			selectPoster(posterid);
 			return "t";
-		} else if (pflag[posterid] == "t") {
+		} else if (pflag[posterid] === "t") {
 			changeBasicInfoPanel(false);
 			unselectPoster();
 			return "d";
-		} else if (pflag[posterid] == "s") {
+		} else if (pflag[posterid] === "s") {
 			unselectPoster();
 			selectPoster(posterid);
 			return "e";
-		} else if (pflag[posterid] == "e") {
+		} else if (pflag[posterid] === "e") {
 			changeBasicInfoPanel(false);
 			unselectPoster();
 			return "s";
 		}
 	} else {
-		if (pflag[posterid] == "d") {
+		if (pflag[posterid] === "d") {
 			unselectPoster();
 			selectPoster(posterid);
 			return "t";
-		} else if (pflag[posterid] == "t") {
+		} else if (pflag[posterid] === "t") {
 			changeBasicInfoPanel(false);
 			unselectPoster();
 			return "d";
@@ -191,49 +234,47 @@ function touchPoster(posterid) {
 
 // 基本情報パネルを変更する
 function changeBasicInfoPanel(flag) {
-	if (!test) {
 
-		var basicinfopanel = document.getElementById("basicinfopanel");
-		if (flag) {
-			basicinfopanel.style.display = "inline";
-		} else {
-			basicinfopanel.style.display = "none";
-			removeAllPosterInfo();
-		}
-
-		var basicinfo = document.getElementById("basicinfo");
-
-		basicinfo.innerHTML = 
-			// "No. " 
-			// + sessionStorage.getItem("posterid")+
-			 " ["
-			+ sessionStorage.getItem("sessionid")
-			+ "]<br />"
-			+ sessionStorage.getItem("title")
-			+ "<br />チーム名： "
-			+ sessionStorage.getItem("authorname")
-			+ "<br />所属： "
-			+ sessionStorage.getItem("authorbelongs");
-
-		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		var bookmarkArr = localStorage.getItem("bookmarks").split(",");
-		var foundBookmark = false;
-		console.log(sessionStorage.getItem("posterid"));
-		for (var i = 0; i < bookmarkArr.length; i++) {
-			if (parseInt(sessionStorage.getItem("posterid")) == parseInt(bookmarkArr[i])) {
-				foundBookmark = true;
-				break;
-			}
-		}
-		if (foundBookmark) {
-			bookmarkIcon.src = "img/bookmark.png";
-		} else {
-			bookmarkIcon.src = "img/unbookmark.png";
-		}
+	var basicinfopanel = document.getElementById("basicinfopanel");
+	if (flag) {
+		basicinfopanel.style.display = "inline";
 	} else {
-		if (!flag) {
-			removeAllPosterInfo();
+		basicinfopanel.style.display = "none";
+		removeAllPosterInfo();
+	}
+
+	var basicinfo = document.getElementById("basicinfo");
+
+	basicinfo.innerHTML = 
+		// "No. " 
+		// + sessionStorage.getItem("posterid")+
+		 " ["
+		+ sessionStorage.getItem("sessionid")
+		+ "]<br />"
+		+ sessionStorage.getItem("title")
+		+ "<br />代表者名： "
+		+ sessionStorage.getItem("authorname")
+		+ "<br />所属： "
+		+ sessionStorage.getItem("authorbelongs");
+
+	var bookmarkIcon = document.getElementById("bookmarkbutton");
+	var bookmarks = localStorage.getItem("bookmarks");
+	if (bookmarks === null || bookmarks === "") {
+		bookmarks = "";
+	}
+	var bookmarkArr = bookmarks.split(",");
+	var foundBookmark = false;
+	console.log(sessionStorage.getItem("posterid"));
+	for (var i = 0; i < bookmarkArr.length; i++) {
+		if (parseInt(sessionStorage.getItem("posterid")) === parseInt(bookmarkArr[i])) {
+			foundBookmark = true;
+			break;
 		}
+	}
+	if (foundBookmark) {
+		bookmarkIcon.src = "img/bookmark.png";
+	} else {
+		bookmarkIcon.src = "img/unbookmark.png";
 	}
 }
 
@@ -241,9 +282,6 @@ function changeBasicInfoPanel(flag) {
 // タイトルで検索
 // SQLをかけたいのでDBにアクセスしてるけどjsonでも同じことはできる
 function searchByTitle(title) {
-	if (title == null || title.trim() == "") {
-		return pflag;
-	}
 
 	if (title.length >= 1024) {
 		throw new Exception();
@@ -253,19 +291,18 @@ function searchByTitle(title) {
 	var ltitle = title.toLowerCase();
 
 	poster.forEach(function(aPoster) {
-		if (aPoster.title.toLowerCase().indexOf(ltitle) != -1) {
+		if (aPoster.title.toLowerCase().indexOf(ltitle) !== -1) {
 			posterids.push(aPoster.id);
 		}
 	});
+	console.log("HIT : " + posterids);
 
 	emphasisSearchedPosters(posterids);
 
-	if (!test) {
-		if (posterids.length == 0) {
-			document.getElementById("searchResult").innerHTML = "見つかりませんでした";
-		} else {
-			document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
-		}
+	if (posterids.length === 0) {
+		document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+	} else {
+		document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
 	}
 
 	return pflag;
@@ -277,7 +314,7 @@ function emphasisSearchedPosters(posterids) {
 
 	// 前回の検索結果をリセットする
 	for (var i = 1; i <= ptotal; i++) {
-		if (pflag[i] != "t" && pflag[i] != "e") {
+		if (pflag[i] !== "t" && pflag[i] !== "e") {
 			pflag[i] = "d";
 		}
 	}
@@ -285,80 +322,65 @@ function emphasisSearchedPosters(posterids) {
 	// ヒットしたポスターを強調表示する
 	posterids.forEach(function(id) {
 		// すでに選択されていれば、検索ヒット中の強調表示にする
-		if (pflag[id] == "t") {
+		if (pflag[id] === "t") {
 			pflag[id] = "e";
 		// 検索ヒット中の強調表示になっていない限り、検索ヒットにする
-		} else if (pflag[id] != "e") {
+		} else if (pflag[id] !== "e") {
 			pflag[id] = "s";
 		}
 	});
-
-	if (!test) {
-		showPosterIcons();
-	}
+	
+	showPosterIcons();
+	
 }
 
 
 // ポスターを選択する
 function selectPoster(posterid) {
 
-	// ポスターの状態で判断
-	if (pflag[posterid] == "d" || pflag[posterid] == "s") {
-
-		for (var i = 0; i < ptotal; i++) {
-			var p = poster[i];
-			if (p.id == posterid) {
-				sessionStorage.setItem("posterid", posterid);
-				sessionStorage.setItem("sessionid", p.sessionid);
-				sessionStorage.setItem("title", p.title);
-				sessionStorage.setItem("abstract", p.abstract);
-				sessionStorage.setItem("authorname", p.authorname);
-				sessionStorage.setItem("authorbelongs", p.authorbelongs);
-				sessionStorage.setItem("bookmark", p.bookmark);
-				sessionStorage.setItem("star", p.star);
-			}
+	for (var i = 0; i < ptotal; i++) {
+		var p = poster[i];
+		if (p.id === posterid) {
+			sessionStorage.setItem("posterid", posterid);
+			sessionStorage.setItem("sessionid", p.sessionid);
+			sessionStorage.setItem("title", p.title);
+			sessionStorage.setItem("abstract", p.abstract);
+			sessionStorage.setItem("authorname", p.authorname);
+			sessionStorage.setItem("authorbelongs", p.authorbelongs);
+			sessionStorage.setItem("bookmark", p.bookmark);
+			sessionStorage.setItem("star", p.star);
 		}
-
-		var authors = new Array();
-		for (var i = 0; i < author.length; i++) {
-			var a = author[i];
-			if (a.posterid == posterid) {
-				authors.push(a.name);
-			}
-		}
-		sessionStorage.setItem("authors", authors);
-
-		var keywords = new Array();
-		for (var i = 0; i < keyword.length; i++) {
-			var k = keyword[i];
-			if (k.posterid == posterid) {
-				keywords.push(k.keyword);
-			}
-		}
-		sessionStorage.setItem("keywords", keywords);
-
-		changeBasicInfoPanel(true);
-
-	} else {
-		// Session Storageに保存されているポスター情報をクリア
-		removeAllPosterInfo();
-
-		if (sessionStorage.getItem("searching") == "true") {
-			pflag[posterid] = "s";
-			//searchByTitle(sessionStorage.getItem("searchWord"));
-		}
-
-		changeBasicInfoPanel(false);
 	}
+
+	var authors = new Array();
+	for (var i = 0; i < author.length; i++) {
+		var a = author[i];
+		if (a.posterid === posterid) {
+			authors.push(a.name);
+		}
+	}
+	sessionStorage.setItem("authors", authors);
+
+	var keywords = new Array();
+	for (var i = 0; i < keyword.length; i++) {
+		var k = keyword[i];
+		if (k.posterid === posterid) {
+			keywords.push(k.keyword);
+		}
+	}
+	sessionStorage.setItem("keywords", keywords);
+
+	changeBasicInfoPanel(true);
+
 }
 
 
 // 強調表示を解除する
 function unselectPoster() {
 	for (var i = 1; i <= ptotal; i++) {
-		if (pflag[i] == "t") { 
+		if (pflag[i] === "t") { 
 			pflag[i] = "d"; 
-		} else if (pflag[i] == "e") {
+		} else if (pflag[i] === "e") {
 			pflag[i] = "s";
 		}
 	}
@@ -425,7 +447,7 @@ function showBookmarkIcons() {
 
 // ブックマークスターをタッチする（状態のスイッチ）
 function touchBookmark(posterid, bookmarkIcon){
-	if (posterid < 1 || posterid > ptotal || posterid == null) {
+	if (posterid < 1 || posterid > ptotal || posterid === null) {
 		throw new Exception();
 	}
 
@@ -436,34 +458,34 @@ function touchBookmark(posterid, bookmarkIcon){
 	var bookmarkArr = getBookmarks();
 	for (var i = 0; i < bookmarkArr.length; i++) {
 		//該当ポスターがブックマークリストに存在しているかどうか確認する
-		if (posterid == bookmarkArr[i]) {
+		if (posterid === parseInt(bookmarkArr[i])) {
 			location = i;
 			break;
 		}
 	}
 
 	var starstatus;
-	if (location != -1) {
-		// ない場合
+	if (location !== -1) {
+		// ある場合
 		// 存在しているIDを削除する
 		bookmarkArr.splice(location, 1);
-		if (bookmarkIcon != null) {
+		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/unbookmark.png";
 		}
 		starstatus = "none";
 	} else {
-		// ある場合
+		// ない場合
 		bookmarkArr.push(posterid);
 		bookmarkArr.sort(function(a,b){
     		return (parseInt(a) < parseInt(b)) ? -1 : 1;
     	});
-		if (bookmarkIcon != null) {
+		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/bookmark.png";
 		}
 		starstatus = "block";
 	}
 
-	if (bookmarkIcon != null) {
+	if (bookmarkIcon !== null) {
 		var p = poster[posterid-1];
 		switch (p.star) {
 			case 1:
@@ -494,7 +516,7 @@ function touchBookmark(posterid, bookmarkIcon){
 function getBookmarks() {
 	var bookmarks = localStorage.getItem("bookmarks");
 	// 空文字列だった場合は何もブックマークされていないので空配列
-	var bookmarkArr = (bookmarks != "") ? bookmarks.split(",") : [];
+	var bookmarkArr = (bookmarks !== "" && bookmarks !== null) ? bookmarks.split(",") : [];
 	// 中身をすべて数値にする
 	bookmarkArr.filter(function(obj) {
 		return parseInt(obj);
@@ -511,7 +533,7 @@ function getBookmarks() {
 // 検索バーが変更されたとき
 // TODO: jQueryを使うとbindされない原因をつきとめてjQueryに戻す
 function searchChanged(bar) {
-	if (bar.value.trim() != "" && bar.value != null) {
+	if (bar.value.trim() !== "" && bar.value !== null) {
 		
 		// 検索し、強調表示する
 		console.log("search");
@@ -529,9 +551,9 @@ function searchChanged(bar) {
 		// 各ポスターに対して検索中状態から未検索状態へフラグを変化させる
 		for (var i = 1; i <= ptotal; i++) {
 			// 検索中強調表示ならばただの強調表示に、ヒット状態なら元に戻す
-			if (pflag[i] == "e") {
+			if (pflag[i] === "e") {
 				pflag[i] = "t";
-			} else if (pflag[i] == "s") {
+			} else if (pflag[i] === "s") {
 				pflag[i] = "d";
 			}
 		}
@@ -542,4 +564,5 @@ function searchChanged(bar) {
 	showPosterIcons();
 	bar.blur();
 }
+
 
