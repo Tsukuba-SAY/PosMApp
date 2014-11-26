@@ -91,6 +91,11 @@ function init() {
 	$(".listToDetailBtn").jumpToDetailPage();
 	$(".listbookmarkbutton").listchangebookmark();
 
+    // ブックマークリスト画面ボタン
+    $(".bookmarklistToMapBtn").bookmarklistToMapPage();
+	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+	//$(".listbookmarkbutton").listchangebookmark();
+
 	// 詳細表示画面の戻るボタン
 	$("#detailBackButton").backToPreviousPage();
 

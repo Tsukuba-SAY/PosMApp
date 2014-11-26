@@ -24,10 +24,10 @@ $.fn.showBookmarkList = function() {
 				posters["sessionid"].push(poster[j].sessionid);
 				posters["title"].push(poster[j].title);
 				posters["author"].push(getAuthors(j+1));
-				str += "<tr><td><div>ポスターID: " + poster[j].sessionid + "<img class='listToMapBtn' id='listToMap" +poster[j].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img><br>";
+				str += "<tr><td><div>ポスターID: " + poster[j].sessionid + "<img class='bookmarklistToMapBtn' id='bookmarklistToMap" +poster[j].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img><br>";
 				str += "<strong>" + poster[j].title + "</strong><br>";
 				str += "著者: " + authors + "<br></td>";
-				str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+poster[j].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
+				str += "<td><div><td><img class='bookmarklistToDetailBtn' id='bookmarklistToDetail"+poster[j].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 			}
 		}
 
@@ -41,6 +41,34 @@ $.fn.showBookmarkList = function() {
 
 	$(this).html(str);
 
+	$(".bookmarklistToMapBtn").bookmarklistToMapPage();
+	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+
 	return posters;
+};
+
+
+//ポスターリスト画面の各「詳細情報」ボタンをクリックする時
+$.fn.bookmarklistToDetailPage = function() {
+	$(this).on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(20));
+		console.log(posterid);
+		sessionStorage.setItem("previousPage", "posterListPage");
+		listToDetail(posterid);
+	});
+};
+
+//ポスターリスト画面の各「これどこ？」ボタンをクリックする時
+$.fn.bookmarklistToMapPage = function() {
+	$(this).on("touchstart", function(e) {
+		// ポスターのIDを取得する
+		var posterid = Number(e.target.id.substring(17));
+		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
+		listToMap(posterid);
+	});
 };
 
