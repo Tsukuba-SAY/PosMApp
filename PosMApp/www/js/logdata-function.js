@@ -9,6 +9,7 @@ function createUID() {
 function saveLog(json) {
 	var date = new Date();
 	var uid = localStorage.getItem("uid");
+	json["timestamp"] = date.getTime();
 	if (uid !== null) {
 		// json["uid"] = uid;
 		localStorage.setItem(uid + "_" + date.getTime(), JSON.stringify(json));
