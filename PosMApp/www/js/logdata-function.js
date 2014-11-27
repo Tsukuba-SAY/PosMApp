@@ -1,6 +1,9 @@
 // UIDを新規に生成する
+// 現在のUNIX時刻をMD5にかけたものとする(2014/11/27)
 function createUID() {
-	var uid = Math.floor(Math.random() * 0xFFFFFFFF).toString(16);
+	// var uid = Math.floor(Math.random() * 0xFFFFFFFF).toString(16);
+	var date = new Date();
+	var uid = md5(date.getTime().toString());
 	return uid;
 }
 
