@@ -29,16 +29,22 @@ function saveLog(action, attribute) {
 function sendLog() {
     var senddata = loadLog();
     $.ajax({
-   		url: "http://104.236.5.92/PosLog/savelog.php",
+   		url: "http://104.236.24.141/php/savelog.php",
 		type: "POST",
 		dataType: "json",
 		data: senddata,
-		timeout: 10000,
+		timeout: 10000, // ここ要検討
 		success: function(data) {
 			console.log("send success");
 		},
 		error: function(XMLHttpRequest, textStatus, errorThrown) {
-			console.log("send error");
+			console.error("send error");
+			console.error("XMLHttpRequest: " + XMLHttpRequest);
+			console.error("textStatus: " + textStatus);
+			console.error("errorThrown: " + errorThrown);
+		}
+		complete: function(data) {
+			console.log("send complete");
 		}
 	});
 }
