@@ -1,3 +1,15 @@
+// 初期設定用
+function initUserData() {
+	var uid = createUID();
+	localStorage.setItem("uid", uid);
+
+	// 現在時刻を最終送信日時とする
+	var date = new Date();
+	localStorage.setItem("log_last_sent", date.getTime().toString());
+
+
+}
+
 // UIDを新規に生成する
 // 現在のUNIX時刻をMD5にかけたものとする(2014/11/27)
 function createUID() {
@@ -23,6 +35,12 @@ function saveLog(action, attribute) {
 		// json["uid"] = uid;
 		localStorage.setItem(uid + "_" + date.getTime(), JSON.stringify(json));
 	}
+
+	// var delta = localStorage.getItem("log_last_sent") - date.getTime().toString();
+	// var threshold = 5 * 60 * 1000;
+	// if (delta > threshold) {
+	// 	sendLog();
+	// }
 }
 
 // ログデータを送信

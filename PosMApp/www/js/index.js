@@ -16,10 +16,9 @@ function init() {
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
 
-	// 固有識別IDが設定されていなければ設定する
+	// 固有識別IDが設定されていなければ、初期設定する
 	if (localStorage.getItem("uid") === null) {
-		var uid = createUID();
-		localStorage.setItem("uid", uid);
+		initUserData();
 	}
 
 	// 基本情報が選択されていたらそのポスターを強調表示
