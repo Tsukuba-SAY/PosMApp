@@ -46,7 +46,7 @@ $.fn.touchPoster = function() {
 	$(this).on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(4));
-		saveLog({"poster_tap":posterid});
+		saveLog("poster_tap", {posterid:posterid});
 
 		var nextFlag = touchPoster(posterid);
 
@@ -59,7 +59,7 @@ $.fn.touchPoster = function() {
 $.fn.closeBasicInfo = function() {
 	$(this).on("touchstart", function(e) {
 		changeBasicInfoPanel(false);
-		saveLog({"basicinfo_tap":sessionStorage.getItem("posterid")});
+		saveLog("basicinfo_tap", {posterid:sessionStorage.getItem("posterid")});
 		unselectPoster();
 		showPosterIcons();
 		//resetAllIcons();
@@ -73,7 +73,7 @@ $.fn.changeLabel = function() {
 		var id = $(this).attr("id");
 		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
 		var target = id.substr(id.indexOf("-") + 1);
-		saveLog({"change_label":target});
+		saveLog("change_label", {label:target});
 		changeLabel(target);
 	});
 };
@@ -478,7 +478,7 @@ function touchBookmark(posterid, bookmarkIcon){
 			$("#listbookmark" + posterid).attr("src","img/unbookmark.png");
 		}
 		starstatus = "none";
-		saveLog({"unbookmark":posterid});
+		saveLog("unbookmark", {posterid:posterid, page:window.location.hash});
 	} else {
 		// ない場合
 		bookmarkArr.push(posterid);
@@ -490,7 +490,7 @@ function touchBookmark(posterid, bookmarkIcon){
 			$("#listbookmark" + posterid).attr("src","img/bookmark.png");
 		}
 		starstatus = "block";
-		saveLog({"bookmark":posterid});
+		saveLog("bookmark", {posterid:posterid, page:window.location.hash});
 	}
 
 	if (bookmarkIcon !== null) {
@@ -545,7 +545,7 @@ function searchChanged(bar) {
 		
 		// 検索し、強調表示する
 		console.log("search");
-		saveLog({"search":bar.value});
+		saveLog("search", {keyword:bar.value});
 		searchByTitle(bar.value);
 
 		// 検索中フラグを立てる
