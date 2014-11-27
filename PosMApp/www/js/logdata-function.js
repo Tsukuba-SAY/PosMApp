@@ -7,7 +7,16 @@ function initUserData() {
 	var date = new Date();
 	localStorage.setItem("log_last_sent", date.getTime().toString());
 
+	// 仮実装
+	// ユーザのカテゴリ分け
+	// 1.学生（受講者), 2.学生（見学者), 3.教員, 4.社会人・その他 
+	var category = 1;
+	localStorage.setItem("category", category);
 
+	// 仮実装
+	// ログ保存・送信を許諾するかどうか
+	var accept_collect_log = true
+	localStorage.setItem("accept_collect_log", accept_collect_log);
 }
 
 // UIDを新規に生成する
@@ -22,25 +31,29 @@ function createUID() {
 // ログを保存
 // action : 動作の名前（文字列）, attribute : 動作（JSONオブジェクト）
 function saveLog(action, attribute) {
-	var date = new Date();
-	var uid = localStorage.getItem("uid");
-	var json = {};
+	if (Boolean.valueOf(localStorage.getItem("accept_collect_log"))) {
+		var date = new Date();
+		var uid = localStorage.getItem("uid");
+		var category = localStorage.getItem("category");
+		var json = {};
 
-	json["uid"] = uid;
-	json["action"] = action;
-	json["attribute"] = attribute;
-	json["timestamp"] = date.getTime();
+		json["uid"] = uid;
+		json["category"] = category;
+		json["action"] = action;
+		json["attribute"] = attribute;
+		json["timestamp"] = date.getTime();
 
-	if (uid !== null) {
-		// json["uid"] = uid;
-		localStorage.setItem(uid + "_" + date.getTime(), JSON.stringify(json));
+		if (uid !== null) {
+			// json["uid"] = uid;
+			localStorage.setItem(uid + "_" + date.getTime(), JSON.stringify(json));
+		}
+
+		// var delta = localStorage.getItem("log_last_sent") - date.getTime().toString();
+		// var threshold = 5 * 60 * 1000;
+		// if (delta > threshold) {
+		// 	sendLog();
+		// }
 	}
-
-	// var delta = localStorage.getItem("log_last_sent") - date.getTime().toString();
-	// var threshold = 5 * 60 * 1000;
-	// if (delta > threshold) {
-	// 	sendLog();
-	// }
 }
 
 // ログデータを送信
