@@ -41,17 +41,15 @@ function sendLog() {
 }
 
 // 自分のログの一覧を取得
-// json : 自分のログのJSONオブジェクトを複数所持したjson
-// jsonの中身は "uid":識別ID, 数字のキー:自分のログ(JSONオブジェクト)
+// json : 自分のログのJSONオブジェクトを複数所持したjson（配列だけ）
 function loadLog() {
-	var json = {};
+	var json = new Array();
 	var uid = localStorage.getItem("uid");
 
-	json["uid"] = uid;
 	for (var i = 0; i < localStorage.length; i++) {
 		var k = localStorage.key(i);
 		if (k.indexOf(uid) !== -1) {
-			json[i.toString()] = JSON.parse(localStorage.getItem(k));
+			json.push(JSON.parse(localStorage.getItem(k)));
 		}
 	}
 	console.log(JSON.stringify(json));
