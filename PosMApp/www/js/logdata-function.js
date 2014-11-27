@@ -5,11 +5,17 @@ function createUID() {
 }
 
 // ログを保存
-// json : データのJSONオブジェクト
-function saveLog(json) {
+// action : 動作の名前（文字列）, attribute : 動作（JSONオブジェクト）
+function saveLog(action, attribute) {
 	var date = new Date();
 	var uid = localStorage.getItem("uid");
+	var json = {};
+
+	json["uid"] = uid;
+	json["action"] = action;
+	json["attribute"] = attribute;
 	json["timestamp"] = date.getTime();
+
 	if (uid !== null) {
 		// json["uid"] = uid;
 		localStorage.setItem(uid + "_" + date.getTime(), JSON.stringify(json));
