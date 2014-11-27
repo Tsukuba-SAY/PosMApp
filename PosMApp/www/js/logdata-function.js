@@ -42,7 +42,7 @@ function sendLog() {
 			console.error("XMLHttpRequest: " + XMLHttpRequest);
 			console.error("textStatus: " + textStatus);
 			console.error("errorThrown: " + errorThrown);
-		}
+		},
 		complete: function(data) {
 			console.log("send complete");
 		}
