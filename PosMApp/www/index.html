@@ -67,8 +67,8 @@
 				</td>
 				<td>
 					<div align="center">
-						<img id="goToInformation" class="topmenuicon" src="img/topmenu/information_gray.png"></img><br />
-						情報<br />　
+						<img id="goToInformation" class="topmenuicon" src="img/topmenu/information.png"></img><br />
+						タイムテーブル<br />　
 					</div>
 				</td>
 			</tr>
@@ -130,7 +130,7 @@
 				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
 				<li><a class="posterListPageButton" id="list" data-icon="list">一覧</a></li>
 				<li><a href="" id="bookmark" data-icon="bookmark" class="ui-disabled" >ブックマーク</a></li>
-				<li><a href="" id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
+				<li><a class="infromationButton" id="information" data-icon="informationgray">タイムテーブル</a></li>
 			</ul>
 		</div>
 	</div>
@@ -167,7 +167,7 @@
 				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
 				<li><a class="posterListPageButton" id="list" data-icon="list">一覧</a></li>
 				<li><a href="" id="bookmark" data-icon="bookmark" class="ui-disabled">ブックマーク</a></li>
-				<li><a href="" id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
+				<li><a class="infromationButton" id="information" data-icon="informationgray">タイムテーブル</a></li>
 			</ul>
 		</div>
 	</div>
@@ -192,7 +192,7 @@
 				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
 				<li><a class="posterListPageButton" id="list" data-icon="list">一覧</a></li>
 				<li><a  href=""  id="bookmark"  data-icon="bookmark"  class="ui-disabled" >ブックマーク</a></li>
-				<li><a  href=""  id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
+				<li><a class="infromationButton" id="information" data-icon="informationgray">タイムテーブル</a></li>
 			</ul>
 		</div>
 	</div>
@@ -214,6 +214,84 @@
 			href="#posterMapPage" data-role="button">代表者名</a>
 		<a class="changelabel" id="label-authorbelongs"
 			href="#posterMapPage" data-role="button">所属</a>
+	</div>
+</div>
+
+<!-- information画面 -->
+<!-- enpitのセッションテーブルの内容 -->
+<div data-role="page" id="informationPage" data-position="fixed">
+	<div data-role="header">
+		<h1 style="text-align:center"　>enPiTタイムテーブル</h1>
+	</div>
+	<div data-role="content">
+		<div style="overflow:auto; height:100%;">
+			<!-- ポスターリスト -->
+			<div id="sessionList" class="listcolor">
+				<table border="1" rules="rows" width="100%">
+					<tr>
+						<td>
+							<div>9:30 － 9:45</div><br>
+							<strong>開会の辞，専攻長挨拶</strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>9:45 － 10:15</div><br>
+							<strong>基調講演：enPiT への期待</strong><br>
+							発表者：CeFIL 理事 菊池純夫氏<br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>10:40 － 12:10</div><br>
+							<strong>成果発表 (1) プレゼンテーション</strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>13:10 － 14:30</div><br>
+							<strong>成果発表 (2) プレゼンテーション</strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>14:40 － 16:30</div><br>
+							<strong>ポスター・デモ発表</strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>16:30 － 17:30</div><br>
+							<strong>意見交換会</strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>17:30 － 18:00</div><br>
+							<strong>表彰式，修了証授与</strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>18:00 － 20:00</div><br>
+							<strong>交流会</strong><br>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- タブバー -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
+		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
+			<ul>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
+				<li><a class="posterListPageButton" id="list" data-icon="list">一覧</a></li>
+				<li><a  href=""  id="bookmark"  data-icon="bookmark"  class="ui-disabled" >ブックマーク</a></li>
+				<li><a class="infromationButton" id="information" data-icon="informationgray">タイムテーブル</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 </body>

@@ -79,6 +79,7 @@ function init() {
 	// トップページ
 	$("#goToMap").goToMapPage("touchstart");
 	$("#goToList").goToListPage("touchstart");
+	$("#goToInformation").goToInformationPage("touchstart");
 	
 	// ポスターリスト画面のボタン
 	$(".listToMapBtn").jumpToMapPage();
@@ -92,6 +93,7 @@ function init() {
 	$(".topPageButton").goToTopPage("touchstart");
 	$(".posterMapPageButton").goToMapPage("touchstart");
 	$(".posterListPageButton").goToListPage("touchstart");
+	$(".infromationButton").goToInformationPage("touchstart");
 
 	// タブバーの選択表示を変更
 	var currentPage = window.location.hash;
@@ -100,16 +102,25 @@ function init() {
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		case "#posterListPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
+			break;
+		case "#informationPage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".infromationButton").addClass("ui-btn-active ui-state-persist");
 			break;
 		default:
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 	}
 }
