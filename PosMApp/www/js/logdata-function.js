@@ -1,3 +1,19 @@
+$.fn.acceptCollectLog = function() {
+	$(this).on("touchstart", function(e) {
+		console.log("collect log accept");
+		localStorage.setItem("accept_collect_log", true);
+		window.location.href = "#topPage";
+	});
+}
+
+$.fn.denyCollectLog = function() {
+	$(this).on("touchstart", function(e){
+		console.log("collect log deny");
+		localStorage.setItem("accept_collect_log", false);
+		window.location.href = "#topPage";
+	});
+}
+
 // 初期設定用
 function initUserData() {
 	var uid = createUID();
@@ -15,8 +31,10 @@ function initUserData() {
 
 	// 仮実装
 	// ログ保存・送信を許諾するかどうか
-	var accept_collect_log = true
+	var accept_collect_log = false
 	localStorage.setItem("accept_collect_log", accept_collect_log);
+
+	window.location.href = "#checkCollectLogDialog";
 }
 
 // UIDを新規に生成する
