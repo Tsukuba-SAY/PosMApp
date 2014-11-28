@@ -17,7 +17,7 @@ if (mysqli_connect_error()) {
 $mysqli->set_charset("utf-8");
 
 $stmt = $mysqli->prepare("INSERT INTO log VALUES (NULL, ?, ?)");
-$stmt->bind_param("ss", $uid, $data)
+$stmt->bind_param("ss", $uid, $data);
 
 foreach ($data_array as $data_json) {	
 	$data = json_decode($data_json);
