@@ -292,9 +292,12 @@
 				<li><a class="infromationButton" id="information" data-icon="informationgray">タイムテーブル</a></li>
 			</ul>
 		</div>
+	</div>
+</div>
 
-<!--  -->
-<div data-role="dialog" id="checkCollectLogDialog">
+<!-- 利用ログデータ回収許諾ダイアログ  -->
+<div data-role="dialog" data-close-btn="none" id="checkCollectLogDialog">
+>>>>>>> ログ収集許諾とユーザ属性選択ダイアログの動作を実装
 	<div data-role="header">
 		<h1>ログ送信に関するお願い</h1>
 	</div>
@@ -304,5 +307,20 @@
 		<a data-role="button" id="denyCollectLog">いいえ</a>
 	</div>
 </div>
+
+<!-- ユーザカテゴリ選択ダイアログ -->
+<div data-role="dialog" data-close-btn="none" id="selectUserCategoryDialog">
+	<div data-role="header">
+		<h1>ユーザ属性の選択</h1>
+	</div>
+	<div data-role="content">
+		以下の中で、当てはまる属性を選択して下さい。<br />
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-1">学生（受講者）</a>
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-2">学生（見学者）</a>
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-3">教員</a>
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-4">社会人・その他</a>
+	</div>
+</div>
+
 </body>
 </html>

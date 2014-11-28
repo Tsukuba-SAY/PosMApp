@@ -1,40 +1,49 @@
 $.fn.acceptCollectLog = function() {
 	$(this).on("touchstart", function(e) {
 		console.log("collect log accept");
+
+		var uid = createUID();
+		localStorage.setItem("uid", uid);
+
+		// 現在時刻を最終送信日時とする
+		var date = new Date();
+		localStorage.setItem("log_last_sent", date.getTime().toString());
+
 		localStorage.setItem("accept_collect_log", true);
-		window.location.href = "#topPage";
+		window.location.href = "#selectUserCategoryDialog";
 	});
-}
+};
 
 $.fn.denyCollectLog = function() {
 	$(this).on("touchstart", function(e){
 		console.log("collect log deny");
+
 		localStorage.setItem("accept_collect_log", false);
+		window.location.href = "#topPage";
+	});
+};
+
+// ユーザのカテゴリ分け
+// 1.学生（受講者), 2.学生（見学者), 3.教員, 4.社会人・その他 
+$.fn.selectUserCategory = function() {
+	$(this).on("touchstart", function(e) {
+		var id = e.target.id;
+		var category = id.substring(id.indexOf("-")+1);
+
+		localStorage.setItem("category", category);
 		window.location.href = "#topPage";
 	});
 }
 
 // 初期設定用
 function initUserData() {
-	var uid = createUID();
-	localStorage.setItem("uid", uid);
+	if (localStorage.getItem("accept_collect_log") === null) {
+		// デフォルト
+		var category = 1;
+		localStorage.setItem("category", category);
 
-	// 現在時刻を最終送信日時とする
-	var date = new Date();
-	localStorage.setItem("log_last_sent", date.getTime().toString());
-
-	// 仮実装
-	// ユーザのカテゴリ分け
-	// 1.学生（受講者), 2.学生（見学者), 3.教員, 4.社会人・その他 
-	var category = 1;
-	localStorage.setItem("category", category);
-
-	// 仮実装
-	// ログ保存・送信を許諾するかどうか
-	var accept_collect_log = false
-	localStorage.setItem("accept_collect_log", accept_collect_log);
-
-	window.location.href = "#checkCollectLogDialog";
+		window.location.href = "#checkCollectLogDialog";
+	}
 }
 
 // UIDを新規に生成する

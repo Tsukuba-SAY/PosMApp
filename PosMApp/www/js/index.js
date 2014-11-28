@@ -17,6 +17,9 @@ function init() {
 	showPosterIcons();
 
 	// 固有識別IDが設定されていなければ、初期設定する
+	$("#acceptCollectLog").acceptCollectLog();
+	$("#denyCollectLog").denyCollectLog();
+	$(".selectUserCategoryButton").selectUserCategory();
 	if (localStorage.getItem("uid") === null) {
 		initUserData();
 	}
