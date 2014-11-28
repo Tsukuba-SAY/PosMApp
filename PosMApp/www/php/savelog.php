@@ -5,8 +5,6 @@ include "/etc/poslog_db_user_data.php";
 $json = file_get_contents("php://input");
 $data_array = json_decode($json);
 
-$uid = 
-
 $mysqli = new mysqli($url, $user, $password, $db);
 
 if (mysqli_connect_error()) {
