@@ -99,6 +99,7 @@ function sendLog() {
 		timeout: 10000, // タイムアウトにするまでの時間は要検討
 		success: function(data) {
 			console.log("send success");
+			deleteLog();
 		},
 		error: function(XMLHttpRequest, textStatus, errorThrown) {
 			console.error("send error");
