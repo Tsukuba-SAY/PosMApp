@@ -11,8 +11,8 @@ if (mysqli_connect_error()) {
 
 $mysqli->set_charset("utf-8");
 
-$stmt = $mysqli->prepare("INSERT INTO log VALUES (NULL, ?, ?)");
-$stmt->bind_param("ss", $uid, $data);
+$stmt = $mysqli->prepare("INSERT INTO log (id, uid, timestamp, data) VALUES (NULL, ?, ?, ?)");
+$stmt->bind_param("sss", $uid, $timestamp, $data);
 
 // $uid = $received_data["uid"];
 // $logdata = $received_data["logdata"];
@@ -20,6 +20,7 @@ $uid = $_GET["uid"];
 $logdata = $_GET["logdata"];
 
 foreach ($logdata as $value) {	
+	$timestamp = $value->timestamp;
 	$data = json_encode($value);
 	$stmt->execute();
 }
