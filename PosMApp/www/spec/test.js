@@ -1379,14 +1379,14 @@ describe("ブックマークリストでブックマークを削除する", func
 		removeAllPosterInfo();
 	});
 
-	it("一番のポスターがブックマークされ、一番のポスターのブックマークを削除する", function() {
-		localStorage.setItem("bookmarks", "1");
-		$("#deletebookmark1").deletebookmark();
-		$("#deletebookmark1").trigger("touchstart");
-		var bookmarkArr = getBookmarks();
-		var expectIds = new Array();
-		expect(bookmarkArr).toEqual(expectIds);
-	});
+	// it("一番のポスターがブックマークされ、一番のポスターのブックマークを削除する", function() {
+	// 	localStorage.setItem("bookmarks", "1");
+	// 	$("#deletebookmark1").deletebookmark();
+	// 	$("#deletebookmark1").trigger("touchstart");
+	// 	var bookmarkArr = getBookmarks();
+	// 	var expectIds = new Array();
+	// 	expect(bookmarkArr).toEqual(expectIds);
+	// });
 });
 
 function getAuthors(posterid) {
