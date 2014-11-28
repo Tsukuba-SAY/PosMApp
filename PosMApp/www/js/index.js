@@ -94,6 +94,7 @@ function init() {
     // ブックマークリスト画面ボタン
     $(".bookmarklistToMapBtn").bookmarklistToMapPage();
 	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+	$(".deletebookmarkBtn").deletebookmark();
 	//$(".listbookmarkbutton").listchangebookmark();
 
 	// 詳細表示画面の戻るボタン
