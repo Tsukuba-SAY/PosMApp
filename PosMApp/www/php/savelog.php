@@ -1,14 +1,32 @@
 <?php
-// Script for webhooks in GitHub and Slack
-// Author: Shota Furuya
-// Date: 2014/11/25 -
+// DBのuserdataが置いてあるのでinclude
+include "/etc/poslog_db_user_data.php";
 
-// define("ADDRESS", "");
-// define("USER", "root");
-// define("PASSWORD", "");
-// define("SECRET_KEY", "");
+$mysqli = new mysqli($url, $user, $password, $db);
 
-$json = file_get_contents("php://input");
-$data = json_decode($json);
+if (mysqli_connect_error()) {
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	exit();
+}
+
+$mysqli->set_charset("utf-8");
+
+$stmt = $mysqli->prepare("INSERT INTO log (id, uid, timestamp, data) VALUES (NULL, ?, ?, ?)");
+$stmt->bind_param("sss", $uid, $timestamp, $data);
+
+$uid = $_GET["uid"];
+$logdata = $_GET["logdata"];
+
+foreach ($logdata as $value) {	
+	$timestamp = $value["timestamp"];
+	$data = json_encode($value);
+	$stmt->execute();
+}
+
+$stmt->close();
+$mysqli->close();
+
+header('Content-Type: text/javascript; charset=utf-8');
+echo sprintf("callback()");
 
 ?>
