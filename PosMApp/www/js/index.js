@@ -92,9 +92,9 @@ function init() {
 	$(".listbookmarkbutton").listchangebookmark();
 
     // ブックマークリスト画面ボタン
-    $(".bookmarklistToMapBtn").bookmarklistToMapPage();
-	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
-	$(".deletebookmarkBtn").deletebookmark();
+    //$(".bookmarklistToMapBtn").bookmarklistToMapPage();
+	//$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+	//$(".deletebookmarkBtn").deletebookmark();
 	//$(".listbookmarkbutton").listchangebookmark();
 
 	// 詳細表示画面の戻るボタン
@@ -129,12 +129,14 @@ function init() {
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".infromationButton").addClass("ui-btn-active ui-state-persist");
+			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		case "#bookmarkListPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".bookmarkListPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		default:
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
@@ -143,5 +145,11 @@ function init() {
 			$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
 			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
+		// default:
+		// 	$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+		// 	$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+		// 	$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		// 	$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+		// 	break;
 	}
 }

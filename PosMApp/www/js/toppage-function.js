@@ -43,6 +43,7 @@ $.fn.goToInformationPage = function(ev) {
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".infromationButton").addClass("ui-btn-active ui-state-persist");
+		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 	});	
 };
 
@@ -54,6 +55,7 @@ $.fn.goToBookmarkListPage = function(ev) {
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".bookmarkListPageButton").addClass("ui-btn-active ui-state-persist");
+		$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
 		$("#bookmarkList").showBookmarkList();
 
 	});	

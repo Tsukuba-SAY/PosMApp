@@ -73,14 +73,14 @@ $.fn.deletebookmark= function(){
 			// ポスターのIDを取得する
 				var posterid = Number(e.target.id.substring(14));
 				var bookmarkIcon = document.getElementById("bookmarkbutton");
-				touchBookmark(posterid, bookmarkIcon);
+				removebookmark(posterid);
 		}else{
 			var r = confirm("ブックマークを削除してよろしいですか？");
 			if (r == true){
 	  			// ポスターのIDを取得する
 				var posterid = Number(e.target.id.substring(14));
 				var bookmarkIcon = document.getElementById("bookmarkbutton");
-				touchBookmark(posterid, bookmarkIcon);
+				removebookmark(posterid);
 				var tr = document.getElementById("trId"+posterid);
 				tr.parentNode.removeChild(tr);
 	 		}
@@ -88,3 +88,53 @@ $.fn.deletebookmark= function(){
 		
 	});
 };
+
+function removebookmark(posterid){
+	if (posterid < 1 || posterid > ptotal || posterid === null) {
+		throw new Exception();
+	}
+
+	// posteridに該当するポスターがブックマークリストに存在しているか確認用
+	// -1だと無し、-1以外だと発見したポスターのインデックス
+	var location = -1;
+
+	var bookmarkArr = getBookmarks();
+	for (var i = 0; i < bookmarkArr.length; i++) {
+		//該当ポスターがブックマークリストに存在しているかどうか確認する
+		if (posterid === parseInt(bookmarkArr[i])) {
+			location = i;
+			break;
+		}
+	}
+	console.log("location:" + location);
+	var starstatus;
+	bookmarkArr.splice(location, 1);
+	var bookmarkIcon = $("#bookmarkbutton");
+	$("#bookmarkbutton").attr("src","img/unbookmark.png");
+	$("#listbookmark" + posterid).attr("src","img/unbookmark.png");
+	starstatus = "none";
+	saveLog("unbookmark", {posterid:posterid, page:window.location.hash});
+	if (bookmarkIcon !== null) {
+			var p = poster[posterid-1];
+			switch (p.star) {
+				case 1:
+				starelem = document.getElementById("starTopNo" + posterid);
+				break;
+				case 2:
+				starelem = document.getElementById("starRightNo" + posterid);
+				break;
+				case 3:
+				starelem = document.getElementById("starBottomNo" + posterid);
+				break;
+				case 4:
+				starelem = document.getElementById("starLeftNo" + posterid);
+				default:
+				console.log("Error");
+			}
+			starelem.childNodes[0].style.display = starstatus;
+	}
+
+	bookmarks = bookmarkArr.join(",");
+	localStorage.setItem("bookmarks", bookmarks);
+	return bookmarks;
+}
