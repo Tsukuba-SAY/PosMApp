@@ -18,6 +18,7 @@ $.fn.goToMapPage = function(ev) {
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
+		$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
 	});	
 };
 
@@ -28,6 +29,18 @@ $.fn.goToListPage = function(ev) {
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
+		$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
+	});	
+};
+
+// 会議情報画面に遷移
+$.fn.goToInformationPage = function(ev) {
+	$(this).on(ev, function() {
+		changePage("#informationPage");
+		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".infromationButton").addClass("ui-btn-active ui-state-persist");
 	});	
 };
 
@@ -40,6 +53,7 @@ $.fn.goToTopPage = function(ev) {
 		$(".topPageButton").addClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
 	});
 };
 
