@@ -114,15 +114,19 @@ function sendLog() {
 // 自分のログの一覧を取得
 // json : 自分のログのJSONオブジェクトを複数所持したjson（配列だけ）
 function loadLog() {
-	var json = new Array();
+	var json = {};
+	var arr = new Array();
 	var uid = localStorage.getItem("uid");
+
+	json["uid"] = uid;
 
 	for (var i = 0; i < localStorage.length; i++) {
 		var k = localStorage.key(i);
 		if (k.indexOf(uid) !== -1) {
-			json.push(JSON.parse(localStorage.getItem(k)));
+			arr.push(JSON.parse(localStorage.getItem(k)));
 		}
 	}
+	json["logdata"] = arr;
 	console.log(JSON.stringify(json));
 
 	return json;
