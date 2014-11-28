@@ -59,6 +59,7 @@ describe("トップページ", function() {
 		loadFixtures("fixture-toppage.html");
 		$("#goToMap").goToMapPage("click");
 		$("#goToList").goToListPage("click");
+		$("#goToInformation").goToInformationPage("click");
 	});
 	it("トップページからポスターマップ画面に遷移できる", function() {
 		$("#goToMap").click();
@@ -67,6 +68,10 @@ describe("トップページ", function() {
 	it("トップページからポスターリスト画面に遷移できる", function() {
 		$("#goToList").click();
 		expect(window.location.hash).toEqual("#posterListPage");
+	});
+	it("トップページからポスターリスト画面に遷移できる", function() {
+		$("#goToInformation").click();
+		expect(window.location.hash).toEqual("#informationPage");
 	});
 });
 
