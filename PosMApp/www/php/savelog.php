@@ -29,4 +29,8 @@ foreach ($logdata as $value) {
 $stmt->close();
 $mysqli->close();
 
+header('Content-Type: text/javascript; charset=utf-8');
+echo sprintf("callback(%s)", json_encode($received_data));
+
+
 ?>
