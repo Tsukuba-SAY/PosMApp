@@ -467,13 +467,11 @@ function touchBookmark(posterid, bookmarkIcon){
 			break;
 		}
 	}
-	console.log("location:" + location);
 	var starstatus;
 	if (location !== -1) {
 		// ある場合
 		// 存在しているIDを削除する
 		bookmarkArr.splice(location, 1);
-		console.log("delete after:" + bookmarkArr.length);
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/unbookmark.png";
 			$("#listbookmark" + posterid).attr("src","img/unbookmark.png");
@@ -481,7 +479,6 @@ function touchBookmark(posterid, bookmarkIcon){
 		starstatus = "none";
 		saveLog("unbookmark", {posterid:posterid, page:window.location.hash});
 	} else {
-		console.log("I will add");
 		// ない場合
 		bookmarkArr.push(posterid);
 		bookmarkArr.sort(function(a,b){
