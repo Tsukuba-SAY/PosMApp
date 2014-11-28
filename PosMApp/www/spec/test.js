@@ -1317,6 +1317,78 @@ describe("ポスターリスト", function() {
 	});
 });
 
+describe("ブックマークリスト", function() {
+	beforeEach(function() {
+		loadFixtures("fixture-bookmarklist.html","fixture-postermap.html");
+
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
+		$("#bookmarkList").showBookmarkList();
+		$(".bookmarklistToMapBtn").bookmarklistToMapPage();
+		$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+		localStorage.setItem("bookmarks", "");
+		initPosterMap();	
+		removeAllPosterInfo();
+	});
+
+	it("一番のポスターがブックマークされると、ブックマークで表示される", function() {
+		localStorage.setItem("bookmarks", "1");
+		var posters = $("#bookmarkList").showBookmarkList();
+		var expectIds = new Array();
+		expectIds.push("1");
+		expect(expectIds).toEqual(posters["id"]);
+	});
+	it("1,2,3番のポスターがブックマークされると、ブックマークで表示される", function() {
+		localStorage.setItem("bookmarks", "1,2,3");
+		var posters = $("#bookmarkList").showBookmarkList();
+		var expectIds = new Array();
+		expectIds.push("1");
+		expectIds.push("2");
+		expectIds.push("3");
+		expect(expectIds).toEqual(posters["id"]);
+	});
+	it("すべてのポスターがブックマークされると、ブックマークで表示される", function() {
+		var str ="";
+		for (var i = 0; i <= poster.length - 5; i++) {
+			str += i + 1 + ",";
+		}
+		str = str.substring(0, str.length - 1);
+		localStorage.setItem("bookmarks", str);
+		var posters = $("#bookmarkList").showBookmarkList();
+		var expectIds = new Array();
+		for (var i = 0; i <= poster.length - 5; i++) {
+			expectIds.push(poster[i].id.toString());
+		};
+		expect(expectIds).toEqual(posters["id"]);
+	});
+});
+
+describe("ブックマークリストでブックマークを削除する", function() {
+	beforeEach(function() {
+		loadFixtures("fixture-bookmarklist.html","fixture-postermap.html");
+
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
+		$("#bookmarkList").showBookmarkList();
+		$(".bookmarklistToMapBtn").bookmarklistToMapPage();
+		$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+		localStorage.setItem("flag", "test");
+		initPosterMap();	
+		removeAllPosterInfo();
+	});
+
+	// it("一番のポスターがブックマークされ、一番のポスターのブックマークを削除する", function() {
+	// 	localStorage.setItem("bookmarks", "1");
+	// 	$("#deletebookmark1").deletebookmark();
+	// 	$("#deletebookmark1").trigger("touchstart");
+	// 	var bookmarkArr = getBookmarks();
+	// 	var expectIds = new Array();
+	// 	expect(bookmarkArr).toEqual(expectIds);
+	// });
+});
+
 function getAuthors(posterid) {
 
 	var atotal = author.length;
