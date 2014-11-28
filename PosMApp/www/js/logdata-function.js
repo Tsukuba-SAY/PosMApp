@@ -1,3 +1,51 @@
+$.fn.acceptCollectLog = function() {
+	$(this).on("touchstart", function(e) {
+		console.log("collect log accept");
+
+		var uid = createUID();
+		localStorage.setItem("uid", uid);
+
+		// 現在時刻を最終送信日時とする
+		var date = new Date();
+		localStorage.setItem("log_last_sent", date.getTime().toString());
+
+		localStorage.setItem("accept_collect_log", true);
+		window.location.href = "#selectUserCategoryDialog";
+	});
+};
+
+$.fn.denyCollectLog = function() {
+	$(this).on("touchstart", function(e){
+		console.log("collect log deny");
+
+		localStorage.setItem("accept_collect_log", false);
+		window.location.href = "#topPage";
+	});
+};
+
+// ユーザのカテゴリ分け
+// 1.学生（受講者), 2.学生（見学者), 3.教員, 4.社会人・その他 
+$.fn.selectUserCategory = function() {
+	$(this).on("touchstart", function(e) {
+		var id = e.target.id;
+		var category = id.substring(id.indexOf("-")+1);
+
+		localStorage.setItem("category", category);
+		window.location.href = "#topPage";
+	});
+}
+
+// 初期設定用
+function initUserData() {
+	if (localStorage.getItem("accept_collect_log") === null) {
+		// デフォルト
+		var category = 1;
+		localStorage.setItem("category", category);
+
+		window.location.href = "#checkCollectLogDialog";
+	}
+}
+
 // UIDを新規に生成する
 // 現在のUNIX時刻をMD5にかけたものとする(2014/11/27)
 function createUID() {
@@ -10,30 +58,43 @@ function createUID() {
 // ログを保存
 // action : 動作の名前（文字列）, attribute : 動作（JSONオブジェクト）
 function saveLog(action, attribute) {
-	var date = new Date();
-	var uid = localStorage.getItem("uid");
-	var json = {};
+	if (Boolean.valueOf(localStorage.getItem("accept_collect_log"))) {
+		var date = new Date();
+		var uid = localStorage.getItem("uid");
+		var category = localStorage.getItem("category");
+		var json = {};
 
-	json["uid"] = uid;
-	json["action"] = action;
-	json["attribute"] = attribute;
-	json["timestamp"] = date.getTime();
+		json["uid"] = uid;
+		json["category"] = category;
+		json["action"] = action;
+		json["attribute"] = attribute;
+		json["timestamp"] = date.getTime();
 
-	if (uid !== null) {
-		// json["uid"] = uid;
-		localStorage.setItem(uid + "_" + date.getTime(), JSON.stringify(json));
+		if (uid !== null) {
+			// json["uid"] = uid;
+			localStorage.setItem(uid + "_" + date.getTime(), JSON.stringify(json));
+		}
+
+		var delta = date.getTime().toString() - localStorage.getItem("log_last_sent");
+		var threshold = 5 * 60 * 1000;
+		console.log("time delta(sec): " + (delta/1000));
+		if (delta > threshold) {
+			console.log("send log");
+			// sendLog();
+		}
 	}
 }
 
 // ログデータを送信
 function sendLog() {
     var senddata = loadLog();
+    var date = new Date();
     $.ajax({
    		url: "http://104.236.24.141/php/savelog.php",
 		type: "POST",
 		dataType: "json",
 		data: senddata,
-		timeout: 10000, // ここ要検討
+		timeout: 10000, // タイムアウトにするまでの時間は要検討
 		success: function(data) {
 			console.log("send success");
 		},
@@ -45,6 +106,7 @@ function sendLog() {
 		},
 		complete: function(data) {
 			console.log("send complete");
+			localStorage.setItem("log_last_sent", date.getTime().toString());
 		}
 	});
 }
