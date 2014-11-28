@@ -1,6 +1,5 @@
  // ポスターの一覧を表示する
 $.fn.showBookmarkList = function() {
-	$(this).html("");
 	var posters = new Array();
 	posters["id"] = new Array();
 	posters["sessionid"] = new Array();
@@ -23,18 +22,14 @@ $.fn.showBookmarkList = function() {
 				posters["sessionid"].push(poster[j].sessionid);
 				posters["title"].push(poster[j].title);
 				posters["author"].push(getAuthors(j+1));
-				str += "<tr><td><div>ポスターID: " + poster[j].sessionid + "<img class='bookmarklistToMapBtn' id='bookmarklistToMap" +poster[j].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img>&nbsp;&nbsp;<img class='deletebookmarkBtn' id='deletebookmark"+poster[j].id+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
+				str += "<tr id='trId"+poster[j].id.toString()+"'><td><div>ポスターID: " + poster[j].sessionid + "<img class='bookmarklistToMapBtn' id='bookmarklistToMap" +poster[j].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img>&nbsp;&nbsp;<img class='deletebookmarkBtn' id='deletebookmark"+poster[j].id+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
 				str += "<strong>" + poster[j].title + "</strong><br>";
 				str += "著者: " + authors + "<br></td>";
-				str += "<td><div><td><img class='bookmarklistToDetailBtn' id='bookmarklistToDetail"+poster[j].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
+				str += "<td><div><td><img class='bookmarklistToDetailBtn' id='bookmarklistToDetail"+poster[j].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'></img></td></div></td></tr>";
 			}
 		}
 
 	}
-
-
-	
-	//postdataをループする、各ポスターの情報を取り出す
 	
 	str += '</table>'
 
@@ -73,13 +68,23 @@ $.fn.bookmarklistToMapPage = function() {
 
 $.fn.deletebookmark= function(){
 	$(this).on("touchstart", function(e) {
-		var r=confirm("ブックマークを削除してよろしいですか？");
-		if (r == true){
-  			// ポスターのIDを取得する
-			var posterid = Number(e.target.id.substring(14));
-			var bookmarkIcon = document.getElementById("bookmarkbutton");
-			touchBookmark(posterid, bookmarkIcon);
-			$("#bookmarkList").showBookmarkList();
- 		}
+		flag = localStorage.getItem("flag");
+		if(flag == "test"){
+			// ポスターのIDを取得する
+				var posterid = Number(e.target.id.substring(14));
+				var bookmarkIcon = document.getElementById("bookmarkbutton");
+				touchBookmark(posterid, bookmarkIcon);
+		}else{
+			var r = confirm("ブックマークを削除してよろしいですか？");
+			if (r == true){
+	  			// ポスターのIDを取得する
+				var posterid = Number(e.target.id.substring(14));
+				var bookmarkIcon = document.getElementById("bookmarkbutton");
+				touchBookmark(posterid, bookmarkIcon);
+				var tr = document.getElementById("trId"+posterid);
+				tr.parentNode.removeChild(tr);
+	 		}
+		}
+		
 	});
 };
