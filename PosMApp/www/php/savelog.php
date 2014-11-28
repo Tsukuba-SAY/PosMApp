@@ -3,7 +3,7 @@
 include "/etc/poslog_db_user_data.php";
 
 $json = file_get_contents("php://input");
-$data_array = json_decode($json, true);
+$received_data = json_decode($json, true);
 
 
 $mysqli = new mysqli($url, $user, $password, $db);
@@ -18,11 +18,11 @@ $mysqli->set_charset("utf-8");
 $stmt = $mysqli->prepare("INSERT INTO log VALUES (NULL, ?, ?)");
 $stmt->bind_param("ss", $uid, $data);
 
-foreach ($data_array as $data_json) {	
-	$data = json_decode($data_json, true);
-	$uid = $data->uid;
-	$data = json_encode($data);
+$uid = $received_data["uid"];
+$logdata = $received_data["logdata"];
 
+foreach ($logdata as $value) {	
+	$data = json_encode($value);
 	$stmt->execute();
 }
 
