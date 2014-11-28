@@ -1,8 +1,11 @@
 <?php
+// DBのuserdataが置いてあるのでinclude
 include "/etc/poslog_db_user_data.php";
 
 $json = file_get_contents("php://input");
-$data = json_decode($json);
+$data_array = json_decode($json);
+
+$uid = 
 
 $mysqli = new mysqli($url, $user, $password, $db);
 
@@ -14,7 +17,17 @@ if (mysqli_connect_error()) {
 $mysqli->set_charset("utf-8");
 
 $stmt = $mysqli->prepare("INSERT INTO log VALUES (NULL, ?, ?)");
+$stmt->bind_param("ss", $uid, $data)
 
+foreach ($data_array as $data_json) {	
+	$data = json_decode($data_json);
+	$uid = $data->uid;
+	$data = json_encode($data);
 
+	$stmt->execute();
+}
+
+$stmt->close();
+$mysqli->close();
 
 ?>
