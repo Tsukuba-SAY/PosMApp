@@ -1,10 +1,10 @@
  // ポスターの一覧を表示する
 $.fn.showBookmarkList = function() {
-	var posters = new Array();
-	posters["id"] = new Array();
-	posters["sessionid"] = new Array();
-	posters["title"] = new Array();
-	posters["author"] = new Array();
+	var posters = [];
+	posters["id"] = [];
+	posters["sessionid"] = [];
+	posters["title"] = [];
+	posters["author"] = [];
 	
 	var bookmarks = localStorage.getItem("bookmarks");
 	if (bookmarks === null || bookmarks === "") {
