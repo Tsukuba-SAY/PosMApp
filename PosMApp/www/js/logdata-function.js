@@ -90,11 +90,9 @@ function sendLog() {
     var senddata = loadLog();
     var date = new Date();
     $.ajax({
-   		url: "http://104.236.24.141/php/savelog.php",
-		type: "GET",
-		dataType: "jsonp",
-		jsonpCallback: "callback",
-		crossDomein: true,
+   		url: "http://localhost/php/savelog.php",
+		type: "POST",
+		dataType: "json",
 		data: senddata,
 		timeout: 10000, // タイムアウトにするまでの時間は要検討
 		success: function(data) {
