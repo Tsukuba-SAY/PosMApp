@@ -1,10 +1,10 @@
  // ポスターの一覧を表示する
 $.fn.showBookmarkList = function() {
-	var posters = new Array();
-	posters["id"] = new Array();
-	posters["sessionid"] = new Array();
-	posters["title"] = new Array();
-	posters["author"] = new Array();
+	var posters = [];
+	posters["id"] = [];
+	posters["sessionid"] = [];
+	posters["title"] = [];
+	posters["author"] = [];
 	
 	var bookmarks = localStorage.getItem("bookmarks");
 	if (bookmarks === null || bookmarks === "") {
@@ -16,7 +16,7 @@ $.fn.showBookmarkList = function() {
 	
 	for(var i=0; i<=bookmarkArr.length; i++){
 		for (var j=0; j<=poster.length-4; j++){
-			if(bookmarkArr[i]==poster[j].id){
+			if(parseInt(bookmarkArr[i]) === parseInt(poster[j].id)){
 				authors = getAuthors(i+1).split(",").join(", ")
 				posters["id"].push(poster[j].id.toString());
 				posters["sessionid"].push(poster[j].sessionid);
@@ -66,17 +66,17 @@ $.fn.bookmarklistToMapPage = function() {
 	});
 };
 
-$.fn.deletebookmark= function(){
+$.fn.deletebookmark = function(){
 	$(this).on("touchstart", function(e) {
 		flag = localStorage.getItem("flag");
-		if(flag == "test"){
+		if(flag === "test"){
 			// ポスターのIDを取得する
 				var posterid = Number(e.target.id.substring(14));
 				var bookmarkIcon = document.getElementById("bookmarkbutton");
 				removebookmark(posterid);
 		}else{
 			var r = confirm("ブックマークを削除してよろしいですか？");
-			if (r == true){
+			if (r === true){
 	  			// ポスターのIDを取得する
 				var posterid = Number(e.target.id.substring(14));
 				var bookmarkIcon = document.getElementById("bookmarkbutton");

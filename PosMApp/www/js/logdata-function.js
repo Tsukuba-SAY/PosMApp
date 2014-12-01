@@ -118,7 +118,7 @@ function sendLog() {
 // json : 自分のログのJSONオブジェクトを複数所持したjson（配列だけ）
 function loadLog() {
 	var json = {};
-	var arr = new Array();
+	var arr = [];
 	var uid = localStorage.getItem("uid");
 
 	json["uid"] = uid;
@@ -138,7 +138,7 @@ function loadLog() {
 // 自分のログを全削除
 function deleteLog() {
 	var uid = localStorage.getItem("uid");
-	var delKey = new Array();
+	var delKey = [];
 
 	for (var i = 0; i < localStorage.length; i++) {
 		var k = localStorage.key(i);

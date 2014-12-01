@@ -291,7 +291,7 @@ function searchByTitle(title) {
 		throw new Exception();
 	}
 
-	var posterids = new Array();
+	var posterids = [];
 	var ltitle = title.toLowerCase();
 
 	poster.forEach(function(aPoster) {
@@ -356,7 +356,7 @@ function selectPoster(posterid) {
 		}
 	}
 
-	var authors = new Array();
+	var authors = [];
 	for (var i = 0; i < author.length; i++) {
 		var a = author[i];
 		if (a.posterid === posterid) {
@@ -365,7 +365,7 @@ function selectPoster(posterid) {
 	}
 	sessionStorage.setItem("authors", authors);
 
-	var keywords = new Array();
+	var keywords = [];
 	for (var i = 0; i < keyword.length; i++) {
 		var k = keyword[i];
 		if (k.posterid === posterid) {
