@@ -1,3 +1,19 @@
+.dpic {
+	background-color: #B4EBFA;
+}
+
+.tpic {
+	background-color: #FF2800;
+}
+
+.spic {
+	background-color: #35A16B;
+}
+
+.epic {
+	background-color: #FF2800;
+}
+
 .postericonframe{
 	position: absolute; 
 	z-index: 3;
