@@ -115,7 +115,7 @@ function setPosterIcons() {
 		}
 		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[i-1].x*INIT_SCALE)+"px;top:"+(position[i-1].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-		str += "		<img class='posterimg' id='icon" + i + "' src='img/dpic.png' " + "width="+iconWidth+ " height=" + iconHeight + "></img>\n";
+		str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'></div>\n";
 		str += "		<div class='" + position[i-1].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
 		str += "	</div>\n";
 
@@ -173,23 +173,23 @@ function setLabel(id, str) {
 
 // 現在のフラグを元にポスターのアイコンを表示する
 function showPosterIcons() {
-	var imageSrc;
+	var pic;
 	for (var i = 1; i <= ptotal; i++) {
 		switch (pflag[i]) {
 			case "d":
-				imageSrc = "img/dpic.png";
+				pic = "dpic";
 				break;
 			case "t":
-				imageSrc = "img/tpic.png";
+				pic = "tpic";
 				break;
 			case "s":
-				imageSrc = "img/spic.png";
+				pic = "spic";
 				break;
 			case "e":
-				imageSrc = "img/epic.png";
+				pic = "epic";
 				break;
 		}
-    	document.getElementById("icon" + i).src = imageSrc;
+    	document.getElementById("icon" + i).className = pic;
 	}
 
 	console.log(pflag);
