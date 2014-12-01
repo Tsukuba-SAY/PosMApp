@@ -29,6 +29,8 @@ foreach ($logdata as $value) {
 $stmt->close();
 $mysqli->close();
 
+header("Access-Control-Allow-Origin:*");
+header("Access-Control-Allow-Headers:Content-Type");
 header('Content-Type: text/javascript; charset=utf-8');
 echo sprintf($json_data);
 
