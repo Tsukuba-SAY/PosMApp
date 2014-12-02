@@ -60,6 +60,7 @@ describe("トップページ", function() {
 		$("#goToMap").goToMapPage("click");
 		$("#goToList").goToListPage("click");
 		$("#goToInformation").goToInformationPage("click");
+		$("#goToBookmarkList").goToBookmarkListPage("click");
 	});
 	it("トップページからポスターマップ画面に遷移できる", function() {
 		$("#goToMap").click();
@@ -72,6 +73,10 @@ describe("トップページ", function() {
 	it("トップページからポスターリスト画面に遷移できる", function() {
 		$("#goToInformation").click();
 		expect(window.location.hash).toEqual("#informationPage");
+	});
+	it("トップページからブックマークリスト画面に遷移できる", function() {
+		$("#goToBookmarkList").click();
+		expect(window.location.hash).toEqual("#bookmarkListPage");
 	});
 });
 
