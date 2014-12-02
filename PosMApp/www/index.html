@@ -37,46 +37,50 @@
 
 <body>
 <!-- トップメニュー画面 -->
-<div data-role="page" id="topPage" style="background-color: #D2DEEF" >
-	<div data-role="header"><h1>PosMApp</h1></div>
-	<div data-role="content">
-		<div id="conferenceName">WebDB Forum 2014<br />ポスターレセプション会場案内</div>
-		<div align="center">
-			<h4>日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></h4>
+<div data-role="page" id="topPage" style="background-image:url(img/toppage_enpitUTWS.png); background-size: cover;" >
+	<div id="topPageContent">
+		<!--<div id="conferenceName"></div>-->
+		<div class="ui-grid-solo">
+			<div class="ui-block-a">
+				<div id="selectLocale">日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></div>
+			</div>
 		</div>
-		<table class="table-topmenu" align="center" >
-			<tr>
-				<td>
-					<div align="center">
-						<img id="goToMap" class="topmenuicon" src="img/topmenu/map.png" align="center"></img><br />
-						ポスター<br />マップ　
-					</div>
-				</td>
-				<td>
-					<div align="center">
-						<img id="goToList" class="topmenuicon" src="img/topmenu/list.png"></img><br />
-						ポスター<br />一覧
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<div align="center">
-						<img id="goToBookmarkList" class="topmenuicon" src="img/topmenu/bookmark.png"></img><br />
-						ブックマーク<br />リスト
-					</div>
-				</td>
-				<td>
-					<div align="center">
-						<img id="goToInformation" class="topmenuicon" src="img/topmenu/information.png"></img><br />
-						日程表<br />　
-					</div>
-				</td>
-			</tr>
-		</table>
-		<div id="copyright" align="center">
-			<span style="font-size:smaller;">Copyright &copy; <a href="http://www.cs.tsukuba.ac.jp/ITsoft/">筑波大学CS専攻 高度ITコース</a></span><br />
-			<span style="font-size:smaller;">Team S.A.Y. (<a href="https://twitter.com/posmapp_say">@posmapp_say</a>)</span>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<div align="center">
+					<img id="goToMap" class="topmenuicon" src="img/topmenu/map.png"></img>
+					<div class="topMenuIconLabel">ポスターマップ</div>
+				</div>
+			</div>
+			<div class="ui-block-b">
+				<div align="center">
+					<img id="goToList" class="topmenuicon" src="img/topmenu/list.png"></img>
+					<div class="topMenuIconLabel">発表リスト</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<div align="center">
+					<img id="goToBookmarkList" class="topmenuicon" src="img/topmenu/bookmark.png"></img>
+					<div class="topMenuIconLabel">ブックマークリスト</div>
+				</div>
+			</div>
+			<div class="ui-block-b">
+				<div align="center">
+					<img id="goToInformation" class="topmenuicon" src="img/topmenu/information.png"></img>
+					<div class="topMenuIconLabel">プログラム</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-solo">
+			<div class="ui-block-a">
+				<div id="copyright">
+					<br />
+					<span style="font-size:smaller;">Copyright &copy; <a href="http://www.cs.tsukuba.ac.jp/ITsoft/">筑波大学CS専攻 高度ITコース</a></span><br />
+					<span style="font-size:smaller;">Team S.A.Y. (<a href="https://twitter.com/posmapp_say">@posmapp_say</a>)</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
