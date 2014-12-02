@@ -89,10 +89,14 @@ $.fn.touchBookmark = function() {
 
 // ポスターアイコンをセットする
 function setPosterIcons() {
-	var str = "";
 	var STATIC_WIDTH =  108;
 	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
-	var starAngle;
+	var starAngle = [null, "top:-15px;left:30%;", "right:-15px;top:30%;", "bottom:-15px;left:30%;", "left:-15px;top:30%;"];
+	var starpos = [null, "Top", "Right", "Bottom", "Left"];
+
+	var str = "";
+	var angle;
+	var pos;
 	var iconWidth;
 	var iconHeight;
 	
@@ -100,42 +104,17 @@ function setPosterIcons() {
 		iconWidth = position[i-1].width*INIT_SCALE;
 		iconHeight = position[i-1].height*INIT_SCALE;
 
-		switch (poster[i-1].star) {
-			case 1:
-				starAngle = "top:-15px;left:30%;";
-				break;
-			case 2:
-				starAngle = "right:-15px;top:30%;";
-				break;
-			case 3:
-				starAngle = "bottom:-15px;left:30%;";
-				break;
-			case 4:
-				starAngle = "left:-15px;top:30%;"
-		}
+		angle = starAngle[poster[i-1].star];
+
 		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[i-1].x*INIT_SCALE)+"px;top:"+(position[i-1].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'></div>\n";
 		str += "		<div class='" + position[i-1].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
 		str += "	</div>\n";
 
-		var pos;
-		switch (poster[i-1].star) {
-			case 1:
-				pos = "Top";
-				break;
-			case 2:
-				pos = "Right";
-				break;
-			case 3:
-				pos = "Bottom";
-				break;
-			case 4:
-				pos = "Left";
-				break;
-		}
+		pos = starpos[poster[i-1].star];
 
-		str += "	<div id='star" + pos + "No" + i +"' class='star-top' style='"+starAngle+"'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
+		str += "	<div id='star" + pos + "No" + i +"' class='star-top' style='"+angle+"'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
 		str += "</div>\n";
 	}
 	document.getElementById("posters").innerHTML = str;
@@ -426,21 +405,9 @@ function showBookmarkIcons() {
 			var p = poster[posterid-1];
 			// ポスターのstar属性によって配置する位置を決定する
 			// 1が上で時計回り
-			switch (p.star) {
-				case 1:
-				starelem = document.getElementById("starTopNo" + posterid);
-				break;
-				case 2:
-				starelem = document.getElementById("starRightNo" + posterid);
-				break;
-				case 3:
-				starelem = document.getElementById("starBottomNo" + posterid);
-				break;
-				case 4:
-				starelem = document.getElementById("starLeftNo" + posterid);
-				default:
-				console.log("Error");
-			}
+			var starpos = [null, "Top", "Right", "Bottom", "Left"];
+			starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
+
 			// 該当する星要素を表示する
 			starelem.childNodes[0].style.display = "block";
 		}
@@ -492,23 +459,10 @@ function touchBookmark(posterid, bookmarkIcon){
 		saveLog("bookmark", {posterid:posterid, page:window.location.hash});
 	}
 
+	var starpos = [null, "Top", "Right", "Bottom", "Left"];
 	if (bookmarkIcon !== null) {
 		var p = poster[posterid-1];
-		switch (p.star) {
-			case 1:
-			starelem = document.getElementById("starTopNo" + posterid);
-			break;
-			case 2:
-			starelem = document.getElementById("starRightNo" + posterid);
-			break;
-			case 3:
-			starelem = document.getElementById("starBottomNo" + posterid);
-			break;
-			case 4:
-			starelem = document.getElementById("starLeftNo" + posterid);
-			default:
-			console.log("Error");
-		}
+		starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
 		starelem.childNodes[0].style.display = starstatus;
 	}
 

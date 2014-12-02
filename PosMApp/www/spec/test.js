@@ -1135,7 +1135,7 @@ describe("ポスターリストからのブックマーク機能", function() {
 		var bookmarks = localStorage.getItem("bookmarks");
 
 		var expectArr = new Array();
-		for (var i = 0; i <= poster.length - 5; i++) {
+		for (var i = 0; i < poster.length; i++) {
 			expectArr.push(poster[i].id);
 		};
 		expect(bookmarks).toEqual(expectArr.join(","));
@@ -1234,12 +1234,6 @@ describe("ポスターリスト", function() {
 				expectIds.push(p.id.toString());
 			//}
 		});
-
-		// 末尾のDummyデータ4つをpopさせて消している
-		expectIds.pop();
-		expectIds.pop();
-		expectIds.pop();
-		expectIds.pop();
 
 		expect(expectIds).toEqual(posters["id"]);
 	});
@@ -1433,7 +1427,7 @@ describe("ブックマークリスト", function() {
 			listToMap(poster.length + 1);
 		}).toThrow();
 	});
-	it("1,2,3番のポスターがブックマークされた状態で、1番のブックマークスターを押すと、1番のポスターのブックマークを削除される", function() {
+	it("1,2,3番のポスターがブックマークされた状態で、1番のブックマークスターを押すと、1番のポスターのブックマークを削除され、2,3番のポスターが残る", function() {
 		localStorage.setItem("bookmarks", "1,2,3");
 		$("#bookmarkList").showBookmarkList();
 		$("#deletebookmark1").trigger("touchstart");

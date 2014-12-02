@@ -54,11 +54,7 @@ var poster =[{"id":1,"sessionid":"WDB-01","title":"HistoryPaper:ユーザー個�
 {"id":54,"sessionid":"COC-07","title":"株式会社 日立製作所","abstract":"NO DATA","authorname":"株式会社 日立製作所","authorbelongs":"NO DATA","bookmark":0,"star":1},
 {"id":55,"sessionid":"COC-08","title":"チームラボ株式会社","abstract":"NO DATA","authorname":"チームラボ株式会社","authorbelongs":"NO DATA","bookmark":0,"star":1},
 {"id":56,"sessionid":"COC-09","title":"アカデミック・リソース・ガイド株式会社","abstract":"NO DATA","authorname":"アカデミック・リソース・ガイド株式会社","authorbelongs":"NO DATA","bookmark":0,"star":1},
-{"id":57,"sessionid":"COC-10","title":"サイジニア株式会社","abstract":"NO DATA","authorname":"サイジニア株式会社","authorbelongs":"NO DATA","bookmark":0,"star":1},
-{"id":58,"sessionid":"Dummy01","title":"Dummy01","abstract":"","authorname":"","authorbelongs":"","bookmark":0,"star":1},
-{"id":59,"sessionid":"Dummy02","title":"Dummy02","abstract":"","authorname":"","authorbelongs":"","bookmark":0,"star":2},
-{"id":60,"sessionid":"Dummy03","title":"Dummy03","abstract":"","authorname":"","authorbelongs":"","bookmark":0,"star":3},
-{"id":61,"sessionid":"Dummy04","title":"Dummy04","abstract":"","authorname":"","authorbelongs":"","bookmark":0,"star":4}]
+{"id":57,"sessionid":"COC-10","title":"サイジニア株式会社","abstract":"NO DATA","authorname":"サイジニア株式会社","authorbelongs":"NO DATA","bookmark":0,"star":1}]
 
 ;
 
