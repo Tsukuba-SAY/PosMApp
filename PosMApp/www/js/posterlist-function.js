@@ -13,9 +13,9 @@ $.fn.showPosterList = function() {
 	}
 	var bookmarkArr = bookmarks.split(",");
 	var str = "";
-	str += '<table border="1" rules="rows" >';
+	str += '<table border="1" rules="rows">';
 	//postdataをループする、各ポスターの情報を取り出す
-	for (var i = 0; i < poster.length-4; i++) {
+	for (var i = 0; i < poster.length; i++) {
 		authors = getAuthors(i+1).split(",").join(", ")
 		posters["id"].push(poster[i].id.toString());
 		posters["sessionid"].push(poster[i].sessionid);

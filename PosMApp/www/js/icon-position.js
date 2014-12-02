@@ -55,9 +55,5 @@ var position = [
 	{"id":47,"x":55,"y":108,"width":11,"height":6,"direction":"sideways"},
 	{"id":46,"x":43,"y":108,"width":11,"height":6,"direction":"sideways"},
 	{"id":45,"x":30,"y":108,"width":11,"height":6,"direction":"sideways"},
-	{"id":44,"x":18,"y":108,"width":11,"height":6,"direction":"sideways"},
-	{"id":0,"x":343,"y":115,"width":1,"height":1,"direction":"sideways"},
-	{"id":0,"x":400,"y":115,"width":1,"height":1,"direction":"sideways"},
-	{"id":0,"x":400,"y":108,"width":1,"height":1,"direction":"sideways"},
-	{"id":0,"x":400,"y":208,"width":1,"height":1,"direction":"sideways"}
+	{"id":44,"x":18,"y":108,"width":11,"height":6,"direction":"sideways"}
 ];
