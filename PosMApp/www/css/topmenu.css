@@ -35,6 +35,10 @@
 .topmenuicon {
 	width: 50%;
 	margin: 5%;
+
+	-webkit-box-shadow: 2px 2px 8px rgba(0,0,0,.5);
+  	-moz-box-shadow: 2px 4px 8px rgba(0,0,0,.5);
+  	box-shadow: 2px 2px 8px rgba(0,0,0,.5);
 }
 
 .topMenuIconLabel {
