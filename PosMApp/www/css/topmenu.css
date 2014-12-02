@@ -3,7 +3,7 @@
 	margin-left: 15%;
 	margin-right: 15%;
 	width: 70%;
-	top: 40%;
+	top: 42%; /* enPiTロゴ分だけオフセット */
 }
 
 #selectLocale {

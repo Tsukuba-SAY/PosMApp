@@ -2,6 +2,11 @@
 $(init);
 
 function init() {
+
+	$("#topPageFrame")
+		.css("width", window.innerWidth)
+		.css("max-width", window.innerWidth);
+
 	initPosterMap();
 
 	// 現在はWebSQLは使用していない
