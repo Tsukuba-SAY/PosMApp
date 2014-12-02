@@ -1,3 +1,11 @@
+#selectLocale {
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	top: 40%;
+}
+
 #conferenceName{
 	font-size: 28px;	
 	color: #0033FF;
@@ -5,10 +13,23 @@
 }
 
 .table-topmenu {
-	width: 80%;	
+	position: absolute;
+	margin-left: 10%;
+	margin-right: 10%;
+	top: 45%;
+	width: 80%;
+	height: 40%;	
 }
 
 .topmenuicon {
 	width: 60%;
 	margin: 5%;
+}
+
+#copyright {
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	top: 92%;
 }
