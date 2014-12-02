@@ -53,7 +53,7 @@ $.fn.bookmarklistToDetailPage = function() {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(20));
 		console.log(posterid);
-		sessionStorage.setItem("previousPage", "posterListPage");
+		sessionStorage.setItem("previousPage", "bookmarkListPage");
 		listToDetail(posterid);
 	});
 };
