@@ -92,7 +92,7 @@ function setPosterIcons() {
 	var str = "";
 	var STATIC_WIDTH =  108;
 	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
-	var starAngle ;
+	var starAngle;
 	var iconWidth;
 	var iconHeight;
 	
