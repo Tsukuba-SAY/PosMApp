@@ -1,9 +1,17 @@
-#selectLocale {
+#topPageContent {
 	position: absolute;
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+	top: 40%;
+}
+
+#selectLocale {
+	/*position: absolute;*/
 	display: inline-block;
 	width: 100%;
 	text-align: center;
-	top: 40%;
+	/*top: 40%;*/
 }
 
 #conferenceName{
@@ -13,12 +21,12 @@
 }
 
 .table-topmenu {
-	position: absolute;
+/*	position: absolute;
 	margin-left: 15%;
 	margin-right: 15%;
 	top: 45%;
 	width: 70%;
-	height: 30%;	
+	height: 30%;	*/
 }
 
 .topmenuicon {
@@ -27,9 +35,9 @@
 }
 
 #copyright {
-	position: absolute;
+	/*position: absolute;*/
 	display: inline-block;
 	width: 100%;
 	text-align: center;
-	top: 92%;
+	/*top: 92%;*/
 }
