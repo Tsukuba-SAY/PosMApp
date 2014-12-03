@@ -1436,6 +1436,14 @@ describe("ブックマークリスト", function() {
 		var expectIds = ["2", "3"];
 		expect(bookmarkArr).toEqual(expectIds);
 	});
+	it("1番のポスターがブックマークされた状態で、1番のブックマークスターを押すと、1番のポスターのブックマークを削除され、ポスターが残らない", function() {
+		localStorage.setItem("bookmarks", "1");
+		$("#bookmarkList").showBookmarkList();
+		$("#deletebookmark1").trigger("touchstart");
+		var bookmarkArr = getBookmarks();
+		var expectIds = [];
+		expect(bookmarkArr).toEqual(expectIds);
+	});
 });
 
 function getAuthors(posterid) {
