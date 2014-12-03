@@ -90,7 +90,7 @@ function sendLog() {
     var senddata = loadLog();
     var date = new Date();
     $.ajax({
-   		url: "http://localhost/php/savelog.php",
+   		url: "http://104.236.5.92/php/savelog.php",
 		type: "POST",
 		dataType: "json",
 		data: senddata,
