@@ -10,28 +10,33 @@ $.fn.showBookmarkList = function() {
 	if (bookmarks === null || bookmarks === "") {
 		bookmarks = "";
 	}
-	var bookmarkArr = bookmarks.split(",");
+
 	var str = "";
-	str += '<table border="1" rules="rows">';
-	
-	for(var i=0; i<=bookmarkArr.length; i++){
-		for (var j=0; j<poster.length; j++){
-			if(parseInt(bookmarkArr[i]) === parseInt(poster[j].id)){
-				authors = getAuthors(i+1).split(",").join(", ")
-				posters["id"].push(poster[j].id.toString());
-				posters["sessionid"].push(poster[j].sessionid);
-				posters["title"].push(poster[j].title);
-				posters["author"].push(getAuthors(j+1));
-				str += "<tr id='trId"+poster[j].id.toString()+"'><td><div>ポスターID: " + poster[j].sessionid + "<img class='bookmarklistToMapBtn' id='bookmarklistToMap" +poster[j].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img>&nbsp;&nbsp;<img class='deletebookmarkBtn' id='deletebookmark"+poster[j].id+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
-				str += "<strong>" + poster[j].title + "</strong><br>";
-				str += "著者: " + authors + "<br></td>";
-				str += "<td><div><td><img class='bookmarklistToDetailBtn' id='bookmarklistToDetail"+poster[j].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'></img></td></div></td></tr>";
+	if (bookmarks === "") {
+		str += "<div id='emptyBookmarklist'>ブックマークされていません。</div>";
+	} else {
+
+		var bookmarkArr = bookmarks.split(",");
+		str += '<table border="1" rules="rows">';
+		
+		for(var i=0; i<=bookmarkArr.length; i++){
+			for (var j=0; j<poster.length; j++){
+				if(parseInt(bookmarkArr[i]) === parseInt(poster[j].id)){
+					authors = getAuthors(i+1).split(",").join(", ")
+					posters["id"].push(poster[j].id.toString());
+					posters["sessionid"].push(poster[j].sessionid);
+					posters["title"].push(poster[j].title);
+					posters["author"].push(getAuthors(j+1));
+					str += "<tr id='trId"+poster[j].id.toString()+"'><td><div>ポスターID: " + poster[j].sessionid + "<img class='bookmarklistToMapBtn' id='bookmarklistToMap" +poster[j].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img>&nbsp;&nbsp;<img class='deletebookmarkBtn' id='deletebookmark"+poster[j].id+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
+					str += "<strong>" + poster[j].title + "</strong><br>";
+					str += "著者: " + authors + "<br></td>";
+					str += "<td><div><td><img class='bookmarklistToDetailBtn' id='bookmarklistToDetail"+poster[j].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'></img></td></div></td></tr>";
+				}
 			}
 		}
-
+		
+		str += '</table>'
 	}
-	
-	str += '</table>'
 
 	$(this).html(str);
 
