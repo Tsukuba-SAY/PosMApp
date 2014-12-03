@@ -688,12 +688,12 @@ describe("キーワード検索（タイトル）", function() {
 		initPosterMap();
 	});
 
-	it("「用いた」で検索すると2,4,6,7,10,11,17,18,24,30,44番のポスターがヒットする", function() {
+	it("「システム」で検索すると4,5,11,14,16,17番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [2,4,6,7,10,11,17,18,24,30,44];
+		expectArr = [4,5,11,14,16,17];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -703,67 +703,68 @@ describe("キーワード検索（タイトル）", function() {
 			}
 		}
 		
-		$("#search-bar-title").val("用いた");
+		$("#search-bar-title").val("システム");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「ニコニコ動画」で検索すると24番のポスターがヒットする", function() {
+	it("「PosMApp」で検索すると13番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[24] = "s";
+		expectFlag[13] = "s";
 
-		$("#search-bar-title").val("ニコニコ動画");
+		$("#search-bar-title").val("PosMApp");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「ニコニコ」で検索すると10番のポスターがヒットする", function() {
+	it("「map」で検索すると8,13番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[24] = "s";
+		expectFlag[8] = "s";
+		expectFlag[13] = "s";
 
-		$("#search-bar-title").val("ニコニコ");
+		$("#search-bar-title").val("map");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「Wikipedia」で検索すると17番のポスターがヒットする", function() {
+	it("「posmapp」で検索すると13番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[17] = "s";
+		expectFlag[13] = "s";
 
-		$("#search-bar-title").val("Wikipedia");
+		$("#search-bar-title").val("posmapp");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「wikipedia」で検索すると3番のポスターがヒットする", function() {
+	it("「POSMAPP」で検索すると13番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[17] = "s";
+		expectFlag[13] = "s";
 
-		$("#search-bar-title").val("wikipedia");
+		$("#search-bar-title").val("POSMAPP");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
@@ -844,7 +845,7 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("1番を選択した状態で「ニコニコ動画」で検索すると24番がヒットする", function() {
+	it("1番を選択した状態で「PosMApp」で検索すると13番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		pflag[1] = "t";
@@ -854,26 +855,26 @@ describe("キーワード検索（タイトル）", function() {
 			expectFlag[i] = "d";
 		}
 		expectFlag[1] = "t";
-		expectFlag[24] = "s";
+		expectFlag[13] = "s";
 
-		$("#search-bar-title").val("ニコニコ動画");
+		$("#search-bar-title").val("PosMApp");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("10番を選択した状態で「ニコニコ動画」で検索すると10番がヒットする", function() {
+	it("13番を選択した状態で「PosMApp」で検索すると13番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
-		pflag[24] = "t";
+		pflag[13] = "t";
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[24] = "e";
+		expectFlag[13] = "e";
 
-		$("#search-bar-title").val("ニコニコ動画");
+		$("#search-bar-title").val("PosMApp");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
