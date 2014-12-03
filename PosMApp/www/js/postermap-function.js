@@ -100,7 +100,8 @@ function setPosterIcons() {
 	var iconWidth;
 	var iconHeight;
 	
-	for (var i = 1; i <= poster.length; i++) {
+	var ptotal = poster.length;
+	for (var i = 1; i <= ptotal; i++) {
 		iconWidth = position[i-1].width*INIT_SCALE;
 		iconHeight = position[i-1].height*INIT_SCALE;
 
