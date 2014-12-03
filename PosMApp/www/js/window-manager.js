@@ -33,8 +33,6 @@ function windowManager () {
     mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
     mc.on("panstart", function() {
-        console.log("panstart");
-
         isAnimated = true;
         transform = {
             translate : { x: posx, y: posy },
@@ -44,8 +42,6 @@ function windowManager () {
     });
 
     mc.on("panmove", function(ev) {
-        console.log("panmove");
-
         transform.translate = {
             x: posx + ev.deltaX,
             y: posy + ev.deltaY
@@ -53,15 +49,12 @@ function windowManager () {
     });
 
     mc.on("panend pancancel", function() {
-        console.log("panend");
         isAnimated = false;
         posx = transform.translate.x;
         posy = transform.translate.y;
     });
 
     mc.on("pinchstart", function() {
-        console.log("pinchstart");
-
         isAnimated = true;
         transform = {
             translate: { x: posx, y: posy },
@@ -69,18 +62,17 @@ function windowManager () {
         };
         animation();
     });
+
     mc.on("pinchmove", function(ev) {
-        console.log("pinchmove");
         transform.scale = scale * ev.scale;
     });
+
     mc.on("pinchend pinchcancel", function(ev) {
-        console.log("pinchend");
         isAnimated = false;
         scale = transform.scale;
     });
 
     mc.on("doubletap", function() {
-        console.log("double tap");
         reset();
         isAnimated = true;
         animation();

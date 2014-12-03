@@ -64,9 +64,10 @@ function init() {
 	$(".postericon").touchPoster();
 
 	// 基本情報画面を閉じる
-	$("#basicinfo").closeBasicInfo();
-	$("#basicinfo").css("width", window.innerWidth - 80);
-	$("#basicinfo").css("max-width", window.innerWidth - 80);
+	$("#basicinfo")
+		.css("width", window.innerWidth - 80)
+		.css("max-width", window.innerWidth - 80)
+		.closeBasicInfo();
 
 
 	// ラベルを変更する

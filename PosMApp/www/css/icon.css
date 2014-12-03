@@ -122,38 +122,11 @@
 /* star-down  : 下 : 3 */
 /* star-left  : 左 : 4 */
 
-.star-top{
+.star{
 	position: absolute;
 	width: 15px;
 	height: 15px;
 
-}
-
-.star-right{
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	right: 5px;
-	top: calc(50% - 15px/2);
-	font-size: 15px;
-}
-
-.star-bottom{
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	bottom: 5px;
-	left: calc(50% - 15px/2);
-	font-size: 15px;
-}
-
-.star-left{
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	left: 5px;
-	top: calc(50% - 15px/2);
-	font-size: 15px;
 }
 
 .bookmarkstar{
