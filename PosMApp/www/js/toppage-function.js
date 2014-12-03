@@ -19,7 +19,7 @@ $.fn.goToMapPage = function(ev) {
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
-		$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
+		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	});	
 };
 
@@ -31,7 +31,7 @@ $.fn.goToListPage = function(ev) {
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
-		$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
+		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	});	
 };
 
@@ -42,7 +42,7 @@ $.fn.goToInformationPage = function(ev) {
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".infromationButton").addClass("ui-btn-active ui-state-persist");
+		$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
 		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 	});	
 };
@@ -55,7 +55,7 @@ $.fn.goToBookmarkListPage = function(ev) {
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".bookmarkListPageButton").addClass("ui-btn-active ui-state-persist");
-		$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
+		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 		$("#bookmarkList").showBookmarkList();
 
 	});	
@@ -70,7 +70,7 @@ $.fn.goToTopPage = function(ev) {
 		$(".topPageButton").addClass("ui-btn-active ui-state-persist");
 		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
+		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	});
 };
 

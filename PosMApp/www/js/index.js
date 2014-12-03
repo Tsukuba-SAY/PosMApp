@@ -110,8 +110,8 @@ function init() {
 	$(".topPageButton").goToTopPage("touchstart");
 	$(".posterMapPageButton").goToMapPage("touchstart");
 	$(".posterListPageButton").goToListPage("touchstart");
-	$(".infromationButton").goToInformationPage("touchstart");
-	$(".bookmarkListPageButton").goToBookmarkListPage("touchstart");
+	$(".bookmarkListPageButton").goToBookmarkListPage("touchstart");	
+	$(".informationPageButton").goToInformationPage("touchstart");
 
 	// タブバーの選択表示を変更
 	var currentPage = window.location.hash;
@@ -121,20 +121,20 @@ function init() {
 			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
-			$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		case "#posterListPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
-			$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
+			$(".infromationPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		case "#informationPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".infromationButton").addClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
 			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		case "#bookmarkListPage":
@@ -142,13 +142,13 @@ function init() {
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".bookmarkListPageButton").addClass("ui-btn-active ui-state-persist");
-			$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		default:
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".infromationButton").removeClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		// default:
