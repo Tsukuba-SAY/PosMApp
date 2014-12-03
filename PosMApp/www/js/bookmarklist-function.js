@@ -22,7 +22,7 @@ $.fn.showBookmarkList = function() {
 		for(var i=0; i<=bookmarkArr.length; i++){
 			for (var j=0; j<poster.length; j++){
 				if(parseInt(bookmarkArr[i]) === parseInt(poster[j].id)){
-					authors = getAuthors(i+1).split(",").join(", ")
+					authors = getAuthors(j+1).split(",").join(", ")
 					posters["id"].push(poster[j].id.toString());
 					posters["sessionid"].push(poster[j].sessionid);
 					posters["title"].push(poster[j].title);
