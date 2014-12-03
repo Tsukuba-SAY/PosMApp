@@ -2,8 +2,7 @@
 // DBのuserdataが置いてあるのでinclude
 include "/etc/poslog_db_user_data.php";
 
-$json = file_get_contents("php://input");
-$json_data = json_decode($json);
+$json_data = $_POST;
 
 $mysqli = new mysqli($url, $user, $password, $db);
 
@@ -31,6 +30,6 @@ $mysqli->close();
 
 header("Access-Control-Allow-Origin:*");
 header('Content-Type: text/javascript; charset=utf-8');
-echo sprintf($json_data);
+echo json_encode($json_data);
 
 ?>
