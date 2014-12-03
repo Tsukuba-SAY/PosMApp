@@ -17,7 +17,7 @@ $.fn.showBookmarkList = function() {
 	} else {
 
 		var bookmarkArr = bookmarks.split(",");
-		str += '<table border="1" rules="rows">';
+		str += '<table border="1" rules="rows" width="100%">';
 		
 		for(var i=0; i<=bookmarkArr.length; i++){
 			for (var j=0; j<poster.length; j++){
@@ -79,9 +79,18 @@ $.fn.deletebookmark = function(){
 			var posterid = Number(e.target.id.substring(14));
 			console.log(posterid);
 			var bookmarkIcon = document.getElementById("bookmarkbutton");
-			var tr = document.getElementById("trId"+posterid);
-			tr.parentNode.removeChild(tr);
+
 			removebookmark(posterid);
+
+			var tr = document.getElementById("trId"+posterid);
+			var list = document.getElementById("bookmarkList");
+			tr.parentNode.removeChild(tr);
+
+			if (getBookmarks().length === 0) {
+				console.log("からです");
+				var str = "<div id='emptyBookmarklist'>ブックマークされていません。</div>";
+				list.innerHTML = str;
+			}
 		}
 	});
 };
