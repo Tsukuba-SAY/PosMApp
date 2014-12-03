@@ -115,7 +115,7 @@ function setPosterIcons() {
 
 		pos = starpos[poster[i-1].star];
 
-		str += "	<div id='star" + pos + "No" + i +"' class='star' style='"+angle+"'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
+		str += "	<div id='star" + pos + "No" + i +"' class='star' style='"+angle+" display:none;'><img class='bookmarkstar' src='img/bookmark.png'></img></div>\n";
 		str += "</div>\n";
 	}
 	document.getElementById("posters").innerHTML = str;
@@ -410,7 +410,7 @@ function showBookmarkIcons() {
 			starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
 
 			// 該当する星要素を表示する
-			starelem.childNodes[0].style.display = "block";
+			starelem.style.display = "block";
 		}
 
 	}
@@ -464,7 +464,7 @@ function touchBookmark(posterid, bookmarkIcon){
 	if (bookmarkIcon !== null) {
 		var p = poster[posterid-1];
 		starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
-		starelem.childNodes[0].style.display = starstatus;
+		starelem.style.display = starstatus;
 	}
 
 	bookmarks = bookmarkArr.join(",");

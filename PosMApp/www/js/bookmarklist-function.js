@@ -107,7 +107,7 @@ function removebookmark(posterid){
 	if (bookmarkIcon !== null) {
 		var p = poster[posterid-1];
 		starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
-		starelem.childNodes[0].style.display = starstatus;
+		starelem.style.display = starstatus;
 	}
 
 	bookmarks = bookmarkArr.join(",");
