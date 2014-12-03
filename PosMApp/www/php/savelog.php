@@ -2,6 +2,8 @@
 // DBのuserdataが置いてあるのでinclude
 include "/etc/poslog_db_user_data.php";
 
+$json_data = $_POST;
+
 $mysqli = new mysqli($url, $user, $password, $db);
 
 if (mysqli_connect_error()) {
@@ -14,8 +16,8 @@ $mysqli->set_charset("utf-8");
 $stmt = $mysqli->prepare("INSERT INTO log (id, uid, timestamp, data) VALUES (NULL, ?, ?, ?)");
 $stmt->bind_param("sss", $uid, $timestamp, $data);
 
-$uid = $_GET["uid"];
-$logdata = $_GET["logdata"];
+$uid = $json_data["uid"];
+$logdata = $json_data["logdata"];
 
 foreach ($logdata as $value) {	
 	$timestamp = $value["timestamp"];
@@ -26,7 +28,8 @@ foreach ($logdata as $value) {
 $stmt->close();
 $mysqli->close();
 
+header("Access-Control-Allow-Origin:*");
 header('Content-Type: text/javascript; charset=utf-8');
-echo sprintf("callback()");
+echo json_encode($json_data);
 
 ?>
