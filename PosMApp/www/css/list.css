@@ -5,6 +5,13 @@
   background-color: #EAEFF7;
 }
 
+#emptyBookmarklist {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: large;
+}
+
 .nav-tabicon .ui-btn { padding-top: 40px !important; }
 .nav-tabicon .ui-btn:after { width: 30px!important; 
 										height: 30px!important; 
