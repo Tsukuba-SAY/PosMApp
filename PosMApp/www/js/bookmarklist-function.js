@@ -87,7 +87,6 @@ $.fn.deletebookmark = function(){
 			tr.parentNode.removeChild(tr);
 
 			if (getBookmarks().length === 0) {
-				console.log("からです");
 				var str = "<div id='emptyBookmarklist'>ブックマークされていません。</div>";
 				list.innerHTML = str;
 			}
