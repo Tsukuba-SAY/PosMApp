@@ -16,6 +16,9 @@ var labelmax = 7;
 // ポスターの総件数
 var ptotal;
 
+var STATIC_WIDTH =  216;
+
+
 
 // グローバル変数の初期化処理
 function initPosterMap() {
@@ -89,7 +92,6 @@ $.fn.touchBookmark = function() {
 
 // ポスターアイコンをセットする
 function setPosterIcons() {
-	var STATIC_WIDTH =  108;
 	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
 	var starAngle = [null, "top:-15px;left:30%;", "right:-15px;top:30%;", "bottom:-15px;left:30%;", "left:-15px;top:30%;"];
 	var starpos = [null, "Top", "Right", "Bottom", "Left"];
