@@ -104,15 +104,15 @@ function setPosterIcons() {
 	
 	var ptotal = poster.length;
 	for (var i = 1; i <= ptotal; i++) {
-		iconWidth = position[i-1].width*INIT_SCALE;
-		iconHeight = position[i-1].height*INIT_SCALE;
+		iconWidth = position[position_map[i-1]].width*INIT_SCALE;
+		iconHeight = position[position_map[i-1]].height*INIT_SCALE;
 
 		angle = starAngle[poster[i-1].star];
 
-		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[i-1].x*INIT_SCALE)+"px;top:"+(position[i-1].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
+		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[position_map[i-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'></div>\n";
-		str += "		<div class='" + position[i-1].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
+		str += "		<div class='" + position[position_map[i-1]].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
 		str += "	</div>\n";
 
 		pos = starpos[poster[i-1].star];
