@@ -693,7 +693,7 @@ describe("キーワード検索（タイトル）", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [4,5,11,14,16,17];
+		expectArr = [1,4,5,10,11,12,13,14,16];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
