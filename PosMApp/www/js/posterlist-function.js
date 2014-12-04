@@ -21,7 +21,7 @@ $.fn.showPosterList = function() {
 		posters["sessionid"].push(poster[i].sessionid);
 		posters["title"].push(poster[i].title);
 		posters["author"].push(getAuthors(i+1));
-		str += "<tr><td><div>ポスターID: " + poster[i].sessionid + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 5%;'></img>";
+		str += "<tr><td><div>ポスターID: " + poster[i].sessionid + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
 		//ブックマークされたかどうか判断する
 		var foundBookmark = false;
 		for (var j = 0; j < bookmarkArr.length; j++) {
