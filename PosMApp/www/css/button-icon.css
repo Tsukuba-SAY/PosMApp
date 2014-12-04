@@ -21,7 +21,7 @@
   	box-shadow:none;
 }
 .ui-icon-information {
-	background: url("../img/tabbar/information.png") 50% 25% no-repeat;
+	background: url("../img/tabbar/schedule.png") 50% 25% no-repeat;
   	background-size: 18px 18px;
   	box-shadow:none;
 }
@@ -42,7 +42,7 @@
   	box-shadow:none;
 }
 .ui-icon-informationgray {
-	background: url("../img/tabbar/information_gray.png") 50% 25% no-repeat;
+	background: url("../img/tabbar/schedule.png") 50% 25% no-repeat;
   	background-size: 18px 18px;
   	box-shadow:none;
 }
