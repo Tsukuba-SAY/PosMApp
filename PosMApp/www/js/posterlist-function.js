@@ -36,7 +36,7 @@ $.fn.showPosterList = function() {
 			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
 		}
 		str += "<strong>" + poster[i].title + "</strong><br>";
-		str += "著者: " + authors + "<br></td>";
+		str += "メンバー: " + authors + "<br></td>";
 		str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+poster[i].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 	}
 	str += '</table>'

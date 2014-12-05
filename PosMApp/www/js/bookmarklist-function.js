@@ -29,7 +29,7 @@ $.fn.showBookmarkList = function() {
 					posters["author"].push(getAuthors(j+1));
 					str += "<tr id='trId"+poster[j].id.toString()+"'><td><div>ポスターID: " + poster[j].sessionid + "<img class='bookmarklistToMapBtn' id='bookmarklistToMap" +poster[j].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>&nbsp;&nbsp;<img class='deletebookmarkBtn' id='deletebookmark"+poster[j].id+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
 					str += "<strong>" + poster[j].title + "</strong><br>";
-					str += "著者: " + authors + "<br></td>";
+					str += "メンバー: " + authors + "<br></td>";
 					str += "<td><div><td><img class='bookmarklistToDetailBtn' id='bookmarklistToDetail"+poster[j].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'></img></td></div></td></tr>";
 				}
 			}
