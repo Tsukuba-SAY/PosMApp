@@ -4,10 +4,8 @@ PosMAppは、ポスターセッション参加者向けの案内・投票支援�
 クリッカブルポスターマップやポスター検索機能、ブックマーク機能があるので、  
 紙媒体やPDFで確認するというやり方とは違い、  
 少ない手間で興味のあるポスターの位置を確認したり、投票したりすることができます。  
-
-~~現在、[WebDB Forum 2014](http://db-event.jpn.org/webdbf2014/) ポスターレセプション向けのバージョンを開発しています。~~
-無事終了しました。ご協力ありがとうございました。  
-現在、[enPiT筑波大ワークショップ2014](http://www.cs.tsukuba.ac.jp/enPiT/enpit2014_tsukuba_ws)　向けのバージョンを開発しています。
+ 
+現在、[enPiT筑波大ワークショップ2014](http://www.cs.tsukuba.ac.jp/enPiT/enpit2014_tsukuba_ws) 向けのバージョンを開発しています。
 
 
 ## 利用方法
@@ -33,6 +31,9 @@ iOS, Android端末でご利用いただけます。
 ご意見頂ければ開発チームで対応いたします。  お気軽に意見をお寄せください。  
 [既存のIssueはこちらです](https://github.com/Tsukuba-SAY/PosMApp/issues)  
 [新規Issueの作成はこちらからお願いします](https://github.com/Tsukuba-SAY/PosMApp/issues/new)  
+
+## 過去のバージョン
+[WebDB Forum 2014](http://db-event.jpn.org/webdbf2014/) バージョン：http://webdb2014-posmapp.tk/  
 
 ## 開発チーム
 
