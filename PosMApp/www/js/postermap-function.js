@@ -563,26 +563,18 @@ function getAuthorbelongs(posterid) {
 
 //ポスターの発表者を取得
 function getAuthors(posterid) {
-	var authors = [];
-	for (var i = 0; i < author.length; i++) {
-		var a = author[i];
-		if (a.posterid === posterid) {
-			authors.push(a.name);
-		}
-	}
-	authors = authors.join(", ");
-	return authors;
+	return author.filter(function(a) {
+		return a.posterid === posterid;
+	}).map(function(a) {
+		return a.name;
+	}).join(", ");
 }
 
 //ポスターのキーワードを取得
 function getKeywords(posterid) {
-	var keywords = [];
-	for (var i = 0; i < keyword.length; i++) {
-		var k = keyword[i];
-		if (k.posterid === posterid) {
-			keywords.push(k.keyword);
-		}
-	}
-	keywords = keywords.join(",");
-	return keywords;
+	return keyword.filter(function(k) {
+		return k.posterid === posterid;
+	}).map(function(k) {
+		return k.keyword;
+	}).join(", ");
 }
