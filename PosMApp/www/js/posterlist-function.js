@@ -69,33 +69,6 @@ $.fn.jumpToMapPage = function() {
 	});
 };
 
-//ポスターの発表者を取得する
-function getAuthors(posterid){
-	var atotal = author.length;
-	var authorlist = "";
-	for (var i = 0; i < atotal; i++) {
-        if (author[i].posterid === posterid){
-        	authorlist = authorlist + author[i].name + ",";
-        }
-	}
-	//最後の","を削除する
-	authorlist = authorlist.substring(0, authorlist.length - 1);
-	return authorlist;
-}
-
-//ポスターのキーワードを取得する
-function getKeywords(posterid){
-	var ktotal = keyword.length;
-	var keywordlist = "";
-	for (var i = 0; i < ktotal; i++) {
-        if (keyword[i].posterid === posterid){
-        	keywordlist = keywordlist + keyword[i].keyword + ",";
-        }
-	}
-	keywordlist = keywordlist.substring(0, keywordlist.length - 1);
-	return keywordlist;
-}
-
 //ポスターリストから詳細情報画面に遷移する
 function listToDetail(posterid){
 	if (posterid < 1 || posterid > poster.length || posterid === null || posterid === undefined) {

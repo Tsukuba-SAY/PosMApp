@@ -32,7 +32,7 @@ describe("テスト用のファンクションのテスト", function() {
 				expectArr.push(a.name);
 			}
 		});
-		expect(getAuthors(1)).toEqual(expectArr.join(","));
+		expect(getAuthors(1)).toEqual(expectArr.join(", "));
 	});
 	it("getKeywordsのテスト", function() {
 		expectArr = new Array();
@@ -41,7 +41,7 @@ describe("テスト用のファンクションのテスト", function() {
 				expectArr.push(k.keyword);
 			}
 		});
-		expect(getKeywords(1)).toEqual(expectArr.join(","));
+		expect(getKeywords(1)).toEqual(expectArr.join(", "));
 	});
 	it("ellipsisWordsのテスト", function() {
 		str1 = "いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせすん";
@@ -155,8 +155,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[0].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[0].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[0].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[0].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[0].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[0].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[0].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(1));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(1));
 	});
@@ -190,8 +190,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[1].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[1].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 	});
@@ -336,8 +336,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[1].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[1].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 	});
@@ -378,8 +378,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[1].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[1].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 	});
@@ -421,8 +421,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[0].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[0].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[0].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[0].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[0].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[0].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[0].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(1));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(1));
 
@@ -467,8 +467,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[1].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[1].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 
@@ -555,8 +555,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[2].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[2].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[2].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[2].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[2].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[2].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[2].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(3));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(3));
 		sessionStorage.setItem("searching", "false");
@@ -599,8 +599,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[6].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[6].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[6].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[6].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[6].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[6].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[6].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(7));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(7));
 		sessionStorage.setItem("searching", "false");
@@ -954,7 +954,7 @@ describe("ラベルの表示切り替え機能", function() {
 		}
 		expect(labels).toEqual(expectLabels);
 	});
-	it("「チーム名」ボタンを押すとラベルがチーム名に切り替わる", function() {
+	it("「代表者名」ボタンを押すとラベルが代表者名に切り替わる", function() {
 		$("#label-authorname").trigger("touchstart");
 		var labels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
@@ -963,11 +963,11 @@ describe("ラベルの表示切り替え機能", function() {
 
 		var expectLabels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
-			expectLabels.push(ellipsisWords(poster[i - 1].authorname.toString()));
+			expectLabels.push(ellipsisWords(getAuthorname(i)));
 		}
 		expect(labels).toEqual(expectLabels);
 	});
-	it("「大学名」ボタンを押すとラベルが大学名に切り替わる", function() {
+	it("「所属」ボタンを押すとラベルが所属に切り替わる", function() {
 		$("#label-authorbelongs").trigger("touchstart");
 		var labels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
@@ -976,7 +976,7 @@ describe("ラベルの表示切り替え機能", function() {
 
 		var expectLabels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
-			expectLabels.push(ellipsisWords(poster[i - 1].authorbelongs.toString()));
+			expectLabels.push(ellipsisWords(getAuthorbelongs(i)));
 		}
 		expect(labels).toEqual(expectLabels);
 	});
@@ -1447,29 +1447,28 @@ describe("ブックマークリスト", function() {
 });
 
 function getAuthors(posterid) {
-
-	var atotal = author.length;
-	var authorlist = "";
-	for (var i = 0; i < atotal; i++) {
-        if (author[i].posterid == posterid){
-        	authorlist = authorlist + author[i].name + ",";
-        }
+	var authors = [];
+	for (var i = 0; i < author.length; i++) {
+		var a = author[i];
+		if (a.posterid === posterid) {
+			authors.push(a.name);
+		}
 	}
-	authorlist = authorlist.substring(0, authorlist.length - 1);
-	return authorlist;
+	authors = authors.join(", ");
+	console.log("hogehogehogehogehoge:", authors);
+	return authors;
 }
 
 function getKeywords(posterid) {
-
-	var ktotal = keyword.length;
-	var keywordlist = "";
-	for (var i = 0; i < ktotal; i++) {
-        if (keyword[i].posterid == posterid){
-        	keywordlist = keywordlist + keyword[i].keyword + ",";
-        }
+	var keywords = [];
+	for (var i = 0; i < keyword.length; i++) {
+		var k = keyword[i];
+		if (k.posterid === posterid) {
+			keywords.push(k.keyword);
+		}
 	}
-	keywordlist = keywordlist.substring(0, keywordlist.length - 1);
-	return keywordlist;
+	keywords = keywords.join(",");
+	return keywords;
 }
 
 function ellipsisWords(str) {

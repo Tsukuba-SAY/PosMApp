@@ -133,7 +133,15 @@ function changeLabel(column) {
 
 	// 各ポスターに対してラベルを変更する
 	for (var i = 1; i <= ptotal; i++) {
-		var str = poster[i - 1][column].toString();
+		var str;
+		if (column === "authorname") {
+			str = getAuthorname(i);
+		} else if (column === "authorbelongs") {
+			str = getAuthorbelongs(i);
+		} else {
+			str = poster[i - 1][column].toString();
+		}
+
 		// 長さがlabelmax文字以上になっていたら短縮する
 		if (str.length > labelmax) {
 			str = str.substring(0, labelmax) + "...";
@@ -331,8 +339,11 @@ function selectPoster(posterid) {
 			sessionStorage.setItem("sessionid", p.sessionid);
 			sessionStorage.setItem("title", p.title);
 			sessionStorage.setItem("abstract", p.abstract);
-			sessionStorage.setItem("authorname", p.authorname);
-			sessionStorage.setItem("authorbelongs", p.authorbelongs);
+
+			sessionStorage.setItem("authorname", getAuthorname(posterid));
+
+			sessionStorage.setItem("authorbelongs", getAuthorbelongs(posterid));
+
 			sessionStorage.setItem("bookmark", p.bookmark);
 			sessionStorage.setItem("star", p.star);
 		}
@@ -345,6 +356,7 @@ function selectPoster(posterid) {
 			authors.push(a.name);
 		}
 	}
+	authors = authors.join(", ");
 	sessionStorage.setItem("authors", authors);
 
 	var keywords = [];
@@ -354,6 +366,7 @@ function selectPoster(posterid) {
 			keywords.push(k.keyword);
 		}
 	}
+	keywords = keywords.join(",");
 	sessionStorage.setItem("keywords", keywords);
 
 	changeBasicInfoPanel(true);
@@ -530,4 +543,38 @@ function searchChanged(bar) {
 	bar.blur();
 }
 
+// 代表者名を取得
+function getAuthorname(posterid) {
+	return author.filter(function(a) {
+		return a.posterid === posterid && a.first === 1;
+	})[0].name;
+}
 
+// 所属一覧を取得
+function getAuthorbelongs(posterid) {
+	return author.filter(function(a) {
+		return a.posterid === posterid;
+	}).map(function(a) {
+		return a.belongs;
+	}).filter(function(a, i, self) {
+   		return self.indexOf(a) === i;
+	}).join(", ");
+}
+
+//ポスターの発表者を取得
+function getAuthors(posterid) {
+	return author.filter(function(a) {
+		return a.posterid === posterid;
+	}).map(function(a) {
+		return a.name;
+	}).join(", ");
+}
+
+//ポスターのキーワードを取得
+function getKeywords(posterid) {
+	return keyword.filter(function(k) {
+		return k.posterid === posterid;
+	}).map(function(k) {
+		return k.keyword;
+	}).join(", ");
+}
