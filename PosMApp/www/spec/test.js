@@ -32,7 +32,7 @@ describe("テスト用のファンクションのテスト", function() {
 				expectArr.push(a.name);
 			}
 		});
-		expect(getAuthors(1)).toEqual(expectArr.join(","));
+		expect(getAuthors(1)).toEqual(expectArr.join(", "));
 	});
 	it("getKeywordsのテスト", function() {
 		expectArr = new Array();
@@ -41,7 +41,7 @@ describe("テスト用のファンクションのテスト", function() {
 				expectArr.push(k.keyword);
 			}
 		});
-		expect(getKeywords(1)).toEqual(expectArr.join(","));
+		expect(getKeywords(1)).toEqual(expectArr.join(", "));
 	});
 	it("ellipsisWordsのテスト", function() {
 		str1 = "いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせすん";
@@ -1483,29 +1483,28 @@ describe("ブックマークリスト", function() {
 });
 
 function getAuthors(posterid) {
-
-	var atotal = author.length;
-	var authorlist = "";
-	for (var i = 0; i < atotal; i++) {
-        if (author[i].posterid == posterid){
-        	authorlist = authorlist + author[i].name + ",";
-        }
+	var authors = [];
+	for (var i = 0; i < author.length; i++) {
+		var a = author[i];
+		if (a.posterid === posterid) {
+			authors.push(a.name);
+		}
 	}
-	authorlist = authorlist.substring(0, authorlist.length - 1);
-	return authorlist;
+	authors = authors.join(", ");
+	console.log("hogehogehogehogehoge:", authors);
+	return authors;
 }
 
 function getKeywords(posterid) {
-
-	var ktotal = keyword.length;
-	var keywordlist = "";
-	for (var i = 0; i < ktotal; i++) {
-        if (keyword[i].posterid == posterid){
-        	keywordlist = keywordlist + keyword[i].keyword + ",";
-        }
+	var keywords = [];
+	for (var i = 0; i < keyword.length; i++) {
+		var k = keyword[i];
+		if (k.posterid === posterid) {
+			keywords.push(k.keyword);
+		}
 	}
-	keywordlist = keywordlist.substring(0, keywordlist.length - 1);
-	return keywordlist;
+	keywords = keywords.join(",");
+	return keywords;
 }
 
 function ellipsisWords(str) {

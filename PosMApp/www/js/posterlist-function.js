@@ -70,30 +70,30 @@ $.fn.jumpToMapPage = function() {
 };
 
 //ポスターの発表者を取得する
-function getAuthors(posterid){
-	var atotal = author.length;
-	var authorlist = "";
-	for (var i = 0; i < atotal; i++) {
-        if (author[i].posterid === posterid){
-        	authorlist = authorlist + author[i].name + ",";
-        }
+function getAuthors(posterid) {
+	var authors = [];
+	for (var i = 0; i < author.length; i++) {
+		var a = author[i];
+		if (a.posterid === posterid) {
+			authors.push(a.name);
+		}
 	}
-	//最後の","を削除する
-	authorlist = authorlist.substring(0, authorlist.length - 1);
-	return authorlist;
+	authors = authors.join(", ");
+	console.log("hogehogehogehogehoge:", authors);
+	return authors;
 }
 
 //ポスターのキーワードを取得する
-function getKeywords(posterid){
-	var ktotal = keyword.length;
-	var keywordlist = "";
-	for (var i = 0; i < ktotal; i++) {
-        if (keyword[i].posterid === posterid){
-        	keywordlist = keywordlist + keyword[i].keyword + ",";
-        }
+function getKeywords(posterid) {
+	var keywords = [];
+	for (var i = 0; i < keyword.length; i++) {
+		var k = keyword[i];
+		if (k.posterid === posterid) {
+			keywords.push(k.keyword);
+		}
 	}
-	keywordlist = keywordlist.substring(0, keywordlist.length - 1);
-	return keywordlist;
+	keywords = keywords.join(",");
+	return keywords;
 }
 
 //ポスターリストから詳細情報画面に遷移する
