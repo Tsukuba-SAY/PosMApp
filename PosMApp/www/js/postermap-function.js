@@ -133,7 +133,19 @@ function changeLabel(column) {
 
 	// 各ポスターに対してラベルを変更する
 	for (var i = 1; i <= ptotal; i++) {
-		var str = poster[i - 1][column].toString();
+		var str;
+		if (column === "authorname") {
+			str = author.filter(function(a) {
+				return a.posterid === i && a.first === 1;
+			})[0].name;
+		} else if (column === "authorbelongs") {
+			str = author.filter(function(a) {
+				return a.posterid === i && a.first === 1;
+			})[0].belongs;
+		} else {
+			str = poster[i - 1][column].toString();
+		}
+
 		// 長さがlabelmax文字以上になっていたら短縮する
 		if (str.length > labelmax) {
 			str = str.substring(0, labelmax) + "...";
@@ -331,8 +343,18 @@ function selectPoster(posterid) {
 			sessionStorage.setItem("sessionid", p.sessionid);
 			sessionStorage.setItem("title", p.title);
 			sessionStorage.setItem("abstract", p.abstract);
-			sessionStorage.setItem("authorname", p.authorname);
-			sessionStorage.setItem("authorbelongs", p.authorbelongs);
+
+			// sessionStorage.setItem("authorname", p.authorname);
+			// sessionStorage.setItem("authorbelongs", p.authorbelongs);
+			var authorname = author.filter(function(a) {
+				return a.posterid === posterid && a.first === 1;
+			})[0].name;
+			sessionStorage.setItem("authorname", authorname);
+			var authorbelongs = author.filter(function(a) {
+				return a.posterid === posterid && a.first === 1;
+			})[0].belongs;
+			sessionStorage.setItem("authorbelongs", authorbelongs);
+
 			sessionStorage.setItem("bookmark", p.bookmark);
 			sessionStorage.setItem("star", p.star);
 		}
