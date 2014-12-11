@@ -135,13 +135,9 @@ function changeLabel(column) {
 	for (var i = 1; i <= ptotal; i++) {
 		var str;
 		if (column === "authorname") {
-			str = author.filter(function(a) {
-				return a.posterid === i && a.first === 1;
-			})[0].name;
+			str = getAuthorname(i);
 		} else if (column === "authorbelongs") {
-			str = author.filter(function(a) {
-				return a.posterid === i && a.first === 1;
-			})[0].belongs;
+			str = getAuthorbelongs(i);
 		} else {
 			str = poster[i - 1][column].toString();
 		}
@@ -344,16 +340,9 @@ function selectPoster(posterid) {
 			sessionStorage.setItem("title", p.title);
 			sessionStorage.setItem("abstract", p.abstract);
 
-			// sessionStorage.setItem("authorname", p.authorname);
-			// sessionStorage.setItem("authorbelongs", p.authorbelongs);
-			var authorname = author.filter(function(a) {
-				return a.posterid === posterid && a.first === 1;
-			})[0].name;
-			sessionStorage.setItem("authorname", authorname);
-			var authorbelongs = author.filter(function(a) {
-				return a.posterid === posterid && a.first === 1;
-			})[0].belongs;
-			sessionStorage.setItem("authorbelongs", authorbelongs);
+			sessionStorage.setItem("authorname", getAuthorname(posterid));
+
+			sessionStorage.setItem("authorbelongs", getAuthorbelongs(posterid));
 
 			sessionStorage.setItem("bookmark", p.bookmark);
 			sessionStorage.setItem("star", p.star);
@@ -554,4 +543,46 @@ function searchChanged(bar) {
 	bar.blur();
 }
 
+// 代表者名を取得
+function getAuthorname(posterid) {
+	return author.filter(function(a) {
+		return a.posterid === posterid && a.first === 1;
+	})[0].name;
+}
 
+// 所属一覧を取得
+function getAuthorbelongs(posterid) {
+	return author.filter(function(a) {
+		return a.posterid === posterid;
+	}).map(function(a) {
+		return a.belongs;
+	}).filter(function(a, i, self) {
+   		return self.indexOf(a) === i;
+	}).join(", ");
+}
+
+//ポスターの発表者を取得
+function getAuthors(posterid) {
+	var authors = [];
+	for (var i = 0; i < author.length; i++) {
+		var a = author[i];
+		if (a.posterid === posterid) {
+			authors.push(a.name);
+		}
+	}
+	authors = authors.join(", ");
+	return authors;
+}
+
+//ポスターのキーワードを取得
+function getKeywords(posterid) {
+	var keywords = [];
+	for (var i = 0; i < keyword.length; i++) {
+		var k = keyword[i];
+		if (k.posterid === posterid) {
+			keywords.push(k.keyword);
+		}
+	}
+	keywords = keywords.join(",");
+	return keywords;
+}
