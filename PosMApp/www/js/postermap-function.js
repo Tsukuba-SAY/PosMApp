@@ -367,6 +367,7 @@ function selectPoster(posterid) {
 			authors.push(a.name);
 		}
 	}
+	authors = authors.join(", ");
 	sessionStorage.setItem("authors", authors);
 
 	var keywords = [];
@@ -376,6 +377,7 @@ function selectPoster(posterid) {
 			keywords.push(k.keyword);
 		}
 	}
+	keywords = keywords.join(",");
 	sessionStorage.setItem("keywords", keywords);
 
 	changeBasicInfoPanel(true);
