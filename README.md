@@ -11,6 +11,8 @@ PosMAppは、ポスターセッション参加者向けの案内・投票支援�
 
 http://tkbenpit-posmapp.tk/
 
+[ユーザマニュアルはこちらです](https://github.com/Tsukuba-SAY/PosMApp/blob/develop/manual/user/PosMApp_usage.md)
+
 ## 対応する端末
 
 iOS, Android端末でご利用いただけます。  
