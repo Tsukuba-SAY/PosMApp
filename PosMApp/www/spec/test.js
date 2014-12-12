@@ -1,4 +1,7 @@
 describe("変数の確認", function() {
+	beforeEach(function() {
+		resetDelta();
+	});
 	it("posterdata.jsでposterが宣言されている", function() {
 		deleteLog();
 		expect(poster).toBeDefined();
@@ -25,6 +28,9 @@ describe("変数の確認", function() {
 });
 
 describe("テスト用のファンクションのテスト", function() {
+	beforeEach(function() {
+		resetDelta();
+	});
 	it("getAuthorsのテスト", function() {
 		expectArr = new Array();
 		author.forEach(function(a) {
@@ -32,7 +38,7 @@ describe("テスト用のファンクションのテスト", function() {
 				expectArr.push(a.name);
 			}
 		});
-		expect(getAuthors(1)).toEqual(expectArr.join(","));
+		expect(getAuthors(1)).toEqual(expectArr.join(", "));
 	});
 	it("getKeywordsのテスト", function() {
 		expectArr = new Array();
@@ -41,7 +47,7 @@ describe("テスト用のファンクションのテスト", function() {
 				expectArr.push(k.keyword);
 			}
 		});
-		expect(getKeywords(1)).toEqual(expectArr.join(","));
+		expect(getKeywords(1)).toEqual(expectArr.join(", "));
 	});
 	it("ellipsisWordsのテスト", function() {
 		str1 = "いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせすん";
@@ -57,6 +63,8 @@ describe("テスト用のファンクションのテスト", function() {
 
 describe("トップページ", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-toppage.html");
 		$("#goToMap").goToMapPage("click");
 		$("#goToList").goToListPage("click");
@@ -83,6 +91,8 @@ describe("トップページ", function() {
 
 describe("タブバー", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-tabbar.html");
 		$(".topPageButton").goToTopPage("click");
 		$(".posterMapPageButton").goToMapPage("click");
@@ -104,6 +114,8 @@ describe("タブバー", function() {
 
 describe("ポスターマップ", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-postermap.html");
 		setPosterIcons();
 		showBookmarkIcons();
@@ -155,8 +167,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[0].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[0].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[0].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[0].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[0].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[0].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[0].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(1));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(1));
 	});
@@ -190,8 +202,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[1].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[1].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 	});
@@ -336,8 +348,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[1].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[1].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 	});
@@ -378,8 +390,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[1].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[1].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 	});
@@ -421,8 +433,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[0].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[0].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[0].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[0].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[0].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[0].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[0].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(1));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(1));
 
@@ -467,8 +479,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[1].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[1].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[1].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[1].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[1].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[1].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[1].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(2));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(2));
 
@@ -555,8 +567,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[2].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[2].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[2].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[2].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[2].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[2].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[2].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(3));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(3));
 		sessionStorage.setItem("searching", "false");
@@ -599,8 +611,8 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("sessionid")).toEqual(poster[6].sessionid);
 		expect(sessionStorage.getItem("title")).toEqual(poster[6].title);
 		expect(sessionStorage.getItem("abstract")).toEqual(poster[6].abstract);
-		expect(sessionStorage.getItem("authorname")).toEqual(poster[6].authorname);
-		expect(sessionStorage.getItem("authorbelongs")).toEqual(poster[6].authorbelongs);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[6].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[6].id));
 		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(7));
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(7));
 		sessionStorage.setItem("searching", "false");
@@ -655,6 +667,8 @@ describe("ポスターマップ", function() {
 
 describe("詳細情報", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-postermap.html", "fixture-detail.html");
 		setPosterIcons();
 		showPosterIcons();
@@ -680,6 +694,8 @@ describe("詳細情報", function() {
 
 describe("キーワード検索（タイトル）", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-postermap.html");
 		setPosterIcons();
 		showBookmarkIcons();
@@ -688,12 +704,12 @@ describe("キーワード検索（タイトル）", function() {
 		initPosterMap();
 	});
 
-	it("「システム」で検索すると4,5,11,14,16,17番のポスターがヒットする", function() {
+	it("「システム」で検索すると14,21,33,43,45,52,54,72,93,94番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [1,4,5,10,11,12,13,14,16];
+		expectArr = [14,21,33,43,45,52,54,72,93,94];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -709,62 +725,73 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「PosMApp」で検索すると13番のポスターがヒットする", function() {
+	it("「YAGO」で検索すると1番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[13] = "s";
+		expectFlag[1] = "s";
 
-		$("#search-bar-title").val("PosMApp");
+		$("#search-bar-title").val("YAGO");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「map」で検索すると8,13番のポスターがヒットする", function() {
+	it("「Twitter」で検索すると19,20,38,53,82番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[8] = "s";
-		expectFlag[13] = "s";
+		expectFlag[19] = "s";
+		expectFlag[20] = "s";
+		expectFlag[38] = "s";
+		expectFlag[53] = "s";
+		expectFlag[82] = "s";
 
-		$("#search-bar-title").val("map");
+		$("#search-bar-title").val("Twitter");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「posmapp」で検索すると13番のポスターがヒットする", function() {
+	it("「twitter」で検索すると19,20,38,53,82番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[13] = "s";
+		expectFlag[19] = "s";
+		expectFlag[20] = "s";
+		expectFlag[38] = "s";
+		expectFlag[53] = "s";
+		expectFlag[82] = "s";
 
-		$("#search-bar-title").val("posmapp");
+		$("#search-bar-title").val("twitter");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「POSMAPP」で検索すると13番のポスターがヒットする", function() {
+	it("「TWITTER」で検索すると19,20,38,53,82番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[13] = "s";
+		expectFlag[19] = "s";
+		expectFlag[20] = "s";
+		expectFlag[38] = "s";
+		expectFlag[53] = "s";
+		expectFlag[82] = "s";
 
-		$("#search-bar-title").val("POSMAPP");
+		$("#search-bar-title").val("TWITTER");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
@@ -845,7 +872,7 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("1番を選択した状態で「PosMApp」で検索すると13番がヒットする", function() {
+	it("1番を選択した状態で「Twitter」で検索すると19,20,38,53,82番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		pflag[1] = "t";
@@ -855,26 +882,30 @@ describe("キーワード検索（タイトル）", function() {
 			expectFlag[i] = "d";
 		}
 		expectFlag[1] = "t";
-		expectFlag[13] = "s";
+		expectFlag[19] = "s";
+		expectFlag[20] = "s";
+		expectFlag[38] = "s";
+		expectFlag[53] = "s";
+		expectFlag[82] = "s";
 
-		$("#search-bar-title").val("PosMApp");
+		$("#search-bar-title").val("Twitter");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("13番を選択した状態で「PosMApp」で検索すると13番がヒットする", function() {
+	it("1番を選択した状態で「YAGO」で検索すると1番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
-		pflag[13] = "t";
+		pflag[1] = "t";
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[13] = "e";
+		expectFlag[1] = "e";
 
-		$("#search-bar-title").val("PosMApp");
+		$("#search-bar-title").val("YAGO");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
@@ -903,6 +934,8 @@ describe("キーワード検索（タイトル）", function() {
 
 describe("ラベルの表示切り替え機能", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-postermap.html");
 		setPosterIcons();
 		showBookmarkIcons();
@@ -954,7 +987,7 @@ describe("ラベルの表示切り替え機能", function() {
 		}
 		expect(labels).toEqual(expectLabels);
 	});
-	it("「チーム名」ボタンを押すとラベルがチーム名に切り替わる", function() {
+	it("「代表者名」ボタンを押すとラベルが代表者名に切り替わる", function() {
 		$("#label-authorname").trigger("touchstart");
 		var labels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
@@ -963,11 +996,11 @@ describe("ラベルの表示切り替え機能", function() {
 
 		var expectLabels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
-			expectLabels.push(ellipsisWords(poster[i - 1].authorname.toString()));
+			expectLabels.push(ellipsisWords(getAuthorname(i)));
 		}
 		expect(labels).toEqual(expectLabels);
 	});
-	it("「大学名」ボタンを押すとラベルが大学名に切り替わる", function() {
+	it("「所属」ボタンを押すとラベルが所属に切り替わる", function() {
 		$("#label-authorbelongs").trigger("touchstart");
 		var labels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
@@ -976,7 +1009,7 @@ describe("ラベルの表示切り替え機能", function() {
 
 		var expectLabels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
-			expectLabels.push(ellipsisWords(poster[i - 1].authorbelongs.toString()));
+			expectLabels.push(ellipsisWords(getAuthorbelongs(i)));
 		}
 		expect(labels).toEqual(expectLabels);
 	});
@@ -984,6 +1017,8 @@ describe("ラベルの表示切り替え機能", function() {
 
 describe("ブックマーク機能", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-postermap.html");
 		setPosterIcons();
 		showBookmarkIcons();
@@ -1117,6 +1152,8 @@ describe("ブックマーク機能", function() {
 
 describe("ポスターリストからのブックマーク機能", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-posterlist.html");
 		$("#posterList").showPosterList();
 		localStorage.setItem("bookmarks", "");
@@ -1212,6 +1249,8 @@ describe("ポスターリストからのブックマーク機能", function() {
 
 describe("ポスターリスト", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-posterlist.html","fixture-postermap.html");
 		setPosterIcons();
 		showBookmarkIcons();
@@ -1320,6 +1359,8 @@ describe("ポスターリスト", function() {
 
 describe("ブックマークリスト", function() {
 	beforeEach(function() {
+		resetDelta();
+		
 		loadFixtures("fixture-bookmarklist.html","fixture-postermap.html");
 
 		setPosterIcons();
@@ -1447,29 +1488,27 @@ describe("ブックマークリスト", function() {
 });
 
 function getAuthors(posterid) {
-
-	var atotal = author.length;
-	var authorlist = "";
-	for (var i = 0; i < atotal; i++) {
-        if (author[i].posterid == posterid){
-        	authorlist = authorlist + author[i].name + ",";
-        }
+	var authors = [];
+	for (var i = 0; i < author.length; i++) {
+		var a = author[i];
+		if (a.posterid === posterid) {
+			authors.push(a.name);
+		}
 	}
-	authorlist = authorlist.substring(0, authorlist.length - 1);
-	return authorlist;
+	authors = authors.join(", ");
+	return authors;
 }
 
 function getKeywords(posterid) {
-
-	var ktotal = keyword.length;
-	var keywordlist = "";
-	for (var i = 0; i < ktotal; i++) {
-        if (keyword[i].posterid == posterid){
-        	keywordlist = keywordlist + keyword[i].keyword + ",";
-        }
+	var keywords = [];
+	for (var i = 0; i < keyword.length; i++) {
+		var k = keyword[i];
+		if (k.posterid === posterid) {
+			keywords.push(k.keyword);
+		}
 	}
-	keywordlist = keywordlist.substring(0, keywordlist.length - 1);
-	return keywordlist;
+	keywords = keywords.join(",");
+	return keywords;
 }
 
 function ellipsisWords(str) {

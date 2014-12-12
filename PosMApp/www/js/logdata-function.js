@@ -90,7 +90,7 @@ function sendLog() {
     var senddata = loadLog();
     var date = new Date();
     $.ajax({
-   		url: "http://104.236.5.92/php/savelog.php",
+   		url: "http://104.236.123.57/php/savelog.php",
 		type: "POST",
 		dataType: "json",
 		data: senddata,
@@ -147,4 +147,10 @@ function deleteLog() {
 	delKey.forEach(function(k) {
 		localStorage.removeItem(k);
 	});
+}
+
+// 
+function resetDelta() {
+	var date = new Date();
+	localStorage.setItem("log_last_sent", date.getTime().toString());
 }
