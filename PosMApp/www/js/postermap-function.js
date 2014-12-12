@@ -16,9 +16,6 @@ var labelmax = 7;
 // ポスターの総件数
 var ptotal;
 
-var STATIC_WIDTH =  216;
-
-
 
 // グローバル変数の初期化処理
 function initPosterMap() {
