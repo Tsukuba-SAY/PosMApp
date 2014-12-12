@@ -464,7 +464,29 @@ var author =
 {"posterid":96,"name":"友安 航太","belongs":"兵庫県立大学","first":1},
 {"posterid":96,"name":"王 元元","belongs":"兵庫県立大学","first":0},
 {"posterid":96,"name":"木村 玲欧","belongs":"兵庫県立大学","first":0},
-{"posterid":96,"name":"角谷 和俊","belongs":"兵庫県立大学","first":0}
+{"posterid":96,"name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
+{"posterid":97,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":98,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":99,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":100,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":101,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":102,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":103,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":104,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":105,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":106,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":107,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":108,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":109,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":110,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":111,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":112,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":113,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":114,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":115,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":116,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":117,"name":"Xさん","belongs":"X大学","first":1},
+{"posterid":118,"name":"Xさん","belongs":"X大学","first":1}
 ]
 ;
 
