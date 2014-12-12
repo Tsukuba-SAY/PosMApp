@@ -2,8 +2,8 @@
 // 名前変えたい
 function windowManager () {
     var FRAME_TIME = 1000 / 30;
-	var STATIC_WIDTH =  108;
-	var STATIC_HEIGHT = 144;
+	//var STATIC_WIDTH =  108;
+	//var STATIC_HEIGHT = 144;
 	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
 
 	var $mapMain = $('#mapMain');
