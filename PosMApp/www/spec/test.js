@@ -1,4 +1,7 @@
 describe("変数の確認", function() {
+	beforeEach(function() {
+		resetDelta();
+	});
 	it("posterdata.jsでposterが宣言されている", function() {
 		deleteLog();
 		expect(poster).toBeDefined();
@@ -25,6 +28,9 @@ describe("変数の確認", function() {
 });
 
 describe("テスト用のファンクションのテスト", function() {
+	beforeEach(function() {
+		resetDelta();
+	});
 	it("getAuthorsのテスト", function() {
 		expectArr = new Array();
 		author.forEach(function(a) {
@@ -57,6 +63,8 @@ describe("テスト用のファンクションのテスト", function() {
 
 describe("トップページ", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-toppage.html");
 		$("#goToMap").goToMapPage("click");
 		$("#goToList").goToListPage("click");
@@ -83,6 +91,8 @@ describe("トップページ", function() {
 
 describe("タブバー", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-tabbar.html");
 		$(".topPageButton").goToTopPage("click");
 		$(".posterMapPageButton").goToMapPage("click");
@@ -104,6 +114,8 @@ describe("タブバー", function() {
 
 describe("ポスターマップ", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-postermap.html");
 		setPosterIcons();
 		showBookmarkIcons();
@@ -655,6 +667,8 @@ describe("ポスターマップ", function() {
 
 describe("詳細情報", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-postermap.html", "fixture-detail.html");
 		setPosterIcons();
 		showPosterIcons();
@@ -680,6 +694,8 @@ describe("詳細情報", function() {
 
 describe("キーワード検索（タイトル）", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-postermap.html");
 		setPosterIcons();
 		showBookmarkIcons();
@@ -918,6 +934,8 @@ describe("キーワード検索（タイトル）", function() {
 
 describe("ラベルの表示切り替え機能", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-postermap.html");
 		setPosterIcons();
 		showBookmarkIcons();
@@ -999,6 +1017,8 @@ describe("ラベルの表示切り替え機能", function() {
 
 describe("ブックマーク機能", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-postermap.html");
 		setPosterIcons();
 		showBookmarkIcons();
@@ -1132,6 +1152,8 @@ describe("ブックマーク機能", function() {
 
 describe("ポスターリストからのブックマーク機能", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-posterlist.html");
 		$("#posterList").showPosterList();
 		localStorage.setItem("bookmarks", "");
@@ -1227,6 +1249,8 @@ describe("ポスターリストからのブックマーク機能", function() {
 
 describe("ポスターリスト", function() {
 	beforeEach(function() {
+		resetDelta();
+
 		loadFixtures("fixture-posterlist.html","fixture-postermap.html");
 		setPosterIcons();
 		showBookmarkIcons();
@@ -1335,6 +1359,8 @@ describe("ポスターリスト", function() {
 
 describe("ブックマークリスト", function() {
 	beforeEach(function() {
+		resetDelta();
+		
 		loadFixtures("fixture-bookmarklist.html","fixture-postermap.html");
 
 		setPosterIcons();

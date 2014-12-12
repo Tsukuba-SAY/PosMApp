@@ -148,3 +148,9 @@ function deleteLog() {
 		localStorage.removeItem(k);
 	});
 }
+
+// 
+function resetDelta() {
+	var date = new Date();
+	localStorage.setItem("log_last_sent", date.getTime().toString());
+}
