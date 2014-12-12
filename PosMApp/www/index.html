@@ -12,20 +12,23 @@
 	<link rel="stylesheet" type="text/css" href="css/icon.css" />
 	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
 	<link rel="stylesheet" type="text/css" href="css/list.css" />
-      
-
-	<!-- DB用ポスターデータ -->
-	<script type="text/javascript" charset="utf-8" src="js/posterdata.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/icon-position.js"></script>
 
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.mobile-1.4.2.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/lib/hammer.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.hammer.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/md5.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.xpost.js"></script>
+
+	<!-- DB用ポスターデータ -->
+	<script type="text/javascript" charset="utf-8" src="js/posterdata.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/icon-position.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/logdata-function.js"></script>
 	
 	<script type="text/javascript" charset="utf-8" src="js/toppage-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/postermap-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/posterlist-function.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/bookmarklist-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/window-manager.js"></script>
 
 	<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
@@ -35,46 +38,50 @@
 
 <body>
 <!-- トップメニュー画面 -->
-<div data-role="page" id="topPage" style="background-color: #D2DEEF" >
-	<div data-role="header"><h1>PosMApp</h1></div>
-	<div data-role="content">
-		<div id="conferenceName">WebDB Forum 2014<br />ポスターレセプション会場案内</div>
-		<div align="center">
-			<h4>日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></h4>
+<div data-role="page" id="topPage" style="background-image:url(img/toppage_enpitUTWS.png); background-size: cover;" >
+	<div id="topPageContent">
+		<!--<div id="conferenceName"></div>-->
+		<div class="ui-grid-solo">
+			<div class="ui-block-a">
+				<div id="selectLocale">日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></div>
+			</div>
 		</div>
-		<table class="table-topmenu" align="center" >
-			<tr>
-				<td>
-					<div align="center">
-						<img id="goToMap" class="topmenuicon" src="img/topmenu/map.png" align="center"></img><br />
-						ポスター<br />マップ　
-					</div>
-				</td>
-				<td>
-					<div align="center">
-						<img id="goToList" class="topmenuicon" src="img/topmenu/list.png"></img><br />
-						ポスター<br />一覧
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<div align="center">
-						<img id="goToBookmark" class="topmenuicon" src="img/topmenu/bookmark_gray.png"></img><br />
-						ブックマーク<br />リスト
-					</div>
-				</td>
-				<td>
-					<div align="center">
-						<img id="goToInformation" class="topmenuicon" src="img/topmenu/information_gray.png"></img><br />
-						情報<br />　
-					</div>
-				</td>
-			</tr>
-		</table>
-		<div id="copyright" align="center">
-			<span style="font-size:smaller;">Copyright (C) <a href="http://www.cs.tsukuba.ac.jp/ITsoft/">筑波大学CS専攻 高度ITコース</a></span><br />
-			<span style="font-size:smaller;">Team S.A.Y. (<a href="https://twitter.com/posmapp_say">@posmapp_say</a>)</span>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<div align="center">
+					<img id="goToMap" class="topmenuicon" src="img/topmenu/map.png"></img>
+					<div class="topMenuIconLabel">ポスターマップ</div>
+				</div>
+			</div>
+			<div class="ui-block-b">
+				<div align="center">
+					<img id="goToList" class="topmenuicon" src="img/topmenu/list.png"></img>
+					<div class="topMenuIconLabel">発表リスト</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<div align="center">
+					<img id="goToBookmarkList" class="topmenuicon" src="img/topmenu/bookmark.png"></img>
+					<div class="topMenuIconLabel">ブックマークリスト</div>
+				</div>
+			</div>
+			<div class="ui-block-b">
+				<div align="center">
+					<img id="goToInformation" class="topmenuicon" src="img/topmenu/schedule.png"></img>
+					<div class="topMenuIconLabel">プログラム</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-solo">
+			<div class="ui-block-a">
+				<div id="copyright">
+					<br />
+					<span style="font-size:smaller;">Copyright &copy; <a href="http://www.cs.tsukuba.ac.jp/ITsoft/">筑波大学CS専攻 高度ITコース</a></span><br />
+					<span style="font-size:smaller;">Team S.A.Y. (<a href="https://twitter.com/posmapp_say">@posmapp_say</a>)</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -125,11 +132,11 @@
 	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
 		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
 			<ul>
-				<li><a class="topPageButton" id="totoppage" data-icon="toppage" href="#topPage">トップ</a></li>
-				<li><a class="posterMapPageButton" id="map" data-icon="map" href="#posterMapPage">マップ</a></li>
-				<li><a class="posterListPageButton" id="list" data-icon="list" href="#posterListPage">一覧</a></li>
-				<li><a href="" id="bookmark" data-icon="bookmark" class="ui-disabled" >ブックマーク</a></li>
-				<li><a href="" id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
+				<li><a class="posterListPageButton" id="list" data-icon="list">リスト</a></li>
+				<li><a class="bookmarkListPageButton"  id="bookmark"  data-icon="bookmark" >ブックマーク</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">プログラム</a></li>
 			</ul>
 		</div>
 	</div>
@@ -147,7 +154,7 @@
 			<span id="detail-title"></span>
 		</h1>
 		<ul>
-			<li>著者： <span id="detail-authors"></span></li>
+			<li>メンバー： <span id="detail-authors"></span></li>
 			<li>所属： <span id="detail-authorbelongs"></span></li>
 			<li>代表者名： <span id="detail-authorname"></span></li>
 			<li>キーワード： <span id="detail-keywords"></span></li>
@@ -162,11 +169,11 @@
 	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
 		<div data-role="navbar" height="100%" class="nav-tabicon" data-grid="d">
 			<ul>
-				<li><a class="topPageButton" id="totoppage" data-icon="toppage" href="#topPage">トップ</a></li>
-				<li><a class="posterMapPageButton" id="map" data-icon="map" href="#posterMapPage">マップ</a></li>
-				<li><a class="posterListPageButton" id="list" data-icon="list" href="#posterListPage">一覧</a></li>
-				<li><a href="" id="bookmark" data-icon="bookmark" class="ui-disabled">ブックマーク</a></li>
-				<li><a href="" id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
+				<li><a class="posterListPageButton" id="list" data-icon="list">リスト</a></li>
+				<li><a class="bookmarkListPageButton"  id="bookmark"  data-icon="bookmark" >ブックマーク</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">プログラム</a></li>
 			</ul>
 		</div>
 	</div>
@@ -175,7 +182,7 @@
 <!-- ポスターリスト画面 -->
 <div data-role="page" id="posterListPage" data-position="fixed">
 	<div data-role="header">
-		<h1 style="text-align:center"　>ポスター一覧</h1>
+		<h1 style="text-align:center"　>ポスターリスト</h1>
 	</div>
 	<div data-role="content">
 		<div style="overflow:auto; height:100%;">
@@ -187,15 +194,41 @@
 	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
 		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
 			<ul>
-				<li><a class="topPageButton" id="totoppage" data-icon="toppage" href="#topPage">トップ</a></li>
-				<li><a class="posterMapPageButton" id="map" data-icon="map" href="#posterMapPage">マップ</a></li>
-				<li><a class="posterListPageButton" id="list" data-icon="list" href="#posterListPage">一覧</a></li>
-				<li><a  href=""  id="bookmark"  data-icon="bookmark"  class="ui-disabled" >ブックマーク</a></li>
-				<li><a  href=""  id="information" data-icon="informationgray" class="ui-disabled">情報</a></li>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
+				<li><a class="posterListPageButton" id="list" data-icon="list">リスト</a></li>
+				<li><a class="bookmarkListPageButton"  id="bookmark"  data-icon="bookmark" >ブックマーク</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">プログラム</a></li>
 			</ul>
 		</div>
 	</div>
 </div>
+
+<!-- ブックマークリスト画面 -->
+<div data-role="page" id="bookmarkListPage" data-position="fixed">
+	<div data-role="header">
+		<h1 style="text-align:center"　>ブックマークリスト</h1>
+	</div>
+	<div data-role="content">
+		<div style="overflow:auto; height:100%;">
+			<!-- ブックマークリスト -->
+			<div id="bookmarkList" class="listcolor"></div>
+		</div>
+	</div>
+	<!-- タブバー -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
+		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
+			<ul>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
+				<li><a class="posterListPageButton" id="list" data-icon="list">リスト</a></li>
+				<li><a class="bookmarkListPageButton"  id="bookmark"  data-icon="bookmark" >ブックマーク</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">プログラム</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
 
 <!-- 表示切替ボタンのダイアログ -->
 <div data-role="page" id="changeLabelDialog">
@@ -215,5 +248,131 @@
 			href="#posterMapPage" data-role="button">所属</a>
 	</div>
 </div>
+
+<!-- information画面 -->
+<!-- enpitのセッションテーブルの内容 -->
+<div data-role="page" id="informationPage" data-position="fixed">
+	<div data-role="header">
+		<h1 style="text-align:center"　>enPiTプログラム</h1>
+	</div>
+	<div data-role="content">
+		<div style="overflow:auto; height:100%;">
+			<!-- ポスターリスト -->
+			<div id="sessionList" class="listcolor">
+				<table border="1" rules="rows" width="100%">
+					<tr>
+						<td>
+							<div>9:30 － 9:45</div><br>
+							<strong>開会の辞, 専攻長挨拶</strong><br>
+							CS専攻長 田中 二郎 先生
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>9:45 － 10:15</div><br>
+							<strong>基調講演: enPiT への期待</strong><br>
+							CeFIL理事 菊池 純夫 様<br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>10:15 － 10:30</div><br>
+							<strong>基調講演: enPiT への期待</strong><br>
+							BizApp分野統括 北川 博之 先生<br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>10:30 － 10:40</div><br>
+							<strong>休憩</strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>10:40 － 12:10</div><br>
+							<strong><a class="posterListPageButton">成果発表 (1) プレゼンテーション</a></strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>12:10 － 13:10</div><br>
+							<strong>休憩</strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>13:10 － 14:30</div><br>
+							<strong><a class="posterListPageButton">成果発表 (2) プレゼンテーション</a></strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>14:40 － 16:30</div><br>
+							<strong><a class="posterMapPageButton">ポスター・デモ発表</a></strong><br>
+							<string><a style="text-decoration:none;" href="https://docs.google.com/forms/d/1Fl9PR3XxNGHHrKszdo028Z3Ydnpn5oSLYIkA5-LKFZQ/viewform">投票フォームはこちら</a></strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>16:30 － 17:30</div><br>
+							<strong><a style="text-decoration:none;" href="http://linoit.com/users/chiemiw/canvases/enPiT%E7%AD%91%E6%B3%A2%E5%A4%A7%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%972014">意見交換会</a></strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>17:30 － 18:00</div><br>
+							<strong>表彰式, 修了証授与</strong><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>18:00 － 20:00</div><br>
+							<strong>交流会</strong><br>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- タブバー -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
+		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
+			<ul>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
+				<li><a class="posterListPageButton" id="list" data-icon="list">リスト</a></li>
+				<li><a class="bookmarkListPageButton"  id="bookmark"  data-icon="bookmark" >ブックマーク</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">プログラム</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- 利用ログデータ回収許諾ダイアログ  -->
+<div data-role="dialog" data-close-btn="none" id="checkCollectLogDialog">
+	<div data-role="header">
+		<h1>ログ送信に関するお願い</h1>
+	</div>
+	<div data-role="content">
+		筑波大学高度ITコース・チームS.A.Y.では、ユーザの行動分析を行いアプリの改善をする研究を行っております。つきましては、本アプリの利用ログの回収にご協力頂きたいと考えております。利用ログには個人を特定できる情報は含まれず、統計的な分析のみに使用します。ご協力頂ける場合は、[はい]ボタンを押して下さい。<br />
+		<a data-role="button" id="acceptCollectLog">はい</a>
+		<a data-role="button" id="denyCollectLog">いいえ</a>
+	</div>
+</div>
+
+<!-- ユーザカテゴリ選択ダイアログ -->
+<div data-role="dialog" data-close-btn="none" id="selectUserCategoryDialog">
+	<div data-role="header">
+		<h1>ユーザ属性の選択</h1>
+	</div>
+	<div data-role="content">
+		以下の中で、当てはまる属性を選択して下さい。<br />
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-1">学生（受講者）</a>
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-2">学生（見学者）</a>
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-3">教員</a>
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-4">社会人・その他</a>
+	</div>
+</div>
+
 </body>
 </html>

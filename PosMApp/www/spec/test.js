@@ -1,5 +1,6 @@
 describe("変数の確認", function() {
 	it("posterdata.jsでposterが宣言されている", function() {
+		deleteLog();
 		expect(poster).toBeDefined();
 	});
 	it("icon-position.jsでpositionが宣言されている", function() {
@@ -59,6 +60,8 @@ describe("トップページ", function() {
 		loadFixtures("fixture-toppage.html");
 		$("#goToMap").goToMapPage("click");
 		$("#goToList").goToListPage("click");
+		$("#goToInformation").goToInformationPage("click");
+		$("#goToBookmarkList").goToBookmarkListPage("click");
 	});
 	it("トップページからポスターマップ画面に遷移できる", function() {
 		$("#goToMap").click();
@@ -67,6 +70,14 @@ describe("トップページ", function() {
 	it("トップページからポスターリスト画面に遷移できる", function() {
 		$("#goToList").click();
 		expect(window.location.hash).toEqual("#posterListPage");
+	});
+	it("トップページからポスターリスト画面に遷移できる", function() {
+		$("#goToInformation").click();
+		expect(window.location.hash).toEqual("#informationPage");
+	});
+	it("トップページからブックマークリスト画面に遷移できる", function() {
+		$("#goToBookmarkList").click();
+		expect(window.location.hash).toEqual("#bookmarkListPage");
 	});
 });
 
@@ -677,12 +688,12 @@ describe("キーワード検索（タイトル）", function() {
 		initPosterMap();
 	});
 
-	it("「用いた」で検索すると2,4,6,7,10,11,17,18,24,30,44番のポスターがヒットする", function() {
+	it("「システム」で検索すると4,5,11,14,16,17番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [2,4,6,7,10,11,17,18,24,30,44];
+		expectArr = [1,4,5,10,11,12,13,14,16];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -692,67 +703,68 @@ describe("キーワード検索（タイトル）", function() {
 			}
 		}
 		
-		$("#search-bar-title").val("用いた");
+		$("#search-bar-title").val("システム");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「ニコニコ動画」で検索すると24番のポスターがヒットする", function() {
+	it("「PosMApp」で検索すると13番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[24] = "s";
+		expectFlag[13] = "s";
 
-		$("#search-bar-title").val("ニコニコ動画");
+		$("#search-bar-title").val("PosMApp");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「ニコニコ」で検索すると10番のポスターがヒットする", function() {
+	it("「map」で検索すると8,13番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[24] = "s";
+		expectFlag[8] = "s";
+		expectFlag[13] = "s";
 
-		$("#search-bar-title").val("ニコニコ");
+		$("#search-bar-title").val("map");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「Wikipedia」で検索すると17番のポスターがヒットする", function() {
+	it("「posmapp」で検索すると13番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[17] = "s";
+		expectFlag[13] = "s";
 
-		$("#search-bar-title").val("Wikipedia");
+		$("#search-bar-title").val("posmapp");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「wikipedia」で検索すると3番のポスターがヒットする", function() {
+	it("「POSMAPP」で検索すると13番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[17] = "s";
+		expectFlag[13] = "s";
 
-		$("#search-bar-title").val("wikipedia");
+		$("#search-bar-title").val("POSMAPP");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
@@ -833,7 +845,7 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("1番を選択した状態で「ニコニコ動画」で検索すると24番がヒットする", function() {
+	it("1番を選択した状態で「PosMApp」で検索すると13番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		pflag[1] = "t";
@@ -843,26 +855,26 @@ describe("キーワード検索（タイトル）", function() {
 			expectFlag[i] = "d";
 		}
 		expectFlag[1] = "t";
-		expectFlag[24] = "s";
+		expectFlag[13] = "s";
 
-		$("#search-bar-title").val("ニコニコ動画");
+		$("#search-bar-title").val("PosMApp");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("10番を選択した状態で「ニコニコ動画」で検索すると10番がヒットする", function() {
+	it("13番を選択した状態で「PosMApp」で検索すると13番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
-		pflag[24] = "t";
+		pflag[13] = "t";
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[24] = "e";
+		expectFlag[13] = "e";
 
-		$("#search-bar-title").val("ニコニコ動画");
+		$("#search-bar-title").val("PosMApp");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
@@ -1103,6 +1115,101 @@ describe("ブックマーク機能", function() {
 	});
 });
 
+describe("ポスターリストからのブックマーク機能", function() {
+	beforeEach(function() {
+		loadFixtures("fixture-posterlist.html");
+		$("#posterList").showPosterList();
+		localStorage.setItem("bookmarks", "");
+	});
+	it("何もブックマークされていない状態で、リストで、1番の星をタップすると、1番のポスターがブックマークされる", function() {
+		$("#listbookmark1").listchangebookmark();
+		$("#listbookmark1").trigger("touchstart");
+		var expectBookmarks = "1";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("何もブックマークされていない状態で、リストで、すべての星をタップすると、すべてのポスターがブックマークされる", function() {
+		for (var i = 1; i <= poster.length; i++) {
+			$("#listbookmark"+i).listchangebookmark();
+			$("#listbookmark"+i).trigger("touchstart");
+		}
+		var bookmarks = localStorage.getItem("bookmarks");
+
+		var expectArr = new Array();
+		for (var i = 0; i < poster.length; i++) {
+			expectArr.push(poster[i].id);
+		};
+		expect(bookmarks).toEqual(expectArr.join(","));
+	});
+	it("1番のポスターがブックマークされている状態で、リストで、1番の星をタップすると、何もブックマークされていない状態になる", function() {
+		localStorage.setItem("bookmarks", "1");
+		$("#listbookmark1").listchangebookmark();
+		$("#listbookmark1").trigger("touchstart");
+		var expectBookmarks = "";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("1番のポスターがブックマークされている状態で、リストで、2番の星をタップすると、1,2番のポスターがブックマークされた状態になる", function() {
+		localStorage.setItem("bookmarks", "1");
+		$("#listbookmark2").listchangebookmark();
+		$("#listbookmark2").trigger("touchstart");
+
+		var expectBookmarks = "1,2";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("何もブックマークされていない状態で、リストで、4,5,6番の星をタップすると、4,5,6番のポスターがブックマークされた状態になる", function() {
+		$("#listbookmark4").listchangebookmark();
+		$("#listbookmark4").trigger("touchstart");
+		$("#listbookmark5").listchangebookmark();
+		$("#listbookmark5").trigger("touchstart");
+		$("#listbookmark6").listchangebookmark();
+		$("#listbookmark6").trigger("touchstart");
+		var expectBookmarks = "4,5,6";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("4番のポスターがブックマークされている状態で、リストで、4,5,6番の星をタップすると、5,6番のポスターがブックマークされた状態になる", function() {
+		localStorage.setItem("bookmarks", "4");
+		$("#listbookmark4").listchangebookmark();
+		$("#listbookmark4").trigger("touchstart");
+		$("#listbookmark5").listchangebookmark();
+		$("#listbookmark5").trigger("touchstart");
+		$("#listbookmark6").listchangebookmark();
+		$("#listbookmark6").trigger("touchstart");
+
+		var expectBookmarks = "5,6";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("5,6番のポスターがブックマークされている状態で、リストで、4,5,6番の星をタップすると、4番のポスターがブックマークされた状態になる", function() {
+		localStorage.setItem("bookmarks", "5,6");
+		$("#listbookmark4").listchangebookmark();
+		$("#listbookmark4").trigger("touchstart");
+		$("#listbookmark5").listchangebookmark();
+		$("#listbookmark5").trigger("touchstart");
+		$("#listbookmark6").listchangebookmark();
+		$("#listbookmark6").trigger("touchstart");
+
+		var expectBookmarks = "4";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+	it("4,5,6番のポスターがブックマークされている状態で、リストで、4,5,6番の星をタップすると、何もブックマークされていない状態になる", function() {
+		localStorage.setItem("bookmarks", "4,5,6");
+		$("#listbookmark4").listchangebookmark();
+		$("#listbookmark4").trigger("touchstart");
+		$("#listbookmark5").listchangebookmark();
+		$("#listbookmark5").trigger("touchstart");
+		$("#listbookmark6").listchangebookmark();
+		$("#listbookmark6").trigger("touchstart");
+
+		var expectBookmarks = "";
+		var bookmarks = localStorage.getItem("bookmarks");
+		expect(bookmarks).toEqual(expectBookmarks);
+	});
+});
+
 describe("ポスターリスト", function() {
 	beforeEach(function() {
 		loadFixtures("fixture-posterlist.html","fixture-postermap.html");
@@ -1128,12 +1235,6 @@ describe("ポスターリスト", function() {
 				expectIds.push(p.id.toString());
 			//}
 		});
-
-		// 末尾のDummyデータ4つをpopさせて消している
-		expectIds.pop();
-		expectIds.pop();
-		expectIds.pop();
-		expectIds.pop();
 
 		expect(expectIds).toEqual(posters["id"]);
 	});
@@ -1214,6 +1315,134 @@ describe("ポスターリスト", function() {
 		expect(function() {
 			listToMap(poster.length + 1);
 		}).toThrow();
+	});
+});
+
+describe("ブックマークリスト", function() {
+	beforeEach(function() {
+		loadFixtures("fixture-bookmarklist.html","fixture-postermap.html");
+
+		setPosterIcons();
+		showBookmarkIcons();
+		showPosterIcons();
+		$("#bookmarkList").showBookmarkList();
+		$(".bookmarklistToMapBtn").bookmarklistToMapPage();
+		$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+		localStorage.setItem("bookmarks", "");
+		initPosterMap();	
+		removeAllPosterInfo();
+
+		spyOn(window, 'confirm').andReturn(true);
+	});
+
+	it("一番のポスターがブックマークされると、ブックマークで表示される", function() {
+		localStorage.setItem("bookmarks", "1");
+		var posters = $("#bookmarkList").showBookmarkList();
+		var expectIds = new Array();
+		expectIds.push("1");
+		expect(expectIds).toEqual(posters["id"]);
+	});
+	it("1,2,3番のポスターがブックマークされると、ブックマークで表示される", function() {
+		localStorage.setItem("bookmarks", "1,2,3");
+		var posters = $("#bookmarkList").showBookmarkList();
+		var expectIds = new Array();
+		expectIds.push("1");
+		expectIds.push("2");
+		expectIds.push("3");
+		expect(expectIds).toEqual(posters["id"]);
+	});
+	it("すべてのポスターがブックマークされると、ブックマークで表示される", function() {
+		var str ="";
+		for (var i = 0; i <= poster.length - 5; i++) {
+			str += i + 1 + ",";
+		}
+		str = str.substring(0, str.length - 1);
+		localStorage.setItem("bookmarks", str);
+		var posters = $("#bookmarkList").showBookmarkList();
+		var expectIds = new Array();
+		for (var i = 0; i <= poster.length - 5; i++) {
+			expectIds.push(poster[i].id.toString());
+		};
+		expect(expectIds).toEqual(posters["id"]);
+	});
+	it("1番のポスターがブックマークしてある状態で、1番のポスターのマップボタンを押すと、マップ画面に遷移し、1番のポスターの基本情報が表示される", function() {
+		localStorage.setItem("bookmarks", "1");
+		$("#bookmarkList").showBookmarkList();
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+
+		$("#bookmarklistToMap1").trigger("touchstart");
+
+		listToMap(1);
+		expect(sessionStorage.getItem("posterid")).toEqual("1");
+	});
+	it("1番のポスターがブックマークしてある状態で、1番のポスターの詳細情報ボタンを押すと、1番のポスターの詳細情報が表示される", function() {
+		localStorage.setItem("bookmarks", "1");
+		$("#bookmarkList").showBookmarkList();
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+
+		$("#bookmarklistToDetail1").trigger("touchstart");
+
+		listToDetail(1);
+		expect(sessionStorage.getItem("posterid")).toEqual("1");
+	});
+	it("0番のポスターのマップボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToMap(0);
+		}).toThrow();
+	});
+	it("0番のポスターの詳細情報ボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToDetail(0);
+		}).toThrow();
+	});
+	it("ポスターの総数+1番のポスターのマップボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToMap(poster.length + 1);
+		}).toThrow();
+	});
+	it("ポスターの総数+1番のポスターの詳細情報ボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToDetail(poster.length + 1);
+		}).toThrow();
+	});
+	it("1番のポスターがブックマークしてある状態で、1番のポスターのマップボタンを押すと、1番のポスターがマップ上で強調表示される", function() {
+		localStorage.setItem("bookmarks", "1");
+		$("#bookmarkList").showBookmarkList();
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		listToMap(1);
+		expect(sessionStorage.getItem("posterid")).toEqual("1");
+	});
+	it("0番のポスターのマップボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToMap(0);
+		}).toThrow();
+	});
+	it("ポスターの総数+1番のポスターのマップボタンを押すと例外が発生する", function() {
+		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(function() {
+			listToMap(poster.length + 1);
+		}).toThrow();
+	});
+	it("1,2,3番のポスターがブックマークされた状態で、1番のブックマークスターを押すと、1番のポスターのブックマークを削除され、2,3番のポスターが残る", function() {
+		localStorage.setItem("bookmarks", "1,2,3");
+		$("#bookmarkList").showBookmarkList();
+		$("#deletebookmark1").trigger("touchstart");
+		var bookmarkArr = getBookmarks();
+		var expectIds = ["2", "3"];
+		expect(bookmarkArr).toEqual(expectIds);
+	});
+	it("1番のポスターがブックマークされた状態で、1番のブックマークスターを押すと、1番のポスターのブックマークを削除され、ポスターが残らない", function() {
+		localStorage.setItem("bookmarks", "1");
+		$("#bookmarkList").showBookmarkList();
+		$("#deletebookmark1").trigger("touchstart");
+		var bookmarkArr = getBookmarks();
+		var expectIds = [];
+		expect(bookmarkArr).toEqual(expectIds);
 	});
 });
 

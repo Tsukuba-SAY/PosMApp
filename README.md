@@ -1,18 +1,21 @@
 PosMApp  [![Build Status](https://travis-ci.org/Tsukuba-SAY/PosMApp.svg?branch=develop)](https://travis-ci.org/Tsukuba-SAY/PosMApp/)
 =======
 
-PosMAppは、ポスターセッション参加者向けのポスターマップアプリです。  
+PosMAppは、ポスターセッション参加者向けの案内・投票支援アプリです。  
 クリッカブルポスターマップやポスター検索機能、ブックマーク機能があるので、  
 紙媒体やPDFで確認するというやり方とは違い、  
 少ない手間で興味のあるポスターの位置を確認したり、投票したりすることができます。  
 
-現在、[WebDB Forum 2014](http://db-event.jpn.org/webdbf2014/) ポスターレセプション向けのバージョンを開発しています。
+~~現在、[WebDB Forum 2014](http://db-event.jpn.org/webdbf2014/) ポスターレセプション向けのバージョンを開発しています。~~
+無事終了しました。ご協力ありがとうございました。  
+現在、[enPiT筑波大ワークショップ2014](http://www.cs.tsukuba.ac.jp/enPiT/enpit2014_tsukuba_ws)　向けのバージョンを開発しています。
+
 
 ## 利用方法
 
 以下のアドレスにアクセスして下さい。
 
-http://webdb2014-posmapp.tk/
+http://tkbenpit-posmapp.tk/
 
 ## 対応する端末
 
@@ -39,4 +42,5 @@ iOS, Android端末でご利用いただけます。
 万 姗姗 (WAN Shanshan)  
 
 
-Copyright &copy; 2014 [University of Tsukuba](http://www.tsukuba.ac.jp/). All Rights Reserved.
+Copyright &copy; [筑波大学CS専攻 高度ITコース](http://www.cs.tsukuba.ac.jp/ITsoft/)  
+Team S.A.Y. ([@posmapp_say](https://twitter.com/posmapp_say))

@@ -2,6 +2,11 @@
 $(init);
 
 function init() {
+
+	$("#topPageFrame")
+		.css("width", window.innerWidth)
+		.css("max-width", window.innerWidth);
+
 	initPosterMap();
 
 	// 現在はWebSQLは使用していない
@@ -16,6 +21,14 @@ function init() {
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
 
+	// 固有識別IDが設定されていなければ、初期設定する
+	$("#acceptCollectLog").acceptCollectLog();
+	$("#denyCollectLog").denyCollectLog();
+	$(".selectUserCategoryButton").selectUserCategory();
+	if (localStorage.getItem("uid") === null) {
+		initUserData();
+	}
+
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") !== null) {
 		changeBasicInfoPanel(true);
@@ -26,7 +39,8 @@ function init() {
 	// 検索中状態だったら検索にヒットしたポスターを強調表示
 	// FIXME:もう一度検索しているので読み込み時遅くなる
 	if (sessionStorage.getItem("searching") === "true") {
-		document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
+		//document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
+		$("#search-bar-title").attr("value", sessionStorage.getItem("searchWord"));
 		searchByTitle(sessionStorage.getItem("searchWord"));
 	}
 
@@ -50,9 +64,10 @@ function init() {
 	$(".postericon").touchPoster();
 
 	// 基本情報画面を閉じる
-	$("#basicinfo").closeBasicInfo();
-	$("#basicinfo").css("width", window.innerWidth - 80);
-	$("#basicinfo").css("max-width", window.innerWidth - 80);
+	$("#basicinfo")
+		.css("width", window.innerWidth - 80)
+		.css("max-width", window.innerWidth - 80)
+		.closeBasicInfo();
 
 
 	// ラベルを変更する
@@ -68,14 +83,25 @@ function init() {
 	// ---------- 詳細情報画面 ----------
 	setDetails();
 	$("#posterList").showPosterList();
+	$("#bookmarkList").showBookmarkList();
+
 
 	// トップページ
 	$("#goToMap").goToMapPage("touchstart");
 	$("#goToList").goToListPage("touchstart");
+	$("#goToInformation").goToInformationPage("touchstart");
+	$("#goToBookmarkList").goToBookmarkListPage("touchstart");
 	
 	// ポスターリスト画面のボタン
 	$(".listToMapBtn").jumpToMapPage();
 	$(".listToDetailBtn").jumpToDetailPage();
+	$(".listbookmarkbutton").listchangebookmark();
+
+    // ブックマークリスト画面ボタン
+    //$(".bookmarklistToMapBtn").bookmarklistToMapPage();
+	//$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+	//$(".deletebookmarkBtn").deletebookmark();
+	//$(".listbookmarkbutton").listchangebookmark();
 
 	// 詳細表示画面の戻るボタン
 	$("#detailBackButton").backToPreviousPage();
@@ -84,6 +110,8 @@ function init() {
 	$(".topPageButton").goToTopPage("touchstart");
 	$(".posterMapPageButton").goToMapPage("touchstart");
 	$(".posterListPageButton").goToListPage("touchstart");
+	$(".bookmarkListPageButton").goToBookmarkListPage("touchstart");	
+	$(".informationPageButton").goToInformationPage("touchstart");
 
 	// タブバーの選択表示を変更
 	var currentPage = window.location.hash;
@@ -91,17 +119,43 @@ function init() {
 		case "#posterMapPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		case "#posterListPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".infromationPageButton").removeClass("ui-btn-active ui-state-persist");
+			break;
+		case "#informationPage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+			break;
+		case "#bookmarkListPage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".bookmarkListPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		default:
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
+		// default:
+		// 	$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+		// 	$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+		// 	$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		// 	$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+		// 	break;
 	}
 }

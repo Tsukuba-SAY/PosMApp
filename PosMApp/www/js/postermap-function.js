@@ -16,6 +16,9 @@ var labelmax = 7;
 // ポスターの総件数
 var ptotal;
 
+var STATIC_WIDTH =  216;
+
+
 
 // グローバル変数の初期化処理
 function initPosterMap() {
@@ -46,6 +49,7 @@ $.fn.touchPoster = function() {
 	$(this).on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(4));
+		saveLog("poster_tap", {posterid:posterid});
 
 		var nextFlag = touchPoster(posterid);
 
@@ -58,6 +62,7 @@ $.fn.touchPoster = function() {
 $.fn.closeBasicInfo = function() {
 	$(this).on("touchstart", function(e) {
 		changeBasicInfoPanel(false);
+		saveLog("basicinfo_tap", {posterid:sessionStorage.getItem("posterid")});
 		unselectPoster();
 		showPosterIcons();
 		//resetAllIcons();
@@ -70,7 +75,9 @@ $.fn.changeLabel = function() {
 		// 押されたボタンのidを取得する
 		var id = $(this).attr("id");
 		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
-		changeLabel(id.substr(id.indexOf("-") + 1));
+		var target = id.substr(id.indexOf("-") + 1);
+		saveLog("change_label", {label:target});
+		changeLabel(target);
 	});
 };
 
@@ -85,53 +92,32 @@ $.fn.touchBookmark = function() {
 
 // ポスターアイコンをセットする
 function setPosterIcons() {
-	var str = "";
-	var STATIC_WIDTH =  108;
 	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
-	var starAngle ;
+	var starAngle = [null, "top:-15px;left:30%;", "right:-15px;top:30%;", "bottom:-15px;left:30%;", "left:-15px;top:30%;"];
+	var starpos = [null, "Top", "Right", "Bottom", "Left"];
+
+	var str = "";
+	var angle;
+	var pos;
 	var iconWidth;
 	var iconHeight;
 	
-	for (var i = 1; i <= poster.length; i++) {
-		iconWidth = position[i-1].width*INIT_SCALE;
-		iconHeight = position[i-1].height*INIT_SCALE;
+	var ptotal = poster.length;
+	for (var i = 1; i <= ptotal; i++) {
+		iconWidth = position[position_map[i-1]].width*INIT_SCALE;
+		iconHeight = position[position_map[i-1]].height*INIT_SCALE;
 
-		switch (poster[i-1].star) {
-			case 1:
-				starAngle = "top:-15px;left:30%;";
-				break;
-			case 2:
-				starAngle = "right:-15px;top:30%;";
-				break;
-			case 3:
-				starAngle = "bottom:-15px;left:30%;";
-				break;
-			case 4:
-				starAngle = "left:-15px;top:30%;"
-		}
-		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[i-1].x*INIT_SCALE)+"px;top:"+(position[i-1].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
+		angle = starAngle[poster[i-1].star];
+
+		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[position_map[i-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-		str += "		<img class='posterimg' id='icon" + i + "' src='img/dpic.png' " + "width="+iconWidth+ " height=" + iconHeight + "></img>\n";
-		str += "		<div class='" + position[i-1].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
+		str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'></div>\n";
+		str += "		<div class='" + position[position_map[i-1]].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
 		str += "	</div>\n";
 
-		var pos;
-		switch (poster[i-1].star) {
-			case 1:
-				pos = "Top";
-				break;
-			case 2:
-				pos = "Right";
-				break;
-			case 3:
-				pos = "Bottom";
-				break;
-			case 4:
-				pos = "Left";
-				break;
-		}
+		pos = starpos[poster[i-1].star];
 
-		str += "	<div id='star" + pos + "No" + i +"' class='star-top' style='"+starAngle+"'><img class='bookmarkstar' style='display:none;' src='img/bookmark.png'></img></div>\n";
+		str += "	<div id='star" + pos + "No" + i +"' class='star' style='"+angle+" display:none;'><img class='bookmarkstar' src='img/bookmark.png'></img></div>\n";
 		str += "</div>\n";
 	}
 	document.getElementById("posters").innerHTML = str;
@@ -169,23 +155,23 @@ function setLabel(id, str) {
 
 // 現在のフラグを元にポスターのアイコンを表示する
 function showPosterIcons() {
-	var imageSrc;
+	var pic;
 	for (var i = 1; i <= ptotal; i++) {
 		switch (pflag[i]) {
 			case "d":
-				imageSrc = "img/dpic.png";
+				pic = "dpic";
 				break;
 			case "t":
-				imageSrc = "img/tpic.png";
+				pic = "tpic";
 				break;
 			case "s":
-				imageSrc = "img/spic.png";
+				pic = "spic";
 				break;
 			case "e":
-				imageSrc = "img/epic.png";
+				pic = "epic";
 				break;
 		}
-    	document.getElementById("icon" + i).src = imageSrc;
+    	document.getElementById("icon" + i).className = pic;
 	}
 
 	console.log(pflag);
@@ -287,7 +273,7 @@ function searchByTitle(title) {
 		throw new Exception();
 	}
 
-	var posterids = new Array();
+	var posterids = [];
 	var ltitle = title.toLowerCase();
 
 	poster.forEach(function(aPoster) {
@@ -352,7 +338,7 @@ function selectPoster(posterid) {
 		}
 	}
 
-	var authors = new Array();
+	var authors = [];
 	for (var i = 0; i < author.length; i++) {
 		var a = author[i];
 		if (a.posterid === posterid) {
@@ -361,7 +347,7 @@ function selectPoster(posterid) {
 	}
 	sessionStorage.setItem("authors", authors);
 
-	var keywords = new Array();
+	var keywords = [];
 	for (var i = 0; i < keyword.length; i++) {
 		var k = keyword[i];
 		if (k.posterid === posterid) {
@@ -422,23 +408,11 @@ function showBookmarkIcons() {
 			var p = poster[posterid-1];
 			// ポスターのstar属性によって配置する位置を決定する
 			// 1が上で時計回り
-			switch (p.star) {
-				case 1:
-				starelem = document.getElementById("starTopNo" + posterid);
-				break;
-				case 2:
-				starelem = document.getElementById("starRightNo" + posterid);
-				break;
-				case 3:
-				starelem = document.getElementById("starBottomNo" + posterid);
-				break;
-				case 4:
-				starelem = document.getElementById("starLeftNo" + posterid);
-				default:
-				console.log("Error");
-			}
+			var starpos = [null, "Top", "Right", "Bottom", "Left"];
+			starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
+
 			// 該当する星要素を表示する
-			starelem.childNodes[0].style.display = "block";
+			starelem.style.display = "block";
 		}
 
 	}
@@ -463,7 +437,6 @@ function touchBookmark(posterid, bookmarkIcon){
 			break;
 		}
 	}
-
 	var starstatus;
 	if (location !== -1) {
 		// ある場合
@@ -471,8 +444,10 @@ function touchBookmark(posterid, bookmarkIcon){
 		bookmarkArr.splice(location, 1);
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/unbookmark.png";
+			$("#listbookmark" + posterid).attr("src","img/unbookmark.png");
 		}
 		starstatus = "none";
+		saveLog("unbookmark", {posterid:posterid, page:window.location.hash});
 	} else {
 		// ない場合
 		bookmarkArr.push(posterid);
@@ -481,28 +456,17 @@ function touchBookmark(posterid, bookmarkIcon){
     	});
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/bookmark.png";
+			$("#listbookmark" + posterid).attr("src","img/bookmark.png");
 		}
 		starstatus = "block";
+		saveLog("bookmark", {posterid:posterid, page:window.location.hash});
 	}
 
+	var starpos = [null, "Top", "Right", "Bottom", "Left"];
 	if (bookmarkIcon !== null) {
 		var p = poster[posterid-1];
-		switch (p.star) {
-			case 1:
-			starelem = document.getElementById("starTopNo" + posterid);
-			break;
-			case 2:
-			starelem = document.getElementById("starRightNo" + posterid);
-			break;
-			case 3:
-			starelem = document.getElementById("starBottomNo" + posterid);
-			break;
-			case 4:
-			starelem = document.getElementById("starLeftNo" + posterid);
-			default:
-			console.log("Error");
-		}
-		starelem.childNodes[0].style.display = starstatus;
+		starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
+		starelem.style.display = starstatus;
 	}
 
 	bookmarks = bookmarkArr.join(",");
@@ -537,6 +501,7 @@ function searchChanged(bar) {
 		
 		// 検索し、強調表示する
 		console.log("search");
+		saveLog("search", {keyword:bar.value});
 		searchByTitle(bar.value);
 
 		// 検索中フラグを立てる
