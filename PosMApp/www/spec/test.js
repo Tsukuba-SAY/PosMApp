@@ -688,12 +688,12 @@ describe("キーワード検索（タイトル）", function() {
 		initPosterMap();
 	});
 
-	it("「システム」で検索すると4,5,11,14,16,17番のポスターがヒットする", function() {
+	it("「システム」で検索すると14,21,33,43,45,52,54,72,93,94番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [1,4,5,10,11,12,13,14,16];
+		expectArr = [14,21,33,43,45,52,54,72,93,94];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -709,62 +709,73 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「PosMApp」で検索すると13番のポスターがヒットする", function() {
+	it("「YAGO」で検索すると1番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[13] = "s";
+		expectFlag[1] = "s";
 
-		$("#search-bar-title").val("PosMApp");
+		$("#search-bar-title").val("YAGO");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「map」で検索すると8,13番のポスターがヒットする", function() {
+	it("「Twitter」で検索すると19,20,38,53,82番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[8] = "s";
-		expectFlag[13] = "s";
+		expectFlag[19] = "s";
+		expectFlag[20] = "s";
+		expectFlag[38] = "s";
+		expectFlag[53] = "s";
+		expectFlag[82] = "s";
 
-		$("#search-bar-title").val("map");
+		$("#search-bar-title").val("Twitter");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「posmapp」で検索すると13番のポスターがヒットする", function() {
+	it("「twitter」で検索すると19,20,38,53,82番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[13] = "s";
+		expectFlag[19] = "s";
+		expectFlag[20] = "s";
+		expectFlag[38] = "s";
+		expectFlag[53] = "s";
+		expectFlag[82] = "s";
 
-		$("#search-bar-title").val("posmapp");
+		$("#search-bar-title").val("twitter");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「POSMAPP」で検索すると13番のポスターがヒットする", function() {
+	it("「TWITTER」で検索すると19,20,38,53,82番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[13] = "s";
+		expectFlag[19] = "s";
+		expectFlag[20] = "s";
+		expectFlag[38] = "s";
+		expectFlag[53] = "s";
+		expectFlag[82] = "s";
 
-		$("#search-bar-title").val("POSMAPP");
+		$("#search-bar-title").val("TWITTER");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
@@ -845,7 +856,7 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("1番を選択した状態で「PosMApp」で検索すると13番がヒットする", function() {
+	it("1番を選択した状態で「Twitter」で検索すると19,20,38,53,82番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		pflag[1] = "t";
@@ -855,26 +866,30 @@ describe("キーワード検索（タイトル）", function() {
 			expectFlag[i] = "d";
 		}
 		expectFlag[1] = "t";
-		expectFlag[13] = "s";
+		expectFlag[19] = "s";
+		expectFlag[20] = "s";
+		expectFlag[38] = "s";
+		expectFlag[53] = "s";
+		expectFlag[82] = "s";
 
-		$("#search-bar-title").val("PosMApp");
+		$("#search-bar-title").val("Twitter");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("13番を選択した状態で「PosMApp」で検索すると13番がヒットする", function() {
+	it("1番を選択した状態で「YAGO」で検索すると1番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
-		pflag[13] = "t";
+		pflag[1] = "t";
 
 		expectFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[13] = "e";
+		expectFlag[1] = "e";
 
-		$("#search-bar-title").val("PosMApp");
+		$("#search-bar-title").val("YAGO");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
@@ -1455,7 +1470,6 @@ function getAuthors(posterid) {
 		}
 	}
 	authors = authors.join(", ");
-	console.log("hogehogehogehogehoge:", authors);
 	return authors;
 }
 
