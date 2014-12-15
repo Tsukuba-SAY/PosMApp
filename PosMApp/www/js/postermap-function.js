@@ -272,32 +272,32 @@ function changeBasicInfoPanel(flag) {
 
 // タイトルで検索
 // SQLをかけたいのでDBにアクセスしてるけどjsonでも同じことはできる
-function searchByTitle(title) {
+// function searchByTitle(title) {
 
-	if (title.length >= 1024) {
-		throw new Exception();
-	}
+// 	if (title.length >= 1024) {
+// 		throw new Exception();
+// 	}
 
-	var posterids = [];
-	var ltitle = title.toLowerCase();
+// 	var posterids = [];
+// 	var ltitle = title.toLowerCase();
 
-	poster.forEach(function(aPoster) {
-		if (aPoster.title.toLowerCase().indexOf(ltitle) !== -1) {
-			posterids.push(aPoster.id);
-		}
-	});
-	console.log("HIT : " + posterids);
+// 	poster.forEach(function(aPoster) {
+// 		if (aPoster.title.toLowerCase().indexOf(ltitle) !== -1) {
+// 			posterids.push(aPoster.id);
+// 		}
+// 	});
+// 	console.log("HIT : " + posterids);
 
-	emphasisSearchedPosters(posterids);
+// 	emphasisSearchedPosters(posterids);
 
-	if (posterids.length === 0) {
-		document.getElementById("searchResult").innerHTML = "見つかりませんでした";
-	} else {
-		document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
-	}
+// 	if (posterids.length === 0) {
+// 		document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+// 	} else {
+// 		document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
+// 	}
 
-	return pflag;
-}
+// 	return pflag;
+// }
 
 
 // 検索されたポスターを強調表示する
@@ -512,7 +512,8 @@ function searchChanged(bar) {
 		// 検索し、強調表示する
 		console.log("search");
 		saveLog("search", {keyword:bar.value});
-		searchByTitle(bar.value);
+		// searchByTitle(bar.value);
+		searchAll(bar.value);
 
 		// 検索中フラグを立てる
 		sessionStorage.setItem("searching", "true");
@@ -538,6 +539,37 @@ function searchChanged(bar) {
 
 	showPosterIcons();
 	bar.blur();
+}
+
+// 全検索
+function searchAll(word) {
+
+	if (word.length >= 1024) {
+		throw new Exception();
+	}
+
+	var posterids = [];
+	var lword = word.toLowerCase();
+
+	poster.forEach(function(p) {
+		if (p.id.toString().toLowerCase().indexOf(lword) !== -1
+			|| p.sessionid.toLowerCase().indexOf(lword) !== -1
+			|| p.title.toLowerCase().indexOf(lword) !== -1
+			|| p.abstract.toLowerCase().indexOf(lword) !== -1) {
+			posterids.push(p.id);
+		}
+	});
+	console.log("HIT : " + posterids);
+
+	emphasisSearchedPosters(posterids);
+
+	if (posterids.length === 0) {
+		document.getElementById("searchResult").innerHTML = "見つかりませんでした";
+	} else {
+		document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
+	}
+
+	return pflag;
 }
 
 // 代表者名を取得

@@ -704,12 +704,12 @@ describe("キーワード検索（タイトル）", function() {
 		initPosterMap();
 	});
 
-	it("「システム」で検索すると14,21,33,43,45,52,54,72,93,94番のポスターがヒットする", function() {
+	it("「システム」で検索すると14,21,33,43,45,49,51,52,54,59,61,72,93,94番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [14,21,33,43,45,52,54,72,93,94];
+		expectArr = [14,21,33,43,45,49,51,52,54,59,61,72,93,94];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -925,7 +925,7 @@ describe("キーワード検索（タイトル）", function() {
 		}
 
 		expect(function() {
-			searchByTitle(str);
+			searchAll(str);
 			//wait(100);
 		}).toThrow();
 		expect(pflag).toEqual(expectFlag);
