@@ -559,6 +559,12 @@ function searchAll(word) {
 			posterids.push(p.id);
 		}
 	});
+	author.forEach(function(a) {
+		if(a.name.toLowerCase().indexOf(lword) !== -1
+			|| a.belongs.toLowerCase().indexOf(lword) !== -1) {
+			posterids.push(a.posterid);
+		}
+	})
 	console.log("HIT : " + posterids);
 
 	emphasisSearchedPosters(posterids);
