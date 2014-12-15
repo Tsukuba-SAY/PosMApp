@@ -41,7 +41,7 @@ function init() {
 	if (sessionStorage.getItem("searching") === "true") {
 		//document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
 		$("#search-bar-title").attr("value", sessionStorage.getItem("searchWord"));
-		searchByTitle(sessionStorage.getItem("searchWord"));
+		searchAll(sessionStorage.getItem("searchWord"));
 	}
 
 	// もしLocal Storageにbookmarksがなければ追加
