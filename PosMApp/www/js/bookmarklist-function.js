@@ -68,7 +68,8 @@ $.fn.bookmarklistToMapPage = function() {
 		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 		listToMap(posterid);
-		searchByTitle(sessionStorage.getItem("searchWord"));
+		// searchByTitle(sessionStorage.getItem("searchWord"));
+		searchAll(sessionStorage.getItem("searchWord"));
 	});
 };
 
