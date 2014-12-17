@@ -158,7 +158,7 @@ var author =
 {"posterid":7,"name":"本藤 祐樹","belongs":"横浜国立大学","first":0},
 {"posterid":8,"name":"武田 十季","belongs":"九州大学","first":1},
 {"posterid":8,"name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"posterid":9,"name":"王 元元","belongs":"角谷 和俊","first":1},
+{"posterid":9,"name":"王 元元","belongs":"兵庫県立大学","first":1},
 {"posterid":9,"name":"河合 由起子","belongs":"京都産業大学","first":0},
 {"posterid":9,"name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
 {"posterid":10,"name":"顔 洪","belongs":"九州大学","first":1},
