@@ -493,22 +493,28 @@ var author =
 var keyword =
 
 [
-{"posterid":1,"keyword":"ライトウェイトコース"},
-{"posterid":2,"keyword":"ライトウェイトコース"},
-{"posterid":3,"keyword":"ライトウェイトコース"},
-{"posterid":4,"keyword":"ライトウェイトコース"},
-{"posterid":5,"keyword":"スタンダードコース"},
-{"posterid":6,"keyword":"スタンダードコース"},
-{"posterid":7,"keyword":"スタンダードコース"},
-{"posterid":8,"keyword":"スタンダードコース"},
-{"posterid":9,"keyword":"スタンダードコース"},
-{"posterid":10,"keyword":"スタンダードコース"},
-{"posterid":11,"keyword":"スタンダードコース"},
-{"posterid":12,"keyword":"スタンダードコース"},
-{"posterid":13,"keyword":"スタンダードコース（高度IT）"},
-{"posterid":14,"keyword":"スタンダードコース（高度IT）"},
-{"posterid":15,"keyword":"スタンダードコース（高度IT）"},
-{"posterid":16,"keyword":"スタンダードコース（高度IT）"},
-{"posterid":17,"keyword":"スタンダードコース（高度IT）"}]
+{"posterid":97,"keyword":"ダミーポスター"},
+{"posterid":98,"keyword":"ダミーポスター"},
+{"posterid":99,"keyword":"ダミーポスター"},
+{"posterid":100,"keyword":"ダミーポスター"},
+{"posterid":101,"keyword":"ダミーポスター"},
+{"posterid":102,"keyword":"ダミーポスター"},
+{"posterid":103,"keyword":"ダミーポスター"},
+{"posterid":104,"keyword":"ダミーポスター"},
+{"posterid":105,"keyword":"ダミーポスター"},
+{"posterid":106,"keyword":"ダミーポスター"},
+{"posterid":107,"keyword":"ダミーポスター"},
+{"posterid":108,"keyword":"ダミーポスター"},
+{"posterid":109,"keyword":"ダミーポスター"},
+{"posterid":110,"keyword":"ダミーポスター"},
+{"posterid":111,"keyword":"ダミーポスター"},
+{"posterid":112,"keyword":"ダミーポスター"},
+{"posterid":113,"keyword":"ダミーポスター"},
+{"posterid":114,"keyword":"ダミーポスター"},
+{"posterid":115,"keyword":"ダミーポスター"},
+{"posterid":116,"keyword":"ダミーポスター"},
+{"posterid":117,"keyword":"ダミーポスター"},
+{"posterid":118,"keyword":"ダミーポスター"}
+]
 
 ;

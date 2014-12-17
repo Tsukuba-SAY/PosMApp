@@ -173,6 +173,40 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(1));
 	});
 
+	it("デフォルトの状態で97番目のポスターをタップすると97番目の情報が取得できる", function() {
+		
+		//var poster.length=poster.length;
+		var beforeFlag = new Array(poster.length+1);
+		var expectFlag = new Array(poster.length+1);
+		var posterid = 97;
+
+		beforeFlag[0] = null;
+		for (var i = 1; i <= poster.length; i++) {
+			beforeFlag[i] = "d";
+		}
+
+		expectFlag[0] = null;
+		for (var i = 1; i <= poster.length; i++) {
+			expectFlag[i] = "d";
+		}
+		expectFlag[97] = "t";
+
+		expect(pflag).toEqual(beforeFlag);
+
+		$("#icon" + posterid).touchPoster();
+		$("#icon" + posterid).trigger("touchstart");
+
+		expect(pflag).toEqual(expectFlag);
+		expect(sessionStorage.getItem("posterid")).toEqual(poster[96].id.toString());
+		expect(sessionStorage.getItem("sessionid")).toEqual(poster[96].sessionid);
+		expect(sessionStorage.getItem("title")).toEqual(poster[96].title);
+		expect(sessionStorage.getItem("abstract")).toEqual(poster[96].abstract);
+		expect(sessionStorage.getItem("authorname")).toEqual(getAuthorname(poster[96].id));
+		expect(sessionStorage.getItem("authorbelongs")).toEqual(getAuthorbelongs(poster[96].id));
+		expect(sessionStorage.getItem("authors")).toEqual(getAuthors(97));
+		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(97));
+	});
+
 	it("1番を選択中に2番を選択すると、2番の情報が取得できる", function() {
 		var beforeFlag = new Array(poster.length+1);
 		var expectFlag = new Array(poster.length+1);
@@ -720,6 +754,48 @@ describe("キーワード検索（タイトル）", function() {
 		}
 		
 		$("#search-bar-title").val("システム");
+		$("#search-bar-title").trigger("change");
+
+		expect(pflag).toEqual(expectFlag);
+	});
+
+	it("「佐藤」で検索すると13,16,37,50,70,93番のポスターがヒットする", function() {
+
+		var expectFlag = new Array(poster.length+1);
+
+		expectFlag[0] = null;
+		expectArr = [13,16,37,50,70,93];
+
+		for (var i = 1; i <= poster.length; i++) {
+			if ($.inArray(i, expectArr) !== -1) {
+				expectFlag[i] = "s";
+			} else {
+				expectFlag[i] = "d";
+			}
+		}
+		
+		$("#search-bar-title").val("佐藤");
+		$("#search-bar-title").trigger("change");
+
+		expect(pflag).toEqual(expectFlag);
+	});
+
+	it("「ダミーポスター」で検索すると97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118番のポスターがヒットする", function() {
+
+		var expectFlag = new Array(poster.length+1);
+
+		expectFlag[0] = null;
+		expectArr = [97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118];
+
+		for (var i = 1; i <= poster.length; i++) {
+			if ($.inArray(i, expectArr) !== -1) {
+				expectFlag[i] = "s";
+			} else {
+				expectFlag[i] = "d";
+			}
+		}
+		
+		$("#search-bar-title").val("ダミーポスター");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
