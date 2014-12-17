@@ -565,7 +565,7 @@ function searchAll(word) {
 	});
 	keyword.forEach(function(k) {
 		if(k.keyword.toLowerCase().indexOf(lword) !== -1) {
-			posterids.push(a.posterid);
+			posterids.push(k.posterid);
 		}
 	});
 	console.log("HIT : " + posterids);
