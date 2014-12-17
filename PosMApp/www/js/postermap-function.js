@@ -178,8 +178,6 @@ function showPosterIcons() {
 		}
     	document.getElementById("icon" + i).className = pic;
 	}
-
-	console.log(pflag);
 }
 
 
@@ -564,7 +562,12 @@ function searchAll(word) {
 			|| a.belongs.toLowerCase().indexOf(lword) !== -1) {
 			posterids.push(a.posterid);
 		}
-	})
+	});
+	keyword.forEach(function(k) {
+		if(k.keyword.toLowerCase().indexOf(lword) !== -1) {
+			posterids.push(a.posterid);
+		}
+	});
 	console.log("HIT : " + posterids);
 
 	emphasisSearchedPosters(posterids);
