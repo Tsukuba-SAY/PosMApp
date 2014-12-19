@@ -101,6 +101,7 @@ function setPosterIcons() {
 	
 	var ptotal = poster.length;
 	for (var i = 1; i <= ptotal; i++) {
+
 		iconWidth = position[position_map[i-1]].width*INIT_SCALE;
 		iconHeight = position[position_map[i-1]].height*INIT_SCALE;
 
@@ -109,7 +110,7 @@ function setPosterIcons() {
 		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[position_map[i-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'></div>\n";
-		str += "		<div class='" + position[position_map[i-1]].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
+		str += "		<div class='" + position[position_map[i-1]].direction + "' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
 		str += "	</div>\n";
 
 		pos = starpos[poster[i-1].star];
@@ -121,6 +122,7 @@ function setPosterIcons() {
 }
 
 // ラベルを変更する
+// FIXME
 function changeLabel(column) {
 	// Session Storageに対応する属性の値をセットする
 	sessionStorage.setItem("label", column);
@@ -238,7 +240,7 @@ function changeBasicInfoPanel(flag) {
 		// "No. " 
 		// + sessionStorage.getItem("posterid")+
 		 " ["
-		+ sessionStorage.getItem("sessionid")
+		+ sessionStorage.getItem("presenid")
 		+ "]<br />"
 		+ sessionStorage.getItem("title")
 		+ "<br />代表者名： "
@@ -327,11 +329,31 @@ function emphasisSearchedPosters(posterids) {
 // ポスターを選択する
 function selectPoster(posterid) {
 
-	for (var i = 0; i < ptotal; i++) {
-		var p = poster[i];
-		if (p.id === posterid) {
+	// for (var i = 0; i < ptotal; i++) {
+	// 	var p = poster[i];
+	// 	if (p.id === posterid) {
+	// 		sessionStorage.setItem("posterid", posterid);
+	// 		sessionStorage.setItem("sessionid", p.sessionid);
+	// 		sessionStorage.setItem("title", p.title);
+	// 		sessionStorage.setItem("abstract", p.abstract);
+
+	// 		sessionStorage.setItem("authorname", getAuthorname(posterid));
+
+	// 		sessionStorage.setItem("authorbelongs", getAuthorbelongs(posterid));
+
+	// 		sessionStorage.setItem("bookmark", p.bookmark);
+	// 		sessionStorage.setItem("star", p.star);
+	// 	}
+	// }
+
+	// posterに含まれているidが必ず連番になっていなければならない
+	var presenid = poster[posterid-1];
+	var presenlength = presen.length;
+	for (var i = 0; i < presenlength; i++) {
+		var p = presen[i];
+		if (p.presenid = presenid) {
 			sessionStorage.setItem("posterid", posterid);
-			sessionStorage.setItem("sessionid", p.sessionid);
+			sessionStorage.setItem("presenid", p.presenid);
 			sessionStorage.setItem("title", p.title);
 			sessionStorage.setItem("abstract", p.abstract);
 
@@ -340,14 +362,16 @@ function selectPoster(posterid) {
 			sessionStorage.setItem("authorbelongs", getAuthorbelongs(posterid));
 
 			sessionStorage.setItem("bookmark", p.bookmark);
-			sessionStorage.setItem("star", p.star);
+			sessionStorage.setItem("star", poster[posterid-1].star);
 		}
 	}
 
+
 	var authors = [];
-	for (var i = 0; i < author.length; i++) {
+	var authorlength = author.length
+	for (var i = 0; i < authorlength; i++) {
 		var a = author[i];
-		if (a.posterid === posterid) {
+		if (a.presenid === presenid) {
 			authors.push(a.name);
 		}
 	}
@@ -355,9 +379,10 @@ function selectPoster(posterid) {
 	sessionStorage.setItem("authors", authors);
 
 	var keywords = [];
-	for (var i = 0; i < keyword.length; i++) {
+	var keywordlength = keyword.length
+	for (var i = 0; i < keywordlength; i++) {
 		var k = keyword[i];
-		if (k.posterid === posterid) {
+		if (k.presenid === presenid) {
 			keywords.push(k.keyword);
 		}
 	}
@@ -393,7 +418,7 @@ function resetAllIcons() {
 // Session Storageに保存されているポスターの情報を消去する
 function removeAllPosterInfo() {
 	sessionStorage.removeItem("posterid");
-	sessionStorage.removeItem("sessionid");
+	sessionStorage.removeItem("presenid");
 	sessionStorage.removeItem("title");
 	sessionStorage.removeItem("abstract");
 	sessionStorage.removeItem("authorname");
@@ -550,8 +575,7 @@ function searchAll(word) {
 	var lword = word.toLowerCase();
 
 	poster.forEach(function(p) {
-		if (p.id.toString().toLowerCase().indexOf(lword) !== -1
-			|| p.sessionid.toLowerCase().indexOf(lword) !== -1
+		if (p.presenid.toLowerCase().indexOf(lword) !== -1
 			|| p.title.toLowerCase().indexOf(lword) !== -1
 			|| p.abstract.toLowerCase().indexOf(lword) !== -1) {
 			posterids.push(p.id);
@@ -584,14 +608,14 @@ function searchAll(word) {
 // 代表者名を取得
 function getAuthorname(posterid) {
 	return author.filter(function(a) {
-		return a.posterid === posterid && a.first === 1;
+		return a.presenid === poster[posterid-1].presenid && a.first === 1;
 	})[0].name;
 }
 
 // 所属一覧を取得
 function getAuthorbelongs(posterid) {
 	return author.filter(function(a) {
-		return a.posterid === posterid;
+		return a.presenid === poster[posterid-1].presenid;
 	}).map(function(a) {
 		return a.belongs;
 	}).filter(function(a, i, self) {
@@ -602,7 +626,7 @@ function getAuthorbelongs(posterid) {
 //ポスターの発表者を取得
 function getAuthors(posterid) {
 	return author.filter(function(a) {
-		return a.posterid === posterid;
+		return a.presenid === poster[posterid-1].presenid;
 	}).map(function(a) {
 		return a.name;
 	}).join(", ");
@@ -611,7 +635,7 @@ function getAuthors(posterid) {
 //ポスターのキーワードを取得
 function getKeywords(posterid) {
 	return keyword.filter(function(k) {
-		return k.posterid === posterid;
+		return k.presenid === poster[posterid-1].presenid;
 	}).map(function(k) {
 		return k.keyword;
 	}).join(", ");
