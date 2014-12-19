@@ -81,9 +81,9 @@ $.fn.changeLabel = function() {
 // ブックマークスターのタッチイベント
 $.fn.touchBookmark = function() {
 	$(this).on("touchstart", function(e) {
-		var posterid = parseInt(sessionStorage.getItem("posterid"));
+		var presenid = sessionStorage.getItem("presenid");
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		touchBookmark(posterid, bookmarkIcon);
+		touchBookmark(presenid, bookmarkIcon);
 	});	
 };
 
@@ -101,6 +101,7 @@ function setPosterIcons() {
 	
 	var ptotal = poster.length;
 	for (var i = 1; i <= ptotal; i++) {
+
 		iconWidth = position[position_map[i-1]].width*INIT_SCALE;
 		iconHeight = position[position_map[i-1]].height*INIT_SCALE;
 
@@ -109,7 +110,7 @@ function setPosterIcons() {
 		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[position_map[i-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 		str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'></div>\n";
-		str += "		<div class='" + position[position_map[i-1]].direction + "' id='font" + i + "'>" + poster[i-1].sessionid + "</div>\n";
+		str += "		<div class='" + position[position_map[i-1]].direction + "' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
 		str += "	</div>\n";
 
 		pos = starpos[poster[i-1].star];
@@ -121,6 +122,7 @@ function setPosterIcons() {
 }
 
 // ラベルを変更する
+// FIXME
 function changeLabel(column) {
 	// Session Storageに対応する属性の値をセットする
 	sessionStorage.setItem("label", column);
@@ -132,9 +134,9 @@ function changeLabel(column) {
 	for (var i = 1; i <= ptotal; i++) {
 		var str;
 		if (column === "authorname") {
-			str = getAuthorname(i);
+			str = getAuthorname(poster[i-1].presenid);
 		} else if (column === "authorbelongs") {
-			str = getAuthorbelongs(i);
+			str = getAuthorbelongs(poster[i-1].presenid);
 		} else {
 			str = poster[i - 1][column].toString();
 		}
@@ -238,7 +240,7 @@ function changeBasicInfoPanel(flag) {
 		// "No. " 
 		// + sessionStorage.getItem("posterid")+
 		 " ["
-		+ sessionStorage.getItem("sessionid")
+		+ sessionStorage.getItem("presenid")
 		+ "]<br />"
 		+ sessionStorage.getItem("title")
 		+ "<br />代表者名： "
@@ -252,15 +254,16 @@ function changeBasicInfoPanel(flag) {
 		bookmarks = "";
 	}
 	var bookmarkArr = bookmarks.split(",");
-	var foundBookmark = false;
-	console.log(sessionStorage.getItem("posterid"));
-	for (var i = 0; i < bookmarkArr.length; i++) {
-		if (parseInt(sessionStorage.getItem("posterid")) === parseInt(bookmarkArr[i])) {
-			foundBookmark = true;
-			break;
-		}
-	}
-	if (foundBookmark) {
+	var presenid = sessionStorage.getItem("presenid");
+	// console.log(sessionStorage.getItem("presenid"));
+	// for (var i = 0; i < bookmarkArr.length; i++) {
+	// 	if (parseInt(sessionStorage.getItem("posterid")) === parseInt(bookmarkArr[i])) {
+	// 		foundBookmark = true;
+	// 		break;
+	// 	}
+	// }
+
+	if (bookmarkArr.indexOf(presenid) !== -1) {
 		bookmarkIcon.src = "img/bookmark.png";
 	} else {
 		bookmarkIcon.src = "img/unbookmark.png";
@@ -327,27 +330,49 @@ function emphasisSearchedPosters(posterids) {
 // ポスターを選択する
 function selectPoster(posterid) {
 
-	for (var i = 0; i < ptotal; i++) {
-		var p = poster[i];
-		if (p.id === posterid) {
+	// for (var i = 0; i < ptotal; i++) {
+	// 	var p = poster[i];
+	// 	if (p.id === posterid) {
+	// 		sessionStorage.setItem("posterid", posterid);
+	// 		sessionStorage.setItem("sessionid", p.sessionid);
+	// 		sessionStorage.setItem("title", p.title);
+	// 		sessionStorage.setItem("abstract", p.abstract);
+
+	// 		sessionStorage.setItem("authorname", getAuthorname(posterid));
+
+	// 		sessionStorage.setItem("authorbelongs", getAuthorbelongs(posterid));
+
+	// 		sessionStorage.setItem("bookmark", p.bookmark);
+	// 		sessionStorage.setItem("star", p.star);
+	// 	}
+	// }
+
+	// posterに含まれているidが必ず連番になっていなければならない
+	var presenid = poster[posterid-1].presenid;
+	var presenlength = presen.length;
+	for (var i = 0; i < presenlength; i++) {
+		var p = presen[i];
+		if (p.presenid === presenid) {
 			sessionStorage.setItem("posterid", posterid);
-			sessionStorage.setItem("sessionid", p.sessionid);
+			sessionStorage.setItem("presenid", p.presenid);
 			sessionStorage.setItem("title", p.title);
 			sessionStorage.setItem("abstract", p.abstract);
 
-			sessionStorage.setItem("authorname", getAuthorname(posterid));
+			sessionStorage.setItem("authorname", getAuthorname(p.presenid));
 
-			sessionStorage.setItem("authorbelongs", getAuthorbelongs(posterid));
+			sessionStorage.setItem("authorbelongs", getAuthorbelongs(p.presenid));
 
 			sessionStorage.setItem("bookmark", p.bookmark);
-			sessionStorage.setItem("star", p.star);
+			sessionStorage.setItem("star", poster[posterid-1].star);
 		}
 	}
 
+
 	var authors = [];
-	for (var i = 0; i < author.length; i++) {
+	var authorlength = author.length
+	for (var i = 0; i < authorlength; i++) {
 		var a = author[i];
-		if (a.posterid === posterid) {
+		if (a.presenid === presenid) {
 			authors.push(a.name);
 		}
 	}
@@ -355,9 +380,10 @@ function selectPoster(posterid) {
 	sessionStorage.setItem("authors", authors);
 
 	var keywords = [];
-	for (var i = 0; i < keyword.length; i++) {
+	var keywordlength = keyword.length
+	for (var i = 0; i < keywordlength; i++) {
 		var k = keyword[i];
-		if (k.posterid === posterid) {
+		if (k.presenid === presenid) {
 			keywords.push(k.keyword);
 		}
 	}
@@ -393,7 +419,7 @@ function resetAllIcons() {
 // Session Storageに保存されているポスターの情報を消去する
 function removeAllPosterInfo() {
 	sessionStorage.removeItem("posterid");
-	sessionStorage.removeItem("sessionid");
+	sessionStorage.removeItem("presenid");
 	sessionStorage.removeItem("title");
 	sessionStorage.removeItem("abstract");
 	sessionStorage.removeItem("authorname");
@@ -428,23 +454,16 @@ function showBookmarkIcons() {
 
 
 // ブックマークスターをタッチする（状態のスイッチ）
-function touchBookmark(posterid, bookmarkIcon){
-	if (posterid < 1 || posterid > ptotal || posterid === null) {
-		throw new Exception();
-	}
+function touchBookmark(presenid, bookmarkIcon){
+	// if (posterid < 1 || posterid > ptotal || posterid === null) {
+	// 	throw new Exception();
+	// }
 
-	// posteridに該当するポスターがブックマークリストに存在しているか確認用
-	// -1だと無し、-1以外だと発見したポスターのインデックス
-	var location = -1;
-
+	// var presenid = poster[posterid-1].presenid;
 	var bookmarkArr = getBookmarks();
-	for (var i = 0; i < bookmarkArr.length; i++) {
-		//該当ポスターがブックマークリストに存在しているかどうか確認する
-		if (posterid === parseInt(bookmarkArr[i])) {
-			location = i;
-			break;
-		}
-	}
+	// posteridに該当するポスターがブックマークリストに存在しているか確認用
+	var location = bookmarkArr.indexOf(presenid);
+
 	var starstatus;
 	if (location !== -1) {
 		// ある場合
@@ -452,26 +471,24 @@ function touchBookmark(posterid, bookmarkIcon){
 		bookmarkArr.splice(location, 1);
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/unbookmark.png";
-			$("#listbookmark" + posterid).attr("src","img/unbookmark.png");
+			$("#listbookmark" + presenid).attr("src","img/unbookmark.png");
 		}
 		starstatus = "none";
 		saveLog("unbookmark", {posterid:posterid, page:window.location.hash});
 	} else {
 		// ない場合
-		bookmarkArr.push(posterid);
-		bookmarkArr.sort(function(a,b){
-    		return (parseInt(a) < parseInt(b)) ? -1 : 1;
-    	});
+		bookmarkArr.push(presenid);
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/bookmark.png";
-			$("#listbookmark" + posterid).attr("src","img/bookmark.png");
+			$("#listbookmark" + presenid).attr("src","img/bookmark.png");
 		}
 		starstatus = "block";
-		saveLog("bookmark", {posterid:posterid, page:window.location.hash});
+		saveLog("bookmark", {presenid:presenid, page:window.location.hash});
 	}
 
 	var starpos = [null, "Top", "Right", "Bottom", "Left"];
 	if (bookmarkIcon !== null) {
+		var posterid = getPosterid(presenid);
 		var p = poster[posterid-1];
 		starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
 		starelem.style.display = starstatus;
@@ -484,19 +501,11 @@ function touchBookmark(posterid, bookmarkIcon){
 }
 
 
-// ブックマークされたポスターIDを数値の配列で取得する
+// ブックマークされた発表IDを配列で取得する
 function getBookmarks() {
 	var bookmarks = localStorage.getItem("bookmarks");
 	// 空文字列だった場合は何もブックマークされていないので空配列
 	var bookmarkArr = (bookmarks !== "" && bookmarks !== null) ? bookmarks.split(",") : [];
-	// 中身をすべて数値にする
-	bookmarkArr.filter(function(obj) {
-		return parseInt(obj);
-	});
-	// ソート
-	bookmarkArr.sort(function(a,b){
-    	return (parseInt(a) < parseInt(b)) ? -1 : 1;
-    });
 
 	return bookmarkArr;
 }
@@ -549,23 +558,28 @@ function searchAll(word) {
 	var posterids = [];
 	var lword = word.toLowerCase();
 
-	poster.forEach(function(p) {
-		if (p.id.toString().toLowerCase().indexOf(lword) !== -1
-			|| p.sessionid.toLowerCase().indexOf(lword) !== -1
+	presen.forEach(function(p) {
+		if (p.presenid.toLowerCase().indexOf(lword) !== -1
 			|| p.title.toLowerCase().indexOf(lword) !== -1
 			|| p.abstract.toLowerCase().indexOf(lword) !== -1) {
-			posterids.push(p.id);
+			posterids.push(getPosterid(p.presenid));
 		}
 	});
 	author.forEach(function(a) {
 		if(a.name.toLowerCase().indexOf(lword) !== -1
 			|| a.belongs.toLowerCase().indexOf(lword) !== -1) {
-			posterids.push(a.posterid);
+			posterids.push(getPosterid(a.presenid));
 		}
 	});
 	keyword.forEach(function(k) {
 		if(k.keyword.toLowerCase().indexOf(lword) !== -1) {
-			posterids.push(k.posterid);
+			posterids.push(getPosterid(k.presenid));
+		}
+	});
+	// ポスターがあるやつ以外を削除
+	posterids.some(function(posterid, i) {
+		if (posterid === -1) {
+			posterids.splice(i, 1);
 		}
 	});
 	console.log("HIT : " + posterids);
@@ -581,17 +595,37 @@ function searchAll(word) {
 	return pflag;
 }
 
+// 詳細情報をsessionStorageにセット
+function setDetails() {
+	$("#detail-posterid").html(sessionStorage.getItem("posterid"));
+	$("#detail-presenid").html(sessionStorage.getItem("presenid"));
+	$("#detail-title").html(sessionStorage.getItem("title"));
+	var authors = sessionStorage.getItem("authors");
+	authors = (authors !== null && authors !== "")
+		? authors
+		: "NO DATA";
+	$("#detail-authors").html(authors);
+	$("#detail-authorbelongs").html(sessionStorage.getItem("authorbelongs"));
+	$("#detail-authorname").html(sessionStorage.getItem("authorname"));
+	var keywords = sessionStorage.getItem("keywords");
+	keywords = keywords !== null && keywords !== "" 
+		? keywords
+		: "NO DATA";
+	$("#detail-keywords").html(keywords);
+	$("#detail-abstract").html(sessionStorage.getItem("abstract"));
+}
+
 // 代表者名を取得
-function getAuthorname(posterid) {
+function getAuthorname(presenid) {
 	return author.filter(function(a) {
-		return a.posterid === posterid && a.first === 1;
+		return a.presenid === presenid && a.first === 1;
 	})[0].name;
 }
 
 // 所属一覧を取得
-function getAuthorbelongs(posterid) {
+function getAuthorbelongs(presenid) {
 	return author.filter(function(a) {
-		return a.posterid === posterid;
+		return a.presenid === presenid;
 	}).map(function(a) {
 		return a.belongs;
 	}).filter(function(a, i, self) {
@@ -599,20 +633,32 @@ function getAuthorbelongs(posterid) {
 	}).join(", ");
 }
 
-//ポスターの発表者を取得
-function getAuthors(posterid) {
+// 発表者を取得
+function getAuthors(presenid) {
 	return author.filter(function(a) {
-		return a.posterid === posterid;
+		return a.presenid === presenid;
 	}).map(function(a) {
 		return a.name;
 	}).join(", ");
 }
 
-//ポスターのキーワードを取得
-function getKeywords(posterid) {
+// キーワードを取得
+function getKeywords(presenid) {
 	return keyword.filter(function(k) {
-		return k.posterid === posterid;
+		return k.presenid === presenid;
 	}).map(function(k) {
 		return k.keyword;
 	}).join(", ");
+}
+
+// 発表IDからポスターIDを取得するfunction
+// return ある場合posterid、ない場合-1
+function getPosterid(presenid) {
+	var posterid = -1;
+	poster.forEach(function(p) {
+		if (p.presenid === presenid) {
+			posterid = p.posterid;
+		}
+	});
+	return posterid;
 }
