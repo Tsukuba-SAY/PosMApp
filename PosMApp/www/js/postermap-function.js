@@ -556,22 +556,28 @@ function searchAll(word) {
 	var posterids = [];
 	var lword = word.toLowerCase();
 
-	poster.forEach(function(p) {
+	presen.forEach(function(p) {
 		if (p.presenid.toLowerCase().indexOf(lword) !== -1
 			|| p.title.toLowerCase().indexOf(lword) !== -1
 			|| p.abstract.toLowerCase().indexOf(lword) !== -1) {
-			posterids.push(p.id);
+			posterids.push(getPosterid(p.presenid));
 		}
 	});
 	author.forEach(function(a) {
 		if(a.name.toLowerCase().indexOf(lword) !== -1
 			|| a.belongs.toLowerCase().indexOf(lword) !== -1) {
-			posterids.push(a.posterid);
+			posterids.push(getPosterid(a.presenid));
 		}
 	});
 	keyword.forEach(function(k) {
 		if(k.keyword.toLowerCase().indexOf(lword) !== -1) {
-			posterids.push(k.posterid);
+			posterids.push(getPosterid(k.presenid));
+		}
+	});
+	// ポスターがあるやつ以外を削除
+	posterids.some(function(posterid, i) {
+		if (posterid === -1) {
+			posterids.splice(i, 1);
 		}
 	});
 	console.log("HIT : " + posterids);
@@ -641,4 +647,16 @@ function getKeywords(presenid) {
 	}).map(function(k) {
 		return k.keyword;
 	}).join(", ");
+}
+
+// 発表IDからポスターIDを取得するfunction
+// return ある場合posterid、ない場合-1
+function getPosterid(presenid) {
+	var posterid = -1;
+	poster.forEach(function(p) {
+		if (p.presenid === presenid) {
+			posterid = p.posterid;
+		}
+	});
+	return posterid;
 }

@@ -132,15 +132,3 @@ $.fn.listchangebookmark = function() {
 		touchBookmark(posterid, bookmarkIcon);
 	});
 };
-
-// 発表IDからポスターIDを取得するfunction
-// return ある場合posterid、ない場合-1
-function getPosterid(presenid) {
-	var posterid = -1;
-	poster.forEach(function(p) {
-		if (p.presenid === presenid) {
-			posterid = p.posterid;
-		}
-	});
-	return posterid;
-}
