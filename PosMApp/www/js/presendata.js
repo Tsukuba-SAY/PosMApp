@@ -126,7 +126,8 @@ var presen =
 {"presenid":"X3-25","title":"謎のX","abstract":"NO DATA","bookmark":0}
 ];
 
-var presents = [
+var presents = 
+[
 {"sessionid":"A1","presenid":"A1-1"},
 {"sessionid":"A1","presenid":"A1-2"},
 {"sessionid":"A1","presenid":"A1-4"},
@@ -247,519 +248,635 @@ var presents = [
 {"sessionid":"X3","presenid":"X3-25"}
 ];
 
-var session = [];
+var session = 
+[
+{"sessionid":"A1","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"B1","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"C1","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"D1","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"E1","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"F1","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"A2","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"B2","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"C2","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"D2","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"E2","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"F2","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"A3","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"B3","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"C3","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"D3","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"E3","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"F3","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"A4","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"B4","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"C4","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"D4","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"E4","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"F4","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"A5","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"B5","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"C5","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"D5","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"E5","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"F5","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"A6","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"B6","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"C6","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"D6","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"E6","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"F6","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"B7","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"C7","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"D7","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"E7","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"F7","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"A8","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"B8","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"C8","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"D8","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"E8","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"F8","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"A9","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"B9","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"C9","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"D9","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"E9","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"F9","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"P1","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"P2","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"P3","title":"NO DATA","chairpersonname":"NO DATA","chairpersonbelongs":"NO DATA"},
+{"sessionid":"X3","title":"ダミーセッション","chairpersonname":"Xさん","chairpersonbelongs":"X大学"}
+];
 
-var commentator = [];
+var commentator =
+[
+{"sessionid":"A1","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"B1","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"C1","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"D1","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"E1","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"F1","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"A2","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"B2","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"C2","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"D2","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"E2","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"F2","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"A3","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"B3","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"C3","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"D3","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"E3","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"F3","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"A4","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"B4","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"C4","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"D4","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"E4","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"F4","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"A5","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"B5","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"C5","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"D5","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"E5","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"F5","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"A6","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"B6","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"C6","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"D6","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"E6","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"F6","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"B7","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"C7","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"D7","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"E7","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"F7","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"A8","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"B8","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"C8","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"D8","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"E8","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"F8","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"A9","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"B9","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"C9","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"D9","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"E9","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"F9","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"P1","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"P2","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"P3","name":"NO DATA","belongs":"NO DATA"},
+{"sessionid":"X3","name":"Xさん","belongs":"X大学"}
+];
 
 var poster = 
-
-[{"posterid":1,"presenid":"A1-1","star":1}
-{"posterid":2,"presenid":"A1-2","star":1}
-{"posterid":3,"presenid":"A1-4","star":1}
-{"posterid":4,"presenid":"A2-2","star":1}
-{"posterid":5,"presenid":"A2-3","star":1}
-{"posterid":6,"presenid":"A2-4","star":1}
-{"posterid":7,"presenid":"A2-5","star":1}
-{"posterid":8,"presenid":"A4-1","star":1}
-{"posterid":9,"presenid":"A4-2","star":1}
-{"posterid":10,"presenid":"A4-3","star":1}
-{"posterid":11,"presenid":"A4-4","star":1}
-{"posterid":12,"presenid":"A4-5","star":1}
-{"posterid":13,"presenid":"B1-1","star":1}
-{"posterid":14,"presenid":"B1-2","star":1}
-{"posterid":15,"presenid":"B2-2","star":1}
-{"posterid":16,"presenid":"B2-4","star":1}
-{"posterid":17,"presenid":"B2-5","star":1}
-{"posterid":18,"presenid":"B2-6","star":1}
-{"posterid":19,"presenid":"B3-3","star":1}
-{"posterid":20,"presenid":"B3-4","star":1}
-{"posterid":21,"presenid":"B3-5","star":1}
-{"posterid":22,"presenid":"B3-6","star":1}
-{"posterid":23,"presenid":"B4-1","star":1}
-{"posterid":24,"presenid":"B4-2","star":1}
-{"posterid":25,"presenid":"B4-3","star":1}
-{"posterid":26,"presenid":"B4-4","star":1}
-{"posterid":27,"presenid":"B4-5","star":1}
-{"posterid":28,"presenid":"C1-2","star":1}
-{"posterid":29,"presenid":"C1-3","star":1}
-{"posterid":30,"presenid":"C1-5","star":1}
-{"posterid":31,"presenid":"C1-6","star":1}
-{"posterid":32,"presenid":"C2-4","star":1}
-{"posterid":33,"presenid":"C3-1","star":1}
-{"posterid":34,"presenid":"C3-2","star":1}
-{"posterid":35,"presenid":"C3-3","star":1}
-{"posterid":36,"presenid":"C3-4","star":1}
-{"posterid":37,"presenid":"C4-1","star":1}
-{"posterid":38,"presenid":"C4-2","star":1}
-{"posterid":39,"presenid":"C4-3","star":1}
-{"posterid":40,"presenid":"D1-3","star":1}
-{"posterid":41,"presenid":"D1-4","star":1}
-{"posterid":42,"presenid":"D1-5","star":1}
-{"posterid":43,"presenid":"D1-6","star":1}
-{"posterid":44,"presenid":"D2-1","star":1}
-{"posterid":45,"presenid":"D2-5","star":1}
-{"posterid":46,"presenid":"D4-1","star":1}
-{"posterid":47,"presenid":"D4-2","star":1}
-{"posterid":48,"presenid":"D4-3","star":1}
-{"posterid":49,"presenid":"E1-1","star":1}
-{"posterid":50,"presenid":"E1-2","star":1}
-{"posterid":51,"presenid":"E1-3","star":1}
-{"posterid":52,"presenid":"E1-4","star":1}
-{"posterid":53,"presenid":"E1-5","star":1}
-{"posterid":54,"presenid":"E1-6","star":1}
-{"posterid":55,"presenid":"E2-1","star":1}
-{"posterid":56,"presenid":"E2-2","star":1}
-{"posterid":57,"presenid":"E2-3","star":1}
-{"posterid":58,"presenid":"E2-4","star":1}
-{"posterid":59,"presenid":"E3-2","star":1}
-{"posterid":60,"presenid":"E3-3","star":1}
-{"posterid":61,"presenid":"E3-4","star":1}
-{"posterid":62,"presenid":"E3-6","star":1}
-{"posterid":63,"presenid":"E4-1","star":1}
-{"posterid":64,"presenid":"E4-2","star":1}
-{"posterid":65,"presenid":"E4-3","star":1}
-{"posterid":66,"presenid":"E4-4","star":1}
-{"posterid":67,"presenid":"F1-2","star":1}
-{"posterid":68,"presenid":"F1-3","star":1}
-{"posterid":69,"presenid":"F1-4","star":1}
-{"posterid":70,"presenid":"F1-5","star":1}
-{"posterid":71,"presenid":"F1-6","star":1}
-{"posterid":72,"presenid":"F2-5","star":1}
-{"posterid":73,"presenid":"F2-6","star":1}
-{"posterid":74,"presenid":"F3-2","star":1}
-{"posterid":75,"presenid":"F3-3","star":1}
-{"posterid":76,"presenid":"F3-4","star":1}
-{"posterid":77,"presenid":"F3-5","star":1}
-{"posterid":78,"presenid":"F4-1","star":1}
-{"posterid":79,"presenid":"F4-2","star":1}
-{"posterid":80,"presenid":"F4-3","star":1}
-{"posterid":81,"presenid":"F5-1","star":1}
-{"posterid":82,"presenid":"P1-1","star":1}
-{"posterid":83,"presenid":"P1-2","star":1}
-{"posterid":84,"presenid":"P1-3","star":1}
-{"posterid":85,"presenid":"P1-4","star":1}
-{"posterid":86,"presenid":"P1-5","star":1}
-{"posterid":87,"presenid":"P2-1","star":1}
-{"posterid":88,"presenid":"P2-2","star":1}
-{"posterid":89,"presenid":"P2-3","star":1}
-{"posterid":90,"presenid":"P2-4","star":1}
-{"posterid":91,"presenid":"P2-5","star":1}
-{"posterid":92,"presenid":"P3-1","star":1}
-{"posterid":93,"presenid":"P3-2","star":1}
-{"posterid":94,"presenid":"P3-3","star":1}
-{"posterid":95,"presenid":"P3-4","star":1}
-{"posterid":96,"presenid":"P3-5","star":1}
-{"posterid":97,"presenid":"X3-4","star":1}
-{"posterid":98,"presenid":"X3-5","star":1}
-{"posterid":99,"presenid":"X3-6","star":1}
-{"posterid":100,"presenid":"X3-7","star":1}
-{"posterid":101,"presenid":"X3-8","star":1}
-{"posterid":102,"presenid":"X3-9","star":1}
-{"posterid":103,"presenid":"X3-10","star":1}
-{"posterid":104,"presenid":"X3-11","star":1}
-{"posterid":105,"presenid":"X3-12","star":1}
-{"posterid":106,"presenid":"X3-13","star":1}
-{"posterid":107,"presenid":"X3-14","star":1}
-{"posterid":108,"presenid":"X3-15","star":1}
-{"posterid":109,"presenid":"X3-16","star":1}
-{"posterid":110,"presenid":"X3-17","star":1}
-{"posterid":111,"presenid":"X3-18","star":1}
-{"posterid":112,"presenid":"X3-19","star":1}
-{"posterid":113,"presenid":"X3-20","star":1}
-{"posterid":114,"presenid":"X3-21","star":1}
-{"posterid":115,"presenid":"X3-22","star":1}
-{"posterid":116,"presenid":"X3-23","star":1}
-{"posterid":117,"presenid":"X3-24","star":1}
+[
+{"posterid":1,"presenid":"A1-1","star":1},
+{"posterid":2,"presenid":"A1-2","star":1},
+{"posterid":3,"presenid":"A1-4","star":1},
+{"posterid":4,"presenid":"A2-2","star":1},
+{"posterid":5,"presenid":"A2-3","star":1},
+{"posterid":6,"presenid":"A2-4","star":1},
+{"posterid":7,"presenid":"A2-5","star":1},
+{"posterid":8,"presenid":"A4-1","star":1},
+{"posterid":9,"presenid":"A4-2","star":1},
+{"posterid":10,"presenid":"A4-3","star":1},
+{"posterid":11,"presenid":"A4-4","star":1},
+{"posterid":12,"presenid":"A4-5","star":1},
+{"posterid":13,"presenid":"B1-1","star":1},
+{"posterid":14,"presenid":"B1-2","star":1},
+{"posterid":15,"presenid":"B2-2","star":1},
+{"posterid":16,"presenid":"B2-4","star":1},
+{"posterid":17,"presenid":"B2-5","star":1},
+{"posterid":18,"presenid":"B2-6","star":1},
+{"posterid":19,"presenid":"B3-3","star":1},
+{"posterid":20,"presenid":"B3-4","star":1},
+{"posterid":21,"presenid":"B3-5","star":1},
+{"posterid":22,"presenid":"B3-6","star":1},
+{"posterid":23,"presenid":"B4-1","star":1},
+{"posterid":24,"presenid":"B4-2","star":1},
+{"posterid":25,"presenid":"B4-3","star":1},
+{"posterid":26,"presenid":"B4-4","star":1},
+{"posterid":27,"presenid":"B4-5","star":1},
+{"posterid":28,"presenid":"C1-2","star":1},
+{"posterid":29,"presenid":"C1-3","star":1},
+{"posterid":30,"presenid":"C1-5","star":1},
+{"posterid":31,"presenid":"C1-6","star":1},
+{"posterid":32,"presenid":"C2-4","star":1},
+{"posterid":33,"presenid":"C3-1","star":1},
+{"posterid":34,"presenid":"C3-2","star":1},
+{"posterid":35,"presenid":"C3-3","star":1},
+{"posterid":36,"presenid":"C3-4","star":1},
+{"posterid":37,"presenid":"C4-1","star":1},
+{"posterid":38,"presenid":"C4-2","star":1},
+{"posterid":39,"presenid":"C4-3","star":1},
+{"posterid":40,"presenid":"D1-3","star":1},
+{"posterid":41,"presenid":"D1-4","star":1},
+{"posterid":42,"presenid":"D1-5","star":1},
+{"posterid":43,"presenid":"D1-6","star":1},
+{"posterid":44,"presenid":"D2-1","star":1},
+{"posterid":45,"presenid":"D2-5","star":1},
+{"posterid":46,"presenid":"D4-1","star":1},
+{"posterid":47,"presenid":"D4-2","star":1},
+{"posterid":48,"presenid":"D4-3","star":1},
+{"posterid":49,"presenid":"E1-1","star":1},
+{"posterid":50,"presenid":"E1-2","star":1},
+{"posterid":51,"presenid":"E1-3","star":1},
+{"posterid":52,"presenid":"E1-4","star":1},
+{"posterid":53,"presenid":"E1-5","star":1},
+{"posterid":54,"presenid":"E1-6","star":1},
+{"posterid":55,"presenid":"E2-1","star":1},
+{"posterid":56,"presenid":"E2-2","star":1},
+{"posterid":57,"presenid":"E2-3","star":1},
+{"posterid":58,"presenid":"E2-4","star":1},
+{"posterid":59,"presenid":"E3-2","star":1},
+{"posterid":60,"presenid":"E3-3","star":1},
+{"posterid":61,"presenid":"E3-4","star":1},
+{"posterid":62,"presenid":"E3-6","star":1},
+{"posterid":63,"presenid":"E4-1","star":1},
+{"posterid":64,"presenid":"E4-2","star":1},
+{"posterid":65,"presenid":"E4-3","star":1},
+{"posterid":66,"presenid":"E4-4","star":1},
+{"posterid":67,"presenid":"F1-2","star":1},
+{"posterid":68,"presenid":"F1-3","star":1},
+{"posterid":69,"presenid":"F1-4","star":1},
+{"posterid":70,"presenid":"F1-5","star":1},
+{"posterid":71,"presenid":"F1-6","star":1},
+{"posterid":72,"presenid":"F2-5","star":1},
+{"posterid":73,"presenid":"F2-6","star":1},
+{"posterid":74,"presenid":"F3-2","star":1},
+{"posterid":75,"presenid":"F3-3","star":1},
+{"posterid":76,"presenid":"F3-4","star":1},
+{"posterid":77,"presenid":"F3-5","star":1},
+{"posterid":78,"presenid":"F4-1","star":1},
+{"posterid":79,"presenid":"F4-2","star":1},
+{"posterid":80,"presenid":"F4-3","star":1},
+{"posterid":81,"presenid":"F5-1","star":1},
+{"posterid":82,"presenid":"P1-1","star":1},
+{"posterid":83,"presenid":"P1-2","star":1},
+{"posterid":84,"presenid":"P1-3","star":1},
+{"posterid":85,"presenid":"P1-4","star":1},
+{"posterid":86,"presenid":"P1-5","star":1},
+{"posterid":87,"presenid":"P2-1","star":1},
+{"posterid":88,"presenid":"P2-2","star":1},
+{"posterid":89,"presenid":"P2-3","star":1},
+{"posterid":90,"presenid":"P2-4","star":1},
+{"posterid":91,"presenid":"P2-5","star":1},
+{"posterid":92,"presenid":"P3-1","star":1},
+{"posterid":93,"presenid":"P3-2","star":1},
+{"posterid":94,"presenid":"P3-3","star":1},
+{"posterid":95,"presenid":"P3-4","star":1},
+{"posterid":96,"presenid":"P3-5","star":1},
+{"posterid":97,"presenid":"X3-4","star":1},
+{"posterid":98,"presenid":"X3-5","star":1},
+{"posterid":99,"presenid":"X3-6","star":1},
+{"posterid":100,"presenid":"X3-7","star":1},
+{"posterid":101,"presenid":"X3-8","star":1},
+{"posterid":102,"presenid":"X3-9","star":1},
+{"posterid":103,"presenid":"X3-10","star":1},
+{"posterid":104,"presenid":"X3-11","star":1},
+{"posterid":105,"presenid":"X3-12","star":1},
+{"posterid":106,"presenid":"X3-13","star":1},
+{"posterid":107,"presenid":"X3-14","star":1},
+{"posterid":108,"presenid":"X3-15","star":1},
+{"posterid":109,"presenid":"X3-16","star":1},
+{"posterid":110,"presenid":"X3-17","star":1},
+{"posterid":111,"presenid":"X3-18","star":1},
+{"posterid":112,"presenid":"X3-19","star":1},
+{"posterid":113,"presenid":"X3-20","star":1},
+{"posterid":114,"presenid":"X3-21","star":1},
+{"posterid":115,"presenid":"X3-22","star":1},
+{"posterid":116,"presenid":"X3-23","star":1},
+{"posterid":117,"presenid":"X3-24","star":1},
 {"posterid":118,"presenid":"X3-25","star":1}
 ];
 
 var author =
-
 [
-{"presenid":"A1-1","name":"真嶋 温佳","belongs":"大阪大学","first":1}
-{"presenid":"A1-1","name":"白川 真澄","belongs":"大阪大学","first":0}
-{"presenid":"A1-1","name":"原 隆浩","belongs":"大阪大学","first":0}
-{"presenid":"A1-1","name":"西尾 章治郎","belongs":"大阪大学","first":0}
-{"presenid":"A1-2","name":"Zhang Yating","belongs":"Kyoto University","first":1}
-{"presenid":"A1-2","name":"Jatowt Adam","belongs":"Kyoto University","first":0}
-{"presenid":"A1-2","name":"Tanaka Katsumi","belongs":"Kyoto University","first":0}
-{"presenid":"A1-4","name":"欅 惇志","belongs":"奈良先端科学技術大学院大学","first":1}
-{"presenid":"A1-4","name":"宮崎 純","belongs":"東京工業大学","first":0}
-{"presenid":"A1-4","name":"波多野 賢治","belongs":"同志社大学","first":0}
-{"presenid":"A1-4","name":"山本 豪志朗","belongs":"奈良先端科学技術大学院大学","first":0}
-{"presenid":"A1-4","name":"武富 貴史","belongs":"奈良先端科学技術大学院大学","first":0}
-{"presenid":"A1-4","name":"加藤 博一","belongs":"奈良先端科学技術大学院大学","first":0}
-{"presenid":"A2-2","name":"Luo Min","belongs":"NTT","first":1}
-{"presenid":"A2-2","name":"Honjo Toshimori","belongs":"NTT","first":0}
-{"presenid":"A2-3","name":"早水 悠登","belongs":"東京大学","first":1}
-{"presenid":"A2-3","name":"合田 和生","belongs":"東京大学","first":0}
-{"presenid":"A2-3","name":"喜連川 優","belongs":"東京大学／国立情報学研究所","first":0}
-{"presenid":"A2-4","name":"山田 浩之","belongs":"東京大学","first":1}
-{"presenid":"A2-4","name":"合田 和生","belongs":"東京大学","first":0}
-{"presenid":"A2-4","name":"喜連川 優","belongs":"東京大学","first":0}
-{"presenid":"A2-5","name":"萩本 真太朗","belongs":"横浜国立大学","first":1}
-{"presenid":"A2-5","name":"出縄 誠","belongs":"横浜国立大学","first":0}
-{"presenid":"A2-5","name":"林 拓也","belongs":"横浜国立大学","first":0}
-{"presenid":"A2-5","name":"讃井 崚","belongs":"横浜国立大学","first":0}
-{"presenid":"A2-5","name":"富井 尚志","belongs":"横浜国立大学","first":0}
-{"presenid":"A2-5","name":"本藤 祐樹","belongs":"横浜国立大学","first":0}
-{"presenid":"A4-1","name":"武田 十季","belongs":"九州大学","first":1}
-{"presenid":"A4-1","name":"牛尼 剛聡","belongs":"九州大学","first":0}
-{"presenid":"A4-2","name":"王 元元","belongs":"兵庫県立大学","first":1}
-{"presenid":"A4-2","name":"河合 由起子","belongs":"京都産業大学","first":0}
-{"presenid":"A4-2","name":"角谷 和俊","belongs":"兵庫県立大学","first":0}
-{"presenid":"A4-3","name":"顔 洪","belongs":"九州大学","first":1}
-{"presenid":"A4-3","name":"牛尼 剛聡","belongs":"九州大学","first":0}
-{"presenid":"A4-4","name":"仲村 哲明","belongs":"京都大学","first":1}
-{"presenid":"A4-4","name":"久保 圭","belongs":"京都大学","first":0}
-{"presenid":"A4-4","name":"臼田 泰如","belongs":"京都大学","first":0}
-{"presenid":"A4-4","name":"荒牧 英治","belongs":"京都大学／JSTさきがけ","first":0}
-{"presenid":"A4-5","name":"浅井 洋樹","belongs":"早稲田大学","first":1}
-{"presenid":"A4-5","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0}
-{"presenid":"B1-1","name":"川上 未来","belongs":"筑波大学","first":1}
-{"presenid":"B1-1","name":"佐藤 哲司","belongs":"筑波大学","first":0}
-{"presenid":"B1-2","name":"安井 豪基","belongs":"京都産業大学","first":1}
-{"presenid":"B1-2","name":"王 元元","belongs":"兵庫県立大学","first":0}
-{"presenid":"B1-2","name":"細川 侑士","belongs":"京都産業大学","first":0}
-{"presenid":"B1-2","name":"河合 由起子","belongs":"京都産業大学","first":0}
-{"presenid":"B1-2","name":"秋山 豊和","belongs":"京都産業大学","first":0}
-{"presenid":"B1-2","name":"角谷 和俊","belongs":"兵庫県立大学","first":0}
-{"presenid":"B2-2","name":"吉國 綺乃","belongs":"お茶の水女子大学","first":1}
-{"presenid":"B2-2","name":"吉國 綺乃","belongs":"筑波大学","first":0}
-{"presenid":"B2-2","name":"小林 一郎","belongs":"お茶の水女子大学","first":0}
-{"presenid":"B2-4","name":"山口 裕太郎","belongs":"筑波大学","first":1}
-{"presenid":"B2-4","name":"山本 修平","belongs":"筑波大学","first":0}
-{"presenid":"B2-4","name":"佐藤 哲司","belongs":"筑波大学","first":0}
-{"presenid":"B2-5","name":"大澤 純","belongs":"大阪大学","first":1}
-{"presenid":"B2-5","name":"岩田 麻佑 ","belongs":"KDDI","first":0}
-{"presenid":"B2-5","name":"原 隆浩","belongs":"大阪大学","first":0}
-{"presenid":"B2-5","name":"西尾 章治郎","belongs":"大阪大学","first":0}
-{"presenid":"B2-6","name":"趙 驍騏","belongs":"京都大学","first":1}
-{"presenid":"B2-6","name":"田島 敬史","belongs":"京都大学","first":0}
-{"presenid":"B3-3","name":"田原 琢士","belongs":"京都大学","first":1}
-{"presenid":"B3-3","name":"馬 強","belongs":"京都大学","first":0}
-{"presenid":"B3-4","name":"長谷川 馨亮","belongs":"京都大学","first":1}
-{"presenid":"B3-4","name":"馬 強","belongs":"京都大学","first":0}
-{"presenid":"B3-4","name":"吉川 正俊","belongs":"京都大学","first":0}
-{"presenid":"B3-5","name":"中井 寿一","belongs":"京都産業大学","first":1}
-{"presenid":"B3-5","name":"山本 美佳","belongs":"京都産業大学","first":0}
-{"presenid":"B3-5","name":"河合 由起子","belongs":"京都産業大学","first":0}
-{"presenid":"B3-5","name":"川崎 洋","belongs":"鹿児島大学","first":0}
-{"presenid":"B3-5","name":"赤木 康宏","belongs":"鹿児島大学","first":0}
-{"presenid":"B3-5","name":"若宮 翔子","belongs":"兵庫県立大学","first":0}
-{"presenid":"B3-5","name":"角谷 和俊","belongs":"兵庫県立大学","first":0}
-{"presenid":"B3-6","name":"村山 敬祐","belongs":"首都大学東京","first":1}
-{"presenid":"B3-6","name":"佐伯 圭介","belongs":"首都大学東京","first":0}
-{"presenid":"B3-6","name":"遠藤 雅樹","belongs":"首都大学東京","first":0}
-{"presenid":"B3-6","name":"横山 昌平","belongs":"静岡大学","first":0}
-{"presenid":"B3-6","name":"石川 博","belongs":"首都大学東京","first":0}
-{"presenid":"B4-1","name":"渡部 優","belongs":"東京工業大学／JST CREST","first":1}
-{"presenid":"B4-1","name":"上野 晃司","belongs":"東京工業大学／JST CREST","first":0}
-{"presenid":"B4-1","name":"鈴村 豊太郎","belongs":"IBM Research／University College Dublin／JST CREST","first":0}
-{"presenid":"B4-2","name":"佐伯 圭介","belongs":"首都大学東京","first":1}
-{"presenid":"B4-2","name":"村山 敬祐","belongs":"首都大学東京","first":0}
-{"presenid":"B4-2","name":"遠藤 雅樹","belongs":"首都大学東京","first":0}
-{"presenid":"B4-2","name":"横山 昌平","belongs":"静岡大学","first":0}
-{"presenid":"B4-2","name":"石川 博","belongs":"首都大学東京","first":0}
-{"presenid":"B4-3","name":"丸山 直樹","belongs":"京都産業大学","first":1}
-{"presenid":"B4-3","name":"若宮 翔子","belongs":"兵庫県立大学","first":0}
-{"presenid":"B4-3","name":"細川 侑士","belongs":"京都産業大学","first":0}
-{"presenid":"B4-3","name":"河合 由起子","belongs":"京都産業大学","first":0}
-{"presenid":"B4-3","name":"秋山 豊和","belongs":"京都産業大学","first":0}
-{"presenid":"B4-3","name":"角谷 和俊","belongs":"兵庫県立大学","first":0}
-{"presenid":"B4-4","name":"三浦 惇貴","belongs":"静岡大学","first":1}
-{"presenid":"B4-4","name":"廣田 雅春","belongs":"静岡大学","first":0}
-{"presenid":"B4-4","name":"野澤 浩樹","belongs":"シーポイント","first":0}
-{"presenid":"B4-4","name":"横山 昌平","belongs":"静岡大学","first":0}
-{"presenid":"B4-5","name":"岡田 瑞穂","belongs":"東京工業大学／JST CREST","first":1}
-{"presenid":"B4-5","name":"鈴村 豊太郎","belongs":"IBM Research／University College Dublin／JST CREST","first":0}
-{"presenid":"C1-2","name":"守谷 一朗","belongs":"筑波大学","first":1}
-{"presenid":"C1-2","name":"小池 大地","belongs":"筑波大学","first":0}
-{"presenid":"C1-2","name":"今田 貴和","belongs":"筑波大学","first":0}
-{"presenid":"C1-2","name":"宇津呂 武仁","belongs":"筑波大学","first":0}
-{"presenid":"C1-2","name":"河田 容英","belongs":"ログワークス","first":0}
-{"presenid":"C1-2","name":"神門 典子","belongs":"国立情報学研究所","first":0}
-{"presenid":"C1-3","name":"津川 敦朗","belongs":"岡山大学","first":1}
-{"presenid":"C1-3","name":"新妻 弘崇","belongs":"岡山大学","first":0}
-{"presenid":"C1-3","name":"太田 学","belongs":"岡山大学","first":0}
-{"presenid":"C1-5","name":"松尾 昇","belongs":"九州大学","first":1}
-{"presenid":"C1-5","name":"牛尼 剛聡","belongs":"九州大学","first":0}
-{"presenid":"C1-6","name":"加藤 龍","belongs":"京都大学","first":1}
-{"presenid":"C1-6","name":"大島 裕明","belongs":"京都大学","first":0}
-{"presenid":"C1-6","name":"山本 岳洋","belongs":"京都大学","first":0}
-{"presenid":"C1-6","name":"加藤 誠","belongs":"京都大学","first":0}
-{"presenid":"C1-6","name":"田中 克己","belongs":"京都大学","first":0}
-{"presenid":"C2-4","name":"真下 遼","belongs":"甲南大学","first":1}
-{"presenid":"C2-4","name":"灘本 明代","belongs":"甲南大学","first":0}
-{"presenid":"C3-1","name":"松井 悠太郎","belongs":"岡山大学","first":1}
-{"presenid":"C3-1","name":"新妻 弘崇","belongs":"岡山大学","first":0}
-{"presenid":"C3-1","name":"太田 学","belongs":"岡山大学","first":0}
-{"presenid":"C3-2","name":"前田 浩邦","belongs":"京都大学","first":1}
-{"presenid":"C3-2","name":"山肩 洋子","belongs":"京都大学","first":0}
-{"presenid":"C3-2","name":"森 信介","belongs":"京都大学","first":0}
-{"presenid":"C3-3","name":"園田 匠","belongs":"法政大学","first":1}
-{"presenid":"C3-3","name":"三浦 孝夫","belongs":"法政大学","first":0}
-{"presenid":"C3-4","name":"朝永 聖也","belongs":"京都産業大学","first":1}
-{"presenid":"C3-4","name":"中島 伸介","belongs":"京都産業大学","first":0}
-{"presenid":"C3-4","name":"稲垣 陽一","belongs":"きざしカンパニー","first":0}
-{"presenid":"C3-4","name":"中本 レン","belongs":"きざしカンパニー","first":0}
-{"presenid":"C3-4","name":"張 建偉","belongs":"筑波技術大学","first":0}
-{"presenid":"C4-1","name":"山本 修平","belongs":"筑波大学","first":1}
-{"presenid":"C4-1","name":"佐藤 哲司","belongs":"筑波大学","first":0}
-{"presenid":"C4-2","name":"藤野 巖","belongs":"東海大学","first":1}
-{"presenid":"C4-2","name":"星野 祐子","belongs":"東海大学","first":0}
-{"presenid":"C4-3","name":"遠藤 結城","belongs":"NTT","first":1}
-{"presenid":"C4-3","name":"戸田 浩之","belongs":"NTT","first":0}
-{"presenid":"C4-3","name":"鷲崎 誠司","belongs":"NTT","first":0}
-{"presenid":"D1-3","name":"小沢 健史","belongs":"NTT","first":1}
-{"presenid":"D1-3","name":"及川 一樹","belongs":"NTT","first":0}
-{"presenid":"D1-3","name":"本庄 利守","belongs":"NTT","first":0}
-{"presenid":"D1-3","name":"鬼塚 真","belongs":"NTT","first":0}
-{"presenid":"D1-4","name":"日開 朝美","belongs":"お茶の水女子大学","first":1}
-{"presenid":"D1-4","name":"竹房 あつ子","belongs":"産業技術総合研究所","first":0}
-{"presenid":"D1-4","name":"中田 秀基","belongs":"産業技術総合研究所","first":0}
-{"presenid":"D1-4","name":"小口 正人","belongs":"お茶の水女子大学","first":0}
-{"presenid":"D1-5","name":"若森 拓馬","belongs":"NTT","first":1}
-{"presenid":"D1-5","name":"山室 健","belongs":"NTT","first":0}
-{"presenid":"D1-5","name":"寺本 純司","belongs":"NTT","first":0}
-{"presenid":"D1-5","name":"西村 剛","belongs":"NTT","first":0}
-{"presenid":"D1-6","name":"西前 光","belongs":"高知大学","first":1}
-{"presenid":"D1-6","name":"三好 智也","belongs":"高知大学","first":0}
-{"presenid":"D1-6","name":"本田 理恵","belongs":"高知大学","first":0}
-{"presenid":"D2-1","name":"飯村 奈穂","belongs":"お茶の水女子大学","first":1}
-{"presenid":"D2-1","name":"西川 記史","belongs":"東京大学","first":0}
-{"presenid":"D2-1","name":"中野 美由紀","belongs":"芝浦工業大学","first":0}
-{"presenid":"D2-1","name":"小口 正人","belongs":"お茶の水女子大学","first":0}
-{"presenid":"D2-5","name":"檜垣 貴良","belongs":"京都産業大学","first":1}
-{"presenid":"D2-5","name":"秋山 豊和","belongs":"京都産業大学","first":0}
-{"presenid":"D4-1","name":"古谷 遼平","belongs":"筑波大学","first":1}
-{"presenid":"D4-1","name":"手塚 太郎","belongs":"筑波大学","first":0}
-{"presenid":"D4-2","name":"松原 靖子","belongs":"熊本大学","first":1}
-{"presenid":"D4-2","name":"櫻井 保志","belongs":"熊本大学","first":0}
-{"presenid":"D4-2","name":"Christos Faloutsos","belongs":"Carnegie Mellon University","first":0}
-{"presenid":"D4-3","name":"松井 友哉","belongs":"京都産業大学","first":1}
-{"presenid":"D4-3","name":"秋山 豊和","belongs":"京都産業大学","first":0}
-{"presenid":"E1-1","name":"藤原 国久","belongs":"横浜国立大学","first":1}
-{"presenid":"E1-1","name":"高橋 慶多","belongs":"横浜国立大学","first":0}
-{"presenid":"E1-1","name":"細澤 直人","belongs":"横浜国立大学","first":0}
-{"presenid":"E1-1","name":"高橋 佳久","belongs":"横浜国立大学","first":0}
-{"presenid":"E1-1","name":"西本 直樹","belongs":"横浜国立大学","first":0}
-{"presenid":"E1-1","name":"富井 尚志","belongs":"横浜国立大学","first":0}
-{"presenid":"E1-1","name":"本藤 祐樹","belongs":"横浜国立大学","first":0}
-{"presenid":"E1-2","name":"玉田 雄基","belongs":"筑波大学","first":1}
-{"presenid":"E1-2","name":"佐藤 哲司","belongs":"筑波大学","first":0}
-{"presenid":"E1-3","name":"大羽 洋隆","belongs":"静岡大学","first":1}
-{"presenid":"E1-3","name":"廣田 雅春","belongs":"静岡大学","first":0}
-{"presenid":"E1-3","name":"石川 博","belongs":"首都大学東京","first":0}
-{"presenid":"E1-3","name":"横山 昌平","belongs":"静岡大学","first":0}
-{"presenid":"E1-4","name":"後藤 康路","belongs":"静岡大学","first":1}
-{"presenid":"E1-4","name":"山田 竜平","belongs":"国立天文台","first":0}
-{"presenid":"E1-4","name":"山本 幸生","belongs":"宇宙航空研究開発機構","first":0}
-{"presenid":"E1-4","name":"石川 博","belongs":"首都大学東京","first":0}
-{"presenid":"E1-4","name":"横山 昌平","belongs":"静岡大学","first":0}
-{"presenid":"E1-5","name":"松尾 哉太","belongs":"岡山大学","first":1}
-{"presenid":"E1-5","name":"新妻 弘崇","belongs":"岡山大学","first":0}
-{"presenid":"E1-5","name":"太田 学","belongs":"岡山大学","first":0}
-{"presenid":"E1-6","name":"谷 俊廣","belongs":"立命館大学","first":1}
-{"presenid":"E1-6","name":"黄 宏軒","belongs":"立命館大学","first":0}
-{"presenid":"E1-6","name":"川越 恭二","belongs":"立命館大学","first":0}
-{"presenid":"E2-1","name":"安政 駿","belongs":"筑波大学","first":1}
-{"presenid":"E2-1","name":"手塚 太郎","belongs":"筑波大学","first":0}
-{"presenid":"E2-2","name":"馬場 匠見","belongs":"慶應義塾大学","first":1}
-{"presenid":"E2-2","name":"橋本 翔","belongs":"慶應義塾大学","first":0}
-{"presenid":"E2-2","name":"増井 俊之","belongs":"慶應義塾大学","first":0}
-{"presenid":"E2-3","name":"権守 健嗣","belongs":"筑波大学","first":1}
-{"presenid":"E2-3","name":"森嶋 厚行","belongs":"筑波大学","first":0}
-{"presenid":"E2-3","name":"北川 博之","belongs":"筑波大学","first":0}
-{"presenid":"E2-4","name":"青木 秀人","belongs":"筑波大学","first":1}
-{"presenid":"E2-4","name":"森嶋 厚行","belongs":"筑波大学","first":0}
-{"presenid":"E3-2","name":"細井 純太","belongs":"名古屋工業大学","first":1}
-{"presenid":"E3-2","name":"山本 大介","belongs":"名古屋工業大学","first":0}
-{"presenid":"E3-2","name":"高橋 直久","belongs":"名古屋工業大学","first":0}
-{"presenid":"E3-3","name":"前野 明子","belongs":"岡山大学","first":1}
-{"presenid":"E3-3","name":"太田 学","belongs":"岡山大学","first":0}
-{"presenid":"E3-3","name":"高須 淳宏","belongs":"国立情報学研究所","first":0}
-{"presenid":"E3-4","name":"王 L)","belongs":"早稲田大学","first":1}
-{"presenid":"E3-4","name":"鬼沢 和也","belongs":"早稲田大学","first":0}
-{"presenid":"E3-4","name":"浅井 洋樹","belongs":"早稲田大学","first":0}
-{"presenid":"E3-4","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0}
-{"presenid":"E3-6","name":"松村 哲郎","belongs":"横浜国立大学","first":1}
-{"presenid":"E3-6","name":"志田 駿介","belongs":"横浜国立大学","first":0}
-{"presenid":"E3-6","name":"倉光 君郎","belongs":"横浜国立大学","first":0}
-{"presenid":"E4-1","name":"大森 雅己","belongs":"静岡大学","first":1}
-{"presenid":"E4-1","name":"廣田 雅春","belongs":"静岡大学","first":0}
-{"presenid":"E4-1","name":"石川 博","belongs":"首都大学東京","first":0}
-{"presenid":"E4-1","name":"横山 昌平","belongs":"静岡大学","first":0}
-{"presenid":"E4-2","name":"青山 賢","belongs":"静岡大学","first":1}
-{"presenid":"E4-2","name":"廣田 雅春","belongs":"静岡大学","first":0}
-{"presenid":"E4-2","name":"石川 博","belongs":"首都大学東京","first":0}
-{"presenid":"E4-2","name":"横山 昌平","belongs":"静岡大学","first":0}
-{"presenid":"E4-3","name":"白井 元浩","belongs":"静岡大学","first":1}
-{"presenid":"E4-3","name":"廣田 雅春","belongs":"静岡大学","first":0}
-{"presenid":"E4-3","name":"石川 博","belongs":"首都大学東京","first":0}
-{"presenid":"E4-3","name":"横山 昌平","belongs":"静岡大学","first":0}
-{"presenid":"E4-4","name":"林 亜紀","belongs":"NTT","first":1}
-{"presenid":"E4-4","name":"松林 達史","belongs":"NTT","first":0}
-{"presenid":"E4-4","name":"澤田 宏","belongs":"NTT","first":0}
-{"presenid":"F1-2","name":"川上 優平","belongs":"京都大学","first":1}
-{"presenid":"F1-2","name":"清水 敏之","belongs":"京都大学","first":0}
-{"presenid":"F1-2","name":"吉川 正俊","belongs":"京都大学","first":0}
-{"presenid":"F1-3","name":"櫻木 優輝","belongs":"立命館大学","first":1}
-{"presenid":"F1-3","name":"青山 敦","belongs":"立命館大学","first":0}
-{"presenid":"F1-3","name":"木村 文則","belongs":"立命館大学","first":0}
-{"presenid":"F1-3","name":"前田 亮","belongs":"立命館大学","first":0}
-{"presenid":"F1-4","name":"鈴木 尚樹","belongs":"工学院大学","first":1}
-{"presenid":"F1-4","name":"北山 大輔","belongs":"工学院大学","first":0}
-{"presenid":"F1-5","name":"清野 悠希","belongs":"筑波大学","first":1}
-{"presenid":"F1-5","name":"佐藤 哲司","belongs":"筑波大学","first":0}
-{"presenid":"F1-6","name":"坂本 祥之","belongs":"京都大学","first":1}
-{"presenid":"F1-6","name":"清水 敏之","belongs":"京都大学","first":0}
-{"presenid":"F1-6","name":"吉川 正俊","belongs":"京都大学","first":0}
-{"presenid":"F2-5","name":"萩生田 明徳","belongs":"横浜国立大学","first":1}
-{"presenid":"F2-5","name":"藤村 雄基","belongs":"横浜国立大学","first":0}
-{"presenid":"F2-5","name":"富井 尚志","belongs":"横浜国立大学","first":0}
-{"presenid":"F2-6","name":"田中 祥太郎","belongs":"京都大学","first":1}
-{"presenid":"F2-6","name":"ヤトフト アダム","belongs":"京都大学","first":0}
-{"presenid":"F2-6","name":"田中 克己","belongs":"京都大学","first":0}
-{"presenid":"F3-2","name":"粟納 裕貴","belongs":"京都大学","first":1}
-{"presenid":"F3-2","name":"馬 強","belongs":"京都大学","first":0}
-{"presenid":"F3-2","name":"吉川 正俊","belongs":"京都大学","first":0}
-{"presenid":"F3-3","name":"堀田 徹","belongs":"ヤフー","first":1}
-{"presenid":"F3-3","name":"瀬賀 信一郎","belongs":"ヤフー","first":0}
-{"presenid":"F3-3","name":"下羅 弘樹","belongs":"ヤフー","first":0}
-{"presenid":"F3-3","name":"高木 潤","belongs":"ヤフー","first":0}
-{"presenid":"F3-3","name":"田島 玲","belongs":"ヤフー","first":0}
-{"presenid":"F3-4","name":"田頭 幸浩","belongs":"ヤフー","first":1}
-{"presenid":"F3-4","name":"小野 真吾","belongs":"ヤフー","first":0}
-{"presenid":"F3-4","name":"田島 玲","belongs":"ヤフー","first":0}
-{"presenid":"F3-5","name":"土井 千章","belongs":"NTTドコモ","first":1}
-{"presenid":"F3-5","name":"小西 哲平","belongs":"NTTドコモ","first":0}
-{"presenid":"F3-5","name":"中川 智尋","belongs":"NTTドコモ","first":0}
-{"presenid":"F3-5","name":"片桐 雅二","belongs":"NTTドコモ","first":0}
-{"presenid":"F3-5","name":"稲村 浩","belongs":"NTTドコモ","first":0}
-{"presenid":"F3-5","name":"太田 賢","belongs":"NTTドコモ","first":0}
-{"presenid":"F4-1","name":"梅澤 啓史","belongs":"京都産業大学","first":1}
-{"presenid":"F4-1","name":"宮森 恒","belongs":"京都産業大学","first":0}
-{"presenid":"F4-2","name":"山内 嶺","belongs":"工学院大学","first":1}
-{"presenid":"F4-2","name":"北山 大輔","belongs":"工学院大学","first":0}
-{"presenid":"F4-3","name":"松原 宏和","belongs":"岡山大学","first":1}
-{"presenid":"F4-3","name":"新妻 弘崇","belongs":"岡山大学","first":0}
-{"presenid":"F4-3","name":"太田 学","belongs":"岡山大学","first":0}
-{"presenid":"F5-1","name":"碓井 義彬","belongs":"首都大学東京","first":1}
-{"presenid":"F5-1","name":"飛田 雄樹","belongs":"首都大学東京","first":0}
-{"presenid":"F5-1","name":"王 天宇","belongs":"首都大学東京","first":0}
-{"presenid":"F5-1","name":"片山 薫","belongs":"首都大学東京","first":0}
-{"presenid":"P1-1","name":"鈴木 智也","belongs":"千葉工業大学","first":1}
-{"presenid":"P1-1","name":"熊本 忠彦","belongs":"千葉工業大学","first":0}
-{"presenid":"P1-2","name":"藤原 泰士","belongs":"広島市立大学","first":1}
-{"presenid":"P1-2","name":"難波 英嗣","belongs":"広島市立大学","first":0}
-{"presenid":"P1-2","name":"竹澤 寿幸","belongs":"広島市立大学","first":0}
-{"presenid":"P1-3","name":"並木 賢太郎","belongs":"京都産業大学","first":1}
-{"presenid":"P1-3","name":"朝永 聖也","belongs":"京都産業大学","first":0}
-{"presenid":"P1-3","name":"中島 伸介","belongs":"京都産業大学","first":0}
-{"presenid":"P1-3","name":"稲垣 陽一","belongs":"きざしカンパニー","first":0}
-{"presenid":"P1-3","name":"中本 レン","belongs":"きざしカンパニー","first":0}
-{"presenid":"P1-3","name":"田中 昇太郎","belongs":"きざしカンパニー","first":0}
-{"presenid":"P1-3","name":"張 建偉","belongs":"筑波技術大学","first":0}
-{"presenid":"P1-4","name":"寺田 有佑","belongs":"京都産業大学","first":1}
-{"presenid":"P1-4","name":"朝永 聖也","belongs":"京都産業大学","first":0}
-{"presenid":"P1-4","name":"小倉 僚","belongs":"京都産業大学","first":0}
-{"presenid":"P1-4","name":"中島 伸介","belongs":"京都産業大学","first":0}
-{"presenid":"P1-4","name":"稲垣 陽一","belongs":"きざしカンパニー","first":0}
-{"presenid":"P1-4","name":"中本 レン","belongs":"きざしカンパニー","first":0}
-{"presenid":"P1-4","name":"張 建偉","belongs":"筑波技術大学","first":0}
-{"presenid":"P1-5","name":"前田 剛","belongs":"広島市立大学","first":1}
-{"presenid":"P1-5","name":"河野 有希","belongs":"広島市立大学","first":0}
-{"presenid":"P1-5","name":"石野 亜耶","belongs":"広島市立大学","first":0}
-{"presenid":"P1-5","name":"難波 英嗣","belongs":"広島市立大学","first":0}
-{"presenid":"P1-5","name":"竹澤 寿幸","belongs":"広島市立大学","first":0}
-{"presenid":"P2-1","name":"西澤 健吾","belongs":"京都産業大学","first":1}
-{"presenid":"P2-1","name":"荻野 晃大","belongs":"京都産業大学","first":0}
-{"presenid":"P2-1","name":"中島 伸介","belongs":"京都産業大学","first":0}
-{"presenid":"P2-2","name":"山崎 隼也","belongs":"京都産業大学","first":1}
-{"presenid":"P2-2","name":"井狩 憲幸","belongs":"京都産業大学","first":0}
-{"presenid":"P2-2","name":"中島 伸介","belongs":"京都産業大学","first":0}
-{"presenid":"P2-3","name":"高田 夏彦","belongs":"京都産業大学","first":1}
-{"presenid":"P2-3","name":"佐々江 駿","belongs":"京都産業大学","first":0}
-{"presenid":"P2-3","name":"上田 真由美","belongs":"流通科学大学","first":0}
-{"presenid":"P2-3","name":"中島 伸介","belongs":"京都産業大学","first":0}
-{"presenid":"P2-3","name":"森下 幸俊","belongs":"大日本印刷株式会社","first":0}
-{"presenid":"P2-4","name":"浅川 拓","belongs":"京都産業大学","first":1}
-{"presenid":"P2-4","name":"濱田 恵輔","belongs":"京都産業大学","first":0}
-{"presenid":"P2-4","name":"中島 伸介","belongs":"京都産業大学","first":0}
-{"presenid":"P2-4","name":"北山 大輔","belongs":"工学院大学","first":0}
-{"presenid":"P2-4","name":"角谷 和俊","belongs":"兵庫県立大学","first":0}
-{"presenid":"P2-5","name":"北林 宏樹","belongs":"京都大学","first":1}
-{"presenid":"P2-5","name":"吉川 正俊","belongs":"京都大学","first":0}
-{"presenid":"P3-1","name":"三原 真衣子","belongs":"兵庫県立大学","first":1}
-{"presenid":"P3-1","name":"王 元元","belongs":"兵庫県立大学","first":0}
-{"presenid":"P3-1","name":"北山 大輔","belongs":"工学院大学","first":0}
-{"presenid":"P3-1","name":"角谷 和俊","belongs":"兵庫県立大学","first":0}
-{"presenid":"P3-2","name":"小島 光平","belongs":"神奈川工科大学","first":1}
-{"presenid":"P3-2","name":"岡崎 有彩","belongs":"神奈川工科大学","first":0}
-{"presenid":"P3-2","name":"佐藤 充","belongs":"神奈川工科大学","first":0}
-{"presenid":"P3-2","name":"蒔田 圭佑","belongs":"神奈川工科大学","first":0}
-{"presenid":"P3-2","name":"白井 暁彦","belongs":"神奈川工科大学","first":0}
-{"presenid":"P3-2","name":"大塚 真吾","belongs":"神奈川工科大学","first":0}
-{"presenid":"P3-3","name":"市倉 丈寛","belongs":"工学院大学","first":1}
-{"presenid":"P3-3","name":"北山 大輔","belongs":"工学院大学","first":0}
-{"presenid":"P3-4","name":"青木 孝文","belongs":"神奈川工科大学","first":1}
-{"presenid":"P3-4","name":"笹本 芳和","belongs":"神奈川工科大学","first":0}
-{"presenid":"P3-4","name":"小林 愛実","belongs":"神奈川工科大学","first":0}
-{"presenid":"P3-4","name":"小林 寛高","belongs":"神奈川工科大学","first":0}
-{"presenid":"P3-4","name":"大塚 真吾","belongs":"神奈川工科大学","first":0}
-{"presenid":"P3-5","name":"友安 航太","belongs":"兵庫県立大学","first":1}
-{"presenid":"P3-5","name":"王 元元","belongs":"兵庫県立大学","first":0}
-{"presenid":"P3-5","name":"木村 玲欧","belongs":"兵庫県立大学","first":0}
-{"presenid":"P3-5","name":"角谷 和俊","belongs":"兵庫県立大学","first":0}
-{"presenid":"X3-4","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-5","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-6","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-7","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-8","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-9","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-10","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-11","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-12","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-13","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-14","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-15","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-16","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-17","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-18","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-19","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-20","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-21","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-22","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-23","name":"Xさん","belongs":"X大学","first":1}
-{"presenid":"X3-24","name":"Xさん","belongs":"X大学","first":1}
+{"presenid":"A1-1","name":"真嶋 温佳","belongs":"大阪大学","first":1},
+{"presenid":"A1-1","name":"白川 真澄","belongs":"大阪大学","first":0},
+{"presenid":"A1-1","name":"原 隆浩","belongs":"大阪大学","first":0},
+{"presenid":"A1-1","name":"西尾 章治郎","belongs":"大阪大学","first":0},
+{"presenid":"A1-2","name":"Zhang Yating","belongs":"Kyoto University","first":1},
+{"presenid":"A1-2","name":"Jatowt Adam","belongs":"Kyoto University","first":0},
+{"presenid":"A1-2","name":"Tanaka Katsumi","belongs":"Kyoto University","first":0},
+{"presenid":"A1-4","name":"欅 惇志","belongs":"奈良先端科学技術大学院大学","first":1},
+{"presenid":"A1-4","name":"宮崎 純","belongs":"東京工業大学","first":0},
+{"presenid":"A1-4","name":"波多野 賢治","belongs":"同志社大学","first":0},
+{"presenid":"A1-4","name":"山本 豪志朗","belongs":"奈良先端科学技術大学院大学","first":0},
+{"presenid":"A1-4","name":"武富 貴史","belongs":"奈良先端科学技術大学院大学","first":0},
+{"presenid":"A1-4","name":"加藤 博一","belongs":"奈良先端科学技術大学院大学","first":0},
+{"presenid":"A2-2","name":"Luo Min","belongs":"NTT","first":1},
+{"presenid":"A2-2","name":"Honjo Toshimori","belongs":"NTT","first":0},
+{"presenid":"A2-3","name":"早水 悠登","belongs":"東京大学","first":1},
+{"presenid":"A2-3","name":"合田 和生","belongs":"東京大学","first":0},
+{"presenid":"A2-3","name":"喜連川 優","belongs":"東京大学／国立情報学研究所","first":0},
+{"presenid":"A2-4","name":"山田 浩之","belongs":"東京大学","first":1},
+{"presenid":"A2-4","name":"合田 和生","belongs":"東京大学","first":0},
+{"presenid":"A2-4","name":"喜連川 優","belongs":"東京大学","first":0},
+{"presenid":"A2-5","name":"萩本 真太朗","belongs":"横浜国立大学","first":1},
+{"presenid":"A2-5","name":"出縄 誠","belongs":"横浜国立大学","first":0},
+{"presenid":"A2-5","name":"林 拓也","belongs":"横浜国立大学","first":0},
+{"presenid":"A2-5","name":"讃井 崚","belongs":"横浜国立大学","first":0},
+{"presenid":"A2-5","name":"富井 尚志","belongs":"横浜国立大学","first":0},
+{"presenid":"A2-5","name":"本藤 祐樹","belongs":"横浜国立大学","first":0},
+{"presenid":"A4-1","name":"武田 十季","belongs":"九州大学","first":1},
+{"presenid":"A4-1","name":"牛尼 剛聡","belongs":"九州大学","first":0},
+{"presenid":"A4-2","name":"王 元元","belongs":"兵庫県立大学","first":1},
+{"presenid":"A4-2","name":"河合 由起子","belongs":"京都産業大学","first":0},
+{"presenid":"A4-2","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
+{"presenid":"A4-3","name":"顔 洪","belongs":"九州大学","first":1},
+{"presenid":"A4-3","name":"牛尼 剛聡","belongs":"九州大学","first":0},
+{"presenid":"A4-4","name":"仲村 哲明","belongs":"京都大学","first":1},
+{"presenid":"A4-4","name":"久保 圭","belongs":"京都大学","first":0},
+{"presenid":"A4-4","name":"臼田 泰如","belongs":"京都大学","first":0},
+{"presenid":"A4-4","name":"荒牧 英治","belongs":"京都大学／JSTさきがけ","first":0},
+{"presenid":"A4-5","name":"浅井 洋樹","belongs":"早稲田大学","first":1},
+{"presenid":"A4-5","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0},
+{"presenid":"B1-1","name":"川上 未来","belongs":"筑波大学","first":1},
+{"presenid":"B1-1","name":"佐藤 哲司","belongs":"筑波大学","first":0},
+{"presenid":"B1-2","name":"安井 豪基","belongs":"京都産業大学","first":1},
+{"presenid":"B1-2","name":"王 元元","belongs":"兵庫県立大学","first":0},
+{"presenid":"B1-2","name":"細川 侑士","belongs":"京都産業大学","first":0},
+{"presenid":"B1-2","name":"河合 由起子","belongs":"京都産業大学","first":0},
+{"presenid":"B1-2","name":"秋山 豊和","belongs":"京都産業大学","first":0},
+{"presenid":"B1-2","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
+{"presenid":"B2-2","name":"吉國 綺乃","belongs":"お茶の水女子大学","first":1},
+{"presenid":"B2-2","name":"吉國 綺乃","belongs":"筑波大学","first":0},
+{"presenid":"B2-2","name":"小林 一郎","belongs":"お茶の水女子大学","first":0},
+{"presenid":"B2-4","name":"山口 裕太郎","belongs":"筑波大学","first":1},
+{"presenid":"B2-4","name":"山本 修平","belongs":"筑波大学","first":0},
+{"presenid":"B2-4","name":"佐藤 哲司","belongs":"筑波大学","first":0},
+{"presenid":"B2-5","name":"大澤 純","belongs":"大阪大学","first":1},
+{"presenid":"B2-5","name":"岩田 麻佑 ","belongs":"KDDI","first":0},
+{"presenid":"B2-5","name":"原 隆浩","belongs":"大阪大学","first":0},
+{"presenid":"B2-5","name":"西尾 章治郎","belongs":"大阪大学","first":0},
+{"presenid":"B2-6","name":"趙 驍騏","belongs":"京都大学","first":1},
+{"presenid":"B2-6","name":"田島 敬史","belongs":"京都大学","first":0},
+{"presenid":"B3-3","name":"田原 琢士","belongs":"京都大学","first":1},
+{"presenid":"B3-3","name":"馬 強","belongs":"京都大学","first":0},
+{"presenid":"B3-4","name":"長谷川 馨亮","belongs":"京都大学","first":1},
+{"presenid":"B3-4","name":"馬 強","belongs":"京都大学","first":0},
+{"presenid":"B3-4","name":"吉川 正俊","belongs":"京都大学","first":0},
+{"presenid":"B3-5","name":"中井 寿一","belongs":"京都産業大学","first":1},
+{"presenid":"B3-5","name":"山本 美佳","belongs":"京都産業大学","first":0},
+{"presenid":"B3-5","name":"河合 由起子","belongs":"京都産業大学","first":0},
+{"presenid":"B3-5","name":"川崎 洋","belongs":"鹿児島大学","first":0},
+{"presenid":"B3-5","name":"赤木 康宏","belongs":"鹿児島大学","first":0},
+{"presenid":"B3-5","name":"若宮 翔子","belongs":"兵庫県立大学","first":0},
+{"presenid":"B3-5","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
+{"presenid":"B3-6","name":"村山 敬祐","belongs":"首都大学東京","first":1},
+{"presenid":"B3-6","name":"佐伯 圭介","belongs":"首都大学東京","first":0},
+{"presenid":"B3-6","name":"遠藤 雅樹","belongs":"首都大学東京","first":0},
+{"presenid":"B3-6","name":"横山 昌平","belongs":"静岡大学","first":0},
+{"presenid":"B3-6","name":"石川 博","belongs":"首都大学東京","first":0},
+{"presenid":"B4-1","name":"渡部 優","belongs":"東京工業大学／JST CREST","first":1},
+{"presenid":"B4-1","name":"上野 晃司","belongs":"東京工業大学／JST CREST","first":0},
+{"presenid":"B4-1","name":"鈴村 豊太郎","belongs":"IBM Research／University College Dublin／JST CREST","first":0},
+{"presenid":"B4-2","name":"佐伯 圭介","belongs":"首都大学東京","first":1},
+{"presenid":"B4-2","name":"村山 敬祐","belongs":"首都大学東京","first":0},
+{"presenid":"B4-2","name":"遠藤 雅樹","belongs":"首都大学東京","first":0},
+{"presenid":"B4-2","name":"横山 昌平","belongs":"静岡大学","first":0},
+{"presenid":"B4-2","name":"石川 博","belongs":"首都大学東京","first":0},
+{"presenid":"B4-3","name":"丸山 直樹","belongs":"京都産業大学","first":1},
+{"presenid":"B4-3","name":"若宮 翔子","belongs":"兵庫県立大学","first":0},
+{"presenid":"B4-3","name":"細川 侑士","belongs":"京都産業大学","first":0},
+{"presenid":"B4-3","name":"河合 由起子","belongs":"京都産業大学","first":0},
+{"presenid":"B4-3","name":"秋山 豊和","belongs":"京都産業大学","first":0},
+{"presenid":"B4-3","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
+{"presenid":"B4-4","name":"三浦 惇貴","belongs":"静岡大学","first":1},
+{"presenid":"B4-4","name":"廣田 雅春","belongs":"静岡大学","first":0},
+{"presenid":"B4-4","name":"野澤 浩樹","belongs":"シーポイント","first":0},
+{"presenid":"B4-4","name":"横山 昌平","belongs":"静岡大学","first":0},
+{"presenid":"B4-5","name":"岡田 瑞穂","belongs":"東京工業大学／JST CREST","first":1},
+{"presenid":"B4-5","name":"鈴村 豊太郎","belongs":"IBM Research／University College Dublin／JST CREST","first":0},
+{"presenid":"C1-2","name":"守谷 一朗","belongs":"筑波大学","first":1},
+{"presenid":"C1-2","name":"小池 大地","belongs":"筑波大学","first":0},
+{"presenid":"C1-2","name":"今田 貴和","belongs":"筑波大学","first":0},
+{"presenid":"C1-2","name":"宇津呂 武仁","belongs":"筑波大学","first":0},
+{"presenid":"C1-2","name":"河田 容英","belongs":"ログワークス","first":0},
+{"presenid":"C1-2","name":"神門 典子","belongs":"国立情報学研究所","first":0},
+{"presenid":"C1-3","name":"津川 敦朗","belongs":"岡山大学","first":1},
+{"presenid":"C1-3","name":"新妻 弘崇","belongs":"岡山大学","first":0},
+{"presenid":"C1-3","name":"太田 学","belongs":"岡山大学","first":0},
+{"presenid":"C1-5","name":"松尾 昇","belongs":"九州大学","first":1},
+{"presenid":"C1-5","name":"牛尼 剛聡","belongs":"九州大学","first":0},
+{"presenid":"C1-6","name":"加藤 龍","belongs":"京都大学","first":1},
+{"presenid":"C1-6","name":"大島 裕明","belongs":"京都大学","first":0},
+{"presenid":"C1-6","name":"山本 岳洋","belongs":"京都大学","first":0},
+{"presenid":"C1-6","name":"加藤 誠","belongs":"京都大学","first":0},
+{"presenid":"C1-6","name":"田中 克己","belongs":"京都大学","first":0},
+{"presenid":"C2-4","name":"真下 遼","belongs":"甲南大学","first":1},
+{"presenid":"C2-4","name":"灘本 明代","belongs":"甲南大学","first":0},
+{"presenid":"C3-1","name":"松井 悠太郎","belongs":"岡山大学","first":1},
+{"presenid":"C3-1","name":"新妻 弘崇","belongs":"岡山大学","first":0},
+{"presenid":"C3-1","name":"太田 学","belongs":"岡山大学","first":0},
+{"presenid":"C3-2","name":"前田 浩邦","belongs":"京都大学","first":1},
+{"presenid":"C3-2","name":"山肩 洋子","belongs":"京都大学","first":0},
+{"presenid":"C3-2","name":"森 信介","belongs":"京都大学","first":0},
+{"presenid":"C3-3","name":"園田 匠","belongs":"法政大学","first":1},
+{"presenid":"C3-3","name":"三浦 孝夫","belongs":"法政大学","first":0},
+{"presenid":"C3-4","name":"朝永 聖也","belongs":"京都産業大学","first":1},
+{"presenid":"C3-4","name":"中島 伸介","belongs":"京都産業大学","first":0},
+{"presenid":"C3-4","name":"稲垣 陽一","belongs":"きざしカンパニー","first":0},
+{"presenid":"C3-4","name":"中本 レン","belongs":"きざしカンパニー","first":0},
+{"presenid":"C3-4","name":"張 建偉","belongs":"筑波技術大学","first":0},
+{"presenid":"C4-1","name":"山本 修平","belongs":"筑波大学","first":1},
+{"presenid":"C4-1","name":"佐藤 哲司","belongs":"筑波大学","first":0},
+{"presenid":"C4-2","name":"藤野 巖","belongs":"東海大学","first":1},
+{"presenid":"C4-2","name":"星野 祐子","belongs":"東海大学","first":0},
+{"presenid":"C4-3","name":"遠藤 結城","belongs":"NTT","first":1},
+{"presenid":"C4-3","name":"戸田 浩之","belongs":"NTT","first":0},
+{"presenid":"C4-3","name":"鷲崎 誠司","belongs":"NTT","first":0},
+{"presenid":"D1-3","name":"小沢 健史","belongs":"NTT","first":1},
+{"presenid":"D1-3","name":"及川 一樹","belongs":"NTT","first":0},
+{"presenid":"D1-3","name":"本庄 利守","belongs":"NTT","first":0},
+{"presenid":"D1-3","name":"鬼塚 真","belongs":"NTT","first":0},
+{"presenid":"D1-4","name":"日開 朝美","belongs":"お茶の水女子大学","first":1},
+{"presenid":"D1-4","name":"竹房 あつ子","belongs":"産業技術総合研究所","first":0},
+{"presenid":"D1-4","name":"中田 秀基","belongs":"産業技術総合研究所","first":0},
+{"presenid":"D1-4","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
+{"presenid":"D1-5","name":"若森 拓馬","belongs":"NTT","first":1},
+{"presenid":"D1-5","name":"山室 健","belongs":"NTT","first":0},
+{"presenid":"D1-5","name":"寺本 純司","belongs":"NTT","first":0},
+{"presenid":"D1-5","name":"西村 剛","belongs":"NTT","first":0},
+{"presenid":"D1-6","name":"西前 光","belongs":"高知大学","first":1},
+{"presenid":"D1-6","name":"三好 智也","belongs":"高知大学","first":0},
+{"presenid":"D1-6","name":"本田 理恵","belongs":"高知大学","first":0},
+{"presenid":"D2-1","name":"飯村 奈穂","belongs":"お茶の水女子大学","first":1},
+{"presenid":"D2-1","name":"西川 記史","belongs":"東京大学","first":0},
+{"presenid":"D2-1","name":"中野 美由紀","belongs":"芝浦工業大学","first":0},
+{"presenid":"D2-1","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
+{"presenid":"D2-5","name":"檜垣 貴良","belongs":"京都産業大学","first":1},
+{"presenid":"D2-5","name":"秋山 豊和","belongs":"京都産業大学","first":0},
+{"presenid":"D4-1","name":"古谷 遼平","belongs":"筑波大学","first":1},
+{"presenid":"D4-1","name":"手塚 太郎","belongs":"筑波大学","first":0},
+{"presenid":"D4-2","name":"松原 靖子","belongs":"熊本大学","first":1},
+{"presenid":"D4-2","name":"櫻井 保志","belongs":"熊本大学","first":0},
+{"presenid":"D4-2","name":"Christos Faloutsos","belongs":"Carnegie Mellon University","first":0},
+{"presenid":"D4-3","name":"松井 友哉","belongs":"京都産業大学","first":1},
+{"presenid":"D4-3","name":"秋山 豊和","belongs":"京都産業大学","first":0},
+{"presenid":"E1-1","name":"藤原 国久","belongs":"横浜国立大学","first":1},
+{"presenid":"E1-1","name":"高橋 慶多","belongs":"横浜国立大学","first":0},
+{"presenid":"E1-1","name":"細澤 直人","belongs":"横浜国立大学","first":0},
+{"presenid":"E1-1","name":"高橋 佳久","belongs":"横浜国立大学","first":0},
+{"presenid":"E1-1","name":"西本 直樹","belongs":"横浜国立大学","first":0},
+{"presenid":"E1-1","name":"富井 尚志","belongs":"横浜国立大学","first":0},
+{"presenid":"E1-1","name":"本藤 祐樹","belongs":"横浜国立大学","first":0},
+{"presenid":"E1-2","name":"玉田 雄基","belongs":"筑波大学","first":1},
+{"presenid":"E1-2","name":"佐藤 哲司","belongs":"筑波大学","first":0},
+{"presenid":"E1-3","name":"大羽 洋隆","belongs":"静岡大学","first":1},
+{"presenid":"E1-3","name":"廣田 雅春","belongs":"静岡大学","first":0},
+{"presenid":"E1-3","name":"石川 博","belongs":"首都大学東京","first":0},
+{"presenid":"E1-3","name":"横山 昌平","belongs":"静岡大学","first":0},
+{"presenid":"E1-4","name":"後藤 康路","belongs":"静岡大学","first":1},
+{"presenid":"E1-4","name":"山田 竜平","belongs":"国立天文台","first":0},
+{"presenid":"E1-4","name":"山本 幸生","belongs":"宇宙航空研究開発機構","first":0},
+{"presenid":"E1-4","name":"石川 博","belongs":"首都大学東京","first":0},
+{"presenid":"E1-4","name":"横山 昌平","belongs":"静岡大学","first":0},
+{"presenid":"E1-5","name":"松尾 哉太","belongs":"岡山大学","first":1},
+{"presenid":"E1-5","name":"新妻 弘崇","belongs":"岡山大学","first":0},
+{"presenid":"E1-5","name":"太田 学","belongs":"岡山大学","first":0},
+{"presenid":"E1-6","name":"谷 俊廣","belongs":"立命館大学","first":1},
+{"presenid":"E1-6","name":"黄 宏軒","belongs":"立命館大学","first":0},
+{"presenid":"E1-6","name":"川越 恭二","belongs":"立命館大学","first":0},
+{"presenid":"E2-1","name":"安政 駿","belongs":"筑波大学","first":1},
+{"presenid":"E2-1","name":"手塚 太郎","belongs":"筑波大学","first":0},
+{"presenid":"E2-2","name":"馬場 匠見","belongs":"慶應義塾大学","first":1},
+{"presenid":"E2-2","name":"橋本 翔","belongs":"慶應義塾大学","first":0},
+{"presenid":"E2-2","name":"増井 俊之","belongs":"慶應義塾大学","first":0},
+{"presenid":"E2-3","name":"権守 健嗣","belongs":"筑波大学","first":1},
+{"presenid":"E2-3","name":"森嶋 厚行","belongs":"筑波大学","first":0},
+{"presenid":"E2-3","name":"北川 博之","belongs":"筑波大学","first":0},
+{"presenid":"E2-4","name":"青木 秀人","belongs":"筑波大学","first":1},
+{"presenid":"E2-4","name":"森嶋 厚行","belongs":"筑波大学","first":0},
+{"presenid":"E3-2","name":"細井 純太","belongs":"名古屋工業大学","first":1},
+{"presenid":"E3-2","name":"山本 大介","belongs":"名古屋工業大学","first":0},
+{"presenid":"E3-2","name":"高橋 直久","belongs":"名古屋工業大学","first":0},
+{"presenid":"E3-3","name":"前野 明子","belongs":"岡山大学","first":1},
+{"presenid":"E3-3","name":"太田 学","belongs":"岡山大学","first":0},
+{"presenid":"E3-3","name":"高須 淳宏","belongs":"国立情報学研究所","first":0},
+{"presenid":"E3-4","name":"王 L)","belongs":"早稲田大学","first":1},
+{"presenid":"E3-4","name":"鬼沢 和也","belongs":"早稲田大学","first":0},
+{"presenid":"E3-4","name":"浅井 洋樹","belongs":"早稲田大学","first":0},
+{"presenid":"E3-4","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0},
+{"presenid":"E3-6","name":"松村 哲郎","belongs":"横浜国立大学","first":1},
+{"presenid":"E3-6","name":"志田 駿介","belongs":"横浜国立大学","first":0},
+{"presenid":"E3-6","name":"倉光 君郎","belongs":"横浜国立大学","first":0},
+{"presenid":"E4-1","name":"大森 雅己","belongs":"静岡大学","first":1},
+{"presenid":"E4-1","name":"廣田 雅春","belongs":"静岡大学","first":0},
+{"presenid":"E4-1","name":"石川 博","belongs":"首都大学東京","first":0},
+{"presenid":"E4-1","name":"横山 昌平","belongs":"静岡大学","first":0},
+{"presenid":"E4-2","name":"青山 賢","belongs":"静岡大学","first":1},
+{"presenid":"E4-2","name":"廣田 雅春","belongs":"静岡大学","first":0},
+{"presenid":"E4-2","name":"石川 博","belongs":"首都大学東京","first":0},
+{"presenid":"E4-2","name":"横山 昌平","belongs":"静岡大学","first":0},
+{"presenid":"E4-3","name":"白井 元浩","belongs":"静岡大学","first":1},
+{"presenid":"E4-3","name":"廣田 雅春","belongs":"静岡大学","first":0},
+{"presenid":"E4-3","name":"石川 博","belongs":"首都大学東京","first":0},
+{"presenid":"E4-3","name":"横山 昌平","belongs":"静岡大学","first":0},
+{"presenid":"E4-4","name":"林 亜紀","belongs":"NTT","first":1},
+{"presenid":"E4-4","name":"松林 達史","belongs":"NTT","first":0},
+{"presenid":"E4-4","name":"澤田 宏","belongs":"NTT","first":0},
+{"presenid":"F1-2","name":"川上 優平","belongs":"京都大学","first":1},
+{"presenid":"F1-2","name":"清水 敏之","belongs":"京都大学","first":0},
+{"presenid":"F1-2","name":"吉川 正俊","belongs":"京都大学","first":0},
+{"presenid":"F1-3","name":"櫻木 優輝","belongs":"立命館大学","first":1},
+{"presenid":"F1-3","name":"青山 敦","belongs":"立命館大学","first":0},
+{"presenid":"F1-3","name":"木村 文則","belongs":"立命館大学","first":0},
+{"presenid":"F1-3","name":"前田 亮","belongs":"立命館大学","first":0},
+{"presenid":"F1-4","name":"鈴木 尚樹","belongs":"工学院大学","first":1},
+{"presenid":"F1-4","name":"北山 大輔","belongs":"工学院大学","first":0},
+{"presenid":"F1-5","name":"清野 悠希","belongs":"筑波大学","first":1},
+{"presenid":"F1-5","name":"佐藤 哲司","belongs":"筑波大学","first":0},
+{"presenid":"F1-6","name":"坂本 祥之","belongs":"京都大学","first":1},
+{"presenid":"F1-6","name":"清水 敏之","belongs":"京都大学","first":0},
+{"presenid":"F1-6","name":"吉川 正俊","belongs":"京都大学","first":0},
+{"presenid":"F2-5","name":"萩生田 明徳","belongs":"横浜国立大学","first":1},
+{"presenid":"F2-5","name":"藤村 雄基","belongs":"横浜国立大学","first":0},
+{"presenid":"F2-5","name":"富井 尚志","belongs":"横浜国立大学","first":0},
+{"presenid":"F2-6","name":"田中 祥太郎","belongs":"京都大学","first":1},
+{"presenid":"F2-6","name":"ヤトフト アダム","belongs":"京都大学","first":0},
+{"presenid":"F2-6","name":"田中 克己","belongs":"京都大学","first":0},
+{"presenid":"F3-2","name":"粟納 裕貴","belongs":"京都大学","first":1},
+{"presenid":"F3-2","name":"馬 強","belongs":"京都大学","first":0},
+{"presenid":"F3-2","name":"吉川 正俊","belongs":"京都大学","first":0},
+{"presenid":"F3-3","name":"堀田 徹","belongs":"ヤフー","first":1},
+{"presenid":"F3-3","name":"瀬賀 信一郎","belongs":"ヤフー","first":0},
+{"presenid":"F3-3","name":"下羅 弘樹","belongs":"ヤフー","first":0},
+{"presenid":"F3-3","name":"高木 潤","belongs":"ヤフー","first":0},
+{"presenid":"F3-3","name":"田島 玲","belongs":"ヤフー","first":0},
+{"presenid":"F3-4","name":"田頭 幸浩","belongs":"ヤフー","first":1},
+{"presenid":"F3-4","name":"小野 真吾","belongs":"ヤフー","first":0},
+{"presenid":"F3-4","name":"田島 玲","belongs":"ヤフー","first":0},
+{"presenid":"F3-5","name":"土井 千章","belongs":"NTTドコモ","first":1},
+{"presenid":"F3-5","name":"小西 哲平","belongs":"NTTドコモ","first":0},
+{"presenid":"F3-5","name":"中川 智尋","belongs":"NTTドコモ","first":0},
+{"presenid":"F3-5","name":"片桐 雅二","belongs":"NTTドコモ","first":0},
+{"presenid":"F3-5","name":"稲村 浩","belongs":"NTTドコモ","first":0},
+{"presenid":"F3-5","name":"太田 賢","belongs":"NTTドコモ","first":0},
+{"presenid":"F4-1","name":"梅澤 啓史","belongs":"京都産業大学","first":1},
+{"presenid":"F4-1","name":"宮森 恒","belongs":"京都産業大学","first":0},
+{"presenid":"F4-2","name":"山内 嶺","belongs":"工学院大学","first":1},
+{"presenid":"F4-2","name":"北山 大輔","belongs":"工学院大学","first":0},
+{"presenid":"F4-3","name":"松原 宏和","belongs":"岡山大学","first":1},
+{"presenid":"F4-3","name":"新妻 弘崇","belongs":"岡山大学","first":0},
+{"presenid":"F4-3","name":"太田 学","belongs":"岡山大学","first":0},
+{"presenid":"F5-1","name":"碓井 義彬","belongs":"首都大学東京","first":1},
+{"presenid":"F5-1","name":"飛田 雄樹","belongs":"首都大学東京","first":0},
+{"presenid":"F5-1","name":"王 天宇","belongs":"首都大学東京","first":0},
+{"presenid":"F5-1","name":"片山 薫","belongs":"首都大学東京","first":0},
+{"presenid":"P1-1","name":"鈴木 智也","belongs":"千葉工業大学","first":1},
+{"presenid":"P1-1","name":"熊本 忠彦","belongs":"千葉工業大学","first":0},
+{"presenid":"P1-2","name":"藤原 泰士","belongs":"広島市立大学","first":1},
+{"presenid":"P1-2","name":"難波 英嗣","belongs":"広島市立大学","first":0},
+{"presenid":"P1-2","name":"竹澤 寿幸","belongs":"広島市立大学","first":0},
+{"presenid":"P1-3","name":"並木 賢太郎","belongs":"京都産業大学","first":1},
+{"presenid":"P1-3","name":"朝永 聖也","belongs":"京都産業大学","first":0},
+{"presenid":"P1-3","name":"中島 伸介","belongs":"京都産業大学","first":0},
+{"presenid":"P1-3","name":"稲垣 陽一","belongs":"きざしカンパニー","first":0},
+{"presenid":"P1-3","name":"中本 レン","belongs":"きざしカンパニー","first":0},
+{"presenid":"P1-3","name":"田中 昇太郎","belongs":"きざしカンパニー","first":0},
+{"presenid":"P1-3","name":"張 建偉","belongs":"筑波技術大学","first":0},
+{"presenid":"P1-4","name":"寺田 有佑","belongs":"京都産業大学","first":1},
+{"presenid":"P1-4","name":"朝永 聖也","belongs":"京都産業大学","first":0},
+{"presenid":"P1-4","name":"小倉 僚","belongs":"京都産業大学","first":0},
+{"presenid":"P1-4","name":"中島 伸介","belongs":"京都産業大学","first":0},
+{"presenid":"P1-4","name":"稲垣 陽一","belongs":"きざしカンパニー","first":0},
+{"presenid":"P1-4","name":"中本 レン","belongs":"きざしカンパニー","first":0},
+{"presenid":"P1-4","name":"張 建偉","belongs":"筑波技術大学","first":0},
+{"presenid":"P1-5","name":"前田 剛","belongs":"広島市立大学","first":1},
+{"presenid":"P1-5","name":"河野 有希","belongs":"広島市立大学","first":0},
+{"presenid":"P1-5","name":"石野 亜耶","belongs":"広島市立大学","first":0},
+{"presenid":"P1-5","name":"難波 英嗣","belongs":"広島市立大学","first":0},
+{"presenid":"P1-5","name":"竹澤 寿幸","belongs":"広島市立大学","first":0},
+{"presenid":"P2-1","name":"西澤 健吾","belongs":"京都産業大学","first":1},
+{"presenid":"P2-1","name":"荻野 晃大","belongs":"京都産業大学","first":0},
+{"presenid":"P2-1","name":"中島 伸介","belongs":"京都産業大学","first":0},
+{"presenid":"P2-2","name":"山崎 隼也","belongs":"京都産業大学","first":1},
+{"presenid":"P2-2","name":"井狩 憲幸","belongs":"京都産業大学","first":0},
+{"presenid":"P2-2","name":"中島 伸介","belongs":"京都産業大学","first":0},
+{"presenid":"P2-3","name":"高田 夏彦","belongs":"京都産業大学","first":1},
+{"presenid":"P2-3","name":"佐々江 駿","belongs":"京都産業大学","first":0},
+{"presenid":"P2-3","name":"上田 真由美","belongs":"流通科学大学","first":0},
+{"presenid":"P2-3","name":"中島 伸介","belongs":"京都産業大学","first":0},
+{"presenid":"P2-3","name":"森下 幸俊","belongs":"大日本印刷株式会社","first":0},
+{"presenid":"P2-4","name":"浅川 拓","belongs":"京都産業大学","first":1},
+{"presenid":"P2-4","name":"濱田 恵輔","belongs":"京都産業大学","first":0},
+{"presenid":"P2-4","name":"中島 伸介","belongs":"京都産業大学","first":0},
+{"presenid":"P2-4","name":"北山 大輔","belongs":"工学院大学","first":0},
+{"presenid":"P2-4","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
+{"presenid":"P2-5","name":"北林 宏樹","belongs":"京都大学","first":1},
+{"presenid":"P2-5","name":"吉川 正俊","belongs":"京都大学","first":0},
+{"presenid":"P3-1","name":"三原 真衣子","belongs":"兵庫県立大学","first":1},
+{"presenid":"P3-1","name":"王 元元","belongs":"兵庫県立大学","first":0},
+{"presenid":"P3-1","name":"北山 大輔","belongs":"工学院大学","first":0},
+{"presenid":"P3-1","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
+{"presenid":"P3-2","name":"小島 光平","belongs":"神奈川工科大学","first":1},
+{"presenid":"P3-2","name":"岡崎 有彩","belongs":"神奈川工科大学","first":0},
+{"presenid":"P3-2","name":"佐藤 充","belongs":"神奈川工科大学","first":0},
+{"presenid":"P3-2","name":"蒔田 圭佑","belongs":"神奈川工科大学","first":0},
+{"presenid":"P3-2","name":"白井 暁彦","belongs":"神奈川工科大学","first":0},
+{"presenid":"P3-2","name":"大塚 真吾","belongs":"神奈川工科大学","first":0},
+{"presenid":"P3-3","name":"市倉 丈寛","belongs":"工学院大学","first":1},
+{"presenid":"P3-3","name":"北山 大輔","belongs":"工学院大学","first":0},
+{"presenid":"P3-4","name":"青木 孝文","belongs":"神奈川工科大学","first":1},
+{"presenid":"P3-4","name":"笹本 芳和","belongs":"神奈川工科大学","first":0},
+{"presenid":"P3-4","name":"小林 愛実","belongs":"神奈川工科大学","first":0},
+{"presenid":"P3-4","name":"小林 寛高","belongs":"神奈川工科大学","first":0},
+{"presenid":"P3-4","name":"大塚 真吾","belongs":"神奈川工科大学","first":0},
+{"presenid":"P3-5","name":"友安 航太","belongs":"兵庫県立大学","first":1},
+{"presenid":"P3-5","name":"王 元元","belongs":"兵庫県立大学","first":0},
+{"presenid":"P3-5","name":"木村 玲欧","belongs":"兵庫県立大学","first":0},
+{"presenid":"P3-5","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
+{"presenid":"X3-4","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-5","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-6","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-7","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-8","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-9","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-10","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-11","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-12","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-13","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-14","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-15","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-16","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-17","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-18","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-19","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-20","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-21","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-22","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-23","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-24","name":"Xさん","belongs":"X大学","first":1},
 {"presenid":"X3-25","name":"Xさん","belongs":"X大学","first":1}
 ];
 
 var keyword =
-
 [
-{"presenid":"X3-4","keyword":"ダミーポスター"}
-{"presenid":"X3-5","keyword":"ダミーポスター"}
-{"presenid":"X3-6","keyword":"ダミーポスター"}
-{"presenid":"X3-7","keyword":"ダミーポスター"}
-{"presenid":"X3-8","keyword":"ダミーポスター"}
-{"presenid":"X3-9","keyword":"ダミーポスター"}
-{"presenid":"X3-10","keyword":"ダミーポスター"}
-{"presenid":"X3-11","keyword":"ダミーポスター"}
-{"presenid":"X3-12","keyword":"ダミーポスター"}
-{"presenid":"X3-13","keyword":"ダミーポスター"}
-{"presenid":"X3-14","keyword":"ダミーポスター"}
-{"presenid":"X3-15","keyword":"ダミーポスター"}
-{"presenid":"X3-16","keyword":"ダミーポスター"}
-{"presenid":"X3-17","keyword":"ダミーポスター"}
-{"presenid":"X3-18","keyword":"ダミーポスター"}
-{"presenid":"X3-19","keyword":"ダミーポスター"}
-{"presenid":"X3-20","keyword":"ダミーポスター"}
-{"presenid":"X3-21","keyword":"ダミーポスター"}
-{"presenid":"X3-22","keyword":"ダミーポスター"}
-{"presenid":"X3-23","keyword":"ダミーポスター"}
-{"presenid":"X3-24","keyword":"ダミーポスター"}
+{"presenid":"X3-4","keyword":"ダミーポスター"},
+{"presenid":"X3-5","keyword":"ダミーポスター"},
+{"presenid":"X3-6","keyword":"ダミーポスター"},
+{"presenid":"X3-7","keyword":"ダミーポスター"},
+{"presenid":"X3-8","keyword":"ダミーポスター"},
+{"presenid":"X3-9","keyword":"ダミーポスター"},
+{"presenid":"X3-10","keyword":"ダミーポスター"},
+{"presenid":"X3-11","keyword":"ダミーポスター"},
+{"presenid":"X3-12","keyword":"ダミーポスター"},
+{"presenid":"X3-13","keyword":"ダミーポスター"},
+{"presenid":"X3-14","keyword":"ダミーポスター"},
+{"presenid":"X3-15","keyword":"ダミーポスター"},
+{"presenid":"X3-16","keyword":"ダミーポスター"},
+{"presenid":"X3-17","keyword":"ダミーポスター"},
+{"presenid":"X3-18","keyword":"ダミーポスター"},
+{"presenid":"X3-19","keyword":"ダミーポスター"},
+{"presenid":"X3-20","keyword":"ダミーポスター"},
+{"presenid":"X3-21","keyword":"ダミーポスター"},
+{"presenid":"X3-22","keyword":"ダミーポスター"},
+{"presenid":"X3-23","keyword":"ダミーポスター"},
+{"presenid":"X3-24","keyword":"ダミーポスター"},
 {"presenid":"X3-25","keyword":"ダミーポスター"}
 ];
 
