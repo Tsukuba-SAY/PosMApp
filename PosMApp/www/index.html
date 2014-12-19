@@ -29,6 +29,7 @@
 	<script type="text/javascript" charset="utf-8" src="js/postermap-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/posterlist-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/bookmarklist-function.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/detail-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/window-manager.js"></script>
 
 	<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
@@ -149,7 +150,7 @@
 		<a href="#" class="ui-btn-left"  data-icon="carat-l" id="detailBackButton" >戻る</a>
 	</div>
 	<div data-role="content">
-		No. <span id="detail-posterid"></span> [<span id="detail-sessionid"></span>]
+		No. <span id="detail-posterid"></span> [<span id="detail-presenid"></span>]
 		<h1>
 			<span id="detail-title"></span>
 		</h1>
@@ -236,10 +237,8 @@
 		<h1>ラベルの表示切り替え</h1>
 	</div> 
 	<div data-role="content">
-		<a class="changelabel" id="label-id"
-			href="#posterMapPage" data-role="button">通し番号</a>
-		<a class="changelabel" id="label-sessionid"
-			href="#posterMapPage" data-role="button">ポスターID</a>
+		<a class="changelabel" id="label-presenid"
+			href="#posterMapPage" data-role="button">発表番号</a>
 		<a class="changelabel" id="label-title"
 			href="#posterMapPage" data-role="button">タイトル</a>
 		<a class="changelabel" id="label-authorname"

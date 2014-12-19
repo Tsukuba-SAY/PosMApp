@@ -605,6 +605,26 @@ function searchAll(word) {
 	return pflag;
 }
 
+// 詳細情報をsessionStorageにセット
+function setDetails() {
+	$("#detail-posterid").html(sessionStorage.getItem("posterid"));
+	$("#detail-presenid").html(sessionStorage.getItem("presenid"));
+	$("#detail-title").html(sessionStorage.getItem("title"));
+	var authors = sessionStorage.getItem("authors");
+	authors = (authors !== null && authors !== "")
+		? authors
+		: "NO DATA";
+	$("#detail-authors").html(authors);
+	$("#detail-authorbelongs").html(sessionStorage.getItem("authorbelongs"));
+	$("#detail-authorname").html(sessionStorage.getItem("authorname"));
+	var keywords = sessionStorage.getItem("keywords");
+	keywords = keywords !== null && keywords !== "" 
+		? keywords
+		: "NO DATA";
+	$("#detail-keywords").html(keywords);
+	$("#detail-abstract").html(sessionStorage.getItem("abstract"));
+}
+
 // 代表者名を取得
 function getAuthorname(posterid) {
 	return author.filter(function(a) {
