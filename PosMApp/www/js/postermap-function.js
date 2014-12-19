@@ -81,9 +81,9 @@ $.fn.changeLabel = function() {
 // ブックマークスターのタッチイベント
 $.fn.touchBookmark = function() {
 	$(this).on("touchstart", function(e) {
-		var posterid = parseInt(sessionStorage.getItem("posterid"));
+		var presenid = sessionStorage.getItem("presenid");
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		touchBookmark(posterid, bookmarkIcon);
+		touchBookmark(presenid, bookmarkIcon);
 	});	
 };
 
@@ -254,15 +254,16 @@ function changeBasicInfoPanel(flag) {
 		bookmarks = "";
 	}
 	var bookmarkArr = bookmarks.split(",");
-	var foundBookmark = false;
-	console.log(sessionStorage.getItem("posterid"));
-	for (var i = 0; i < bookmarkArr.length; i++) {
-		if (parseInt(sessionStorage.getItem("posterid")) === parseInt(bookmarkArr[i])) {
-			foundBookmark = true;
-			break;
-		}
-	}
-	if (foundBookmark) {
+	var presenid = sessionStorage.getItem("presenid");
+	// console.log(sessionStorage.getItem("presenid"));
+	// for (var i = 0; i < bookmarkArr.length; i++) {
+	// 	if (parseInt(sessionStorage.getItem("posterid")) === parseInt(bookmarkArr[i])) {
+	// 		foundBookmark = true;
+	// 		break;
+	// 	}
+	// }
+
+	if (bookmarkArr.indexOf(presenid) !== -1) {
 		bookmarkIcon.src = "img/bookmark.png";
 	} else {
 		bookmarkIcon.src = "img/unbookmark.png";
@@ -453,12 +454,12 @@ function showBookmarkIcons() {
 
 
 // ブックマークスターをタッチする（状態のスイッチ）
-function touchBookmark(posterid, bookmarkIcon){
-	if (posterid < 1 || posterid > ptotal || posterid === null) {
-		throw new Exception();
-	}
+function touchBookmark(presenid, bookmarkIcon){
+	// if (posterid < 1 || posterid > ptotal || posterid === null) {
+	// 	throw new Exception();
+	// }
 
-	var presenid = poster[posterid-1].presenid;
+	// var presenid = poster[posterid-1].presenid;
 	var bookmarkArr = getBookmarks();
 	// posteridに該当するポスターがブックマークリストに存在しているか確認用
 	var location = bookmarkArr.indexOf(presenid);
@@ -470,7 +471,7 @@ function touchBookmark(posterid, bookmarkIcon){
 		bookmarkArr.splice(location, 1);
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/unbookmark.png";
-			$("#listbookmark" + posterid).attr("src","img/unbookmark.png");
+			$("#listbookmark" + presenid).attr("src","img/unbookmark.png");
 		}
 		starstatus = "none";
 		saveLog("unbookmark", {posterid:posterid, page:window.location.hash});
@@ -479,7 +480,7 @@ function touchBookmark(posterid, bookmarkIcon){
 		bookmarkArr.push(presenid);
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/bookmark.png";
-			$("#listbookmark" + posterid).attr("src","img/bookmark.png");
+			$("#listbookmark" + presenid).attr("src","img/bookmark.png");
 		}
 		starstatus = "block";
 		saveLog("bookmark", {presenid:presenid, page:window.location.hash});
@@ -487,6 +488,7 @@ function touchBookmark(posterid, bookmarkIcon){
 
 	var starpos = [null, "Top", "Right", "Bottom", "Left"];
 	if (bookmarkIcon !== null) {
+		var posterid = getPosterid(presenid);
 		var p = poster[posterid-1];
 		starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
 		starelem.style.display = starstatus;

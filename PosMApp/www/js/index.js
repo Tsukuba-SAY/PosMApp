@@ -97,11 +97,10 @@ function init() {
 	$(".listToDetailBtn").jumpToDetailPage();
 	$(".listbookmarkbutton").listchangebookmark();
 
-    // ブックマークリスト画面ボタン
-    //$(".bookmarklistToMapBtn").bookmarklistToMapPage();
-	//$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
-	//$(".deletebookmarkBtn").deletebookmark();
-	//$(".listbookmarkbutton").listchangebookmark();
+    // ブックマークリスト画面のボタン
+    $(".bookmarklistToMapBtn").bookmarklistToMapPage();
+	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+	$(".bookmarklistbookmarkbutton").deletebookmark();
 
 	// 詳細表示画面の戻るボタン
 	$("#detailBackButton").backToPreviousPage();
