@@ -134,9 +134,9 @@ function changeLabel(column) {
 	for (var i = 1; i <= ptotal; i++) {
 		var str;
 		if (column === "authorname") {
-			str = getAuthorname(i);
+			str = getAuthorname(poster[i-1].presenid);
 		} else if (column === "authorbelongs") {
-			str = getAuthorbelongs(i);
+			str = getAuthorbelongs(poster[i-1].presenid);
 		} else {
 			str = poster[i - 1][column].toString();
 		}
@@ -351,15 +351,15 @@ function selectPoster(posterid) {
 	var presenlength = presen.length;
 	for (var i = 0; i < presenlength; i++) {
 		var p = presen[i];
-		if (p.presenid = presenid) {
+		if (p.presenid === presenid) {
 			sessionStorage.setItem("posterid", posterid);
 			sessionStorage.setItem("presenid", p.presenid);
 			sessionStorage.setItem("title", p.title);
 			sessionStorage.setItem("abstract", p.abstract);
 
-			sessionStorage.setItem("authorname", getAuthorname(posterid));
+			sessionStorage.setItem("authorname", getAuthorname(p.presenid));
 
-			sessionStorage.setItem("authorbelongs", getAuthorbelongs(posterid));
+			sessionStorage.setItem("authorbelongs", getAuthorbelongs(p.presenid));
 
 			sessionStorage.setItem("bookmark", p.bookmark);
 			sessionStorage.setItem("star", poster[posterid-1].star);
@@ -626,16 +626,16 @@ function setDetails() {
 }
 
 // 代表者名を取得
-function getAuthorname(posterid) {
+function getAuthorname(presenid) {
 	return author.filter(function(a) {
-		return a.presenid === poster[posterid-1].presenid && a.first === 1;
+		return a.presenid === presenid && a.first === 1;
 	})[0].name;
 }
 
 // 所属一覧を取得
-function getAuthorbelongs(posterid) {
+function getAuthorbelongs(presenid) {
 	return author.filter(function(a) {
-		return a.presenid === poster[posterid-1].presenid;
+		return a.presenid === presenid;
 	}).map(function(a) {
 		return a.belongs;
 	}).filter(function(a, i, self) {
@@ -643,19 +643,19 @@ function getAuthorbelongs(posterid) {
 	}).join(", ");
 }
 
-//ポスターの発表者を取得
-function getAuthors(posterid) {
+// 発表者を取得
+function getAuthors(presenid) {
 	return author.filter(function(a) {
-		return a.presenid === poster[posterid-1].presenid;
+		return a.presenid === presenid;
 	}).map(function(a) {
 		return a.name;
 	}).join(", ");
 }
 
-//ポスターのキーワードを取得
-function getKeywords(posterid) {
+// キーワードを取得
+function getKeywords(presenid) {
 	return keyword.filter(function(k) {
-		return k.presenid === poster[posterid-1].presenid;
+		return k.presenid === presenid;
 	}).map(function(k) {
 		return k.keyword;
 	}).join(", ");

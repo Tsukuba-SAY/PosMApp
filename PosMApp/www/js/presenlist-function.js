@@ -1,10 +1,10 @@
-// ポスターの一覧を表示する
+// 発表の一覧を表示する
 $.fn.showPresenList = function() {
-	var posters = [];
-	posters["id"] = [];
-	posters["presenid"] = [];
-	posters["title"] = [];
-	posters["author"] = [];
+	var presens = [];
+	presens["posterid"] = [];
+	presens["presenid"] = [];
+	presens["title"] = [];
+	presens["author"] = [];
 	//ブックマークされたポスターIDを取得する
 	var bookmarkIcon = document.getElementById("bookmarkbutton");
 	var bookmarks = localStorage.getItem("bookmarks");
@@ -15,35 +15,43 @@ $.fn.showPresenList = function() {
 	var str = "";
 	str += '<table border="1" rules="rows" width="100%">';
 	
-	for (var i = 0; i < poster.length; i++) {
-		authors = getAuthors(i+1).split(",").join(", ")
-		posters["id"].push(poster[i].id.toString());
-		posters["presenid"].push(poster[i].presenid);
-		posters["title"].push(poster[i].title);
-		posters["author"].push(getAuthors(i+1));
-		str += "<tr><td><div>ポスターID: " + poster[i].presenid + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
+	presen.forEach(function(p) {
+		var posterid = getPosterid(p.presenid);
+		authors = getAuthors(p.presenid).split(",").join(", ");
+		presens["posterid"].push(posterid !== -1 ? posterid : null);
+		presens["presenid"].push(p.presenid);
+		presens["title"].push(p.title);
+		presens["author"].push(getAuthors(p.presenid));
+		str += "<tr><td><div>発表ID: " + p.presenid;
+
+		// ポスター発表があるときのみマップへ遷移するボタンを表示
+		if (posterid !== -1) {
+			str += "<img class='listToMapBtn' id='listToMap" +poster[i].posterid.toString()+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
+		}
+
 		//ブックマークされたかどうか判断する
 		var foundBookmark = false;
 		for (var j = 0; j < bookmarkArr.length; j++) {
-			if (parseInt(poster[i].id) === parseInt(bookmarkArr[j])) {
+			if (parseInt(posterid) === parseInt(bookmarkArr[j])) {
 				foundBookmark = true;
 				break;
 			}
 		}
 		if (foundBookmark) {
-			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
+			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+posterid+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
 		} else {
-			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+poster[i].id+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
+			str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+posterid+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
 		}
-		str += "<strong>" + poster[i].title + "</strong><br>";
+
+		str += "<strong>" + p.title + "</strong><br>";
 		str += "メンバー: " + authors + "<br></td>";
-		str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+poster[i].id.toString()+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
-	}
+		str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+posterid+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
+	});
 	str += '</table>'
 
 	$(this).html(str);
 
-	return posters;
+	return presens;
 };
 
 //ポスターリスト画面の各「詳細情報」ボタンをクリックする時
@@ -124,3 +132,14 @@ $.fn.listchangebookmark = function() {
 		touchBookmark(posterid, bookmarkIcon);
 	});
 };
+
+// 発表IDからポスターIDを取得するfunction
+// return ある場合posterid、ない場合-1
+function getPosterid(presenid) {
+	poster.forEach(function(p) {
+		if (p.presenid === presenid) {
+			return p.posterid;
+		}
+	});
+	return -1;
+}
