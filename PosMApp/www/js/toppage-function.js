@@ -3,7 +3,7 @@ $.fn.goToMapPage = function(ev) {
 	$(this).on(ev, function() {
 		changePage("#posterMapPage");
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
@@ -13,11 +13,11 @@ $.fn.goToMapPage = function(ev) {
 // リスト画面に遷移
 $.fn.goToListPage = function(ev) {
 	$(this).on(ev, function() {
-		changePage("#posterListPage");
+		changePage("#presenListPage");
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterListPageButton").addClass("ui-btn-active ui-state-persist");
+		$(".presenListPageButton").addClass("ui-btn-active ui-state-persist");
 		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	});	
 };
@@ -28,7 +28,7 @@ $.fn.goToInformationPage = function(ev) {
 		changePage("#informationPage");
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
 		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 	});	
@@ -40,7 +40,7 @@ $.fn.goToBookmarkListPage = function(ev) {
 		changePage("#bookmarkListPage");
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".bookmarkListPageButton").addClass("ui-btn-active ui-state-persist");
 		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 		$("#bookmarkList").showBookmarkList();
@@ -55,7 +55,7 @@ $.fn.goToTopPage = function(ev) {
 	$(this).on(ev, function() {
 		changePage(nextPage);
 		$(".topPageButton").addClass("ui-btn-active ui-state-persist");
-		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	});

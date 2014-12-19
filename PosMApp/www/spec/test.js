@@ -75,11 +75,11 @@ describe("トップページ", function() {
 		$("#goToMap").click();
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
-	it("トップページからポスターリスト画面に遷移できる", function() {
+	it("トップページから発表リスト画面に遷移できる", function() {
 		$("#goToList").click();
-		expect(window.location.hash).toEqual("#posterListPage");
+		expect(window.location.hash).toEqual("#presenListPage");
 	});
-	it("トップページからポスターリスト画面に遷移できる", function() {
+	it("トップページから発表リスト画面に遷移できる", function() {
 		$("#goToInformation").click();
 		expect(window.location.hash).toEqual("#informationPage");
 	});
@@ -96,7 +96,7 @@ describe("タブバー", function() {
 		loadFixtures("fixture-tabbar.html");
 		$(".topPageButton").goToTopPage("click");
 		$(".posterMapPageButton").goToMapPage("click");
-		$(".posterListPageButton").goToListPage("click");
+		$(".presenListPageButton").goToListPage("click");
 	});
 	it("「トップ」ボタンを押すとトップページに遷移する", function() {
 		$(".topPageButton").click();
@@ -107,8 +107,8 @@ describe("タブバー", function() {
 		expect(window.location.hash).toEqual("#posterMapPage");
 	});
 	it("「リスト」ボタンを押すとポスターマップ画面に遷移する", function() {
-		$(".posterListPageButton").click();
-		expect(window.location.hash).toEqual("#posterListPage");
+		$(".presenListPageButton").click();
+		expect(window.location.hash).toEqual("#presenListPage");
 	});
 });
 
@@ -1226,12 +1226,12 @@ describe("ブックマーク機能", function() {
 	});
 });
 
-describe("ポスターリストからのブックマーク機能", function() {
+describe("発表リストからのブックマーク機能", function() {
 	beforeEach(function() {
 		resetDelta();
 
 		loadFixtures("fixture-posterlist.html");
-		$("#posterList").showPosterList();
+		$("#presenList").showPresenList();
 		localStorage.setItem("bookmarks", "");
 	});
 	it("何もブックマークされていない状態で、リストで、1番の星をタップすると、1番のポスターがブックマークされる", function() {
@@ -1323,7 +1323,7 @@ describe("ポスターリストからのブックマーク機能", function() {
 	});
 });
 
-describe("ポスターリスト", function() {
+describe("発表リスト", function() {
 	beforeEach(function() {
 		resetDelta();
 
@@ -1332,7 +1332,7 @@ describe("ポスターリスト", function() {
 		showBookmarkIcons();
 		showPosterIcons();
 
-		$("#posterList").showPosterList();
+		$("#presenList").showPresenList();
 		$(".listToMapBtn").jumpToMapPage();
 		$(".listToDetailBtn").jumpToDetailPage();
 
@@ -1342,7 +1342,7 @@ describe("ポスターリスト", function() {
 	});
 
 	it("正しい順番（ID順）でポスターの一覧が表示されている", function() {
-		var posters = $("#posterList").showPosterList();
+		var posters = $("#presenList").showPresenList();
 
 		var expectIds = new Array();
 		poster.forEach(function(p) {

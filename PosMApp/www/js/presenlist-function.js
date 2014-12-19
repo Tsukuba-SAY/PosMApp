@@ -1,8 +1,8 @@
 // ポスターの一覧を表示する
-$.fn.showPosterList = function() {
+$.fn.showPresenList = function() {
 	var posters = [];
 	posters["id"] = [];
-	posters["sessionid"] = [];
+	posters["presenid"] = [];
 	posters["title"] = [];
 	posters["author"] = [];
 	//ブックマークされたポスターIDを取得する
@@ -14,14 +14,14 @@ $.fn.showPosterList = function() {
 	var bookmarkArr = bookmarks.split(",");
 	var str = "";
 	str += '<table border="1" rules="rows" width="100%">';
-	//postdataをループする、各ポスターの情報を取り出す
+	
 	for (var i = 0; i < poster.length; i++) {
 		authors = getAuthors(i+1).split(",").join(", ")
 		posters["id"].push(poster[i].id.toString());
-		posters["sessionid"].push(poster[i].sessionid);
+		posters["presenid"].push(poster[i].presenid);
 		posters["title"].push(poster[i].title);
 		posters["author"].push(getAuthors(i+1));
-		str += "<tr><td><div>ポスターID: " + poster[i].sessionid + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
+		str += "<tr><td><div>ポスターID: " + poster[i].presenid + "<img class='listToMapBtn' id='listToMap" +poster[i].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
 		//ブックマークされたかどうか判断する
 		var foundBookmark = false;
 		for (var j = 0; j < bookmarkArr.length; j++) {
@@ -52,7 +52,7 @@ $.fn.jumpToDetailPage = function() {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(12));
 		console.log(posterid);
-		sessionStorage.setItem("previousPage", "posterListPage");
+		sessionStorage.setItem("previousPage", "presenListPage");
 		listToDetail(posterid);
 	});
 };
@@ -63,7 +63,7 @@ $.fn.jumpToMapPage = function() {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(9));
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 		listToMap(posterid);
 	});
@@ -83,7 +83,7 @@ function listToDetail(posterid){
 		var p = poster[i];
 		if (p.id === posterid) {
 			sessionStorage.setItem("posterid", posterid);
-			sessionStorage.setItem("sessionid", p.sessionid);
+			sessionStorage.setItem("presenid", p.presenid);
 			sessionStorage.setItem("title", p.title);
 			sessionStorage.setItem("abstract", p.abstract);
 			sessionStorage.setItem("authorname", p.authorname);

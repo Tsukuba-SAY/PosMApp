@@ -1,4 +1,4 @@
- // ポスターの一覧を表示する
+ // ブックマークした発表の一覧を表示する
 $.fn.showBookmarkList = function() {
 	var posters = [];
 	posters["id"] = [];
@@ -64,7 +64,7 @@ $.fn.bookmarklistToMapPage = function() {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(17));
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 		listToMap(posterid);
