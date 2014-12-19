@@ -458,18 +458,11 @@ function touchBookmark(posterid, bookmarkIcon){
 		throw new Exception();
 	}
 
-	// posteridに該当するポスターがブックマークリストに存在しているか確認用
-	// -1だと無し、-1以外だと発見したポスターのインデックス
-	var location = -1;
-
+	var presenid = poster[posterid-1].presenid;
 	var bookmarkArr = getBookmarks();
-	for (var i = 0; i < bookmarkArr.length; i++) {
-		//該当ポスターがブックマークリストに存在しているかどうか確認する
-		if (posterid === parseInt(bookmarkArr[i])) {
-			location = i;
-			break;
-		}
-	}
+	// posteridに該当するポスターがブックマークリストに存在しているか確認用
+	var location = bookmarkArr.indexOf(presenid);
+
 	var starstatus;
 	if (location !== -1) {
 		// ある場合
@@ -483,16 +476,13 @@ function touchBookmark(posterid, bookmarkIcon){
 		saveLog("unbookmark", {posterid:posterid, page:window.location.hash});
 	} else {
 		// ない場合
-		bookmarkArr.push(posterid);
-		bookmarkArr.sort(function(a,b){
-    		return (parseInt(a) < parseInt(b)) ? -1 : 1;
-    	});
+		bookmarkArr.push(presenid);
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/bookmark.png";
 			$("#listbookmark" + posterid).attr("src","img/bookmark.png");
 		}
 		starstatus = "block";
-		saveLog("bookmark", {posterid:posterid, page:window.location.hash});
+		saveLog("bookmark", {presenid:presenid, page:window.location.hash});
 	}
 
 	var starpos = [null, "Top", "Right", "Bottom", "Left"];
@@ -509,19 +499,11 @@ function touchBookmark(posterid, bookmarkIcon){
 }
 
 
-// ブックマークされたポスターIDを数値の配列で取得する
+// ブックマークされた発表IDを配列で取得する
 function getBookmarks() {
 	var bookmarks = localStorage.getItem("bookmarks");
 	// 空文字列だった場合は何もブックマークされていないので空配列
 	var bookmarkArr = (bookmarks !== "" && bookmarks !== null) ? bookmarks.split(",") : [];
-	// 中身をすべて数値にする
-	bookmarkArr.filter(function(obj) {
-		return parseInt(obj);
-	});
-	// ソート
-	bookmarkArr.sort(function(a,b){
-    	return (parseInt(a) < parseInt(b)) ? -1 : 1;
-    });
 
 	return bookmarkArr;
 }

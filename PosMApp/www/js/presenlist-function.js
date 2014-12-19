@@ -5,7 +5,7 @@ $.fn.showPresenList = function() {
 	presens["presenid"] = [];
 	presens["title"] = [];
 	presens["author"] = [];
-	//ブックマークされたポスターIDを取得する
+	//ブックマークされた発表IDを取得する
 	var bookmarkIcon = document.getElementById("bookmarkbutton");
 	var bookmarks = localStorage.getItem("bookmarks");
 	if (bookmarks === null || bookmarks === "") {
@@ -26,7 +26,7 @@ $.fn.showPresenList = function() {
 
 		// ポスター発表があるときのみマップへ遷移するボタンを表示
 		if (posterid !== -1) {
-			str += "<img class='listToMapBtn' id='listToMap" +poster[i].posterid.toString()+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
+			str += "<img class='listToMapBtn' id='listToMap" +posterid+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
 		}
 
 		//ブックマークされたかどうか判断する
@@ -136,10 +136,11 @@ $.fn.listchangebookmark = function() {
 // 発表IDからポスターIDを取得するfunction
 // return ある場合posterid、ない場合-1
 function getPosterid(presenid) {
+	var posterid = -1;
 	poster.forEach(function(p) {
 		if (p.presenid === presenid) {
-			return p.posterid;
+			posterid = p.posterid;
 		}
 	});
-	return -1;
+	return posterid;
 }

@@ -1,10 +1,10 @@
  // ブックマークした発表の一覧を表示する
 $.fn.showBookmarkList = function() {
-	var posters = [];
-	posters["id"] = [];
-	posters["sessionid"] = [];
-	posters["title"] = [];
-	posters["author"] = [];
+	var presens = [];
+	presens["id"] = [];
+	presens["sessionid"] = [];
+	presens["title"] = [];
+	presens["author"] = [];
 	
 	var bookmarks = localStorage.getItem("bookmarks");
 	if (bookmarks === null || bookmarks === "") {
@@ -23,10 +23,10 @@ $.fn.showBookmarkList = function() {
 			for (var j=0; j<poster.length; j++){
 				if(parseInt(bookmarkArr[i]) === parseInt(poster[j].id)){
 					authors = getAuthors(j+1).split(",").join(", ")
-					posters["id"].push(poster[j].id.toString());
-					posters["sessionid"].push(poster[j].sessionid);
-					posters["title"].push(poster[j].title);
-					posters["author"].push(getAuthors(j+1));
+					presens["id"].push(poster[j].id.toString());
+					presens["sessionid"].push(poster[j].sessionid);
+					presens["title"].push(poster[j].title);
+					presens["author"].push(getAuthors(j+1));
 					str += "<tr id='trId"+poster[j].id.toString()+"'><td><div>ポスターID: " + poster[j].sessionid + "<img class='bookmarklistToMapBtn' id='bookmarklistToMap" +poster[j].id.toString()+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>&nbsp;&nbsp;<img class='deletebookmarkBtn' id='deletebookmark"+poster[j].id+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
 					str += "<strong>" + poster[j].title + "</strong><br>";
 					str += "メンバー: " + authors + "<br></td>";
@@ -43,7 +43,7 @@ $.fn.showBookmarkList = function() {
 	$(".bookmarklistToMapBtn").bookmarklistToMapPage();
 	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
 	$(".deletebookmarkBtn").deletebookmark();
-	return posters;
+	return presens;
 };
 
 
