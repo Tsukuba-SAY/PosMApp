@@ -347,7 +347,7 @@ function selectPoster(posterid) {
 	// }
 
 	// posterに含まれているidが必ず連番になっていなければならない
-	var presenid = poster[posterid-1];
+	var presenid = poster[posterid-1].presenid;
 	var presenlength = presen.length;
 	for (var i = 0; i < presenlength; i++) {
 		var p = presen[i];
