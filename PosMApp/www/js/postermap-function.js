@@ -122,7 +122,6 @@ function setPosterIcons() {
 }
 
 // ラベルを変更する
-// FIXME
 function changeLabel(column) {
 	// Session Storageに対応する属性の値をセットする
 	sessionStorage.setItem("label", column);
@@ -138,7 +137,13 @@ function changeLabel(column) {
 		} else if (column === "authorbelongs") {
 			str = getAuthorbelongs(poster[i-1].presenid);
 		} else {
-			str = poster[i - 1][column].toString();
+			var p;
+			presen.forEach(function(obj) {
+				if (obj.presenid === poster[i-1].presenid) {
+					p = obj;
+				}
+			});
+			str = p[column].toString();
 		}
 
 		// 長さがlabelmax文字以上になっていたら短縮する
@@ -478,6 +483,7 @@ function touchBookmark(presenid, bookmarkIcon){
 	} else {
 		// ない場合
 		bookmarkArr.push(presenid);
+		bookmarkArr.sort();
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/bookmark.png";
 			$("#listbookmark" + presenid).attr("src","img/bookmark.png");
@@ -506,6 +512,7 @@ function getBookmarks() {
 	var bookmarks = localStorage.getItem("bookmarks");
 	// 空文字列だった場合は何もブックマークされていないので空配列
 	var bookmarkArr = (bookmarks !== "" && bookmarks !== null) ? bookmarks.split(",") : [];
+	bookmarkArr.sort();
 
 	return bookmarkArr;
 }

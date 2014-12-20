@@ -81,6 +81,9 @@ function listToDetail(presenid){
 	// if (posterid < 1 || posterid > poster.length || posterid === null || posterid === undefined) {
 	// 	throw new Exception();
 	// }
+	if (presenid === null || presenid === undefined) {
+		throw new Exception();
+	}
 
 	//sessionStorageの中に存在している情報の削除
 	removeAllPosterInfo();
