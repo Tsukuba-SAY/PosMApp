@@ -483,6 +483,7 @@ function touchBookmark(presenid, bookmarkIcon){
 	} else {
 		// ない場合
 		bookmarkArr.push(presenid);
+		bookmarkArr.sort();
 		if (bookmarkIcon !== null) {
 			bookmarkIcon.src = "img/bookmark.png";
 			$("#listbookmark" + presenid).attr("src","img/bookmark.png");
@@ -511,6 +512,7 @@ function getBookmarks() {
 	var bookmarks = localStorage.getItem("bookmarks");
 	// 空文字列だった場合は何もブックマークされていないので空配列
 	var bookmarkArr = (bookmarks !== "" && bookmarks !== null) ? bookmarks.split(",") : [];
+	bookmarkArr.sort();
 
 	return bookmarkArr;
 }
