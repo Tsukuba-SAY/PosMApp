@@ -1075,20 +1075,7 @@ describe("ラベルの表示切り替え機能", function() {
 
 		initPosterMap();	
 	});
-	it("「通し番号」ボタンを押すとラベルがIDに切り替わる", function() {
-		$("#label-id").trigger("touchstart");
-		var labels = new Array();
-		for (var i = 1; i <= poster.length; i++) {
-			labels.push($("#font" + i).html());
-		}
-
-		var expectLabels = new Array();
-		for (var i = 1; i <= poster.length; i++) {
-			expectLabels.push(ellipsisWords(poster[i - 1].id.toString()));
-		}
-		expect(labels).toEqual(expectLabels);
-	});
-	it("「ポスターID」ボタンを押すとラベルがポスターIDに切り替わる", function() {
+	it("「発表番号」ボタンを押すとラベルが発表IDに切り替わる", function() {
 		$("#label-presenid").trigger("touchstart");
 		var labels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
@@ -1110,7 +1097,13 @@ describe("ラベルの表示切り替え機能", function() {
 
 		var expectLabels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
-			expectLabels.push(ellipsisWords(poster[i - 1].title.toString()));
+			var p;
+			presen.forEach(function(obj) {
+				if (obj.presenid === poster[i-1].presenid) {
+					p = obj;
+				}
+			});
+			expectLabels.push(ellipsisWords(p.title.toString()));
 		}
 		expect(labels).toEqual(expectLabels);
 	});
@@ -1123,7 +1116,7 @@ describe("ラベルの表示切り替え機能", function() {
 
 		var expectLabels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
-			expectLabels.push(ellipsisWords(getAuthorname(i)));
+			expectLabels.push(ellipsisWords(getAuthorname(poster[i-1].presenid)));
 		}
 		expect(labels).toEqual(expectLabels);
 	});
@@ -1136,7 +1129,7 @@ describe("ラベルの表示切り替え機能", function() {
 
 		var expectLabels = new Array();
 		for (var i = 1; i <= poster.length; i++) {
-			expectLabels.push(ellipsisWords(getAuthorbelongs(i)));
+			expectLabels.push(ellipsisWords(getAuthorbelongs(poster[i-1].presenid)));
 		}
 		expect(labels).toEqual(expectLabels);
 	});
@@ -1159,7 +1152,7 @@ describe("ブックマーク機能", function() {
 		sessionStorage.setItem("posterid", 1);
 		$("#bookmarkbutton").trigger("touchstart");
 
-		var expectBookmarks = "1";
+		var expectBookmarks = "A1-1";
 		var bookmarks = localStorage.getItem("bookmarks");
 		expect(bookmarks).toEqual(expectBookmarks);
 	});

@@ -122,7 +122,6 @@ function setPosterIcons() {
 }
 
 // ラベルを変更する
-// FIXME
 function changeLabel(column) {
 	// Session Storageに対応する属性の値をセットする
 	sessionStorage.setItem("label", column);
@@ -138,7 +137,13 @@ function changeLabel(column) {
 		} else if (column === "authorbelongs") {
 			str = getAuthorbelongs(poster[i-1].presenid);
 		} else {
-			str = poster[i - 1][column].toString();
+			var p;
+			presen.forEach(function(obj) {
+				if (obj.presenid === poster[i-1].presenid) {
+					p = obj;
+				}
+			});
+			str = p[column].toString();
 		}
 
 		// 長さがlabelmax文字以上になっていたら短縮する
