@@ -1388,30 +1388,18 @@ describe("発表リスト", function() {
 		removeAllPosterInfo();
 	});
 
-	it("正しい順番（ID順）でポスターの一覧が表示されている", function() {
+	it("正しい順番（発表ID順）でポスターの一覧が表示されている", function() {
 		var posters = $("#presenList").showPresenList();
 
 		var expectIds = new Array();
 		poster.forEach(function(p) {
 			//if (p.presenid.indexOf("Dummy") === -1) {
-				expectIds.push(p.id.toString());
+				expectIds.push(p.presenid);
 			//}
 		});
 
-		expect(expectIds).toEqual(posters["id"]);
+		expect(expectIds).toEqual(posters["presenid"]);
 	});
-
-	// poster.forEach(function(p) {
-	// 	it(p["id"].toString() + "番のポスターの詳細情報ボタンを押すと、" 
-	// 		+ p["id"].toString() + "番のポスターの詳細情報が表示される", function() {
-	// 		expect(sessionStorage.getItem("posterid")).toBeNull();
-
-	// 		$("#listToDetail"+p["id"]).trigger("touchstart");
-
-	// 		listToDetail(p["id"]);
-	// 		expect(sessionStorage.getItem("posterid")).toEqual(p["id"].toString());
-	// 	});
-	// });
 	it("1番のポスターのマップボタンを押すと、マップ画面に遷移し、1番のポスターの基本情報が表示される", function() {
 		expect(sessionStorage.getItem("posterid")).toBeNull();
 
@@ -1421,12 +1409,12 @@ describe("発表リスト", function() {
 		expect(sessionStorage.getItem("posterid")).toEqual("1");
 	});
 	it("1番のポスターの詳細情報ボタンを押すと、1番のポスターの詳細情報が表示される", function() {
-		expect(sessionStorage.getItem("posterid")).toBeNull();
+		expect(sessionStorage.getItem("presenid")).toBeNull();
 
-		$("#listToDetail1").trigger("touchstart");
+		$("#listToDetailA1-1").trigger("touchstart");
 
-		listToDetail(1);
-		expect(sessionStorage.getItem("posterid")).toEqual("1");
+		listToDetail("A1-1");
+		expect(sessionStorage.getItem("presenid")).toEqual("A1-1");
 	});
 	it("0番のポスターのマップボタンを押すと例外が発生する", function() {
 		expect(sessionStorage.getItem("posterid")).toBeNull();
@@ -1434,22 +1422,10 @@ describe("発表リスト", function() {
 			listToMap(0);
 		}).toThrow();
 	});
-	it("0番のポスターの詳細情報ボタンを押すと例外が発生する", function() {
-		expect(sessionStorage.getItem("posterid")).toBeNull();
-		expect(function() {
-			listToDetail(0);
-		}).toThrow();
-	});
 	it("ポスターの総数+1番のポスターのマップボタンを押すと例外が発生する", function() {
 		expect(sessionStorage.getItem("posterid")).toBeNull();
 		expect(function() {
 			listToMap(poster.length + 1);
-		}).toThrow();
-	});
-	it("ポスターの総数+1番のポスターの詳細情報ボタンを押すと例外が発生する", function() {
-		expect(sessionStorage.getItem("posterid")).toBeNull();
-		expect(function() {
-			listToDetail(poster.length + 1);
 		}).toThrow();
 	});
 
