@@ -1147,7 +1147,29 @@ var author =
 {"presenid":"P4-3","name":"峯 祥平","belongs":"工学院大学","first":1},
 {"presenid":"P4-3","name":"北山 大輔","belongs":"工学院大学","first":0},
 {"presenid":"P4-4","name":"山田 洋輔","belongs":"工学院大学","first":1},
-{"presenid":"P4-4","name":"北山 大輔","belongs":"工学院大学","first":0}
+{"presenid":"P4-4","name":"北山 大輔","belongs":"工学院大学","first":0},
+{"presenid":"X3-4","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-5","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-6","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-7","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-8","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-9","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-10","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-11","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-12","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-13","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-14","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-15","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-16","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-17","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-18","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-19","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-20","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-21","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-22","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-23","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-24","name":"Xさん","belongs":"X大学","first":1},
+{"presenid":"X3-25","name":"Xさん","belongs":"X大学","first":1}
 ];
 
 var keyword =
@@ -1449,7 +1471,29 @@ var keyword =
 {"presenid":"F9-3","keyword":"情報検索, クラシック音楽, LDA, Labeled LDA"},
 {"presenid":"F9-4","keyword":"音楽情報処理，楽曲検索，音楽指紋，接尾辞配列"},
 {"presenid":"F9-5","keyword":"➶➹➘♦✿✫s❩❬t③✿➥➦➩➫✴✐➭✳➯✿➛➜④⑤✿❖P④⑤✿✫s♦t✿➲➩➳➵"},
-{"presenid":"F9-6","keyword":"ニコニコ動画，ランキング，統計モデル，Z-score，時系列分析"}
+{"presenid":"F9-6","keyword":"ニコニコ動画，ランキング，統計モデル，Z-score，時系列分析"},
+{"presenid":"X3-4","keyword":"ダミーポスター"},
+{"presenid":"X3-5","keyword":"ダミーポスター"},
+{"presenid":"X3-6","keyword":"ダミーポスター"},
+{"presenid":"X3-7","keyword":"ダミーポスター"},
+{"presenid":"X3-8","keyword":"ダミーポスター"},
+{"presenid":"X3-9","keyword":"ダミーポスター"},
+{"presenid":"X3-10","keyword":"ダミーポスター"},
+{"presenid":"X3-11","keyword":"ダミーポスター"},
+{"presenid":"X3-12","keyword":"ダミーポスター"},
+{"presenid":"X3-13","keyword":"ダミーポスター"},
+{"presenid":"X3-14","keyword":"ダミーポスター"},
+{"presenid":"X3-15","keyword":"ダミーポスター"},
+{"presenid":"X3-16","keyword":"ダミーポスター"},
+{"presenid":"X3-17","keyword":"ダミーポスター"},
+{"presenid":"X3-18","keyword":"ダミーポスター"},
+{"presenid":"X3-19","keyword":"ダミーポスター"},
+{"presenid":"X3-20","keyword":"ダミーポスター"},
+{"presenid":"X3-21","keyword":"ダミーポスター"},
+{"presenid":"X3-22","keyword":"ダミーポスター"},
+{"presenid":"X3-23","keyword":"ダミーポスター"},
+{"presenid":"X3-24","keyword":"ダミーポスター"},
+{"presenid":"X3-25","keyword":"ダミーポスター"}
 ];
 
 var presen =
@@ -1751,7 +1795,29 @@ var presen =
 {"presenid":"F9-3","title":" クラシック音楽の内容記述のウェブからの収集手法","abstract":"クラシック音楽を鑑賞する際には, その曲の音楽的な内容や構造に関する記述を読むことで曲に対する理\n解を深めることができる. このような内容記述は, 一般のウェブ検索では効率的に見つけることが困難である. 本研究では, クラシック音楽の楽曲に関するウェブページを 8 種類に分類するラベル付けを提案し、それを利用した LabeledLDA を用いることでクラシック音楽の内容記述をウェブから収集する手法を提案する. また, 記述中の曲名の出現位置を検出することで, 異なる曲に関する記述を排除するよう手法の改良を行う. 評価実験として, 実際にいくつかの曲に関する記述を提案手法により集め、有益な記述が効率的に得られることを検証する。","bookmark":0},
 {"presenid":"F9-4","title":" 大規模音声信号データベースに対する超高速部分一致近似検索手法","abstract":"本稿では，大規模な楽曲信号データベースに対し，音声信号をクエリとして，任意の楽曲の一部分と近似\n的に一致する箇所を高速に検索する手法について論じる．提案手法では，楽曲の音声信号から抽出された音楽指紋に対して接尾辞配列を適用し，クエリ信号からサンプリングされた多数の小片を厳密一致で検索する．その結果を統合することで高速かつ精度の良い近似検索を実現している．この手法を実現し，歌唱者の異なる同一楽曲を検索する実験を行った．大規模なデータベースに対しての速度評価を行うために，実際の音声信号に加え，およそ 10 万曲分の人工楽曲データベースを作成し，一般的な PC 上でそのデータベースに対する検索性能を評価した．その結果，84%程度の精度で，1 曲あたり 0.04 秒未満で検索できることを示した．","bookmark":0},
 {"presenid":"F9-5","title":" 画像の特徴抽出手法を利用した楽曲のセグメンテーション","abstract":"✜✢✣✤✥★✫✬✭✮✯✰✱✲✳✴✵★✫✼✾✿❄✳●❍■❖P✬◗❘❙★✫❚✼❯❱❲❳❨❩❬❭❪❫\n❴✰❵❛❫❜❝❞❡❢❣✰★✫❤✥✐❲❥❦❧♠♥♦❴✰❙♣✼✾✿qr❡❙✫s❩❬❲♦t❴✰q✬❭✉✈✇①✰❵②❙✫s❩❬❲t③❡④⑤❴✰q✬✼❧❘⑥✿❧⑦⑧⑨⑩✫s❶❷❲❸rq✬❭✇❹✰❵❺❻✇✾✿✫s❼❽❾❿➀❿✯✰➁➂➃➄➅❸➆✼➇❫❴✰➈❍➉➊❩❬❲④⑤❴✰q✬✇✿✫s✵❩❬✵➋✯➌❲➍➎❴✰➏➐✼❨◗⑥➑➒❴✰❵➓✵➔✿→➣↔✯❙✫s✵★⑧✬★↕➓✯➙✯❲➛➜➝✬❡❙➞➟➠✵➁➂➃➄➅❸➆❲➡◗✰❵➓✯❿❲➞➢➤➥➦✬➧⑩❡✿➨➟➠✵➥➦➩➫✴✐➭✳➯✬➛➜❩❬❲④⑤❴✰❙♣✵➲➩➳➵❲➸➡❡⑥✫s✵❩❬❲➺⑦⑤❴➏➐❲➻➼❴✰❵","bookmark":0},
-{"presenid":"F9-6","title":" 統計モデルに基づく楽曲動画のランキング手法","abstract":"動画共有サイト「ニコニコ動画」に投稿されている楽曲動画のランキング手法を提案する．一般に，楽曲動\n画は再生数，コメント数，マイリスト数の推移を基にランキングされるため，上位にランクインするためには，動画投稿者や動画内容に高い集客能力が求められる．故に，集客能力が乏しい楽曲動画は，楽曲そのものが優れていても，上位になることが困難である．これに対し我々は，ユーザが動画を再生してマイリストに登録する行動をベルヌーイ試行であると仮定し，動画がマイリストに登録された割合を，統計的に有意な評価値として正規化する．さらに，その評価値の推移を取ることによって，動画が有する集客能力に依存しないランキングを生成することを試みる．","bookmark":0}
+{"presenid":"F9-6","title":" 統計モデルに基づく楽曲動画のランキング手法","abstract":"動画共有サイト「ニコニコ動画」に投稿されている楽曲動画のランキング手法を提案する．一般に，楽曲動\n画は再生数，コメント数，マイリスト数の推移を基にランキングされるため，上位にランクインするためには，動画投稿者や動画内容に高い集客能力が求められる．故に，集客能力が乏しい楽曲動画は，楽曲そのものが優れていても，上位になることが困難である．これに対し我々は，ユーザが動画を再生してマイリストに登録する行動をベルヌーイ試行であると仮定し，動画がマイリストに登録された割合を，統計的に有意な評価値として正規化する．さらに，その評価値の推移を取ることによって，動画が有する集客能力に依存しないランキングを生成することを試みる．","bookmark":0},
+{"presenid":"X3-4","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-5","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-6","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-7","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-8","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-9","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-10","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-11","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-12","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-13","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-14","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-15","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-16","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-17","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-18","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-19","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-20","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-21","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-22","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-23","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-24","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-25","title":"謎のX","abstract":"NO DATA","bookmark":0}
 ];
 
 var presents = 
@@ -2053,7 +2119,29 @@ var presents =
 {"sessionid":"P3","presenid":"P3-2"},
 {"sessionid":"P3","presenid":"P3-3"},
 {"sessionid":"P3","presenid":"P3-4"},
-{"sessionid":"P3","presenid":"P3-5"}
+{"sessionid":"P3","presenid":"P3-5"},
+{"sessionid":"X3","presenid":"X3-4"},
+{"sessionid":"X3","presenid":"X3-5"},
+{"sessionid":"X3","presenid":"X3-6"},
+{"sessionid":"X3","presenid":"X3-7"},
+{"sessionid":"X3","presenid":"X3-8"},
+{"sessionid":"X3","presenid":"X3-9"},
+{"sessionid":"X3","presenid":"X3-10"},
+{"sessionid":"X3","presenid":"X3-11"},
+{"sessionid":"X3","presenid":"X3-12"},
+{"sessionid":"X3","presenid":"X3-13"},
+{"sessionid":"X3","presenid":"X3-14"},
+{"sessionid":"X3","presenid":"X3-15"},
+{"sessionid":"X3","presenid":"X3-16"},
+{"sessionid":"X3","presenid":"X3-17"},
+{"sessionid":"X3","presenid":"X3-18"},
+{"sessionid":"X3","presenid":"X3-19"},
+{"sessionid":"X3","presenid":"X3-20"},
+{"sessionid":"X3","presenid":"X3-21"},
+{"sessionid":"X3","presenid":"X3-22"},
+{"sessionid":"X3","presenid":"X3-23"},
+{"sessionid":"X3","presenid":"X3-24"},
+{"sessionid":"X3","presenid":"X3-25"}
 ];
 
 var session = 
@@ -2114,7 +2202,8 @@ var session =
 {"sessionid":"F9","title":"音楽","chairpersonname":"渡辺 知恵美","charipersonbelongs":"筑波大学"},
 {"sessionid":"P1","title":"ソーシャルメディア・ブログ","chairpersonname":"牛尼 剛聡","charipersonbelongs":"九州大学"},
 {"sessionid":"P2","title":"情報推薦・マイニング","chairpersonname":"平手 勇宇","charipersonbelongs":"楽天"},
-{"sessionid":"P3","title":"ユーザインタフェース","chairpersonname":"義久 智樹","charipersonbelongs":"大阪大学"}
+{"sessionid":"P3","title":"ユーザインタフェース","chairpersonname":"義久 智樹","charipersonbelongs":"大阪大学"},
+{"sessionid":"X3","title":"ダミーセッション","chairpersonname":"Xさん","chairpersonbelongs":"X大学"}
 ];
 
 var commontator = 
@@ -2232,5 +2321,6 @@ var commontator =
 {"sessionid":"P2","name":"加藤 誠","belongs":"京都大学"},
 {"sessionid":"P2","name":"木村 文則","belongs":"立命館大学"},
 {"sessionid":"P3","name":"山本 岳洋","belongs":"京都大学"},
-{"sessionid":"P3","name":"村尾 和哉","belongs":"神戸大学"}
+{"sessionid":"P3","name":"村尾 和哉","belongs":"神戸大学"},
+{"sessionid":"X3","name":"Xさん","belongs":"X大学"}
 ];

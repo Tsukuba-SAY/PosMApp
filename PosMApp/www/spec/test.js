@@ -112,6 +112,7 @@ describe("ポスターマップ", function() {
 		$("#basicinfopanel").closeBasicInfo();
 
 		sessionStorage.removeItem("searching");
+		removeAllPosterInfo();
 
 		initPosterMap();	
 	});
