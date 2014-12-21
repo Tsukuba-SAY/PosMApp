@@ -112,6 +112,7 @@ describe("ポスターマップ", function() {
 		$("#basicinfopanel").closeBasicInfo();
 
 		sessionStorage.removeItem("searching");
+		removeAllPosterInfo();
 
 		initPosterMap();	
 	});
@@ -789,12 +790,12 @@ describe("キーワード検索（タイトル）", function() {
 		initPosterMap();
 	});
 
-	it("「システム」で検索すると14,21,33,43,45,49,51,52,54,59,61,72,93,94番のポスターがヒットする", function() {
+	it("「システム」で検索すると12,13,14,17,21,25,26,30,32,33,37,41,43,44,45,49,51,52,54,59,61,64,65,69,72,76,8,82,86,87,90,93,94番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [14,21,33,43,45,49,51,52,54,59,61,72,93,94];
+		expectArr = [12,13,14,17,21,25,26,30,32,33,37,41,43,44,45,49,51,52,54,59,61,64,65,69,72,76,8,82,86,87,90,93,94];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -867,18 +868,18 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「Twitter」で検索すると19,20,38,53,82番のポスターがヒットする", function() {
+	it("「Twitter」で検索すると14,16,18,19,20,21,22,23,24,27,37,38,53,82,83番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
+		expectArr = [14,16,18,19,20,21,22,23,24,27,37,38,53,82,83];
 		for (var i = 1; i <= poster.length; i++) {
-			expectFlag[i] = "d";
+			if ($.inArray(i, expectArr) !== -1) {
+				expectFlag[i] = "s";
+			} else {
+				expectFlag[i] = "d";
+			}
 		}
-		expectFlag[19] = "s";
-		expectFlag[20] = "s";
-		expectFlag[38] = "s";
-		expectFlag[53] = "s";
-		expectFlag[82] = "s";
 
 		$("#search-bar-title").val("Twitter");
 		$("#search-bar-title").trigger("change");
@@ -886,18 +887,18 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「twitter」で検索すると19,20,38,53,82番のポスターがヒットする", function() {
+	it("「twitter」で検索すると14,16,18,19,20,21,22,23,24,27,37,38,53,82,83番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
+		expectArr = [14,16,18,19,20,21,22,23,24,27,37,38,53,82,83];
 		for (var i = 1; i <= poster.length; i++) {
-			expectFlag[i] = "d";
+			if ($.inArray(i, expectArr) !== -1) {
+				expectFlag[i] = "s";
+			} else {
+				expectFlag[i] = "d";
+			}
 		}
-		expectFlag[19] = "s";
-		expectFlag[20] = "s";
-		expectFlag[38] = "s";
-		expectFlag[53] = "s";
-		expectFlag[82] = "s";
 
 		$("#search-bar-title").val("twitter");
 		$("#search-bar-title").trigger("change");
@@ -905,18 +906,18 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「TWITTER」で検索すると19,20,38,53,82番のポスターがヒットする", function() {
+	it("「TWITTER」で検索すると14,16,18,19,20,21,22,23,24,27,37,38,53,82,83番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
+		expectArr = [14,16,18,19,20,21,22,23,24,27,37,38,53,82,83];
 		for (var i = 1; i <= poster.length; i++) {
-			expectFlag[i] = "d";
+			if ($.inArray(i, expectArr) !== -1) {
+				expectFlag[i] = "s";
+			} else {
+				expectFlag[i] = "d";
+			}
 		}
-		expectFlag[19] = "s";
-		expectFlag[20] = "s";
-		expectFlag[38] = "s";
-		expectFlag[53] = "s";
-		expectFlag[82] = "s";
 
 		$("#search-bar-title").val("TWITTER");
 		$("#search-bar-title").trigger("change");
@@ -999,21 +1000,21 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("1番を選択した状態で「Twitter」で検索すると19,20,38,53,82番がヒットする", function() {
+	it("1番を選択した状態で「Twitter」で検索すると14,16,18,19,20,21,22,23,24,27,37,38,53,82,83番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		pflag[1] = "t";
 
 		expectFlag[0] = null;
+		expectArr = [14,16,18,19,20,21,22,23,24,27,37,38,53,82,83];
 		for (var i = 1; i <= poster.length; i++) {
-			expectFlag[i] = "d";
+			if ($.inArray(i, expectArr) !== -1) {
+				expectFlag[i] = "s";
+			} else {
+				expectFlag[i] = "d";
+			}
 		}
 		expectFlag[1] = "t";
-		expectFlag[19] = "s";
-		expectFlag[20] = "s";
-		expectFlag[38] = "s";
-		expectFlag[53] = "s";
-		expectFlag[82] = "s";
 
 		$("#search-bar-title").val("Twitter");
 		$("#search-bar-title").trigger("change");
@@ -1388,18 +1389,6 @@ describe("発表リスト", function() {
 		removeAllPosterInfo();
 	});
 
-	it("正しい順番（発表ID順）でポスターの一覧が表示されている", function() {
-		var posters = $("#presenList").showPresenList();
-
-		var expectIds = new Array();
-		poster.forEach(function(p) {
-			//if (p.presenid.indexOf("Dummy") === -1) {
-				expectIds.push(p.presenid);
-			//}
-		});
-
-		expect(expectIds).toEqual(posters["presenid"]);
-	});
 	it("1番のポスターのマップボタンを押すと、マップ画面に遷移し、1番のポスターの基本情報が表示される", function() {
 		expect(sessionStorage.getItem("posterid")).toBeNull();
 
