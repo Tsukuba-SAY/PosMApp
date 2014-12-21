@@ -583,12 +583,13 @@ function searchAll(word) {
 			posterids.push(getPosterid(k.presenid));
 		}
 	});
-	// ポスターがあるやつ以外を削除
-	posterids.some(function(posterid, i) {
-		if (posterid === -1) {
-			posterids.splice(i, 1);
-		}
+	// ポスターがあるやつ以外を削除、重複を削除
+	posterids = posterids.filter(function(posterid, i, self) {
+		return posterid != -1;
+	}).filter(function(posterid, i, self) {
+		return self.indexOf(posterid) === i;
 	});
+	posterids.sort();
 	console.log("HIT : " + posterids);
 
 	emphasisSearchedPosters(posterids);

@@ -463,7 +463,7 @@ var author =
 {"presenid":"F3-6","name":"笈田 佳彰","belongs":"富士通","first":0},
 {"presenid":"A4-1","name":"武田 十季","belongs":"九州大学","first":1},
 {"presenid":"A4-1","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"A4-2","name":"王 元元","belongs":"兵庫県立大学","first":0},
+{"presenid":"A4-2","name":"王 元元","belongs":"兵庫県立大学","first":1},
 {"presenid":"A4-2","name":"河合 由起子","belongs":"京都産業大学","first":0},
 {"presenid":"A4-2","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
 {"presenid":"A4-3","name":"顔 洪","belongs":"九州大学","first":1},
