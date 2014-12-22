@@ -157,4 +157,5 @@ function init() {
 		// 	$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 		// 	break;
 	}
+
 }

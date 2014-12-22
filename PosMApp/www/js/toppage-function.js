@@ -2,11 +2,6 @@
 $.fn.goToMapPage = function(ev) {
 	$(this).on(ev, function() {
 		changePage("#posterMapPage");
-		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
-		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	});	
 };
 
@@ -14,11 +9,6 @@ $.fn.goToMapPage = function(ev) {
 $.fn.goToListPage = function(ev) {
 	$(this).on(ev, function() {
 		changePage("#presenListPage");
-		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".presenListPageButton").addClass("ui-btn-active ui-state-persist");
-		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	});	
 };
 
@@ -26,11 +16,6 @@ $.fn.goToListPage = function(ev) {
 $.fn.goToInformationPage = function(ev) {
 	$(this).on(ev, function() {
 		changePage("#informationPage");
-		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
-		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 	});	
 };
 
@@ -38,13 +23,6 @@ $.fn.goToInformationPage = function(ev) {
 $.fn.goToBookmarkListPage = function(ev) {
 	$(this).on(ev, function() {
 		changePage("#bookmarkListPage");
-		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".bookmarkListPageButton").addClass("ui-btn-active ui-state-persist");
-		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
-		$("#bookmarkList").showBookmarkList();
-
 	});	
 };
 
@@ -54,15 +32,18 @@ $.fn.goToTopPage = function(ev) {
 	var nextPage = "#topPage";
 	$(this).on(ev, function() {
 		changePage(nextPage);
-		$(".topPageButton").addClass("ui-btn-active ui-state-persist");
-		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	});
 };
 
 function changePage(pagename) {
 	saveLog("show_page", {page:pagename});
+	$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+	$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
+	$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+	$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+	$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
+	$("." + pagename.substring(1) + "Button").addClass("ui-btn-active ui-state-persist");
+	$("#bookmarkList").showBookmarkList();
 	window.location.href = pagename;
 	return pagename;
 }
