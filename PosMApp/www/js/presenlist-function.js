@@ -22,7 +22,7 @@ $.fn.showPresenList = function() {
 		presens["presenid"].push(p.presenid);
 		presens["title"].push(p.title);
 		presens["author"].push(getAuthors(p.presenid));
-		str += "<tr><td><div>発表ID: " + p.presenid;
+		str += "<tr id='presen" + p.presen + "'><td><div>発表ID: " + p.presenid;
 
 		// ポスター発表があるときのみマップへ遷移するボタンを表示
 		if (posterid !== -1) {
@@ -133,3 +133,8 @@ $.fn.listchangebookmark = function() {
 		touchBookmark(presenid, bookmarkIcon);
 	});
 };
+
+// 指定したpresenidのところまでジャンプする
+$.fn.scrollToPresen = function() {
+	
+}
