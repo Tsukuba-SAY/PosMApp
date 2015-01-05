@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>PosMApp</title>
+	<!-- metaで文字コードを指定しないと文字化けする -->
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="favicon.ico" />
+
+	<link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.4.2.min.css" />
+
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.mobile-1.4.2.min.js"></script>
+
+	<!-- DB用発表データ -->
+	<script type="text/javascript" charset="utf-8" src="js/presendata.js"></script>
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+  		$("#downloadbtn").click(function(){
+  			// localStorage.setItem("poster", JSON.stringify(poster));
+  			// localStorage.setItem("author", JSON.stringify(author));
+  			// localStorage.setItem("keyword", JSON.stringify(keyword));
+  			// localStorage.setItem("presen", JSON.stringify(presen));
+  			// localStorage.setItem("presents", JSON.stringify(presents));
+  			// localStorage.setItem("session", JSON.stringify(session));
+  			// localStorage.setItem("commontator", JSON.stringify(commontator));
+	  		$.ajax({
+		   		url: "http://104.236.123.57/fs/testreadJSON.php",
+				type: "POST",
+				dataType: "json",
+				data: "",
+				timeout: 10000, // タイムアウトにするまでの時間は要検討
+				success: function(data) {
+					//alert("success   " + JSON.stringify(data.poster));
+					localStorage.setItem("poster", JSON.stringify(data.poster));
+					localStorage.setItem("author", JSON.stringify(data.author));
+					localStorage.setItem("keyword", JSON.stringify(data.keyword));
+					localStorage.setItem("presen", JSON.stringify(data.presen));
+					localStorage.setItem("presents", JSON.stringify(data.presents));
+					localStorage.setItem("session", JSON.stringify(data.session));
+					localStorage.setItem("commontator", JSON.stringify(data.commontator));
+					console.log(localStorage.getItem("author"));
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown) {
+					console.error("send error");
+					console.error("XMLHttpRequest: " + XMLHttpRequest);
+					console.error("textStatus: " + textStatus);
+					console.error("errorThrown: " + errorThrown);
+				},
+				complete: function(data) {
+					// alert("complete");
+				}
+			});
+			
+  		});
+	});
+
+	</script>
+</head>
+
+<body>
+<input type="button" id="downloadbtn" value="download" />
+
+</body>
+</html>
