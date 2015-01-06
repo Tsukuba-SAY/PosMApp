@@ -10,6 +10,10 @@ function init() {
 		.css("width", window.innerWidth)
 		.css("max-width", window.innerWidth);
 
+	//　ポスターデータのダウンロード
+	//　各mapに関する変数に値を与える
+	downloadPoster();
+
 	initPosterMap();
 
 	// 現在はWebSQLは使用していない
