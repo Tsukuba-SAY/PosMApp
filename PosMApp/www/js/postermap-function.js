@@ -16,6 +16,11 @@ var labelmax = 7;
 // ポスターの総件数
 var ptotal;
 
+var poster = JSON.parse(localStorage.getItem("poster"));
+
+var presen　= JSON.parse(localStorage.getItem("presen"));
+
+var author = JSON.parse(localStorage.getItem("author"));
 
 // グローバル変数の初期化処理
 function initPosterMap() {
@@ -89,7 +94,7 @@ $.fn.touchBookmark = function() {
 
 // ポスターアイコンをセットする
 function setPosterIcons() {
-	// var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
+
 	var starAngle = [null, "top:-15px;left:30%;", "right:-15px;top:30%;", "bottom:-15px;left:30%;", "left:-15px;top:30%;"];
 	var starpos = [null, "Top", "Right", "Bottom", "Left"];
 
@@ -98,8 +103,10 @@ function setPosterIcons() {
 	var pos;
 	var iconWidth;
 	var iconHeight;
-	
+	var position = JSON.parse(localStorage.getItem("position"));
+	var position_map = JSON.parse(localStorage.getItem("position_map"));
 	var ptotal = poster.length;
+
 	for (var i = 1; i <= ptotal; i++) {
 
 		iconWidth = position[position_map[i-1]].width*INIT_SCALE;

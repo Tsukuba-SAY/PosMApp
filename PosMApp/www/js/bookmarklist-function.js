@@ -65,7 +65,7 @@ $.fn.bookmarklistToDetailPage = function() {
 		// ポスターのIDを取得する
 		var presenid = e.target.id.substring(20);
 		sessionStorage.setItem("previousPage", "bookmarkListPage");
-		listToDetail(posterid);
+		listToDetail(presenid);
 	});
 };
 
