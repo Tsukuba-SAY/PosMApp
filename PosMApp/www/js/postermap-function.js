@@ -22,6 +22,8 @@ var presen　= JSON.parse(localStorage.getItem("presen"));
 
 var author = JSON.parse(localStorage.getItem("author"));
 
+var keyword = JSON.parse(localStorage.getItem("keyword"));
+
 // グローバル変数の初期化処理
 function initPosterMap() {
 
