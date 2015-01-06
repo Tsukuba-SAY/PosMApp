@@ -1,6 +1,65 @@
-// U "CAN" touch this
-// 名前変えたい
-function windowManager () {
+function zoomMap(zoomx, zoomy, zoomscale) {
+
+	hammerOnMap();
+	$("#resetScaleButtonFrame").css("display", "inline");
+    var el = $("#mapMain")[0];
+    el.className = 'animate';
+
+    transform = {
+        translate: { x: zoomx, y: zoomy },
+        scale: zoomscale
+    };
+    var value = [
+        'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
+        'scale(' + transform.scale + ', ' + transform.scale + ')'
+    ];
+    value = value.join(" ");
+    el.style.webkitTransform = value;
+    el.style.mozTransform = value;
+    el.style.transform = value;
+    posx = transform.translate.x;
+    posy = transform.translate.y;
+    scale = transform.scale;
+    resx = posx;
+    resy = posy;
+    resscale = scale;
+    $(".mapArea").css("display", "none");
+}
+
+function resetZoom() {
+
+	hammerOffMap();
+	$("#resetScaleButtonFrame").css("display", "none");
+    var el = $("#mapMain")[0];
+    el.className = 'animate';
+
+    transform = {
+        translate: { x: 0, y: 0 },
+        scale: 1
+    };
+    var value = [
+        'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
+        'scale(' + transform.scale + ', ' + transform.scale + ')'
+    ];
+    value = value.join(" ");
+    el.style.webkitTransform = value;
+    el.style.mozTransform = value;
+    el.style.transform = value;
+    posx = transform.translate.x;
+    posy = transform.translate.y;
+    scale = transform.scale;
+    resx = posx;
+    resy = posy;
+    resscale = scale;
+    $(".mapArea").css("display", "inline");
+}
+
+function hammerOffMap() {
+	mc.off("panstart panmove panend pancancel pinchstart pinchmove pinchend pinchcancel doubletap");
+}
+
+
+function hammerOnMap() {
     var FRAME_TIME = 1000 / 30;
 	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
 
@@ -10,19 +69,14 @@ function windowManager () {
     var el = $("#mapMain")[0];
     el.className = 'animate';
 
-    var START_X = el.offsetWidth;
-    var START_Y = el.offsetHeight;
+    var START_X = 0;
+    var START_Y = 0;
 
     var isAnimated = false;
-    var transform = null;
-
-    var posx = 0;
-    var posy = 0;
-    var scale = 1;
 
     reset();
 
-    var mc = new Hammer.Manager($("#mapFrame")[0]);
+    // var mc = new Hammer.Manager($("#mapFrame")[0]);
     mc.add(new Hammer.Pan());
     mc.add(new Hammer.Pinch()).recognizeWith(mc.get("pan"));
     mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
@@ -75,12 +129,12 @@ function windowManager () {
     });
 
     function reset() {
-        posx = START_X;
-        posy = START_Y;
-        scale = 1;
+        posx = resx;
+        posy = resy;
+        scale = resscale;
         transform = {
-            translate: { x: START_X, y: START_Y },
-            scale: 1
+            translate: { x: resx, y: resy },
+            scale: resscale
         };
     }
 
