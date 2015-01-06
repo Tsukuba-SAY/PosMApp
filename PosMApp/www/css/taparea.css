@@ -3,10 +3,10 @@
 	z-index: 150;
 	background-color: blue;
 	opacity: 0.3;
-	width: 400px;
-	height: 450px;
-	top: 50px;
-	left: 50px;
+	width: 130px;
+	height: 210px;
+	top: 10px;
+	left: 40px;
 }
 
 #taparea2 {
@@ -14,10 +14,10 @@
 	z-index: 150;
 	background-color: yellow;
 	opacity: 0.3;
-	width: 400px;
-	height: 500px;
-	top: 550px;
-	left: 50px;
+	width: 130px;
+	height: 170px;
+	top: 220px;
+	left: 40px;
 }
 
 #taparea3 {
@@ -25,10 +25,10 @@
 	z-index: 150;
 	background-color: red;
 	opacity: 0.3;
-	width: 400px;
-	height: 450px;
-	top: 50px;
-	left: 500px;
+	width: 155px;
+	height: 195px;
+	top: 10px;
+	left: 180px;
 }
 
 #taparea4 {
@@ -36,10 +36,10 @@
 	z-index: 150;
 	background-color: cyan;
 	opacity: 0.3;
-	width: 300px;
-	height: 200px;
-	top: 1100px;
-	left: 300px;
+	width: 95px;
+	height: 95px;
+	top: 400px;
+	left: 115px;
 }
 
 #resetScaleButtonFrame {
