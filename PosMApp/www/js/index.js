@@ -1,22 +1,7 @@
-
-// エリアタップズームで利用するグローバル変数
-var mc = null;
-var transform = null;
-var posx = 0;
-var posy = 0;
-var scale = 1;
-var resx = 0;
-var resy = 0;
-var resscale = 1;
-var isAnimated = false;
-
 // HTMLが呼ばれた時の初期化処理
 $(init);
 
 function init() {
-
-	// Hammer Managerをポスターマップのフレームに
-	mc = new Hammer.Manager($("#mapFrame")[0]);
 
 	// トップページの大きさ調整
 	$("#topPageFrame")
@@ -24,6 +9,9 @@ function init() {
 		.css("max-width", window.innerWidth);
 
 	initPosterMap();
+
+	// Hammer on stage
+	initHammer();
 
 	// 現在はWebSQLは使用していない
 	// initDB();
@@ -37,21 +25,6 @@ function init() {
 	// TODO: もっとスマートにしたい
 	hammerOnMap();
 	hammerOffMap();
-
-	$("#resetScaleButtonFrame").css("display", "none");
-	$("#taparea1").on("touchstart", function() {
-		zoomMap(10, 40, 2);
-	});
-	$("#taparea2").on("touchstart", function() {
-		zoomMap(400, 100, 2);
-	});	
-	$("#taparea3").on("touchstart", function() {
-		zoomMap(-400, 800, 2);
-	});
-	$("#taparea4").on("touchstart", function() {
-		zoomMap(100, -1200, 3);
-	});
-	$("#resetScaleButton").on("touchstart", resetZoom);
 
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい

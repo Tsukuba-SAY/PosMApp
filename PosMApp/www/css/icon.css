@@ -64,6 +64,9 @@
 	-webkit-user-drag: none; 
 	height : calc(100% - 65px);
 	overflow: hidden;
+	-moz-transform-origin : left top;
+	-webkit-transform-origin : left top;
+
 }
 
 
