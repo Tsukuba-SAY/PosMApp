@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/icon.css" />
 	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
 	<link rel="stylesheet" type="text/css" href="css/list.css" />
+	<link rel="stylesheet" type="text/css" href="css/taparea.css" />
 
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.mobile-1.4.2.min.js"></script>
@@ -30,7 +31,7 @@
 	<script type="text/javascript" charset="utf-8" src="js/presenlist-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/bookmarklist-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/detail-function.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/window-manager.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/postermap-hammer-function.js"></script>
 
 	<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
 
@@ -105,6 +106,11 @@
 					data-inline="true" data-rel="dialog"
 					data-transition="pop">ラベル切替</a>
 			</div>
+			<!-- エリアタップ後のズームアウトボタン -->
+			<div id="resetScaleButtonFrame" data-position="fixed" style="border: 2px;">
+				<a id="resetScaleButton" data-role="button"
+					data-inline="true">戻る</a>
+			</div>
 		</div>
 		<!-- ポスターマップ本体 -->
 		<div id="mapFrame" style="z-index: 255;background-color:#FFFFFF">
@@ -114,6 +120,11 @@
 					style="position: relative; z-index: 1;"></img>
 				<!-- ポスターアイコン -->
 				<div id="posters"></div>
+				<!-- タップエリア -->
+				<div id="taparea1" class="mapArea"></div>
+				<div id="taparea2" class="mapArea"></div>
+				<div id="taparea3" class="mapArea"></div>
+				<div id="taparea4" class="mapArea"></div>
 			</div>
 		</div>
 		<!-- 基本情報パネル -->

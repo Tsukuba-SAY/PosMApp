@@ -1,0 +1,50 @@
+#taparea1 {
+	position: absolute;
+	z-index: 150;
+	background-color: blue;
+	opacity: 0.3;
+	width: 400px;
+	height: 450px;
+	top: 50px;
+	left: 50px;
+}
+
+#taparea2 {
+	position: absolute;
+	z-index: 150;
+	background-color: yellow;
+	opacity: 0.3;
+	width: 400px;
+	height: 500px;
+	top: 550px;
+	left: 50px;
+}
+
+#taparea3 {
+	position: absolute;
+	z-index: 150;
+	background-color: red;
+	opacity: 0.3;
+	width: 400px;
+	height: 450px;
+	top: 50px;
+	left: 500px;
+}
+
+#taparea4 {
+	position: absolute;
+	z-index: 150;
+	background-color: cyan;
+	opacity: 0.3;
+	width: 300px;
+	height: 200px;
+	top: 1100px;
+	left: 300px;
+}
+
+#resetScaleButtonFrame {
+	position : absolute;
+	right 	 : 5px;
+	top      : 40px;
+	z-index  : 100;
+}
