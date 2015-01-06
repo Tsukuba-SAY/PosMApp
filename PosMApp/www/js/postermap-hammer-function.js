@@ -1,8 +1,67 @@
-function zoomMap(zoomx, zoomy, zoomscale) {
+// // Hammer用クラス
+// function PostermapHammerManager() {
+//     this.mc = null;
+//     this.transform = null;
+//     this.posx = 0;
+//     this.posy = 0;
+//     this.scale = 1;
+//     this.resx = 0;
+//     this.resy = 0;
+//     this.resscale = 1;
+//     this.isAnimated = false;
+//     this.mapMain = $
 
-	hammerOnMap();
+//     PostermapHammerManager.prototype = {
+//         zoomMap : function(zoomx, zoomy, zoomscale) {
+//             hammerOnMap();
+
+//             $("#resetScaleButtonFrame").css("display", "inline");
+//             var mapMain = $("#mapMain");
+
+//             // ズームの基準点を左上に変更
+//             mapMain
+//                 .css("-moz-transform-origin", "left top")
+//                 .css("-webkit-transform-origin", "left top");
+
+//             var el = mapMain[0];
+//             el.className = 'animate';
+
+//             transform = {
+//                 translate: { x: zoomx, y: zoomy },
+//                 scale: zoomscale
+//             };
+//             var value = [
+//                 'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
+//                 'scale(' + transform.scale + ', ' + transform.scale + ')'
+//             ];
+//             value = value.join(" ");
+//             el.style.webkitTransform = value;
+//             el.style.mozTransform = value;
+//             el.style.transform = value;
+//             posx = transform.translate.x;
+//             posy = transform.translate.y;
+//             scale = transform.scale;
+//             resx = posx;
+//             resy = posy;
+//             resscale = scale;
+//             $(".mapArea").css("display", "none");
+//         },
+
+//     }
+// }
+
+function zoomMap(zoomx, zoomy, zoomscale) {
+    hammerOnMap();
+
 	$("#resetScaleButtonFrame").css("display", "inline");
-    var el = $("#mapMain")[0];
+    var mapMain = $("#mapMain");
+
+    // ズームの基準点を左上に変更
+    mapMain
+        .css("-moz-transform-origin", "left top")
+        .css("-webkit-transform-origin", "left top");
+
+    var el = mapMain[0];
     el.className = 'animate';
 
     transform = {
@@ -72,7 +131,7 @@ function hammerOnMap() {
     var START_X = 0;
     var START_Y = 0;
 
-    var isAnimated = false;
+    isAnimated = false;
 
     reset();
 
@@ -139,24 +198,23 @@ function hammerOnMap() {
     }
 
     function animation() {
-        if (!isAnimated) {
-            return;
-        }
-
-        transform.scale = (transform.scale >= 4.0) ? 4.0 : transform.scale;
-        transform.scale = (transform.scale <= 0.5) ? 0.5 : transform.scale;
-
-        var value = [
-            'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
-            'scale(' + transform.scale + ', ' + transform.scale + ')'
-        ];
-
-        value = value.join(" ");
-        el.style.webkitTransform = value;
-        el.style.mozTransform = value;
-        el.style.transform = value;
-
-        setTimeout(animation, FRAME_TIME);
+    if (!isAnimated) {
+        return;
     }
 
+    transform.scale = (transform.scale >= 4.0) ? 4.0 : transform.scale;
+    transform.scale = (transform.scale <= 0.5) ? 0.5 : transform.scale;
+
+    var value = [
+        'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
+        'scale(' + transform.scale + ', ' + transform.scale + ')'
+    ];
+
+    value = value.join(" ");
+    el.style.webkitTransform = value;
+    el.style.mozTransform = value;
+    el.style.transform = value;
+
+    setTimeout(animation, FRAME_TIME);
+}
 }

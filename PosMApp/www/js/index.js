@@ -1,6 +1,6 @@
 
 // エリアタップズームで利用するグローバル変数
-var mc;
+var mc = null;
 var transform = null;
 var posx = 0;
 var posy = 0;
@@ -8,6 +8,7 @@ var scale = 1;
 var resx = 0;
 var resy = 0;
 var resscale = 1;
+var isAnimated = false;
 
 // HTMLが呼ばれた時の初期化処理
 $(init);
@@ -39,7 +40,7 @@ function init() {
 
 	$("#resetScaleButtonFrame").css("display", "none");
 	$("#taparea1").on("touchstart", function() {
-		zoomMap(600, 600, 2);
+		zoomMap(10, 40, 2);
 	});
 	$("#taparea2").on("touchstart", function() {
 		zoomMap(400, 100, 2);
