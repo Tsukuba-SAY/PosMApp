@@ -4,10 +4,10 @@ var STATIC_WIDTH =  432;
 // タップエリアの相対座標
 var taparea = 
 [
-{"id":"area1","x":40,"y":10,"width":130,"height":210,"zoomscale":2,"color":"blue"},
-{"id":"area2","x":40,"y":220,"width":130,"height":170,"zoomscale":2,"color":"yellow"},
-{"id":"area3","x":180,"y":10,"width":155,"height":195,"zoomscale":2,"color":"red"},
-{"id":"area4","x":115,"y":400,"width":95,"height":95,"zoomscale":3,"color":"cyan"}
+{"id":"area1","x":45,"y":11,"width":161,"height":241,"zoomscale":2,"color":"blue"},
+{"id":"area2","x":45,"y":256,"width":161,"height":185,"zoomscale":2,"color":"yellow"},
+{"id":"area3","x":222,"y":11,"width":161,"height":225,"zoomscale":2,"color":"red"},
+{"id":"area4","x":132,"y":465,"width":111,"height":103,"zoomscale":3,"color":"cyan"}
 ];
 
 var position = [

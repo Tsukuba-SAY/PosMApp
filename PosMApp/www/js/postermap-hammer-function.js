@@ -15,6 +15,7 @@ function initHammer() {
     $("#resetScaleButtonFrame").css("display", "none");
     $("#resetScaleButton").on("touchstart", resetZoom);
 
+    var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
     var $mapMain = $("#mapMain");
     taparea.forEach(function(ta) {
         var $area = $("<div>")
@@ -24,17 +25,19 @@ function initHammer() {
             .css("z-index", 150)
             .css("opacity", 0.3)
             .css("background-color", ta.color)
-            .css("left", ta.x)
-            .css("top", ta.y)
-            .css("width", ta.width)
-            .css("height", ta.height)
+            .css("left", ta.x*INIT_SCALE)
+            .css("top", ta.y*INIT_SCALE)
+            .css("width", ta.width*INIT_SCALE)
+            .css("height", ta.height*INIT_SCALE)
             .on("touchstart", function() {
-                zoomMap(-ta.x, -ta.y, ta.zoomscale);
+                zoomMap(ta.x, ta.y, ta.zoomscale);
             });
         $mapMain.append($area);
     });
 }
 
+// zoomx:ズームアップしたいエリアのX座標、zoomy:ズームアップしたいエリアのY座標
+// zoomscale:ズーム倍率
 function zoomMap(zoomx, zoomy, zoomscale) {
     hammerOnMap();
 
@@ -49,8 +52,8 @@ function zoomMap(zoomx, zoomy, zoomscale) {
     var el = mapMain[0];
     el.className = 'animate';
 
-    zoomx *= zoomscale;
-    zoomy *= zoomscale;
+    zoomx *= -zoomscale;
+    zoomy *= -zoomscale;
     transform = {
         translate: { x: zoomx, y: zoomy },
         scale: zoomscale
