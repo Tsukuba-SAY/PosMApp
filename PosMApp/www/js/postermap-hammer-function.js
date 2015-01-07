@@ -18,11 +18,11 @@ function initHammer() {
     var $mapMain = $("#mapMain");
     taparea.forEach(function(area) {
         var $divarea = $("<div>")
-            .attr("id", area.id)
+            .attr("id", "area"+area.id)
             .addClass("mapArea")
             .css("position", "absolute")
             .css("z-index", 150)
-            .css("opacity", 0.3)
+            .css("opacity", 0.4)
             .css("background-color", area.color)
             .css("left", area.x*INIT_SCALE)
             .css("top", area.y*INIT_SCALE)
