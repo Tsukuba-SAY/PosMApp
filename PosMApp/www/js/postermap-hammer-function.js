@@ -197,8 +197,8 @@ function hammerOnMap() {
             return;
         }
 
-        transform.scale = (transform.scale >= 4.0) ? 4.0 : transform.scale;
-        transform.scale = (transform.scale <= 0.5) ? 0.5 : transform.scale;
+        transform.scale = (transform.scale >= 10.0) ? 10.0 : transform.scale;
+        transform.scale = (transform.scale <= 0.2) ? 0.2 : transform.scale;
 
         var value = [
             'translate(' + transform.translate.x + 'px, ' + transform.translate.y + 'px)',
