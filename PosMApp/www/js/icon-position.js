@@ -1,6 +1,15 @@
 // BlockFinderにかけた画像の幅
 var STATIC_WIDTH =  432;
 
+// タップエリアの相対座標
+var taparea = 
+[
+{"id":"area1","x":40,"y":10,"width":130,"height":210,"zoomscale":2,"color":"blue"},
+{"id":"area2","x":40,"y":220,"width":130,"height":170,"zoomscale":2,"color":"yellow"},
+{"id":"area3","x":180,"y":10,"width":155,"height":195,"zoomscale":2,"color":"red"},
+{"id":"area4","x":115,"y":400,"width":95,"height":95,"zoomscale":3,"color":"cyan"}
+];
+
 var position = [
 {"id":0,"x":51,"y":19,"width":10,"height":7,"direction":"sideways"},
 {"id":1,"x":62,"y":19,"width":10,"height":7,"direction":"sideways"},

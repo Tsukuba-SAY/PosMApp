@@ -13,22 +13,26 @@ function initHammer() {
     mc = new Hammer.Manager($("#mapFrame")[0]);
 
     $("#resetScaleButtonFrame").css("display", "none");
-
-    // ズームの基準点は各エリアの左上
-    $("#taparea1").on("touchstart", function() {
-        zoomMap(-40, -10, 2);
-    });
-    $("#taparea2").on("touchstart", function() {
-        zoomMap(-40, -220, 2);
-    }); 
-    $("#taparea3").on("touchstart", function() {
-        zoomMap(-180, -10, 2);
-    });
-    $("#taparea4").on("touchstart", function() {
-        zoomMap(-115, -400, 3);
-    });
     $("#resetScaleButton").on("touchstart", resetZoom);
 
+    var $mapMain = $("#mapMain");
+    taparea.forEach(function(ta) {
+        var $area = $("<div>")
+            .attr("id", ta.id)
+            .addClass("mapArea")
+            .css("position", "absolute")
+            .css("z-index", 150)
+            .css("opacity", 0.3)
+            .css("background-color", ta.color)
+            .css("left", ta.x)
+            .css("top", ta.y)
+            .css("width", ta.width)
+            .css("height", ta.height)
+            .on("touchstart", function() {
+                zoomMap(-ta.x, -ta.y, ta.zoomscale);
+            });
+        $mapMain.append($area);
+    });
 }
 
 function zoomMap(zoomx, zoomy, zoomscale) {
