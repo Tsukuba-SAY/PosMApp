@@ -63,19 +63,19 @@ function downloadPoster(){
 	
 }
 
-var poster = JSON.parse(localStorage.getItem("poster"));
+// var poster = JSON.parse(localStorage.getItem("poster"));
 
-var presen　= JSON.parse(localStorage.getItem("presen"));
+// var presen　= JSON.parse(localStorage.getItem("presen"));
 
-var author = JSON.parse(localStorage.getItem("author"));
+// var author = JSON.parse(localStorage.getItem("author"));
 
-var keyword = JSON.parse(localStorage.getItem("keyword"));
+// var keyword = JSON.parse(localStorage.getItem("keyword"));
 
 // グローバル変数の初期化処理
 function initPosterMap() {
 
 	// ポスターの件数をセットする
-	ptotal = poster.length;
+	var ptotal = JSON.parse(localStorage.getItem("poster")).length;
 
 	// pflagを初期化
 	// ポスター件数+1なのはpflagの添字をポスター番号と対応させるため。pflag[0]はnullとしている
@@ -154,7 +154,8 @@ function setPosterIcons() {
 	var iconHeight;
 	var position = JSON.parse(localStorage.getItem("position"));
 	var position_map = JSON.parse(localStorage.getItem("position_map"));
-	var ptotal = poster.length;
+	ptotal = JSON.parse(localStorage.getItem("poster")).length;
+	poster = JSON.parse(localStorage.getItem("poster"));
 
 	for (var i = 1; i <= ptotal; i++) {
 
@@ -390,7 +391,9 @@ function emphasisSearchedPosters(posterids) {
 
 // ポスターを選択する
 function selectPoster(posterid) {
-
+	presen = JSON.parse(localStorage.getItem("presen"));
+	author = JSON.parse(localStorage.getItem("author"));
+	keyword = JSON.parse(localStorage.getItem("keyword"));
 	// for (var i = 0; i < ptotal; i++) {
 	// 	var p = poster[i];
 	// 	if (p.id === posterid) {
@@ -681,14 +684,14 @@ function setDetails() {
 
 // 代表者名を取得
 function getAuthorname(presenid) {
-	return author.filter(function(a) {
+	return JSON.parse(localStorage.getItem("author")).filter(function(a) {
 		return a.presenid === presenid && a.first === 1;
 	})[0].name;
 }
 
 // 所属一覧を取得
 function getAuthorbelongs(presenid) {
-	return author.filter(function(a) {
+	return JSON.parse(localStorage.getItem("author")).filter(function(a) {
 		return a.presenid === presenid;
 	}).map(function(a) {
 		return a.belongs;
@@ -699,7 +702,7 @@ function getAuthorbelongs(presenid) {
 
 // 発表者を取得
 function getAuthors(presenid) {
-	return author.filter(function(a) {
+	return JSON.parse(localStorage.getItem("author")).filter(function(a) {
 		return a.presenid === presenid;
 	}).map(function(a) {
 		return a.name;
@@ -708,7 +711,7 @@ function getAuthors(presenid) {
 
 // キーワードを取得
 function getKeywords(presenid) {
-	return keyword.filter(function(k) {
+	return JSON.parse(localStorage.getItem("keyword")).filter(function(k) {
 		return k.presenid === presenid;
 	}).map(function(k) {
 		return k.keyword;

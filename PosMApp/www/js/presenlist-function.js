@@ -14,7 +14,7 @@ $.fn.showPresenList = function() {
 	var bookmarkArr = bookmarks.split(",");
 	var str = "";
 	str += '<table border="1" rules="rows" width="100%">';
-	
+	presen = JSON.parse(localStorage.getItem("presen"));
 	presen.forEach(function(p) {
 		var posterid = getPosterid(p.presenid);
 		authors = getAuthors(p.presenid).split(",").join(", ");
