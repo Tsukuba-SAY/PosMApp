@@ -1,5 +1,14 @@
 // BlockFinderにかけた画像の幅
 var STATIC_WIDTH =  432;
+var STATIC_HEIGHT = 576;
+// マップのスケールを決定
+var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
+var SCALE_BY = "width";
+// 55がヘッダー、68がフッター分
+if (STATIC_HEIGHT * INIT_SCALE > (window.innerHeight - 55 - 68)) {
+    INIT_SCALE = (window.innerHeight - 55 - 68) / STATIC_HEIGHT;
+    SCALE_BY = "height";
+}
 
 // タップエリアの相対座標
 var taparea = 

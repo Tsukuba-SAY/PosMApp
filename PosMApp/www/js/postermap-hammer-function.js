@@ -15,7 +15,6 @@ function initHammer() {
     $("#resetScaleButtonFrame").css("display", "none");
     $("#resetScaleButton").on("touchstart", resetZoom);
 
-    var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
     var $mapMain = $("#mapMain");
     taparea.forEach(function(ta) {
         var $area = $("<div>")
@@ -30,7 +29,7 @@ function initHammer() {
             .css("width", ta.width*INIT_SCALE)
             .css("height", ta.height*INIT_SCALE)
             .on("touchstart", function() {
-                zoomMap(ta.x, ta.y, ta.zoomscale);
+                zoomMap(ta.x*INIT_SCALE, ta.y*INIT_SCALE, ta.zoomscale*INIT_SCALE);
             });
         $mapMain.append($area);
     });
@@ -110,10 +109,14 @@ function hammerOffMap() {
 
 function hammerOnMap() {
     var FRAME_TIME = 1000 / 30;
-	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
+	// var INIT_SCALE = (window.innerHeight - 55 - 68) / STATIC_HEIGHT;
 
 	var $mapMain = $('#mapMain');
-    $("#mapImg").css("width", window.innerWidth);
+    if (SCALE_BY === "height") {
+        $("#mapImg").css("height", (window.innerHeight - 55 - 68));
+    } else {
+        $("#mapImg").css("width", window.innerWidth);
+    }
 
     var el = $("#mapMain")[0];
     el.className = 'animate';
