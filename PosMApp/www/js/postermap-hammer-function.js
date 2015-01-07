@@ -16,16 +16,16 @@ function initHammer() {
 
     // ズームの基準点は各エリアの左上
     $("#taparea1").on("touchstart", function() {
-        zoomMap(-40, -10, 1);
+        zoomMap(-40, -10, 2);
     });
     $("#taparea2").on("touchstart", function() {
-        zoomMap(-40, -220, 1);
+        zoomMap(-40, -220, 2);
     }); 
     $("#taparea3").on("touchstart", function() {
-        zoomMap(-180, -10, 1);
+        zoomMap(-180, -10, 2);
     });
     $("#taparea4").on("touchstart", function() {
-        zoomMap(-115, -400, 1);
+        zoomMap(-115, -400, 3);
     });
     $("#resetScaleButton").on("touchstart", resetZoom);
 
