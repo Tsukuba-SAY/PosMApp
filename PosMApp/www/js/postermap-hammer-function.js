@@ -49,6 +49,8 @@ function zoomMap(zoomx, zoomy, zoomscale) {
     var el = mapMain[0];
     el.className = 'animate';
 
+    zoomx *= zoomscale;
+    zoomy *= zoomscale;
     transform = {
         translate: { x: zoomx, y: zoomy },
         scale: zoomscale
