@@ -115,9 +115,9 @@ function hammerOnMap() {
 
 	var $mapMain = $('#mapMain');
     if (SCALE_BY === "height") {
-        $("#mapImg").css("height", (window.innerHeight - 55 - 68));
+        $("#mapImg").css("height", MAP_AREA_HEIGHT);
     } else {
-        $("#mapImg").css("width", window.innerWidth);
+        $("#mapImg").css("width", MAP_AREA_WIDTH);
     }
 
     var el = $("#mapMain")[0];
@@ -135,7 +135,7 @@ function hammerOnMap() {
     mc.add(new Hammer.Pinch()).recognizeWith(mc.get("pan"));
     mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
-    mc.on("panstart", function() {
+    mc.on("panstart", function(ev) {
         isAnimated = true;
         transform = {
             translate : { x: posx, y: posy },
@@ -157,8 +157,13 @@ function hammerOnMap() {
         posy = transform.translate.y;
     });
 
-    mc.on("pinchstart", function() {
+    mc.on("pinchstart", function(ev) {
         isAnimated = true;
+        var origX = ((-posx + ev.center.x) / MAP_AREA_WIDTH).toString() + "%";
+        var origY = ((-posy + ev.center.y) / MAP_AREA_HEIGHT).toString() + "%";
+        $("#mapMain")
+            .css("-moz-transform-origin", origX + " " + origY)
+            .css("-webkit-transform-origin", origX + " " + origY);    
         transform = {
             translate: { x: posx, y: posy },
             scale: scale
@@ -172,6 +177,9 @@ function hammerOnMap() {
 
     mc.on("pinchend pinchcancel", function(ev) {
         isAnimated = false;
+        $("#mapMain")
+            .css("-moz-transform-origin", "left top")
+            .css("-webkit-transform-origin", "left top");  
         scale = transform.scale;
     });
 
