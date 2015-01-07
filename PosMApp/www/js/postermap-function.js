@@ -16,6 +16,53 @@ var labelmax = 7;
 // ポスターの総件数
 var ptotal;
 
+//　ポスターデータのダウンロード
+function downloadPoster(){
+	if(!localStorage.getItem("downloadSuccess")){
+		$.ajax({
+		   		url: "http://104.236.123.57/fs/testreadJSON.php",
+		   		//url: "http://localhost/testreadJSON.php",
+				type: "POST",
+				dataType: "json",
+				async: false,
+				data: "",
+				timeout: 10000, // タイムアウトにするまでの時間は要検討
+				success: function(data) {
+					localStorage.setItem("poster", JSON.stringify(data.poster));
+					localStorage.setItem("author", JSON.stringify(data.author));
+					localStorage.setItem("keyword", JSON.stringify(data.keyword));
+					localStorage.setItem("presen", JSON.stringify(data.presen));
+					localStorage.setItem("presents", JSON.stringify(data.presents));
+					localStorage.setItem("session", JSON.stringify(data.session));
+					localStorage.setItem("commontator", JSON.stringify(data.commontator));
+					localStorage.setItem("position_map", JSON.stringify(data.position_map));
+					localStorage.setItem("position", JSON.stringify(data.position));
+					localStorage.setItem("STATIC_WIDTH", JSON.stringify(data.STATIC_WIDTH));
+					//console.log(localStorage.getItem("author"));
+					localStorage.setItem("downloadSuccess","true");
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown) {
+					console.error("send error");
+					console.error("XMLHttpRequest: " + XMLHttpRequest);
+					console.error("textStatus: " + textStatus);
+					console.error("errorThrown: " + errorThrown);
+					// alert("ダウンロード失敗した");
+					var r=confirm("ダウンロード失敗した、もう一度ダウンロードする");
+					if (r==true){
+						downloadPoster();
+					}
+					else{
+						alert("You pressed Cancel!");
+					}
+				},
+				complete: function(data) {
+					// alert("complete");
+				}
+		});
+	}
+	
+}
+
 var poster = JSON.parse(localStorage.getItem("poster"));
 
 var presen　= JSON.parse(localStorage.getItem("presen"));
@@ -680,41 +727,3 @@ function getPosterid(presenid) {
 	return posterid;
 }
 
-//　ポスターデータのダウンロード
-function downloadPoster(){
-	if(!localStorage.getItem("downloadSuccess")){
-		$.ajax({
-		   		url: "http://104.236.123.57/fs/testreadJSON.php",
-		   		//url: "http://localhost/testreadJSON.php",
-				type: "POST",
-				dataType: "json",
-				data: "",
-				timeout: 10000, // タイムアウトにするまでの時間は要検討
-				success: function(data) {
-					//alert("success   " + JSON.stringify(data.poster));
-					localStorage.setItem("poster", JSON.stringify(data.poster));
-					localStorage.setItem("author", JSON.stringify(data.author));
-					localStorage.setItem("keyword", JSON.stringify(data.keyword));
-					localStorage.setItem("presen", JSON.stringify(data.presen));
-					localStorage.setItem("presents", JSON.stringify(data.presents));
-					localStorage.setItem("session", JSON.stringify(data.session));
-					localStorage.setItem("commontator", JSON.stringify(data.commontator));
-					localStorage.setItem("position_map", JSON.stringify(data.position_map));
-					localStorage.setItem("position", JSON.stringify(data.position));
-					localStorage.setItem("STATIC_WIDTH", JSON.stringify(data.STATIC_WIDTH));
-					//console.log(localStorage.getItem("author"));
-				},
-				error: function(XMLHttpRequest, textStatus, errorThrown) {
-					console.error("send error");
-					console.error("XMLHttpRequest: " + XMLHttpRequest);
-					console.error("textStatus: " + textStatus);
-					console.error("errorThrown: " + errorThrown);
-				},
-				complete: function(data) {
-					// alert("complete");
-					localStorage.setItem("downloadSuccess","true");
-				}
-		});
-	}
-	
-}

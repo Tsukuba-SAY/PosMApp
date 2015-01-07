@@ -10,6 +10,14 @@ function init() {
 		.css("width", window.innerWidth)
 		.css("max-width", window.innerWidth);
 
+	// 固有識別IDが設定されていなければ、初期設定する
+	$("#acceptCollectLog").acceptCollectLog();
+	$("#denyCollectLog").denyCollectLog();
+	$(".selectUserCategoryButton").selectUserCategory();
+	if (localStorage.getItem("uid") === null) {
+		initUserData();
+	}
+
 	//　ポスターデータのダウンロード
 	//　各mapに関する変数に値を与える
 	downloadPoster();
@@ -35,14 +43,6 @@ function init() {
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
-
-	// 固有識別IDが設定されていなければ、初期設定する
-	$("#acceptCollectLog").acceptCollectLog();
-	$("#denyCollectLog").denyCollectLog();
-	$(".selectUserCategoryButton").selectUserCategory();
-	if (localStorage.getItem("uid") === null) {
-		initUserData();
-	}
 
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") !== null) {
