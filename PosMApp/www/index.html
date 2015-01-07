@@ -42,6 +42,9 @@
 <div data-role="page" id="topPage" style="background-image:url(img/toppage.png); background-size: cover;" >
 	<div id="topPageContent">
 		<!--<div id="conferenceName"></div>-->
+		<div id="downloading" class="downloadingDIV" style="position: fixed; z-index: 200;">
+			<img src="img/gif-load.gif">
+		</div>
 		<div class="ui-grid-solo">
 			<div class="ui-block-a">
 				<div id="selectLocale">日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></div>
@@ -455,6 +458,18 @@
 		<a data-role="button" class="selectUserCategoryButton" id="usercat-2">学生（見学者）</a>
 		<a data-role="button" class="selectUserCategoryButton" id="usercat-3">教員</a>
 		<a data-role="button" class="selectUserCategoryButton" id="usercat-4">社会人・その他</a>
+	</div>
+</div>
+
+<!-- ダウンロード失敗したダイアログ  -->
+<div data-role="dialog" data-close-btn="none" id="downloadFailDialog">
+	<div data-role="header">
+		<h1>データのダウンロードが失敗した。</h1>
+	</div>
+	<div data-role="content">
+		もう一度ダウンロードしてください。<br />
+		<a data-role="button" id="ReDownload">はい</a>
+		<a data-role="button" id="CancelDownload">いいえ</a>
 	</div>
 </div>
 

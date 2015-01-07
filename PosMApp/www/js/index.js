@@ -18,6 +18,16 @@ function init() {
 		initUserData();
 	}
 
+	//ダウンロード失敗ダイアログのボタン
+	$("#ReDownload").reDownload();
+	$("#CancelDownload").cancelDownload();
+
+	// loading中の画像が表示するかどうかを判断する
+	// none:非表示
+	if(localStorage.getItem("downloadSuccess")){
+		$("#downloading").css("display", "none");
+	}
+
 	//　ポスターデータのダウンロード
 	//　各mapに関する変数に値を与える
 	downloadPoster();

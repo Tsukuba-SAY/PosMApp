@@ -53,3 +53,10 @@
 	font-size: small;
 	/*top: 92%;*/
 }
+
+.downloadingDIV {
+	position: fixed;
+	left: 37%;
+	top: 55%;
+	z-index: 200;
+}

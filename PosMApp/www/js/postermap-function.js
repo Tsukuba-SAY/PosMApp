@@ -38,22 +38,22 @@ function downloadPoster(){
 					localStorage.setItem("position_map", JSON.stringify(data.position_map));
 					localStorage.setItem("position", JSON.stringify(data.position));
 					localStorage.setItem("STATIC_WIDTH", JSON.stringify(data.STATIC_WIDTH));
-					//console.log(localStorage.getItem("author"));
 					localStorage.setItem("downloadSuccess","true");
+					$("#downloading").css("display", "none");
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
 					console.error("send error");
 					console.error("XMLHttpRequest: " + XMLHttpRequest);
 					console.error("textStatus: " + textStatus);
 					console.error("errorThrown: " + errorThrown);
-					// alert("ダウンロード失敗した");
-					var r=confirm("ダウンロード失敗した、もう一度ダウンロードする");
-					if (r==true){
-						downloadPoster();
-					}
-					else{
-						alert("You pressed Cancel!");
-					}
+					window.location.href = "#downloadFailDialog";
+					// var r=confirm("データダウンロード失敗、もう一度ダウンロードしてください");
+					// if (r==true){
+					// 	downloadPoster();
+					// }
+					// else{
+					// 	$("#downloading").css("display", "none");
+					// }
 				},
 				complete: function(data) {
 					// alert("complete");
@@ -63,13 +63,20 @@ function downloadPoster(){
 	
 }
 
-// var poster = JSON.parse(localStorage.getItem("poster"));
+$.fn.cancelDownload = function() {
+	$(this).on("touchstart", function(e){
+		window.location.href = "#topPage";
+		// loading画像を表示しない
+		$("#downloading").css("display", "none");
+		initUserData();
+	});
+};
 
-// var presen　= JSON.parse(localStorage.getItem("presen"));
-
-// var author = JSON.parse(localStorage.getItem("author"));
-
-// var keyword = JSON.parse(localStorage.getItem("keyword"));
+$.fn.reDownload = function() {
+	$(this).on("touchstart", function(e){
+		downloadPoster();
+	});
+};
 
 // グローバル変数の初期化処理
 function initPosterMap() {

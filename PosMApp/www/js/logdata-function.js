@@ -20,6 +20,10 @@ $.fn.denyCollectLog = function() {
 
 		localStorage.setItem("accept_collect_log", false);
 		window.location.href = "#topPage";
+		// downloadPoster();
+		// initPosterMap();
+		// setPosterIcons();
+		// showPosterIcons();
 	});
 };
 
@@ -32,6 +36,10 @@ $.fn.selectUserCategory = function() {
 
 		localStorage.setItem("category", category);
 		window.location.href = "#topPage";
+		// downloadPoster();
+		// initPosterMap();
+		// setPosterIcons();
+		// showPosterIcons();
 	});
 }
 
