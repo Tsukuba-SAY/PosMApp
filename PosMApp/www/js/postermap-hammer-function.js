@@ -28,6 +28,7 @@ function initHammer() {
         zoomMap(-115, -400, 1);
     });
     $("#resetScaleButton").on("touchstart", resetZoom);
+
 }
 
 function zoomMap(zoomx, zoomy, zoomscale) {

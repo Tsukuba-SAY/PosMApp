@@ -3,6 +3,8 @@ $(init);
 
 function init() {
 
+	$("#resetScaleButtonFrame").css("zoom", window.innerWidth/1200);
+
 	// トップページの大きさ調整
 	$("#topPageFrame")
 		.css("width", window.innerWidth)
