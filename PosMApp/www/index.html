@@ -42,8 +42,11 @@
 <div data-role="page" id="topPage" style="background-image:url(img/toppage.png); background-size: cover;" >
 	<div id="topPageContent">
 		<!--<div id="conferenceName"></div>-->
-		<div id="downloading" class="downloadingDIV" style="position: fixed; z-index: 200;">
+		<div id="downloading" class="downloadingDIV">
 			<img src="img/gif-load.gif">
+		</div>
+		<div id="reDownloadDIV" class="reDownloadDIV">
+			データを再ダウンロードする
 		</div>
 		<div class="ui-grid-solo">
 			<div class="ui-block-a">
@@ -467,7 +470,7 @@
 		<h1>データのダウンロードが失敗した。</h1>
 	</div>
 	<div data-role="content">
-		もう一度ダウンロードしてください。<br />
+		もう一度ダウンロードします。<br />
 		<a data-role="button" id="ReDownload">はい</a>
 		<a data-role="button" id="CancelDownload">いいえ</a>
 	</div>

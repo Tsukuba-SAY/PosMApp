@@ -60,3 +60,14 @@
 	top: 55%;
 	z-index: 200;
 }
+
+.reDownloadDIV {
+	position: fixed;
+	left: 21%;
+	top: 50%;
+	height: 60px;
+	line-height:60px;
+	z-index: 200;
+	text-align:center;
+	background-color:#ff9933;
+}

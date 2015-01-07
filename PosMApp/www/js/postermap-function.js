@@ -40,6 +40,11 @@ function downloadPoster(){
 					localStorage.setItem("STATIC_WIDTH", JSON.stringify(data.STATIC_WIDTH));
 					localStorage.setItem("downloadSuccess","true");
 					$("#downloading").css("display", "none");
+					$("#reDownloadDIV").css("display", "none");
+					//redownloadWindowからダウンロード成功すると、画面をrefreshする
+					if(localStorage.getItem("redownloadWindow")){
+						window.location.reload();
+					}
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
 					console.error("send error");
@@ -47,16 +52,12 @@ function downloadPoster(){
 					console.error("textStatus: " + textStatus);
 					console.error("errorThrown: " + errorThrown);
 					window.location.href = "#downloadFailDialog";
-					// var r=confirm("データダウンロード失敗、もう一度ダウンロードしてください");
-					// if (r==true){
-					// 	downloadPoster();
-					// }
-					// else{
-					// 	$("#downloading").css("display", "none");
-					// }
+					$("#reDownloadDIV").css("display", "inline");
+					$("#downloading").css("display", "none");
 				},
 				complete: function(data) {
 					// alert("complete");
+					initUserData();
 				}
 		});
 	}
@@ -73,6 +74,14 @@ $.fn.cancelDownload = function() {
 };
 
 $.fn.reDownload = function() {
+	$(this).on("touchstart", function(e){
+		localStorage.setItem("redownloadWindow","true");
+		downloadPoster();
+		window.location.href = "#topPage";
+	});
+};
+
+$.fn.reDownloadFun = function() {
 	$(this).on("touchstart", function(e){
 		downloadPoster();
 	});
