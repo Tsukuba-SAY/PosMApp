@@ -1,22 +1,27 @@
 // BlockFinderにかけた画像の幅
 var STATIC_WIDTH =  432;
 var STATIC_HEIGHT = 576;
+
+// マップエリアの幅
+var MAP_AREA_WIDTH = window.innerWidth;
+// マップエリアの高さ（55がヘッダー、68がフッター分）
+var MAP_AREA_HEIGHT = window.innerHeight - 55 - 68;
+
 // マップのスケールを決定
-var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
+var INIT_SCALE = MAP_AREA_WIDTH / STATIC_WIDTH;
 var SCALE_BY = "width";
-// 55がヘッダー、68がフッター分
-if (STATIC_HEIGHT * INIT_SCALE > (window.innerHeight - 55 - 68)) {
-    INIT_SCALE = (window.innerHeight - 55 - 68) / STATIC_HEIGHT;
+if (STATIC_HEIGHT * INIT_SCALE > MAP_AREA_HEIGHT) {
+    INIT_SCALE = MAP_AREA_HEIGHT / STATIC_HEIGHT;
     SCALE_BY = "height";
 }
 
 // タップエリアの相対座標
 var taparea = 
 [
-{"id":"area1","x":45,"y":11,"width":161,"height":241,"zoomscale":2,"color":"blue"},
-{"id":"area2","x":45,"y":256,"width":161,"height":185,"zoomscale":2,"color":"yellow"},
-{"id":"area3","x":222,"y":11,"width":161,"height":225,"zoomscale":2,"color":"red"},
-{"id":"area4","x":132,"y":465,"width":111,"height":103,"zoomscale":3,"color":"cyan"}
+{"id":"area1","x":45,"y":11,"width":161,"height":241,"direction":"longways","color":"blue"},
+{"id":"area2","x":45,"y":256,"width":161,"height":185,"direction":"longways","color":"yellow"},
+{"id":"area3","x":222,"y":11,"width":161,"height":225,"direction":"longways","color":"red"},
+{"id":"area4","x":132,"y":465,"width":111,"height":103,"direction":"sideways","color":"cyan"}
 ];
 
 var position = [

@@ -16,28 +16,26 @@ function initHammer() {
     $("#resetScaleButton").on("touchstart", resetZoom);
 
     var $mapMain = $("#mapMain");
-    taparea.forEach(function(ta) {
-        var $area = $("<div>")
-            .attr("id", ta.id)
+    taparea.forEach(function(area) {
+        var $divarea = $("<div>")
+            .attr("id", area.id)
             .addClass("mapArea")
             .css("position", "absolute")
             .css("z-index", 150)
             .css("opacity", 0.3)
-            .css("background-color", ta.color)
-            .css("left", ta.x*INIT_SCALE)
-            .css("top", ta.y*INIT_SCALE)
-            .css("width", ta.width*INIT_SCALE)
-            .css("height", ta.height*INIT_SCALE)
+            .css("background-color", area.color)
+            .css("left", area.x*INIT_SCALE)
+            .css("top", area.y*INIT_SCALE)
+            .css("width", area.width*INIT_SCALE)
+            .css("height", area.height*INIT_SCALE)
             .on("touchstart", function() {
-                zoomMap(ta.x*INIT_SCALE, ta.y*INIT_SCALE, ta.zoomscale*INIT_SCALE);
+                zoomMap(area);
             });
-        $mapMain.append($area);
+        $mapMain.append($divarea);
     });
 }
 
-// zoomx:ズームアップしたいエリアのX座標、zoomy:ズームアップしたいエリアのY座標
-// zoomscale:ズーム倍率
-function zoomMap(zoomx, zoomy, zoomscale) {
+function zoomMap(area) {
     hammerOnMap();
 
 	$("#resetScaleButtonFrame").css("display", "inline");
@@ -51,8 +49,12 @@ function zoomMap(zoomx, zoomy, zoomscale) {
     var el = mapMain[0];
     el.className = 'animate';
 
-    zoomx *= -zoomscale;
-    zoomy *= -zoomscale;
+    var zoomscale = 
+        (area.direction === "longways") 
+        ? MAP_AREA_HEIGHT / area.height / INIT_SCALE
+        : MAP_AREA_WIDTH / area.width / INIT_SCALE;
+    var zoomx = area.x * INIT_SCALE * (-zoomscale);
+    var zoomy = area.y * INIT_SCALE * (-zoomscale);
     transform = {
         translate: { x: zoomx, y: zoomy },
         scale: zoomscale
