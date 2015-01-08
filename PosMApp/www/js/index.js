@@ -10,6 +10,32 @@ function init() {
 		.css("width", window.innerWidth)
 		.css("max-width", window.innerWidth);
 
+	// 固有識別IDが設定されていなければ、初期設定する
+	$("#acceptCollectLog").acceptCollectLog();
+	$("#denyCollectLog").denyCollectLog();
+	$(".selectUserCategoryButton").selectUserCategory();
+	if (localStorage.getItem("uid") === null) {
+		initUserData();
+	}
+
+	//ダウンロード失敗ダイアログのボタン
+	$("#ReDownload").reDownload();
+	$("#CancelDownload").cancelDownload();
+
+	//再ダウンロードdivのイベント
+	$(".reDownloadDIV").reDownloadFun();
+
+	// loading中の画像が表示するかどうかを判断する
+	// none:非表示
+	if(localStorage.getItem("downloadSuccess")){
+		// $("#downloading").css("display", "none");
+		$(".reDownloadDIV").css("display", "none");
+	}
+
+	//　ポスターデータのダウンロード
+	//　各mapに関する変数に値を与える
+	downloadPoster();
+
 	initPosterMap();
 
 	// 現在はWebSQLは使用していない
@@ -31,14 +57,6 @@ function init() {
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
-
-	// 固有識別IDが設定されていなければ、初期設定する
-	$("#acceptCollectLog").acceptCollectLog();
-	$("#denyCollectLog").denyCollectLog();
-	$(".selectUserCategoryButton").selectUserCategory();
-	if (localStorage.getItem("uid") === null) {
-		initUserData();
-	}
 
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") !== null) {
