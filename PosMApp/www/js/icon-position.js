@@ -3,9 +3,9 @@ var STATIC_WIDTH =  720;
 var STATIC_HEIGHT = 960;
 
 // マップエリアの幅
-var MAP_AREA_WIDTH = window.innerWidth;
+var MAP_AREA_WIDTH = screen.width;
 // マップエリアの高さ（55がヘッダー、68がフッター分）
-var MAP_AREA_HEIGHT = window.innerHeight - 55 - 68;
+var MAP_AREA_HEIGHT = screen.height - 55 - 68;
 
 // マップのスケールを決定
 var INIT_SCALE = MAP_AREA_WIDTH / STATIC_WIDTH;
