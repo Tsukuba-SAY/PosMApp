@@ -18,7 +18,18 @@ var ptotal;
 
 //　ポスターデータのダウンロード
 function downloadPoster(){
-	$("#downloading").css("display", "inline");
+	//loading画像の表示
+	$(".downloading").css("display", "inline");
+	//ダイアログの表示順番のため
+	if(localStorage.getItem("accept_collect_log") === null){
+		ajaxdownload();
+	}else{
+		setTimeout("ajaxdownload()",300);
+	}
+	
+}
+
+function ajaxdownload(){
 	if(!localStorage.getItem("downloadSuccess")){
 		$.ajax({
 		   		url: "http://104.236.123.57/fs/testreadJSON.php",
@@ -42,10 +53,7 @@ function downloadPoster(){
 					localStorage.setItem("downloadSuccess","true");
 					// $("#downloading").css("display", "none");
 					$("#reDownloadDIV").css("display", "none");
-					//redownloadWindowからダウンロード成功すると、画面をrefreshする
-					if(localStorage.getItem("redownloadWindow")){
-						window.location.reload();
-					}
+					init();
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
 					console.error("send error");
@@ -63,7 +71,6 @@ function downloadPoster(){
 				}
 		});
 	}
-	
 }
 
 $.fn.cancelDownload = function() {
@@ -77,7 +84,7 @@ $.fn.cancelDownload = function() {
 
 $.fn.reDownload = function() {
 	$(this).on("touchstart", function(e){
-		localStorage.setItem("redownloadWindow","true");
+		// localStorage.setItem("redownloadWindow","true");
 		$(".downloading").css("display", "inline");
 		downloadPoster();
 		// $("#downloading").css("display", "inline");
