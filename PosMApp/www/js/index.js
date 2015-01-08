@@ -121,6 +121,31 @@ function init() {
 	$(".bookmarkListPageButton").goToBookmarkListPage("touchstart");	
 	$(".informationPageButton").goToInformationPage("touchstart");
 
+	//// セッションテーブルからセッションリストに飛ぶやつ ////
+	//// FIXME: 応急処置なのであとで直す ////
+	$.fn.jumpToPresen = function() {
+		$(this).on("touchstart", function() {
+			var id = $(this).attr("id");
+			var sessionid = id.substr(10);
+			sessionStorage.setItem("gotosessionid",sessionid+"-1");
+			$(document).on("pageshow", "#presenListPage", scrollToTr);
+			window.location.href = "#presenListPage";
+		});
+	}
+	$(".jumpToPresen").jumpToPresen();
+	function scrollToTr() {
+		var target = $("#presen" + sessionStorage.getItem("gotosessionid"));
+		console.log(sessionStorage.getItem("gotosessionid"));
+		var position = target.offset().top;
+		var speed = 500;
+		$('body,html').animate({scrollTop:position}, speed, 'swing');
+
+		$(document).off("pageshow");
+		sessionStorage.removeItem("gotosessionid");
+	}
+
+
+
 	// タブバーの選択表示を変更
 	var currentPage = window.location.hash;
 	switch (currentPage) {
