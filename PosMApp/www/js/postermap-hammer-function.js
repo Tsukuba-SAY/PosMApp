@@ -14,6 +14,7 @@ function initHammer() {
 
     $("#resetScaleButtonFrame").css("display", "none");
     $("#resetScaleButton").on("touchstart", resetZoom);
+    $(".posterfont").css("display", "none");
 
     var $mapMain = $("#mapMain");
     taparea.forEach(function(area) {
@@ -38,7 +39,6 @@ function initHammer() {
 function zoomMap(area) {
     hammerOnMap();
 
-	$("#resetScaleButtonFrame").css("display", "inline");
     var mapMain = $("#mapMain");
 
     // // ズームの基準点を左上に変更
@@ -73,13 +73,16 @@ function zoomMap(area) {
     resx = posx;
     resy = posy;
     resscale = scale;
+
     $(".mapArea").css("display", "none");
+    $("#resetScaleButtonFrame").css("display", "inline");
+    $(".posterfont").css("display", "block");
 }
 
 function resetZoom() {
 
 	hammerOffMap();
-	$("#resetScaleButtonFrame").css("display", "none");
+    
     var el = $("#mapMain")[0];
     el.className = 'animate';
 
@@ -101,7 +104,10 @@ function resetZoom() {
     resx = posx;
     resy = posy;
     resscale = scale;
+
+    $("#resetScaleButtonFrame").css("display", "none");
     $(".mapArea").css("display", "inline");
+    $(".posterfont").css("display", "none");
 }
 
 function hammerOffMap() {

@@ -12,9 +12,6 @@ function init() {
 
 	initPosterMap();
 
-	// Hammer on stage
-	initHammer();
-
 	// 現在はWebSQLは使用していない
 	// initDB();
 
@@ -22,6 +19,9 @@ function init() {
 	// JSONから直接呼び出す感じで
 	// とりあえずデフォルトはセッションID
 	setPosterIcons();
+
+	// Hammer on stage
+	initHammer();
 
 	// Hammerをセット
 	// TODO: もっとスマートにしたい
