@@ -54,20 +54,16 @@
 	/*top: 92%;*/
 }
 
-.downloadingDIV {
-	position: fixed;
-	left: 37%;
-	top: 55%;
-	z-index: 200;
-}
-
 .reDownloadDIV {
-	position: fixed;
-	left: 21%;
-	top: 50%;
-	height: 60px;
-	line-height:60px;
+	position:absolute;
+	left: calc( 50% - 220px / 2);
+	top:13%;
+	height: 80px;
+	width: 220px;
+	line-height:80px;
 	z-index: 200;
-	text-align:center;
-	background-color:#ff9933;
+	text-align: center;
+	font-size: medium;
+	color: white;
+	background-color:#D00000;
 }

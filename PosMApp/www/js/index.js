@@ -23,13 +23,13 @@ function init() {
 	$("#CancelDownload").cancelDownload();
 
 	//再ダウンロードdivのイベント
-	$("#reDownloadDIV").reDownloadFun();
+	$(".reDownloadDIV").reDownloadFun();
 
 	// loading中の画像が表示するかどうかを判断する
 	// none:非表示
 	if(localStorage.getItem("downloadSuccess")){
-		$("#downloading").css("display", "none");
-		$("#reDownloadDIV").css("display", "none");
+		// $("#downloading").css("display", "none");
+		$(".reDownloadDIV").css("display", "none");
 	}
 
 	//　ポスターデータのダウンロード
