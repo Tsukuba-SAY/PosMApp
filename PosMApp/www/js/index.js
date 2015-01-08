@@ -1,8 +1,11 @@
-//HTMLが呼ばれた時の初期化処理
+// HTMLが呼ばれた時の初期化処理
 $(init);
 
 function init() {
 
+	$("#resetScaleButtonFrame").css("zoom", window.innerWidth/1200);
+
+	// トップページの大きさ調整
 	$("#topPageFrame")
 		.css("width", window.innerWidth)
 		.css("max-width", window.innerWidth);
@@ -16,6 +19,14 @@ function init() {
 	// JSONから直接呼び出す感じで
 	// とりあえずデフォルトはセッションID
 	setPosterIcons();
+
+	// Hammer on stage
+	initHammer();
+
+	// Hammerをセット
+	// TODO: もっとスマートにしたい
+	hammerOnMap();
+	hammerOffMap();
 
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
@@ -76,8 +87,6 @@ function init() {
 
 	// ブックマークスターのタッチイベント
 	$("#bookmarkbutton").touchBookmark();
-
-	windowManager();
 
 
 	// ---------- 詳細情報画面 ----------
@@ -150,12 +159,6 @@ function init() {
 			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
-		// default:
-		// 	$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-		// 	$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-		// 	$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-		// 	$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
-		// 	break;
 	}
 
 }

@@ -122,8 +122,6 @@ var poster =
 {"presenid":"X3-21","posterid":114,"star":1},
 {"presenid":"X3-22","posterid":115,"star":1},
 {"presenid":"X3-23","posterid":116,"star":1},
-{"presenid":"X3-24","posterid":117,"star":1},
-{"presenid":"X3-25","posterid":118,"star":1}
 ];
 
 var author =
@@ -1492,8 +1490,6 @@ var keyword =
 {"presenid":"X3-21","keyword":"ダミーポスター"},
 {"presenid":"X3-22","keyword":"ダミーポスター"},
 {"presenid":"X3-23","keyword":"ダミーポスター"},
-{"presenid":"X3-24","keyword":"ダミーポスター"},
-{"presenid":"X3-25","keyword":"ダミーポスター"}
 ];
 
 var presen =
@@ -1816,8 +1812,6 @@ var presen =
 {"presenid":"X3-21","title":"謎のX","abstract":"NO DATA","bookmark":0},
 {"presenid":"X3-22","title":"謎のX","abstract":"NO DATA","bookmark":0},
 {"presenid":"X3-23","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-24","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-25","title":"謎のX","abstract":"NO DATA","bookmark":0}
 ];
 
 var presents = 
@@ -2140,8 +2134,6 @@ var presents =
 {"sessionid":"X3","presenid":"X3-21"},
 {"sessionid":"X3","presenid":"X3-22"},
 {"sessionid":"X3","presenid":"X3-23"},
-{"sessionid":"X3","presenid":"X3-24"},
-{"sessionid":"X3","presenid":"X3-25"}
 ];
 
 var session = 
