@@ -92,7 +92,7 @@
 
 <!-- ポスターマップ画面 -->
 <div data-role="page" id="posterMapPage">
-	<div id="menuPanel" data-display="overlay" data-role="panel">
+	<div id="menuPanel" data-display="overlay" data-role="panel" data-position="right">
 		<div id="changelabel" data-position="fixed" style="border: 2px;">
 				<a data-role="button" href="#changeLabelDialog"
 					data-inline="true" data-rel="dialog"
@@ -102,11 +102,11 @@
 	<div data-role="header"　data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
 	<div class="ui-grid-a">
 		<div class="ui-block-a">
-					<input type="search" id="search-bar-title" 
-	    	placeholder="検索" data-inline="true" style="width:80%;" onchange="searchChanged(this)"/>
+			<input type="search" id="search-bar-title" 
+	    		placeholder="検索" data-inline="true" style="width:80%;" onchange="searchChanged(this)"/>
 		</div>
 		<div class="ui-block-c">
-				 <a href="#menuPanel"  data-icon="bars"  class="ui-btn ui-btn-right"  data-iconpos="notext">Menu</a>
+			<a href="#menuPanel"  data-icon="bars"  class="ui-btn ui-btn-right"  data-iconpos="notext">Menu</a>
 		</div>
 	</div>
 
