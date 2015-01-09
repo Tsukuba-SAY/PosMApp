@@ -14,7 +14,7 @@ PosMAppは、ポスター展示を含むシンポジウムのための、スマ�
 
 以下のアドレスにアクセスして下さい。  
 
-http://tkbenpit-posmapp.tk/
+http://104.236.123.57/
 
 [ユーザマニュアルはこちらです](https://github.com/Tsukuba-SAY/PosMApp/blob/develop/manual/user/PosMApp_usage.md)
 
