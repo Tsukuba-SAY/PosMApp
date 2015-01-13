@@ -37,8 +37,8 @@ iOS, Android端末でご利用いただけます。
 [既存のIssueはこちらです](https://github.com/Tsukuba-SAY/PosMApp/issues)  
 
 ## 過去のバージョン
-[WebDB Forum 2014](http://posmapp.tk/webdb2014/) バージョン：http://posmapp.tk/webdb2014/
-[enPiT筑波大ワークショップ2014](http://posmapp.tk/enpitws2014/) バージョン：http://posmapp.tk/enpitws2014/ 
+[WebDB Forum 2014](http://db-event.jpn.org/webdbf2014/) バージョン：http://webdb2014.posmapp.tk/  
+[enPiT筑波大ワークショップ2014](http://www.cs.tsukuba.ac.jp/enPiT/enpit2014_tsukuba_ws/) バージョン：http://enpitws2014.posmapp.tk/   
 
 ## 開発チーム
 
