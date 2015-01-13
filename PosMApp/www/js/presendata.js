@@ -121,9 +121,7 @@ var poster =
 {"presenid":"X3-20","posterid":113,"star":1},
 {"presenid":"X3-21","posterid":114,"star":1},
 {"presenid":"X3-22","posterid":115,"star":1},
-{"presenid":"X3-23","posterid":116,"star":1},
-{"presenid":"X3-24","posterid":117,"star":1},
-{"presenid":"X3-25","posterid":118,"star":1}
+{"presenid":"X3-23","posterid":116,"star":1}
 ];
 
 var author =

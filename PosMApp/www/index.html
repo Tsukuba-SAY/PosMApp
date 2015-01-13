@@ -43,7 +43,9 @@
 <!-- トップメニュー画面 -->
 <div data-role="page" id="topPage" style="background-image:url(img/toppage.png); background-size: cover;" >
 	<div id="topPageContent">
-		<!--<div id="conferenceName"></div>-->
+		<div id="reDownloadDIV" class="reDownloadDIV" align="center">
+			<img src="img/gif-load.gif" class="downloading" style="zoom: 25%;">データ再読み込み
+		</div>
 		<div class="ui-grid-solo">
 			<div class="ui-block-a">
 				<div id="selectLocale">日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></div>
@@ -96,6 +98,9 @@
 	    	placeholder="検索" onchange="searchChanged(this)"/>
 	</div>
 	<div style="position: relative;">
+		<div id="reDownloadDIV" class="reDownloadDIV" align="center">
+		<img src="img/gif-load.gif" class="downloading" style="zoom: 25%;">データ再読み込み
+	</div>
 		<div id="subheader" style="top: 0px;">
 			<!-- 検索結果件数 -->
 			<div id="searchResult"
@@ -188,6 +193,10 @@
 		<h1 style="text-align:center"　>発表リスト</h1>
 	</div>
 	<div data-role="content">
+			<div id="reDownloadDIV" class="reDownloadDIV" align="center">
+			<img src="img/gif-load.gif" class="downloading" style="zoom: 25%;">データ再読み込み
+		</div>
+
 		<div style="overflow:auto; height:100%;">
 			<!-- 発表リスト -->
 			<div id="presenList" class="listcolor"></div>
@@ -441,6 +450,18 @@
 		<a data-role="button" class="selectUserCategoryButton" id="usercat-2">学生（見学者）</a>
 		<a data-role="button" class="selectUserCategoryButton" id="usercat-3">教員</a>
 		<a data-role="button" class="selectUserCategoryButton" id="usercat-4">社会人・その他</a>
+	</div>
+</div>
+
+<!-- ダウンロード失敗したダイアログ  -->
+<div data-role="dialog" data-close-btn="none" id="downloadFailDialog">
+	<div data-role="header">
+		<h1>読み込み失敗</h1>
+	</div>
+	<div data-role="content">
+		もう一度取得しますか？<br />
+		<a data-role="button" id="ReDownload">はい</a>
+		<a data-role="button" id="CancelDownload">いいえ</a>
 	</div>
 </div>
 
