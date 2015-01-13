@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/icon.css" />
 	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
 	<link rel="stylesheet" type="text/css" href="css/list.css" />
+  <link rel="stylesheet" type="text/css" href="css/taparea.css" />
 	<link rel="stylesheet" type="text/css" href="css/sessiontable.css" />
 
 
@@ -21,10 +22,12 @@
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.hammer.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/lib/md5.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.xpost.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/rgbTo16.js"></script>
 
 	<!-- DB用発表データ -->
 	<script type="text/javascript" charset="utf-8" src="js/presendata.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/icon-position.js"></script>
+
 	<script type="text/javascript" charset="utf-8" src="js/logdata-function.js"></script>
 	
 	<script type="text/javascript" charset="utf-8" src="js/toppage-function.js"></script>
@@ -32,7 +35,7 @@
 	<script type="text/javascript" charset="utf-8" src="js/presenlist-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/bookmarklist-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/detail-function.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/window-manager.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/postermap-hammer-function.js"></script>
 
 	<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
 
@@ -93,7 +96,7 @@
 
 <!-- ポスターマップ画面 -->
 <div data-role="page" id="posterMapPage">
-	<div data-role="header"　data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
+	<div id="header" data-role="header"　data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
 		<input type="search" id="search-bar-title"
 	    	placeholder="検索" onchange="searchChanged(this)"/>
 	</div>
@@ -111,6 +114,11 @@
 				<a data-role="button" href="#changeLabelDialog"
 					data-inline="true" data-rel="dialog"
 					data-transition="pop">ラベル切替</a>
+			</div>
+			<!-- エリアタップ後のズームアウトボタン -->
+			<div id="resetScaleButtonFrame" data-position="fixed" style="border: 2px;">
+				<a id="resetScaleButton" data-role="button"
+					data-inline="true">戻る</a>
 			</div>
 		</div>
 		<!-- ポスターマップ本体 -->
@@ -137,7 +145,7 @@
 	</div>
 
 	<!-- タブバー -->
-	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
+	<div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
 		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
 			<ul>
 				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>

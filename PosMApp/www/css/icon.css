@@ -64,6 +64,9 @@
 	-webkit-user-drag: none; 
 	height : calc(100% - 65px);
 	overflow: hidden;
+	-moz-transform-origin : left top;
+	-webkit-transform-origin : left top;
+
 }
 
 
@@ -113,7 +116,7 @@
 	position : absolute;
 	right 	 : 5px;
 	top      : 5px;
-	z-index  : 100;
+	z-index  : 200;
 }
 
 /* ブックマークされたアイコンにつける☆ */
