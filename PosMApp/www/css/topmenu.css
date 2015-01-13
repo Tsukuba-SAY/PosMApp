@@ -57,10 +57,38 @@
 .reDownloadDIV {
 	position:absolute;
 	left: calc( 50% - 220px / 2);
-	top:13%;
-	height: 80px;
+	top:22%;
+	height: 30px;
 	width: 220px;
-	line-height:80px;
+	line-height:30px;
+	z-index: 200;
+	text-align: center;
+	font-size: medium;
+	color: white;
+	background-color:#D00000;
+}
+
+.reDownloadDIVMap {
+	position:absolute;
+	left: calc( 50% - 220px / 2);
+	top:22%;
+	height: 30px;
+	width: 220px;
+	line-height:30px;
+	z-index: 200;
+	text-align: center;
+	font-size: medium;
+	color: white;
+	background-color:#D00000;
+}
+
+.reDownloadDIVList {
+	position:absolute;
+	left: calc( 50% - 220px / 2);
+	top:22%;
+	height: 30px;
+	width: 220px;
+	line-height:30px;
 	z-index: 200;
 	text-align: center;
 	font-size: medium;

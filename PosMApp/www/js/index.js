@@ -18,12 +18,18 @@ function init() {
 		initUserData();
 	}
 
+	//　ポスターデータのダウンロード
+	//　各mapに関する変数に値を与える
+	downloadPoster();
+
 	//ダウンロード失敗ダイアログのボタン
 	$("#ReDownload").reDownload();
 	$("#CancelDownload").cancelDownload();
 
 	//再ダウンロードdivのイベント
 	$(".reDownloadDIV").reDownloadFun();
+	//「再読み込み」ボタンを押す
+	$(".ReDownloadBtn").reDownloadFun();
 
 	// loading中の画像が表示するかどうかを判断する
 	// none:非表示
@@ -31,10 +37,6 @@ function init() {
 		// $("#downloading").css("display", "none");
 		$(".reDownloadDIV").css("display", "none");
 	}
-
-	//　ポスターデータのダウンロード
-	//　各mapに関する変数に値を与える
-	downloadPoster();
 
 	initPosterMap();
 

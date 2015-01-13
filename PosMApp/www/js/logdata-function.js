@@ -31,7 +31,12 @@ $.fn.selectUserCategory = function() {
 		var category = id.substring(id.indexOf("-")+1);
 
 		localStorage.setItem("category", category);
-		window.location.href = "#topPage";
+		if(localStorage.getItem("downloadResult")){
+			window.location.href = "#downloadFailDialog";
+		}else{
+			window.location.href = "#topPage";
+		}
+		
 	});
 }
 
