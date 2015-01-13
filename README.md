@@ -8,13 +8,13 @@ PosMAppは、ポスター展示を含むシンポジウムのための、スマ�
 スマートフォンを片手に興味深い発表に目を付けて優先的にポスター訪問するなど、  
 実りのあるポスター展示会を過ごすことができます。
 
-現在は [enPiT筑波大ワークショップ2014](http://www.cs.tsukuba.ac.jp/enPiT/enpit2014_tsukuba_ws) バージョンです。
+現在、 [DEIM2015](http://db-event.jpn.org/deim2015/) バージョンを開発しています。
 
 ## 利用方法
 
 以下のアドレスにアクセスして下さい。  
 
-http://tkbenpit-posmapp.tk/
+http://posmapp.tk/
 
 [ユーザマニュアルはこちらです](https://github.com/Tsukuba-SAY/PosMApp/blob/develop/manual/user/PosMApp_usage.md)
 
@@ -37,8 +37,8 @@ iOS, Android端末でご利用いただけます。
 [既存のIssueはこちらです](https://github.com/Tsukuba-SAY/PosMApp/issues)  
 
 ## 過去のバージョン
-[WebDB Forum 2014](http://db-event.jpn.org/webdbf2014/) バージョン：http://webdb2014-posmapp.tk/  
-[enPiT筑波大ワークショップ2014](http://www.cs.tsukuba.ac.jp/enPiT/enpit2014_tsukuba_ws) バージョン：http://tkbenpit-posmapp.tk/  
+[WebDB Forum 2014](http://db-event.jpn.org/webdbf2014/) バージョン：http://webdb2014.posmapp.tk/  
+[enPiT筑波大ワークショップ2014](http://www.cs.tsukuba.ac.jp/enPiT/enpit2014_tsukuba_ws/) バージョン：http://enpitws2014.posmapp.tk/   
 
 ## 開発チーム
 

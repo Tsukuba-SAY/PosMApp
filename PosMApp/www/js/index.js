@@ -1,11 +1,40 @@
-//HTMLが呼ばれた時の初期化処理
+// HTMLが呼ばれた時の初期化処理
 $(init);
 
 function init() {
 
+	$("#resetScaleButtonFrame").css("zoom", window.innerWidth/1200);
+
+	// トップページの大きさ調整
 	$("#topPageFrame")
 		.css("width", window.innerWidth)
 		.css("max-width", window.innerWidth);
+
+	// 固有識別IDが設定されていなければ、初期設定する
+	$("#acceptCollectLog").acceptCollectLog();
+	$("#denyCollectLog").denyCollectLog();
+	$(".selectUserCategoryButton").selectUserCategory();
+	if (localStorage.getItem("uid") === null) {
+		initUserData();
+	}
+
+	//ダウンロード失敗ダイアログのボタン
+	$("#ReDownload").reDownload();
+	$("#CancelDownload").cancelDownload();
+
+	//再ダウンロードdivのイベント
+	$(".reDownloadDIV").reDownloadFun();
+
+	// loading中の画像が表示するかどうかを判断する
+	// none:非表示
+	if(localStorage.getItem("downloadSuccess")){
+		// $("#downloading").css("display", "none");
+		$(".reDownloadDIV").css("display", "none");
+	}
+
+	//　ポスターデータのダウンロード
+	//　各mapに関する変数に値を与える
+	downloadPoster();
 
 	initPosterMap();
 
@@ -17,17 +46,17 @@ function init() {
 	// とりあえずデフォルトはセッションID
 	setPosterIcons();
 
+	// Hammer on stage
+	initHammer();
+
+	// Hammerをセット
+	// TODO: もっとスマートにしたい
+	hammerOnMap();
+	hammerOffMap();
+
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
-
-	// 固有識別IDが設定されていなければ、初期設定する
-	$("#acceptCollectLog").acceptCollectLog();
-	$("#denyCollectLog").denyCollectLog();
-	$(".selectUserCategoryButton").selectUserCategory();
-	if (localStorage.getItem("uid") === null) {
-		initUserData();
-	}
 
 	// 基本情報が選択されていたらそのポスターを強調表示
 	if (sessionStorage.getItem("posterid") !== null) {
@@ -76,8 +105,6 @@ function init() {
 
 	// ブックマークスターのタッチイベント
 	$("#bookmarkbutton").touchBookmark();
-
-	windowManager();
 
 
 	// ---------- 詳細情報画面 ----------
@@ -150,12 +177,6 @@ function init() {
 			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
-		// default:
-		// 	$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-		// 	$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-		// 	$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-		// 	$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
-		// 	break;
 	}
 
 }

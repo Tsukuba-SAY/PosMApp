@@ -16,20 +16,105 @@ var labelmax = 7;
 // ポスターの総件数
 var ptotal;
 
+//　ポスターデータのダウンロード
+function downloadPoster(){
+	//loading画像の表示
+	$(".downloading").css("display", "inline");
+	//ダイアログの表示順番のため
+	if(localStorage.getItem("accept_collect_log") === null){
+		ajaxdownload();
+	}else{
+		setTimeout("ajaxdownload()",300);
+	}
+	
+}
+
+function ajaxdownload(){
+	if(!localStorage.getItem("downloadSuccess")){
+		$.ajax({
+		   		url: "http://104.236.123.57/fs/testreadJSON.php",
+		   		//url: "http://localhost/testreadJSON.php",
+				type: "POST",
+				dataType: "json",
+				async: false,
+				data: "",
+				timeout: 10000, // タイムアウトにするまでの時間は要検討
+				success: function(data) {
+					localStorage.setItem("poster", JSON.stringify(data.poster));
+					localStorage.setItem("author", JSON.stringify(data.author));
+					localStorage.setItem("keyword", JSON.stringify(data.keyword));
+					localStorage.setItem("presen", JSON.stringify(data.presen));
+					localStorage.setItem("presents", JSON.stringify(data.presents));
+					localStorage.setItem("session", JSON.stringify(data.session));
+					localStorage.setItem("commontator", JSON.stringify(data.commontator));
+					localStorage.setItem("position_map", JSON.stringify(data.position_map));
+					localStorage.setItem("position", JSON.stringify(data.position));
+					localStorage.setItem("STATIC_WIDTH", JSON.stringify(data.STATIC_WIDTH));
+					localStorage.setItem("downloadSuccess","true");
+					// $("#downloading").css("display", "none");
+					$("#reDownloadDIV").css("display", "none");
+					init();
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown) {
+					console.error("send error");
+					console.error("XMLHttpRequest: " + XMLHttpRequest);
+					console.error("textStatus: " + textStatus);
+					console.error("errorThrown: " + errorThrown);
+					window.location.href = "#topPage";
+					window.location.href = "#downloadFailDialog";
+					// $("#reDownloadDIV").css("display", "inline");
+					setTimeout("$('.downloading').css('display', 'none')",3000);
+				},
+				complete: function(data) {
+					// alert("complete");
+					initUserData();
+				}
+		});
+	}
+}
+
+$.fn.cancelDownload = function() {
+	$(this).on("touchstart", function(e){
+		window.location.href = "#topPage";
+		// loading画像を表示しない
+		$("#downloading").css("display", "none");
+		initUserData();
+	});
+};
+
+$.fn.reDownload = function() {
+	$(this).on("touchstart", function(e){
+		// localStorage.setItem("redownloadWindow","true");
+		$(".downloading").css("display", "inline");
+		downloadPoster();
+		// $("#downloading").css("display", "inline");
+		// setTimeout("$('#downloading').css('display', 'none')",3000);
+		// window.location.href = "#topPage";
+	});
+};
+
+$.fn.reDownloadFun = function() {
+	$(this).on("touchstart", function(e){
+		downloadPoster();
+	});
+};
 
 // グローバル変数の初期化処理
 function initPosterMap() {
 
-	// ポスターの件数をセットする
-	ptotal = poster.length;
+	if(localStorage.getItem("poster")){
+		// ポスターの件数をセットする
+		var ptotal = JSON.parse(localStorage.getItem("poster")).length;
 
-	// pflagを初期化
-	// ポスター件数+1なのはpflagの添字をポスター番号と対応させるため。pflag[0]はnullとしている
-	pflag = new Array(ptotal + 1);
-	pflag[0] = null;
-	for (var i = 1; i <= ptotal; i++) {
-		pflag[i] = "d";
+		// pflagを初期化
+		// ポスター件数+1なのはpflagの添字をポスター番号と対応させるため。pflag[0]はnullとしている
+		pflag = new Array(ptotal + 1);
+		pflag[0] = null;
+		for (var i = 1; i <= ptotal; i++) {
+			pflag[i] = "d";
+		}
 	}
+	
 }
 
 // 詳細情報画面を表示する
@@ -90,72 +175,79 @@ $.fn.touchBookmark = function() {
 // ポスターアイコンをセットする
 function setPosterIcons() {
 	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
-	var starAngle = [null, "top:-15px;left:30%;", "right:-15px;top:30%;", "bottom:-15px;left:30%;", "left:-15px;top:30%;"];
-	var starpos = [null, "Top", "Right", "Bottom", "Left"];
+	if(localStorage.getItem("poster")){
+		var STATIC_WIDTH = localStorage.getItem("STATIC_WIDTH");
+		var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
+		var starAngle = [null, "top:-15px;left:30%;", "right:-15px;top:30%;", "bottom:-15px;left:30%;", "left:-15px;top:30%;"];
+		var starpos = [null, "Top", "Right", "Bottom", "Left"];
 
-	var str = "";
-	var angle;
-	var pos;
-	var iconWidth;
-	var iconHeight;
-	
-	var ptotal = poster.length;
-	for (var i = 1; i <= ptotal; i++) {
+		var str = "";
+		var angle;
+		var pos;
+		var iconWidth;
+		var iconHeight;
+		var position = JSON.parse(localStorage.getItem("position"));
+		var position_map = JSON.parse(localStorage.getItem("position_map"));
+		ptotal = JSON.parse(localStorage.getItem("poster")).length;
+		poster = JSON.parse(localStorage.getItem("poster"));	
+		for (var i = 1; i <= ptotal; i++) {
 
-		iconWidth = position[position_map[i-1]].width*INIT_SCALE;
-		iconHeight = position[position_map[i-1]].height*INIT_SCALE;
+			iconWidth = position[position_map[i-1]].width*INIT_SCALE;
+			iconHeight = position[position_map[i-1]].height*INIT_SCALE;
 
-		angle = starAngle[poster[i-1].star];
+			angle = starAngle[poster[i-1].star];
 
-		str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[position_map[i-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-		str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-		str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'></div>\n";
-		str += "		<div class='" + position[position_map[i-1]].direction + "' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
-		str += "	</div>\n";
+			str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[position_map[i-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
+			str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
+			str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'></div>\n";
+			str += "		<div class='posterfont " + position[position_map[i-1]].direction + "' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
+			str += "	</div>\n";
 
-		pos = starpos[poster[i-1].star];
+			pos = starpos[poster[i-1].star];
 
-		str += "	<div id='star" + pos + "No" + i +"' class='star' style='"+angle+" display:none;'><img class='bookmarkstar' src='img/bookmark.png'></img></div>\n";
-		str += "</div>\n";
+			str += "	<div id='star" + pos + "No" + i +"' class='star' style='"+angle+" display:none;'><img class='bookmarkstar' src='img/bookmark.png'></img></div>\n";
+			str += "</div>\n";
 	}
 	document.getElementById("posters").innerHTML = str;
 }
 
 // ラベルを変更する
 function changeLabel(column) {
-	// Session Storageに対応する属性の値をセットする
-	sessionStorage.setItem("label", column);
+	if(localStorage.getItem("presen")){
+		// Session Storageに対応する属性の値をセットする
+		sessionStorage.setItem("label", column);
 
-	// ラベルの一覧（テスト用）
-	var labels = new Array(ptotal);
+		// ラベルの一覧（テスト用）
+		var labels = new Array(ptotal);
 
-	// 各ポスターに対してラベルを変更する
-	for (var i = 1; i <= ptotal; i++) {
-		var str;
-		if (column === "authorname") {
-			str = getAuthorname(poster[i-1].presenid);
-		} else if (column === "authorbelongs") {
-			str = getAuthorbelongs(poster[i-1].presenid);
-		} else {
-			var p;
-			presen.forEach(function(obj) {
-				if (obj.presenid === poster[i-1].presenid) {
-					p = obj;
-				}
-			});
-			str = p[column].toString();
+		// 各ポスターに対してラベルを変更する
+		for (var i = 1; i <= ptotal; i++) {
+			var str;
+			if (column === "authorname") {
+				str = getAuthorname(poster[i-1].presenid);
+			} else if (column === "authorbelongs") {
+				str = getAuthorbelongs(poster[i-1].presenid);
+			} else {
+				var p;
+				presen.forEach(function(obj) {
+					if (obj.presenid === poster[i-1].presenid) {
+						p = obj;
+					}
+				});
+				str = p[column].toString();
+			}
+
+			// 長さがlabelmax文字以上になっていたら短縮する
+			if (str.length > labelmax) {
+				str = str.substring(0, labelmax) + "...";
+			}
+			
+			// テスト中ならばラベルの一覧に追加していく
+			setLabel(i, str);
+			labels[i - 1] = str;
 		}
-
-		// 長さがlabelmax文字以上になっていたら短縮する
-		if (str.length > labelmax) {
-			str = str.substring(0, labelmax) + "...";
-		}
-		
-		// テスト中ならばラベルの一覧に追加していく
-		setLabel(i, str);
-		labels[i - 1] = str;
-	}
-	return labels;
+		return labels;
+	} 
 }
 
 
@@ -334,7 +426,9 @@ function emphasisSearchedPosters(posterids) {
 
 // ポスターを選択する
 function selectPoster(posterid) {
-
+	presen = JSON.parse(localStorage.getItem("presen"));
+	author = JSON.parse(localStorage.getItem("author"));
+	keyword = JSON.parse(localStorage.getItem("keyword"));
 	// for (var i = 0; i < ptotal; i++) {
 	// 	var p = poster[i];
 	// 	if (p.id === posterid) {
@@ -625,14 +719,14 @@ function setDetails() {
 
 // 代表者名を取得
 function getAuthorname(presenid) {
-	return author.filter(function(a) {
+	return JSON.parse(localStorage.getItem("author")).filter(function(a) {
 		return a.presenid === presenid && a.first === 1;
 	})[0].name;
 }
 
 // 所属一覧を取得
 function getAuthorbelongs(presenid) {
-	return author.filter(function(a) {
+	return JSON.parse(localStorage.getItem("author")).filter(function(a) {
 		return a.presenid === presenid;
 	}).map(function(a) {
 		return a.belongs;
@@ -643,7 +737,7 @@ function getAuthorbelongs(presenid) {
 
 // 発表者を取得
 function getAuthors(presenid) {
-	return author.filter(function(a) {
+	return JSON.parse(localStorage.getItem("author")).filter(function(a) {
 		return a.presenid === presenid;
 	}).map(function(a) {
 		return a.name;
@@ -652,7 +746,7 @@ function getAuthors(presenid) {
 
 // キーワードを取得
 function getKeywords(presenid) {
-	return keyword.filter(function(k) {
+	return JSON.parse(localStorage.getItem("keyword")).filter(function(k) {
 		return k.presenid === presenid;
 	}).map(function(k) {
 		return k.keyword;
@@ -670,3 +764,4 @@ function getPosterid(presenid) {
 	});
 	return posterid;
 }
+
