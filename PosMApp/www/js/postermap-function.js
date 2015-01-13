@@ -17,19 +17,23 @@ var labelmax = 7;
 var ptotal;
 
 //　ポスターデータのダウンロード
-function downloadPoster(){
+function downloadPoster(pageName){
 	//loading画像の表示
 	$(".downloading").css("display", "inline");
+	if(!pageName){
+		pageName = "#topPage";
+	}
 	//ダイアログの表示順番のため
+	//初期起動の時直接呼び出す
 	if(localStorage.getItem("accept_collect_log") === null){
-		ajaxdownload();
+		ajaxdownload(pageName);
 	}else{
-		setTimeout("ajaxdownload()",300);
+		setTimeout("ajaxdownload('"+pageName+"')",300);
 	}
 	
 }
 
-function ajaxdownload(){
+function ajaxdownload(pageName){
 	if(!localStorage.getItem("downloadSuccess")){
 		$.ajax({
 		   		url: "http://104.236.123.57/fs/testreadJSON.php",
@@ -53,17 +57,21 @@ function ajaxdownload(){
 					localStorage.setItem("downloadSuccess","true");
 					// $("#downloading").css("display", "none");
 					$("#reDownloadDIV").css("display", "none");
+					$("#reDownloadDIVList").css("display", "none");
+					$("#reDownloadDIVMap").css("display", "none");
 					init();
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
-					console.error("send error");
-					console.error("XMLHttpRequest: " + XMLHttpRequest);
-					console.error("textStatus: " + textStatus);
+					// console.error("send error");
+					// console.error("XMLHttpRequest: " + XMLHttpRequest);
+					// console.error("textStatus: " + textStatus);
 					console.error("errorThrown: " + errorThrown);
-					window.location.href = "#topPage";
+					localStorage.setItem("pageName",pageName);
+					localStorage.setItem("downloadResult","downloadResult");
+					window.location.href = pageName;
 					window.location.href = "#downloadFailDialog";
-					// $("#reDownloadDIV").css("display", "inline");
 					setTimeout("$('.downloading').css('display', 'none')",3000);
+					setTimeout("$('.downloadMsg').html('読み込みに失敗しました')",3000);
 				},
 				complete: function(data) {
 					// alert("complete");
@@ -73,29 +81,35 @@ function ajaxdownload(){
 	}
 }
 
+//「ダウンロード失敗」ダイアログの「cancel」をクリックする時呼び出す
 $.fn.cancelDownload = function() {
 	$(this).on("touchstart", function(e){
-		window.location.href = "#topPage";
+		window.location.href = localStorage.getItem("pageName");
 		// loading画像を表示しない
 		$("#downloading").css("display", "none");
+		$(".downloadMsg").html("読み込みに失敗しました");
 		initUserData();
 	});
 };
 
+//「ダウンロード失敗」ダイアログの「再ダウンロード」をクリックする時呼び出す
 $.fn.reDownload = function() {
 	$(this).on("touchstart", function(e){
-		// localStorage.setItem("redownloadWindow","true");
 		$(".downloading").css("display", "inline");
-		downloadPoster();
+		$(".downloadMsg").html("データ読み込み中");
+		downloadPoster(localStorage.getItem("pageName"));
 		// $("#downloading").css("display", "inline");
 		// setTimeout("$('#downloading').css('display', 'none')",3000);
 		// window.location.href = "#topPage";
 	});
 };
 
+//「データ読み込み中」divをクリックする時呼び出す
 $.fn.reDownloadFun = function() {
 	$(this).on("touchstart", function(e){
-		downloadPoster();
+		var pageName = "#" + window.location.href.split("#")[1];
+		$(".downloadMsg").html("データ読み込み中");
+		downloadPoster(pageName);
 	});
 };
 

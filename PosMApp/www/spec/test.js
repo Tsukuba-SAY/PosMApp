@@ -18,6 +18,7 @@ describe("変数の確認", function() {
 describe("テスト用のファンクションのテスト", function() {
 	beforeEach(function() {
 		resetDelta();
+		testajaxdownload();
 	});
 	it("getAuthorsのテスト", function() {
 		expectArr = new Array();
@@ -103,8 +104,9 @@ describe("タブバー", function() {
 describe("ポスターマップ", function() {
 	beforeEach(function() {
 		resetDelta();
-
+		testajaxdownload();
 		loadFixtures("fixture-postermap.html");
+		initPosterMap();
 		setPosterIcons();
 		showBookmarkIcons();
 		showPosterIcons();
@@ -112,9 +114,7 @@ describe("ポスターマップ", function() {
 		$("#basicinfopanel").closeBasicInfo();
 
 		sessionStorage.removeItem("searching");
-		removeAllPosterInfo();
-
-		initPosterMap();	
+		removeAllPosterInfo();	
 	});
 
 	it("基本情報に関して、開いた状態でタップすると閉じる", function() {
