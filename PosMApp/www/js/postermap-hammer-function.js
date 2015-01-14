@@ -77,8 +77,7 @@ function zoomMap(area) {
     $(".mapArea").css("display", "none");
     $("#resetScaleButtonFrame").css("display", "inline");
     $(".posterfont").css("display", "block");
-    $(".star").removeClass("star-zoomin");
-    $(".star").addClass("star-zoomout");
+    $(".bookmarkstar").sizeDownBookmarkStar();
 }
 
 function resetZoom() {
@@ -110,8 +109,7 @@ function resetZoom() {
     $("#resetScaleButtonFrame").css("display", "none");
     $(".mapArea").css("display", "inline");
     $(".posterfont").css("display", "none");
-    $(".star").addClass("star-zoomin");
-    $(".star").removeClass("star-zoomout");
+    $(".bookmarkstar").sizeUpBookmarkStar();
 }
 
 function hammerOffMap() {

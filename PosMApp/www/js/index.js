@@ -151,8 +151,7 @@ function init() {
 	$(".jumpToPresen").jumpToPresen();
 
 	// 星の大きさをリセット
-	$(".star").removeClass("star-zoomin");
-	$(".star").addClass("star-zoomout");
+	$(".bookmarkstar").sizeUpBookmarkStar();
 
 
 	// タブバーの選択表示を変更
