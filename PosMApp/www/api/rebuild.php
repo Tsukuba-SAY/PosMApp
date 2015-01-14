@@ -9,22 +9,28 @@ header("Content-Type: application/json");
 
 $rebuild_result = shell_exec("sudo /rebuild.sh");
 
-$payload = array("text" => $rebuild_result);
+echo $rebuild_result;
 
-$slack_webhook_url = "https://hooks.slack.com/services/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"; 
-$options = array(
-  "http" => array(
-    "method" => "POST",
-    "content" => json_encode($payload),
-    "header" => "Content-Type: application/json\r\n".
-                "Accept: application/json\r\n"
-  )
-);
+if ($payload_github["ref"] === "refs/heads/develop") {
 
-$context = stream_context_create($options);
-$result = file_get_contents($slack_webhook_url, false, $context);
-$result = json_decode($result);
-echo $result;
+  $payload = array("text" => $rebuild_result);
 
+  $slack_webhook_url = "https://hooks.slack.com/services/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"; 
+  $options = array(
+    "http" => array(
+      "method" => "POST",
+      "content" => json_encode($payload),
+      "header" => "Content-Type: application/json\r\n".
+                  "Accept: application/json\r\n"
+    )
+  );
+
+  $context = stream_context_create($options);
+  $result = file_get_contents($slack_webhook_url, false, $context);
+  $result = json_decode($result);
+
+  echo $result;
+
+}
 
 ?>
