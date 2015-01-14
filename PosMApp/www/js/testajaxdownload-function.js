@@ -1,5 +1,5 @@
 //testする前に、localStorageにデータを入れる
-function testajaxdownload(){
+function ajaxdownload(){
 		localStorage.setItem("poster", JSON.stringify(poster));
 		localStorage.setItem("author", JSON.stringify(author));
 		localStorage.setItem("keyword", JSON.stringify(keyword));
