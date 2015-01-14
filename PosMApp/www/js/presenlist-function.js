@@ -22,7 +22,8 @@ $.fn.showPresenList = function() {
 			presens["presenid"].push(p.presenid);
 			presens["title"].push(p.title);
 			presens["author"].push(getAuthors(p.presenid));
-			str += "<tr id='presen" + p.presenid + "'><td><div>発表ID: " + p.presenid;
+			str += '<tr id="presen' + p.presenid + '"><td><div class="listheader-presenid">' 
+				+ p.presenid;
 
 			// ポスター発表があるときのみマップへ遷移するボタンを表示
 			if (posterid !== -1) {
@@ -44,7 +45,7 @@ $.fn.showPresenList = function() {
 			}
 
 			str += "<strong>" + p.title + "</strong><br>";
-			str +=  authors + "<br></td>";
+			str +=  '<div class="authors-on-list">' + authors + "</div></td>";
 			str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+p.presenid+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 		});
 		str += '</table>'

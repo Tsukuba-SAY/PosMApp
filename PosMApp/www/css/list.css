@@ -12,6 +12,20 @@
 	font-size: large;
 }
 
+#presenList{
+	text-shadow:none;
+}
+
+.listheader-presenid{
+	font-style:bold ;
+}
+
+.authors-on-list{
+	font-size: 0.8em;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
 .nav-tabicon .ui-btn { padding-top: 40px !important; }
 .nav-tabicon .ui-btn:after { width: 30px!important; 
 										height: 30px!important; 
