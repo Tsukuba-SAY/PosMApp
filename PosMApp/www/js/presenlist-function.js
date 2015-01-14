@@ -44,7 +44,7 @@ $.fn.showPresenList = function() {
 			}
 
 			str += "<strong>" + p.title + "</strong><br>";
-			str += "メンバー: " + authors + "<br></td>";
+			str +=  authors + "<br></td>";
 			str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+p.presenid+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 		});
 		str += '</table>'
