@@ -80,9 +80,6 @@ $.fn.reDownload = function() {
 		$(".downloading").css("display", "inline");
 		$(".downloadMsg").html("データ読み込み中");
 		downloadPoster(localStorage.getItem("pageName"));
-		// $("#downloading").css("display", "inline");
-		// setTimeout("$('#downloading').css('display', 'none')",3000);
-		// window.location.href = "#topPage";
 	});
 };
 

@@ -35,8 +35,8 @@ function init() {
 	// none:非表示
 	if(localStorage.getItem("downloadSuccess")){
 		$("#reDownloadDIV").css("display", "none");
-		$("#reDownloadDIVMap").css("display", "none");
-		$("#reDownloadDIVList").css("display", "none");
+		//リスト画面とマップ画面のボタンを表示しない
+		$(".ReDownloadBtn").css("display", "none");
 	}
 
 	initPosterMap();

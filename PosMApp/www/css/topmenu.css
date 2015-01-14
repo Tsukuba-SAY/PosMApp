@@ -68,7 +68,7 @@
 	background-color:#D00000;
 }
 
-.reDownloadDIVMap {
+.ReDownloadBtn {
 	position:absolute;
 	left: calc( 50% - 220px / 2);
 	top:22%;
@@ -78,11 +78,9 @@
 	z-index: 200;
 	text-align: center;
 	font-size: medium;
-	color: white;
-	background-color:#D00000;
 }
 
-.reDownloadDIVList {
+.ReDownloadBtn {
 	position:absolute;
 	left: calc( 50% - 220px / 2);
 	top:22%;
@@ -92,6 +90,4 @@
 	z-index: 200;
 	text-align: center;
 	font-size: medium;
-	color: white;
-	background-color:#D00000;
 }
