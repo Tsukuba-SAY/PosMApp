@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/icon.css" />
 	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
 	<link rel="stylesheet" type="text/css" href="css/list.css" />
-  <link rel="stylesheet" type="text/css" href="css/taparea.css" />
+	<link rel="stylesheet" type="text/css" href="css/taparea.css" />
 	<link rel="stylesheet" type="text/css" href="css/sessiontable.css" />
 
 
@@ -36,6 +36,7 @@
 	<script type="text/javascript" charset="utf-8" src="js/presenlist-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/bookmarklist-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/detail-function.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/sessiontable-function.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/postermap-hammer-function.js"></script>
 
 	<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
@@ -277,153 +278,129 @@
 	<div data-role="header">
 		<h1 style="text-align:center">DEIM2014セッション表</h1>
 	</div>
-	<div data-role="content">
-		<script type="text/javascript">
-	 function Changedate(date){
-	 	//全部消す
-	 	document.getElementById('sessiontable1').style.display ='none';
-	 	document.getElementById('sessiontable2').style.display ='none';
-	 	document.getElementById('sessiontable3').style.display ='none';
-	 	//指定箇所のみ表示
-	 	if (date) {
-	 		document.getElementById(date).style.display=
-	 		'block';
-	 	}
-	 }
-
-	</script>
-  <!--date切替ボタン-->  
-<div class="changesessiontable">
-	<div class="sessiontablebox">
+	<div data-role="content"> 
 		<!--date切替ボタン--> 
-				<p class="changedate" data-role="controlgroup" data-type="horizontal" align="center">
-			      <a onclick="Changedate('sessiontable1'); return false" class="sessiontable1" href="#sessiontable1" data-role="button">3月2日</a>
-			      <a onclick="Changedate('sessiontable2'); return false" class="sessiontable2" href="#sessiontable2" data-role="button">3月3日</a>
-			      <a onclick="Changedate('sessiontable3'); return false" class="sessiontable3" href="#sessiontable3" data-role="button">3月4日</a>
-			    </p>
-         <!--一日目--> 
-					<div class="sessiontable"  id="sessiontable1">
-							<table class="session_table">
-							<tr><th>時間</th><th>会場</th><th>内容</th></tr>
-							<tr><th  class="showtime" rowspan="6" bgcolor="blue">13:30-14:30</th><td>A</td><td><a href="#">A1:Wikipedia・XML（Ph.Dセッション）</a></td></tr>
-							<tr><td>B</td><td><a>B1:SNS</a></td></tr>
-							<tr><td>C</td><td><a>C1:Web情報抽出</a></td></tr>
-							<tr><td>D</td><td><a>D1:MapReduce・分散処理</a></td></tr>
-							<tr><td>E</td><td><a>E1:情報可視化</a></td></tr>
-							<tr><td>F</td><td><a>F1:eラーニング(1)</a></td></tr>
-							<tr><td class="rest">14:30-14:45</td><td class="rest" colspan="2"　bgcolor="red">休憩</td></tr>
-							<tr><th  class="showtime" rowspan="6" bgcolor="blue">14:45-16:15</th><td>A</td><td><a>A2:高性能DB（Ph.Dセッション）</a></td></tr>
-							<tr><td>B</td><td><a>B2:SNSとプロファイリング</a></td></tr>
-							<tr><td>C</td><td><a>C2:コンテンツ</a></td></tr>
-							<tr><td>D</td><td><a>D2:ストレージ・P2P</a></td></tr>
-							<tr><td>E</td><td><a>E2:クラウドソーシング・HCI</a></td></tr>
-							<tr><td>F</td><td><a>F2:eラーニング(2)</a></td></tr>
-							<tr><td class="rest">16:15-16:30</td><td class="rest" colspan="2"　>休憩</td></tr>
-							<tr><th  class="showtime" rowspan="6" bgcolor="blue">16:30-18:00</th><td>A</td><td><a>特別セッション(1)</a></td></tr>
-							<tr><td>B</td><td><a>B3:SNSと地域情報</a></td></tr>
-							<tr><td>C</td><td><a>C3:自然言語処理</a></td></tr>
-							<tr><td>D</td><td><a>D3:ストリーム</a></td></tr>
-							<tr><td>E</td><td><a>E3:ユーザインタフェース</a></td></tr>
-							<tr><td>F</td><td><a>F3:企業情報・広告</a></td></tr>
-							<tr><td class="rest">18:00-18:45</td><td class="rest" colspan="2"　>休憩</td></tr>
-							<tr style="height:30px"><th class="showtime">18:45-20:45</th><td>懇親会会場</td><td><a>インタラクティブセッション(1)</a></td></tr>
-							<tr><td class="rest">20:45-21:30</td><td class="rest" colspan="2"　>休憩</td></tr>
-							<tr>
-							  <th  class="showtime" rowspan="2" >21:30-23:00</th>
-							  <td>B</td>
-							  <td><a>ナイトセッション</a></td>
-							</tr>
-							<tr>
-							  <td>E</td>
-							  <td><a>BoFセッション(1)（22:30まで）</a></td>
-							</tr>
-							</table>
-					</div>
-　　　　　　　<!--二日目--> 
-					<div class="sessiontable"  id="sessiontable2">
-							<table class="session_table">
-							<tr><th>時間</th><th>会場</th><th>内容</th></tr>
-							<tr><th  class="showtime" rowspan="6" >9:00-10:00</th><td>A</td><td><a href="#">A4:HCI（Ph.Dセッション）</a></td></tr>
-							<tr><td>B</td><td><a>B4:ソーシャルメディア分析</a></td></tr>
-							<tr><td>C</td><td><a>C4:トピックモデル</a></td></tr>
-							<tr><td>D</td><td><a>D4:時系列データ</a></td></tr>
-							<tr><td>E</td><td><a>E4:地理・時空間(1)</a></td></tr>
-							<tr><td>F</td><td><a>F4:マルチメディア(1)</a></td></tr>
-							<tr><td class="rest">10:30-10:45</td><td class="rest" colspan="2"　bgcolor="red">休憩</td></tr>
-							<tr><th  class="showtime" rowspan="6">10:45-12:15</th><td>A</td><td><a>A5:SNS（Ph.Dセッション）</a></td></tr>
-							<tr><td>B</td><td><a>B5:ユーザレビュー</a></td></tr>
-							<tr><td>C</td><td><a>C5:文献情報マイニング</a></td></tr>
-							<tr><td>D</td><td><a>D5:時系列データ・クラスタリング</a></td></tr>
-							<tr><td>E</td><td><a>E5:プライバシ</a></td></tr>
-							<tr><td>F</td><td><a>F5:マルチメディア(2)</a></td></tr>
-							<tr><td class="rest">12:15-13:30</td><td class="rest" colspan="2"　>休憩</td></tr>
-							<tr><th  class="showtime" rowspan="6" >13:30-15:00</th><td>A</td><td><a>特別セッション(2)</a></td></tr>
-							<tr><td>B</td><td><a>B6:マイクロブログ(1)</a></td></tr>
-							<tr><td>C</td><td><a>C6:データマイニング</a></td></tr>
-							<tr><td>D</td><td><a>D6:グラフ</a></td></tr>
-							<tr><td>E</td><td><a>E6:感性・感情</a></td></tr>
-							<tr><td>F</td><td><a>F6:ヘルスケア</a></td></tr>
-							<tr><td class="showtime">15:00-15:15</td><td class="rest" colspan="2"　>休憩</td></tr>
-							<tr><th class="showtime">15:15-16:15</th><td>A</td><td><a>招待講演</a></td><tr><th class="showtime">16:15-17:30</th>
-							<td>A</td><td><a>DBSJアワー・功労賞記念講演</a></td></tr>
-							<tr><td class="showtime">17:30-18:15</td><td class="rest" colspan="2"　>休憩</td></tr>
-							<tr>
-							  <th  class="showtime"  >18:15-20:15</th>
-							  <td>懇親会会場</td>
-							  <td><a>インタラクティブセッション（２）</a></td>
-							</tr>
-							<tr><td class="showtime">20:15-21:00</td><td class="rest" colspan="2"　>休憩</td></tr>
-							<tr>
-							  <th  class="showtime" rowspan="2" >21:30-22:30</th>
-							  <td>B</td>
-							  <td><a>BoFセッション(2)</a></td>
-							</tr>
-							<tr>
-							  <td>E</td>
-							  <td><a>BoFセッション(3)</a></td>
-							</tr>
-							</table>
-					</div>
-　　　　　　　<!--三日目--> 
-					<div class="sessiontable"  id="sessiontable3">
-							<table class="session_table">
-							<tr><th>時間</th><th>会場</th><th>内容</th></tr>
-							<tr><th  class="showtime" rowspan="5" >9:00-10:15</th><td>B</td><td><a href="#">B7:マイクロブログ(2)</a></td></tr>
-							<tr><td>C</td><td><a>C7:類似検索</a></td></tr>
-							<tr><td>D</td><td><a>D7:Linked Open Data・XML</a></td></tr>
-							<tr><td>E</td><td><a>E7:防災・リスクマネジメント</a></td></tr>
-							<tr><td>F</td><td><a>F7:社会情報</a></td></tr>
-							<tr><td class="rest">10:15-10:30</td><td class="rest" colspan="2"　bgcolor="red">休憩</td></tr>
-							<tr><th  class="showtime" rowspan="6">10:30-12:00</th><td>A</td><td><a>A8:Webマイニング（Ph.Dセッション）</a></td></tr>
-							<tr><td>B</td><td><a>B8:情報推薦(1)</a></td></tr>
-							<tr><td>C</td><td><a>C8:Web情報システム</a></td></tr>
-							<tr><td>D</td><td><a>D8:問合せ処理</a></td></tr>
-							<tr><td>E</td><td><a>E8:モバイル</a></td></tr>
-							<tr><td>F</td><td><a>F8:レシピ</a></td></tr>
-							<tr><td class="rest">12:00-13:15</td><td class="rest" colspan="2"　>休憩</td></tr>
-							<tr><th  class="showtime" rowspan="6" >13:15-14:45</th><td>A</td><td><a>A9:トピックモデル（Ph.Dセッション）</a></td></tr>
-							<tr><td>B</td><td><a>B9:情報推薦(2)</a></td></tr>
-							<tr><td>C</td><td><a>C9:ネットワーク</a></td></tr>
-							<tr><td>D</td><td><a>D9:データアナリティクス・DBコア技術</a></td></tr>
-							<tr><td>E</td><td><a>E9:地理・時空間(2)</a></td></tr>
-							<tr><td>F</td><td><a>F9:音楽</a></td></tr>
-							<tr><th class="showtime" rowspan="2">14:45-15:00</th><td rowspan="2">A</td><td rowspan="2">表彰式・クロージング</td></tr>
-							</table>
-					</div>
-
-
-　　</div>
- <script type="text/javascript"><!--
-         // デフォルトのタブを選択
-         Changedate('sessiontable1');
-         // -->
-      </script>
-
-
-
-
-
-</div>
+		<p id="changeDateButton" data-role="controlgroup" data-type="horizontal" align="center">
+	      <a onclick="changeDate('sessiontable1'); return false" class="sessiontable1" href="#sessiontable1" data-role="button">3月2日</a>
+	      <a onclick="changeDate('sessiontable2'); return false" class="sessiontable2" href="#sessiontable2" data-role="button">3月3日</a>
+	      <a onclick="changeDate('sessiontable3'); return false" class="sessiontable3" href="#sessiontable3" data-role="button">3月4日</a>
+	    </p>
+	    <!-- セッションテーブル本体 -->
+	    <div id="sessiontables">
+			<div id="sessiontable1" class="sessiontable">
+				<table class="session_table">
+					<tr><th>時間</th><th>会場</th><th>内容</th></tr>
+					<tr><th  class="showtime" rowspan="6" bgcolor="blue">13:30-14:30</th><td>A</td><td><a href="#">A1:Wikipedia・XML（Ph.Dセッション）</a></td></tr>
+					<tr><td>B</td><td><a>B1:SNS</a></td></tr>
+					<tr><td>C</td><td><a>C1:Web情報抽出</a></td></tr>
+					<tr><td>D</td><td><a>D1:MapReduce・分散処理</a></td></tr>
+					<tr><td>E</td><td><a>E1:情報可視化</a></td></tr>
+					<tr><td>F</td><td><a>F1:eラーニング(1)</a></td></tr>
+					<tr><td class="rest">14:30-14:45</td><td class="rest" colspan="2"　bgcolor="red">休憩</td></tr>
+					<tr><th  class="showtime" rowspan="6" bgcolor="blue">14:45-16:15</th><td>A</td><td><a>A2:高性能DB（Ph.Dセッション）</a></td></tr>
+					<tr><td>B</td><td><a>B2:SNSとプロファイリング</a></td></tr>
+					<tr><td>C</td><td><a>C2:コンテンツ</a></td></tr>
+					<tr><td>D</td><td><a>D2:ストレージ・P2P</a></td></tr>
+					<tr><td>E</td><td><a>E2:クラウドソーシング・HCI</a></td></tr>
+					<tr><td>F</td><td><a>F2:eラーニング(2)</a></td></tr>
+					<tr><td class="rest">16:15-16:30</td><td class="rest" colspan="2"　>休憩</td></tr>
+					<tr><th  class="showtime" rowspan="6" bgcolor="blue">16:30-18:00</th><td>A</td><td><a>特別セッション(1)</a></td></tr>
+					<tr><td>B</td><td><a>B3:SNSと地域情報</a></td></tr>
+					<tr><td>C</td><td><a>C3:自然言語処理</a></td></tr>
+					<tr><td>D</td><td><a>D3:ストリーム</a></td></tr>
+					<tr><td>E</td><td><a>E3:ユーザインタフェース</a></td></tr>
+					<tr><td>F</td><td><a>F3:企業情報・広告</a></td></tr>
+					<tr><td class="rest">18:00-18:45</td><td class="rest" colspan="2"　>休憩</td></tr>
+					<tr style="height:30px"><th class="showtime">18:45-20:45</th><td>懇親会会場</td><td><a>インタラクティブセッション(1)</a></td></tr>
+					<tr><td class="rest">20:45-21:30</td><td class="rest" colspan="2"　>休憩</td></tr>
+					<tr>
+					  <th  class="showtime" rowspan="2" >21:30-23:00</th>
+					  <td>B</td>
+					  <td><a>ナイトセッション</a></td>
+					</tr>
+					<tr>
+					  <td>E</td>
+					  <td><a>BoFセッション(1)（22:30まで）</a></td>
+					</tr>
+				</table>
+			</div>
+			<!--二日目--> 
+			<div id="sessiontable2" class="sessiontable">
+				<table class="session_table">
+					<tr><th>時間</th><th>会場</th><th>内容</th></tr>
+					<tr><th  class="showtime" rowspan="6" >9:00-10:00</th><td>A</td><td><a href="#">A4:HCI（Ph.Dセッション）</a></td></tr>
+					<tr><td>B</td><td><a>B4:ソーシャルメディア分析</a></td></tr>
+					<tr><td>C</td><td><a>C4:トピックモデル</a></td></tr>
+					<tr><td>D</td><td><a>D4:時系列データ</a></td></tr>
+					<tr><td>E</td><td><a>E4:地理・時空間(1)</a></td></tr>
+					<tr><td>F</td><td><a>F4:マルチメディア(1)</a></td></tr>
+					<tr><td class="rest">10:30-10:45</td><td class="rest" colspan="2"　bgcolor="red">休憩</td></tr>
+					<tr><th  class="showtime" rowspan="6">10:45-12:15</th><td>A</td><td><a>A5:SNS（Ph.Dセッション）</a></td></tr>
+					<tr><td>B</td><td><a>B5:ユーザレビュー</a></td></tr>
+					<tr><td>C</td><td><a>C5:文献情報マイニング</a></td></tr>
+					<tr><td>D</td><td><a>D5:時系列データ・クラスタリング</a></td></tr>
+					<tr><td>E</td><td><a>E5:プライバシ</a></td></tr>
+					<tr><td>F</td><td><a>F5:マルチメディア(2)</a></td></tr>
+					<tr><td class="rest">12:15-13:30</td><td class="rest" colspan="2"　>休憩</td></tr>
+					<tr><th  class="showtime" rowspan="6" >13:30-15:00</th><td>A</td><td><a>特別セッション(2)</a></td></tr>
+					<tr><td>B</td><td><a>B6:マイクロブログ(1)</a></td></tr>
+					<tr><td>C</td><td><a>C6:データマイニング</a></td></tr>
+					<tr><td>D</td><td><a>D6:グラフ</a></td></tr>
+					<tr><td>E</td><td><a>E6:感性・感情</a></td></tr>
+					<tr><td>F</td><td><a>F6:ヘルスケア</a></td></tr>
+					<tr><td class="showtime">15:00-15:15</td><td class="rest" colspan="2"　>休憩</td></tr>
+					<tr><th class="showtime">15:15-16:15</th><td>A</td><td><a>招待講演</a></td><tr><th class="showtime">16:15-17:30</th>
+					<td>A</td><td><a>DBSJアワー・功労賞記念講演</a></td></tr>
+					<tr><td class="showtime">17:30-18:15</td><td class="rest" colspan="2"　>休憩</td></tr>
+					<tr>
+					  <th  class="showtime"  >18:15-20:15</th>
+					  <td>懇親会会場</td>
+					  <td><a>インタラクティブセッション（２）</a></td>
+					</tr>
+					<tr><td class="showtime">20:15-21:00</td><td class="rest" colspan="2"　>休憩</td></tr>
+					<tr>
+					  <th  class="showtime" rowspan="2" >21:30-22:30</th>
+					  <td>B</td>
+					  <td><a>BoFセッション(2)</a></td>
+					</tr>
+					<tr>
+					  <td>E</td>
+					  <td><a>BoFセッション(3)</a></td>
+					</tr>
+				</table>
+			</div>
+			<!--三日目--> 
+			<div id="sessiontable3" class="sessiontable">
+				<table class="session_table">
+					<tr><th>時間</th><th>会場</th><th>内容</th></tr>
+					<tr><th  class="showtime" rowspan="5" >9:00-10:15</th><td>B</td><td><a href="#">B7:マイクロブログ(2)</a></td></tr>
+					<tr><td>C</td><td><a>C7:類似検索</a></td></tr>
+					<tr><td>D</td><td><a>D7:Linked Open Data・XML</a></td></tr>
+					<tr><td>E</td><td><a>E7:防災・リスクマネジメント</a></td></tr>
+					<tr><td>F</td><td><a>F7:社会情報</a></td></tr>
+					<tr><td class="rest">10:15-10:30</td><td class="rest" colspan="2"　bgcolor="red">休憩</td></tr>
+					<tr><th  class="showtime" rowspan="6">10:30-12:00</th><td>A</td><td><a>A8:Webマイニング（Ph.Dセッション）</a></td></tr>
+					<tr><td>B</td><td><a>B8:情報推薦(1)</a></td></tr>
+					<tr><td>C</td><td><a>C8:Web情報システム</a></td></tr>
+					<tr><td>D</td><td><a>D8:問合せ処理</a></td></tr>
+					<tr><td>E</td><td><a>E8:モバイル</a></td></tr>
+					<tr><td>F</td><td><a>F8:レシピ</a></td></tr>
+					<tr><td class="rest">12:00-13:15</td><td class="rest" colspan="2"　>休憩</td></tr>
+					<tr><th  class="showtime" rowspan="6" >13:15-14:45</th><td>A</td><td><a>A9:トピックモデル（Ph.Dセッション）</a></td></tr>
+					<tr><td>B</td><td><a>B9:情報推薦(2)</a></td></tr>
+					<tr><td>C</td><td><a>C9:ネットワーク</a></td></tr>
+					<tr><td>D</td><td><a>D9:データアナリティクス・DBコア技術</a></td></tr>
+					<tr><td>E</td><td><a>E9:地理・時空間(2)</a></td></tr>
+					<tr><td>F</td><td><a>F9:音楽</a></td></tr>
+					<tr><th class="showtime" rowspan="2">14:45-15:00</th><td rowspan="2">A</td><td rowspan="2">表彰式・クロージング</td></tr>
+				</table>
+			</div>
+	    </div>
+	 	<script type="text/javascript"><!--
+	         // デフォルトのタブを選択
+	         changeDate('sessiontable1');
+	         // -->
+	    </script>
 	</div>
 	<!-- タブバー -->
 	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
