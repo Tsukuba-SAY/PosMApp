@@ -1,11 +1,11 @@
 #!/usr/bin/bash
 
-cd /PosMAppBuild
-pwd
-git pull
+sudo cd /PosMAppBuild
+sudo pwd
+sudo git pull
 #git status
-git branch --contains
-httpd -k restart
-echo "httpd restarted"
-echo "rebuild done!"
+sudo git branch --contains
+sudo httpd -k restart
+sudo echo "httpd restarted"
+sudo echo "rebuild done!"
 exit 0

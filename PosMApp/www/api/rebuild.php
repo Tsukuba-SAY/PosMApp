@@ -7,7 +7,7 @@ header("Access-Control-Allow-Origin: *");
 $payload_github = json_decode($_POST["payload"], true);
 header("Content-Type: application/json");
 
-$rebuild_result = shell_exec("/PosMAppBuild/PosMApp/tools/rebuild.sh");
+$rebuild_result = shell_exec("sudo /PosMAppBuild/PosMApp/tools/rebuild.sh");
 
 $payload = array("text" => $rebuild_result);
 
