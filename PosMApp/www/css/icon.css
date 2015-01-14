@@ -135,3 +135,11 @@
 #detail-authors {
 	font-size: 0.9em;
 }
+
+#detail-presenid {
+	background-color: #FF2800;
+	height: 2.0em;
+	width: 4.0em;
+	text-align: center;
+	line-height: 2.0em;
+}
