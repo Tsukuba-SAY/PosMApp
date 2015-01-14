@@ -25,24 +25,37 @@ function ajaxdownload(pageName){
 				data: "",
 				timeout: 10000, // タイムアウトにするまでの時間は要検討
 				success: function(data) {
-					localStorage.setItem("poster", JSON.stringify(data.poster));
-					localStorage.setItem("author", JSON.stringify(data.author));
-					localStorage.setItem("keyword", JSON.stringify(data.keyword));
-					localStorage.setItem("presen", JSON.stringify(data.presen));
-					localStorage.setItem("presents", JSON.stringify(data.presents));
-					localStorage.setItem("session", JSON.stringify(data.session));
-					localStorage.setItem("commontator", JSON.stringify(data.commontator));
-					localStorage.setItem("position_map", JSON.stringify(data.position_map));
-					localStorage.setItem("position", JSON.stringify(data.position));
-					localStorage.setItem("STATIC_WIDTH", JSON.stringify(data.STATIC_WIDTH));
+					console.log("Download Success");
+
+					// データを格納
+					poster 			= data.poster;
+					author 			= data.author;
+					keyword 		= data.keyword;
+					presen 			= data.presen;
+					presents 		= data.presents;
+					session 		= data.session;
+					commontator 	= data.commentator;
+					position_map 	= data.position_map;
+					position 		= data.position;
+					taparea 		= data.taparea;
+					STATIC_WIDTH 	= data.STATIC_WIDTH;
+					STATIC_HEIGHT 	= data.STATIC_HEIGHT;
+
+					// ポスターマップの大きさに関するデータを計算して格納 in data.js
+					setMapSize();
+
+					// 成功フラグを立てる
 					localStorage.setItem("downloadSuccess","true");
 					// $("#downloading").css("display", "none");
 					$("#reDownloadDIV").css("display", "none");
 					$("#reDownloadDIVList").css("display", "none");
 					$("#reDownloadDIVMap").css("display", "none");
+
+					// 再描画
 					init();
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
+					console.error("Download Error");
 					// console.error("send error");
 					// console.error("XMLHttpRequest: " + XMLHttpRequest);
 					// console.error("textStatus: " + textStatus);
@@ -57,6 +70,7 @@ function ajaxdownload(pageName){
 				},
 				complete: function(data) {
 					// alert("complete");
+					console.log("Download Complete");
 					initUserData();
 				}
 		});

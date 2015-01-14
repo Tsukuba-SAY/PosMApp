@@ -3,6 +3,10 @@ $(init);
 
 function init() {
 
+	// データ格納変数に据え置きの初期データを格納する
+	// TODO: データをダウンロードしてきて格納、ダウンロードできなければ格納しない
+	initData();
+
 	$("#resetScaleButtonFrame").css("zoom", window.innerWidth/1200);
 
 	// トップページの大きさ調整
