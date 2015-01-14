@@ -1,3 +1,7 @@
+function createSessionTable() {
+	
+}
+
 function changeDate(date){
 	//全部消す
 	document.getElementById('sessiontable1').style.display ='none';
