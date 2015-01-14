@@ -89,6 +89,18 @@ $.fn.touchBookmark = function() {
 	});	
 };
 
+// ブックマークスターを大きくする
+$.fn.sizeUpBookmarkStar = function() {
+	$(this).css("width", 15);
+	$(this).css("height", 15);
+};
+
+// ブックマークスターを小さくする
+$.fn.sizeDownBookmarkStar = function() {
+	$(this).css("width", 5);
+	$(this).css("height", 5);
+};
+
 // ポスターアイコンをセットする
 function setPosterIcons() {
 	if(poster !== null){
