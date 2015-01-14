@@ -47,6 +47,7 @@ function ajaxdownload(pageName){
 					// console.error("XMLHttpRequest: " + XMLHttpRequest);
 					// console.error("textStatus: " + textStatus);
 					console.error("errorThrown: " + errorThrown);
+					$("#posters").html("");
 					localStorage.setItem("pageName",pageName);
 					localStorage.setItem("downloadResult","downloadResult");
 					window.location.href = pageName;
@@ -79,9 +80,6 @@ $.fn.reDownload = function() {
 		$(".downloading").css("display", "inline");
 		$(".downloadMsg").html("データ読み込み中");
 		downloadPoster(localStorage.getItem("pageName"));
-		// $("#downloading").css("display", "inline");
-		// setTimeout("$('#downloading').css('display', 'none')",3000);
-		// window.location.href = "#topPage";
 	});
 };
 
