@@ -21,7 +21,7 @@ function initPosterMap() {
 
 	if(localStorage.getItem("poster")){
 		// ポスターの件数をセットする
-		var ptotal = JSON.parse(localStorage.getItem("poster")).length;
+		var ptotal = poster.length;
 
 		// pflagを初期化
 		// ポスター件数+1なのはpflagの添字をポスター番号と対応させるため。pflag[0]はnullとしている
@@ -103,10 +103,7 @@ function setPosterIcons() {
 		var pos;
 		var iconWidth;
 		var iconHeight;
-		var position = JSON.parse(localStorage.getItem("position"));
-		var position_map = JSON.parse(localStorage.getItem("position_map"));
-		ptotal = JSON.parse(localStorage.getItem("poster")).length;
-		poster = JSON.parse(localStorage.getItem("poster"));	
+		ptotal = poster.length;	
 		for (var i = 1; i <= ptotal; i++) {
 
 			iconWidth = position[position_map[i-1]].width*INIT_SCALE;
@@ -344,9 +341,6 @@ function emphasisSearchedPosters(posterids) {
 
 // ポスターを選択する
 function selectPoster(posterid) {
-	presen = JSON.parse(localStorage.getItem("presen"));
-	author = JSON.parse(localStorage.getItem("author"));
-	keyword = JSON.parse(localStorage.getItem("keyword"));
 	// for (var i = 0; i < ptotal; i++) {
 	// 	var p = poster[i];
 	// 	if (p.id === posterid) {
@@ -637,14 +631,14 @@ function setDetails() {
 
 // 代表者名を取得
 function getAuthorname(presenid) {
-	return JSON.parse(localStorage.getItem("author")).filter(function(a) {
+	return author.filter(function(a) {
 		return a.presenid === presenid && a.first === 1;
 	})[0].name;
 }
 
 // 所属一覧を取得
 function getAuthorbelongs(presenid) {
-	return JSON.parse(localStorage.getItem("author")).filter(function(a) {
+	return author.filter(function(a) {
 		return a.presenid === presenid;
 	}).map(function(a) {
 		return a.belongs;
@@ -655,7 +649,7 @@ function getAuthorbelongs(presenid) {
 
 // 発表者を取得
 function getAuthors(presenid) {
-	return JSON.parse(localStorage.getItem("author")).filter(function(a) {
+	return author.filter(function(a) {
 		return a.presenid === presenid;
 	}).map(function(a) {
 		return a.name;
@@ -664,7 +658,7 @@ function getAuthors(presenid) {
 
 // キーワードを取得
 function getKeywords(presenid) {
-	return JSON.parse(localStorage.getItem("keyword")).filter(function(k) {
+	return keyword.filter(function(k) {
 		return k.presenid === presenid;
 	}).map(function(k) {
 		return k.keyword;
