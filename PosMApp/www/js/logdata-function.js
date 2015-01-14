@@ -95,7 +95,7 @@ function sendLog() {
     var senddata = loadLog();
     var date = new Date();
     $.ajax({
-   		url: "http://104.236.123.57/php/savelog.php",
+   		url: "http://posmapp.tk/php/savelog.php",
 		type: "POST",
 		dataType: "json",
 		data: senddata,
