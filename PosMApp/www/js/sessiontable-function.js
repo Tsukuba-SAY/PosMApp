@@ -1,6 +1,25 @@
-function createSessionTable() {
-	
+// セッションテーブルからセッションリストに飛ぶやつ
+$.fn.jumpToPresen = function() {
+	$(this).on("touchstart", function() {
+		var id = $(this).attr("id");
+		var sessionid = id.substr(10);
+		sessionStorage.setItem("gotosessionid",sessionid+"-1");
+		$(document).on("pageshow", "#presenListPage", scrollToTr);
+		window.location.href = "#presenListPage";
+	});
 }
+function scrollToTr() {
+	var target = $("#presen" + sessionStorage.getItem("gotosessionid"));
+	console.log(sessionStorage.getItem("gotosessionid"));
+	var position = target.offset().top;
+	var speed = 500;
+	$('body,html').animate({scrollTop:position}, speed, 'swing');
+
+	$(document).off("pageshow");
+	sessionStorage.removeItem("gotosessionid");
+}
+
+
 
 function changeDate(date){
 	//全部消す

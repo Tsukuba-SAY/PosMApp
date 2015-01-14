@@ -147,6 +147,10 @@ function init() {
 	$(".bookmarkListPageButton").goToBookmarkListPage("touchstart");	
 	$(".informationPageButton").goToInformationPage("touchstart");
 
+	// セッションリストから発表リストに飛ぶ
+	$(".jumpToPresen").jumpToPresen();
+
+
 	// タブバーの選択表示を変更
 	var currentPage = window.location.hash;
 	switch (currentPage) {
