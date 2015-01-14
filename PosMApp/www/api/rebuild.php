@@ -10,7 +10,6 @@ header("Content-Type: application/json");
 
 $rebuild_result = shell_exec("sudo /rebuild.sh");
 
-echo $payload_github["ref"];
 echo $rebuild_result;
 
 if ($payload_github["ref"] === "refs/heads/develop") {
