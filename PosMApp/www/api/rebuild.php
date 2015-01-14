@@ -4,7 +4,8 @@
 // Date: 2015/01/14
 
 header("Access-Control-Allow-Origin: *");
-$payload_github = json_decode($_POST["payload"], true);
+$payload_github_json = file_get_contents("php://input");
+$payload_github = json_decode($payload_github_json, true);
 header("Content-Type: application/json");
 
 $rebuild_result = shell_exec("sudo /rebuild.sh");
