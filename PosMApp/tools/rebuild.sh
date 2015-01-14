@@ -3,7 +3,8 @@
 cd /PosMAppBuild
 pwd
 git pull
-git status
+#git status
+git branch --contains
 httpd -k restart
 echo "httpd restarted"
 echo "rebuild done!"
