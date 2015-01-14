@@ -9,6 +9,8 @@ header("Content-Type: application/json");
 
 $rebuild_result = shell_exec("sudo /rebuild.sh");
 
+echo $rebuild_result;
+
 $payload = array("text" => $rebuild_result);
 
 $slack_webhook_url = "https://hooks.slack.com/services/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"; 
