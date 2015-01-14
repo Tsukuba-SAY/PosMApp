@@ -47,6 +47,7 @@ function ajaxdownload(pageName){
 					// console.error("XMLHttpRequest: " + XMLHttpRequest);
 					// console.error("textStatus: " + textStatus);
 					console.error("errorThrown: " + errorThrown);
+					$("#posters").html("");
 					localStorage.setItem("pageName",pageName);
 					localStorage.setItem("downloadResult","downloadResult");
 					window.location.href = pageName;

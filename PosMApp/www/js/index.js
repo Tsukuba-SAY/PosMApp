@@ -34,8 +34,9 @@ function init() {
 	// loading中の画像が表示するかどうかを判断する
 	// none:非表示
 	if(localStorage.getItem("downloadSuccess")){
-		// $("#downloading").css("display", "none");
-		$(".reDownloadDIV").css("display", "none");
+		$("#reDownloadDIV").css("display", "none");
+		$("#reDownloadDIVMap").css("display", "none");
+		$("#reDownloadDIVList").css("display", "none");
 	}
 
 	initPosterMap();
