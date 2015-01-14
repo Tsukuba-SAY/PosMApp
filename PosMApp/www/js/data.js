@@ -5,7 +5,7 @@ var poster 			= null,
 	presen 			= null,
 	presents 		= null,
 	session 		= null,
-	commontator 	= null,
+	commentator 	= null,
 	position_map 	= null,
 	position 		= null,
 	taparea 		= null,
@@ -2217,7 +2217,7 @@ function initData() {
 	{"sessionid":"X3","title":"ダミーセッション","chairpersonname":"Xさん","chairpersonbelongs":"X大学"}
 	];
 
-	commontator = 
+	commentator = 
 	[
 	{"sessionid":"A1","name":"田島 敬史","belongs":"京都大学"},
 	{"sessionid":"A1","name":"森嶋 厚行","belongs":"筑波大学"},
