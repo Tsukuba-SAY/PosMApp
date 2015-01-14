@@ -34,6 +34,7 @@ function init() {
 	// loading中の画像が表示するかどうかを判断する
 	// none:非表示
 	if(localStorage.getItem("downloadSuccess")){
+		//topPageの「再ダウンロード」ボタンを隠す
 		$("#reDownloadDIV").css("display", "none");
 		//リスト画面とマップ画面のボタンを表示しない
 		$(".ReDownloadBtn").css("display", "none");
