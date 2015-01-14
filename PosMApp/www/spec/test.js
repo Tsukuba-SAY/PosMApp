@@ -6,19 +6,12 @@ describe("変数の確認", function() {
 		deleteLog();
 		expect(labelmax).toBeDefined();
 	});
-
-	// posterとpositionの要素数が合わないとindexの不整合が起こって
-	// Javascriptが止まるので画面遷移すら動かなくなる
-	it("posterとpositionの要素数が等しい", function() {
-		expect(poster.length).toEqual(position.length);
-	});
-
 });
 
 describe("テスト用のファンクションのテスト", function() {
 	beforeEach(function() {
 		resetDelta();
-		testajaxdownload();
+		ajaxdownload("#topPage");
 	});
 	it("getAuthorsのテスト", function() {
 		expectArr = new Array();
@@ -104,7 +97,7 @@ describe("タブバー", function() {
 describe("ポスターマップ", function() {
 	beforeEach(function() {
 		resetDelta();
-		testajaxdownload();
+		ajaxdownload("#topPage");
 		loadFixtures("fixture-postermap.html");
 		initPosterMap();
 		setPosterIcons();
