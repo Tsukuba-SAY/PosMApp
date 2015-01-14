@@ -1,3 +1,21 @@
+// 共通のデータを格納するグローバル変数
+var poster 			= null,
+	author 			= null,
+	keyword 		= null,
+	presen 			= null,
+	presents 		= null,
+	session 		= null,
+	commontator 	= null,
+	position_map 	= null,
+	position 		= null,
+	taparea 		= null,
+	STATIC_WIDTH 	= null,
+	STATIC_HEIGHT 	= null,
+	MAP_AREA_WIDTH 	= null,
+	MAP_AREA_HEIGHT = null,
+	INIT_SCALE 		= null,
+	SCALE_BY 		= null;
+
 function initData() {
 	// ポスターデータのJSONを置いておく（仮）
 
