@@ -130,3 +130,8 @@
 	height: 15px;
 	z-index: 30;
 }
+
+/* 著者・所属を少し小さくする */
+#detail-authors {
+	font-size: 0.9em;
+}
