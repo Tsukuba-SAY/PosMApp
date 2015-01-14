@@ -15,14 +15,14 @@ table.session_table tr:nth-child(2n+0) {
 
 table.session_table th {
   background-color: #5B9BD5;
-  color: white;
+  color: white; /* 時刻見出しは白か */
   text-align: center;
   height: 40px;
 }
 
 table.session_table th.showtime {
   background-color: #5B9BD5;
-  color: black;
+  color: white;
   text-align: center;
 }
 
