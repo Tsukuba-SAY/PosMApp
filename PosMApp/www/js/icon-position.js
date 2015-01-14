@@ -1,15 +1,15 @@
 // BlockFinderにかけた画像の幅
-var STATIC_WIDTH =  720;
-var STATIC_HEIGHT = 960;
+STATIC_WIDTH =  720;
+STATIC_HEIGHT = 960;
 
 // マップエリアの幅
-var MAP_AREA_WIDTH = screen.width;
+MAP_AREA_WIDTH = screen.width;
 // マップエリアの高さ（55がヘッダー、68がフッター分）
-var MAP_AREA_HEIGHT = screen.height - 55 - 68 - 68;
+MAP_AREA_HEIGHT = screen.height - 55 - 68 - 68;
 
 // マップのスケールを決定
-var INIT_SCALE = MAP_AREA_WIDTH / STATIC_WIDTH;
-var SCALE_BY = "width";
+INIT_SCALE = MAP_AREA_WIDTH / STATIC_WIDTH;
+SCALE_BY = "width";
 if (STATIC_HEIGHT * INIT_SCALE > MAP_AREA_HEIGHT) {
     INIT_SCALE = MAP_AREA_HEIGHT / STATIC_HEIGHT;
     SCALE_BY = "height";
@@ -25,7 +25,7 @@ if (STATIC_HEIGHT * INIT_SCALE > MAP_AREA_HEIGHT) {
 // ];
 
 // DEIM2015 area_large.bmp
-var taparea =
+taparea =
 [
 {"id":0,"x":497,"y":14,"width":134,"height":185,"direction":"longways","color":"rgb(255,40,0)"},
 {"id":1,"x":358,"y":15,"width":134,"height":185,"direction":"longways","color":"rgb(255,245,0)"},
@@ -39,7 +39,7 @@ var taparea =
 {"id":9,"x":324,"y":808,"width":98,"height":132,"direction":"longways","color":"rgb(127,135,143)"}
 ];
 
-var position = [
+position = [
 {"id":0,"x":417,"y":22,"width":16,"height":11,"direction":"sideways"},
 {"id":1,"x":434,"y":22,"width":17,"height":11,"direction":"sideways"},
 {"id":2,"x":453,"y":22,"width":16,"height":11,"direction":"sideways"},

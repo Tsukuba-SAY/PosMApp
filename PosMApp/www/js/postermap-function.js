@@ -19,7 +19,7 @@ var ptotal;
 // グローバル変数の初期化処理
 function initPosterMap() {
 
-	if(localStorage.getItem("poster")){
+	if(poster !== null){
 		// ポスターの件数をセットする
 		var ptotal = poster.length;
 
@@ -91,10 +91,7 @@ $.fn.touchBookmark = function() {
 
 // ポスターアイコンをセットする
 function setPosterIcons() {
-	var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
-	if(localStorage.getItem("poster")){
-		var STATIC_WIDTH = localStorage.getItem("STATIC_WIDTH");
-		var INIT_SCALE = window.innerWidth / STATIC_WIDTH;
+	if(poster !== null){
 		var starAngle = [null, "top:-15px;left:30%;", "right:-15px;top:30%;", "bottom:-15px;left:30%;", "left:-15px;top:30%;"];
 		var starpos = [null, "Top", "Right", "Bottom", "Left"];
 
@@ -128,7 +125,7 @@ function setPosterIcons() {
 
 // ラベルを変更する
 function changeLabel(column) {
-	if(localStorage.getItem("presen")){
+	if(presen !== null){
 		// Session Storageに対応する属性の値をセットする
 		sessionStorage.setItem("label", column);
 

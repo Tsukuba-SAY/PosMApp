@@ -1,7 +1,30 @@
+// 共通のデータを格納するグローバル変数
+var poster 			= null,
+	author 			= null,
+	keyword 		= null,
+	presen 			= null,
+	presents 		= null,
+	session 		= null,
+	commontator 	= null,
+	position_map 	= null,
+	position 		= null,
+	taparea 		= null,
+	STATIC_WIDTH 	= null,
+	STATIC_HEIGHT 	= null,
+	MAP_AREA_WIDTH 	= null,
+	MAP_AREA_HEIGHT = null,
+	INIT_SCALE 		= null,
+	SCALE_BY 		= null;
+
+
 // HTMLが呼ばれた時の初期化処理
 $(init);
 
 function init() {
+
+	// データ格納変数に据え置きの初期データを格納する
+	// TODO: データをダウンロードしてきて格納、ダウンロードできなければ格納しない
+	initData();
 
 	$("#resetScaleButtonFrame").css("zoom", window.innerWidth/1200);
 
