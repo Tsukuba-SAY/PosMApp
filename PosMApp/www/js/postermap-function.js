@@ -445,8 +445,9 @@ function showBookmarkIcons() {
 	// カンマ区切りでポスターIDが保存されているのでそれを区切った配列を生成する
 	var bookmarkArr = getBookmarks();
 	for (var i = 0; i < bookmarkArr.length; i++) {
-		var posterid = bookmarkArr[i];
-		if (!isNaN(posterid)) {
+		var presenid = bookmarkArr[i];
+		if (presenid !== undefined && presenid !== null) {
+			var posterid = getPosterid(presenid);
 			var p = poster[posterid-1];
 			// ポスターのstar属性によって配置する位置を決定する
 			// 1が上で時計回り
