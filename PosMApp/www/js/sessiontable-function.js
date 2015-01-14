@@ -5,7 +5,7 @@ $.fn.jumpToPresen = function() {
 		var sessionid = id.substr(10);
 		sessionStorage.setItem("gotosessionid",sessionid+"-1");
 		$(document).on("pageshow", "#presenListPage", scrollToTr);
-		window.location.href = "#presenListPage";
+		changePage("#presenListPage");
 	});
 }
 function scrollToTr() {
