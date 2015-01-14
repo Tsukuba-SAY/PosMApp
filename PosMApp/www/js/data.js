@@ -2341,18 +2341,7 @@ function initData() {
 	STATIC_WIDTH =  720;
 	STATIC_HEIGHT = 960;
 
-	// マップエリアの幅
-	MAP_AREA_WIDTH = screen.width;
-	// マップエリアの高さ（55がヘッダー、68がフッター分）
-	MAP_AREA_HEIGHT = screen.height - 55 - 68 - 68;
-
-	// マップのスケールを決定
-	INIT_SCALE = MAP_AREA_WIDTH / STATIC_WIDTH;
-	SCALE_BY = "width";
-	if (STATIC_HEIGHT * INIT_SCALE > MAP_AREA_HEIGHT) {
-	    INIT_SCALE = MAP_AREA_HEIGHT / STATIC_HEIGHT;
-	    SCALE_BY = "height";
-	}
+	setMapSize();
 
 	// // タップエリアの相対座標
 	// var taparea = 
@@ -2496,4 +2485,20 @@ function initData() {
 	{"id":114,"x":366,"y":924,"width":16,"height":11,"direction":"sideways"},
 	{"id":115,"x":383,"y":924,"width":17,"height":11,"direction":"sideways"}
 	];
+}
+
+// ポスターマップの大きさに関するデータを計算して格納
+function setMapSize() {
+	// マップエリアの幅
+	MAP_AREA_WIDTH = screen.width;
+	// マップエリアの高さ（55がヘッダー、68がフッター分）
+	MAP_AREA_HEIGHT = screen.height - 55 - 68 - 68;
+
+	// マップのスケールを決定
+	INIT_SCALE = MAP_AREA_WIDTH / STATIC_WIDTH;
+	SCALE_BY = "width";
+	if (STATIC_HEIGHT * INIT_SCALE > MAP_AREA_HEIGHT) {
+	    INIT_SCALE = MAP_AREA_HEIGHT / STATIC_HEIGHT;
+	    SCALE_BY = "height";
+	}
 }
