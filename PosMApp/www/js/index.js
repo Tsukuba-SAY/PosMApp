@@ -150,6 +150,10 @@ function init() {
 	// セッションリストから発表リストに飛ぶ
 	$(".jumpToPresen").jumpToPresen();
 
+	// 星の大きさをリセット
+	$(".star").removeClass("star-zoomin");
+	$(".star").addClass("star-zoomout");
+
 
 	// タブバーの選択表示を変更
 	var currentPage = window.location.hash;

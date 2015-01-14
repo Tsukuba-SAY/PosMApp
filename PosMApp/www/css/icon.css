@@ -125,7 +125,14 @@
 /* star-down  : 下 : 3 */
 /* star-left  : 左 : 4 */
 
-.star{
+.star-zoomout{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+
+}
+
+.star-zoomin{
 	position: absolute;
 	width: 15px;
 	height: 15px;
