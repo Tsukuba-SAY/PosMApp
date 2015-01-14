@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 
 //$content = mb_convert_encoding(file_get_contents("C:\\xampp\\htdocs\\json\\JSON.json"), 'UTF-8', 'auto');
 
-$contentstr = file_get_contents("author.json");
+$contentstr = file_get_contents("data.json");
 
 //$content = json_decode($contentstr,JSON_UNESCAPED_UNICODE);
 
