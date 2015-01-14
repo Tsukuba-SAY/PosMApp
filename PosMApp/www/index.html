@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/icon.css" />
 	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
 	<link rel="stylesheet" type="text/css" href="css/list.css" />
-  <link rel="stylesheet" type="text/css" href="css/taparea.css" />
+	<link rel="stylesheet" type="text/css" href="css/taparea.css" />
 	<link rel="stylesheet" type="text/css" href="css/sessiontable.css" />
 
 
@@ -278,27 +278,14 @@
 		<h1 style="text-align:center">DEIM2014セッション表</h1>
 	</div>
 	<div data-role="content">
-		<script type="text/javascript">
-			 function Changedate(date){
-			 	//全部消す
-			 	document.getElementById('sessiontable1').style.display ='none';
-			 	document.getElementById('sessiontable2').style.display ='none';
-			 	document.getElementById('sessiontable3').style.display ='none';
-			 	//指定箇所のみ表示
-			 	if (date) {
-			 		document.getElementById(date).style.display=
-			 		'block';
-			 	}
-			 }
-		</script>
   		<!--date切替ボタン-->  
 		<div class="changesessiontable">
 			<div class="sessiontablebox">
 				<!--date切替ボタン--> 
-				<p class="changedate" data-role="controlgroup" data-type="horizontal" align="center">
-			      <a onclick="Changedate('sessiontable1'); return false" class="sessiontable1" href="#sessiontable1" data-role="button">3月2日</a>
-			      <a onclick="Changedate('sessiontable2'); return false" class="sessiontable2" href="#sessiontable2" data-role="button">3月3日</a>
-			      <a onclick="Changedate('sessiontable3'); return false" class="sessiontable3" href="#sessiontable3" data-role="button">3月4日</a>
+				<p class="changeDate" data-role="controlgroup" data-type="horizontal" align="center">
+			      <a onclick="changeDate('sessiontable1'); return false" class="sessiontable1" href="#sessiontable1" data-role="button">3月2日</a>
+			      <a onclick="changeDate('sessiontable2'); return false" class="sessiontable2" href="#sessiontable2" data-role="button">3月3日</a>
+			      <a onclick="changeDate('sessiontable3'); return false" class="sessiontable3" href="#sessiontable3" data-role="button">3月4日</a>
 			    </p>
 		    	<!--一日目--> 
 				<div class="sessiontable"  id="sessiontable1">
@@ -412,7 +399,7 @@
 		　　</div>
 		 	<script type="text/javascript"><!--
 		         // デフォルトのタブを選択
-		         Changedate('sessiontable1');
+		         changeDate('sessiontable1');
 		         // -->
 		    </script>
 		</div>
