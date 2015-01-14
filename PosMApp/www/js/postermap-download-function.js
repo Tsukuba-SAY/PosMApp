@@ -18,8 +18,7 @@ function downloadPoster(pageName){
 function ajaxdownload(pageName){
 	if(!localStorage.getItem("downloadSuccess")){
 		$.ajax({
-		   		url: "http://104.236.123.57/fs/testreadJSON.php",
-		   		//url: "http://localhost/testreadJSON.php",
+		   		url: "http://posmapp.tk/api/presendata.php",
 				type: "POST",
 				dataType: "json",
 				async: false,
