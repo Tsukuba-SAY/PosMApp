@@ -4,7 +4,7 @@
 // t：強調表示（赤）
 // s：検索ヒット（緑）
 // e：検索中の強調表示（赤）
-var pflag; 
+var pflag;
 
 // アイコンのラベルを何文字目まで表示するか
 var labelmax = 7;
@@ -124,6 +124,7 @@ function setPosterIcons() {
 
 			str += "	<div id='star" + pos + "No" + i +"' class='star' style='"+angle+" display:none;'><img class='bookmarkstar' src='img/bookmark.png'></img></div>\n";
 			str += "</div>\n";
+		}
 	}
 	document.getElementById("posters").innerHTML = str;
 }
