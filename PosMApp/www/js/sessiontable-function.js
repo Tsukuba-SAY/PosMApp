@@ -13,7 +13,8 @@ function scrollToTr() {
 	console.log(sessionStorage.getItem("gotosessionid"));
 	var position = target.offset().top;
 	var speed = 500;
-	$('body,html').animate({scrollTop:position}, speed, 'swing');
+	// $('body,html').animate({scrollTop:position}, speed, 'linear');
+	$('body,html').scrollTop(position);
 
 	$(document).off("pageshow");
 	sessionStorage.removeItem("gotosessionid");
