@@ -1,5 +1,6 @@
 table.session_table {
   width: 100%;
+  text-shadow: none; /* 影を無効化 */
 }
 
 table.session_table tr:nth-child(2n+1) {
