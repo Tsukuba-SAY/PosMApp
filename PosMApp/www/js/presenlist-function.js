@@ -10,6 +10,9 @@ $.fn.showPresenList = function() {
 		//存在していないセッション番号
 		var notExitSessionNum = ["A3","A6","A7","P4","P5","P6","P7","P8","P9","X1","X2","X4","X5","X6","X7","X8","X9",];
 		var existflag = false;
+
+		//テスト用変数
+		var testSessionNum = [];
 		//ブックマークされた発表IDを取得する
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -48,6 +51,7 @@ $.fn.showPresenList = function() {
 						}
 					}
 					str += "</th></tr>";
+					testSessionNum.push(sessionId);
 				}
 
 				existflag = false;
@@ -87,41 +91,12 @@ $.fn.showPresenList = function() {
 				});
 			}
 		}
-		// presen.forEach(function(p) {
-		// 	var posterid = getPosterid(p.presenid);
-		// 	authors = getAuthors(p.presenid).split(",").join(", ");
-		// 	presens["posterid"].push(posterid !== -1 ? posterid : null);
-		// 	presens["presenid"].push(p.presenid);
-		// 	presens["title"].push(p.title);
-		// 	presens["author"].push(getAuthors(p.presenid));
-		// 	str += "<tr id='presen" + p.presenid + "'><td><div>発表ID: " + p.presenid;
 
-		// 	// ポスター発表があるときのみマップへ遷移するボタンを表示
-		// 	if (posterid !== -1) {
-		// 		str += "<img class='listToMapBtn' id='listToMap" +posterid+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
-		// 	}
-
-		// 	//ブックマークされたかどうか判断する
-		// 	var foundBookmark = false;
-		// 	for (var j = 0; j < bookmarkArr.length; j++) {
-		// 		if (parseInt(posterid) === parseInt(bookmarkArr[j])) {
-		// 			foundBookmark = true;
-		// 			break;
-		// 		}
-		// 	}
-		// 	if (foundBookmark) {
-		// 		str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
-		// 	} else {
-		// 		str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
-		// 	}
-
-		// 	str += "<strong>" + p.title + "</strong><br>";
-		// 	str += "メンバー: " + authors + "<br></td>";
-		// 	str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+p.presenid+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
-		// });
 		str += '</table>'
 
 		$(this).html(str);
+
+		sessionStorage.setItem("testSessionNum",testSessionNum);
 
 		return presens;
 	}
