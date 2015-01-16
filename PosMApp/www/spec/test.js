@@ -11,7 +11,7 @@ describe("変数の確認", function() {
 describe("テスト用のファンクションのテスト", function() {
 	beforeEach(function() {
 		resetDelta();
-		// ajaxdownload("#topPage");
+		ajaxdownload("#topPage");
 	});
 	it("getAuthorsのテスト", function() {
 		expectArr = new Array();
@@ -97,7 +97,7 @@ describe("タブバー", function() {
 describe("ポスターマップ", function() {
 	beforeEach(function() {
 		resetDelta();
-		// ajaxdownload("#topPage");
+		ajaxdownload("#topPage");
 		loadFixtures("fixture-postermap.html");
 		initPosterMap();
 		setPosterIcons();

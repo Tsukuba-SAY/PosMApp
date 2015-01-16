@@ -5,7 +5,14 @@ function downloadPoster(pageName){
 	if(!pageName){
 		pageName = "#topPage";
 	}
-	ajaxdownload(pageName);
+	//ダイアログの表示順番のため
+	//初期起動の時直接呼び出す
+	if(localStorage.getItem("accept_collect_log") === null){
+		ajaxdownload(pageName);
+	}else{
+		setTimeout("ajaxdownload('"+pageName+"')",300);
+	}
+	
 }
 
 function ajaxdownload(pageName){
@@ -34,19 +41,6 @@ function ajaxdownload(pageName){
 					STATIC_WIDTH 	= data.STATIC_WIDTH;
 					STATIC_HEIGHT 	= data.STATIC_HEIGHT;
 
-					localStorage.setItem("poster",JSON.stringify(data.poster));
-					localStorage.setItem("author",JSON.stringify(data.author));
-					localStorage.setItem("keyword",JSON.stringify(data.keyword));
-					localStorage.setItem("presen",JSON.stringify(data.presen));
-					localStorage.setItem("presents",JSON.stringify(data.presents));
-					localStorage.setItem("session",JSON.stringify(data.session));
-					localStorage.setItem("commontator",JSON.stringify(data.commontator));
-					localStorage.setItem("position_map",JSON.stringify(data.position_map));
-					localStorage.setItem("position",JSON.stringify(data.position));
-					localStorage.setItem("taparea",JSON.stringify(data.taparea));
-					localStorage.setItem("STATIC_WIDTH",JSON.stringify(data.STATIC_WIDTH));
-					localStorage.setItem("STATIC_HEIGHT",JSON.stringify(data.STATIC_HEIGHT));
-
 					// ポスターマップの大きさに関するデータを計算して格納 in data.js
 					setMapSize();
 
@@ -56,17 +50,23 @@ function ajaxdownload(pageName){
 					$("#reDownloadDIV").css("display", "none");
 					$("#reDownloadDIVList").css("display", "none");
 					$("#reDownloadDIVMap").css("display", "none");
-					localStorage.removeItem("downloadResult");
+
 					// 再描画
 					init();
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
+					console.error("Download Error");
+					// console.error("send error");
+					// console.error("XMLHttpRequest: " + XMLHttpRequest);
+					// console.error("textStatus: " + textStatus);
+					console.error("errorThrown: " + errorThrown);
 					$("#posters").html("");
 					localStorage.setItem("pageName",pageName);
 					localStorage.setItem("downloadResult","downloadResult");
 					window.location.href = pageName;
 					window.location.href = "#downloadFailDialog";
-					$("#posters").html("");
+					setTimeout("$('.downloading').css('display', 'none')",3000);
+					setTimeout("$('.downloadMsg').html('読み込みに失敗しました')",3000);
 				},
 				complete: function(data) {
 					// alert("complete");

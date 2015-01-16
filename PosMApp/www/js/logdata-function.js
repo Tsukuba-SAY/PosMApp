@@ -19,11 +19,7 @@ $.fn.denyCollectLog = function() {
 		console.log("collect log deny");
 
 		localStorage.setItem("accept_collect_log", false);
-		if(localStorage.getItem("downloadResult")){
-			window.location.href = "#downloadFailDialog";
-		}else{
-			window.location.href = "#topPage";
-		}
+		window.location.href = "#topPage";
 	});
 };
 
