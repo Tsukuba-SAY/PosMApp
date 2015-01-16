@@ -123,7 +123,7 @@ function setPosterIcons() {
 			str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[position_map[i-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 			str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 			str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-			str += "			<div class='posterfont " + position[position_map[i-1]].direction + "' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
+			str += "			<div class='posterfont' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
 			str += "		</div>\n";
 			str += "	</div>\n";
 
