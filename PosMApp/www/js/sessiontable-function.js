@@ -3,21 +3,24 @@ $.fn.jumpToPresen = function() {
 	$(this).on("touchstart", function() {
 		var id = $(this).attr("id");
 		var sessionid = id.substr(10);
-		sessionStorage.setItem("gotosessionid",sessionid+"-1");
+		sessionStorage.setItem("gotosessionid",sessionid);
 		$(document).on("pageshow", "#presenListPage", scrollToTr);
 		changePage("#presenListPage");
 	});
 }
 function scrollToTr() {
-	var target = $("#presen" + sessionStorage.getItem("gotosessionid"));
-	console.log(sessionStorage.getItem("gotosessionid"));
-	var position = target.offset().top;
-	var speed = 500;
-	// $('body,html').animate({scrollTop:position}, speed, 'linear');
-	$('body,html').scrollTop(position);
+	if(!localStorage.getItem("downloadResult")){
+		var target = $("#session" + sessionStorage.getItem("gotosessionid"));
+		console.log(sessionStorage.getItem("gotosessionid"));
+		var position = target.offset().top;
+		var speed = 500;
+		// $('body,html').animate({scrollTop:position}, speed, 'linear');
+		$('body,html').scrollTop(position);
 
-	$(document).off("pageshow");
-	sessionStorage.removeItem("gotosessionid");
+		$(document).off("pageshow");
+		sessionStorage.removeItem("gotosessionid");
+	}
+	
 }
 
 function changeDate(dateId, date){
