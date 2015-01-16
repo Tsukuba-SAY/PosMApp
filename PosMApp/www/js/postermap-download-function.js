@@ -5,6 +5,12 @@ function downloadPoster(pageName){
 	if(!pageName){
 		pageName = "#topPage";
 	}
+
+	// LocalStorageの整合性が取れていない場合ダウンロードし直す
+	if (localStorage.getItem("downloadSuccess") === "true" && !isValidLocalStorage()) {
+		console.log("Invalid Local Storage, Redownload");
+		localStorage.removeItem("downloadSuccess");
+	}
 	ajaxdownload(pageName);
 }
 
@@ -75,6 +81,23 @@ function ajaxdownload(pageName){
 				}
 		});
 	}
+}
+
+// LocalStorageのデータの整合性チェック
+function isValidLocalStorage() {
+	if (localStorage.getItem("poster") === null) return false;
+	if (localStorage.getItem("author") === null) return false;
+	if (localStorage.getItem("keyword") === null) return false;
+	if (localStorage.getItem("presen") === null) return false;
+	if (localStorage.getItem("presents") === null) return false;
+	if (localStorage.getItem("session") === null) return false;
+	if (localStorage.getItem("commentator") === null) return false;
+	if (localStorage.getItem("position_map") === null) return false;
+	if (localStorage.getItem("position") === null) return false;
+	if (localStorage.getItem("taparea") === null) return false;
+	if (localStorage.getItem("STATIC_WIDTH") === null) return false;
+	if (localStorage.getItem("STATIC_HEIGHT") === null) return false;
+	return true;
 }
 
 //「ダウンロード失敗」ダイアログの「cancel」をクリックする時呼び出す

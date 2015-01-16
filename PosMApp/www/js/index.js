@@ -3,13 +3,6 @@ $(init);
 
 function init() {
 
-	// データ格納変数に据え置きの初期データを格納する
-	// TODO: データをダウンロードしてきて格納、ダウンロードできなければ格納しない
-
-
-
-	initData();
-
 	$("#resetScaleButtonFrame").css("zoom", window.innerWidth/1200);
 
 	// トップページの大きさ調整
@@ -28,6 +21,9 @@ function init() {
 	//　ポスターデータのダウンロード
 	//　各mapに関する変数に値を与える
 	downloadPoster();
+
+	// データ格納変数に据え置きの初期データを格納する
+	initData();
 
 	//ダウンロード失敗ダイアログのボタン
 	$("#ReDownload").reDownload();
