@@ -45,9 +45,9 @@ $.fn.showPresenList = function() {
 					}
 					str += "<font class='sessionPerson'>コメンテータ:";
 					//コメンテーターを探す
-					for(var commontatorNum = 0; commontatorNum < commentator.length ; commontatorNum++){
-						if(commentator[commontatorNum].sessionid === sessionId){
-							str += commentator[commontatorNum].name + "(" + commentator[commontatorNum].belongs + ") ";
+					for(var commentatorNum = 0; commentatorNum < commentator.length ; commentatorNum++){
+						if(commentator[commentatorNum].sessionid === sessionId){
+							str += commentator[commentatorNum].name + "(" + commentator[commentatorNum].belongs + ") ";
 						}
 					}
 					str += "</font></th></tr>";

@@ -27,7 +27,7 @@ function ajaxdownload(pageName){
 					presen 			= data.presen;
 					presents 		= data.presents;
 					session 		= data.session;
-					commontator 	= data.commentator;
+					commentator 	= data.commentator;
 					position_map 	= data.position_map;
 					position 		= data.position;
 					taparea 		= data.taparea;
@@ -40,7 +40,7 @@ function ajaxdownload(pageName){
 					localStorage.setItem("presen",JSON.stringify(data.presen));
 					localStorage.setItem("presents",JSON.stringify(data.presents));
 					localStorage.setItem("session",JSON.stringify(data.session));
-					localStorage.setItem("commontator",JSON.stringify(data.commontator));
+					localStorage.setItem("commentator",JSON.stringify(data.commentator));
 					localStorage.setItem("position_map",JSON.stringify(data.position_map));
 					localStorage.setItem("position",JSON.stringify(data.position));
 					localStorage.setItem("taparea",JSON.stringify(data.taparea));
