@@ -181,6 +181,26 @@ function setLabel(id, str) {
 	document.getElementById("font" + id).innerHTML = str;
 }
 
+// ラベルのサイズを決める
+function setLabelSize() {
+	// 1em分のpxを取得
+	var empx = $('#emScale').height();
+	// 文字数
+	var count = 4;
+
+	ptotal = poster.length;
+	for (var i = 1; i <= ptotal; i++) {
+		iconWidth = position[position_map[i-1]].width*INIT_SCALE;
+		iconHeight = position[position_map[i-1]].height*INIT_SCALE;
+		var scale = iconWidth / (4 * empx);
+		$("#font" + i)
+			.css("transform", "scale(" + scale + ")")
+			.css("top", "calc(-50% + " + (empx*scale) + "px)")
+			.css("left", "calc(-50% + " + (empx*scale) + "px)");
+
+	}
+}
+
 
 // 現在のフラグを元にポスターのアイコンを表示する
 function showPosterIcons() {
