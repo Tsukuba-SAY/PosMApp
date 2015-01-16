@@ -66,20 +66,23 @@ function init() {
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
 
-	// 基本情報が選択されていたらそのポスターを強調表示
-	if (sessionStorage.getItem("posterid") !== null) {
-		changeBasicInfoPanel(true);
-		pflag[sessionStorage.getItem("posterid")] = "t";
-		showPosterIcons();
-	}
+	// // 基本情報が選択されていたらそのポスターを強調表示
+	// if (sessionStorage.getItem("posterid") !== null) {
+	// 	changeBasicInfoPanel(true);
+	// 	pflag[sessionStorage.getItem("posterid")] = "t";
+	// 	showPosterIcons();
+	// }
+	removeAllPosterInfo();
 
-	// 検索中状態だったら検索にヒットしたポスターを強調表示
-	// FIXME:もう一度検索しているので読み込み時遅くなる
-	if (sessionStorage.getItem("searching") === "true") {
-		//document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
-		$("#search-bar-title").attr("value", sessionStorage.getItem("searchWord"));
-		searchAll(sessionStorage.getItem("searchWord"));
-	}
+	// // 検索中状態だったら検索にヒットしたポスターを強調表示
+	// // FIXME:もう一度検索しているので読み込み時遅くなる
+	// if (sessionStorage.getItem("searching") === "true") {
+	// 	//document.getElementById("search-bar-title").value = sessionStorage.getItem("searchWord");
+	// 	$("#search-bar-title").attr("value", sessionStorage.getItem("searchWord"));
+	// 	searchAll(sessionStorage.getItem("searchWord"));
+	// }
+	sessionStorage.removeItem("searching");
+	sessionStorage.removeItem("searchWord");
 
 	// もしLocal Storageにbookmarksがなければ追加
 	if (localStorage.getItem("bookmarks") === null) {

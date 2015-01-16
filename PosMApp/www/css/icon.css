@@ -35,7 +35,7 @@
 	transform: scale(0.1);
 	white-space: nowrap;
 	text-align: center;
-	z-index: 4;
+	z-index: 7;
 }
 
 .longways{
@@ -46,7 +46,7 @@
 	font-size:xx-small;
 	transform: scale(0.1);
 	white-space: nowrap;
-	z-index: 4;
+	z-index: 7;
 }
 
 #mapFrame{
@@ -84,7 +84,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	z-index: 20;
+	z-index: 60;
 }
 
 
@@ -92,7 +92,7 @@
 #bookmarkbutton{
 	padding  : 15px; 
 	position : fixed;
-	z-index  : 30;
+	z-index  : 70;
 	width    : 30px;
 	height   : 30px;
 	left     : 0px;
@@ -102,7 +102,7 @@
 #detailinfobutton{
 	padding  : 15px; 
 	position : fixed;
-	z-index  : 30;
+	z-index  : 70;
 	right    : 0px;
 	height   : 35px;
 	width    : 35px; 
@@ -124,15 +124,9 @@
 /* star-right : 右 : 2 */
 /* star-down  : 下 : 3 */
 /* star-left  : 左 : 4 */
-
 .star{
 	position: absolute;
 	width: 15px;
 	height: 15px;
-
-}
-
-.bookmarkstar{
-	width:15px;
-	height:15px;
+	z-index: 30;
 }
