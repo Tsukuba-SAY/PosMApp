@@ -35,7 +35,7 @@ $.fn.showPresenList = function() {
 					}
 				});
 				if(!existflag){
-					str += "<tr><th class='sessionTH' colspan='3'><font class='sessionTitle'>" + sessionId + ":<strong>"; 
+					str += "<tr id='session"+sessionId+"'><th class='sessionTH' colspan='3'><font class='sessionTitle'>" + sessionId + ":<strong>"; 
 					//sessionのタイトルとchairpersonを探す
 					for(var sessionArrNum = 0 ; sessionArrNum < session.length ; sessionArrNum++){
 						if(sessionId == session[sessionArrNum].sessionid){
