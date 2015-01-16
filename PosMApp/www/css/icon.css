@@ -36,6 +36,7 @@
 	white-space: nowrap;
 	text-align: center;
 	z-index: 7;
+	text-shadow: none;
 }
 
 #mapFrame{
