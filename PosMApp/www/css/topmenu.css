@@ -61,7 +61,7 @@
 	height: 30px;
 	width: 220px;
 	line-height:8px;
-	z-index: 200;
+	z-index: 220;
 	text-align: center;
 	font-size: medium;
 	color: white;
@@ -75,7 +75,7 @@
 	height: 30px;
 	width: 220px;
 	line-height:30px;
-	z-index: 200;
+	z-index: 220;
 	text-align: center;
 	font-size: medium;
 }

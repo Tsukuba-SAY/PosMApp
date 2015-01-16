@@ -22,7 +22,7 @@ function initHammer() {
             .attr("id", "area"+area.id)
             .addClass("mapArea")
             .css("position", "absolute")
-            .css("z-index", 150)
+            .css("z-index", 70)
             .css("opacity", 0.4)
             .css("background-color", area.color)
             .css("left", area.x*INIT_SCALE)
