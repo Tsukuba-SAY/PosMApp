@@ -104,7 +104,7 @@ $.fn.sizeDownBookmarkStar = function() {
 // ポスターアイコンをセットする
 function setPosterIcons() {
 	if(poster !== null){
-		var starAngle = [null, "top:-15px;left:30%;", "right:-15px;top:30%;", "bottom:-15px;left:30%;", "left:-15px;top:30%;"];
+		var starAngle = [null, "top:-5px;", "right:-5px;", "bottom:-5px;", "left:-5px;"];
 		var starpos = [null, "Top", "Right", "Bottom", "Left"];
 
 		var str = "";
@@ -128,7 +128,7 @@ function setPosterIcons() {
 
 			pos = starpos[poster[i-1].star];
 
-			str += "	<div id='star" + pos + "No" + i +"' class='star' style='"+angle+" display:none;'><img class='bookmarkstar' src='img/bookmark.png'></img></div>\n";
+			str += "	<img id='star" + pos + "No" + i +"' class='star bookmarkstar' style='"+angle+" display:none;' src='img/bookmark.png'></img>\n";
 			str += "</div>\n";
 		}
 	}
