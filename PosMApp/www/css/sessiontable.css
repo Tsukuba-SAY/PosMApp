@@ -80,3 +80,16 @@ div.changesessiontable div#sessiontable3 {
 .closingD {
   background-color: #ffd1d1;
 }
+
+.phdsession {
+  font-size:0.8em;
+  text-align: center;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.banquetRoom {
+  font-size:0.75em;
+  width:3.30em;
+  word-break:break-all;
+}
