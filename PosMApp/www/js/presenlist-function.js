@@ -35,22 +35,22 @@ $.fn.showPresenList = function() {
 					}
 				});
 				if(!existflag){
-					str += "<tr><th colspan='3'>" + sessionId + ":<strong>"; 
+					str += "<tr><th class='sessionTH' colspan='3'><font class='sessionTitle'>" + sessionId + ":<strong>"; 
 					//sessionのタイトルとchairpersonを探す
 					for(var sessionArrNum = 0 ; sessionArrNum < session.length ; sessionArrNum++){
 						if(sessionId == session[sessionArrNum].sessionid){
-							str += session[sessionArrNum].title + "</strong><br>";
-							str += "座長:" + session[sessionArrNum].chairpersonname + "<br>";
+							str += session[sessionArrNum].title + "</strong></font><br>";
+							str += "<font class='sessionPerson'>座長:" + session[sessionArrNum].chairpersonname + "("+ session[sessionArrNum].charipersonbelongs +")</font><br>";
 						}
 					}
-					str += "コメンテータ:";
+					str += "<font class='sessionPerson'>コメンテータ:";
 					//コメンテーターを探す
 					for(var commontatorNum = 0; commontatorNum < commentator.length ; commontatorNum++){
 						if(commentator[commontatorNum].sessionid === sessionId){
 							str += commentator[commontatorNum].name + "(" + commentator[commontatorNum].belongs + ") ";
 						}
 					}
-					str += "</th></tr>";
+					str += "</font></th></tr>";
 					testSessionNum.push(sessionId);
 				}
 

@@ -6,9 +6,24 @@
   background-color: #EAEFF7;
   }
 .listcolor  tbody th {
-  background-color: #FFFFAA	;
-  
+  background-color: #FFD700; 
 }
+
+.sessionTH {
+  border-top-width: 10px; 
+  border-color: black;
+  text-shadow:none;
+  text-align:left;
+}
+.sessionTitle {
+  font-size:0.7cm;
+  font-weight: 900;
+}
+.sessionPerson {
+  font-size:small;
+  font-weight: 900;
+}
+
 
 
 #emptyBookmarklist {
