@@ -99,11 +99,22 @@
 <!-- ポスターマップ画面 -->
 <div data-role="page" id="posterMapPage">
  	<div id="menuPanel" data-display="overlay" data-role="panel" data-position="right">
- 		<div id="changelabel" data-position="fixed" style="border: 2px;">
+		<!-- <div id="changelabel" data-position="fixed" style="border: 2px;">
  			<a data-role="button" href="#changeLabelDialog"
  					data-inline="true" data-rel="dialog"
  					data-transition="pop">ラベル切替</a>
+ 		</div> -->
+ 		<div style="text-align: center;">
+ 			ポスターのラベル表示変更
  		</div>
+ 		<a class="changelabel" id="label-presenid"
+			href="#posterMapPage" data-role="button">発表番号</a>
+		<a class="changelabel" id="label-title"
+			href="#posterMapPage" data-role="button">タイトル</a>
+		<a class="changelabel" id="label-authorname"
+			href="#posterMapPage" data-role="button">代表者名</a>
+		<a class="changelabel" id="label-authorbelongs"
+			href="#posterMapPage" data-role="button">所属</a>
 	</div>
 	<div data-role="header"　data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
 		<div class="ui-grid-a">
