@@ -121,9 +121,10 @@ function setPosterIcons() {
 			angle = starAngle[poster[i-1].star];
 
 			str += "<div class='postericonframe' id='iconNo" + i + "' style='left:"+(position[position_map[i-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-			str += "	<div class='postericon horizontal' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-			str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'></div>\n";
-			str += "		<div class='posterfont " + position[position_map[i-1]].direction + "' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
+			str += "	<div class='postericon' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
+			str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px; display: table-cell; vertical-align: middle; text-align: center;'>\n";
+			str += "			<div class='posterfont' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
+			str += "		</div>\n";
 			str += "	</div>\n";
 
 			pos = starpos[poster[i-1].star];
@@ -178,6 +179,26 @@ function changeLabel(column) {
 // 指定されたラベルをHTMLにセットする
 function setLabel(id, str) {
 	document.getElementById("font" + id).innerHTML = str;
+}
+
+// ラベルのサイズを決める
+function setLabelSize() {
+	// 1em分のpxを取得
+	var empx = $('#emScale').height();
+	// 文字数
+	var count = 4;
+
+	ptotal = poster.length;
+	for (var i = 1; i <= ptotal; i++) {
+		iconWidth = position[position_map[i-1]].width*INIT_SCALE;
+		iconHeight = position[position_map[i-1]].height*INIT_SCALE;
+		var scale = iconWidth / (4 * empx);
+		$("#font" + i)
+			.css("transform", "scale(" + scale + ")")
+			.css("top", "calc(-50% + " + (empx*scale) + "px)")
+			.css("left", "calc(-50% + " + (empx*scale) + "px)");
+
+	}
 }
 
 

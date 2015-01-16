@@ -79,3 +79,11 @@
 	text-align: center;
 	font-size: medium;
 }
+
+#emScale {
+    margin: 0;
+    padding: 0;
+    width: 1px;
+    height: 1em;
+    visibility: hidden;
+}

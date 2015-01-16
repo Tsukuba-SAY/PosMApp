@@ -5,6 +5,9 @@ function init() {
 
 	// データ格納変数に据え置きの初期データを格納する
 	// TODO: データをダウンロードしてきて格納、ダウンロードできなければ格納しない
+
+
+
 	initData();
 
 	$("#resetScaleButtonFrame").css("zoom", window.innerWidth/1200);
@@ -65,6 +68,9 @@ function init() {
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
+
+	// ポスターのラベルのサイズを設定
+	setLabelSize();
 
 	// // 基本情報が選択されていたらそのポスターを強調表示
 	// if (sessionStorage.getItem("posterid") !== null) {
@@ -210,5 +216,4 @@ function init() {
 			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 	}
-
 }
