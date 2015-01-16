@@ -72,3 +72,11 @@ div.changesessiontable div#sessiontable3 {
   background-color: transparent;
   border: 2px;
 }
+
+#closingH {
+  background-color: #ff99a0;
+}
+
+.closingD {
+  background-color: #ffd1d1;
+}

@@ -273,10 +273,11 @@
 	<div data-role="content"> 
 		<!--date切替ボタン--> 
 		<p id="changeDateButton" data-role="controlgroup" data-type="horizontal" align="center">
-	      <a onclick="changeDate('sessiontable1'); return false" class="sessiontable1" href="#sessiontable1" data-role="button">3月2日</a>
-	      <a onclick="changeDate('sessiontable2'); return false" class="sessiontable2" href="#sessiontable2" data-role="button">3月3日</a>
-	      <a onclick="changeDate('sessiontable3'); return false" class="sessiontable3" href="#sessiontable3" data-role="button">3月4日</a>
+	      <a id="changeDate01" class="sessiontable1" href="#sessiontable1" data-role="button">3月2日</a>
+	      <a id="changeDate02" class="sessiontable2" href="#sessiontable2" data-role="button">3月3日</a>
+	      <a id="changeDate03" class="sessiontable3" href="#sessiontable3" data-role="button">3月4日</a>
 	    </p>
+		<h3 align="center" id="sessionDate"></h3>
 	    <!-- セッションテーブル本体 -->
 	    <div id="sessiontables">
 			<div id="sessiontable1" class="sessiontable">
@@ -388,11 +389,6 @@
 				</table>
 			</div>
 	    </div>
-	 	<script type="text/javascript"><!--
-	         // デフォルトのタブを選択
-	         changeDate('sessiontable1');
-	         // -->
-	    </script>
 	</div>
 	<!-- タブバー -->
 	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
