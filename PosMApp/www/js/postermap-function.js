@@ -640,10 +640,13 @@ function setDetails() {
 }
 
 // 代表者名を取得
+// 代表者名（所属）の形式に変更
 function getAuthorname(presenid) {
 	return author.filter(function(a) {
 		return a.presenid === presenid && a.first === 1;
-	})[0].name;
+	}).map(function(a) {
+		return a.name+" ("+a.belongs+")";
+	})[0];
 }
 
 // 所属一覧を取得
@@ -662,7 +665,7 @@ function getAuthors(presenid) {
 	return author.filter(function(a) {
 		return a.presenid === presenid;
 	}).map(function(a) {
-		return a.name;
+		return a.name+" ("+a.belongs+")";
 	}).join(", ");
 }
 

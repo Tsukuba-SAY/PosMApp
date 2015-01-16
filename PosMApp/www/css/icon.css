@@ -130,3 +130,19 @@
 	height: 15px;
 	z-index: 30;
 }
+
+/* 著者・所属を少し小さくする */
+#detail-authors {
+	font-size: 0.8em;
+	margin-left: 7.5%;
+	margin-right: 7.5%;
+}
+
+#detail-presenid {
+	background-color: #b4ebfa;
+	height: 2.0em;
+	width: 4.0em;
+	text-align: center;
+	line-height: 2.0em;
+	text-shadow:none;
+}
