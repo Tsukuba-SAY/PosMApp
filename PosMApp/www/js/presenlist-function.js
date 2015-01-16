@@ -6,9 +6,9 @@ $.fn.showPresenList = function() {
 		presens["presenid"] = [];
 		presens["title"] = [];
 		presens["author"] = [];
-		var sessionKind = ["A","B","C","D","E","F","P"];
+		var sessionKind = ["A","B","C","D","E","F","P","X"];
 		//存在していないセッション番号
-		var notExitSessionNum = ["A3","A6","A7","P4","P5","P6","P7","P8","P9"];
+		var notExitSessionNum = ["A3","A6","A7","P4","P5","P6","P7","P8","P9","X1","X2","X4","X5","X6","X7","X8","X9",];
 		var existflag = false;
 		//ブックマークされた発表IDを取得する
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
@@ -32,7 +32,7 @@ $.fn.showPresenList = function() {
 					}
 				});
 				if(!existflag){
-					str += "<tr><td colspan='3'>" + sessionId + ":<strong>"; 
+					str += "<tr><th colspan='3'>" + sessionId + ":<strong>"; 
 					//sessionのタイトルとchairpersonを探す
 					for(var sessionArrNum = 0 ; sessionArrNum < session.length ; sessionArrNum++){
 						if(sessionId == session[sessionArrNum].sessionid){
@@ -47,7 +47,7 @@ $.fn.showPresenList = function() {
 							str += commentator[commontatorNum].name + "(" + commentator[commontatorNum].belongs + ") ";
 						}
 					}
-					str += "</td></tr>";
+					str += "</th></tr>";
 				}
 
 				existflag = false;

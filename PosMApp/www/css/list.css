@@ -1,9 +1,15 @@
-.listcolor tbody tr:nth-child(odd) td {
+.listcolor tbody tr:nth-child(2n+1) {
   background-color: #D2DEEF;
-}
-.listcolor tbody tr:nth-child(even) td {
+ }
+
+.listcolor tbody tr:nth-child(2n+0) {
   background-color: #EAEFF7;
+  }
+.listcolor  tbody th {
+  background-color: #FFFFAA	;
+  
 }
+
 
 #emptyBookmarklist {
 	display: inline-block;
