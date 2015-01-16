@@ -30,7 +30,7 @@ function initData() {
 		presen 			= JSON.parse(localStorage.getItem("presen"));
 		presents 		= JSON.parse(localStorage.getItem("presents"));
 		session 		= JSON.parse(localStorage.getItem("session"));
-		commontator 	= JSON.parse(localStorage.getItem("commontator"));
+        commentator     = JSON.parse(localStorage.getItem("commontator"));
 		position_map 	= JSON.parse(localStorage.getItem("position_map"));
 		position 		= JSON.parse(localStorage.getItem("position"));
 		taparea 		= JSON.parse(localStorage.getItem("taparea"));
