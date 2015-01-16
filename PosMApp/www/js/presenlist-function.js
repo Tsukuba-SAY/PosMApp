@@ -7,6 +7,9 @@ $.fn.showPresenList = function() {
 		presens["title"] = [];
 		presens["author"] = [];
 		var sessionKind = ["A","B","C","D","E","F","P"];
+		//存在していないセッション番号
+		var notExitSessionNum = ["A3","A6","A7","P4","P5","P6","P7","P8","P9"];
+		var existflag = false;
 		//ブックマークされた発表IDを取得する
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -22,22 +25,33 @@ $.fn.showPresenList = function() {
 			for(var presenNum = 0; presenNum < sessionKind.length ; presenNum ++){
 				var sessionId = sessionKind[presenNum] + sessionNum;
 				//セッションの生成
-				str += "<tr><td colspan='3'>" + sessionId + ":"; 
-				//sessionのタイトルとchairpersonを探す
-				for(var sessionArrNum = 0 ; sessionArrNum < session.length ; sessionArrNum++){
-					if(sessionId == session[sessionArrNum].sessionid){
-						str += session[sessionArrNum].title + "<br>";
-						str += "chairperson:" + session[sessionArrNum].chairpersonname + "<br>";
+				//セッションが存在しているかどうかを確認する
+				notExitSessionNum.forEach(function(p){
+					if (p == sessionId) {
+						existflag = true;
 					}
-				}
-				str += "commentator:";
-				//コメンテーターを探す
-				for(var commontatorNum = 0; commontatorNum < commentator.length ; commontatorNum++){
-					if(commentator[commontatorNum].sessionid === sessionId){
-						str += commentator[commontatorNum].name + "  ";
+				});
+				if(!existflag){
+					str += "<tr><td colspan='3'>" + sessionId + ":<strong>"; 
+					//sessionのタイトルとchairpersonを探す
+					for(var sessionArrNum = 0 ; sessionArrNum < session.length ; sessionArrNum++){
+						if(sessionId == session[sessionArrNum].sessionid){
+							str += session[sessionArrNum].title + "</strong><br>";
+							str += "座長:" + session[sessionArrNum].chairpersonname + "<br>";
+						}
 					}
+					str += "コメンテータ:";
+					//コメンテーターを探す
+					for(var commontatorNum = 0; commontatorNum < commentator.length ; commontatorNum++){
+						if(commentator[commontatorNum].sessionid === sessionId){
+							str += commentator[commontatorNum].name + "(" + commentator[commontatorNum].belongs + ") ";
+						}
+					}
+					str += "</td></tr>";
 				}
-				str += "</td></tr>";
+
+				existflag = false;
+				
 				//該当セッション下のプレゼンを表示する
 				presen.forEach(function(p){
 					//存在すれば、表示する
