@@ -1,9 +1,30 @@
-.listcolor tbody tr:nth-child(odd) td {
+.listcolor tbody tr:nth-child(2n+1) {
   background-color: #D2DEEF;
-}
-.listcolor tbody tr:nth-child(even) td {
+ }
+
+.listcolor tbody tr:nth-child(2n+0) {
   background-color: #EAEFF7;
+  }
+.listcolor  tbody th {
+  background-color: #FF9900; 
 }
+
+.sessionTH {
+  border-top-width: 10px; 
+  border-color: black;
+  text-shadow:none;
+  text-align:left;
+}
+.sessionTitle {
+  font-size:0.7cm;
+  font-weight: 900;
+}
+.sessionPerson {
+  font-size:small;
+  font-weight: 900;
+}
+
+
 
 #emptyBookmarklist {
 	display: inline-block;
