@@ -5,8 +5,10 @@
 .listcolor tbody tr:nth-child(2n+0) {
   background-color: #EAEFF7;
   }
+
+/* セッション見出しパネル */
 .listcolor  tbody th {
-  background-color: #FF9900; 
+  background-color: #edc58f; 
 }
 
 .sessionTH {
