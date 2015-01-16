@@ -192,11 +192,21 @@ function setLabelSize() {
 	for (var i = 1; i <= ptotal; i++) {
 		iconWidth = position[position_map[i-1]].width*INIT_SCALE;
 		iconHeight = position[position_map[i-1]].height*INIT_SCALE;
-		var scale = iconWidth / (4 * empx);
-		$("#font" + i)
-			.css("transform", "scale(" + scale + ")")
-			.css("top", "calc(-50% + " + (empx*scale) + "px)")
-			.css("left", "calc(-50% + " + (empx*scale) + "px)");
+		iconDirection = position[position_map[i-1]].direction;
+		if (iconDirection === "longways") {
+			var scale = iconHeight / (4 * empx);
+			var rotate = "90deg";
+			$("#font" + i)
+				.css("transform", "rotateZ(" + rotate + ") scale(" + scale + ")")
+				.css("top", "calc(-50% + " + (empx*scale) + "px)")
+				.css("left", "calc(-50% + " + (empx*scale) + "px)");
+		} else {
+			var scale = iconWidth / (4 * empx);
+			$("#font" + i)
+				.css("transform", "scale(" + scale + ")")
+				.css("top", "calc(-50% + " + (empx*scale) + "px)")
+				.css("left", "calc(-50% + " + (empx*scale) + "px)");
+		}
 
 	}
 }
