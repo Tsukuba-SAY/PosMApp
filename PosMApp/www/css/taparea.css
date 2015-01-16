@@ -1,6 +1,6 @@
 #resetScaleButtonFrame {
 	position : absolute;
-	right 	 : 5px;
-	top      : 150px;
+	right 	 : 2%;
+	top      : 0%;
 	z-index  : 200;
 }
