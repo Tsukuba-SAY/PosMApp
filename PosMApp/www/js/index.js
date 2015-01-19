@@ -56,11 +56,6 @@ function init() {
 	// Hammer on stage
 	initHammer();
 
-	// Hammerをセット
-	// TODO: もっとスマートにしたい
-	hammerOnMap();
-	hammerOffMap();
-
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
 	showPosterIcons();
