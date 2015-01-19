@@ -66,10 +66,10 @@ $.fn.showPresenList = function() {
 						presens["presenid"].push(p.presenid);
 						presens["title"].push(p.title);
 						presens["author"].push(getAuthors(p.presenid));
-						str += "<tr id='presen" + p.presenid + "'><td><div>発表ID: " + p.presenid;
+						str += "<tr id='presen" + p.presenid + "'><td><div> 	" + p.presenid;
 						// ポスター発表があるときのみマップへ遷移するボタンを表示
 						if (posterid !== -1) {
-							str += "<img class='listToMapBtn' id='listToMap" +posterid+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
+							str += "　　　　<img class='listToMapBtn' id='listToMap" +posterid+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
 						}
 						//ブックマークされたかどうか判断する
 						var foundBookmark = false;
@@ -80,9 +80,9 @@ $.fn.showPresenList = function() {
 							}
 						}
 						if (foundBookmark) {
-							str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
+							str += "　<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
 						} else {
-							str += "&nbsp;&nbsp;<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
+							str += "<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
 						}
 						str += "<strong>" + p.title + "</strong><br>";
 						str +=  '<div class="authors-on-list">' + authors + "</div></td>";

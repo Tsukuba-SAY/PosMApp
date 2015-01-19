@@ -12,11 +12,13 @@
 }
 
 .sessionTH {
-  border-top-width: 10px; 
-  border-color: black;
+  border-left-style: solid;
+  border-left-width: 10px; 
+  border-left-color: black;
   text-shadow:none;
   text-align:left;
 }
+
 .sessionTitle {
   font-size:0.7cm;
   font-weight: 900;
