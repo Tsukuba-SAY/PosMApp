@@ -155,19 +155,27 @@ function init() {
 	// セッションリストから発表リストに飛ぶ
 	$(".jumpToPresen").jumpToPresen();
 
-	// 1日目のセッションを表示しておく
-  changeDate('sessiontable1',$("#changeDate01").html());
 
-  // セッションリストのボタンにイベントをつける
-  $("#changeDate01").on('touchstart',function(){
-  	changeDate('sessiontable1',$(this).html());
-  })
-  $("#changeDate02").on('touchstart',function(){
-  	changeDate('sessiontable2',$(this).html());
-  })
-  $("#changeDate03").on('touchstart',function(){
-  	changeDate('sessiontable3',$(this).html());
-  })
+	$("#changeDate01").changeDate('sessiontable1');
+	$("#changeDate02").changeDate('sessiontable2');
+	$("#changeDate03").changeDate('sessiontable3');
+
+	// 1日目のセッションを表示しておく
+
+	$("#changeDate01").trigger('touchstart');
+
+  // changeDate('sessiontable1',$("#changeDate01").html());
+
+  // // セッションリストのボタンにイベントをつける
+  // $("#changeDate01").on('touchstart',function(){
+  // 	changeDate('sessiontable1',$(this).html());
+  // })
+  // $("#changeDate02").on('touchstart',function(){
+  // 	changeDate('sessiontable2',$(this).html());
+  // })
+  // $("#changeDate03").on('touchstart',function(){
+  // 	changeDate('sessiontable3',$(this).html());
+  // })
 
 	// 星の大きさをリセット
 	$(".bookmarkstar").sizeUpBookmarkStar();

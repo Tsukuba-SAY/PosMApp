@@ -16,7 +16,7 @@ $.fn.goToListPage = function(ev) {
 $.fn.goToInformationPage = function(ev) {
 	$(this).on(ev, function() {
 		changePage("#informationPage");
-    changeDate('sessiontable1',$("#changeDate01").html());
+		$("#changeDate01").trigger("click");
 	});	
 };
 
