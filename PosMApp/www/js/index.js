@@ -1,3 +1,8 @@
+// ローディング画面
+$(window).load(function() {
+	$("#loading").hide();
+})
+
 // HTMLが呼ばれた時の初期化処理
 $(init);
 
