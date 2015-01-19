@@ -69,7 +69,7 @@ $.fn.showPresenList = function() {
 						str += "<tr id='presen" + p.presenid + "'><td><div> 	" + p.presenid;
 						// ポスター発表があるときのみマップへ遷移するボタンを表示
 						if (posterid !== -1) {
-							str += "　　　　<img class='listToMapBtn' id='listToMap" +posterid+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
+							str += "<img class='listToMapBtn' id='listToMap" +posterid+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
 						}
 						//ブックマークされたかどうか判断する
 						var foundBookmark = false;
@@ -80,7 +80,7 @@ $.fn.showPresenList = function() {
 							}
 						}
 						if (foundBookmark) {
-							str += "　<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
+							str += "<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
 						} else {
 							str += "<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
 						}
