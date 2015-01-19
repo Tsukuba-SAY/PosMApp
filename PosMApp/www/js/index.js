@@ -162,7 +162,7 @@ function init() {
 
 	// 1日目のセッションを表示しておく
 
-	$("#changeDate01").trigger('touchstart');
+	$("#changeDate01").trigger('click');
 
   // changeDate('sessiontable1',$("#changeDate01").html());
 
