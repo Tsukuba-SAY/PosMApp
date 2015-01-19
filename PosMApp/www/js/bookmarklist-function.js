@@ -26,12 +26,14 @@ $.fn.showBookmarkList = function() {
 				var p = presen[j];
 				if (bookmarkArr[i] === p.presenid) {
 					var posterid = getPosterid(p.presenid);
-					authors = getAuthors(p.presenid).split(",").join(", ");
+					// authors = getAuthors(p.presenid).split(",").join(", ");
+					authorname = getAuthorname(p.presenid);
 					presens["posterid"].push(posterid !== -1 ? posterid : null);
 					presens["presenid"].push(p.presenid);
 					presens["title"].push(p.title);
 					presens["author"].push(getAuthors(p.presenid));
-					str += "<tr id='trId" + p.presenid + "'><td><div>発表ID: " + p.presenid;
+
+					str += "<tr id='bookmarkedpresen" + p.presenid + "'><td><div> 	" + p.presenid;
 
 					// ポスター発表があるときのみマップへ遷移するボタンを表示
 					if (posterid !== -1) {
@@ -39,8 +41,8 @@ $.fn.showBookmarkList = function() {
 					}
 
 					str += "&nbsp;&nbsp;<img class='bookmarklistbookmarkbutton' id='bookmarklistbookmark"+p.presenid+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
-					str += "<strong>" + p.title + "</strong><br>";
-					str += "メンバー: " + authors + "<br></td>";
+					str += "<strong><small>" + p.title + "</small></strong><br>";
+					str += "<div class='authors-on-list'>" + authorname + ", 他</div></td>";
 					str += "<td><div><td><img class='bookmarklistToDetailBtn' id='bookmarklistToDetail"+p.presenid+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 				}
 			}
@@ -93,7 +95,7 @@ $.fn.deletebookmark = function(){
 
 			removebookmark(presenid);
 
-			var tr = document.getElementById("trId"+presenid);
+			var tr = document.getElementById("bookmarkedpresen"+presenid);
 			var list = document.getElementById("bookmarkList");
 			tr.parentNode.removeChild(tr);
 

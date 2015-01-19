@@ -34,10 +34,11 @@ function initHammer() {
             });
         $mapMain.append($divarea);
     });
+
+    hammerOnMap();
 }
 
 function zoomMap(area) {
-    hammerOnMap();
 
     var mapMain = $("#mapMain");
 
@@ -81,8 +82,6 @@ function zoomMap(area) {
 }
 
 function resetZoom() {
-
-	hammerOffMap();
     
     var el = $("#mapMain")[0];
     el.className = 'animate';
@@ -111,11 +110,6 @@ function resetZoom() {
     $(".posterfont").css("display", "none");
     $(".bookmarkstar").sizeUpBookmarkStar();
 }
-
-function hammerOffMap() {
-	mc.off("panstart panmove panend pancancel pinchstart pinchmove pinchend pinchcancel doubletap");
-}
-
 
 function hammerOnMap() {
     var FRAME_TIME = 1000 / 30;

@@ -1,3 +1,8 @@
+// ローディング画面
+$(window).load(function() {
+	$("#loading").hide();
+})
+
 // HTMLが呼ばれた時の初期化処理
 $(init);
 
@@ -55,11 +60,6 @@ function init() {
 
 	// Hammer on stage
 	initHammer();
-
-	// Hammerをセット
-	// TODO: もっとスマートにしたい
-	hammerOnMap();
-	hammerOffMap();
 
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい
@@ -164,18 +164,6 @@ function init() {
 
 	$("#changeDate01").trigger('click');
 
-  // changeDate('sessiontable1',$("#changeDate01").html());
-
-  // // セッションリストのボタンにイベントをつける
-  // $("#changeDate01").on('touchstart',function(){
-  // 	changeDate('sessiontable1',$(this).html());
-  // })
-  // $("#changeDate02").on('touchstart',function(){
-  // 	changeDate('sessiontable2',$(this).html());
-  // })
-  // $("#changeDate03").on('touchstart',function(){
-  // 	changeDate('sessiontable3',$(this).html());
-  // })
 
 	// 星の大きさをリセット
 	$(".bookmarkstar").sizeUpBookmarkStar();

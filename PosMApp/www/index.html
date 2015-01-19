@@ -45,6 +45,51 @@
 </head>
 
 <body>
+
+<!-- ローディング画面 -->
+<div id="loading">
+	<img src="img/loading.gif">
+</div>
+
+<!-- 利用ログデータ回収許諾ダイアログ  -->
+<div data-role="dialog" data-close-btn="none" id="checkCollectLogDialog">
+	<div data-role="header">
+		<h1>ログ送信に関するお願い</h1>
+	</div>
+	<div data-role="content">
+		筑波大学高度ITコース・チームS.A.Y.では、ユーザの行動分析を行いアプリの改善をする研究を行っております。つきましては、本アプリの利用ログの回収にご協力頂きたいと考えております。利用ログには個人を特定できる情報は含まれず、統計的な分析のみに使用します。ご協力頂ける場合は、[はい]ボタンを押して下さい。<br />
+		<a data-role="button" id="acceptCollectLog">はい</a>
+		<a data-role="button" id="denyCollectLog">いいえ</a>
+	</div>
+</div>
+
+<!-- ユーザカテゴリ選択ダイアログ -->
+<div data-role="dialog" data-close-btn="none" id="selectUserCategoryDialog">
+	<div data-role="header">
+		<h1>ユーザ属性の選択</h1>
+	</div>
+	<div data-role="content">
+		以下の中で、当てはまる属性を選択して下さい。<br />
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-1">学生（受講者）</a>
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-2">学生（見学者）</a>
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-3">教員</a>
+		<a data-role="button" class="selectUserCategoryButton" id="usercat-4">社会人・その他</a>
+	</div>
+</div>
+
+<!-- ダウンロード失敗したダイアログ  -->
+<div data-role="dialog" data-close-btn="none" id="downloadFailDialog">
+	<div data-role="header">
+		<h1>読み込みに失敗しました</h1>
+	</div>
+	<div data-role="content">
+		読み込みに失敗しました。<br />
+		もう一度取得しますか？<br />
+		<a data-role="button" id="ReDownload">はい</a>
+		<a data-role="button" id="CancelDownload">いいえ</a>
+	</div>
+</div>
+
 <!-- トップメニュー画面 -->
 <div data-role="page" id="topPage" style="background-image:url(img/toppage.png); background-size: 100% 100%;" >
 	<div id="topPageContent">
@@ -283,7 +328,7 @@
 <!-- DEIM2014のセッションテーブルの内容 -->
 <div data-role="page" id="informationPage" data-position="fixed">
   <div data-role="header">
-    <h1 id="sessionHyou" style="text-align:center">セッション表</h1>
+    <h1 id="sessionHyou" style="text-align:center">プログラム</h1>
   </div>
   <div data-role="content"> 
     <!--date切替ボタン--> 
@@ -417,45 +462,6 @@
       </ul>
     </div>
   </div>
-</div>
-
-<!-- 利用ログデータ回収許諾ダイアログ  -->
-<div data-role="dialog" data-close-btn="none" id="checkCollectLogDialog">
-	<div data-role="header">
-		<h1>ログ送信に関するお願い</h1>
-	</div>
-	<div data-role="content">
-		筑波大学高度ITコース・チームS.A.Y.では、ユーザの行動分析を行いアプリの改善をする研究を行っております。つきましては、本アプリの利用ログの回収にご協力頂きたいと考えております。利用ログには個人を特定できる情報は含まれず、統計的な分析のみに使用します。ご協力頂ける場合は、[はい]ボタンを押して下さい。<br />
-		<a data-role="button" id="acceptCollectLog">はい</a>
-		<a data-role="button" id="denyCollectLog">いいえ</a>
-	</div>
-</div>
-
-<!-- ユーザカテゴリ選択ダイアログ -->
-<div data-role="dialog" data-close-btn="none" id="selectUserCategoryDialog">
-	<div data-role="header">
-		<h1>ユーザ属性の選択</h1>
-	</div>
-	<div data-role="content">
-		以下の中で、当てはまる属性を選択して下さい。<br />
-		<a data-role="button" class="selectUserCategoryButton" id="usercat-1">学生（受講者）</a>
-		<a data-role="button" class="selectUserCategoryButton" id="usercat-2">学生（見学者）</a>
-		<a data-role="button" class="selectUserCategoryButton" id="usercat-3">教員</a>
-		<a data-role="button" class="selectUserCategoryButton" id="usercat-4">社会人・その他</a>
-	</div>
-</div>
-
-<!-- ダウンロード失敗したダイアログ  -->
-<div data-role="dialog" data-close-btn="none" id="downloadFailDialog">
-	<div data-role="header">
-		<h1>読み込みに失敗しました</h1>
-	</div>
-	<div data-role="content">
-		読み込みに失敗しました。<br />
-		もう一度取得しますか？<br />
-		<a data-role="button" id="ReDownload">はい</a>
-		<a data-role="button" id="CancelDownload">いいえ</a>
-	</div>
 </div>
 
 <!-- 文字の大きさを調べる用div -->
