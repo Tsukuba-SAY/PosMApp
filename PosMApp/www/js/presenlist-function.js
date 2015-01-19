@@ -85,7 +85,7 @@ $.fn.showPresenList = function() {
 							str += "<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
 						}
 						str += "<strong>" + p.title + "</strong><br>";
-						str +=  '<div class="authors-on-list">' + authors + "</div></td>";
+						str += "<div class='authors-on-list'>" + authors + "</div></td>";
 						str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+p.presenid+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 					}
 				});
