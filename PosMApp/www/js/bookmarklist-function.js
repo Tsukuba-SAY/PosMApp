@@ -94,7 +94,7 @@ $.fn.deletebookmark = function(){
 
 			removebookmark(presenid);
 
-			var tr = document.getElementById("trId"+presenid);
+			var tr = document.getElementById("bookmarkedpresen"+presenid);
 			var list = document.getElementById("bookmarkList");
 			tr.parentNode.removeChild(tr);
 
