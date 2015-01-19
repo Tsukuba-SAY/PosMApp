@@ -416,31 +416,11 @@ function selectPoster(posterid) {
 
 			sessionStorage.setItem("bookmark", p.bookmark);
 			sessionStorage.setItem("star", poster[posterid-1].star);
+			sessionStorage.setItem("authors", getAuthors(presenid));
+			sessionStorage.setItem("keywords", getKeywords(presenid));
+			break;
 		}
 	}
-
-
-	var authors = [];
-	var authorlength = author.length
-	for (var i = 0; i < authorlength; i++) {
-		var a = author[i];
-		if (a.presenid === presenid) {
-			authors.push(a.name);
-		}
-	}
-	authors = authors.join(", ");
-	sessionStorage.setItem("authors", authors);
-
-	var keywords = [];
-	var keywordlength = keyword.length
-	for (var i = 0; i < keywordlength; i++) {
-		var k = keyword[i];
-		if (k.presenid === presenid) {
-			keywords.push(k.keyword);
-		}
-	}
-	keywords = keywords.join(",");
-	sessionStorage.setItem("keywords", keywords);
 
 	changeBasicInfoPanel(true);
 
