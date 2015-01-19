@@ -26,7 +26,8 @@ $.fn.showBookmarkList = function() {
 				var p = presen[j];
 				if (bookmarkArr[i] === p.presenid) {
 					var posterid = getPosterid(p.presenid);
-					authors = getAuthors(p.presenid).split(",").join(", ");
+					// authors = getAuthors(p.presenid).split(",").join(", ");
+					authorname = getAuthorname(p.presenid);
 					presens["posterid"].push(posterid !== -1 ? posterid : null);
 					presens["presenid"].push(p.presenid);
 					presens["title"].push(p.title);
@@ -41,7 +42,7 @@ $.fn.showBookmarkList = function() {
 
 					str += "&nbsp;&nbsp;<img class='bookmarklistbookmarkbutton' id='bookmarklistbookmark"+p.presenid+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
 					str += "<strong>" + p.title + "</strong><br>";
-					str += "<div class='authors-on-list'>" + authors + "</div></td>";
+					str += "<div class='authors-on-list'>" + authorname + ", 他</div></td>";
 					str += "<td><div><td><img class='bookmarklistToDetailBtn' id='bookmarklistToDetail"+p.presenid+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 				}
 			}
