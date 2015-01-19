@@ -67,9 +67,10 @@ function ajaxdownload(pageName){
 					init();
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
-					$("#posters").html("");
 					localStorage.setItem("pageName",pageName);
 					localStorage.setItem("downloadResult","downloadResult");
+					setTimeout("$('.reDownloadDIV').html('データを再ダウンロード')",3000);
+					setTimeout("$('.ReDownloadBtn').html('データを再ダウンロード')",3000);
 					window.location.href = pageName;
 					window.location.href = "#downloadFailDialog";
 					$("#posters").html("");
@@ -106,8 +107,9 @@ $.fn.cancelDownload = function() {
 		window.location.href = localStorage.getItem("pageName");
 		// loading画像を表示しない
 		$("#downloading").css("display", "none");
-		$(".downloadMsg").html("読み込みに失敗しました");
+		// $(".downloadMsg").html("読み込みに失敗しました");
 		initUserData();
+		$("#posters").html("");
 	});
 };
 
@@ -115,8 +117,10 @@ $.fn.cancelDownload = function() {
 $.fn.reDownload = function() {
 	$(this).on("touchstart", function(e){
 		$(".downloading").css("display", "inline");
-		$(".downloadMsg").html("データ読み込み中");
+		$(".reDownloadDIV").html("データ読み込み中");
+		$(".ReDownloadBtn").html("データ読み込み中");
 		downloadPoster(localStorage.getItem("pageName"));
+		$("#posters").html("");
 	});
 };
 
@@ -124,7 +128,7 @@ $.fn.reDownload = function() {
 $.fn.reDownloadFun = function() {
 	$(this).on("touchstart", function(e){
 		var pageName = "#" + window.location.href.split("#")[1];
-		$(".downloadMsg").html("データ読み込み中");
+		// $(".downloadMsg").html("データ読み込み中");
 		downloadPoster(pageName);
 	});
 };
