@@ -1,0 +1,3 @@
+function closePanel($obj) {
+	// dummy
+}
