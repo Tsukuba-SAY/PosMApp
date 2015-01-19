@@ -77,7 +77,7 @@ $.fn.changeLabel = function() {
 		var target = id.substr(id.indexOf("-") + 1);
 		saveLog("change_label", {label:target});
 		changeLabel(target);
-		$("#menuPanel").panel("close");
+		closePanel($("#menuPanel"));
 	});
 };
 
