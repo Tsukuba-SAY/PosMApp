@@ -26,9 +26,8 @@ iOS, Android端末でご利用いただけます。
 * Nexus 7 (2013年モデル)
 * Xperia A
 
-動作確認済ブラウザは以下の通りです。
-* Google Chrome(推奨)
-* Safari
+ブラウザは Google Chrome を推奨します。  
+（Google Chrome 以外のブラウザでは正しく表示されない可能性があります。）
 
 ## フィードバック
 このリポジトリのIssuesにて受け付けています。  
