@@ -47,8 +47,6 @@ $.fn.showPresenList = function() {
 					str += "</font></th></tr>";
 					testSessionNum.push(sessionId);
 				}
-
-				existflag = false;
 				
 				//該当セッション下のプレゼンを表示する
 				presen.forEach(function(p){
