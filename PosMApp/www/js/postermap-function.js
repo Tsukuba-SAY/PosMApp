@@ -327,37 +327,6 @@ function changeBasicInfoPanel(flag) {
 	}
 }
 
-
-// タイトルで検索
-// SQLをかけたいのでDBにアクセスしてるけどjsonでも同じことはできる
-// function searchByTitle(title) {
-
-// 	if (title.length >= 1024) {
-// 		throw new Exception();
-// 	}
-
-// 	var posterids = [];
-// 	var ltitle = title.toLowerCase();
-
-// 	poster.forEach(function(aPoster) {
-// 		if (aPoster.title.toLowerCase().indexOf(ltitle) !== -1) {
-// 			posterids.push(aPoster.id);
-// 		}
-// 	});
-// 	console.log("HIT : " + posterids);
-
-// 	emphasisSearchedPosters(posterids);
-
-// 	if (posterids.length === 0) {
-// 		document.getElementById("searchResult").innerHTML = "見つかりませんでした";
-// 	} else {
-// 		document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
-// 	}
-
-// 	return pflag;
-// }
-
-
 // 検索されたポスターを強調表示する
 function emphasisSearchedPosters(posterids) {
 
@@ -386,22 +355,6 @@ function emphasisSearchedPosters(posterids) {
 
 // ポスターを選択する
 function selectPoster(posterid) {
-	// for (var i = 0; i < ptotal; i++) {
-	// 	var p = poster[i];
-	// 	if (p.id === posterid) {
-	// 		sessionStorage.setItem("posterid", posterid);
-	// 		sessionStorage.setItem("sessionid", p.sessionid);
-	// 		sessionStorage.setItem("title", p.title);
-	// 		sessionStorage.setItem("abstract", p.abstract);
-
-	// 		sessionStorage.setItem("authorname", getAuthorname(posterid));
-
-	// 		sessionStorage.setItem("authorbelongs", getAuthorbelongs(posterid));
-
-	// 		sessionStorage.setItem("bookmark", p.bookmark);
-	// 		sessionStorage.setItem("star", p.star);
-	// 	}
-	// }
 
 	// posterに含まれているidが必ず連番になっていなければならない
 	var presenid = poster[posterid-1].presenid;
