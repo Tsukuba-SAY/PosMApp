@@ -15,11 +15,7 @@ $.fn.showPresenList = function() {
 		var testSessionNum = [];
 		//ブックマークされた発表IDを取得する
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		var bookmarks = localStorage.getItem("bookmarks");
-		if (bookmarks === null || bookmarks === "") {
-			bookmarks = "";
-		}
-		var bookmarkArr = bookmarks.split(",");
+		var bookmarkArr = getBookmarks();
 		var str = "";
 		str += '<table border="1" rules="rows" width="100%">';
 		//セッション番号はF9まで、9回ループする
