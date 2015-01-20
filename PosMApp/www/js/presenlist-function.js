@@ -8,7 +8,7 @@ $.fn.showPresenList = function() {
 		presens["author"] = [];
 		var sessionKind = ["A","B","C","D","E","F","P","X"];
 		//存在していないセッション番号
-		var notExitSessionNum = ["A3","A6","A7","P4","P5","P6","P7","P8","P9","X1","X2","X4","X5","X6","X7","X8","X9",];
+		var notExistSessionNum = ["A3","A6","A7","P4","P5","P6","P7","P8","P9","X1","X2","X4","X5","X6","X7","X8","X9",];
 		var existflag = false;
 
 		//テスト用変数
@@ -19,17 +19,15 @@ $.fn.showPresenList = function() {
 		var str = "";
 		str += '<table border="1" rules="rows" width="100%">';
 		//セッション番号はF9まで、9回ループする
-		for(var sessionNum = 1; sessionNum < 10;sessionNum ++ ){
+		for(var sessionNum = 1; sessionNum < 10; sessionNum++){
 			//ABCDのループ
-			for(var presenNum = 0; presenNum < sessionKind.length ; presenNum ++){
+			for(var presenNum = 0; presenNum < sessionKind.length; presenNum++){
 				var sessionId = sessionKind[presenNum] + sessionNum;
 				//セッションの生成
 				//セッションが存在しているかどうかを確認する
-				notExitSessionNum.forEach(function(p){
-					if (p == sessionId) {
-						existflag = true;
-					}
-				});
+
+				existflag = $.inArray(sessionId, notExistSessionNum) >= 0 ? true : false;
+
 				if(!existflag){
 					str += "<tr id='session"+sessionId+"'><th class='sessionTH' colspan='3'><font class='sessionTitle'>" + sessionId + ":<strong>"; 
 					//sessionのタイトルとchairpersonを探す
