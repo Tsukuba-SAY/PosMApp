@@ -117,14 +117,18 @@ function removebookmark(presenid){
 	$("#bookmarkbutton").attr("src","img/unbookmark.png");
 	$("#listbookmark" + presenid).attr("src","img/unbookmark.png");
 	saveLog("unbookmark", {presenid:presenid, page:window.location.hash});
-	var starelem;
-	var starstatus = "none";
-	var starpos = [null, "Top", "Right", "Bottom", "Left"];
-	if (bookmarkIcon !== null) {
-		var posterid = getPosterid(presenid);
-		var p = poster[posterid-1];
-		starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
-		starelem.style.display = starstatus;
+
+	var posterid = getPosterid(presenid);
+	if (posterid !== -1) {
+		var starelem;
+		var starstatus = "none";
+		var starpos = [null, "Top", "Right", "Bottom", "Left"];
+		if (bookmarkIcon !== null) {
+			var posterid = getPosterid(presenid);
+			var p = poster[posterid-1];
+			starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
+			starelem.style.display = starstatus;
+		}
 	}
 
 	bookmarks = bookmarkArr.join(",");
