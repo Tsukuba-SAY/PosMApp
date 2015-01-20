@@ -429,14 +429,16 @@ function showBookmarkIcons() {
 		var presenid = bookmarkArr[i];
 		if (presenid !== undefined && presenid !== null) {
 			var posterid = getPosterid(presenid);
-			var p = poster[posterid-1];
-			// ポスターのstar属性によって配置する位置を決定する
-			// 1が上で時計回り
-			var starpos = [null, "Top", "Right", "Bottom", "Left"];
-			starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
+			if (posterid !== -1) {
+				var p = poster[posterid-1];
+				// ポスターのstar属性によって配置する位置を決定する
+				// 1が上で時計回り
+				var starpos = [null, "Top", "Right", "Bottom", "Left"];
+				starelem = document.getElementById("star" + starpos[p.star] + "No" + posterid);
 
-			// 該当する星要素を表示する
-			starelem.style.display = "block";
+				// 該当する星要素を表示する
+				starelem.style.display = "block";
+			}
 		}
 
 	}
@@ -464,7 +466,7 @@ function touchBookmark(presenid, bookmarkIcon){
 			$("#listbookmark" + presenid).attr("src","img/unbookmark.png");
 		}
 		starstatus = "none";
-		saveLog("unbookmark", {posterid:posterid, page:window.location.hash});
+		saveLog("unbookmark", {presenid:presenid, page:window.location.hash});
 	} else {
 		// ない場合
 		bookmarkArr.push(presenid);
@@ -651,11 +653,13 @@ function getKeywords(presenid) {
 // return ある場合posterid、ない場合-1
 function getPosterid(presenid) {
 	var posterid = -1;
-	poster.forEach(function(p) {
-		if (p.presenid === presenid) {
-			posterid = p.posterid;
+	var posterlength = poster.length
+	for (var i = 0; i < posterlength; i++) {
+		if (poster[i].presenid === presenid) {
+			posterid = poster[i].posterid;
+			break;
 		}
-	});
+	}
 	return posterid;
 }
 

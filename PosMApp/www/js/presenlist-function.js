@@ -8,32 +8,26 @@ $.fn.showPresenList = function() {
 		presens["author"] = [];
 		var sessionKind = ["A","B","C","D","E","F","P","X"];
 		//存在していないセッション番号
-		var notExitSessionNum = ["A3","A6","A7","P4","P5","P6","P7","P8","P9","X1","X2","X4","X5","X6","X7","X8","X9",];
+		var notExistSessionNum = ["A3","A6","A7","P4","P5","P6","P7","P8","P9","X1","X2","X4","X5","X6","X7","X8","X9",];
 		var existflag = false;
 
 		//テスト用変数
 		var testSessionNum = [];
 		//ブックマークされた発表IDを取得する
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		var bookmarks = localStorage.getItem("bookmarks");
-		if (bookmarks === null || bookmarks === "") {
-			bookmarks = "";
-		}
-		var bookmarkArr = bookmarks.split(",");
+		var bookmarkArr = getBookmarks();
 		var str = "";
 		str += '<table border="1" rules="rows" width="100%">';
 		//セッション番号はF9まで、9回ループする
-		for(var sessionNum = 1; sessionNum < 10;sessionNum ++ ){
+		for(var sessionNum = 1; sessionNum < 10; sessionNum++){
 			//ABCDのループ
-			for(var presenNum = 0; presenNum < sessionKind.length ; presenNum ++){
+			for(var presenNum = 0; presenNum < sessionKind.length; presenNum++){
 				var sessionId = sessionKind[presenNum] + sessionNum;
 				//セッションの生成
 				//セッションが存在しているかどうかを確認する
-				notExitSessionNum.forEach(function(p){
-					if (p == sessionId) {
-						existflag = true;
-					}
-				});
+
+				existflag = $.inArray(sessionId, notExistSessionNum) >= 0 ? true : false;
+
 				if(!existflag){
 					str += "<tr id='session"+sessionId+"'><th class='sessionTH' colspan='3'><font class='sessionTitle'>" + sessionId + ":<strong>"; 
 					//sessionのタイトルとchairpersonを探す
@@ -54,8 +48,6 @@ $.fn.showPresenList = function() {
 					testSessionNum.push(sessionId);
 				}
 
-				existflag = false;
-				
 				//該当セッション下のプレゼンを表示する
 				presen.forEach(function(p){
 					//存在すれば、表示する
@@ -174,8 +166,33 @@ $.fn.listchangebookmark = function() {
 	$(this).on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var presenid = e.target.id.substring(12);
-		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		touchBookmark(presenid, bookmarkIcon);
+		var bookmarkIcon = document.getElementById("listbookmark"+presenid);
+
+		var bookmarkArr = getBookmarks();
+		// posteridに該当するポスターがブックマークリストに存在しているか確認用
+		var location = bookmarkArr.indexOf(presenid);
+		if (location !== -1) {
+			// ある場合
+			// 存在しているIDを削除する
+			bookmarkArr.splice(location, 1);
+			if (bookmarkIcon !== null) {
+				bookmarkIcon.src = "img/unbookmark.png";
+				$("#listbookmark" + presenid).attr("src","img/unbookmark.png");
+			}
+			saveLog("unbookmark", {presenid:presenid, page:window.location.hash});
+		} else {
+			// ない場合
+			bookmarkArr.push(presenid);
+			bookmarkArr.sort();
+			if (bookmarkIcon !== null) {
+				bookmarkIcon.src = "img/bookmark.png";
+				$("#listbookmark" + presenid).attr("src","img/bookmark.png");
+			}
+			saveLog("bookmark", {presenid:presenid, page:window.location.hash});
+		}
+
+		bookmarks = bookmarkArr.join(",");
+		localStorage.setItem("bookmarks", bookmarks);
 	});
 };
 
