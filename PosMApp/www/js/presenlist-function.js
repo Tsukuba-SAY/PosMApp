@@ -47,7 +47,7 @@ $.fn.showPresenList = function() {
 					str += "</font></th></tr>";
 					testSessionNum.push(sessionId);
 				}
-				
+
 				//該当セッション下のプレゼンを表示する
 				presen.forEach(function(p){
 					//存在すれば、表示する
@@ -166,8 +166,33 @@ $.fn.listchangebookmark = function() {
 	$(this).on("touchstart", function(e) {
 		// ポスターのIDを取得する
 		var presenid = e.target.id.substring(12);
-		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		touchBookmark(presenid, bookmarkIcon);
+		var bookmarkIcon = document.getElementById("listbookmark"+presenid);
+
+		var bookmarkArr = getBookmarks();
+		// posteridに該当するポスターがブックマークリストに存在しているか確認用
+		var location = bookmarkArr.indexOf(presenid);
+		if (location !== -1) {
+			// ある場合
+			// 存在しているIDを削除する
+			bookmarkArr.splice(location, 1);
+			if (bookmarkIcon !== null) {
+				bookmarkIcon.src = "img/unbookmark.png";
+				$("#listbookmark" + presenid).attr("src","img/unbookmark.png");
+			}
+			saveLog("unbookmark", {presenid:presenid, page:window.location.hash});
+		} else {
+			// ない場合
+			bookmarkArr.push(presenid);
+			bookmarkArr.sort();
+			if (bookmarkIcon !== null) {
+				bookmarkIcon.src = "img/bookmark.png";
+				$("#listbookmark" + presenid).attr("src","img/bookmark.png");
+			}
+			saveLog("bookmark", {presenid:presenid, page:window.location.hash});
+		}
+
+		bookmarks = bookmarkArr.join(",");
+		localStorage.setItem("bookmarks", bookmarks);
 	});
 };
 
