@@ -72,14 +72,9 @@ $.fn.showPresenList = function() {
 							str += "<img class='listToMapBtn' id='listToMap" +posterid+ "' src='img/logo_posmapp.png' style='zoom: 8%;'></img>";
 						}
 						//ブックマークされたかどうか判断する
-						var foundBookmark = false;
-						for (var j = 0; j < bookmarkArr.length; j++) {
-							if (parseInt(posterid) === parseInt(bookmarkArr[j])) {
-								foundBookmark = true;
-								break;
-							}
-						}
-						if (foundBookmark) {
+						var foundBookmarkIndex = $.inArray(p.presenid, bookmarkArr);
+
+						if (foundBookmarkIndex >= 0) {
 							str += "<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
 						} else {
 							str += "<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
