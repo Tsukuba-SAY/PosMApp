@@ -29,7 +29,7 @@ function initHammer() {
             .css("top", area.y*INIT_SCALE)
             .css("width", area.width*INIT_SCALE)
             .css("height", area.height*INIT_SCALE)
-            .on("touchstart", function() {
+            .on("click", function() {
                 zoomMap(area);
             });
         $mapMain.append($divarea);
