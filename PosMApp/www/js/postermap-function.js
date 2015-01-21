@@ -578,6 +578,9 @@ function searchAll(word) {
 	});
 	posterids.sort();
 	console.log("HIT : " + posterids);
+	posterids.forEach(function(p) {
+		effectPosterIcon(p);
+	});
 
 	emphasisSearchedPosters(posterids);
 
@@ -663,3 +666,8 @@ function getPosterid(presenid) {
 	return posterid;
 }
 
+function effectPosterIcon(postericon) {
+	// effect, duration, option
+	$("#icon" + postericon).toggle("puff", 300, 150);
+	$("#icon" + postericon).toggle("puff", 300, 150);
+}
