@@ -35,7 +35,7 @@ function init() {
 	$("#CancelDownload").cancelDownload();
 
 	//再ダウンロードdivのイベント
-	$(".reDownloadDIV").reDownloadFun();
+	$(".reDownloadDIVCLS").reDownloadFun();
 	//「再読み込み」ボタンを押す
 	$(".ReDownloadBtn").reDownloadFun();
 

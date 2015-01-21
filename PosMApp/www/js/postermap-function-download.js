@@ -74,7 +74,7 @@ function ajaxdownload(pageName){
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
 					localStorage.setItem("pageName",pageName);
 					localStorage.setItem("downloadResult","downloadResult");
-					setTimeout("$('.reDownloadDIV').html('データを再ダウンロード')",3000);
+					setTimeout("$('.reDownloadDIVCLS').html('データを再ダウンロード')",3000);
 					setTimeout("$('.ReDownloadBtn').html('データを再ダウンロード')",3000);
 					window.location.href = pageName;
 					window.location.href = "#downloadFailDialog";
@@ -113,7 +113,7 @@ $.fn.cancelDownload = function() {
 		window.location.href = localStorage.getItem("pageName");
 		// loading画像を表示しない
 		// $("#downloading").css("display", "none");
-		setTimeout("$('.reDownloadDIV').html('データを再ダウンロード')",3000);
+		setTimeout("$('.reDownloadDIVCLS').html('データを再ダウンロード')",3000);
 		setTimeout("$('.ReDownloadBtn').html('データを再ダウンロード')",3000);
 		initUserData();
 		$("#posters").html("");
@@ -124,8 +124,8 @@ $.fn.cancelDownload = function() {
 $.fn.reDownload = function() {
 	$(this).on("touchstart", function(e){
 		$(".downloading").css("display", "inline");
-		$(".reDownloadDIV").html("<img src='img/loading.gif' style='zoom: 18%;'>データ読み込み中");
-		$(".ReDownloadBtn").html("<img src='img/loading.gif' style='zoom: 18%;'>データ読み込み中");
+		$(".reDownloadDIVCLS").html("<img src='img/loading.gif' style='height:100%;'>データ読み込み中");
+		$(".ReDownloadBtn").html("<img src='img/loading.gif' style='height:100%;vertical-align: middle;'>データ読み込み中");
 		downloadPoster(localStorage.getItem("pageName"));
 		$("#posters").html("");
 	});
@@ -135,8 +135,8 @@ $.fn.reDownload = function() {
 $.fn.reDownloadFun = function() {
 	$(this).on("touchstart", function(e){
 		var pageName = "#" + window.location.href.split("#")[1];
-		$("#reDownloadDIV").html("<img src='img/loading.gif' style='zoom: 18%;'>データ読み込み中");
-		$(".ReDownloadBtn").html("<img src='img/loading.gif' style='zoom: 18%;'>データ読み込み中");
+		$("#reDownloadDIV").html("<img src='img/loading.gif' style='height:100%;'>データ読み込み中");
+		$(".ReDownloadBtn").html("<img src='img/loading.gif' style='height:100%;vertical-align: middle;'>データ読み込み中");
 		sessionStorage.setItem("clickDiv", "clickDiv");
 		downloadPoster(pageName);
 	});
