@@ -109,7 +109,7 @@ function isValidLocalStorage() {
 
 //「ダウンロード失敗」ダイアログの「cancel」をクリックする時呼び出す
 $.fn.cancelDownload = function() {
-	$(this).on("touchstart", function(e){
+	$(this).on("click", function(e){
 		window.location.href = localStorage.getItem("pageName");
 		// loading画像を表示しない
 		// $("#downloading").css("display", "none");
@@ -122,7 +122,7 @@ $.fn.cancelDownload = function() {
 
 //「ダウンロード失敗」ダイアログの「再ダウンロード」をクリックする時呼び出す
 $.fn.reDownload = function() {
-	$(this).on("touchstart", function(e){
+	$(this).on("click", function(e){
 		$(".downloading").css("display", "inline");
 		$(".reDownloadDIVCLS").html("<img src='img/loading.gif' style='height:1.0em;vertical-align: middle;'>データ読み込み中");
 		$(".ReDownloadBtn").html("<img src='img/loading.gif' style='height:100%;vertical-align: middle;'>データ読み込み中");
@@ -133,7 +133,7 @@ $.fn.reDownload = function() {
 
 //「データ読み込み中」divをクリックする時呼び出す
 $.fn.reDownloadFun = function() {
-	$(this).on("touchstart", function(e){
+	$(this).on("click", function(e){
 		var pageName = "#" + window.location.href.split("#")[1];
 		$(".reDownloadDIVCLS").html("<img src='img/loading.gif' style='height:1.0em;vertical-align: middle;'>データ読み込み中");
 		$(".ReDownloadBtn").html("<img src='img/loading.gif' style='height:100%;vertical-align: middle;'>データ読み込み中");

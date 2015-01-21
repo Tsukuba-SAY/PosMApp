@@ -1,6 +1,6 @@
 // セッションテーブルからセッションリストに飛ぶやつ
 $.fn.jumpToPresen = function() {
-	$(this).on("touchstart", function() {
+	$(this).on("click", function() {
 		var id = $(this).attr("id");
 		var sessionid = id.substr(10);
 		sessionStorage.setItem("gotosessionid",sessionid);

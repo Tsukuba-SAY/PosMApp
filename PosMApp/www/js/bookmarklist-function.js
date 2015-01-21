@@ -63,7 +63,7 @@ $.fn.showBookmarkList = function() {
 
 //ポスターリスト画面の各「詳細情報」ボタンをクリックする時
 $.fn.bookmarklistToDetailPage = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
 		var presenid = e.target.id.substring(20);
 		sessionStorage.setItem("previousPage", "bookmarkListPage");
@@ -73,7 +73,7 @@ $.fn.bookmarklistToDetailPage = function() {
 
 //ポスターリスト画面の各「これどこ？」ボタンをクリックする時
 $.fn.bookmarklistToMapPage = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(17));
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
@@ -85,7 +85,7 @@ $.fn.bookmarklistToMapPage = function() {
 };
 
 $.fn.deletebookmark = function(){
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		var r = confirm("ブックマークを削除してよろしいですか？");
 		if (r === true){
 			// ポスターのIDを取得する
