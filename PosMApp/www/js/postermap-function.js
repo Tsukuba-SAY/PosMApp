@@ -663,3 +663,7 @@ function getPosterid(presenid) {
 	return posterid;
 }
 
+function effectPosterIcon() {
+	// effect, duration, option
+	$("#icon1").toggle("puff", 300, 150);
+}
