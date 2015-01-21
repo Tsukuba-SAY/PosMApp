@@ -20,7 +20,8 @@ function downloadPoster(pageName){
 }
 
 function ajaxdownload(pageName){
-	if(!localStorage.getItem("downloadSuccess")){
+	var flag = localStorage.getItem("downloadSuccess");
+	if(flag === "false" || flag === null){
 		$.ajax({
 		   		url: "http://posmapp.tk/api/data.php",
 				type: "POST",
