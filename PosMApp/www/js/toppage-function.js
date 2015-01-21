@@ -38,6 +38,7 @@ $.fn.goToTopPage = function(ev) {
 
 function changePage(pagename) {
 	saveLog("show_page", {page:pagename});
+	resetZoom();
 	$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 	$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 	$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
