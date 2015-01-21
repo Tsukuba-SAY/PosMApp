@@ -124,7 +124,7 @@ $.fn.cancelDownload = function() {
 $.fn.reDownload = function() {
 	$(this).on("touchstart", function(e){
 		$(".downloading").css("display", "inline");
-		$(".reDownloadDIVCLS").html("<img src='img/loading.gif' style='height:100%;'>データ読み込み中");
+		$(".reDownloadDIVCLS").html("<img src='img/loading.gif' style='height:1.0em;vertical-align: middle;'>データ読み込み中");
 		$(".ReDownloadBtn").html("<img src='img/loading.gif' style='height:100%;vertical-align: middle;'>データ読み込み中");
 		downloadPoster(localStorage.getItem("pageName"));
 		$("#posters").html("");
@@ -135,7 +135,7 @@ $.fn.reDownload = function() {
 $.fn.reDownloadFun = function() {
 	$(this).on("touchstart", function(e){
 		var pageName = "#" + window.location.href.split("#")[1];
-		$("#reDownloadDIV").html("<img src='img/loading.gif' style='height:100%;'>データ読み込み中");
+		$(".reDownloadDIVCLS").html("<img src='img/loading.gif' style='height:1.0em;vertical-align: middle;'>データ読み込み中");
 		$(".ReDownloadBtn").html("<img src='img/loading.gif' style='height:100%;vertical-align: middle;'>データ読み込み中");
 		sessionStorage.setItem("clickDiv", "clickDiv");
 		downloadPoster(pageName);
