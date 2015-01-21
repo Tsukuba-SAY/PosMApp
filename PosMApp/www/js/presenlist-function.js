@@ -158,7 +158,10 @@ function listToMap(posterid){
 	pflag[posterid] = nextFlag;
 	showPosterIcons();
 	// searchByTitle(sessionStorage.getItem("searchWord"));
-	searchAll(sessionStorage.getItem("searchWord"));
+	var word = sessionStorage.getItem("searchWord");
+	if (word !== "" && word !== null) {
+		searchAll(sessionStorage.getItem("searchWord"));
+	}
 }
 
 //ポスターリストからブックマークアイコンをクリックする
