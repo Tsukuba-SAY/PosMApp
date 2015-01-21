@@ -45,7 +45,7 @@ $.fn.goToDetailPage = function(ev) {
 
 // 各ポスターアイコンのタッチイベント
 $.fn.touchPoster = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(4));
 		saveLog("poster_tap", {posterid:posterid});
@@ -59,7 +59,7 @@ $.fn.touchPoster = function() {
 
 // 基本情報画面を閉じる
 $.fn.closeBasicInfo = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		changeBasicInfoPanel(false);
 		saveLog("basicinfo_tap", {posterid:sessionStorage.getItem("posterid")});
 		unselectPoster();
@@ -70,7 +70,7 @@ $.fn.closeBasicInfo = function() {
 
 // ラベルを変更する
 $.fn.changeLabel = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		// 押されたボタンのidを取得する
 		var id = $(this).attr("id");
 		// idの"-"より後がposterテーブルの属性と対応しているので、それを渡す
@@ -83,7 +83,7 @@ $.fn.changeLabel = function() {
 
 // ブックマークスターのタッチイベント
 $.fn.touchBookmark = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		var presenid = sessionStorage.getItem("presenid");
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
 		touchBookmark(presenid, bookmarkIcon);

@@ -100,7 +100,7 @@ function init() {
 	showBookmarkIcons();
 
 	// 詳細情報画面を表示する
-	$("#detailinfobutton").goToDetailPage("touchstart");
+	$("#detailinfobutton").goToDetailPage("click");
 
 	// 各ポスターアイコンのタッチイベント
 	$(".postericon").touchPoster();
@@ -127,10 +127,10 @@ function init() {
 
 
 	// トップページ
-	$("#goToMap").goToMapPage("touchstart");
-	$("#goToList").goToListPage("touchstart");
-	$("#goToInformation").goToInformationPage("touchstart");
-	$("#goToBookmarkList").goToBookmarkListPage("touchstart");
+	$("#goToMap").goToMapPage("click");
+	$("#goToList").goToListPage("click");
+	$("#goToInformation").goToInformationPage("click");
+	$("#goToBookmarkList").goToBookmarkListPage("click");
 	
 	// ポスターリスト画面のボタン
 	$(".listToMapBtn").jumpToMapPage();
@@ -146,11 +146,11 @@ function init() {
 	$("#detailBackButton").backToPreviousPage();
 
 	// タブバー
-	$(".topPageButton").goToTopPage("touchstart");
-	$(".posterMapPageButton").goToMapPage("touchstart");
-	$(".presenListPageButton").goToListPage("touchstart");
-	$(".bookmarkListPageButton").goToBookmarkListPage("touchstart");	
-	$(".informationPageButton").goToInformationPage("touchstart");
+	$(".topPageButton").goToTopPage("click");
+	$(".posterMapPageButton").goToMapPage("click");
+	$(".presenListPageButton").goToListPage("click");
+	$(".bookmarkListPageButton").goToBookmarkListPage("click");	
+	$(".informationPageButton").goToInformationPage("click");
 
 	// セッションリストから発表リストに飛ぶ
 	$(".jumpToPresen").jumpToPresen();

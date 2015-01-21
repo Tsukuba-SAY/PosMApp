@@ -92,7 +92,7 @@ $.fn.showPresenList = function() {
 
 //ポスターリスト画面の各「詳細情報」ボタンをクリックする時
 $.fn.jumpToDetailPage = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
 		var presenid = e.target.id.substring(12);
 		sessionStorage.setItem("previousPage", "presenListPage");
@@ -102,7 +102,7 @@ $.fn.jumpToDetailPage = function() {
 
 //ポスターリスト画面の各「これどこ？」ボタンをクリックする時
 $.fn.jumpToMapPage = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
 		var posterid = Number(e.target.id.substring(9));
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
@@ -163,7 +163,7 @@ function listToMap(posterid){
 
 //ポスターリストからブックマークアイコンをクリックする
 $.fn.listchangebookmark = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
 		var presenid = e.target.id.substring(12);
 		var bookmarkIcon = document.getElementById("listbookmark"+presenid);
