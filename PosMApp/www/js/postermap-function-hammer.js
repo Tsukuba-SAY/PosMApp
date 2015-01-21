@@ -13,7 +13,7 @@ function initHammer() {
     mc = new Hammer.Manager($("#mapFrame")[0]);
 
     $("#resetScaleButtonFrame").css("display", "none");
-    $("#resetScaleButton").on("touchstart", resetZoom);
+    $("#resetScaleButton").on("click", resetZoom);
     $(".posterfont").css("display", "none");
 
     var $mapMain = $("#mapMain");
@@ -29,7 +29,7 @@ function initHammer() {
             .css("top", area.y*INIT_SCALE)
             .css("width", area.width*INIT_SCALE)
             .css("height", area.height*INIT_SCALE)
-            .on("touchstart", function() {
+            .on("click", function() {
                 zoomMap(area);
             });
         $mapMain.append($divarea);
