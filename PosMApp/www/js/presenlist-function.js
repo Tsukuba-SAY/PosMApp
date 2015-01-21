@@ -153,7 +153,6 @@ function listToMap(posterid){
 	removeAllPosterInfo();
 
 	effectPosterIcon(posterid);
-	$icon.toggle("puff", 300, 150);
 
 	changePage("#posterMapPage");
 	resetAllIcons();
