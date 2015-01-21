@@ -665,9 +665,3 @@ function getPosterid(presenid) {
 	}
 	return posterid;
 }
-
-function effectPosterIcon(postericon) {
-	// effect, duration, option
-	$("#icon" + postericon).toggle("puff", 300, 150);
-	$("#icon" + postericon).toggle("puff", 300, 150);
-}
