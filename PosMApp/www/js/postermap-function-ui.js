@@ -2,8 +2,9 @@ function closePanel($obj) {
 	$obj.panel("close");
 }
 
-function effectPosterIcon(postericon) {
+function effectPosterIcon(posterid) {
 	// effect, duration, option
-	$("#icon" + postericon).toggle("puff", 300, 150);
-	$("#icon" + postericon).toggle("puff", 300, 150);
+	$icon = $("#icon" + posterid);
+	$icon.toggle("puff", 300, 150);
+	$icon.toggle("puff", 300, 150);
 }

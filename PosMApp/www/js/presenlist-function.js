@@ -152,13 +152,19 @@ function listToMap(posterid){
 	//sessionStorageの中に存在している情報の削除
 	removeAllPosterInfo();
 
+	effectPosterIcon(posterid);
+	$icon.toggle("puff", 300, 150);
+
 	changePage("#posterMapPage");
 	resetAllIcons();
 	var nextFlag = touchPoster(posterid);
 	pflag[posterid] = nextFlag;
 	showPosterIcons();
-	// searchByTitle(sessionStorage.getItem("searchWord"));
-	searchAll(sessionStorage.getItem("searchWord"));
+
+	var word = sessionStorage.getItem("searchWord");
+	if (word !== "" && word !== null) {
+		searchAll(sessionStorage.getItem("searchWord"));
+	}
 }
 
 //ポスターリストからブックマークアイコンをクリックする
