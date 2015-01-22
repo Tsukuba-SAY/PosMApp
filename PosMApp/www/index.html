@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.4.2.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/lib/slicknav.css" />
 	<link rel="stylesheet" type="text/css" href="css/button-icon.css" />
-	<link rel="stylesheet" type="text/css" href="css/icon.css" />
+	<link rel="stylesheet" type="text/css" href="css/map.css" />
 	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
 	<link rel="stylesheet" type="text/css" href="css/list.css" />
 	<link rel="stylesheet" type="text/css" href="css/taparea.css" />
@@ -126,13 +126,17 @@
 			href="#posterMapPage" data-role="button">所属</a>
 	</div>
 	<div data-role="header"　data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
-		<div class="ui-grid-a">
-			<div class="ui-block-a" style="width: 75%;">
+		<div class="ui-grid-b">
+			<div class="ui-block-a" style="width: 65%;">
 				<input type="search" id="search-bar-title" 
 	    		placeholder="検索" data-inline="true" style="width:80%;" onchange="searchChanged(this)"/>
 			</div>
-			<div class="ui-block-b" style="width: 25%;">
-				<a href="#menuPanel"  data-icon="bars"  class="ui-btn ui-btn-right"  data-iconpos="notext">Menu</a>
+			<div class="ui-block-b" style="width: 10%;">
+				<div id="searchResult"></div>
+			</div>
+			<div class="ui-block-c" style="width: 25%;">
+				<a href="#menuPanel"  class="ui-btn" 
+          style="vertical-align:center; top:3.5px;">メニュー</a>
 			</div>
 		</div>
 	</div>  
@@ -140,9 +144,9 @@
 			<a data-role="button" class="ReDownloadBtn">データを再読み込み</a>
 		<div id="subheader" style="top: 0px;">
 			<!-- 検索結果件数 -->
-			<div id="searchResult"
+			<!--<div id="searchResult"
 				style="position: fixed; z-index: 100;">
-			</div>
+			</div>-->
 			<!-- エリアタップ後のズームアウトボタン -->
 			<div id="resetScaleButtonFrame" data-position="fixed" style="border: 2px;">
 				<a id="resetScaleButton" data-role="button"

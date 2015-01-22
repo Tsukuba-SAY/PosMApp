@@ -584,11 +584,8 @@ function searchAll(word) {
 
 	emphasisSearchedPosters(posterids);
 
-	if (posterids.length === 0) {
-		document.getElementById("searchResult").innerHTML = "見つかりませんでした";
-	} else {
-		document.getElementById("searchResult").innerHTML = posterids.length + "件見つかりました";
-	}
+	document.getElementById("searchResult").innerHTML = 
+		'<span id="searchResultText" class="ui-li-count" style="right:initial">'+posterids.length + "件</span>";
 
 	return pflag;
 }
