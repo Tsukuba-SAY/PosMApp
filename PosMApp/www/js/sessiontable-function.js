@@ -11,7 +11,7 @@ $.fn.jumpToPresen = function() {
 		        $(this).change();
 		    }
 		});
-		showPresenList();
+		$('presenListPage').showPresenList();
 		$(document).on("pageshow", "#presenListPage", scrollToTr);
 		changePage("#presenListPage");
 	});
