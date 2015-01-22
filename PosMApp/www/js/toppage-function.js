@@ -45,7 +45,7 @@ function changePage(pagename) {
 	$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 	$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	$("." + pagename.substring(1) + "Button").addClass("ui-btn-active ui-state-persist");
-	$("#bookmarkList").showBookmarkList();
+	// showBookmarkList();
 	window.location.href = pagename;
 	return pagename;
 }

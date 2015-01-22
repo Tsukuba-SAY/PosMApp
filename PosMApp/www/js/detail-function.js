@@ -6,6 +6,13 @@ $.fn.backToPreviousPage = function() {
 			prev = "posterMapPage";
 		}
 		changePage("#" + prev);
+		$("#presenList").html("");
+		if (sessionStorage.getItem("listClick") == "presenlist") {
+			showPresenList();
+		}else{
+			showBookmarkList();
+		}
+		
 		// window.location.href = "#" + prev;
 		// window.history.back();
 	});

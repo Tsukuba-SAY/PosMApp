@@ -122,8 +122,8 @@ function init() {
 
 	// ---------- 詳細情報画面 ----------
 	setDetails();
-	$("#presenList").showPresenList();
-	$("#bookmarkList").showBookmarkList();
+	
+	// $("#bookmarkList").showBookmarkList();
 
 
 	// トップページ
@@ -132,15 +132,16 @@ function init() {
 	$("#goToInformation").goToInformationPage("click");
 	$("#goToBookmarkList").goToBookmarkListPage("click");
 	
+	showPresenList();
+	//リスト切替ボタン
+	$("#listchangeBtn").change(function() {
+    	changeShowList();
+	});
+	
 	// ポスターリスト画面のボタン
 	$(".listToMapBtn").jumpToMapPage();
 	$(".listToDetailBtn").jumpToDetailPage();
 	$(".listbookmarkbutton").listchangebookmark();
-
-    // ブックマークリスト画面のボタン
-    $(".bookmarklistToMapBtn").bookmarklistToMapPage();
-	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
-	$(".bookmarklistbookmarkbutton").deletebookmark();
 
 	// 詳細表示画面の戻るボタン
 	$("#detailBackButton").backToPreviousPage();

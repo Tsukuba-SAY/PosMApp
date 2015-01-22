@@ -1,5 +1,5 @@
 // 発表の一覧を表示する
-$.fn.showPresenList = function() {
+function showPresenList() {
 	if (presen !== null) {
 		var presens = [];
 		presens["posterid"] = [];
@@ -81,7 +81,7 @@ $.fn.showPresenList = function() {
 
 		str += '</table>'
 
-		$(this).html(str);
+		$("#presenList").html(str);
 
 		sessionStorage.setItem("testSessionNum",testSessionNum);
 
@@ -96,6 +96,7 @@ $.fn.jumpToDetailPage = function() {
 		// ポスターのIDを取得する
 		var presenid = e.target.id.substring(12);
 		sessionStorage.setItem("previousPage", "presenListPage");
+		sessionStorage.setItem("listClick", "presenlist");
 		listToDetail(presenid);
 	});
 };
@@ -138,6 +139,7 @@ function listToDetail(presenid){
 			sessionStorage.setItem("authorbelongs", getAuthorbelongs(presenid));
 		}
 	});
+
 
 	//画面遷移ファクションを呼び出す
 	setDetails();
@@ -208,4 +210,24 @@ function scrollToPresen(presenid) {
 	var position = target.offset().top;
 	var speed = 400;
 	$('body,html').animate({scrollTop:position}, speed, 'swing');
+}
+
+//リストの入れ替え
+function changeShowList(){
+	if ($("#listchangeBtn").val() == "presen") {
+		$("#presenList").html("");
+		showPresenList();
+		//event
+		$(".listToMapBtn").jumpToMapPage();
+		$(".listToDetailBtn").jumpToDetailPage();
+		$(".listbookmarkbutton").listchangebookmark();
+	}else{
+		$("#presenList").html("");
+		showBookmarkList();
+		//event
+		$(".bookmarklistToMapBtn").bookmarklistToMapPage();
+		$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+		$(".bookmarklistbookmarkbutton").deletebookmark();
+	}
+	
 }
