@@ -136,9 +136,10 @@ function init() {
 	$("#goToMap").goToMapPage("click");
 	$("#goToList").goToListPage("click");
 	$("#goToInformation").goToInformationPage("click");
-	$("#goToBookmarkList").goToVenuePage("click");
+	$("#goToVenue").goToVenuePage("click");
 	
 	showPresenList();
+	
 	//リスト切替ボタン
 	$("#listchangeBtn").change(function() {
     	changeShowList();
@@ -200,7 +201,7 @@ function init() {
 			$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
 			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
-		case "#bookmarkListPage":
+		case "#venuePage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");

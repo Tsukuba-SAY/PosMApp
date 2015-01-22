@@ -48,10 +48,10 @@ describe("トップページ", function() {
 		resetDelta();
 
 		loadFixtures("fixture-toppage.html");
+		$("#goToInformation").goToInformationPage("click");
 		$("#goToMap").goToMapPage("click");
 		$("#goToList").goToListPage("click");
-		$("#goToInformation").goToInformationPage("click");
-		$("#goToBookmarkList").goToBookmarkListPage("click");
+		$("#goToVenue").goToVenuePage("click");
 	});
 	it("トップページからポスターマップ画面に遷移できる", function() {
 		$("#goToMap").click();
@@ -61,13 +61,13 @@ describe("トップページ", function() {
 		$("#goToList").click();
 		expect(window.location.hash).toEqual("#presenListPage");
 	});
-	it("トップページから発表リスト画面に遷移できる", function() {
+	it("トップページからタイムテーブルに遷移できる", function() {
 		$("#goToInformation").click();
 		expect(window.location.hash).toEqual("#informationPage");
 	});
-	it("トップページからブックマークリスト画面に遷移できる", function() {
-		$("#goToBookmarkList").click();
-		expect(window.location.hash).toEqual("#bookmarkListPage");
+	it("トップページから会場マップ図に遷移できる", function() {
+		$("#goToVenue").click();
+		expect(window.location.hash).toEqual("#venuePage");
 	});
 });
 
