@@ -46,3 +46,8 @@
   	background-size: 18px 18px;
   	box-shadow:none;
 }
+.ui-icon-venue {
+  background: url("../img/tabbar/venue.png") 50% 25% no-repeat;
+    background-size: 18px 18px;
+    box-shadow:none;
+}

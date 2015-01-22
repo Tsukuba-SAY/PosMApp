@@ -122,25 +122,26 @@ function init() {
 
 	// ---------- 詳細情報画面 ----------
 	setDetails();
-	$("#presenList").showPresenList();
-	$("#bookmarkList").showBookmarkList();
+	
+	// $("#bookmarkList").showBookmarkList();
 
 
 	// トップページ
 	$("#goToMap").goToMapPage("click");
 	$("#goToList").goToListPage("click");
 	$("#goToInformation").goToInformationPage("click");
-	$("#goToBookmarkList").goToBookmarkListPage("click");
+	$("#goToBookmarkList").goToVenuePage("click");
+	
+	showPresenList();
+	//リスト切替ボタン
+	$("#listchangeBtn").change(function() {
+    	changeShowList();
+	});
 	
 	// ポスターリスト画面のボタン
 	$(".listToMapBtn").jumpToMapPage();
 	$(".listToDetailBtn").jumpToDetailPage();
 	$(".listbookmarkbutton").listchangebookmark();
-
-    // ブックマークリスト画面のボタン
-    $(".bookmarklistToMapBtn").bookmarklistToMapPage();
-	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
-	$(".bookmarklistbookmarkbutton").deletebookmark();
 
 	// 詳細表示画面の戻るボタン
 	$("#detailBackButton").backToPreviousPage();
@@ -149,7 +150,7 @@ function init() {
 	$(".topPageButton").goToTopPage("click");
 	$(".posterMapPageButton").goToMapPage("click");
 	$(".presenListPageButton").goToListPage("click");
-	$(".bookmarkListPageButton").goToBookmarkListPage("click");	
+	$(".venuePageButton").goToVenuePage("click");	
 	$(".informationPageButton").goToInformationPage("click");
 
 	// セッションリストから発表リストに飛ぶ
@@ -175,14 +176,14 @@ function init() {
 		case "#posterMapPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		case "#presenListPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".presenListPageButton").addClass("ui-btn-active ui-state-persist");
 			$(".infromationPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
@@ -191,13 +192,13 @@ function init() {
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
-			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		case "#bookmarkListPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".bookmarkListPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".venuePageButton").addClass("ui-btn-active ui-state-persist");
 			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		default:
@@ -205,7 +206,7 @@ function init() {
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 	}
 }

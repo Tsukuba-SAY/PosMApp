@@ -1,5 +1,5 @@
  // ブックマークした発表の一覧を表示する
-$.fn.showBookmarkList = function() {
+function showBookmarkList() {
 	var presens = [];
 	presens["posterid"] = [];
 	presens["presenid"] = [];
@@ -51,11 +51,11 @@ $.fn.showBookmarkList = function() {
 		str += '</table>'
 	}
 
-	$(this).html(str);
+	$("#presenList").html(str);
 
-	$(".bookmarklistToMapBtn").bookmarklistToMapPage();
-	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
-	$(".bookmarklistbookmarkbutton").deletebookmark();
+	// $(".bookmarklistToMapBtn").bookmarklistToMapPage();
+	// $(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+	// $(".bookmarklistbookmarkbutton").deletebookmark();
 
 	return presens;
 };
@@ -66,7 +66,8 @@ $.fn.bookmarklistToDetailPage = function() {
 	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
 		var presenid = e.target.id.substring(20);
-		sessionStorage.setItem("previousPage", "bookmarkListPage");
+		sessionStorage.setItem("previousPage", "presenListPage");
+		sessionStorage.setItem("listClick", "bookmarklist");
 		listToDetail(presenid);
 	});
 };
@@ -78,7 +79,7 @@ $.fn.bookmarklistToMapPage = function() {
 		var posterid = Number(e.target.id.substring(17));
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+		$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 		listToMap(posterid);
 	});
