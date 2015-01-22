@@ -5,21 +5,10 @@ $.fn.backToPreviousPage = function() {
 		if (prev === null || prev === undefined) {
 			prev = "posterMapPage";
 		}
+
+		changeShowList($("#listChangeBtn").val());
+
 		changePage("#" + prev);
-		$("#presenList").html("");
-		if (sessionStorage.getItem("listClick") == "presenlist") {
-			showPresenList();
-			//event
-			$(".listToMapBtn").jumpToMapPage();
-			$(".listToDetailBtn").jumpToDetailPage();
-			$(".listbookmarkbutton").listchangebookmark();
-		}else{
-			showBookmarkList();
-			//event
-			$(".bookmarklistToMapBtn").bookmarklistToMapPage();
-			$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
-			$(".bookmarklistbookmarkbutton").deletebookmark();
-		}
 		
 		// window.location.href = "#" + prev;
 		// window.history.back();
