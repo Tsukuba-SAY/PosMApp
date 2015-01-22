@@ -137,21 +137,27 @@ function init() {
 	$("#goToList").goToListPage("click");
 	$("#goToInformation").goToInformationPage("click");
 	$("#goToVenue").goToVenuePage("click");
-	
-	showPresenList();
-	// $("#presenList").showPresenList();
-	// $("#bookmarkList").showBookmarkList();
-	
-	
-	//リスト切替ボタン
-	$("#listChangeBtn").change(function(e) {
-    	changeShowList($(this).val());
-	});
-	
+
+	$("#presenList").showPresenList();
+
 	// ポスターリスト画面のボタン
 	$(".listToMapBtn").jumpToMapPage();
 	$(".listToDetailBtn").jumpToDetailPage();
 	$(".listbookmarkbutton").listchangebookmark();
+
+	$("#bookmarkList").showBookmarkList();
+
+	// ブックマークリスト画面のボタン
+    $(".bookmarklistToMapBtn").bookmarklistToMapPage();
+	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+	$(".bookmarklistbookmarkbutton").deletebookmark();
+
+	//リスト切替ボタン
+	$("#listChangeBtn").change(function(e) {
+    	changeShowList($(this).val());
+	});
+	changeShowList("presen");
+
 
 	// 詳細表示画面の戻るボタン
 	$("#detailBackButton").backToPreviousPage();

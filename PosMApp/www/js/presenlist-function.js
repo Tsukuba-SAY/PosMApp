@@ -1,5 +1,5 @@
 // 発表の一覧を表示する
-function showPresenList() {
+$.fn.showPresenList = function() {
 	if (presen !== null) {
 		var presens = [];
 		presens["posterid"] = [];
@@ -88,7 +88,7 @@ function showPresenList() {
 		return presens;
 	}
 	return presens;
-}
+};
 
 //ポスターリスト画面の各「詳細情報」ボタンをクリックする時
 $.fn.jumpToDetailPage = function() {
@@ -213,21 +213,12 @@ function scrollToPresen(presenid) {
 }
 
 //リストの入れ替え
-function changeShowList(){
-	if ($("#listchangeBtn").val() == "presen") {
-		$("#presenList").html("");
-		showPresenList();
-		//event
-		$(".listToMapBtn").jumpToMapPage();
-		$(".listToDetailBtn").jumpToDetailPage();
-		$(".listbookmarkbutton").listchangebookmark();
-	}else{
-		$("#presenList").html("");
-		showBookmarkList();
-		//event
-		$(".bookmarklistToMapBtn").bookmarklistToMapPage();
-		$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
-		$(".bookmarklistbookmarkbutton").deletebookmark();
-	}
-	
+function changeShowList(val){
+	if (val == "presen") {
+		$("#presenList").show();
+		$("#bookmarkList").hide();
+	} else {
+		$("#presenList").hide();
+		$("#bookmarkList").show();
+	}	
 }
