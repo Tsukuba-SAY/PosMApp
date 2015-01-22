@@ -68,28 +68,28 @@
 		<div class="ui-grid-a">
 			<div class="ui-block-a">
 				<div align="center">
-					<img id="goToMap" class="topmenuicon" src="img/topmenu/map.png"></img>
-					<div class="topMenuIconLabel">ポスターマップ</div>
+					<img id="goToInformation" class="topmenuicon" src="img/topmenu/schedule.png"></img>
+					<div class="topMenuIconLabel">タイムテーブル</div>
 				</div>
 			</div>
 			<div class="ui-block-b">
+				<div align="center">
+					<img id="goToBookmarkList" class="topmenuicon" src="img/topmenu/venue.png"></img>
+					<div class="topMenuIconLabel">会場図</div>
+				</div>
+			</div>	
+		</div>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
 				<div align="center">
 					<img id="goToList" class="topmenuicon" src="img/topmenu/list.png"></img>
 					<div class="topMenuIconLabel">発表リスト</div>
 				</div>
 			</div>
-		</div>
-		<div class="ui-grid-a">
-			<div class="ui-block-a">
-				<div align="center">
-					<img id="goToBookmarkList" class="topmenuicon" src="img/topmenu/bookmark.png"></img>
-					<div class="topMenuIconLabel">ブックマークリスト</div>
-				</div>
-			</div>
 			<div class="ui-block-b">
 				<div align="center">
-					<img id="goToInformation" class="topmenuicon" src="img/topmenu/schedule.png"></img>
-					<div class="topMenuIconLabel">プログラム</div>
+					<img id="goToMap" class="topmenuicon" src="img/topmenu/map.png"></img>
+					<div class="topMenuIconLabel">ポスターマップ</div>
 				</div>
 			</div>
 		</div>
@@ -177,10 +177,11 @@
 		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
 			<ul>
 				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
-				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
-				<li><a class="presenListPageButton" id="list" data-icon="list">リスト</a></li>
-				<li><a class="bookmarkListPageButton"  id="bookmark"  data-icon="bookmark" >ブックマーク</a></li>
-				<li><a class="informationPageButton" id="information" data-icon="informationgray">プログラム</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
+				<li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>	
+				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>
+				
 			</ul>
 		</div>
 	</div>
@@ -209,10 +210,11 @@
 		<div data-role="navbar" height="100%" class="nav-tabicon" data-grid="d">
 			<ul>
 				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
-				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
-				<li><a class="presenListPageButton" id="list" data-icon="list">リスト</a></li>
-				<li><a class="bookmarkListPageButton"  id="bookmark"  data-icon="bookmark" >ブックマーク</a></li>
-				<li><a class="informationPageButton" id="information" data-icon="informationgray">プログラム</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
+				<li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>
+				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>
+				
 			</ul>
 		</div>
 	</div>
@@ -254,19 +256,20 @@
 		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
 			<ul>
 				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
-				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
-				<li><a class="presenListPageButton" id="list" data-icon="list">リスト</a></li>
-				<li><a class="bookmarkListPageButton"  id="bookmark"  data-icon="bookmark" >ブックマーク</a></li>
-				<li><a class="informationPageButton" id="information" data-icon="informationgray">プログラム</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
+				<li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>
+				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>
+				
 			</ul>
 		</div>
 	</div>
 </div>
 
 <!-- ブックマークリスト画面 -->
-<div data-role="page" id="bookmarkListPage" data-position="fixed">
+<div data-role="page" id="venuePage" data-position="fixed">
 	<div data-role="header">
-		<h1 style="text-align:center"　>ブックマークリスト</h1>
+		<h1 style="text-align:center"　>会場図</h1>
 	</div>
 	<div data-role="content">
 		<div style="overflow:auto; height:100%;">
@@ -279,10 +282,11 @@
 		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
 			<ul>
 				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
-				<li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
-				<li><a class="presenListPageButton" id="list" data-icon="list">リスト</a></li>
-				<li><a class="bookmarkListPageButton"  id="bookmark"  data-icon="bookmark" >ブックマーク</a></li>
-				<li><a class="informationPageButton" id="information" data-icon="informationgray">プログラム</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
+				<li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>
+				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>
+				
 			</ul>
 		</div>
 	</div>
@@ -437,10 +441,11 @@
     <div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
       <ul>
         <li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
-        <li><a class="posterMapPageButton" id="map" data-icon="map">マップ</a></li>
-        <li><a class="presenListPageButton" id="list" data-icon="list">リスト</a></li>
-        <li><a class="bookmarkListPageButton"  id="bookmark"  data-icon="bookmark" >ブックマーク</a></li>
-        <li><a class="informationPageButton" id="information" data-icon="informationgray">プログラム</a></li>
+        <li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
+        <li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
+        <li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>
+        <li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>
+        
       </ul>
     </div>
   </div>

@@ -65,3 +65,4 @@
 #list:after { background: transparent; background:  url("../img/tabbar/list_gray.png") 50% 50% no-repeat; background-size: 24px 16px;  }
 #bookmark:after { background: transparent; background:  url("../img/tabbar/bookmark_gray.png") 50% 50% no-repeat;  background-size: 12px 26px; }
 #information:after { background: transparent; background:  url("../img/tabbar/schedule.png") 50% 50% no-repeat;  background-size: 22px 27px; }
+#venue:after { background: transparent; background:  url("../img/tabbar/venue.png") 50% 50% no-repeat;  background-size: 22px 27px; }

@@ -20,10 +20,10 @@ $.fn.goToInformationPage = function(ev) {
 	});	
 };
 
-//ブックマークリスト画面に遷移
-$.fn.goToBookmarkListPage = function(ev) {
+//会場図画面に遷移
+$.fn.goToVenuePage = function(ev) {
 	$(this).on(ev, function() {
-		changePage("#bookmarkListPage");
+		changePage("#venuePage");
 	});	
 };
 
@@ -41,7 +41,7 @@ function changePage(pagename) {
 	resetZoom();
 	$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 	$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-	$(".bookmarkListPageButton").removeClass("ui-btn-active ui-state-persist");
+	$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
 	$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 	$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	$("." + pagename.substring(1) + "Button").addClass("ui-btn-active ui-state-persist");
