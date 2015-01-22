@@ -584,7 +584,8 @@ function searchAll(word) {
 
 	emphasisSearchedPosters(posterids);
 
-	document.getElementById("searchResult").innerHTML = posterids.length + "件";
+	document.getElementById("searchResult").innerHTML = 
+		'<span id="searchResultText">'posterids.length + "件</span>";
 
 	return pflag;
 }
