@@ -1,5 +1,5 @@
 $.fn.acceptCollectLog = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		console.log("collect log accept");
 
 		var uid = createUID();
@@ -15,7 +15,7 @@ $.fn.acceptCollectLog = function() {
 };
 
 $.fn.denyCollectLog = function() {
-	$(this).on("touchstart", function(e){
+	$(this).on("click", function(e){
 		console.log("collect log deny");
 
 		localStorage.setItem("accept_collect_log", false);
@@ -30,7 +30,7 @@ $.fn.denyCollectLog = function() {
 // ユーザのカテゴリ分け
 // 1.学生（受講者), 2.学生（見学者), 3.教員, 4.社会人・その他 
 $.fn.selectUserCategory = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		var id = e.target.id;
 		var category = id.substring(id.indexOf("-")+1);
 
