@@ -79,6 +79,8 @@ function zoomMap(area) {
     $("#resetScaleButtonFrame").css("display", "inline");
     $(".posterfont").css("display", "block");
     $(".bookmarkstar").sizeDownBookmarkStar();
+    $("#prevDayButton").hide();
+    $("#nextDayButton").hide();
 }
 
 function resetZoom() {
@@ -109,6 +111,7 @@ function resetZoom() {
     $(".mapArea").css("display", "inline");
     $(".posterfont").css("display", "none");
     $(".bookmarkstar").sizeUpBookmarkStar();
+    changePosterMapDate(Number(sessionStorage.getItem("currentPosterMapDate")));
 }
 
 function hammerOnMap() {

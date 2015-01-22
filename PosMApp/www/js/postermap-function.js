@@ -618,16 +618,17 @@ function setChangePosterMapDate() {
 	$("#nextDayButton").on("click", function(e) {
 		changePosterMapDate(2);
 	});
-	
 }
 
 // マップの日付を切り替える
 function changePosterMapDate(date) {
 	$("#mapImg").attr("src", "img/postermap_" + date + ".png");
 	if (date === 1) {
+		sessionStorage.setItem("currentPosterMapDate", "1");
 		$("#prevDayButton").hide();
 		$("#nextDayButton").show();
 	} else {
+		sessionStorage.setItem("currentPosterMapDate", "2");
 		$("#prevDayButton").show();
 		$("#nextDayButton").hide();
 	}
