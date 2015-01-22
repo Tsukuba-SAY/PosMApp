@@ -220,8 +220,12 @@
 
 <!-- 発表リスト画面 -->
 <div data-role="page" id="presenListPage" data-position="fixed">
+	<div data-role="popup" id="search-tips">
+		<p>Google Chromeでは、右上のメニューボタンから「ページ内検索」を選択することで、発表をキーワード検索することが出来ます。</p>
+	</div>
 	<div data-role="header">
-		<h1 style="text-align:center"　>発表リスト</h1>
+		<h1 style="text-align:center">発表リスト</h1>
+		<a href="#search-tips" data-rel="popup" class="ui-btn ui-btn-a ui-btn-right">検索のヒント</a>
 	</div>
 	<div data-role="content">
 			<a data-role="button" class="ReDownloadBtn">データを再読み込み</a>
