@@ -1,4 +1,5 @@
 // ローディング画面
+// TODO: 非同期化
 $(window).load(function() {
 	$("#loading").hide();
 })
@@ -6,9 +7,8 @@ $(window).load(function() {
 // HTMLが呼ばれた時の初期化処理
 $(init);
 
+// 初期化順は全体に影響するので、追加変更する場合は注意
 function init() {
-
-	$("#resetScaleButtonFrame").css("zoom", window.innerWidth/1200);
 
 	// トップページの大きさ調整
 	$("#topPageFrame")
@@ -43,12 +43,16 @@ function init() {
 	// none:非表示
 	if(localStorage.getItem("downloadSuccess")){
 		//topPageの「再ダウンロード」ボタンを隠す
-		$("#reDownloadDIV").css("display", "none");
+		$("#reDownloadDIV").hide();
 		//リスト画面とマップ画面のボタンを表示しない
-		$(".ReDownloadBtn").css("display", "none");
+		$(".ReDownloadBtn").hide();
 	}
 
 	initPosterMap();
+
+	// 会場の画像を1日目に変更
+	setChangePosterMapDate();
+	changePosterMapDate(1);
 
 	// 現在はWebSQLは使用していない
 	// initDB();
@@ -60,6 +64,8 @@ function init() {
 
 	// Hammer on stage
 	initHammer();
+
+	$("#resetScaleButtonFrame").css("zoom", window.innerWidth/1200);
 
 	// ポスターアイコンを表示
 	// TODO:showじゃなくて別の単語に変えたい

@@ -56,6 +56,24 @@
 
 }
 
+#prevDayButton {
+	position: absolute;
+	z-index: 80;
+	width: 2em;
+	height: 2em;
+	top: 50%;
+	left: 0%;
+}
+
+#nextDayButton {
+	position: absolute;
+	z-index: 80;
+	width: 2em;
+	height: 2em;
+	top: 50%;
+	right: 0%;
+}
+
 
 #basicinfo{
 	position: fixed;
