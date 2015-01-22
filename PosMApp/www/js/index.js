@@ -169,6 +169,9 @@ function init() {
 	// 星の大きさをリセット
 	$(".bookmarkstar").sizeUpBookmarkStar();
 
+	// 会場の画像を1日目に変更
+	changePosterMapDate(1);
+
 
 	// タブバーの選択表示を変更
 	var currentPage = window.location.hash;

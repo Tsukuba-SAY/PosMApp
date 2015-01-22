@@ -610,6 +610,11 @@ function setDetails() {
 	$("#detail-abstract").html(sessionStorage.getItem("abstract"));
 }
 
+// マップの日付を切り替える
+function changePosterMapDate(date) {
+	$("#mapImg").attr("src", "img/postermap_" + date + ".png");
+}
+
 // 代表者名を取得
 // 代表者名（所属）の形式に変更
 function getAuthorname(presenid) {
