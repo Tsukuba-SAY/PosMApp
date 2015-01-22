@@ -88,7 +88,7 @@ function showPresenList() {
 		return presens;
 	}
 	return presens;
-};
+}
 
 //ポスターリスト画面の各「詳細情報」ボタンをクリックする時
 $.fn.jumpToDetailPage = function() {

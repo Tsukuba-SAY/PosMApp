@@ -139,10 +139,13 @@ function init() {
 	$("#goToVenue").goToVenuePage("click");
 	
 	showPresenList();
+	// $("#presenList").showPresenList();
+	// $("#bookmarkList").showBookmarkList();
+	
 	
 	//リスト切替ボタン
-	$("#listchangeBtn").change(function() {
-    	changeShowList();
+	$("#listChangeBtn").change(function(e) {
+    	changeShowList($(this).val());
 	});
 	
 	// ポスターリスト画面のボタン
