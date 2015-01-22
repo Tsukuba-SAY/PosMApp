@@ -81,7 +81,10 @@ $.fn.showPresenList = function() {
 
 		str += '</table>'
 
-		$("#presenList").html(str);
+		$(this).html(str);
+		$(".listToMapBtn").jumpToMapPage();
+		$(".listToDetailBtn").jumpToDetailPage();
+		$(".listbookmarkbutton").listchangebookmark();
 
 		sessionStorage.setItem("testSessionNum",testSessionNum);
 

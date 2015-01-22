@@ -139,18 +139,7 @@ function init() {
 	$("#goToVenue").goToVenuePage("click");
 
 	$("#presenList").showPresenList();
-
-	// ポスターリスト画面のボタン
-	$(".listToMapBtn").jumpToMapPage();
-	$(".listToDetailBtn").jumpToDetailPage();
-	$(".listbookmarkbutton").listchangebookmark();
-
 	$("#bookmarkList").showBookmarkList();
-
-	// ブックマークリスト画面のボタン
-    $(".bookmarklistToMapBtn").bookmarklistToMapPage();
-	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
-	$(".bookmarklistbookmarkbutton").deletebookmark();
 
 	//リスト切替ボタン
 	$("#listChangeBtn").change(function(e) {
