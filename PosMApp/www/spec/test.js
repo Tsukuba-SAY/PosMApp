@@ -1272,10 +1272,10 @@ describe("発表リストからのブックマーク機能", function() {
 
 		loadFixtures("fixture-presenlist.html");
 		$("#presenList").showPresenList();
+		$("#bookmarkList").showBookmarkList();
 		localStorage.setItem("bookmarks", "");
 	});
 	it("何もブックマークされていない状態で、リストで、1番の星をタップすると、1番のポスターがブックマークされる", function() {
-		$("#listbookmarkA1-1").listchangebookmark();
 		$("#listbookmarkA1-1").trigger("click");
 		var expectBookmarks = "A1-1";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -1283,7 +1283,6 @@ describe("発表リストからのブックマーク機能", function() {
 	});
 	it("何もブックマークされていない状態で、リストで、すべての星をタップすると、すべてのポスターがブックマークされる", function() {
 		for (var i = 1; i <= poster.length; i++) {
-			$("#listbookmark"+poster[i-1].presenid).listchangebookmark();
 			$("#listbookmark"+poster[i-1].presenid).trigger("click");
 		}
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -1297,7 +1296,6 @@ describe("発表リストからのブックマーク機能", function() {
 	});
 	it("1番のポスターがブックマークされている状態で、リストで、1番の星をタップすると、何もブックマークされていない状態になる", function() {
 		localStorage.setItem("bookmarks", "A1-1");
-		$("#listbookmarkA1-1").listchangebookmark();
 		$("#listbookmarkA1-1").trigger("click");
 		var expectBookmarks = "";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -1305,7 +1303,6 @@ describe("発表リストからのブックマーク機能", function() {
 	});
 	it("1番のポスターがブックマークされている状態で、リストで、2番の星をタップすると、1,2番のポスターがブックマークされた状態になる", function() {
 		localStorage.setItem("bookmarks", "A1-1");
-		$("#listbookmarkA1-2").listchangebookmark();
 		$("#listbookmarkA1-2").trigger("click");
 
 		var expectBookmarks = "A1-1,A1-2";
@@ -1313,11 +1310,8 @@ describe("発表リストからのブックマーク機能", function() {
 		expect(bookmarks).toEqual(expectBookmarks);
 	});
 	it("何もブックマークされていない状態で、リストで、4,5,6番の星をタップすると、4,5,6番のポスターがブックマークされた状態になる", function() {
-		$("#listbookmarkA2-2").listchangebookmark();
 		$("#listbookmarkA2-2").trigger("click");
-		$("#listbookmarkA2-3").listchangebookmark();
 		$("#listbookmarkA2-3").trigger("click");
-		$("#listbookmarkA2-4").listchangebookmark();
 		$("#listbookmarkA2-4").trigger("click");
 		var expectBookmarks = "A2-2,A2-3,A2-4";
 		var bookmarks = localStorage.getItem("bookmarks");
@@ -1325,11 +1319,8 @@ describe("発表リストからのブックマーク機能", function() {
 	});
 	it("4番のポスターがブックマークされている状態で、リストで、4,5,6番の星をタップすると、5,6番のポスターがブックマークされた状態になる", function() {
 		localStorage.setItem("bookmarks", "A2-2");
-		$("#listbookmarkA2-2").listchangebookmark();
 		$("#listbookmarkA2-2").trigger("click");
-		$("#listbookmarkA2-3").listchangebookmark();
 		$("#listbookmarkA2-3").trigger("click");
-		$("#listbookmarkA2-4").listchangebookmark();
 		$("#listbookmarkA2-4").trigger("click");
 
 		var expectBookmarks = "A2-3,A2-4";
@@ -1338,11 +1329,8 @@ describe("発表リストからのブックマーク機能", function() {
 	});
 	it("5,6番のポスターがブックマークされている状態で、リストで、4,5,6番の星をタップすると、4番のポスターがブックマークされた状態になる", function() {
 		localStorage.setItem("bookmarks", "A2-3,A2-4");
-		$("#listbookmarkA2-2").listchangebookmark();
 		$("#listbookmarkA2-2").trigger("click");
-		$("#listbookmarkA2-3").listchangebookmark();
 		$("#listbookmarkA2-3").trigger("click");
-		$("#listbookmarkA2-4").listchangebookmark();
 		$("#listbookmarkA2-4").trigger("click");
 
 		var expectBookmarks = "A2-2";
@@ -1351,11 +1339,8 @@ describe("発表リストからのブックマーク機能", function() {
 	});
 	it("4,5,6番のポスターがブックマークされている状態で、リストで、4,5,6番の星をタップすると、何もブックマークされていない状態になる", function() {
 		localStorage.setItem("bookmarks", "A2-2,A2-3,A2-4");
-		$("#listbookmarkA2-2").listchangebookmark();
 		$("#listbookmarkA2-2").trigger("click");
-		$("#listbookmarkA2-3").listchangebookmark();
 		$("#listbookmarkA2-3").trigger("click");
-		$("#listbookmarkA2-4").listchangebookmark();
 		$("#listbookmarkA2-4").trigger("click");
 
 		var expectBookmarks = "";
