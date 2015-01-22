@@ -610,9 +610,27 @@ function setDetails() {
 	$("#detail-abstract").html(sessionStorage.getItem("abstract"));
 }
 
+// マップの日付を切り替えるボタンをセット
+function setChangePosterMapDate() {
+	$("#prevDayButton").on("click", function(e) {
+		changePosterMapDate(1);
+	});
+	$("#nextDayButton").on("click", function(e) {
+		changePosterMapDate(2);
+	});
+	
+}
+
 // マップの日付を切り替える
 function changePosterMapDate(date) {
 	$("#mapImg").attr("src", "img/postermap_" + date + ".png");
+	if (date === 1) {
+		$("#prevDayButton").hide();
+		$("#nextDayButton").show();
+	} else {
+		$("#prevDayButton").show();
+		$("#nextDayButton").hide();
+	}
 }
 
 // 代表者名を取得

@@ -170,6 +170,7 @@ function init() {
 	$(".bookmarkstar").sizeUpBookmarkStar();
 
 	// 会場の画像を1日目に変更
+	setChangePosterMapDate();
 	changePosterMapDate(1);
 
 
