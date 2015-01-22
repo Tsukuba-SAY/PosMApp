@@ -53,9 +53,9 @@ $.fn.showBookmarkList = function() {
 
 	$(this).html(str);
 
-	// $(".bookmarklistToMapBtn").bookmarklistToMapPage();
-	// $(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
-	// $(".bookmarklistbookmarkbutton").deletebookmark();
+	$(".bookmarklistToMapBtn").bookmarklistToMapPage();
+	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+	$(".bookmarklistbookmarkbutton").deletebookmark();
 
 	return presens;
 };

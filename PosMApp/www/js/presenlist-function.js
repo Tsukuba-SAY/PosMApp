@@ -200,6 +200,8 @@ $.fn.listchangebookmark = function() {
 
 		bookmarks = bookmarkArr.join(",");
 		localStorage.setItem("bookmarks", bookmarks);
+
+		$("#bookmarkList").showBookmarkList();
 	});
 };
 
