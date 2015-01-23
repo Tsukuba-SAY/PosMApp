@@ -2465,7 +2465,7 @@
 {"sessionid":"X3","presenid":"X3-20"},
 {"sessionid":"X3","presenid":"X3-21"},
 {"sessionid":"X3","presenid":"X3-22"},
-{"sessionid":"X3","presenid":"X3-23"}
+{"sessionid":"X3","presenid":"X3-23"},
 {"sessionid":"X3","presenid":"X3-24"},
 {"sessionid":"X3","presenid":"X3-25"},
 {"sessionid":"X3","presenid":"X3-26"},
@@ -2675,5 +2675,7 @@
 {"sessionid":"P3","name":"山本 岳洋","belongs":"京都大学"},
 {"sessionid":"P3","name":"村尾 和哉","belongs":"神戸大学"},
 {"sessionid":"X3","name":"Xさん","belongs":"X大学"}
-]}
+]
+
+}
 
