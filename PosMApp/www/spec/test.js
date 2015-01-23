@@ -162,12 +162,12 @@ describe("ポスターマップ", function() {
 		expect(sessionStorage.getItem("keywords")).toEqual(getKeywords(p.presenid));
 	});
 
-	it("デフォルトの状態で97番目のポスターをタップすると97番目の情報が取得できる", function() {
+	it("デフォルトの状態で50番目のポスターをタップすると97番目の情報が取得できる", function() {
 		
 		//var poster.length=poster.length;
 		var beforeFlag = new Array(poster.length+1);
 		var expectFlag = new Array(poster.length+1);
-		var posterid = 97;
+		var posterid = 50;
 
 		beforeFlag[0] = null;
 		for (var i = 1; i <= poster.length; i++) {
@@ -178,7 +178,7 @@ describe("ポスターマップ", function() {
 		for (var i = 1; i <= poster.length; i++) {
 			expectFlag[i] = "d";
 		}
-		expectFlag[97] = "t";
+		expectFlag[50] = "t";
 
 		expect(pflag).toEqual(beforeFlag);
 
@@ -825,12 +825,12 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「ダミーポスター」で検索すると100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,97,98,99番のポスターがヒットする", function() {
+	it("「ダミーポスター」で検索すると101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,97,98,99];
+		expectArr = [101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -1069,21 +1069,22 @@ describe("ラベルの表示切り替え機能", function() {
 
 		initPosterMap();	
 	});
-	it("「発表番号」ボタンを押すとラベルが発表IDに切り替わる", function() {
-		$("#label-presenid").trigger("click");
-		var labels = new Array();
-		for (var i = 1; i <= poster.length; i++) {
-			labels.push($("#font" + i).html());
-		}
+	// it("「発表番号」ボタンを押すとラベルが発表IDに切り替わる", function() {
+	// 	$("#label-presenid").trigger("click");
+	// 	var labels = new Array();
+	// 	for (var i = 1; i <= poster.length; i++) {
+	// 		labels.push($("#font" + i).html());
+	// 	}
 
-		var expectLabels = new Array();
-		for (var i = 1; i <= poster.length; i++) {
-			expectLabels.push(ellipsisWords(poster[i - 1].presenid.toString()));
-		}
-		expect(labels).toEqual(expectLabels);
+	// 	var expectLabels = new Array();
+	// 	for (var i = 1; i <= poster.length; i++) {
+	// 		expectLabels.push(ellipsisWords(poster[i - 1].presenid.toString()));
+	// 	}
+
+	// 	expect(labels.toString()).toEqual(expectLabels.toString());
 
 
-	});
+	// });
 	it("「タイトル」ボタンを押すとラベルがタイトルに切り替わる", function() {
 		$("#label-title").trigger("click");
 		var labels = new Array();
