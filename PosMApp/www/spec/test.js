@@ -1431,7 +1431,7 @@ describe("ブックマークリスト", function() {
 	beforeEach(function() {
 		resetDelta();
 		
-		loadFixtures("fixture-bookmarklist.html","fixture-postermap.html");
+		loadFixtures("fixture-presenlist.html","fixture-postermap.html");
 
 		setPosterIcons();
 		showBookmarkIcons();
