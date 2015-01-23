@@ -43,3 +43,9 @@ $.fn.changeDate = function(dateId) {
 		document.getElementById(dateId).style.display = 'block';
 	});
 }
+
+$.fn.jumpToVenue = function() {
+	$(this).on("click", function() {
+		changePage("#venuePage");
+	});
+}
