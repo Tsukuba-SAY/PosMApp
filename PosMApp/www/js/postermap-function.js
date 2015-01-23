@@ -168,6 +168,23 @@ function setPosterIcons() {
 		$(".day1").hide();
 		$(".day2").show();
 	}
+	showBookmarkStars();
+}
+
+function showBookmarkStars() {
+	var ptotal = poster.length;
+	for (var i = 1; i <= ptotal; i++) {
+		var starpos = [null, "Top", "Right", "Bottom", "Left"];
+		var pos = starpos[poster[i-1].star];
+		var star = document.getElementById("star" + pos + "No" + i);
+		var bookmarkArr = getBookmarks();
+		var location = bookmarkArr.indexOf(poster[i-1].presenid);
+		if (location !== -1) {
+			star.style.display = "block";
+		} else {
+			star.style.display = "none";
+		}
+	}
 }
 
 // ラベルを変更する
