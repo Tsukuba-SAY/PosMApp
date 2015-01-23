@@ -244,13 +244,10 @@
 	<div data-role="header" data-position="fixed">
 		<h1 style="text-align:center">発表リスト</h1>
 		<a href="#search-tips" data-rel="popup" data-transition="pop" class="ui-btn ui-btn-icon-notext ui-btn-right ui-icon-search ui-corner-all"></a>
-
-		<div style="text-align:center"　class="containing-element">
-			<select name="flip-mini" id="listChangeBtn" data-role="slider">
-				<option id="presenListBtn" value="presen">ALL</option>
-				<option id="bookmarkListBtn" value="bookmark">★</option>
-			</select>
-		</div>
+		<a id="listIconAll" class="ui-btn ui-btn-left ui-btn-icon-right 
+		ui-corner-all ui-icon-bullets" data-mini="true">すべてのポスター</a>
+		<a id="listIconStar" class="ui-btn ui-btn-left ui-btn-icon-right ui-icon-star
+		ui-corner-all ui-btn-active" data-mini="true" >bookmark</a>
 	</div>
 	<div data-role="content">
 			<a data-role="button" class="ReDownloadBtn">データを再読み込み</a>
