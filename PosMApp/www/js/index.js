@@ -174,6 +174,9 @@ function init() {
 	// 星の大きさをリセット
 	$(".bookmarkstar").sizeUpBookmarkStar();
 
+	// セッションリストから会場マップへジャンプする
+	$(".jumpToVenue").jumpToVenue();
+
 
 	// タブバーの選択表示を変更
 	var currentPage = window.location.hash;
