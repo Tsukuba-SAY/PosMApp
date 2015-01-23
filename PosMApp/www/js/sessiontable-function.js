@@ -4,14 +4,6 @@ $.fn.jumpToPresen = function() {
 		var id = $(this).attr("id");
 		var sessionid = id.substr(10);
 		sessionStorage.setItem("gotosessionid",sessionid);
-		//リスト画面のreset
-		$("#listchangeBtn").each(function() {
-		    if($(this).children().length > 0) {
-		        $($(this).children()[0]).attr('selected', 'selected');
-		        $(this).change();
-		    }
-		});
-		$('#presenListPage').showPresenList();
 		$(document).on("pageshow", "#presenListPage", scrollToTr);
 		changePage("#presenListPage");
 	});
@@ -20,9 +12,8 @@ function scrollToTr() {
 	if(!localStorage.getItem("downloadResult")){
 		var target = $("#session" + sessionStorage.getItem("gotosessionid"));
 		console.log(sessionStorage.getItem("gotosessionid"));
-		var position = target.offset().top;
+		var position = target.offset().top - 45;
 		var speed = 500;
-		// $('body,html').animate({scrollTop:position}, speed, 'linear');
 		$('body,html').scrollTop(position);
 
 		$(document).off("pageshow");

@@ -211,6 +211,7 @@ $.fn.listchangebookmark = function() {
 // 指定したpresenidのところまでジャンプする
 function scrollToPresen(presenid) {
 	changePage("#presenListPage");
+	changeShowList("presen");
 	var target = $("#presen" + presenid);
 	var position = target.offset().top;
 	var speed = 400;

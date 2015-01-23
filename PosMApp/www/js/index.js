@@ -142,8 +142,15 @@ function init() {
 	$("#bookmarkList").showBookmarkList();
 
 	//リスト切替ボタン
-	$("#listChangeBtn").change(function(e) {
-    	changeShowList($(this).val());
+	$("#listIconAll").on("click", function() {
+    	changeShowList("presen");
+    	$(this).addClass("ui-btn-active");
+    	$("#listIconStar").removeClass("ui-btn-active");
+	});
+	$("#listIconStar").on("click", function() {
+    	changeShowList("bookmark");
+    	$(this).addClass("ui-btn-active");
+    	$("#listIconAll").removeClass("ui-btn-active");
 	});
 	changeShowList("presen");
 
