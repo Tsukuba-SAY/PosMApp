@@ -783,12 +783,12 @@ describe("キーワード検索（タイトル）", function() {
 		initPosterMap();
 	});
 
-	it("「システム」で検索すると12,13,14,17,21,25,26,30,32,33,37,41,43,44,45,49,51,52,54,59,61,64,65,69,72,76,8,82,86,87,90,93,94番のポスターがヒットする", function() {
+	it("「フィルタリング」で検索すると10,18,25番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [12,13,14,17,21,25,26,30,32,33,37,41,43,44,45,49,51,52,54,59,61,64,65,69,72,76,8,82,86,87,90,93,94];
+		expectArr = [10,18,25];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -798,18 +798,18 @@ describe("キーワード検索（タイトル）", function() {
 			}
 		}
 		
-		$("#search-bar-title").val("システム");
+		$("#search-bar-title").val("フィルタリング");
 		$("#search-bar-title").trigger("change");
 
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「佐藤」で検索すると13,16,37,50,70,93番のポスターがヒットする", function() {
+	it("「佐藤」で検索すると13,141,16,37,50,70,93番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [13,16,37,50,70,93];
+		expectArr = [13,141,16,37,50,70,93];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -825,12 +825,12 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「ダミーポスター」で検索すると97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118番のポスターがヒットする", function() {
+	it("「ダミーポスター」で検索すると100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,97,98,99番のポスターがヒットする", function() {
 
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118];
+		expectArr = [100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,97,98,99];
 
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
@@ -861,11 +861,11 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「Twitter」で検索すると14,16,18,19,20,21,22,23,24,27,37,38,53,82,83番のポスターがヒットする", function() {
+	it("「Twitter」で検索すると117,118,119,137,138,139,14,140,147,148,149,150,157,159,16,160,161,173,18,19,20,203,21,22,23,24,27,37,38,53,82,83番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [14,16,18,19,20,21,22,23,24,27,37,38,53,82,83];
+		expectArr = [117,118,119,137,138,139,14,140,147,148,149,150,157,159,16,160,161,173,18,19,20,203,21,22,23,24,27,37,38,53,82,83];
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
 				expectFlag[i] = "s";
@@ -880,11 +880,11 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「twitter」で検索すると14,16,18,19,20,21,22,23,24,27,37,38,53,82,83番のポスターがヒットする", function() {
+	it("「twitter」で検索すると117,118,119,137,138,139,14,140,147,148,149,150,157,159,16,160,161,173,18,19,20,203,21,22,23,24,27,37,38,53,82,83番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [14,16,18,19,20,21,22,23,24,27,37,38,53,82,83];
+		expectArr = [117,118,119,137,138,139,14,140,147,148,149,150,157,159,16,160,161,173,18,19,20,203,21,22,23,24,27,37,38,53,82,83];
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
 				expectFlag[i] = "s";
@@ -899,11 +899,11 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("「TWITTER」で検索すると14,16,18,19,20,21,22,23,24,27,37,38,53,82,83番のポスターがヒットする", function() {
+	it("「TWITTER」で検索すると117,118,119,137,138,139,14,140,147,148,149,150,157,159,16,160,161,173,18,19,20,203,21,22,23,24,27,37,38,53,82,83番のポスターがヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		expectFlag[0] = null;
-		expectArr = [14,16,18,19,20,21,22,23,24,27,37,38,53,82,83];
+		expectArr = [117,118,119,137,138,139,14,140,147,148,149,150,157,159,16,160,161,173,18,19,20,203,21,22,23,24,27,37,38,53,82,83];
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
 				expectFlag[i] = "s";
@@ -993,13 +993,13 @@ describe("キーワード検索（タイトル）", function() {
 		expect(pflag).toEqual(expectFlag);
 	});
 
-	it("1番を選択した状態で「Twitter」で検索すると14,16,18,19,20,21,22,23,24,27,37,38,53,82,83番がヒットする", function() {
+	it("1番を選択した状態で「Twitter」で検索すると117,118,119,137,138,139,14,140,147,148,149,150,157,159,16,160,161,173,18,19,20,203,21,22,23,24,27,37,38,53,82,83番がヒットする", function() {
 		var expectFlag = new Array(poster.length+1);
 
 		pflag[1] = "t";
 
 		expectFlag[0] = null;
-		expectArr = [14,16,18,19,20,21,22,23,24,27,37,38,53,82,83];
+		expectArr = [117,118,119,137,138,139,14,140,147,148,149,150,157,159,16,160,161,173,18,19,20,203,21,22,23,24,27,37,38,53,82,83];
 		for (var i = 1; i <= poster.length; i++) {
 			if ($.inArray(i, expectArr) !== -1) {
 				expectFlag[i] = "s";
@@ -1081,6 +1081,8 @@ describe("ラベルの表示切り替え機能", function() {
 			expectLabels.push(ellipsisWords(poster[i - 1].presenid.toString()));
 		}
 		expect(labels).toEqual(expectLabels);
+
+
 	});
 	it("「タイトル」ボタンを押すとラベルがタイトルに切り替わる", function() {
 		$("#label-title").trigger("click");
