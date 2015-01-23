@@ -1,5 +1,5 @@
  // ブックマークした発表の一覧を表示する
-function showBookmarkList() {
+$.fn.showBookmarkList = function() {
 	var presens = [];
 	presens["posterid"] = [];
 	presens["presenid"] = [];
@@ -51,11 +51,11 @@ function showBookmarkList() {
 		str += '</table>'
 	}
 
-	$("#presenList").html(str);
+	$(this).html(str);
 
-	// $(".bookmarklistToMapBtn").bookmarklistToMapPage();
-	// $(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
-	// $(".bookmarklistbookmarkbutton").deletebookmark();
+	$(".bookmarklistToMapBtn").bookmarklistToMapPage();
+	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
+	$(".bookmarklistbookmarkbutton").deletebookmark();
 
 	return presens;
 };

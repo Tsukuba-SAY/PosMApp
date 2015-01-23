@@ -136,18 +136,17 @@ function init() {
 	$("#goToMap").goToMapPage("click");
 	$("#goToList").goToListPage("click");
 	$("#goToInformation").goToInformationPage("click");
-	$("#goToBookmarkList").goToVenuePage("click");
-	
-	showPresenList();
+	$("#goToVenue").goToVenuePage("click");
+
+	$("#presenList").showPresenList();
+	$("#bookmarkList").showBookmarkList();
+
 	//リスト切替ボタン
-	$("#listchangeBtn").change(function() {
-    	changeShowList();
+	$("#listChangeBtn").change(function(e) {
+    	changeShowList($(this).val());
 	});
-	
-	// ポスターリスト画面のボタン
-	$(".listToMapBtn").jumpToMapPage();
-	$(".listToDetailBtn").jumpToDetailPage();
-	$(".listbookmarkbutton").listchangebookmark();
+	changeShowList("presen");
+
 
 	// 詳細表示画面の戻るボタン
 	$("#detailBackButton").backToPreviousPage();
@@ -200,7 +199,7 @@ function init() {
 			$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
 			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
-		case "#bookmarkListPage":
+		case "#venuePage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");

@@ -74,7 +74,7 @@
 			</div>
 			<div class="ui-block-b">
 				<div align="center">
-					<img id="goToBookmarkList" class="topmenuicon" src="img/topmenu/venue.png"></img>
+					<img id="goToVenue" class="topmenuicon" src="img/topmenu/venue.png"></img>
 					<div class="topMenuIconLabel">会場図</div>
 				</div>
 			</div>	
@@ -229,7 +229,7 @@
 </div>
 
 <!-- 発表リスト画面 -->
-<div data-role="page" id="presenListPage" data-position="fixed">
+<div data-role="page" id="presenListPage">
 	<!-- 検索のTIPS-->
 	<div data-role="popup" data-position-to="window" id="search-tips">
 		<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">閉じる</a>
@@ -241,14 +241,14 @@
 			<p style="padding: 0.5em;">Google Chromeでは右上のメニュー<br />ボタンから「ページ内検索」を選択することで検索できます</p>
 		</div>
 	</div>
-	<div data-role="header">
+	<div data-role="header" data-position="fixed">
 		<h1 style="text-align:center">発表リスト</h1>
 		<a href="#search-tips" data-rel="popup" data-transition="pop" class="ui-btn ui-btn-icon-notext ui-btn-right ui-icon-search ui-corner-all"></a>
 
 		<div style="text-align:center"　class="containing-element">
-			<select name="flip-mini" id="listchangeBtn" data-role="slider">
-				<option id="presenListBtn" value="presen">presen</option>
-				<option id="bookmarkListBtn" value="bookmark">bookmark</option>
+			<select name="flip-mini" id="listChangeBtn" data-role="slider">
+				<option id="presenListBtn" value="presen">ALL</option>
+				<option id="bookmarkListBtn" value="bookmark">★</option>
 			</select>
 		</div>
 	</div>
@@ -257,6 +257,7 @@
 		<div style="overflow:auto; height:100%;">
 			<!-- 発表リスト -->
 			<div id="presenList" class="listcolor"></div>
+			<div id="bookmarkList" class="listcolor"></div>
 		</div>
 	</div>
 	<!-- タブバー -->
@@ -274,16 +275,13 @@
 	</div>
 </div>
 
-<!-- ブックマークリスト画面 -->
-<div data-role="page" id="venuePage" data-position="fixed">
-	<div data-role="header">
+<!-- 会場マップ画面 -->
+<div data-role="page" id="venuePage">
+	<div data-role="header" data-position="fixed">
 		<h1 style="text-align:center"　>会場図</h1>
 	</div>
 	<div data-role="content">
-		<div style="overflow:auto; height:100%;">
-			<!-- ブックマークリスト -->
-			<div id="bookmarkList" class="listcolor"></div>
-		</div>
+
 	</div>
 	<!-- タブバー -->
 	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
@@ -293,8 +291,7 @@
 				<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
 				<li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
 				<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>
-				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>
-				
+				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>	
 			</ul>
 		</div>
 	</div>
@@ -320,8 +317,8 @@
 
 <!-- セッションテーブル -->
 <!-- DEIM2014のセッションテーブルの内容 -->
-<div data-role="page" id="informationPage" data-position="fixed">
-  <div data-role="header">
+<div data-role="page" id="informationPage">
+  <div data-role="header" data-position="fixed">
     <h1 id="sessionHyou" style="text-align:center">プログラム</h1>
   </div>
   <div data-role="content"> 
