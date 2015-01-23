@@ -120,7 +120,7 @@ function setPosterIcons() {
 		var offset = 116;
 
 		// 1日目のポスター
-		for (var i = 1; i <= offset - 1; i++) {
+		for (var i = 1; i <= offset; i++) {
 
 			iconWidth = position[position_map[i-1]].width*INIT_SCALE;
 			iconHeight = position[position_map[i-1]].height*INIT_SCALE;
@@ -140,14 +140,14 @@ function setPosterIcons() {
 			str += "</div>\n";
 		}
 		// 2日目のポスター
-		for (var i = offset; i <= ptotal - 1; i++) {
+		for (var i = offset + 1; i <= ptotal; i++) {
 
-			iconWidth = position[position_map[i-offset]].width*INIT_SCALE;
-			iconHeight = position[position_map[i-offset]].height*INIT_SCALE;
+			iconWidth = position[position_map[i-offset-1]].width*INIT_SCALE;
+			iconHeight = position[position_map[i-offset-1]].height*INIT_SCALE;
 
 			angle = starAngle[poster[i-1].star];
 
-			str += "<div class='postericonframe day2' id='iconNo" + i + "' style='left:"+(position[position_map[i-offset]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-offset]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
+			str += "<div class='postericonframe day2' id='iconNo" + i + "' style='left:"+(position[position_map[i-offset-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-offset-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 			str += "	<div class='postericon' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
 			str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px; display: table-cell; vertical-align: middle; text-align: center;'>\n";
 			str += "			<div class='posterfont' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
@@ -168,6 +168,23 @@ function setPosterIcons() {
 		$(".day1").hide();
 		$(".day2").show();
 	}
+	showBookmarkStars();
+}
+
+function showBookmarkStars() {
+	var ptotal = poster.length;
+	for (var i = 1; i <= ptotal; i++) {
+		var starpos = [null, "Top", "Right", "Bottom", "Left"];
+		var pos = starpos[poster[i-1].star];
+		var star = document.getElementById("star" + pos + "No" + i);
+		var bookmarkArr = getBookmarks();
+		var location = bookmarkArr.indexOf(poster[i-1].presenid);
+		if (location !== -1) {
+			star.style.display = "block";
+		} else {
+			star.style.display = "none";
+		}
+	}
 }
 
 // ラベルを変更する
@@ -180,7 +197,7 @@ function changeLabel(column) {
 		var labels = new Array(ptotal);
 
 		// 各ポスターに対してラベルを変更する
-		for (var i = 1; i < ptotal; i++) {
+		for (var i = 1; i <= ptotal; i++) {
 			var str;
 			if (column === "authorname") {
 				str = getAuthorname(poster[i-1].presenid);
@@ -230,7 +247,7 @@ function setLabelSize() {
 		// 完全にDEIM2015仕様決め打ち
 		var offset = 116;
 
-		for (var i = 1; i <= offset - 1; i++) {
+		for (var i = 1; i <= offset; i++) {
 			iconWidth = position[position_map[i-1]].width*INIT_SCALE;
 			iconHeight = position[position_map[i-1]].height*INIT_SCALE;
 			iconDirection = position[position_map[i-1]].direction;
@@ -250,10 +267,10 @@ function setLabelSize() {
 			}
 		}
 
-		for (var i = offset; i <= ptotal - 1; i++) {
-			iconWidth = position[position_map[i-offset]].width*INIT_SCALE;
-			iconHeight = position[position_map[i-offset]].height*INIT_SCALE;
-			iconDirection = position[position_map[i-offset]].direction;
+		for (var i = offset + 1; i <= ptotal; i++) {
+			iconWidth = position[position_map[i-offset-1]].width*INIT_SCALE;
+			iconHeight = position[position_map[i-offset-1]].height*INIT_SCALE;
+			iconDirection = position[position_map[i-offset-1]].direction;
 			if (iconDirection === "longways") {
 				var scale = iconHeight / (4 * empx);
 				var rotate = "90deg";
@@ -278,7 +295,7 @@ function setLabelSize() {
 function showPosterIcons() {
 	var pic;
 	var ptotal = poster.length;
-	for (var i = 1; i < ptotal; i++) {
+	for (var i = 1; i <= ptotal; i++) {
 		switch (pflag[i]) {
 			case "d":
 				pic = "dpic";
