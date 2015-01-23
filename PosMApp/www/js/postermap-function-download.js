@@ -73,6 +73,7 @@ function ajaxdownload(pageName){
 					init();
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
+					console.error("Download Error:  " + errorThrown);
 					localStorage.setItem("pageName",pageName);
 					localStorage.setItem("downloadResult","downloadResult");
 					setTimeout("$('.reDownloadDIVCLS').html('データを再ダウンロード')",3000);
