@@ -160,6 +160,16 @@ function listToMap(posterid){
 	effectPosterIcon(posterid);
 
 	changePage("#posterMapPage");
+
+	// 指定したポスターが発表される日付へ移動
+	var posterlength = poster.length;
+	for (var i = 0; i < posterlength; i++) {
+		if (poster[i].posterid === posterid) {
+			changePosterMapDate(poster[i].date);
+			break;
+		}
+	}
+
 	resetAllIcons();
 	var nextFlag = touchPoster(posterid);
 	pflag[posterid] = nextFlag;
