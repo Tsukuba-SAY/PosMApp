@@ -5,6 +5,7 @@ $.fn.jumpToPresen = function() {
 		var sessionid = id.substr(10);
 		sessionStorage.setItem("gotosessionid",sessionid);
 		$(document).on("pageshow", "#presenListPage", scrollToTr);
+		changeShowList("presenlist")
 		changePage("#presenListPage");
 	});
 }
