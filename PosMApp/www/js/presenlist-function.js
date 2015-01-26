@@ -115,7 +115,6 @@ $.fn.jumpToDetailPage = function() {
 $.fn.jumpToMapPage = function() {
 	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
-		// var posterid = Number(e.target.id.substring(9));
 		var presenid = $(e.target)
 				.parents()
 				.filter(function() {return this.tagName === "TR"})
