@@ -220,7 +220,7 @@
 {"presenid":"F4-1","posterid":78,"star":3,"date":1},
 {"presenid":"F4-2","posterid":79,"star":1,"date":1},
 {"presenid":"F4-3","posterid":80,"star":1,"date":1},
-{"presenid":"F5-1","posterid":81,"star":3,"date":1},
+{"presenid":"X3-52","posterid":81,"star":3,"date":1},
 {"presenid":"P1-1","posterid":82,"star":3,"date":1},
 {"presenid":"P1-2","posterid":83,"star":1,"date":1},
 {"presenid":"P1-3","posterid":84,"star":1,"date":1},
@@ -1443,6 +1443,7 @@
 {"presenid":"X3-48","name":"Xさん","belongs":"Xさん","first":1},
 {"presenid":"X3-49","name":"Xさん","belongs":"Xさん","first":1},
 {"presenid":"X3-50","name":"Xさん","belongs":"Xさん","first":1},
+{"presenid":"X3-52","name":"Xさん","belongs":"Xさん","first":1},
 {"presenid":"X3-51","name":"Xさん","belongs":"Xさん","first":1}
 ],
 
@@ -1793,6 +1794,7 @@
 {"presenid":"X3-48","keyword":"ダミーポスター"},
 {"presenid":"X3-49","keyword":"ダミーポスター"},
 {"presenid":"X3-50","keyword":"ダミーポスター"},
+{"presenid":"X3-52","keyword":"ダミーポスター"},
 {"presenid":"X3-51","keyword":"ダミーポスター"}
 ],
 
@@ -2143,7 +2145,8 @@
 {"presenid":"X3-48","title":"謎のX","abstract":"NO DATA","bookmark":0},
 {"presenid":"X3-49","title":"謎のX","abstract":"NO DATA","bookmark":0},
 {"presenid":"X3-50","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-51","title":"謎のX","abstract":"NO DATA","bookmark":0}
+{"presenid":"X3-51","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-52","title":"謎のX","abstract":"NO DATA","bookmark":0}
 ],
 
 "presents": 
@@ -2493,7 +2496,8 @@
 {"sessionid":"X3","presenid":"X3-48"},
 {"sessionid":"X3","presenid":"X3-49"},
 {"sessionid":"X3","presenid":"X3-50"},
-{"sessionid":"X3","presenid":"X3-51"}
+{"sessionid":"X3","presenid":"X3-51"},
+{"sessionid":"X3","presenid":"X3-52"}
 ],
 
 "session": 
