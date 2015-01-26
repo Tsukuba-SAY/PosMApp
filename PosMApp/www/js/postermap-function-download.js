@@ -71,6 +71,7 @@ function ajaxdownload(pageName){
 					localStorage.removeItem("downloadResult");
 					// 再描画
 					init();
+					$("#posters").show();
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
 					console.error("Download Error:  " + errorThrown);
@@ -80,7 +81,8 @@ function ajaxdownload(pageName){
 					setTimeout("$('.ReDownloadBtn').html('データを再ダウンロード')",3000);
 					window.location.href = pageName;
 					window.location.href = "#downloadFailDialog";
-					$("#posters").html("");
+					//データがない時、マップ画面のundefineを表示しない
+					$("#posters").hide();
 				},
 				complete: function(data) {
 					// alert("complete");

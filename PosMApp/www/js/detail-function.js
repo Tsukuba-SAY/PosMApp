@@ -6,7 +6,7 @@ $.fn.backToPreviousPage = function() {
 			prev = "posterMapPage";
 		}
 
-		changeShowList($("#listChangeBtn").val());
+		changeShowList(sessionStorage.getItem("listClick"));
 
 		changePage("#" + prev);
 		

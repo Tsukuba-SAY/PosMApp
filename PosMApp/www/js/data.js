@@ -1,5 +1,5 @@
 // 共通のデータを格納するグローバル変数
-var poster 			= null,
+var poster 			= [],
 	author 			= null,
 	keyword 		= null,
 	presen 			= null,

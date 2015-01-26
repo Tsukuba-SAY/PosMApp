@@ -143,7 +143,7 @@ function init() {
 
 	//リスト切替ボタン
 	$("#listIconAll").on("click", function() {
-    	changeShowList("presen");
+    	changeShowList("presenlist");
     	$(this).addClass("ui-btn-active");
     	$("#listIconStar").removeClass("ui-btn-active");
 	});
@@ -152,7 +152,10 @@ function init() {
     	$(this).addClass("ui-btn-active");
     	$("#listIconAll").removeClass("ui-btn-active");
 	});
-	changeShowList("presen");
+	//最初、プレゼンリストが表示される
+	changeShowList("presenlist");
+	$("#listIconAll").addClass("ui-btn-active");
+    $("#listIconStar").removeClass("ui-btn-active");
 
 
 	// 詳細表示画面の戻るボタン
