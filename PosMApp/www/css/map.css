@@ -84,15 +84,14 @@
 	padding-top: 20px;
 	padding-right: 40px;
 	padding-left: 40px;
-
+	font-size: small;
 	background-color: #ffff99;
-	/*word-wrap: break-word;*/
-	white-space: nowrap;
-	overflow: hidden;
+	word-wrap: break-word;
+/*	white-space: nowrap;
+	overflow: hidden;*/
 	text-overflow: ellipsis;
 	z-index: 60;
 }
-
 
 /*TODO:押しにくいから改善したほうがいいかも*/
 #bookmarkbutton{
@@ -151,4 +150,15 @@
 	text-align: center;
 	line-height: 2.0em;
 	text-shadow:none;
+}
+
+#basicInfoTitleContainer {
+	overflow: hidden;
+	width: 100%;
+}
+
+#basicInfoTitle {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }

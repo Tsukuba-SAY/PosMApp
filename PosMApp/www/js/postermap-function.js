@@ -374,11 +374,10 @@ function changeBasicInfoPanel(flag) {
 		 " ["
 		+ sessionStorage.getItem("presenid")
 		+ "]<br />"
+		+ "<div id='basicInfoTitleContainer'><span id='basicInfoTitle'>"
 		+ sessionStorage.getItem("title")
-		+ "<br />代表者名： "
+		+ "</span></div>"
 		+ sessionStorage.getItem("authorname")
-		+ "<br />所属： "
-		+ sessionStorage.getItem("authorbelongs");
 
 	var bookmarkIcon = document.getElementById("bookmarkbutton");
 	var bookmarks = localStorage.getItem("bookmarks");
