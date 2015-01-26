@@ -99,7 +99,13 @@ $.fn.showPresenList = function() {
 $.fn.jumpToDetailPage = function() {
 	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
-		var presenid = e.target.id.substring(12);
+		// var presenid = e.target.id.substring(12);
+		var presenid = $(e.target)
+						.parents()
+						.filter(function() {return this.tagName === "TR"})
+						.get(0)
+						.id
+						.substring("presen".length);
 		sessionStorage.setItem("previousPage", "presenListPage");
 		sessionStorage.setItem("listClick", "presenlist");
 		listToDetail(presenid);
