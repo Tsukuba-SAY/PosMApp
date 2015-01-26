@@ -71,8 +71,8 @@ $.fn.showPresenList = function() {
 						} else {
 							str += "<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
 						}
-						str += "<strong>" + p.title + "</strong><br>";
-						str += "<div class='authors-on-list'>" + authors + "</div></td>";
+						str += "<span class='listTitle'><strong>" + p.title + "</strong></span><br>";
+						str += "<div class='authors-on-list'><span class='listAuthors'>" + authors + "</span></div></td>";
 						str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+p.presenid+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 					}
 				});
@@ -85,6 +85,8 @@ $.fn.showPresenList = function() {
 		$(".listToMapBtn").jumpToMapPage();
 		$(".listToDetailBtn").jumpToDetailPage();
 		$(".listbookmarkbutton").listchangebookmark();
+		$(".listTitle").jumpToDetailPage();
+		$(".listAuthors").jumpToDetailPage();
 
 		sessionStorage.setItem("testSessionNum",testSessionNum);
 
@@ -97,7 +99,12 @@ $.fn.showPresenList = function() {
 $.fn.jumpToDetailPage = function() {
 	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
-		var presenid = e.target.id.substring(12);
+		var presenid = $(e.target)
+						.parents()
+						.filter(function() {return this.tagName === "TR"})
+						.get(0)
+						.id
+						.substring("presen".length);
 		sessionStorage.setItem("previousPage", "presenListPage");
 		sessionStorage.setItem("listClick", "presenlist");
 		listToDetail(presenid);
@@ -108,7 +115,13 @@ $.fn.jumpToDetailPage = function() {
 $.fn.jumpToMapPage = function() {
 	$(this).on("click", function(e) {
 		// ポスターのIDを取得する
-		var posterid = Number(e.target.id.substring(9));
+		var presenid = $(e.target)
+				.parents()
+				.filter(function() {return this.tagName === "TR"})
+				.get(0)
+				.id
+				.substring("presen".length);
+		var posterid = getPosterid(presenid);
 		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
