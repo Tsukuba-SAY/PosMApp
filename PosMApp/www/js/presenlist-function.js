@@ -71,8 +71,8 @@ $.fn.showPresenList = function() {
 						} else {
 							str += "<img class='listbookmarkbutton' id='listbookmark"+p.presenid+"' src='img/unbookmark.png' style='zoom: 22%;'></img><br>";
 						}
-						str += "<strong>" + p.title + "</strong><br>";
-						str += "<div class='authors-on-list'>" + authors + "</div></td>";
+						str += "<span class='listTitle'><strong>" + p.title + "</strong></span><br>";
+						str += "<div class='authors-on-list'><span class='listAuthors'>" + authors + "</span></div></td>";
 						str += "<td><div><td><img class='listToDetailBtn' id='listToDetail"+p.presenid+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 					}
 				});
@@ -85,6 +85,8 @@ $.fn.showPresenList = function() {
 		$(".listToMapBtn").jumpToMapPage();
 		$(".listToDetailBtn").jumpToDetailPage();
 		$(".listbookmarkbutton").listchangebookmark();
+		$(".listTitle").jumpToDetailPage();
+		$(".listAuthors").jumpToDetailPage();
 
 		sessionStorage.setItem("testSessionNum",testSessionNum);
 
