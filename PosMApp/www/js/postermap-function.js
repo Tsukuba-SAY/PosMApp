@@ -104,7 +104,7 @@ $.fn.sizeDownBookmarkStar = function() {
 
 // ポスターアイコンをセットする
 function setPosterIcons() {
-	if(poster !== null){
+	if(poster !== null && position_map != null && position != null){
 		var starAngle = [null, "top:-5px;", "right:-5px;", "bottom:-5px;", "left:-5px;"];
 		var starpos = [null, "Top", "Right", "Bottom", "Left"];
 
@@ -240,7 +240,7 @@ function setLabelSize() {
 	var count = 4;
 
 	//error handling
-	if (null != poster) {
+	if (poster != null && position_map != null && position != null) {
 		ptotal = poster.length;
 
 		// 2日目のポスター開始位置

@@ -243,7 +243,7 @@ function scrollToPresen(presenid) {
 
 //リストの入れ替え
 function changeShowList(val){
-	if (val == "presen") {
+	if (val == "presenlist") {
 		$("#presenList").show();
 		$("#bookmarkList").hide();
 	} else {
