@@ -1153,22 +1153,6 @@ describe("ブックマーク機能", function() {
 		var bookmarks = localStorage.getItem("bookmarks");
 		expect(bookmarks).toEqual(expectBookmarks);
 	});
-	it("何もブックマークされていない状態で、すべての星をタップすると、すべてのポスターがブックマークされる", function() {
-		var posterlength = poster.length;
-		for (var i = 1; i <= posterlength; i++) {
-			sessionStorage.setItem("presenid", poster[i-1].presenid);
-			$("#bookmarkbutton").trigger("click");
-		}
-		var bookmarks = localStorage.getItem("bookmarks");
-
-		var expectArr = new Array();
-		poster.forEach(function(p) {
-			expectArr.push(p.presenid);
-		});
-		expectArr.sort();
-
-		expect(bookmarks).toEqual(expectArr.join(","));
-	});
 	it("1番のポスターがブックマークされている状態で、1番の星をタップすると、何もブックマークされていない状態になる", function() {
 		localStorage.setItem("bookmarks", "A1-1");
 		sessionStorage.setItem("presenid", "A1-1");
@@ -1283,19 +1267,6 @@ describe("発表リストからのブックマーク機能", function() {
 		var expectBookmarks = "A1-1";
 		var bookmarks = localStorage.getItem("bookmarks");
 		expect(bookmarks).toEqual(expectBookmarks);
-	});
-	it("何もブックマークされていない状態で、リストで、すべての星をタップすると、すべてのポスターがブックマークされる", function() {
-		for (var i = 1; i <= poster.length; i++) {
-			$("#listbookmark"+poster[i-1].presenid).trigger("click");
-		}
-		var bookmarks = localStorage.getItem("bookmarks");
-
-		var expectArr = new Array();
-		for (var i = 1; i <= poster.length; i++) {
-			expectArr.push(poster[i-1].presenid);
-		};
-		expectArr.sort();
-		expect(bookmarks).toEqual(expectArr.join(","));
 	});
 	it("1番のポスターがブックマークされている状態で、リストで、1番の星をタップすると、何もブックマークされていない状態になる", function() {
 		localStorage.setItem("bookmarks", "A1-1");
@@ -1463,21 +1434,6 @@ describe("ブックマークリスト", function() {
 		expectIds.push("A1-1");
 		expectIds.push("A1-2");
 		expectIds.push("A1-4");
-		expect(expectIds).toEqual(posters["presenid"]);
-	});
-	it("すべてのポスターがブックマークされると、ブックマークで表示される", function() {
-		var str ="";
-		poster.forEach(function(p) {
-			str += p.presenid + ",";
-		});
-		str = str.substring(0, str.length - 1);
-		localStorage.setItem("bookmarks", str);
-
-		var posters = $("#bookmarkList").showBookmarkList();
-		var expectIds = new Array();
-		for (var i = 0; i < poster.length; i++) {
-			expectIds.push(poster[i].presenid.toString());
-		};
 		expect(expectIds).toEqual(posters["presenid"]);
 	});
 	it("1番のポスターがブックマークしてある状態で、1番のポスターのマップボタンを押すと、マップ画面に遷移し、1番のポスターの基本情報が表示される", function() {
