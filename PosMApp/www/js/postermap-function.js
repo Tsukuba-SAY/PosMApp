@@ -564,6 +564,8 @@ function touchBookmark(presenid, bookmarkIcon){
 	bookmarks = bookmarkArr.join(",");
 	localStorage.setItem("bookmarks", bookmarks);
 
+	$("#bookmarkList").showBookmarkList();
+
 	return bookmarks;
 }
 
