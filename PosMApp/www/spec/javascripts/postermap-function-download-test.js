@@ -4,7 +4,7 @@ STATIC_WIDTH = 720;
 
 STATIC_HEIGHT = 960;
 
-taparea = 
+taparea =
 [
 {"id":0,"x":497,"y":14,"width":134,"height":185,"direction":"longways","color":"rgb(255,40,0)"},
 {"id":1,"x":358,"y":15,"width":134,"height":185,"direction":"longways","color":"rgb(255,245,0)"},
@@ -21,41 +21,41 @@ taparea =
 position =
 [
 {"id":0,"x":417,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":1,"x":434,"y":22,"width":17,"height":11,"direction":"sideways"},
+{"id":1,"x":434,"y":22,"width":16,"height":11,"direction":"sideways"},
 {"id":2,"x":453,"y":22,"width":16,"height":11,"direction":"sideways"},
 {"id":3,"x":470,"y":22,"width":16,"height":11,"direction":"sideways"},
 {"id":4,"x":503,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":5,"x":520,"y":22,"width":17,"height":11,"direction":"sideways"},
-{"id":6,"x":539,"y":22,"width":17,"height":11,"direction":"sideways"},
+{"id":5,"x":520,"y":22,"width":16,"height":11,"direction":"sideways"},
+{"id":6,"x":539,"y":22,"width":16,"height":11,"direction":"sideways"},
 {"id":7,"x":557,"y":22,"width":16,"height":11,"direction":"sideways"},
 {"id":8,"x":575,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":9,"x":592,"y":22,"width":17,"height":11,"direction":"sideways"},
-{"id":10,"x":613,"y":31,"width":11,"height":17,"direction":"longways"},
+{"id":9,"x":592,"y":22,"width":16,"height":11,"direction":"sideways"},
+{"id":10,"x":613,"y":31,"width":11,"height":16,"direction":"longways"},
 {"id":11,"x":87,"y":33,"width":16,"height":11,"direction":"sideways"},
-{"id":12,"x":104,"y":33,"width":17,"height":11,"direction":"sideways"},
+{"id":12,"x":104,"y":33,"width":16,"height":11,"direction":"sideways"},
 {"id":13,"x":87,"y":45,"width":16,"height":11,"direction":"sideways"},
-{"id":14,"x":104,"y":45,"width":17,"height":11,"direction":"sideways"},
+{"id":14,"x":104,"y":45,"width":16,"height":11,"direction":"sideways"},
 {"id":15,"x":613,"y":49,"width":11,"height":16,"direction":"longways"},
 {"id":16,"x":613,"y":68,"width":11,"height":16,"direction":"longways"},
 {"id":17,"x":87,"y":76,"width":16,"height":11,"direction":"sideways"},
-{"id":18,"x":104,"y":76,"width":17,"height":11,"direction":"sideways"},
+{"id":18,"x":104,"y":76,"width":16,"height":11,"direction":"sideways"},
 {"id":19,"x":613,"y":85,"width":11,"height":16,"direction":"longways"},
-{"id":20,"x":87,"y":88,"width":16,"height":12,"direction":"sideways"},
-{"id":21,"x":104,"y":88,"width":17,"height":12,"direction":"sideways"},
-{"id":22,"x":613,"y":103,"width":11,"height":17,"direction":"longways"},
+{"id":20,"x":87,"y":88,"width":16,"height":11,"direction":"sideways"},
+{"id":21,"x":104,"y":88,"width":16,"height":11,"direction":"sideways"},
+{"id":22,"x":613,"y":103,"width":11,"height":16,"direction":"longways"},
 {"id":23,"x":613,"y":121,"width":11,"height":16,"direction":"longways"},
-{"id":24,"x":87,"y":122,"width":16,"height":12,"direction":"sideways"},
-{"id":25,"x":104,"y":122,"width":17,"height":12,"direction":"sideways"},
+{"id":24,"x":87,"y":122,"width":16,"height":11,"direction":"sideways"},
+{"id":25,"x":104,"y":122,"width":16,"height":11,"direction":"sideways"},
 {"id":26,"x":87,"y":135,"width":16,"height":11,"direction":"sideways"},
-{"id":27,"x":104,"y":135,"width":17,"height":11,"direction":"sideways"},
-{"id":28,"x":613,"y":140,"width":11,"height":17,"direction":"longways"},
+{"id":27,"x":104,"y":135,"width":16,"height":11,"direction":"sideways"},
+{"id":28,"x":613,"y":140,"width":11,"height":16,"direction":"longways"},
 {"id":29,"x":613,"y":158,"width":11,"height":16,"direction":"longways"},
 {"id":30,"x":87,"y":166,"width":16,"height":11,"direction":"sideways"},
-{"id":31,"x":104,"y":166,"width":17,"height":11,"direction":"sideways"},
+{"id":31,"x":104,"y":166,"width":16,"height":11,"direction":"sideways"},
 {"id":32,"x":87,"y":178,"width":16,"height":11,"direction":"sideways"},
-{"id":33,"x":104,"y":178,"width":17,"height":11,"direction":"sideways"},
+{"id":33,"x":104,"y":178,"width":16,"height":11,"direction":"sideways"},
 {"id":34,"x":614,"y":178,"width":11,"height":16,"direction":"longways"},
-{"id":35,"x":614,"y":206,"width":11,"height":17,"direction":"longways"},
+{"id":35,"x":614,"y":206,"width":11,"height":16,"direction":"longways"},
 {"id":36,"x":87,"y":211,"width":16,"height":11,"direction":"sideways"},
 {"id":37,"x":104,"y":211,"width":16,"height":11,"direction":"sideways"},
 {"id":38,"x":87,"y":224,"width":16,"height":11,"direction":"sideways"},
@@ -71,57 +71,57 @@ position =
 {"id":48,"x":613,"y":300,"width":11,"height":16,"direction":"longways"},
 {"id":49,"x":87,"y":301,"width":16,"height":11,"direction":"sideways"},
 {"id":50,"x":104,"y":301,"width":16,"height":11,"direction":"sideways"},
-{"id":51,"x":87,"y":313,"width":16,"height":12,"direction":"sideways"},
-{"id":52,"x":104,"y":313,"width":16,"height":12,"direction":"sideways"},
-{"id":53,"x":613,"y":317,"width":11,"height":17,"direction":"longways"},
+{"id":51,"x":87,"y":313,"width":16,"height":11,"direction":"sideways"},
+{"id":52,"x":104,"y":313,"width":16,"height":11,"direction":"sideways"},
+{"id":53,"x":613,"y":317,"width":11,"height":16,"direction":"longways"},
 {"id":54,"x":613,"y":337,"width":11,"height":16,"direction":"longways"},
 {"id":55,"x":87,"y":345,"width":16,"height":11,"direction":"sideways"},
 {"id":56,"x":104,"y":345,"width":16,"height":11,"direction":"sideways"},
 {"id":57,"x":613,"y":354,"width":11,"height":16,"direction":"longways"},
 {"id":58,"x":87,"y":357,"width":16,"height":11,"direction":"sideways"},
 {"id":59,"x":104,"y":357,"width":16,"height":11,"direction":"sideways"},
-{"id":60,"x":417,"y":373,"width":17,"height":11,"direction":"sideways"},
+{"id":60,"x":417,"y":373,"width":16,"height":11,"direction":"sideways"},
 {"id":61,"x":435,"y":373,"width":16,"height":11,"direction":"sideways"},
 {"id":62,"x":454,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":63,"x":471,"y":373,"width":17,"height":11,"direction":"sideways"},
-{"id":64,"x":501,"y":373,"width":17,"height":11,"direction":"sideways"},
+{"id":63,"x":471,"y":373,"width":16,"height":11,"direction":"sideways"},
+{"id":64,"x":501,"y":373,"width":16,"height":11,"direction":"sideways"},
 {"id":65,"x":519,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":66,"x":538,"y":373,"width":17,"height":11,"direction":"sideways"},
+{"id":66,"x":538,"y":373,"width":16,"height":11,"direction":"sideways"},
 {"id":67,"x":556,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":68,"x":574,"y":373,"width":17,"height":11,"direction":"sideways"},
+{"id":68,"x":574,"y":373,"width":16,"height":11,"direction":"sideways"},
 {"id":69,"x":592,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":70,"x":86,"y":389,"width":17,"height":11,"direction":"sideways"},
+{"id":70,"x":86,"y":389,"width":16,"height":11,"direction":"sideways"},
 {"id":71,"x":104,"y":389,"width":16,"height":11,"direction":"sideways"},
-{"id":72,"x":86,"y":401,"width":17,"height":11,"direction":"sideways"},
+{"id":72,"x":86,"y":401,"width":16,"height":11,"direction":"sideways"},
 {"id":73,"x":104,"y":401,"width":16,"height":11,"direction":"sideways"},
-{"id":74,"x":86,"y":433,"width":17,"height":11,"direction":"sideways"},
+{"id":74,"x":86,"y":433,"width":16,"height":11,"direction":"sideways"},
 {"id":75,"x":104,"y":433,"width":16,"height":11,"direction":"sideways"},
-{"id":76,"x":86,"y":445,"width":17,"height":11,"direction":"sideways"},
+{"id":76,"x":86,"y":445,"width":16,"height":11,"direction":"sideways"},
 {"id":77,"x":104,"y":445,"width":16,"height":11,"direction":"sideways"},
-{"id":78,"x":86,"y":479,"width":17,"height":11,"direction":"sideways"},
+{"id":78,"x":86,"y":479,"width":16,"height":11,"direction":"sideways"},
 {"id":79,"x":104,"y":479,"width":16,"height":11,"direction":"sideways"},
-{"id":80,"x":86,"y":491,"width":17,"height":11,"direction":"sideways"},
+{"id":80,"x":86,"y":491,"width":16,"height":11,"direction":"sideways"},
 {"id":81,"x":104,"y":491,"width":16,"height":11,"direction":"sideways"},
-{"id":82,"x":108,"y":522,"width":16,"height":12,"direction":"sideways"},
-{"id":83,"x":125,"y":522,"width":17,"height":12,"direction":"sideways"},
+{"id":82,"x":108,"y":522,"width":16,"height":11,"direction":"sideways"},
+{"id":83,"x":125,"y":522,"width":16,"height":11,"direction":"sideways"},
 {"id":84,"x":108,"y":535,"width":16,"height":11,"direction":"sideways"},
-{"id":85,"x":125,"y":535,"width":17,"height":11,"direction":"sideways"},
+{"id":85,"x":125,"y":535,"width":16,"height":11,"direction":"sideways"},
 {"id":86,"x":132,"y":568,"width":16,"height":11,"direction":"sideways"},
-{"id":87,"x":149,"y":568,"width":17,"height":11,"direction":"sideways"},
+{"id":87,"x":149,"y":568,"width":16,"height":11,"direction":"sideways"},
 {"id":88,"x":132,"y":580,"width":16,"height":11,"direction":"sideways"},
-{"id":89,"x":149,"y":580,"width":17,"height":11,"direction":"sideways"},
+{"id":89,"x":149,"y":580,"width":16,"height":11,"direction":"sideways"},
 {"id":90,"x":157,"y":611,"width":16,"height":11,"direction":"sideways"},
-{"id":91,"x":174,"y":611,"width":17,"height":11,"direction":"sideways"},
-{"id":92,"x":157,"y":623,"width":16,"height":12,"direction":"sideways"},
-{"id":93,"x":174,"y":623,"width":17,"height":12,"direction":"sideways"},
-{"id":94,"x":181,"y":657,"width":16,"height":12,"direction":"sideways"},
-{"id":95,"x":198,"y":657,"width":16,"height":12,"direction":"sideways"},
+{"id":91,"x":174,"y":611,"width":16,"height":11,"direction":"sideways"},
+{"id":92,"x":157,"y":623,"width":16,"height":11,"direction":"sideways"},
+{"id":93,"x":174,"y":623,"width":16,"height":11,"direction":"sideways"},
+{"id":94,"x":181,"y":657,"width":16,"height":11,"direction":"sideways"},
+{"id":95,"x":198,"y":657,"width":16,"height":11,"direction":"sideways"},
 {"id":96,"x":181,"y":670,"width":16,"height":11,"direction":"sideways"},
 {"id":97,"x":198,"y":670,"width":16,"height":11,"direction":"sideways"},
 {"id":98,"x":203,"y":701,"width":16,"height":11,"direction":"sideways"},
-{"id":99,"x":220,"y":701,"width":17,"height":11,"direction":"sideways"},
+{"id":99,"x":220,"y":701,"width":16,"height":11,"direction":"sideways"},
 {"id":100,"x":203,"y":713,"width":16,"height":11,"direction":"sideways"},
-{"id":101,"x":220,"y":713,"width":17,"height":11,"direction":"sideways"},
+{"id":101,"x":220,"y":713,"width":16,"height":11,"direction":"sideways"},
 {"id":102,"x":231,"y":812,"width":11,"height":16,"direction":"longways"},
 {"id":103,"x":231,"y":829,"width":11,"height":16,"direction":"longways"},
 {"id":104,"x":231,"y":849,"width":11,"height":16,"direction":"longways"},
@@ -129,16 +129,16 @@ position =
 {"id":106,"x":231,"y":885,"width":11,"height":16,"direction":"longways"},
 {"id":107,"x":231,"y":902,"width":11,"height":16,"direction":"longways"},
 {"id":108,"x":244,"y":924,"width":16,"height":11,"direction":"sideways"},
-{"id":109,"x":261,"y":924,"width":17,"height":11,"direction":"sideways"},
+{"id":109,"x":261,"y":924,"width":16,"height":11,"direction":"sideways"},
 {"id":110,"x":282,"y":924,"width":16,"height":11,"direction":"sideways"},
 {"id":111,"x":299,"y":924,"width":16,"height":11,"direction":"sideways"},
-{"id":112,"x":328,"y":924,"width":17,"height":11,"direction":"sideways"},
+{"id":112,"x":328,"y":924,"width":16,"height":11,"direction":"sideways"},
 {"id":113,"x":346,"y":924,"width":16,"height":11,"direction":"sideways"},
 {"id":114,"x":366,"y":924,"width":16,"height":11,"direction":"sideways"},
-{"id":115,"x":383,"y":924,"width":17,"height":11,"direction":"sideways"}
+{"id":115,"x":383,"y":924,"width":16,"height":11,"direction":"sideways"}
 ];
 
-poster =
+poster = 
 
 [{"presenid":"A1-1","posterid":1,"star":3,"date":1},
 {"presenid":"A1-2","posterid":2,"star":3,"date":1},
@@ -220,7 +220,7 @@ poster =
 {"presenid":"F4-1","posterid":78,"star":3,"date":1},
 {"presenid":"F4-2","posterid":79,"star":1,"date":1},
 {"presenid":"F4-3","posterid":80,"star":1,"date":1},
-{"presenid":"F5-1","posterid":81,"star":3,"date":1},
+{"presenid":"X3-52","posterid":81,"star":3,"date":1},
 {"presenid":"P1-1","posterid":82,"star":3,"date":1},
 {"presenid":"P1-2","posterid":83,"star":1,"date":1},
 {"presenid":"P1-3","posterid":84,"star":1,"date":1},
@@ -1443,10 +1443,11 @@ author =
 {"presenid":"X3-48","name":"Xさん","belongs":"Xさん","first":1},
 {"presenid":"X3-49","name":"Xさん","belongs":"Xさん","first":1},
 {"presenid":"X3-50","name":"Xさん","belongs":"Xさん","first":1},
+{"presenid":"X3-52","name":"Xさん","belongs":"Xさん","first":1},
 {"presenid":"X3-51","name":"Xさん","belongs":"Xさん","first":1}
 ];
 
-keyword =
+keyword = 
 [
 {"presenid":"A1-1","keyword":"固有表現抽出, 新出語,HYENA"},
 {"presenid":"A1-2","keyword":"Temporal Image Retrieval, Historical Importance, Wikipedia"},
@@ -1793,10 +1794,11 @@ keyword =
 {"presenid":"X3-48","keyword":"ダミーポスター"},
 {"presenid":"X3-49","keyword":"ダミーポスター"},
 {"presenid":"X3-50","keyword":"ダミーポスター"},
+{"presenid":"X3-52","keyword":"ダミーポスター"},
 {"presenid":"X3-51","keyword":"ダミーポスター"}
 ];
 
-presen =
+presen = 
 [
 {"presenid":"A1-1","title":" YAGOを用いた拡張固有表現抽出における新出語のクラス推定精度の検証","abstract":"固有表現抽出は，文書中から人名・地名・組織名などの固有表現を抜き出す技術であり，一般的に数種類\n程度の固有表現クラスに分類する．最近では 100 クラス以上に細分化・階層化した拡張固有表現が提案されているが，高い精度で拡張固有表現抽出を実現した事例は少ない．その中で，HYENA と呼ばれる手法は，Wikipedia の情報を利用することで F 値 0.9 程度の性能を達成している．しかし，この性能は Wikipedia の情報に依存するものであり，Wikipedia で定義されていないような新出語に対しては大きく精度が低下することが予測される．本研究では，HYENA の既出語と新出語に対する性能の差について検証し，また，その検証結果から，新出語に対応可能な手法のデザインについて模索する．","bookmark":0},
 {"presenid":"A1-2","title":" Search for Images of Historical Objects Using Wikipedia","abstract":"We investigate the temporal image retrieval problem by utilizing knowledge from Wikipedia to help retrieve\nimages. Since current search engines do not explicitly consider the time related to the objects displayed in images, we believethat our proposed temporal image retrieval algorithm can more completely satisfy search intentions. A search is done byinputting an entity name (with/without location and time information), and chronologically sorted search results are output tocapture the evolution of the queried entity and consider its co-occurrence with other historically important entities. We proposea novel way to map images to Wikipedia articles to utilize Wikipedia’s structure to estimate the historical importance ofdisplayed objects. A combination of criteria is proposed to measure the historical importance of images under entity evolutionscenarios and co-occurrence with other historically important objects.","bookmark":0},
@@ -2100,6 +2102,10 @@ presen =
 {"presenid":"P4-2","title":"観光イベントに関する動画とブログの自動収集","abstract":"旅行の計画を立てる時に，「今から訪れようとしている場所で，滞在期間中にどのようなイベントが開催されるのか」という情報は非常に重要である．しかし，開催期間が限定的なイベント関連の情報を人手で整備するのは非常にコストがかかるため，例えば，旅行会社や政府の観光局などが提供する雑誌や Web 上のポータルサイトなどでは，知名度の高いもののうちの一部を簡単に紹介するにとどまっている．そこで本研究では，あるイベントに関する動画とブログを自動的に収集し，それらを地図上にマッピングすることで，ユーザが俯瞰的にイベント情報を閲覧できるイベント参加支援システムの構築を行う．動画とブログの自動収集において，動画では精度0.855，再現率 0.834，ブログでは精度 0.820，再現率 0.937 の割合で正しく収集できた．","bookmark":0},
 {"presenid":"P4-3","title":"観光情報集約のためのユーザ検索行動に基づくスマートスクラップブックシステム","abstract":"一般に，ユーザは観光の際に目的とする観光オブジェクトについての情報を Web やガイドブックを用いて収集する．この時，まとめる必要がある多数のオブジェクトの情報を収集し，あるオブジェクトの情報について調べるとき，ユーザによっては地図で場所を得たり，Web で詳細を調べるなど，定型的な行動をとることがある．このような定型的な行動を他のオブジェクトに対しても適応することで，手軽に観光情報を収集するスマートスクラップブックを提案する．","bookmark":0},
 {"presenid":"P4-4","title":"実店舗における購買意図と販売意図を用いた電子チラシの自動生成","abstract":"ユーザの購買行動は，実店舗のチラシからの購買とネットでの購買に分かれる．実店舗のチラシは販売する側の意図が大半を占めているため，閲覧者の興味を外れた商品も表示している．しかしそれは閲覧者に新しい興味を与える可能性も秘めている．それに対してネットでの購買はユーザの購買意図に基づいた表示をすることが可能であり，また同カテゴリで比較検討することが容易である．しかしユーザの閲覧範囲が狭い為，新たな興味が生まれにくい．そこで本研究では商業施設におけるユーザの移動，購買等の行動，また事前入力によるプロファイルによりユーザの購買意図を抽出し，店舗が設定する販売意図と合わせることで複数の店舗を横断的に表示する電子チラシを生成する手法を提案する．","bookmark":0},
+{"presenid":"X3-4","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-5","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-6","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-7","title":"謎のX","abstract":"NO DATA","bookmark":0},
 {"presenid":"X3-8","title":"謎のX","abstract":"NO DATA","bookmark":0},
 {"presenid":"X3-9","title":"謎のX","abstract":"NO DATA","bookmark":0},
 {"presenid":"X3-10","title":"謎のX","abstract":"NO DATA","bookmark":0},
@@ -2143,7 +2149,8 @@ presen =
 {"presenid":"X3-48","title":"謎のX","abstract":"NO DATA","bookmark":0},
 {"presenid":"X3-49","title":"謎のX","abstract":"NO DATA","bookmark":0},
 {"presenid":"X3-50","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-51","title":"謎のX","abstract":"NO DATA","bookmark":0}
+{"presenid":"X3-51","title":"謎のX","abstract":"NO DATA","bookmark":0},
+{"presenid":"X3-52","title":"謎のX","abstract":"NO DATA","bookmark":0}
 ];
 
 presents = 
@@ -2493,10 +2500,11 @@ presents =
 {"sessionid":"X3","presenid":"X3-48"},
 {"sessionid":"X3","presenid":"X3-49"},
 {"sessionid":"X3","presenid":"X3-50"},
-{"sessionid":"X3","presenid":"X3-51"}
+{"sessionid":"X3","presenid":"X3-51"},
+{"sessionid":"X3","presenid":"X3-52"}
 ];
 
-session = 
+session =  
 [
 {"sessionid":"A1","title":"Wikipedia・XML（Ph.Dセッション）","chairpersonname":"山名 早人","charipersonbelongs":"早稲田大学"},
 {"sessionid":"B1","title":"SNS","chairpersonname":"熊本 忠彦","charipersonbelongs":"千葉工業大学"},
