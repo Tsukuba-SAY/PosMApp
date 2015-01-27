@@ -1,35 +1,90 @@
 <html>
 <head></head>
 <body>
-	<input type="search" id="search-bar-title" placeholder="タイトルで検索" onchange="searchChanged(this)"/>
-	<div id="searchResult" style="position: fixed; z-index: 100;"></div>
-
-	<div id="mapMain">
-		<div id="posters"></div>
-		<img id="prevDayButton" src="img/prevday.png"></div>
-		<img id="nextDayButton" src="img/nextday.png"></div>
+ 	<div id="menuPanel" data-display="overlay" data-role="panel" data-position="right">
+		<!-- <div id="changelabel" data-position="fixed" style="border: 2px;">
+ 			<a data-role="button" href="#changeLabelDialog"
+ 					data-inline="true" data-rel="dialog"
+ 					data-transition="pop">ラベル切替</a>
+ 		</div> -->
+ 		<div style="text-align: center;">
+ 			ポスターのラベル表示変更
+ 		</div>
+ 		<a class="changelabel" id="label-presenid"
+			href="#posterMapPage" data-role="button">発表番号</a>
+		<a class="changelabel" id="label-title"
+			href="#posterMapPage" data-role="button">タイトル</a>
+		<a class="changelabel" id="label-authorname"
+			href="#posterMapPage" data-role="button">代表者名</a>
+		<a class="changelabel" id="label-authorbelongs"
+			href="#posterMapPage" data-role="button">所属</a>
 	</div>
-
+	<div data-role="header"　data-tap-toggle="false" data-position:"fixed" style="z-index: 200;">
+		<div class="ui-grid-b">
+			<div class="ui-block-a" style="width: 65%;">
+				<input type="search" id="search-bar-title" 
+	    		placeholder="検索" data-inline="true" style="width:80%;" onchange="searchChanged(this)"/>
+			</div>
+			<div class="ui-block-b" style="width: 10%;">
+				<div id="searchResult"></div>
+			</div>
+			<div class="ui-block-c" style="width: 25%;">
+				<a href="#menuPanel"  class="ui-btn" 
+          style="vertical-align:center; top:3.5px;">メニュー</a>
+			</div>
+		</div>
+	</div>  
 	<div style="position: relative;">
+			<a data-role="button" class="ReDownloadBtn">データを再読み込み</a>
+		<div id="subheader" style="top: 0px;">
+			<!-- 検索結果件数 -->
+			<!--<div id="searchResult"
+				style="position: fixed; z-index: 100;">
+			</div>-->
+			<!-- エリアタップ後のズームアウトボタン -->
+			<div id="resetScaleButtonFrame" data-position="fixed" style="border: 2px;">
+				<a id="resetScaleButton" data-role="button"
+					data-inline="true">戻る</a>
+			</div>
+		</div>
+		<!-- ポスターマップ本体 -->
+		<div id="mapFrame" style="z-index: 255;background-color:#FFFFFF">
+			<div id="mapMain">
+				<!-- ポスターマップ表示 -->
+				<img id="mapImg" src="img/postermap_1.png" border="0"
+					style="position: relative; z-index: 1;"></img>
+				<!-- ポスターアイコン -->
+				<div id="posters"></div>
+			</div>
+			<!-- 前の日 -->
+			<img id="prevDayButton" src="img/prevday.png"></img>
+			<!-- 次の日 -->
+			<img id="nextDayButton" src="img/nextday.png"></img>
+		</div>
 		<!-- 基本情報パネル -->
-		<div id="basicinfopanel" style="display:none;">
-			<div id="basicinfo"></div>
-			<!-- ブックマークボタン -->
-			<!-- アイコンの切り替えはpostermap.jsで行う -->
-			<img id="bookmarkbutton"></img>
-			<!-- 詳細情報ボタン -->
-			<img id="detailinfobutton" src="img/detail.png"></img>
+		<div style="position: relative;">
+			<div id="basicinfopanel" style="display:none;">
+				<div id="basicinfo"></div>
+				<!-- ブックマークボタン -->
+				<!-- アイコンの切り替えはpostermap.jsで行う -->
+				<img id="bookmarkbutton"></img>
+				<!-- 詳細情報ボタン -->
+				<img id="detailinfobutton" src="img/detail.png"></img>
+			</div>
 		</div>
 	</div>
 
-	<!-- ラベル変更ボタン -->
-	<a class="changelabel" id="label-presenid"
-		href="#posterMapPage" data-role="button">発表番号</a>
-	<a class="changelabel" id="label-title"
-		href="#posterMapPage" data-role="button">タイトル</a>
-	<a class="changelabel" id="label-authorname"
-		href="#posterMapPage" data-role="button">代表者名</a>
-	<a class="changelabel" id="label-authorbelongs"
-		href="#posterMapPage" data-role="button">所属</a>
+	<!-- タブバー -->
+	<div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
+		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
+			<ul>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
+				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>				
+				<li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>	
+			</ul>
+		</div>
+	</div>
 </body>
 </html>
