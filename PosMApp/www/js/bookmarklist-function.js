@@ -41,8 +41,8 @@ $.fn.showBookmarkList = function() {
 					}
 
 					str += "&nbsp;&nbsp;<img class='bookmarklistbookmarkbutton' id='bookmarklistbookmark"+p.presenid+"' src='img/bookmark.png' style='zoom: 22%;'></img><br>";
-					str += "<strong><small>" + p.title + "</small></strong><br>";
-					str += "<div class='authors-on-list'>" + authorname + ", 他</div></td>";
+					str += "<span class='bookmarklistTitle'><strong><small>" + p.title + "</small></strong></span><br>";
+					str += "<div class='authors-on-list'><span class='bookmarklistAuthors'>" + authorname + ", 他</span></div></td>";
 					str += "<td><div><td><img class='bookmarklistToDetailBtn' id='bookmarklistToDetail"+p.presenid+"' src='img/detailinfo.png' style='zoom: 3%;'> </img></div>";
 				}
 			}
@@ -56,10 +56,26 @@ $.fn.showBookmarkList = function() {
 	$(".bookmarklistToMapBtn").bookmarklistToMapPage();
 	$(".bookmarklistToDetailBtn").bookmarklistToDetailPage();
 	$(".bookmarklistbookmarkbutton").deletebookmark();
+	$(".bookmarklistTitle").bookmarkjumpToDetailPage();
+	$(".bookmarklistAuthors").bookmarkjumpToDetailPage();
 
 	return presens;
 };
 
+$.fn.bookmarkjumpToDetailPage = function() {
+	$(this).on("click", function(e) {
+		// ポスターのIDを取得する
+		var presenid = $(e.target)
+						.parents()
+						.filter(function() {return this.tagName === "TR"})
+						.get(0)
+						.id
+						.substring("bookmarkedpresen".length);
+		sessionStorage.setItem("previousPage", "presenListPage");
+		sessionStorage.setItem("listClick", "bookmarklist");
+		listToDetail(presenid);
+	});
+};
 
 //ポスターリスト画面の各「詳細情報」ボタンをクリックする時
 $.fn.bookmarklistToDetailPage = function() {
