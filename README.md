@@ -16,7 +16,7 @@ PosMAppは、ポスター展示を含むシンポジウムのための、スマ�
 
 http://posmapp.tk/
 
-[ユーザマニュアルはこちらです](http://tsukuba-say.github-.io/)
+[ユーザマニュアルはこちらです](http://tsukuba-say.github.io/)
 
 ## 対応する端末
 
