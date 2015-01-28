@@ -116,7 +116,7 @@ function resetZoom() {
 }
 
 function hammerOnMap() {
-    var FRAME_TIME = 1000 / 30;
+    var FRAME_TIME = 1000 / 10;
 	// var INIT_SCALE = (window.innerHeight - 55 - 68) / STATIC_HEIGHT;
 
 	var $mapMain = $('#mapMain');
