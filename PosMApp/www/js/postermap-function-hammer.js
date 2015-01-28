@@ -16,7 +16,8 @@ function initHammer() {
     $("#resetScaleButton").on("click", resetZoom);
     $(".posterfont").css("display", "none");
 
-    var $mapMain = $("#mapMain");
+    var $posterArea = $("#posterArea");
+    $posterArea.empty();
     taparea.forEach(function(area) {
         var $divarea = $("<div>")
             .attr("id", "area"+area.id)
@@ -32,7 +33,7 @@ function initHammer() {
             .on("click", function() {
                 zoomMap(area);
             });
-        $mapMain.append($divarea);
+        $posterArea.append($divarea);
     });
 
     hammerOnMap();
