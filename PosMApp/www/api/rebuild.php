@@ -16,7 +16,7 @@ if ($payload_github["ref"] === "refs/heads/develop") {
 
   $payload = array("text" => $rebuild_result);
 
-  $slack_webhook_url = "https://hooks.slack.com/services/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"; 
+  $slack_webhook_url = "https://hooks.slack.com/services/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"; 
   $options = array(
     "http" => array(
       "method" => "POST",
