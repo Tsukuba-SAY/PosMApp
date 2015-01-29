@@ -45,13 +45,14 @@ $.fn.selectUserCategory = function() {
 }
 
 // 初期設定用
-function initUserData() {
+function initUserData(pagename) {
 	if (localStorage.getItem("accept_collect_log") === null) {
 		// デフォルト
 		var category = 1;
 		localStorage.setItem("category", category);
 
 		window.location.href = "#checkCollectLogDialog";
+		changePage(pagename);
 	}
 }
 

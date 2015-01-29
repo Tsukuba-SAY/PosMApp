@@ -47,5 +47,6 @@ function changePage(pagename) {
 	$("." + pagename.substring(1) + "Button").addClass("ui-btn-active ui-state-persist");
 	// showBookmarkList();
 	window.location.href = pagename;
+	initUserData(pagename);
 	return pagename;
 }

@@ -19,9 +19,7 @@ function init() {
 	$("#acceptCollectLog").acceptCollectLog();
 	$("#denyCollectLog").denyCollectLog();
 	$(".selectUserCategoryButton").selectUserCategory();
-	if (localStorage.getItem("uid") === null) {
-		initUserData();
-	}
+	
 
 	//　ポスターデータのダウンロード
 	//　各mapに関する変数に値を与える
