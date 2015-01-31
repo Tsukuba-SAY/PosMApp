@@ -2563,6 +2563,7 @@ session =
 {"sessionid":"P1","title":"ソーシャルメディア・ブログ","chairpersonname":"牛尼 剛聡","charipersonbelongs":"九州大学"},
 {"sessionid":"P2","title":"情報推薦・マイニング","chairpersonname":"平手 勇宇","charipersonbelongs":"楽天"},
 {"sessionid":"P3","title":"ユーザインタフェース","chairpersonname":"義久 智樹","charipersonbelongs":"大阪大学"},
+{"sessionid":"P4","title":"観光・地理情報","chairpersonname":"前川 卓也","charipersonbelongs":"大阪大学"},
 {"sessionid":"X3","title":"ダミーセッション","chairpersonname":"Xさん","chairpersonbelongs":"X大学"}
 ];
 
