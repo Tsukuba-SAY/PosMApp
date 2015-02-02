@@ -12,9 +12,9 @@ function initHammer() {
     // Hammer Managerをポスターマップのフレームに
     mc = new Hammer.Manager($("#mapFrame")[0]);
 
-    $("#resetScaleButtonFrame").css("display", "none");
+    $("#resetScaleButtonFrame").hide();
     $("#resetScaleButton").on("click", resetZoom);
-    $(".posterfont").css("display", "none");
+    $(".posterfont").hide();
 
     var $posterArea = $("#posterArea");
     $posterArea.empty();
@@ -76,9 +76,9 @@ function zoomMap(area) {
     resy = posy;
     resscale = scale;
 
-    $(".mapArea").css("display", "none");
-    $("#resetScaleButtonFrame").css("display", "inline");
-    $(".posterfont").css("display", "block");
+    $(".mapArea").hide();
+    $("#resetScaleButtonFrame").show();
+    $(".posterfont").show();
     $(".bookmarkstar").sizeDownBookmarkStar();
     $("#prevDayButton").hide();
     $("#nextDayButton").hide();
@@ -108,11 +108,11 @@ function resetZoom() {
     resy = posy;
     resscale = scale;
 
-    $("#resetScaleButtonFrame").css("display", "none");
-    $(".mapArea").css("display", "inline");
-    $(".posterfont").css("display", "none");
-    $(".bookmarkstar").sizeUpBookmarkStar();
     changePosterMapDate(Number(sessionStorage.getItem("currentPosterMapDate")));
+    $(".mapArea").show();
+    $("#resetScaleButtonFrame").hide();
+    $(".posterfont").hide();
+    $(".bookmarkstar").sizeUpBookmarkStar();
 }
 
 function hammerOnMap() {
