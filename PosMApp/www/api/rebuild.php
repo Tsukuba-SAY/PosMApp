@@ -12,26 +12,26 @@ $rebuild_result = shell_exec("sudo /rebuild.sh");
 
 echo $rebuild_result;
 
-if ($payload_github["ref"] === "refs/heads/develop") {
+// if ($payload_github["ref"] === "refs/heads/develop") {
 
-  $payload = array("text" => $rebuild_result);
+//   $payload = array("text" => $rebuild_result);
 
-  $slack_webhook_url = "https://hooks.slack.com/services/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"; 
-  $options = array(
-    "http" => array(
-      "method" => "POST",
-      "content" => json_encode($payload),
-      "header" => "Content-Type: application/json\r\n".
-                  "Accept: application/json\r\n"
-    )
-  );
+//   $slack_webhook_url = "***"; 
+//   $options = array(
+//     "http" => array(
+//       "method" => "POST",
+//       "content" => json_encode($payload),
+//       "header" => "Content-Type: application/json\r\n".
+//                   "Accept: application/json\r\n"
+//     )
+//   );
 
-  $context = stream_context_create($options);
-  $result = file_get_contents($slack_webhook_url, false, $context);
-  $result = json_decode($result);
+//   $context = stream_context_create($options);
+//   $result = file_get_contents($slack_webhook_url, false, $context);
+//   $result = json_decode($result);
 
-  echo $result;
+//   echo $result;
 
-}
+// }
 
 ?>
