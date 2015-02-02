@@ -712,7 +712,14 @@ function changePosterMapDate(date) {
 	setPosterIcons();
 	showPosterIcons();
 	setLabelSize();
+	if (sessionStorage.getItem("label") !== null) {
+        changeLabel(sessionStorage.getItem("label"));
+    }
 	$(".postericon").touchPoster();
+	$(".mapArea").show();
+    $("#resetScaleButtonFrame").hide();
+    $(".posterfont").hide();
+    $(".bookmarkstar").sizeUpBookmarkStar();
 }
 
 // 代表者名を取得
