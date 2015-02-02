@@ -203,6 +203,8 @@ function changeLabel(column) {
 				str = getAuthorname(poster[i-1].presenid);
 			} else if (column === "authorbelongs") {
 				str = getAuthorbelongs(poster[i-1].presenid);
+			} else if (column === "posterid") {
+				str = i.toString();
 			} else {
 				var p;
 				presen.forEach(function(obj) {
