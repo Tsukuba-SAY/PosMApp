@@ -109,6 +109,7 @@ function resetZoom() {
     resscale = scale;
 
     changePosterMapDate(Number(sessionStorage.getItem("currentPosterMapDate")));
+    changeLabel(sessionStorage.getItem("label"));
     $(".mapArea").show();
     $("#resetScaleButtonFrame").hide();
     $(".posterfont").hide();
