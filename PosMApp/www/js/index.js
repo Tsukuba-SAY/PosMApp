@@ -138,13 +138,10 @@ function init() {
 	$("#goToInformation").goToInformationPage("click");
 	$("#goToVenue").goToVenuePage("click");
 
-	//ブラウザの「戻る」と「進む」ボタンをクリックする時呼び出される事件
-	//使用者がブラウザの「戻る」と「進む」ボタンを使う時タブバーの強調表示バグを修正するため、追加した
 	window.addEventListener('popstate', function(event) {  
 		// alert(JSON.stringify(event.state));
 		// alert(event.state.hash);
 
-		//eventから、前のページのアドレスを取得する
 		switch (event.state.hash) {
 		case "#posterMapPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");

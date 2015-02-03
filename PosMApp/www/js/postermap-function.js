@@ -409,12 +409,6 @@ function emphasisSearchedPosters(posterids) {
 		if (pflag[i] !== "t" && pflag[i] !== "e") {
 			pflag[i] = "d";
 		}
-		
-		//前回強調表示かつタッチされたポスターの状態が普通のタッチ状態に戻る
-		//#75「前回のsearch結果をタッチしている状態キーワード変更してまた検索するフラグがおかしい」バグの修正
-		if(pflag[i] === "e"){
-			pflag[i] = "t";
-		}
 	}
 
 	// ヒットしたポスターを強調表示する
