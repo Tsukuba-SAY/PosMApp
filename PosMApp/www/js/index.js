@@ -9,7 +9,7 @@ $(init);
 
 // 初期化順は全体に影響するので、追加変更する場合は注意
 function init() {
-
+	
 	// トップページの大きさ調整
 	$("#topPageFrame")
 		.css("width", window.innerWidth)
@@ -138,6 +138,50 @@ function init() {
 	$("#goToInformation").goToInformationPage("click");
 	$("#goToVenue").goToVenuePage("click");
 
+	window.addEventListener('popstate', function(event) {  
+		// alert(JSON.stringify(event.state));
+		// alert(event.state.hash);
+
+		switch (event.state.hash) {
+		case "#posterMapPage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
+			break;
+		case "#presenListPage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".presenListPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
+			break;
+		case "#informationPage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
+			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
+			break;
+		case "#venuePage":
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".venuePageButton").addClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
+			break;
+		default:
+			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
+			break;
+	}
+
+	});
+
 	$("#presenList").showPresenList();
 	$("#bookmarkList").showBookmarkList();
 
@@ -203,7 +247,7 @@ function init() {
 			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
 			$(".presenListPageButton").addClass("ui-btn-active ui-state-persist");
-			$(".infromationPageButton").removeClass("ui-btn-active ui-state-persist");
+			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 			break;
 		case "#informationPage":
 			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
