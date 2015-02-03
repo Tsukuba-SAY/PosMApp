@@ -1,11 +1,12 @@
-// ローディング画面
-// TODO: 非同期化
-$(window).load(function() {
-	$("#loading").hide();
-})
+// // ローディング画面
+// // TODO: 非同期化
+// $(window).load(function() {
+// 	$("#loading").hide();
+// })
 
 // HTMLが呼ばれた時の初期化処理
-$(init);
+// $(init);
+init();
 
 // 初期化順は全体に影響するので、追加変更する場合は注意
 function init() {
