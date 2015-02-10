@@ -36,16 +36,22 @@ $.fn.goToTopPage = function(ev) {
 	});
 };
 
+// pagenameのページに遷移
 function changePage(pagename) {
 	saveLog("show_page", {page:pagename});
 	resetZoom();
+	changeActiveTab(pagename);
+	// showBookmarkList();
+	window.location.href = pagename;
+	return pagename;
+}
+
+// アクティブなタブバーをpagenameのものに切り替える
+function changeActiveTab(pagename) {
 	$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
 	$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
 	$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
 	$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
 	$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
 	$("." + pagename.substring(1) + "Button").addClass("ui-btn-active ui-state-persist");
-	// showBookmarkList();
-	window.location.href = pagename;
-	return pagename;
 }
