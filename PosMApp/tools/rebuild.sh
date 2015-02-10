@@ -1,6 +1,10 @@
 #!/usr/bin/bash
 
-cd /PosMApp/
+cd /PosMAppBuild
+#pwd
+git branch --contains
 git pull
-httpd -k stop
-httpd -k start
+#git status
+#httpd -k restart
+echo "rebuild done!"
+exit 0

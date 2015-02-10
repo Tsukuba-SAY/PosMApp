@@ -1,5 +1,5 @@
 $.fn.acceptCollectLog = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		console.log("collect log accept");
 
 		var uid = createUID();
@@ -15,23 +15,32 @@ $.fn.acceptCollectLog = function() {
 };
 
 $.fn.denyCollectLog = function() {
-	$(this).on("touchstart", function(e){
+	$(this).on("click", function(e){
 		console.log("collect log deny");
 
 		localStorage.setItem("accept_collect_log", false);
-		window.location.href = "#topPage";
+		if(localStorage.getItem("downloadResult")){
+			window.location.href = "#downloadFailDialog";
+		}else{
+			window.location.href = "#topPage";
+		}
 	});
 };
 
 // ユーザのカテゴリ分け
 // 1.学生（受講者), 2.学生（見学者), 3.教員, 4.社会人・その他 
 $.fn.selectUserCategory = function() {
-	$(this).on("touchstart", function(e) {
+	$(this).on("click", function(e) {
 		var id = e.target.id;
 		var category = id.substring(id.indexOf("-")+1);
 
 		localStorage.setItem("category", category);
-		window.location.href = "#topPage";
+		if(localStorage.getItem("downloadResult")){
+			window.location.href = "#downloadFailDialog";
+		}else{
+			window.location.href = "#topPage";
+		}
+		
 	});
 }
 
@@ -90,7 +99,7 @@ function sendLog() {
     var senddata = loadLog();
     var date = new Date();
     $.ajax({
-   		url: "http://104.236.123.57/php/savelog.php",
+   		url: "http://posmapp.tk/php/savelog.php",
 		type: "POST",
 		dataType: "json",
 		data: senddata,

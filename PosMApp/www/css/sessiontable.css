@@ -1,0 +1,95 @@
+table.session_table {
+  width: 100%;
+  text-shadow: none; /* 影を無効化 */
+}
+
+table.session_table tr:nth-child(2n+1) {
+  background-color: #D2DEEF;
+  text-align: center;
+}
+
+table.session_table tr:nth-child(2n+0) {
+  background-color: #EAEFF7;
+  text-align: center;
+}
+
+table.session_table th {
+  background-color: #5B9BD5;
+  color: white; /* 時刻見出しは白か */
+  text-align: center;
+  height: 40px;
+}
+
+table.session_table th.showtime {
+  background-color: #5B9BD5;
+  color: white;
+  text-align: center;
+}
+
+table.session_table td.rest {
+  background-color: #E2F0D9;
+  color: black;
+  text-align: center;
+  height: 30px;
+}
+
+
+/* 表示領域全体 */
+div.changesessiontable　div.sessiontablebox {
+  margin: 0px;
+  padding: 0px;
+  width: 100%
+}
+
+/* 日付切替ボタン */
+div.changesessiontable　button.changedate a.sessiontable1 {
+}
+
+div.changesessiontable　button.changedate a.sessiontable2 {
+}
+
+div.changesessiontable　button.changedate a.sessiontable3 {
+}
+
+
+/* 対応表示領域 */
+div.changesessiontable div.sessiontable {
+  width: 100%;
+  clear: left;
+}
+
+div.changesessiontable div#sessiontable1 {
+  background-color: transparent;
+  border: 2px;
+}
+
+div.changesessiontable div#sessiontable2 {
+  background-color: transparent;
+  border: 2px;
+}
+
+div.changesessiontable div#sessiontable3 {
+  background-color: transparent;
+  border: 2px;
+}
+
+#closingH {
+  background-color: #ff99a0;
+}
+
+.closingD {
+  background-color: #ffd1d1;
+}
+
+.phdsession {
+  font-size:0.8em;
+  text-align: center;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.banquetRoom {
+  font-size:0.75em;
+  width:3.30em;
+  word-break:break-all;
+}

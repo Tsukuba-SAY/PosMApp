@@ -1,15 +1,54 @@
-.listcolor tbody tr:nth-child(odd) td {
+.listcolor tbody tr:nth-child(2n+1) {
   background-color: #D2DEEF;
-}
-.listcolor tbody tr:nth-child(even) td {
+ }
+
+.listcolor tbody tr:nth-child(2n+0) {
   background-color: #EAEFF7;
+  }
+
+/* セッション見出しパネル */
+.listcolor  tbody th {
+  background-color: #edc58f; 
 }
+
+.sessionTH {
+  border-left-style: solid;
+  border-left-width: 10px; 
+  border-left-color: black;
+  text-shadow:none;
+  text-align:left;
+}
+
+.sessionTitle {
+  font-size:1.2em;
+  font-weight: 900;
+}
+.sessionPerson {
+  font-size:small;
+  font-weight: 900;
+}
+
+
 
 #emptyBookmarklist {
 	display: inline-block;
 	width: 100%;
 	text-align: center;
 	font-size: large;
+}
+
+#presenList{
+	text-shadow:none;
+}
+
+.listheader-presenid{
+	font-style:bold ;
+}
+
+.authors-on-list{
+	font-size: 0.8em;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .nav-tabicon .ui-btn { padding-top: 40px !important; }
@@ -26,3 +65,4 @@
 #list:after { background: transparent; background:  url("../img/tabbar/list_gray.png") 50% 50% no-repeat; background-size: 24px 16px;  }
 #bookmark:after { background: transparent; background:  url("../img/tabbar/bookmark_gray.png") 50% 50% no-repeat;  background-size: 12px 26px; }
 #information:after { background: transparent; background:  url("../img/tabbar/schedule.png") 50% 50% no-repeat;  background-size: 22px 27px; }
+#venue:after { background: transparent; background:  url("../img/tabbar/venue.png") 50% 50% no-repeat;  background-size: 22px 27px; }

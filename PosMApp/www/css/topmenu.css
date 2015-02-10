@@ -1,3 +1,13 @@
+#loading {
+	width: 80px; /* gif画像の幅 */
+	height: 80px; /* gif画像の高さ */
+	margin: -60px 0 0 -60px; /* gif画像を画面中央に */
+	padding: 20px; /* gif画像を大きく */
+	position: fixed; /* gif画像をスクロールさせない */
+	left: 50%; /* gif画像を画面横中央へ */
+	top: 50%; /* gif画像を画面縦中央へ */
+}
+
 #topPageContent {
 	position: absolute;
 	margin-left: 15%;
@@ -52,4 +62,38 @@
 	text-align: center;
 	font-size: small;
 	/*top: 92%;*/
+}
+
+.reDownloadDIVCLS {
+	position:absolute;
+	display: inline;
+	text-align: center;
+	top:18%;
+	height: 30px;
+	width: 220px;
+	line-height:8px;
+	z-index: 220;
+	font-size: 1.0em;
+	color: white;
+	background-color:#D00000;
+}
+
+.ReDownloadBtn {
+	position:absolute;
+	left: calc( 50% - 220px / 2);
+	top:22%;
+	height: 30px;
+	width: 220px;
+	line-height:30px;
+	z-index: 220;
+	vertical-align: middle;
+	font-size: medium;
+}
+
+#emScale {
+    margin: 0;
+    padding: 0;
+    width: 1px;
+    height: 1em;
+    visibility: hidden;
 }

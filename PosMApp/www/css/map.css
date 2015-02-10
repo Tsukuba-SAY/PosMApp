@@ -1,0 +1,164 @@
+.dpic {
+	background-color: #B4EBFA;
+}
+
+.tpic {
+	background-color: #35A16B;
+}
+
+.spic {
+	background-color: #FF2800;
+}
+
+.epic {
+	background-color: #35A16B;
+}
+
+.postericonframe{
+	position: absolute; 
+	z-index: 3;
+}
+
+.postericon{
+	position: absolute; 
+	text-align:center;
+	vertical-align:middle;
+	z-index: 3;
+}
+
+.posterfont{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-size: 1em;
+	white-space: nowrap;
+	text-align: center;
+	z-index: 7;
+	text-shadow: none;
+}
+
+#mapFrame{
+	height: calc(100% - 65px);
+	overflow: hidden;
+}
+
+#mapMain{
+	transition: all .2s;
+	-webkit-transition: all .2s;
+    -moz-transition: all .2s;
+	touch-action: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none; 
+	height : calc(100% - 65px);
+	overflow: hidden;
+	-moz-transform-origin : left top;
+	-webkit-transform-origin : left top;
+
+}
+
+#prevDayButton {
+	position: absolute;
+	z-index: 80;
+	width: 2em;
+	height: 2em;
+	top: 50%;
+	left: 0%;
+}
+
+#nextDayButton {
+	position: absolute;
+	z-index: 80;
+	width: 2em;
+	height: 2em;
+	top: 50%;
+	right: 0%;
+}
+
+
+#basicinfo{
+	position: fixed;
+	/*width: 100%;*/
+	height: 100px;
+	bottom: 50px; /* タブバーの幅 */
+	text-align: left;
+	padding-top: 20px;
+	padding-right: 40px;
+	padding-left: 40px;
+	font-size: small;
+	background-color: #ffff99;
+	word-wrap: break-word;
+/*	white-space: nowrap;
+	overflow: hidden;*/
+	text-overflow: ellipsis;
+	z-index: 60;
+}
+
+/*TODO:押しにくいから改善したほうがいいかも*/
+#bookmarkbutton{
+	padding  : 15px; 
+	position : fixed;
+	z-index  : 70;
+	width    : 30px;
+	height   : 30px;
+	left     : 0px;
+	bottom   : 145px; /* オフセット+タブバーの幅 */
+}
+
+#detailinfobutton{
+	padding  : 15px; 
+	position : fixed;
+	z-index  : 70;
+	right    : 0px;
+	height   : 35px;
+	width    : 35px; 
+	bottom   : 75px; /* オフセット+タブバーの幅 */
+}
+
+/* アイコンラベルの文字列変更ボタン */
+/* 念のため背景色白にしておく */
+#changelabel{
+	position : absolute;
+	right 	 : 5px;
+	top      : 5px;
+	z-index  : 200;
+}
+
+/* ブックマークされたアイコンにつける☆ */
+/*  */
+/* star-up    : 上 : 1 */
+/* star-right : 右 : 2 */
+/* star-down  : 下 : 3 */
+/* star-left  : 左 : 4 */
+.star{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	z-index: 30;
+}
+
+/* 著者・所属を少し小さくする */
+#detail-authors {
+	font-size: 0.8em;
+	margin-left: 7.5%;
+	margin-right: 7.5%;
+}
+
+#detail-presenid {
+	background-color: #b4ebfa;
+	height: 2.0em;
+	width: 4.0em;
+	text-align: center;
+	line-height: 2.0em;
+	text-shadow:none;
+}
+
+#basicInfoTitleContainer {
+	overflow: hidden;
+	width: 100%;
+}
+
+#basicInfoTitle {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
