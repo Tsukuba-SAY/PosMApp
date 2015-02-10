@@ -139,6 +139,8 @@ function init() {
 	$("#goToInformation").goToInformationPage("click");
 	$("#goToVenue").goToVenuePage("click");
 
+	$(".tabbar").createTabbar();
+
 	// HTML5 history API
 	// popstate : history記録を取得する時呼び出される事件
 	// 使用者がブラウザの「戻る」と「進む」ボタンを使う時タブバーの強調表示バグを修正するため、追加した

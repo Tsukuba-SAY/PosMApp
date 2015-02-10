@@ -1,3 +1,19 @@
+$.fn.createTabbar = function() {
+	$(this).append($(
+		'<div data-role="footer" data-position="fixed" data-tap-toggle="false"class="nav-tabicon" style="position:fixed; buttom:0px">\
+			<div data-role="navbar" height="100%" class="nav-tabicon" data-grid="d">\
+				<ul>\
+					<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>\
+					<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>\
+					<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>\
+					<li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>\
+					<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>\
+				</ul>\
+			</div>\
+		</div>'
+	));
+}
+
 // ポスターマップ画面に遷移
 $.fn.goToMapPage = function(ev) {
 	$(this).on(ev, function() {
