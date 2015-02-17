@@ -8,7 +8,6 @@
 
 	<link rel="stylesheet" type="text/css" href="css/lib/jquery-ui-1.11.2.custom.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.4.5.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/lib/slicknav.css" />
 	<link rel="stylesheet" type="text/css" href="css/button-icon.css" />
 	<link rel="stylesheet" type="text/css" href="css/map.css" />
 	<link rel="stylesheet" type="text/css" href="css/topmenu.css" />
@@ -24,7 +23,6 @@
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.hammer.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/lib/md5.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery.xpost.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/lib/rgbTo16.js"></script>
 
 	<!-- DB用発表データ -->
 	<script type="text/javascript" charset="utf-8" src="js/data.js"></script>
@@ -54,17 +52,24 @@
 </div>
 
 <!-- トップメニュー画面 -->
-<div data-role="page" id="topPage" style="background-image:url(img/toppage.png); background-size: 100% 100%;" >
+<div data-role="page" id="topPage">
+	<!-- 背景画像 -->
+	<img id="topPageBackground" src="img/toppage.png"></img>
+	<!-- コンテンツ -->
 	<div id="topPageContent">
-		<!-- <div id="reDownloadDIV" class="reDownloadDIV" align="center">
+		<!--
+		<div id="reDownloadDIV" class="reDownloadDIV" align="center">
 			<img src="img/gif-load.gif" class="downloading" style="zoom: 25%;"><font class="downloadMsg"></font>
-		</div> -->
-		<button id="reDownloadDIV" class="reDownloadDIVCLS"><img src="img/loading.gif" style="zoom: 18%;">データを再ダウンロード</button>
-		<!-- <div class="ui-grid-solo">
+		</div>
+		-->
+		<button id="reDownloadDIV" class="reDownloadDIVCLS"><img src="img/loading.gif" style="zoom: 18%;">データをダウンロード</button>
+		<!--
+		<div class="ui-grid-solo">
 			<div class="ui-block-a">
 				<div id="selectLocale">日本語 | <span style="text-decoration:line-through;color:lightgray;">English</span></div>
 			</div>
-		</div> -->
+		</div>
+		-->
 		<div class="ui-grid-a">
 			<div class="ui-block-a">
 				<div align="center">
@@ -141,7 +146,7 @@
 		</div>
 	</div>  
 	<div style="position: relative;">
-			<a data-role="button" class="ReDownloadBtn">データを再読み込み</a>
+			<a data-role="button" class="ReDownloadBtn">データをダウンロード</a>
 		<div id="subheader" style="top: 0px;">
 			<!-- 検索結果件数 -->
 			<!--<div id="searchResult"
@@ -183,14 +188,15 @@
 	</div>
 
 	<!-- タブバー -->
-	<div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
-		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
+	<!-- <div class="tabbar"></div> -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; bottom:0px">
+		<div data-role="navbar" height="100%" class="nav-tabicon" data-grid="d">
 			<ul>
 				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
 				<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
-				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>				
+				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>
 				<li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
-				<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>	
+				<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>
 			</ul>
 		</div>
 	</div>
@@ -215,7 +221,8 @@
 		
 	</div>
 	<!-- タブバー -->
-	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
+	<!-- <div class="tabbar"></div> -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; bottom:0px">
 		<div data-role="navbar" height="100%" class="nav-tabicon" data-grid="d">
 			<ul>
 				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
@@ -251,7 +258,7 @@
 		</div>
 	</div>
 	<div data-role="content">
-			<a data-role="button" class="ReDownloadBtn">データを再読み込み</a>
+			<a data-role="button" class="ReDownloadBtn">データをダウンロード</a>
 		<div style="overflow:auto; height:100%;">
 			<!-- 発表リスト -->
 			<div id="presenList" class="listcolor"></div>
@@ -259,8 +266,9 @@
 		</div>
 	</div>
 	<!-- タブバー -->
-	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
-		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
+	<!-- <div class="tabbar"></div> -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; bottom:0px">
+		<div data-role="navbar" height="100%" class="nav-tabicon" data-grid="d">
 			<ul>
 				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
 				<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
@@ -285,12 +293,13 @@
 					
 	</div>
 	<!-- タブバー -->
-	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
-		<div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
+	<!-- <div class="tabbar"></div> -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; bottom:0px">
+		<div data-role="navbar" height="100%" class="nav-tabicon" data-grid="d">
 			<ul>
 				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
 				<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
-				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>	
+				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>
 				<li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
 				<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>
 			</ul>
@@ -442,18 +451,19 @@
       </div>
       </div>
   </div>
-  <!-- タブバー -->
-  <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; buttom:0px">
-    <div data-role="navbar" height="100%"  class="nav-tabicon" data-grid="d">
-      <ul>
-        <li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
-        <li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
-        <li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>
-        <li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
-        <li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>
-      </ul>
-    </div>
-  </div>
+  	<!-- タブバー -->
+	<!-- <div class="tabbar"></div> -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="nav-tabicon" style="position:fixed; bottom:0px">
+		<div data-role="navbar" height="100%" class="nav-tabicon" data-grid="d">
+			<ul>
+				<li><a class="topPageButton" id="totoppage" data-icon="toppage">トップ</a></li>
+				<li><a class="informationPageButton" id="information" data-icon="informationgray">TimeTable</a></li>
+				<li><a class="venuePageButton"  id="venue"  data-icon="venue" >会場図</a></li>
+				<li><a class="presenListPageButton" id="list" data-icon="list">発表一覧</a></li>
+				<li><a class="posterMapPageButton" id="map" data-icon="map">ポスター</a></li>
+			</ul>
+		</div>
+	</div>
 </div>
 
 <!-- 利用ログデータ回収許諾ダイアログ  -->

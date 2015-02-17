@@ -8,6 +8,12 @@
 	top: 50%; /* gif画像を画面縦中央へ */
 }
 
+#topPageBackground {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
 #topPageContent {
 	position: absolute;
 	margin-left: 15%;

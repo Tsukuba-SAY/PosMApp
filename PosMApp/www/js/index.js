@@ -1,15 +1,16 @@
-// ローディング画面
+// HTMLが呼ばれた時の初期化処理
 // TODO: 非同期化
 $(window).load(function() {
+	// 非同期で初期化処理
+	setTimeout(function(){
+		init();
+	},0);
 	$("#loading").hide();
-})
+});
 
-// HTMLが呼ばれた時の初期化処理
-$(init);
 
 // 初期化順は全体に影響するので、追加変更する場合は注意
 function init() {
-
 	// トップページの大きさ調整
 	$("#topPageFrame")
 		.css("width", window.innerWidth)
@@ -143,55 +144,13 @@ function init() {
 	// 使用者がブラウザの「戻る」と「進む」ボタンを使う時タブバーの強調表示バグを修正するため、追加した
 	// firefox対応できない
 	window.addEventListener('popstate', function(event) {  
-		// alert(JSON.stringify(event.state));
-		// alert(event.state.hash);
-
 		// クリックで、画面遷移する時、新history記録が生成する前に、event.stateはnull
 		// ブラウザの「戻る」と「進む」ボタンを使う時historyの中に、歴史もう存在しているので、event.stateはnullではない
 		// ここで、ブラウザの「戻る」と「進む」ボタンを監視するので、event.stateの中身でクリック遷移と「戻る」と「進む」ボタンを区別する
 		if(event.state){
 			// eventから、前のページのアドレスを取得する
-			switch (event.state.hash) {
-			case "#posterMapPage":
-				$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
-				$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
-				break;
-			case "#presenListPage":
-				$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".presenListPageButton").addClass("ui-btn-active ui-state-persist");
-				$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
-				break;
-			case "#informationPage":
-				$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
-				$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
-				break;
-			case "#venuePage":
-				$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".venuePageButton").addClass("ui-btn-active ui-state-persist");
-				$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
-				break;
-			default:
-				$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
-				$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
-				break;
+			changeActiveTab(event.state.hash);
 		}
-
-		
-	}
-
 	});
 
 	$("#presenList").showPresenList();
@@ -218,6 +177,7 @@ function init() {
 	$("#detailBackButton").backToPreviousPage();
 
 	// タブバー
+	// $(".tabbar").createTabbar();
 	$(".topPageButton").goToTopPage("click");
 	$(".posterMapPageButton").goToMapPage("click");
 	$(".presenListPageButton").goToListPage("click");
@@ -243,44 +203,7 @@ function init() {
 	// セッションリストから会場マップへジャンプする
 	$(".jumpToVenue").jumpToVenue();
 
-
 	// タブバーの選択表示を変更
-	var currentPage = window.location.hash;
-	switch (currentPage) {
-		case "#posterMapPage":
-			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
-			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
-			break;
-		case "#presenListPage":
-			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".presenListPageButton").addClass("ui-btn-active ui-state-persist");
-			$(".infromationPageButton").removeClass("ui-btn-active ui-state-persist");
-			break;
-		case "#informationPage":
-			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".informationPageButton").addClass("ui-btn-active ui-state-persist");
-			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
-			break;
-		case "#venuePage":
-			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".venuePageButton").addClass("ui-btn-active ui-state-persist");
-			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
-			break;
-		default:
-			$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".posterMapPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".informationPageButton").removeClass("ui-btn-active ui-state-persist");
-			$(".venuePageButton").removeClass("ui-btn-active ui-state-persist");
-			break;
-	}
+	changeActiveTab(window.location.hash);
+	// window.location.hash = "";
 }

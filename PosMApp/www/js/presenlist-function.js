@@ -122,9 +122,6 @@ $.fn.jumpToMapPage = function() {
 				.id
 				.substring("presen".length);
 		var posterid = getPosterid(presenid);
-		$(".topPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".presenListPageButton").removeClass("ui-btn-active ui-state-persist");
-		$(".posterMapPageButton").addClass("ui-btn-active ui-state-persist");
 		listToMap(posterid);
 	});
 };
