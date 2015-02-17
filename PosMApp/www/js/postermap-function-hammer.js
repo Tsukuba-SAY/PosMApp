@@ -20,16 +20,16 @@ function initHammer() {
     $posterArea.empty();
     taparea.forEach(function(area) {
         var $divarea = $("<div>")
-            .attr("id", "area"+area.id)
+            .attr("id", "area" + area.id)
             .addClass("mapArea")
             .css("position", "absolute")
             .css("z-index", 70)
             .css("opacity", 0.4)
             .css("background-color", area.color)
-            .css("left", area.x*INIT_SCALE)
-            .css("top", area.y*INIT_SCALE)
-            .css("width", area.width*INIT_SCALE)
-            .css("height", area.height*INIT_SCALE)
+            .css("left", area.x * INIT_SCALE)
+            .css("top", area.y * INIT_SCALE)
+            .css("width", area.width * INIT_SCALE)
+            .css("height", area.height * INIT_SCALE)
             .on("click", function() {
                 zoomMap(area);
             });
