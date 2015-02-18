@@ -122,43 +122,41 @@ function setPosterIcons() {
 		// 1日目のポスター
 		for (var i = 1; i <= offset; i++) {
 
-			iconWidth = position[position_map[i-1]].width*INIT_SCALE;
-			iconHeight = position[position_map[i-1]].height*INIT_SCALE;
+			iconWidth = position[position_map[i-1]].width * INIT_SCALE;
+			iconHeight = position[position_map[i-1]].height * INIT_SCALE;
 
 			angle = starAngle[poster[i-1].star];
-
-			str += "<div class='postericonframe day1' id='iconNo" + i + "' style='left:"+(position[position_map[i-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-			str += "	<div class='postericon' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-			str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px; display: table-cell; vertical-align: middle; text-align: center;'>\n";
-			str += "			<div class='posterfont' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
-			str += "		</div>\n";
-			str += "	</div>\n";
-
 			pos = starpos[poster[i-1].star];
 
-			str += "	<img id='star" + pos + "No" + i +"' class='star bookmarkstar' style='"+angle+" display:none;' src='img/bookmark.png'></img>\n";
-			str += "</div>\n";
+			str +=
+				"<div class='postericonframe day1' id='iconNo" + i + "' style='left:"+(position[position_map[i-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\
+					<div class='postericon' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\
+						<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px; display: table-cell; vertical-align: middle; text-align: center;'>\
+							<div class='posterfont' id='font" + i + "'>" + poster[i-1].presenid + "</div>\
+						</div>\
+					</div>\
+					<img id='star" + pos + "No" + i +"' class='star bookmarkstar' style='"+angle+" display:none;' src='img/bookmark.png'></img>\
+				</div>\n";
 		}
 		// 2日目のポスター
 		console.log(ptotal);
 		for (var i = offset + 1; i <= ptotal; i++) {
 
-			iconWidth = position[position_map[i-offset-1]].width*INIT_SCALE;
-			iconHeight = position[position_map[i-offset-1]].height*INIT_SCALE;
+			iconWidth = position[position_map[i-offset-1]].width * INIT_SCALE;
+			iconHeight = position[position_map[i-offset-1]].height * INIT_SCALE;
 
 			angle = starAngle[poster[i-1].star];
-
-			str += "<div class='postericonframe day2' id='iconNo" + i + "' style='left:"+(position[position_map[i-offset-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-offset-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-			str += "	<div class='postericon' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\n";
-			str += "		<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px; display: table-cell; vertical-align: middle; text-align: center;'>\n";
-			str += "			<div class='posterfont' id='font" + i + "'>" + poster[i-1].presenid + "</div>\n";
-			str += "		</div>\n";
-			str += "	</div>\n";
-
 			pos = starpos[poster[i-1].star];
 
-			str += "	<img id='star" + pos + "No" + i +"' class='star bookmarkstar' style='"+angle+" display:none;' src='img/bookmark.png'></img>\n";
-			str += "</div>\n";
+			str += 
+				"<div class='postericonframe day2' id='iconNo" + i + "' style='left:"+(position[position_map[i-offset-1]].x*INIT_SCALE)+"px;top:"+(position[position_map[i-offset-1]].y*INIT_SCALE)+"px;width:" + iconWidth + "px;height:" + iconHeight + "px;'>\
+					<div class='postericon' style='width:" + iconWidth + "px;height:" + iconHeight + "px;'>\
+						<div class='dpic' id='icon" + i +"' style='width:" + iconWidth + "px;height:" + iconHeight + "px; display: table-cell; vertical-align: middle; text-align: center;'>\
+							<div class='posterfont' id='font" + i + "'>" + poster[i-1].presenid + "</div>\
+						</div>\
+					</div>\
+					<img id='star" + pos + "No" + i +"' class='star bookmarkstar' style='"+angle+" display:none;' src='img/bookmark.png'></img>\
+				</div>\n";
 		}
 	}
 	document.getElementById("posters").innerHTML = str;
