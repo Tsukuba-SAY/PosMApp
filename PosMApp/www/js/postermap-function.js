@@ -121,7 +121,7 @@ function setPosterIcons() {
 
 		// 1日目のポスター
 		for (var i = 1; i <= offset; i++) {
-			console.log(position_map[i-1]);
+			
 			iconWidth = position[position_map[i-1]].width * INIT_SCALE;
 			iconHeight = position[position_map[i-1]].height * INIT_SCALE;
 
@@ -139,9 +139,9 @@ function setPosterIcons() {
 				</div>\n";
 		}
 		// 2日目のポスター
-		console.log(ptotal);
+		
 		for (var i = offset + 1; i <= ptotal; i++) {
-			// console.log(i);
+			
 			iconWidth = position[position_map[i-offset-1]].width * INIT_SCALE;
 			iconHeight = position[position_map[i-offset-1]].height * INIT_SCALE;
 
