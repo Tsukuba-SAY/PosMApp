@@ -6,7 +6,7 @@ $.fn.showPresenList = function() {
 		presens["presenid"] = [];
 		presens["title"] = [];
 		presens["author"] = [];
-		var sessionKind = ["A","B","C","D","E","F","P"];
+		var sessionKind = ["A","B","C","D","E","F","G","P"];
 		//存在していないセッション番号
 		var notExistSessionNum = ["A7","P5","P6","B7","P7","P8","P9","X1","X2","X3","X4","X5","X6","X7","X8","X9",];
 		var existflag = false;
