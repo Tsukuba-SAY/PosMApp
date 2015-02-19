@@ -3,13 +3,13 @@
 $(window).load(function() {
 	// 非同期で初期化処理
 	setTimeout(function(){
+		init();
+
 		// 固有識別IDが設定されていなければ、初期設定する
 		$("#acceptCollectLog").acceptCollectLog();
 		$("#denyCollectLog").denyCollectLog();
 		$(".selectUserCategoryButton").selectUserCategory();
 		initUserData();
-
-		init();
 	},0);
 	$("#loading").hide();
 });
