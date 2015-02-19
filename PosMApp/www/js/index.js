@@ -3,6 +3,12 @@
 $(window).load(function() {
 	// 非同期で初期化処理
 	setTimeout(function(){
+		// 固有識別IDが設定されていなければ、初期設定する
+		$("#acceptCollectLog").acceptCollectLog();
+		$("#denyCollectLog").denyCollectLog();
+		$(".selectUserCategoryButton").selectUserCategory();
+		initUserData();
+
 		init();
 	},0);
 	$("#loading").hide();
@@ -15,14 +21,6 @@ function init() {
 	$("#topPageFrame")
 		.css("width", window.innerWidth)
 		.css("max-width", window.innerWidth);
-
-	// 固有識別IDが設定されていなければ、初期設定する
-	$("#acceptCollectLog").acceptCollectLog();
-	$("#denyCollectLog").denyCollectLog();
-	$(".selectUserCategoryButton").selectUserCategory();
-	if (localStorage.getItem("uid") === null) {
-		initUserData();
-	}
 
 	//　ポスターデータのダウンロード
 	//　各mapに関する変数に値を与える

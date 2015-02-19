@@ -46,7 +46,9 @@ $.fn.selectUserCategory = function() {
 
 // 初期設定用
 function initUserData() {
-	if (localStorage.getItem("accept_collect_log") === null) {
+	// ログ収集許諾フラグだけを折られた時でもUIDをリセットするのは仕様
+	if (localStorage.getItem("uid") === null ||
+		localStorage.getItem("accept_collect_log") === null) {
 		// デフォルト
 		var category = 1;
 		localStorage.setItem("category", category);
