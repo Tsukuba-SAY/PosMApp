@@ -13,10 +13,12 @@ function scrollToTr() {
 	if(!localStorage.getItem("downloadResult")){
 		var target = $("#session" + sessionStorage.getItem("gotosessionid"));
 		console.log(sessionStorage.getItem("gotosessionid"));
-		var position = target.offset().top - 45;
-		var speed = 500;
-		$('body,html').scrollTop(position);
-
+		if (target.offset()) {
+			var position = target.offset().top - 45;
+			var speed = 500;
+			$('body,html').scrollTop(position);
+		};
+		
 		$(document).off("pageshow");
 		sessionStorage.removeItem("gotosessionid");
 	}
