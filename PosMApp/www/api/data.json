@@ -1864,12 +1864,12 @@
   }, {
     "presenid" : "E3-3",
     "name" : "天笠 俊之",
-    "belongs" : "システム情報系",
+    "belongs" : "筑波大",
     "first" : 0
   }, {
     "presenid" : "E3-3",
     "name" : "北川 博之",
-    "belongs" : "システム情報系",
+    "belongs" : "筑波大",
     "first" : 0
   }, {
     "presenid" : "E3-4",
@@ -1924,17 +1924,17 @@
   }, {
     "presenid" : "E4-1",
     "name" : "今崎 美保",
-    "belongs" : "株式会社　日立製作所",
+    "belongs" : "日立",
     "first" : 1
   }, {
     "presenid" : "E4-1",
     "name" : "吉原 朋宏",
-    "belongs" : "株式会社　日立製作所",
+    "belongs" : "日立",
     "first" : 0
   }, {
     "presenid" : "E4-1",
     "name" : "下薗 紀夫",
-    "belongs" : "株式会社　日立製作所",
+    "belongs" : "日立",
     "first" : 0
   }, {
     "presenid" : "E4-2",
@@ -2314,7 +2314,7 @@
   }, {
     "presenid" : "A2-4",
     "name" : "山名 早人",
-    "belongs" : "早稲田大学　理工学術院／国立情報学研究所",
+    "belongs" : "早大／NII",
     "first" : 0
   }, {
     "presenid" : "A2-5",
@@ -2584,7 +2584,7 @@
   }, {
     "presenid" : "E7-3",
     "name" : "喜連川 優",
-    "belongs" : "国立情報学研究所",
+    "belongs" : "NII",
     "first" : 0
   }, {
     "presenid" : "E7-4",
@@ -2959,12 +2959,12 @@
   }, {
     "presenid" : "A8-2",
     "name" : "Wang Zichun",
-    "belongs" : "早稲田大学大学院情報生産システム研究科",
+    "belongs" : "早大",
     "first" : 1
   }, {
     "presenid" : "A8-2",
     "name" : "Iwaihara Mizuho",
-    "belongs" : "早稲田大学大学院情報生産システム研究科",
+    "belongs" : "早大",
     "first" : 0
   }, {
     "presenid" : "A8-3",
@@ -3029,7 +3029,7 @@
   }, {
     "presenid" : "A8-6",
     "name" : "鈴木 優",
-    "belongs" : "奈良先端科学技術大学院大学",
+    "belongs" : "NAIST",
     "first" : 0
   }, {
     "presenid" : "A8-6",
@@ -3399,7 +3399,7 @@
   }, {
     "presenid" : "B1-2",
     "name" : "権守 健嗣",
-    "belongs" : "筑波大学大学院",
+    "belongs" : "筑波大",
     "first" : 0
   }, {
     "presenid" : "B1-2",
@@ -3854,17 +3854,17 @@
   }, {
     "presenid" : "F7-2",
     "name" : "菅澤 学",
-    "belongs" : "JR東日本研究開発センター",
+    "belongs" : "JR東日本",
     "first" : 1
   }, {
     "presenid" : "F7-2",
     "name" : "清木 康",
-    "belongs" : "環境情報学部",
+    "belongs" : "慶応大",
     "first" : 0
   }, {
     "presenid" : "F7-2",
     "name" : "Hall Jeremy",
-    "belongs" : "環境情報学部",
+    "belongs" : "慶応大",
     "first" : 0
   }, {
     "presenid" : "F7-3",
@@ -4059,17 +4059,17 @@
   }, {
     "presenid" : "F8-2",
     "name" : "中村 隆顕",
-    "belongs" : "三菱電機株式会社",
+    "belongs" : "三菱電機",
     "first" : 1
   }, {
     "presenid" : "F8-2",
     "name" : "今村 誠",
-    "belongs" : "三菱電機株式会社",
+    "belongs" : "三菱電機",
     "first" : 0
   }, {
     "presenid" : "F8-2",
     "name" : "平井 規郎",
-    "belongs" : "三菱電機株式会社",
+    "belongs" : "三菱電機",
     "first" : 0
   }, {
     "presenid" : "F8-2",
@@ -4514,12 +4514,12 @@
   }, {
     "presenid" : "G1-6",
     "name" : "Xing Xie",
-    "belongs" : "Microsoft Research Asia",
+    "belongs" : "MSRA",
     "first" : 0
   }, {
     "presenid" : "G1-6",
     "name" : "岩田 麻佑",
-    "belongs" : "株式会社KDDI研究所",
+    "belongs" : "KDDI研",
     "first" : 0
   }, {
     "presenid" : "G1-6",
@@ -5494,22 +5494,22 @@
   }, {
     "presenid" : "C4-4",
     "name" : "岩田 麻佑",
-    "belongs" : "株式会社KDDI研究所",
+    "belongs" : "KDDI研",
     "first" : 1
   }, {
     "presenid" : "C4-4",
     "name" : "服部 元",
-    "belongs" : "株式会社KDDI研究所",
+    "belongs" : "KDDI研",
     "first" : 0
   }, {
     "presenid" : "C4-4",
     "name" : "池田 和史",
-    "belongs" : "株式会社KDDI研究所",
+    "belongs" : "KDDI研",
     "first" : 0
   }, {
     "presenid" : "C4-4",
     "name" : "滝嶋 康弘",
-    "belongs" : "株式会社KDDI研究所",
+    "belongs" : "KDDI研",
     "first" : 0
   }, {
     "presenid" : "C4-5",
@@ -5619,12 +5619,12 @@
   }, {
     "presenid" : "C5-1",
     "name" : "木谷 将人",
-    "belongs" : "慶應義塾大学大学院",
+    "belongs" : "慶應義塾大学",
     "first" : 0
   }, {
     "presenid" : "C5-1",
     "name" : "五嶋 研人",
-    "belongs" : "慶應義塾大学大学院",
+    "belongs" : "慶應義塾大学",
     "first" : 0
   }, {
     "presenid" : "C5-1",
@@ -9167,7 +9167,7 @@
   }, {
     "presenid" : "C1-5",
     "title" : "ユーザ調理環境の自動登録に向けた調理道具の認識と登録",
-    "abs" : "毎日の食事における料理を考える際に,Web 上のレシピ検索サイトが広く利用されている.ただし,現状 の検索結果として得られるレシピには,ユーザの調理環境で利用できる調理道具が考慮されている訳ではない.調理 道具を考慮したレシピ検索は,高いユーザ満足が得られることが期待されるものの,調理道具の登録に手間がかかる 点が課題となり,現状では普及に至っていない.本稿では,カメラ付き携帯端末を持つ機会が増えていることを踏ま え,調理環境の自動登録化を目的として,ユーザの所持している調理道具を認識・登録する手法を提案する.98 種類 の調理道具に対し,局所的なエッジ特徴量を用いた識別器を構築し,識別精度を比較する.また,識別がうまくいか ない場合の効率的な登録方法を調べるため,いくつかの手法で登録時間を比較する.",
+    "abs" : "毎日の食事における料理を考える際に，Web上のレシピ検索サイトが広く利用されている．ただし，現状の検索結果として得られるレシピには，その時々に冷蔵庫にある食材の状態が関連付けられている訳ではない．各ユーザの冷蔵庫食材と関連付けられた，より高度なレシピ検索や推薦を実現するためには，事前に食材をデータベース等に登録し，適切に管理する必要がある．本稿では，スマートフォンが普及している現状を踏まえ，バーコードを介した効率のよい食材管理システムを提案する．１次元バーコードの読み取りと食材データベースへの問い合わせをAndroidアプリとして実装し，ユーザが直感的に効率よく食材管理できるようにする．そして，手入力による食材管理手法との比較を行い，本システムの利便性を検証する．",
     "bookmark" : 0
   }, {
     "presenid" : "C1-6",
