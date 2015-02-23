@@ -9,7 +9,7 @@
     "width" : 164,
     "height" : 219,
     "direction" : "longways",
-    "color" : "164.25"
+    "color" : "rgb(255,40,0)"
   }, {
     "id" : 2,
     "x" : 51,
@@ -17,7 +17,7 @@
     "width" : 161,
     "height" : 215,
     "direction" : "longways",
-    "color" : "161.25"
+    "color" : "rgb(0,65,255)"
   }, {
     "id" : 3,
     "x" : 47,
@@ -25,7 +25,7 @@
     "width" : 79,
     "height" : 105,
     "direction" : "longways",
-    "color" : "105.3333333"
+    "color" : "rgb(255,245,0)"
   }, {
     "id" : 4,
     "x" : 47,
@@ -33,7 +33,7 @@
     "width" : 79,
     "height" : 105,
     "direction" : "longways",
-    "color" : "105.3333333"
+    "color" : "rgb(255,245,0)"
   }, {
     "id" : 5,
     "x" : 47,
@@ -41,7 +41,7 @@
     "width" : 79,
     "height" : 105,
     "direction" : "longways",
-    "color" : "105.3333333"
+    "color" : "rgb(255,245,0)"
   }, {
     "id" : 6,
     "x" : 130,
@@ -49,7 +49,7 @@
     "width" : 93,
     "height" : 124,
     "direction" : "longways",
-    "color" : "124"
+    "color" : "rgb(255,245,0)"
   }, {
     "id" : 7,
     "x" : 226,
@@ -57,7 +57,7 @@
     "width" : 93,
     "height" : 124,
     "direction" : "longways",
-    "color" : "124"
+    "color" : "rgb(255,245,0)"
   }, {
     "id" : 8,
     "x" : 347,
@@ -65,7 +65,7 @@
     "width" : 127,
     "height" : 169,
     "direction" : "longways",
-    "color" : "169.3333333"
+    "color" : "rgb(154,0,121)"
   }, {
     "id" : 9,
     "x" : 475,
@@ -73,7 +73,7 @@
     "width" : 127,
     "height" : 169,
     "direction" : "longways",
-    "color" : "169.3333333"
+    "color" : "rgb(154,0,121)"
   }, {
     "id" : 10,
     "x" : 615,
@@ -81,7 +81,7 @@
     "width" : 78,
     "height" : 104,
     "direction" : "longways",
-    "color" : "104"
+    "color" : "rgb(255,153,0)"
   }, {
     "id" : 11,
     "x" : 615,
@@ -89,7 +89,7 @@
     "width" : 78,
     "height" : 104,
     "direction" : "longways",
-    "color" : "104"
+    "color" : "rgb(255,153,0)"
   }, {
     "id" : 12,
     "x" : 615,
@@ -97,7 +97,7 @@
     "width" : 78,
     "height" : 104,
     "direction" : "longways",
-    "color" : "104"
+    "color" : "rgb(255,153,0)"
   }, {
     "id" : 13,
     "x" : 519,
@@ -105,7 +105,7 @@
     "width" : 92,
     "height" : 123,
     "direction" : "longways",
-    "color" : "122.6666667"
+    "color" : "rgb(53,161,107)"
   }, {
     "id" : 14,
     "x" : 426,
@@ -113,7 +113,7 @@
     "width" : 92,
     "height" : 123,
     "direction" : "longways",
-    "color" : "122.6666667"
+    "color" : "rgb(53,161,107)"
   }, {
     "id" : 15,
     "x" : 333,
@@ -121,7 +121,7 @@
     "width" : 92,
     "height" : 123,
     "direction" : "longways",
-    "color" : "122.6666667"
+    "color" : "rgb(53,161,107)"
   } ],
   "position" : [ {
     "id" : 1,
