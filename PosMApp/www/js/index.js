@@ -10,11 +10,11 @@ $(window).load(function() {
 		$("#denyCollectLog").denyCollectLog();
 		$(".selectUserCategoryButton").selectUserCategory();
 		initUserData();
+		//initの中に入れると、初めてダウンロードしてから、二回事件を与えて、一回クリックすると、ブックマーク機能がおかしいくなる
+		$("#bookmarkbutton").touchBookmark();
 	},0);
 	$("#loading").hide();
 
-	//initの中に入れると、初めてダウンロードしてから、二回事件を与えて、一回クリックすると、ブックマーク機能がおかしいくなる
-	$("#bookmarkbutton").touchBookmark();
 });
 
 
