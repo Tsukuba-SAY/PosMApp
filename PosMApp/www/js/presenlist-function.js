@@ -34,7 +34,7 @@ $.fn.showPresenList = function() {
 					for(var sessionArrNum = 0 ; sessionArrNum < session.length ; sessionArrNum++){
 						if(sessionId == session[sessionArrNum].sessionid){
 							str += session[sessionArrNum].title + "</strong></font><br>";
-							str += "<font class='sessionPerson'>座長:" + session[sessionArrNum].chairpersonname + "("+ session[sessionArrNum].charipersonbelongs +")</font><br>";
+							str += "<font class='sessionPerson'>座長:" + session[sessionArrNum].chairpersonname + "("+ session[sessionArrNum].belongs +")</font><br>";
 						}
 					}
 					str += "<font class='sessionPerson'>コメンテータ:";
