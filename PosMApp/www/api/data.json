@@ -81,7 +81,7 @@
     "width" : 78,
     "height" : 104,
     "direction" : "longways",
-    "color" : "rgb(255,153,0)"
+    "color" : "rgb(255,245,0)"
   }, {
     "id" : 11,
     "x" : 615,
@@ -89,7 +89,7 @@
     "width" : 78,
     "height" : 104,
     "direction" : "longways",
-    "color" : "rgb(255,153,0)"
+    "color" : "rgb(255,245,0)"
   }, {
     "id" : 12,
     "x" : 615,
@@ -97,7 +97,7 @@
     "width" : 78,
     "height" : 104,
     "direction" : "longways",
-    "color" : "rgb(255,153,0)"
+    "color" : "rgb(255,245,0)"
   }, {
     "id" : 13,
     "x" : 519,
