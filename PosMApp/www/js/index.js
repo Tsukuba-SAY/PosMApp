@@ -121,10 +121,6 @@ function init() {
 	$(".changelabel").changeLabel();
 	$("#changelabel").css("zoom", window.innerWidth/1200);
 
-	// ブックマークスターのタッチイベント
-	$("#bookmarkbutton").touchBookmark();
-
-
 	// ---------- 詳細情報画面 ----------
 	setDetails();
 	

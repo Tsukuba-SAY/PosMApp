@@ -86,7 +86,7 @@ $.fn.touchBookmark = function() {
 	$(this).on("click", function(e) {
 		var presenid = sessionStorage.getItem("presenid");
 		var bookmarkIcon = document.getElementById("bookmarkbutton");
-		touchBookmark(presenid, bookmarkIcon);
+		touchBookmarkFun(presenid, bookmarkIcon);
 	});	
 };
 
@@ -525,11 +525,10 @@ function showBookmarkIcons() {
 
 
 // ブックマークスターをタッチする（状態のスイッチ）
-function touchBookmark(presenid, bookmarkIcon){
+function touchBookmarkFun(presenid, bookmarkIcon){
 	// if (posterid < 1 || posterid > ptotal || posterid === null) {
 	// 	throw new Exception();
 	// }
-
 	// var presenid = poster[posterid-1].presenid;
 	var bookmarkArr = getBookmarks();
 	// posteridに該当するポスターがブックマークリストに存在しているか確認用
