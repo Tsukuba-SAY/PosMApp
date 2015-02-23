@@ -9853,302 +9853,302 @@
   "poster" : [ {
     "presenid" : "A1-1",
     "posterid" : 1,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "A1-6",
     "posterid" : 2,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "A2-2",
     "posterid" : 3,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "A3-3",
     "posterid" : 4,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "A3-4",
     "posterid" : 5,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "A4-3",
     "posterid" : 6,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "A6-2",
     "posterid" : 7,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "B1-3",
     "posterid" : 8,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "B2-3",
     "posterid" : 9,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "B2-6",
     "posterid" : 10,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "B4-1",
     "posterid" : 11,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "B4-2",
     "posterid" : 12,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "B4-6",
     "posterid" : 13,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "C1-1",
     "posterid" : 14,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "C1-2",
     "posterid" : 15,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "C2-3",
     "posterid" : 16,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "C4-1",
     "posterid" : 17,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "C4-3",
     "posterid" : 18,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "D1-5",
     "posterid" : 19,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "D2-1",
     "posterid" : 20,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "D2-2",
     "posterid" : 21,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "D2-6",
     "posterid" : 22,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "D3-2",
     "posterid" : 23,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "D3-4",
     "posterid" : 24,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "D4-1",
     "posterid" : 25,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "D4-2",
     "posterid" : 26,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "D4-4",
     "posterid" : 27,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "E1-2",
     "posterid" : 28,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "E2-2",
     "posterid" : 29,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "E2-3",
     "posterid" : 30,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "E2-4",
     "posterid" : 31,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "E3-1",
     "posterid" : 32,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "F1-1",
     "posterid" : 33,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "F1-3",
     "posterid" : 34,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F1-5",
     "posterid" : 35,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F1-6",
     "posterid" : 36,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F2-1",
     "posterid" : 37,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "F2-3",
     "posterid" : 38,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "F2-4",
     "posterid" : 39,
-    "star" : 1,
+    "star" : 3,
     "date" : 1
   }, {
     "presenid" : "F2-5",
     "posterid" : 40,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F2-6",
     "posterid" : 41,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F3-1",
     "posterid" : 42,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F3-5",
     "posterid" : 43,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "F4-1",
     "posterid" : 44,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "G1-2",
     "posterid" : 45,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "G1-3",
     "posterid" : 46,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "G2-1",
     "posterid" : 47,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "G2-6",
     "posterid" : 48,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "G3-4",
     "posterid" : 49,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "G4-1",
     "posterid" : 50,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "G4-5",
     "posterid" : 51,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "P1-1",
     "posterid" : 52,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "P1-2",
     "posterid" : 53,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "P1-3",
     "posterid" : 54,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "P1-4",
     "posterid" : 55,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "P1-5",
     "posterid" : 56,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "P2-1",
     "posterid" : 57,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "P2-2",
     "posterid" : 58,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "P2-3",
     "posterid" : 59,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "P2-4",
     "posterid" : 60,
-    "star" : 4,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "P2-5",
@@ -10218,17 +10218,17 @@
   }, {
     "presenid" : "B4-5",
     "posterid" : 74,
-    "star" : 1,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "C1-3",
     "posterid" : 75,
-    "star" : 1,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "C1-4",
     "posterid" : 76,
-    "star" : 1,
+    "star" : 2,
     "date" : 1
   }, {
     "presenid" : "C1-5",
@@ -10298,237 +10298,237 @@
   }, {
     "presenid" : "F3-2",
     "posterid" : 90,
-    "star" : 2,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F4-2",
     "posterid" : 91,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F4-3",
     "posterid" : 92,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F4-4",
     "posterid" : 93,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F4-5",
     "posterid" : 94,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "F4-6",
     "posterid" : 95,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "G3-6",
     "posterid" : 96,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "G4-4",
     "posterid" : 97,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "G4-6",
     "posterid" : 98,
-    "star" : 3,
+    "star" : 1,
     "date" : 1
   }, {
     "presenid" : "A5-1",
     "posterid" : 99,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "A6-5",
     "posterid" : 100,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "A8-2",
     "posterid" : 101,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "A8-3",
     "posterid" : 102,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "A8-6",
     "posterid" : 103,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "B5-2",
     "posterid" : 104,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "B6-5",
     "posterid" : 105,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "B8-2",
     "posterid" : 106,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "B8-3",
     "posterid" : 107,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "B8-4",
     "posterid" : 108,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "B8-5",
     "posterid" : 109,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "B8-6",
     "posterid" : 110,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "C5-3",
     "posterid" : 111,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "C5-4",
     "posterid" : 112,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "C5-5",
     "posterid" : 113,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "C6-1",
     "posterid" : 114,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "C6-2",
     "posterid" : 115,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "C6-3",
     "posterid" : 116,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "C6-4",
     "posterid" : 117,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "C7-3",
     "posterid" : 118,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "C7-6",
     "posterid" : 119,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "C8-3",
     "posterid" : 120,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "D5-1",
     "posterid" : 121,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "D5-2",
     "posterid" : 122,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "D5-5",
     "posterid" : 123,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "D6-2",
     "posterid" : 124,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "D7-2",
     "posterid" : 125,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "D8-3",
     "posterid" : 126,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "D8-4",
     "posterid" : 127,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "E5-2",
     "posterid" : 128,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "E5-3",
     "posterid" : 129,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "E5-5",
     "posterid" : 130,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "E5-6",
     "posterid" : 131,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "E6-5",
     "posterid" : 132,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "E7-4",
     "posterid" : 133,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "E7-5",
     "posterid" : 134,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "E8-1",
     "posterid" : 135,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "E8-5",
     "posterid" : 136,
-    "star" : 1,
+    "star" : 3,
     "date" : 2
   }, {
     "presenid" : "F5-2",
@@ -10538,107 +10538,107 @@
   }, {
     "presenid" : "F5-5",
     "posterid" : 138,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "F6-4",
     "posterid" : 139,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "F6-6",
     "posterid" : 140,
-    "star" : 4,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "F7-1",
     "posterid" : 141,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "F7-3",
     "posterid" : 142,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "F7-6",
     "posterid" : 143,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "F8-1",
     "posterid" : 144,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "F8-6",
     "posterid" : 145,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "G5-1",
     "posterid" : 146,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "G5-5",
     "posterid" : 147,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "G5-6",
     "posterid" : 148,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "G6-5",
     "posterid" : 149,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "G6-6",
     "posterid" : 150,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "G7-6",
     "posterid" : 151,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "G8-1",
     "posterid" : 152,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "G8-2",
     "posterid" : 153,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "G8-3",
     "posterid" : 154,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "G8-5",
     "posterid" : 155,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "P3-1",
     "posterid" : 156,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "P3-2",
     "posterid" : 157,
-    "star" : 4,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "P3-3",
     "posterid" : 158,
-    "star" : 1,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "P3-4",
@@ -10708,12 +10708,12 @@
   }, {
     "presenid" : "D6-1",
     "posterid" : 172,
-    "star" : 1,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "D6-4",
     "posterid" : 173,
-    "star" : 1,
+    "star" : 2,
     "date" : 2
   }, {
     "presenid" : "D7-1",
@@ -10788,47 +10788,47 @@
   }, {
     "presenid" : "G7-2",
     "posterid" : 188,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "P4-1",
     "posterid" : 189,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "P4-2",
     "posterid" : 190,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "P4-3",
     "posterid" : 191,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "P4-4",
     "posterid" : 192,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "P4-5",
     "posterid" : 193,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "X1-3",
     "posterid" : 194,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "X1-4",
     "posterid" : 195,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   }, {
     "presenid" : "X1-5",
     "posterid" : 196,
-    "star" : 3,
+    "star" : 1,
     "date" : 2
   } ],
   "presents" : [ {
