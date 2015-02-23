@@ -70,10 +70,6 @@ function ajaxdownload(pageName){
 					$("#reDownloadDIVMap").css("display", "none");
 					localStorage.removeItem("downloadResult");
 					
-					// ブックマークスターのタッチイベント
-					//　初めてアクセスして、マップでブックマークすると二回実行する。それを防ぐため、一回だけ事件を与える
-					$("#bookmarkbutton").touchBookmark();
-
 					// 再描画
 					init();
 					$("#posters").show();

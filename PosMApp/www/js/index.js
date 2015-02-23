@@ -12,6 +12,9 @@ $(window).load(function() {
 		initUserData();
 	},0);
 	$("#loading").hide();
+
+	//initの中に入れると、初めてダウンロードしてから、二回事件を与えて、一回クリックすると、ブックマーク機能がおかしいくなる
+	$("#bookmarkbutton").touchBookmark();
 });
 
 
@@ -120,6 +123,10 @@ function init() {
 	// ラベルを変更する
 	$(".changelabel").changeLabel();
 	$("#changelabel").css("zoom", window.innerWidth/1200);
+
+	// ブックマークスターのタッチイベント
+	//　初めてアクセスして、マップでブックマークすると二回実行する。それを防ぐため、一回だけ事件を与える
+	// $("#bookmarkbutton").touchBookmark();
 
 	// ---------- 詳細情報画面 ----------
 	setDetails();
