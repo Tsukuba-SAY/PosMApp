@@ -1413,8 +1413,8 @@
   }, {
     "sessionid" : "B3",
     "title" : "情報推薦(2)",
-    "chairpersonname" : "庄司 裕子",
-    "chairpersonbelongs" : "中大"
+    "chairpersonname" : "松本 一則",
+    "chairpersonbelongs" : "KDDI研"
   }, {
     "sessionid" : "F7",
     "title" : "地理・観光",
@@ -1468,8 +1468,8 @@
   }, {
     "sessionid" : "C1",
     "title" : "食・レシピ情報",
-    "chairpersonname" : "金子 邦彦",
-    "chairpersonbelongs" : "九大"
+    "chairpersonname" : "増永 良文",
+    "chairpersonbelongs" : "お茶大"
   }, {
     "sessionid" : "G5",
     "title" : "医療情報",
@@ -1488,8 +1488,8 @@
   }, {
     "sessionid" : "C3",
     "title" : "省電力",
-    "chairpersonname" : "川島 英之",
-    "chairpersonbelongs" : "筑波大"
+    "chairpersonname" : "吉田 尚史",
+    "chairpersonbelongs" : "駒大"
   }, {
     "sessionid" : "G7",
     "title" : "観光情報",
@@ -1586,7 +1586,7 @@
     "chairpersonname" : "油井 誠",
     "chairpersonbelongs" : "産総研"
   }, {
-    "sessionid" : "X",
+    "sessionid" : "X1",
     "title" : "Dummy Session",
     "chairpersonname" : "Someone",
     "chairpersonbelongs" : "Somewhere"
