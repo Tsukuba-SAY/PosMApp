@@ -840,8 +840,8 @@
     "belongs" : "NTT"
   }, {
     "sessionid" : "E4",
-    "name" : "油井 誠",
-    "belongs" : "産総研"
+    "name" : "的野 晃整",
+    "belongs" : "産総研、AIST"
   }, {
     "sessionid" : "A1",
     "name" : "鈴木 伸崇",
@@ -864,8 +864,8 @@
     "belongs" : "芝浦工大"
   }, {
     "sessionid" : "A2",
-    "name" : "櫻井 茂明",
-    "belongs" : "東芝"
+    "name" : "土田 正明",
+    "belongs" : "ＮＥＣ"
   }, {
     "sessionid" : "E6",
     "name" : "江口 浩二",
@@ -876,8 +876,8 @@
     "belongs" : "NEC"
   }, {
     "sessionid" : "A3",
-    "name" : "土田 正明",
-    "belongs" : "ＮＥＣ"
+    "name" : "櫻井 茂明",
+    "belongs" : "東芝"
   }, {
     "sessionid" : "A3",
     "name" : "奥 健太",
@@ -888,8 +888,8 @@
     "belongs" : "KEK"
   }, {
     "sessionid" : "E7",
-    "name" : "的野 晃整",
-    "belongs" : "産総研、AIST"
+    "name" : "油井 誠",
+    "belongs" : "産総研"
   }, {
     "sessionid" : "A4",
     "name" : "松本 一則",
@@ -936,8 +936,8 @@
     "belongs" : "和大"
   }, {
     "sessionid" : "F1",
-    "name" : "松本 一則",
-    "belongs" : "KDDI研"
+    "name" : "河合 由起子",
+    "belongs" : "京産大"
   }, {
     "sessionid" : "F2",
     "name" : "豊田 真智子",
@@ -976,8 +976,8 @@
     "belongs" : "京都工芸繊維大学"
   }, {
     "sessionid" : "F5",
-    "name" : "庄司 裕子",
-    "belongs" : "中大"
+    "name" : "北川 博之",
+    "belongs" : "筑波大"
   }, {
     "sessionid" : "B2",
     "name" : "欅 惇志",
@@ -1056,8 +1056,8 @@
     "belongs" : "富士通研"
   }, {
     "sessionid" : "G1",
-    "name" : "小杉 尚子",
-    "belongs" : "高崎健康福祉大学"
+    "name" : "佐久間 淳",
+    "belongs" : "筑波大"
   }, {
     "sessionid" : "G2",
     "name" : "高橋 翼",
@@ -1120,8 +1120,8 @@
     "belongs" : "工学院大"
   }, {
     "sessionid" : "C3",
-    "name" : "吉田 尚史",
-    "belongs" : "駒大"
+    "name" : "春本 要",
+    "belongs" : "阪大"
   }, {
     "sessionid" : "G7",
     "name" : "木村 文則",
@@ -1156,12 +1156,12 @@
     "belongs" : "NICT"
   }, {
     "sessionid" : "C6",
-    "name" : "大島 裕明",
-    "belongs" : "京大"
+    "name" : "川本 淳平",
+    "belongs" : "九大"
   }, {
     "sessionid" : "C6",
-    "name" : "安川 雅紀",
-    "belongs" : "東大"
+    "name" : "中野 美由紀",
+    "belongs" : "芝工大"
   }, {
     "sessionid" : "C7",
     "name" : "田中 克己",
@@ -1216,8 +1216,8 @@
     "belongs" : "ＮＥＣ"
   }, {
     "sessionid" : "D1",
-    "name" : "太田 学",
-    "belongs" : "岡大"
+    "name" : "新妻 弘崇",
+    "belongs" : "岡山大"
   }, {
     "sessionid" : "D2",
     "name" : "橋本 隆子",
@@ -1232,8 +1232,8 @@
     "belongs" : "NTT"
   }, {
     "sessionid" : "D3",
-    "name" : "春本 要",
-    "belongs" : "阪大"
+    "name" : "鷹野 孝典",
+    "belongs" : "神奈工"
   }, {
     "sessionid" : "D4",
     "name" : "Kim Kyoungsook",
@@ -1268,24 +1268,12 @@
     "belongs" : "立命館大"
   }, {
     "sessionid" : "D8",
-    "name" : "川本 淳平",
-    "belongs" : "九大"
+    "name" : "丸橋 弘治",
+    "belongs" : "富士通研"
   }, {
     "sessionid" : "D8",
-    "name" : "中野 美由紀",
-    "belongs" : "芝工大"
-  }, {
-    "sessionid" : "X1",
-    "name" : "Anyone",
-    "belongs" : "Anywhere"
-  }, {
-    "sessionid" : "X1",
-    "name" : "Anyone",
-    "belongs" : "Anywhere"
-  }, {
-    "sessionid" : "X1",
-    "name" : "Anyone",
-    "belongs" : "Anywhere"
+    "name" : "安川 雅紀",
+    "belongs" : "東大"
   }, {
     "sessionid" : "X1",
     "name" : "Anyone",
