@@ -243,8 +243,16 @@ function changeShowList(val){
 	if (val == "presenlist") {
 		$("#presenList").show();
 		$("#bookmarkList").hide();
+		$("#listIconAll").addClass("ui-btn-active");
+		$("#listIconStar").removeClass("ui-btn-active");
+		var pagename = "#presenListPage";
 	} else {
 		$("#presenList").hide();
 		$("#bookmarkList").show();
-	}	
+		$("#listIconAll").removeClass("ui-btn-active");
+		$("#listIconStar").addClass("ui-btn-active");
+		var pagename = "#bookmarkListPage";
+	}
+	sessionStorage.setItem("currentListPage", pagename);
+	saveLog("show_page", {page:pagename});
 }

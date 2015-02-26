@@ -85,6 +85,7 @@ function saveLog(action, attribute) {
 
 		if (uid !== null) {
 			// json["uid"] = uid;
+			console.log(uid + "_" + date.getTime(), JSON.stringify(json));
 			localStorage.setItem(uid + "_" + date.getTime(), JSON.stringify(json));
 		}
 

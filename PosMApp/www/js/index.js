@@ -159,19 +159,18 @@ function init() {
 
 	//リスト切替ボタン
 	$("#listIconAll").on("click", function() {
+		// saveLog("show_page", {page:"presenListPage"})
     	changeShowList("presenlist");
-    	$(this).addClass("ui-btn-active");
-    	$("#listIconStar").removeClass("ui-btn-active");
 	});
 	$("#listIconStar").on("click", function() {
     	changeShowList("bookmark");
-    	$(this).addClass("ui-btn-active");
-    	$("#listIconAll").removeClass("ui-btn-active");
 	});
 	//最初、プレゼンリストが表示される
-	changeShowList("presenlist");
+	$("#presenList").show();
+	$("#bookmarkList").hide();
 	$("#listIconAll").addClass("ui-btn-active");
-    $("#listIconStar").removeClass("ui-btn-active");
+	$("#listIconStar").removeClass("ui-btn-active");
+	sessionStorage.setItem("currentListPage", "#presenListPage");
 
 
 	// 詳細表示画面の戻るボタン
