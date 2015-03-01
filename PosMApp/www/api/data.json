@@ -1321,8 +1321,8 @@
   }, {
     "sessionid" : "E6",
     "title" : "グラフマイニング",
-    "chairpersonname" : "片山 薫",
-    "chairpersonbelongs" : "首都大学東京"
+    "chairpersonname" : "川越 恭二",
+    "chairpersonbelongs" : "立命館大学"
   }, {
     "sessionid" : "A3",
     "title" : "情報検索（Ph.Dセッション）",
@@ -1847,17 +1847,17 @@
   }, {
     "presenid" : "E3-3",
     "name" : "熊本 和正",
-    "belongs" : "システム情報工学研究科",
+    "belongs" : "筑波大",
     "first" : 1
   }, {
     "presenid" : "E3-3",
     "name" : "天笠 俊之",
-    "belongs" : "システム情報系",
+    "belongs" : "筑波大",
     "first" : 0
   }, {
     "presenid" : "E3-3",
     "name" : "北川 博之",
-    "belongs" : "システム情報系",
+    "belongs" : "筑波大",
     "first" : 0
   }, {
     "presenid" : "E3-4",
@@ -3847,12 +3847,12 @@
   }, {
     "presenid" : "F7-2",
     "name" : "清木 康",
-    "belongs" : "環境情報学部",
+    "belongs" : "慶応大",
     "first" : 0
   }, {
     "presenid" : "F7-2",
     "name" : "Hall Jeremy",
-    "belongs" : "環境情報学部",
+    "belongs" : "慶応大",
     "first" : 0
   }, {
     "presenid" : "F7-3",
