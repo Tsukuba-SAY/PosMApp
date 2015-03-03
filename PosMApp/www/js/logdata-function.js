@@ -2,9 +2,6 @@ $.fn.acceptCollectLog = function() {
 	$(this).on("click", function(e) {
 		console.log("collect log accept");
 
-		var uid = createUID();
-		localStorage.setItem("uid", uid);
-
 		// 現在時刻を最終送信日時とする
 		var date = new Date();
 		localStorage.setItem("log_last_sent", date.getTime().toString());
@@ -46,6 +43,13 @@ $.fn.selectUserCategory = function() {
 
 // 初期設定用
 function initUserData() {
+	// 固有識別IDが設定されていない場合は設定
+	if (localStorage.getItem("uid") === null) {
+		var uid = createUID();
+		localStorage.setItem("uid", uid);
+	} 
+
+	// ログ収集許諾フラグだけを折られた時でもUIDをリセットするのは仕様
 	if (localStorage.getItem("accept_collect_log") === null) {
 		// デフォルト
 		var category = 1;
@@ -80,7 +84,6 @@ function saveLog(action, attribute) {
 		json["timestamp"] = date.getTime();
 
 		if (uid !== null) {
-			// json["uid"] = uid;
 			localStorage.setItem(uid + "_" + date.getTime(), JSON.stringify(json));
 		}
 

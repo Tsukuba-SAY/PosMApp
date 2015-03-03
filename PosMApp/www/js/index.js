@@ -4,8 +4,17 @@ $(window).load(function() {
 	// 非同期で初期化処理
 	setTimeout(function(){
 		init();
+
+		// 固有識別IDが設定されていなければ、初期設定する
+		$("#acceptCollectLog").acceptCollectLog();
+		$("#denyCollectLog").denyCollectLog();
+		$(".selectUserCategoryButton").selectUserCategory();
+		initUserData();
+		//initの中に入れると、初めてダウンロードしてから、二回事件を与えて、一回クリックすると、ブックマーク機能がおかしいくなる
+		$("#bookmarkbutton").touchBookmark();
 	},0);
 	$("#loading").hide();
+
 });
 
 
@@ -15,14 +24,6 @@ function init() {
 	$("#topPageFrame")
 		.css("width", window.innerWidth)
 		.css("max-width", window.innerWidth);
-
-	// 固有識別IDが設定されていなければ、初期設定する
-	$("#acceptCollectLog").acceptCollectLog();
-	$("#denyCollectLog").denyCollectLog();
-	$(".selectUserCategoryButton").selectUserCategory();
-	if (localStorage.getItem("uid") === null) {
-		initUserData();
-	}
 
 	//　ポスターデータのダウンロード
 	//　各mapに関する変数に値を与える
@@ -124,8 +125,8 @@ function init() {
 	$("#changelabel").css("zoom", window.innerWidth/1200);
 
 	// ブックマークスターのタッチイベント
-	$("#bookmarkbutton").touchBookmark();
-
+	//　初めてアクセスして、マップでブックマークすると二回実行する。それを防ぐため、一回だけ事件を与える
+	// $("#bookmarkbutton").touchBookmark();
 
 	// ---------- 詳細情報画面 ----------
 	setDetails();
@@ -158,19 +159,18 @@ function init() {
 
 	//リスト切替ボタン
 	$("#listIconAll").on("click", function() {
+		// saveLog("show_page", {page:"presenListPage"})
     	changeShowList("presenlist");
-    	$(this).addClass("ui-btn-active");
-    	$("#listIconStar").removeClass("ui-btn-active");
 	});
 	$("#listIconStar").on("click", function() {
     	changeShowList("bookmark");
-    	$(this).addClass("ui-btn-active");
-    	$("#listIconAll").removeClass("ui-btn-active");
 	});
 	//最初、プレゼンリストが表示される
-	changeShowList("presenlist");
+	$("#presenList").show();
+	$("#bookmarkList").hide();
 	$("#listIconAll").addClass("ui-btn-active");
-    $("#listIconStar").removeClass("ui-btn-active");
+	$("#listIconStar").removeClass("ui-btn-active");
+	sessionStorage.setItem("currentListPage", "#presenListPage");
 
 
 	// 詳細表示画面の戻るボタン

@@ -38,10 +38,14 @@ $.fn.goToTopPage = function(ev) {
 
 // pagenameのページに遷移
 function changePage(pagename) {
-	saveLog("show_page", {page:pagename});
+	if (pagename === "#presenListPage") {
+		var p = sessionStorage.getItem("currentListPage");
+		saveLog("show_page", {page:p});
+	} else {
+		saveLog("show_page", {page:pagename});
+	}
 	resetZoom();
 	changeActiveTab(pagename);
-	// showBookmarkList();
 	window.location.href = pagename;
 	return pagename;
 }

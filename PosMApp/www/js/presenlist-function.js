@@ -6,9 +6,9 @@ $.fn.showPresenList = function() {
 		presens["presenid"] = [];
 		presens["title"] = [];
 		presens["author"] = [];
-		var sessionKind = ["A","B","C","D","E","F","P"];
+		var sessionKind = ["A","B","C","D","E","F","G","P"];
 		//存在していないセッション番号
-		var notExistSessionNum = ["A3","A6","A7","P5","P6","P7","P8","P9","X1","X2","X3","X4","X5","X6","X7","X8","X9",];
+		var notExistSessionNum = ["A7","P5","P6","B7","P7","P8","P9","X1","X2","X3","X4","X5","X6","X7","X8","X9"];
 		var existflag = false;
 
 		//テスト用変数
@@ -18,8 +18,8 @@ $.fn.showPresenList = function() {
 		var bookmarkArr = getBookmarks();
 		var str = "";
 		str += '<table border="1" rules="rows" width="100%">';
-		//セッション番号はF9まで、9回ループする
-		for(var sessionNum = 1; sessionNum < 10; sessionNum++){
+		//セッション番号はF8まで、8回ループする
+		for(var sessionNum = 1; sessionNum < 9; sessionNum++){
 			//ABCDのループ
 			for(var presenNum = 0; presenNum < sessionKind.length; presenNum++){
 				var sessionId = sessionKind[presenNum] + sessionNum;
@@ -34,7 +34,7 @@ $.fn.showPresenList = function() {
 					for(var sessionArrNum = 0 ; sessionArrNum < session.length ; sessionArrNum++){
 						if(sessionId == session[sessionArrNum].sessionid){
 							str += session[sessionArrNum].title + "</strong></font><br>";
-							str += "<font class='sessionPerson'>座長:" + session[sessionArrNum].chairpersonname + "("+ session[sessionArrNum].charipersonbelongs +")</font><br>";
+							str += "<font class='sessionPerson'>座長:" + session[sessionArrNum].chairpersonname + "("+ session[sessionArrNum].chairpersonbelongs +")</font><br>";
 						}
 					}
 					str += "<font class='sessionPerson'>コメンテータ:";
@@ -243,8 +243,16 @@ function changeShowList(val){
 	if (val == "presenlist") {
 		$("#presenList").show();
 		$("#bookmarkList").hide();
+		$("#listIconAll").addClass("ui-btn-active");
+		$("#listIconStar").removeClass("ui-btn-active");
+		var pagename = "#presenListPage";
 	} else {
 		$("#presenList").hide();
 		$("#bookmarkList").show();
-	}	
+		$("#listIconAll").removeClass("ui-btn-active");
+		$("#listIconStar").addClass("ui-btn-active");
+		var pagename = "#bookmarkListPage";
+	}
+	sessionStorage.setItem("currentListPage", pagename);
+	saveLog("show_page", {page:pagename});
 }

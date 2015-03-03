@@ -1,2688 +1,11884 @@
-position_map = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117];
+position_map = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98];
 
 STATIC_WIDTH = 720;
 
 STATIC_HEIGHT = 960;
 
 taparea =
-[
-{"id":0,"x":497,"y":14,"width":134,"height":185,"direction":"longways","color":"rgb(255,40,0)"},
-{"id":1,"x":358,"y":15,"width":134,"height":185,"direction":"longways","color":"rgb(255,245,0)"},
-{"id":2,"x":43,"y":27,"width":124,"height":169,"direction":"longways","color":"rgb(53,161,107)"},
-{"id":3,"x":359,"y":203,"width":133,"height":185,"direction":"longways","color":"rgb(0,65,255)"},
-{"id":4,"x":498,"y":203,"width":133,"height":185,"direction":"longways","color":"rgb(102,204,255)"},
-{"id":5,"x":42,"y":206,"width":124,"height":168,"direction":"longways","color":"rgb(255,153,160)"},
-{"id":6,"x":42,"y":384,"width":124,"height":168,"direction":"longways","color":"rgb(255,153,0)"},
-{"id":7,"x":123,"y":562,"width":124,"height":168,"direction":"longways","color":"rgb(154,0,121)"},
-{"id":8,"x":223,"y":808,"width":97,"height":132,"direction":"longways","color":"rgb(102,51,0)"},
-{"id":9,"x":324,"y":808,"width":98,"height":132,"direction":"longways","color":"rgb(127,135,143)"}
-];
+[ {
+    "id" : 1,
+    "x" : 52,
+    "y" : 66,
+    "width" : 150,
+    "height" : 201,
+    "direction" : "longways",
+    "color" : "rgb(255,40,0)"
+  }, {
+    "id" : 2,
+    "x" : 52,
+    "y" : 269,
+    "width" : 150,
+    "height" : 201,
+    "direction" : "longways",
+    "color" : "rgb(0,65,255)"
+  }, {
+    "id" : 3,
+    "x" : 35,
+    "y" : 478,
+    "width" : 93,
+    "height" : 124,
+    "direction" : "longways",
+    "color" : "rgb(255,245,0)"
+  }, {
+    "id" : 4,
+    "x" : 35,
+    "y" : 606,
+    "width" : 92,
+    "height" : 123,
+    "direction" : "longways",
+    "color" : "rgb(255,245,0)"
+  }, {
+    "id" : 5,
+    "x" : 35,
+    "y" : 733,
+    "width" : 92,
+    "height" : 124,
+    "direction" : "longways",
+    "color" : "rgb(255,245,0)"
+  }, {
+    "id" : 6,
+    "x" : 130,
+    "y" : 805,
+    "width" : 92,
+    "height" : 124,
+    "direction" : "longways",
+    "color" : "rgb(255,245,0)"
+  }, {
+    "id" : 7,
+    "x" : 225,
+    "y" : 805,
+    "width" : 92,
+    "height" : 124,
+    "direction" : "longways",
+    "color" : "rgb(255,245,0)"
+  }, {
+    "id" : 8,
+    "x" : 347,
+    "y" : 390,
+    "width" : 127,
+    "height" : 170,
+    "direction" : "longways",
+    "color" : "rgb(154,0,121)"
+  }, {
+    "id" : 9,
+    "x" : 475,
+    "y" : 390,
+    "width" : 127,
+    "height" : 171,
+    "direction" : "longways",
+    "color" : "rgb(154,0,121)"
+  }, {
+    "id" : 10,
+    "x" : 614,
+    "y" : 75,
+    "width" : 91,
+    "height" : 122,
+    "direction" : "longways",
+    "color" : "rgb(255,153,0)"
+  }, {
+    "id" : 11,
+    "x" : 614,
+    "y" : 325,
+    "width" : 91,
+    "height" : 123,
+    "direction" : "longways",
+    "color" : "rgb(255,153,0)"
+  }, {
+    "id" : 12,
+    "x" : 614,
+    "y" : 200,
+    "width" : 91,
+    "height" : 122,
+    "direction" : "longways",
+    "color" : "rgb(255,153,0)"
+  }, {
+    "id" : 13,
+    "x" : 519,
+    "y" : 13,
+    "width" : 92,
+    "height" : 123,
+    "direction" : "longways",
+    "color" : "rgb(53,161,107)"
+  }, {
+    "id" : 14,
+    "x" : 426,
+    "y" : 13,
+    "width" : 92,
+    "height" : 123,
+    "direction" : "longways",
+    "color" : "rgb(53,161,107)"
+  }, {
+    "id" : 15,
+    "x" : 332,
+    "y" : 13,
+    "width" : 93,
+    "height" : 123,
+    "direction" : "longways",
+    "color" : "rgb(53,161,107)"
+  } ];
 
 position =
-[
-{"id":0,"x":417,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":1,"x":434,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":2,"x":453,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":3,"x":470,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":4,"x":503,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":5,"x":520,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":6,"x":539,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":7,"x":557,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":8,"x":575,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":9,"x":592,"y":22,"width":16,"height":11,"direction":"sideways"},
-{"id":10,"x":613,"y":31,"width":11,"height":16,"direction":"longways"},
-{"id":11,"x":87,"y":33,"width":16,"height":11,"direction":"sideways"},
-{"id":12,"x":104,"y":33,"width":16,"height":11,"direction":"sideways"},
-{"id":13,"x":87,"y":45,"width":16,"height":11,"direction":"sideways"},
-{"id":14,"x":104,"y":45,"width":16,"height":11,"direction":"sideways"},
-{"id":15,"x":613,"y":49,"width":11,"height":16,"direction":"longways"},
-{"id":16,"x":613,"y":68,"width":11,"height":16,"direction":"longways"},
-{"id":17,"x":87,"y":76,"width":16,"height":11,"direction":"sideways"},
-{"id":18,"x":104,"y":76,"width":16,"height":11,"direction":"sideways"},
-{"id":19,"x":613,"y":85,"width":11,"height":16,"direction":"longways"},
-{"id":20,"x":87,"y":88,"width":16,"height":11,"direction":"sideways"},
-{"id":21,"x":104,"y":88,"width":16,"height":11,"direction":"sideways"},
-{"id":22,"x":613,"y":103,"width":11,"height":16,"direction":"longways"},
-{"id":23,"x":613,"y":121,"width":11,"height":16,"direction":"longways"},
-{"id":24,"x":87,"y":122,"width":16,"height":11,"direction":"sideways"},
-{"id":25,"x":104,"y":122,"width":16,"height":11,"direction":"sideways"},
-{"id":26,"x":87,"y":135,"width":16,"height":11,"direction":"sideways"},
-{"id":27,"x":104,"y":135,"width":16,"height":11,"direction":"sideways"},
-{"id":28,"x":613,"y":140,"width":11,"height":16,"direction":"longways"},
-{"id":29,"x":613,"y":158,"width":11,"height":16,"direction":"longways"},
-{"id":30,"x":87,"y":166,"width":16,"height":11,"direction":"sideways"},
-{"id":31,"x":104,"y":166,"width":16,"height":11,"direction":"sideways"},
-{"id":32,"x":87,"y":178,"width":16,"height":11,"direction":"sideways"},
-{"id":33,"x":104,"y":178,"width":16,"height":11,"direction":"sideways"},
-{"id":34,"x":614,"y":178,"width":11,"height":16,"direction":"longways"},
-{"id":35,"x":614,"y":206,"width":11,"height":16,"direction":"longways"},
-{"id":36,"x":87,"y":211,"width":16,"height":11,"direction":"sideways"},
-{"id":37,"x":104,"y":211,"width":16,"height":11,"direction":"sideways"},
-{"id":38,"x":87,"y":224,"width":16,"height":11,"direction":"sideways"},
-{"id":39,"x":104,"y":224,"width":16,"height":11,"direction":"sideways"},
-{"id":40,"x":613,"y":226,"width":11,"height":16,"direction":"longways"},
-{"id":41,"x":613,"y":243,"width":11,"height":16,"direction":"longways"},
-{"id":42,"x":87,"y":255,"width":16,"height":11,"direction":"sideways"},
-{"id":43,"x":104,"y":255,"width":16,"height":11,"direction":"sideways"},
-{"id":44,"x":613,"y":263,"width":11,"height":16,"direction":"longways"},
-{"id":45,"x":87,"y":267,"width":16,"height":11,"direction":"sideways"},
-{"id":46,"x":104,"y":267,"width":16,"height":11,"direction":"sideways"},
-{"id":47,"x":613,"y":280,"width":11,"height":16,"direction":"longways"},
-{"id":48,"x":613,"y":300,"width":11,"height":16,"direction":"longways"},
-{"id":49,"x":87,"y":301,"width":16,"height":11,"direction":"sideways"},
-{"id":50,"x":104,"y":301,"width":16,"height":11,"direction":"sideways"},
-{"id":51,"x":87,"y":313,"width":16,"height":11,"direction":"sideways"},
-{"id":52,"x":104,"y":313,"width":16,"height":11,"direction":"sideways"},
-{"id":53,"x":613,"y":317,"width":11,"height":16,"direction":"longways"},
-{"id":54,"x":613,"y":337,"width":11,"height":16,"direction":"longways"},
-{"id":55,"x":87,"y":345,"width":16,"height":11,"direction":"sideways"},
-{"id":56,"x":104,"y":345,"width":16,"height":11,"direction":"sideways"},
-{"id":57,"x":613,"y":354,"width":11,"height":16,"direction":"longways"},
-{"id":58,"x":87,"y":357,"width":16,"height":11,"direction":"sideways"},
-{"id":59,"x":104,"y":357,"width":16,"height":11,"direction":"sideways"},
-{"id":60,"x":417,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":61,"x":435,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":62,"x":454,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":63,"x":471,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":64,"x":501,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":65,"x":519,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":66,"x":538,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":67,"x":556,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":68,"x":574,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":69,"x":592,"y":373,"width":16,"height":11,"direction":"sideways"},
-{"id":70,"x":86,"y":389,"width":16,"height":11,"direction":"sideways"},
-{"id":71,"x":104,"y":389,"width":16,"height":11,"direction":"sideways"},
-{"id":72,"x":86,"y":401,"width":16,"height":11,"direction":"sideways"},
-{"id":73,"x":104,"y":401,"width":16,"height":11,"direction":"sideways"},
-{"id":74,"x":86,"y":433,"width":16,"height":11,"direction":"sideways"},
-{"id":75,"x":104,"y":433,"width":16,"height":11,"direction":"sideways"},
-{"id":76,"x":86,"y":445,"width":16,"height":11,"direction":"sideways"},
-{"id":77,"x":104,"y":445,"width":16,"height":11,"direction":"sideways"},
-{"id":78,"x":86,"y":479,"width":16,"height":11,"direction":"sideways"},
-{"id":79,"x":104,"y":479,"width":16,"height":11,"direction":"sideways"},
-{"id":80,"x":86,"y":491,"width":16,"height":11,"direction":"sideways"},
-{"id":81,"x":104,"y":491,"width":16,"height":11,"direction":"sideways"},
-{"id":82,"x":108,"y":522,"width":16,"height":11,"direction":"sideways"},
-{"id":83,"x":125,"y":522,"width":16,"height":11,"direction":"sideways"},
-{"id":84,"x":108,"y":535,"width":16,"height":11,"direction":"sideways"},
-{"id":85,"x":125,"y":535,"width":16,"height":11,"direction":"sideways"},
-{"id":86,"x":132,"y":568,"width":16,"height":11,"direction":"sideways"},
-{"id":87,"x":149,"y":568,"width":16,"height":11,"direction":"sideways"},
-{"id":88,"x":132,"y":580,"width":16,"height":11,"direction":"sideways"},
-{"id":89,"x":149,"y":580,"width":16,"height":11,"direction":"sideways"},
-{"id":90,"x":157,"y":611,"width":16,"height":11,"direction":"sideways"},
-{"id":91,"x":174,"y":611,"width":16,"height":11,"direction":"sideways"},
-{"id":92,"x":157,"y":623,"width":16,"height":11,"direction":"sideways"},
-{"id":93,"x":174,"y":623,"width":16,"height":11,"direction":"sideways"},
-{"id":94,"x":181,"y":657,"width":16,"height":11,"direction":"sideways"},
-{"id":95,"x":198,"y":657,"width":16,"height":11,"direction":"sideways"},
-{"id":96,"x":181,"y":670,"width":16,"height":11,"direction":"sideways"},
-{"id":97,"x":198,"y":670,"width":16,"height":11,"direction":"sideways"},
-{"id":98,"x":203,"y":701,"width":16,"height":11,"direction":"sideways"},
-{"id":99,"x":220,"y":701,"width":16,"height":11,"direction":"sideways"},
-{"id":100,"x":203,"y":713,"width":16,"height":11,"direction":"sideways"},
-{"id":101,"x":220,"y":713,"width":16,"height":11,"direction":"sideways"},
-{"id":102,"x":231,"y":812,"width":11,"height":16,"direction":"longways"},
-{"id":103,"x":231,"y":829,"width":11,"height":16,"direction":"longways"},
-{"id":104,"x":231,"y":849,"width":11,"height":16,"direction":"longways"},
-{"id":105,"x":231,"y":866,"width":11,"height":16,"direction":"longways"},
-{"id":106,"x":231,"y":885,"width":11,"height":16,"direction":"longways"},
-{"id":107,"x":231,"y":902,"width":11,"height":16,"direction":"longways"},
-{"id":108,"x":244,"y":924,"width":16,"height":11,"direction":"sideways"},
-{"id":109,"x":261,"y":924,"width":16,"height":11,"direction":"sideways"},
-{"id":110,"x":282,"y":924,"width":16,"height":11,"direction":"sideways"},
-{"id":111,"x":299,"y":924,"width":16,"height":11,"direction":"sideways"},
-{"id":112,"x":328,"y":924,"width":16,"height":11,"direction":"sideways"},
-{"id":113,"x":346,"y":924,"width":16,"height":11,"direction":"sideways"},
-{"id":114,"x":366,"y":924,"width":16,"height":11,"direction":"sideways"},
-{"id":115,"x":383,"y":924,"width":16,"height":11,"direction":"sideways"}
-];
+[ {
+    "id" : 1,
+    "x" : 85,
+    "y" : 74,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 2,
+    "x" : 116,
+    "y" : 74,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 3,
+    "x" : 147,
+    "y" : 74,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 4,
+    "x" : 85,
+    "y" : 94,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 5,
+    "x" : 116,
+    "y" : 94,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 6,
+    "x" : 147,
+    "y" : 94,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 7,
+    "x" : 85,
+    "y" : 128,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 8,
+    "x" : 116,
+    "y" : 128,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 9,
+    "x" : 147,
+    "y" : 128,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 10,
+    "x" : 85,
+    "y" : 150,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 11,
+    "x" : 116,
+    "y" : 150,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 12,
+    "x" : 147,
+    "y" : 150,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 13,
+    "x" : 85,
+    "y" : 184,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 14,
+    "x" : 116,
+    "y" : 184,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 15,
+    "x" : 147,
+    "y" : 184,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 16,
+    "x" : 85,
+    "y" : 206,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 17,
+    "x" : 116,
+    "y" : 206,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 18,
+    "x" : 147,
+    "y" : 206,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 19,
+    "x" : 85,
+    "y" : 249,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 20,
+    "x" : 116,
+    "y" : 249,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 21,
+    "x" : 147,
+    "y" : 249,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 22,
+    "x" : 85,
+    "y" : 269,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 23,
+    "x" : 116,
+    "y" : 269,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 24,
+    "x" : 147,
+    "y" : 269,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 25,
+    "x" : 85,
+    "y" : 303,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 26,
+    "x" : 116,
+    "y" : 303,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 27,
+    "x" : 147,
+    "y" : 303,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 28,
+    "x" : 85,
+    "y" : 323,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 29,
+    "x" : 116,
+    "y" : 323,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 30,
+    "x" : 147,
+    "y" : 323,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 31,
+    "x" : 85,
+    "y" : 358,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 32,
+    "x" : 116,
+    "y" : 358,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 33,
+    "x" : 147,
+    "y" : 358,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 34,
+    "x" : 85,
+    "y" : 379,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 35,
+    "x" : 116,
+    "y" : 379,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 36,
+    "x" : 147,
+    "y" : 379,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 37,
+    "x" : 85,
+    "y" : 410,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 38,
+    "x" : 116,
+    "y" : 410,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 39,
+    "x" : 147,
+    "y" : 410,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 40,
+    "x" : 85,
+    "y" : 431,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 41,
+    "x" : 116,
+    "y" : 431,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 42,
+    "x" : 147,
+    "y" : 431,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 43,
+    "x" : 65,
+    "y" : 479,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 44,
+    "x" : 65,
+    "y" : 500,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 45,
+    "x" : 65,
+    "y" : 521,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 46,
+    "x" : 65,
+    "y" : 542,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 47,
+    "x" : 65,
+    "y" : 563,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 48,
+    "x" : 65,
+    "y" : 584,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 49,
+    "x" : 65,
+    "y" : 605,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 50,
+    "x" : 65,
+    "y" : 626,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 51,
+    "x" : 65,
+    "y" : 647,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 52,
+    "x" : 65,
+    "y" : 668,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 53,
+    "x" : 65,
+    "y" : 689,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 54,
+    "x" : 65,
+    "y" : 710,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 55,
+    "x" : 65,
+    "y" : 731,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 56,
+    "x" : 65,
+    "y" : 752,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 57,
+    "x" : 65,
+    "y" : 773,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 58,
+    "x" : 65,
+    "y" : 794,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 59,
+    "x" : 65,
+    "y" : 815,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 60,
+    "x" : 65,
+    "y" : 836,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 61,
+    "x" : 130,
+    "y" : 861,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 62,
+    "x" : 161,
+    "y" : 861,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 63,
+    "x" : 192,
+    "y" : 861,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 64,
+    "x" : 223,
+    "y" : 861,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 65,
+    "x" : 254,
+    "y" : 861,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 66,
+    "x" : 285,
+    "y" : 861,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 67,
+    "x" : 348,
+    "y" : 465,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 68,
+    "x" : 380,
+    "y" : 465,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 69,
+    "x" : 412,
+    "y" : 465,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 70,
+    "x" : 444,
+    "y" : 465,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 71,
+    "x" : 476,
+    "y" : 465,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 72,
+    "x" : 508,
+    "y" : 465,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 73,
+    "x" : 540,
+    "y" : 465,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 74,
+    "x" : 572,
+    "y" : 465,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 75,
+    "x" : 641,
+    "y" : 430,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 76,
+    "x" : 641,
+    "y" : 409,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 77,
+    "x" : 641,
+    "y" : 388,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 78,
+    "x" : 641,
+    "y" : 367,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 79,
+    "x" : 641,
+    "y" : 346,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 80,
+    "x" : 641,
+    "y" : 325,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 81,
+    "x" : 641,
+    "y" : 304,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 82,
+    "x" : 641,
+    "y" : 283,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 83,
+    "x" : 641,
+    "y" : 262,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 84,
+    "x" : 641,
+    "y" : 241,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 85,
+    "x" : 641,
+    "y" : 220,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 86,
+    "x" : 641,
+    "y" : 199,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 87,
+    "x" : 641,
+    "y" : 178,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 88,
+    "x" : 641,
+    "y" : 157,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 89,
+    "x" : 641,
+    "y" : 136,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 90,
+    "x" : 641,
+    "y" : 115,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 91,
+    "x" : 582,
+    "y" : 68,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 92,
+    "x" : 551,
+    "y" : 68,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 93,
+    "x" : 520,
+    "y" : 68,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 94,
+    "x" : 489,
+    "y" : 68,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 95,
+    "x" : 458,
+    "y" : 68,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 96,
+    "x" : 427,
+    "y" : 68,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 97,
+    "x" : 396,
+    "y" : 68,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 98,
+    "x" : 365,
+    "y" : 68,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  }, {
+    "id" : 99,
+    "x" : 334,
+    "y" : 68,
+    "width" : 30,
+    "height" : 18,
+    "direction" : "sideways"
+  } ];
 
 poster = 
 
-[{"presenid":"A1-1","posterid":1,"star":3,"date":1},
-{"presenid":"A1-2","posterid":2,"star":3,"date":1},
-{"presenid":"A1-4","posterid":3,"star":3,"date":1},
-{"presenid":"A2-2","posterid":4,"star":3,"date":1},
-{"presenid":"A2-3","posterid":5,"star":3,"date":1},
-{"presenid":"A2-4","posterid":6,"star":3,"date":1},
-{"presenid":"A2-5","posterid":7,"star":3,"date":1},
-{"presenid":"A4-1","posterid":8,"star":3,"date":1},
-{"presenid":"A4-2","posterid":9,"star":3,"date":1},
-{"presenid":"A4-3","posterid":10,"star":3,"date":1},
-{"presenid":"A4-4","posterid":11,"star":4,"date":1},
-{"presenid":"A4-5","posterid":12,"star":1,"date":1},
-{"presenid":"B1-1","posterid":13,"star":1,"date":1},
-{"presenid":"B1-2","posterid":14,"star":3,"date":1},
-{"presenid":"B2-2","posterid":15,"star":3,"date":1},
-{"presenid":"B2-4","posterid":16,"star":4,"date":1},
-{"presenid":"B2-5","posterid":17,"star":4,"date":1},
-{"presenid":"B2-6","posterid":18,"star":1,"date":1},
-{"presenid":"B3-3","posterid":19,"star":1,"date":1},
-{"presenid":"B3-4","posterid":20,"star":4,"date":1},
-{"presenid":"B3-5","posterid":21,"star":3,"date":1},
-{"presenid":"B3-6","posterid":22,"star":3,"date":1},
-{"presenid":"B4-1","posterid":23,"star":4,"date":1},
-{"presenid":"B4-2","posterid":24,"star":4,"date":1},
-{"presenid":"B4-3","posterid":25,"star":1,"date":1},
-{"presenid":"B4-4","posterid":26,"star":1,"date":1},
-{"presenid":"B4-5","posterid":27,"star":3,"date":1},
-{"presenid":"C1-2","posterid":28,"star":3,"date":1},
-{"presenid":"C1-3","posterid":29,"star":4,"date":1},
-{"presenid":"C1-5","posterid":30,"star":4,"date":1},
-{"presenid":"C1-6","posterid":31,"star":1,"date":1},
-{"presenid":"C2-4","posterid":32,"star":1,"date":1},
-{"presenid":"C3-1","posterid":33,"star":3,"date":1},
-{"presenid":"C3-2","posterid":34,"star":3,"date":1},
-{"presenid":"C3-3","posterid":35,"star":4,"date":1},
-{"presenid":"C3-4","posterid":36,"star":4,"date":1},
-{"presenid":"C4-1","posterid":37,"star":1,"date":1},
-{"presenid":"C4-2","posterid":38,"star":1,"date":1},
-{"presenid":"C4-3","posterid":39,"star":3,"date":1},
-{"presenid":"D1-3","posterid":40,"star":3,"date":1},
-{"presenid":"D1-4","posterid":41,"star":4,"date":1},
-{"presenid":"D1-5","posterid":42,"star":4,"date":1},
-{"presenid":"D1-6","posterid":43,"star":1,"date":1},
-{"presenid":"D2-1","posterid":44,"star":1,"date":1},
-{"presenid":"D2-5","posterid":45,"star":4,"date":1},
-{"presenid":"D4-1","posterid":46,"star":3,"date":1},
-{"presenid":"D4-2","posterid":47,"star":3,"date":1},
-{"presenid":"D4-3","posterid":48,"star":4,"date":1},
-{"presenid":"E1-1","posterid":49,"star":4,"date":1},
-{"presenid":"E1-2","posterid":50,"star":1,"date":1},
-{"presenid":"E1-3","posterid":51,"star":1,"date":1},
-{"presenid":"E1-4","posterid":52,"star":3,"date":1},
-{"presenid":"E1-5","posterid":53,"star":3,"date":1},
-{"presenid":"E1-6","posterid":54,"star":4,"date":1},
-{"presenid":"E2-1","posterid":55,"star":4,"date":1},
-{"presenid":"E2-2","posterid":56,"star":1,"date":1},
-{"presenid":"E2-3","posterid":57,"star":1,"date":1},
-{"presenid":"E2-4","posterid":58,"star":4,"date":1},
-{"presenid":"E3-2","posterid":59,"star":3,"date":1},
-{"presenid":"E3-3","posterid":60,"star":3,"date":1},
-{"presenid":"E3-4","posterid":61,"star":1,"date":1},
-{"presenid":"E3-6","posterid":62,"star":1,"date":1},
-{"presenid":"E4-1","posterid":63,"star":1,"date":1},
-{"presenid":"E4-2","posterid":64,"star":1,"date":1},
-{"presenid":"E4-3","posterid":65,"star":1,"date":1},
-{"presenid":"E4-4","posterid":66,"star":1,"date":1},
-{"presenid":"F1-2","posterid":67,"star":1,"date":1},
-{"presenid":"F1-3","posterid":68,"star":1,"date":1},
-{"presenid":"F1-4","posterid":69,"star":1,"date":1},
-{"presenid":"F1-5","posterid":70,"star":1,"date":1},
-{"presenid":"F1-6","posterid":71,"star":1,"date":1},
-{"presenid":"F2-5","posterid":72,"star":1,"date":1},
-{"presenid":"F2-6","posterid":73,"star":3,"date":1},
-{"presenid":"F3-2","posterid":74,"star":3,"date":1},
-{"presenid":"F3-3","posterid":75,"star":1,"date":1},
-{"presenid":"F3-4","posterid":76,"star":1,"date":1},
-{"presenid":"F3-5","posterid":77,"star":3,"date":1},
-{"presenid":"F4-1","posterid":78,"star":3,"date":1},
-{"presenid":"F4-2","posterid":79,"star":1,"date":1},
-{"presenid":"F4-3","posterid":80,"star":1,"date":1},
-{"presenid":"X3-52","posterid":81,"star":3,"date":1},
-{"presenid":"P1-1","posterid":82,"star":3,"date":1},
-{"presenid":"P1-2","posterid":83,"star":1,"date":1},
-{"presenid":"P1-3","posterid":84,"star":1,"date":1},
-{"presenid":"P1-4","posterid":85,"star":3,"date":1},
-{"presenid":"P1-5","posterid":86,"star":3,"date":1},
-{"presenid":"P2-1","posterid":87,"star":1,"date":1},
-{"presenid":"P2-2","posterid":88,"star":1,"date":1},
-{"presenid":"P2-3","posterid":89,"star":3,"date":1},
-{"presenid":"P2-4","posterid":90,"star":3,"date":1},
-{"presenid":"P2-5","posterid":91,"star":1,"date":1},
-{"presenid":"P3-1","posterid":92,"star":1,"date":1},
-{"presenid":"P3-2","posterid":93,"star":3,"date":1},
-{"presenid":"P3-3","posterid":94,"star":3,"date":1},
-{"presenid":"P3-4","posterid":95,"star":1,"date":1},
-{"presenid":"P3-5","posterid":96,"star":1,"date":1},
-{"presenid":"X3-4","posterid":97,"star":3,"date":1},
-{"presenid":"X3-5","posterid":98,"star":3,"date":1},
-{"presenid":"X3-6","posterid":99,"star":1,"date":1},
-{"presenid":"X3-7","posterid":100,"star":1,"date":1},
-{"presenid":"X3-8","posterid":101,"star":3,"date":1},
-{"presenid":"X3-9","posterid":102,"star":3,"date":1},
-{"presenid":"X3-10","posterid":103,"star":2,"date":1},
-{"presenid":"X3-11","posterid":104,"star":2,"date":1},
-{"presenid":"X3-12","posterid":105,"star":2,"date":1},
-{"presenid":"X3-13","posterid":106,"star":2,"date":1},
-{"presenid":"X3-14","posterid":107,"star":2,"date":1},
-{"presenid":"X3-15","posterid":108,"star":2,"date":1},
-{"presenid":"X3-16","posterid":109,"star":1,"date":1},
-{"presenid":"X3-17","posterid":110,"star":1,"date":1},
-{"presenid":"X3-18","posterid":111,"star":1,"date":1},
-{"presenid":"X3-19","posterid":112,"star":1,"date":1},
-{"presenid":"X3-20","posterid":113,"star":1,"date":1},
-{"presenid":"X3-21","posterid":114,"star":1,"date":1},
-{"presenid":"X3-22","posterid":115,"star":1,"date":1},
-{"presenid":"X3-23","posterid":116,"star":1,"date":1},
-{"presenid":"A5-1","posterid":117,"star":3,"date":2},
-{"presenid":"A5-2","posterid":118,"star":3,"date":2},
-{"presenid":"A5-5","posterid":119,"star":3,"date":2},
-{"presenid":"B5-1","posterid":120,"star":3,"date":2},
-{"presenid":"B5-2","posterid":121,"star":3,"date":2},
-{"presenid":"C5-1","posterid":122,"star":3,"date":2},
-{"presenid":"C5-2","posterid":123,"star":3,"date":2},
-{"presenid":"C5-3","posterid":124,"star":3,"date":2},
-{"presenid":"C5-4","posterid":125,"star":3,"date":2},
-{"presenid":"C5-5","posterid":126,"star":3,"date":2},
-{"presenid":"C5-6","posterid":127,"star":4,"date":2},
-{"presenid":"D5-2","posterid":128,"star":1,"date":2},
-{"presenid":"D5-3","posterid":129,"star":1,"date":2},
-{"presenid":"D5-5","posterid":130,"star":3,"date":2},
-{"presenid":"E5-1","posterid":131,"star":3,"date":2},
-{"presenid":"E5-4","posterid":132,"star":4,"date":2},
-{"presenid":"E5-5","posterid":133,"star":4,"date":2},
-{"presenid":"F5-1","posterid":134,"star":1,"date":2},
-{"presenid":"F5-5","posterid":135,"star":1,"date":2},
-{"presenid":"F5-6","posterid":136,"star":4,"date":2},
-{"presenid":"B6-2","posterid":137,"star":3,"date":2},
-{"presenid":"B6-3","posterid":138,"star":3,"date":2},
-{"presenid":"B6-5","posterid":139,"star":4,"date":2},
-{"presenid":"B6-6","posterid":140,"star":4,"date":2},
-{"presenid":"C6-1","posterid":141,"star":1,"date":2},
-{"presenid":"C6-2","posterid":142,"star":1,"date":2},
-{"presenid":"C6-3","posterid":143,"star":3,"date":2},
-{"presenid":"D6-1","posterid":144,"star":3,"date":2},
-{"presenid":"D6-2","posterid":145,"star":4,"date":2},
-{"presenid":"D6-3","posterid":146,"star":4,"date":2},
-{"presenid":"E6-1","posterid":147,"star":1,"date":2},
-{"presenid":"E6-2","posterid":148,"star":1,"date":2},
-{"presenid":"E6-3","posterid":149,"star":3,"date":2},
-{"presenid":"E6-4","posterid":150,"star":3,"date":2},
-{"presenid":"E6-5","posterid":151,"star":4,"date":2},
-{"presenid":"F6-1","posterid":152,"star":4,"date":2},
-{"presenid":"P4-1","posterid":153,"star":1,"date":2},
-{"presenid":"P4-2","posterid":154,"star":1,"date":2},
-{"presenid":"P4-3","posterid":155,"star":3,"date":2},
-{"presenid":"P4-4","posterid":156,"star":3,"date":2},
-{"presenid":"B7-1","posterid":157,"star":4,"date":2},
-{"presenid":"B7-2","posterid":158,"star":4,"date":2},
-{"presenid":"B7-3","posterid":159,"star":1,"date":2},
-{"presenid":"B7-5","posterid":160,"star":1,"date":2},
-{"presenid":"C7-2","posterid":161,"star":4,"date":2},
-{"presenid":"D7-1","posterid":162,"star":3,"date":2},
-{"presenid":"E7-2","posterid":163,"star":3,"date":2},
-{"presenid":"E7-3","posterid":164,"star":4,"date":2},
-{"presenid":"E7-4","posterid":165,"star":4,"date":2},
-{"presenid":"E7-5","posterid":166,"star":1,"date":2},
-{"presenid":"F7-2","posterid":167,"star":1,"date":2},
-{"presenid":"F7-4","posterid":168,"star":3,"date":2},
-{"presenid":"A8-1","posterid":169,"star":3,"date":2},
-{"presenid":"A8-2","posterid":170,"star":4,"date":2},
-{"presenid":"A8-4","posterid":171,"star":4,"date":2},
-{"presenid":"A8-5","posterid":172,"star":1,"date":2},
-{"presenid":"B8-1","posterid":173,"star":1,"date":2},
-{"presenid":"B8-2","posterid":174,"star":4,"date":2},
-{"presenid":"B8-5","posterid":175,"star":3,"date":2},
-{"presenid":"B8-6","posterid":176,"star":3,"date":2},
-{"presenid":"C8-4","posterid":177,"star":1,"date":2},
-{"presenid":"D8-2","posterid":178,"star":1,"date":2},
-{"presenid":"D8-5","posterid":179,"star":1,"date":2},
-{"presenid":"D8-6","posterid":180,"star":1,"date":2},
-{"presenid":"E8-1","posterid":181,"star":1,"date":2},
-{"presenid":"F8-1","posterid":182,"star":1,"date":2},
-{"presenid":"F8-2","posterid":183,"star":1,"date":2},
-{"presenid":"F8-4","posterid":184,"star":1,"date":2},
-{"presenid":"F8-5","posterid":185,"star":1,"date":2},
-{"presenid":"F8-6","posterid":186,"star":1,"date":2},
-{"presenid":"A9-3","posterid":187,"star":1,"date":2},
-{"presenid":"B9-2","posterid":188,"star":1,"date":2},
-{"presenid":"B9-3","posterid":189,"star":3,"date":2},
-{"presenid":"B9-4","posterid":190,"star":3,"date":2},
-{"presenid":"B9-5","posterid":191,"star":1,"date":2},
-{"presenid":"B9-6","posterid":192,"star":1,"date":2},
-{"presenid":"C9-1","posterid":193,"star":3,"date":2},
-{"presenid":"C9-2","posterid":194,"star":3,"date":2},
-{"presenid":"C9-4","posterid":195,"star":1,"date":2},
-{"presenid":"D9-1","posterid":196,"star":1,"date":2},
-{"presenid":"D9-3","posterid":197,"star":3,"date":2},
-{"presenid":"E9-1","posterid":198,"star":3,"date":2},
-{"presenid":"E9-3","posterid":199,"star":1,"date":2},
-{"presenid":"E9-4","posterid":200,"star":1,"date":2},
-{"presenid":"E9-5","posterid":201,"star":3,"date":2},
-{"presenid":"E9-6","posterid":202,"star":3,"date":2},
-{"presenid":"F9-1","posterid":203,"star":1,"date":2},
-{"presenid":"F9-3","posterid":204,"star":1,"date":2},
-{"presenid":"X3-24","posterid":205,"star":3,"date":2},
-{"presenid":"X3-25","posterid":206,"star":3,"date":2},
-{"presenid":"X3-26","posterid":207,"star":1,"date":2},
-{"presenid":"X3-27","posterid":208,"star":1,"date":2},
-{"presenid":"X3-28","posterid":209,"star":3,"date":2},
-{"presenid":"X3-29","posterid":210,"star":3,"date":2},
-{"presenid":"X3-30","posterid":211,"star":1,"date":2},
-{"presenid":"X3-31","posterid":212,"star":1,"date":2},
-{"presenid":"X3-32","posterid":213,"star":3,"date":2},
-{"presenid":"X3-33","posterid":214,"star":3,"date":2},
-{"presenid":"X3-34","posterid":215,"star":1,"date":2},
-{"presenid":"X3-35","posterid":216,"star":1,"date":2},
-{"presenid":"X3-36","posterid":217,"star":3,"date":2},
-{"presenid":"X3-37","posterid":218,"star":3,"date":2},
-{"presenid":"X3-38","posterid":219,"star":2,"date":2},
-{"presenid":"X3-39","posterid":220,"star":2,"date":2},
-{"presenid":"X3-40","posterid":221,"star":2,"date":2},
-{"presenid":"X3-41","posterid":222,"star":2,"date":2},
-{"presenid":"X3-42","posterid":223,"star":2,"date":2},
-{"presenid":"X3-43","posterid":224,"star":2,"date":2},
-{"presenid":"X3-44","posterid":225,"star":1,"date":2},
-{"presenid":"X3-45","posterid":226,"star":1,"date":2},
-{"presenid":"X3-46","posterid":227,"star":1,"date":2},
-{"presenid":"X3-47","posterid":228,"star":1,"date":2},
-{"presenid":"X3-48","posterid":229,"star":1,"date":2},
-{"presenid":"X3-49","posterid":230,"star":1,"date":2},
-{"presenid":"X3-50","posterid":231,"star":1,"date":2},
-{"presenid":"X3-51","posterid":232,"star":1,"date":2}
-];
+[ {
+    "presenid" : "A1-1",
+    "posterid" : 1,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "A1-2",
+    "posterid" : 2,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "B1-2",
+    "posterid" : 3,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "B1-3",
+    "posterid" : 4,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "C1-1",
+    "posterid" : 5,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "C1-2",
+    "posterid" : 6,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "D1-5",
+    "posterid" : 7,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "E1-2",
+    "posterid" : 8,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "F1-1",
+    "posterid" : 9,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "F1-3",
+    "posterid" : 10,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "F1-5",
+    "posterid" : 11,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "F1-6",
+    "posterid" : 12,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "G1-2",
+    "posterid" : 13,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "G1-3",
+    "posterid" : 14,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "A2-2",
+    "posterid" : 15,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "B2-3",
+    "posterid" : 16,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "B2-6",
+    "posterid" : 17,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "C2-3",
+    "posterid" : 18,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "D2-1",
+    "posterid" : 19,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "D2-2",
+    "posterid" : 20,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "D2-6",
+    "posterid" : 21,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "E2-2",
+    "posterid" : 22,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "E2-3",
+    "posterid" : 23,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "E2-4",
+    "posterid" : 24,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "F2-1",
+    "posterid" : 25,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "F2-3",
+    "posterid" : 26,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "F2-4",
+    "posterid" : 27,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "F2-5",
+    "posterid" : 28,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "F2-6",
+    "posterid" : 29,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "G2-1",
+    "posterid" : 30,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "G2-6",
+    "posterid" : 31,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "A3-3",
+    "posterid" : 32,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "A3-4",
+    "posterid" : 33,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "D3-2",
+    "posterid" : 34,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "D3-5",
+    "posterid" : 35,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "E3-1",
+    "posterid" : 36,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "F3-5",
+    "posterid" : 37,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "F3-6",
+    "posterid" : 38,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "G3-5",
+    "posterid" : 39,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "A4-3",
+    "posterid" : 40,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "B4-1",
+    "posterid" : 41,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "B4-2",
+    "posterid" : 42,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "B4-6",
+    "posterid" : 43,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "C4-1",
+    "posterid" : 44,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "C4-3",
+    "posterid" : 45,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "D4-1",
+    "posterid" : 46,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "D4-2",
+    "posterid" : 47,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "D4-4",
+    "posterid" : 48,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "F4-1",
+    "posterid" : 49,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "G4-1",
+    "posterid" : 50,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "G4-5",
+    "posterid" : 51,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "A6-3",
+    "posterid" : 52,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "P1-1",
+    "posterid" : 53,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "P1-2",
+    "posterid" : 54,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "P1-3",
+    "posterid" : 55,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "P1-4",
+    "posterid" : 56,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "P1-5",
+    "posterid" : 57,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "P2-1",
+    "posterid" : 58,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "P2-2",
+    "posterid" : 59,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "P2-3",
+    "posterid" : 60,
+    "star" : 4,
+    "date" : 1
+  }, {
+    "presenid" : "P2-4",
+    "posterid" : 61,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "P2-5",
+    "posterid" : 62,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "A1-4",
+    "posterid" : 63,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "A1-6",
+    "posterid" : 64,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "B1-5",
+    "posterid" : 65,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "B1-6",
+    "posterid" : 66,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "C1-3",
+    "posterid" : 67,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "C1-4",
+    "posterid" : 68,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "C1-5",
+    "posterid" : 69,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "C1-6",
+    "posterid" : 70,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "F1-2",
+    "posterid" : 71,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "A2-1",
+    "posterid" : 72,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "B2-1",
+    "posterid" : 73,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "B2-2",
+    "posterid" : 74,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "B2-5",
+    "posterid" : 75,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "E2-5",
+    "posterid" : 76,
+    "star" : 1,
+    "date" : 1
+  }, {
+    "presenid" : "E2-6",
+    "posterid" : 77,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "F2-2",
+    "posterid" : 78,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "B3-1",
+    "posterid" : 79,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "B3-2",
+    "posterid" : 80,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "C3-3",
+    "posterid" : 81,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "C3-4",
+    "posterid" : 82,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "C3-5",
+    "posterid" : 83,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "D3-1",
+    "posterid" : 84,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "D3-3",
+    "posterid" : 85,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "D3-4",
+    "posterid" : 86,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "F3-2",
+    "posterid" : 87,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "G3-6",
+    "posterid" : 88,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "A4-1",
+    "posterid" : 89,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "A4-2",
+    "posterid" : 90,
+    "star" : 2,
+    "date" : 1
+  }, {
+    "presenid" : "B4-5",
+    "posterid" : 91,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "C4-5",
+    "posterid" : 92,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "F4-2",
+    "posterid" : 93,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "F4-3",
+    "posterid" : 94,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "F4-4",
+    "posterid" : 95,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "F4-5",
+    "posterid" : 96,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "F4-6",
+    "posterid" : 97,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "G4-4",
+    "posterid" : 98,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "G4-6",
+    "posterid" : 99,
+    "star" : 3,
+    "date" : 1
+  }, {
+    "presenid" : "A5-1",
+    "posterid" : 100,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "B5-5",
+    "posterid" : 101,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "C5-3",
+    "posterid" : 102,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "C5-4",
+    "posterid" : 103,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "C5-5",
+    "posterid" : 104,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "D5-1",
+    "posterid" : 105,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "D5-2",
+    "posterid" : 106,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "D5-5",
+    "posterid" : 107,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "E5-2",
+    "posterid" : 108,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "E5-3",
+    "posterid" : 109,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "E5-5",
+    "posterid" : 110,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "E5-6",
+    "posterid" : 111,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "F5-2",
+    "posterid" : 112,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "F5-5",
+    "posterid" : 113,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "G5-1",
+    "posterid" : 114,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "G5-5",
+    "posterid" : 115,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "G5-6",
+    "posterid" : 116,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "A6-5",
+    "posterid" : 117,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "B6-5",
+    "posterid" : 118,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "C6-1",
+    "posterid" : 119,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "C6-2",
+    "posterid" : 120,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "C6-3",
+    "posterid" : 121,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "C6-4",
+    "posterid" : 122,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "D6-2",
+    "posterid" : 123,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "E6-5",
+    "posterid" : 124,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "F6-4",
+    "posterid" : 125,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "F6-6",
+    "posterid" : 126,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "G6-5",
+    "posterid" : 127,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "G6-6",
+    "posterid" : 128,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "C7-6",
+    "posterid" : 129,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "D7-2",
+    "posterid" : 130,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "E7-4",
+    "posterid" : 131,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "E7-5",
+    "posterid" : 132,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "F7-1",
+    "posterid" : 133,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "F7-3",
+    "posterid" : 134,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "F7-6",
+    "posterid" : 135,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "G7-2",
+    "posterid" : 136,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "A8-2",
+    "posterid" : 137,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "A8-3",
+    "posterid" : 138,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "A8-6",
+    "posterid" : 139,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "B8-2",
+    "posterid" : 140,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "B8-3",
+    "posterid" : 141,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "B8-4",
+    "posterid" : 142,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "B8-5",
+    "posterid" : 143,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "B8-6",
+    "posterid" : 144,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "C8-4",
+    "posterid" : 145,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "C8-5",
+    "posterid" : 146,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "D8-1",
+    "posterid" : 147,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "D8-3",
+    "posterid" : 148,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "E8-1",
+    "posterid" : 149,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "E8-4",
+    "posterid" : 150,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "F8-1",
+    "posterid" : 151,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "F8-6",
+    "posterid" : 152,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "G8-1",
+    "posterid" : 153,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "G8-2",
+    "posterid" : 154,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "G8-3",
+    "posterid" : 155,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "G8-5",
+    "posterid" : 156,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "P3-1",
+    "posterid" : 157,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "P3-2",
+    "posterid" : 158,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "P3-3",
+    "posterid" : 159,
+    "star" : 4,
+    "date" : 2
+  }, {
+    "presenid" : "P3-4",
+    "posterid" : 160,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "P3-5",
+    "posterid" : 161,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "P3-6",
+    "posterid" : 162,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "X1-1",
+    "posterid" : 163,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "X1-2",
+    "posterid" : 164,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "X1-3",
+    "posterid" : 165,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "A5-2",
+    "posterid" : 166,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "B5-1",
+    "posterid" : 167,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "B5-3",
+    "posterid" : 168,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "F5-3",
+    "posterid" : 169,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "C6-6",
+    "posterid" : 170,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "D6-1",
+    "posterid" : 171,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "D6-4",
+    "posterid" : 172,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "E6-6",
+    "posterid" : 173,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "F6-1",
+    "posterid" : 174,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "F6-3",
+    "posterid" : 175,
+    "star" : 1,
+    "date" : 2
+  }, {
+    "presenid" : "G6-4",
+    "posterid" : 176,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "C7-1",
+    "posterid" : 177,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "D7-1",
+    "posterid" : 178,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "D7-3",
+    "posterid" : 179,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "F7-4",
+    "posterid" : 180,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "F7-5",
+    "posterid" : 181,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "G7-1",
+    "posterid" : 182,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "G7-6",
+    "posterid" : 183,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "A8-5",
+    "posterid" : 184,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "C8-1",
+    "posterid" : 185,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "C8-2",
+    "posterid" : 186,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "D8-6",
+    "posterid" : 187,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "E8-5",
+    "posterid" : 188,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "E8-6",
+    "posterid" : 189,
+    "star" : 2,
+    "date" : 2
+  }, {
+    "presenid" : "F8-4",
+    "posterid" : 190,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "F8-5",
+    "posterid" : 191,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "P4-1",
+    "posterid" : 192,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "P4-2",
+    "posterid" : 193,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "P4-3",
+    "posterid" : 194,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "P4-4",
+    "posterid" : 195,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "P4-5",
+    "posterid" : 196,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "X1-4",
+    "posterid" : 197,
+    "star" : 3,
+    "date" : 2
+  }, {
+    "presenid" : "X1-5",
+    "posterid" : 198,
+    "star" : 3,
+    "date" : 2
+  } ];
 
 author =
-[
-{"presenid":"A1-1","name":"真嶋 温佳","belongs":"大阪大学","first":1},
-{"presenid":"A1-1","name":"白川 真澄","belongs":"大阪大学","first":0},
-{"presenid":"A1-1","name":"原 隆浩","belongs":"大阪大学","first":0},
-{"presenid":"A1-1","name":"西尾 章治郎","belongs":"大阪大学","first":0},
-{"presenid":"A1-2","name":"Zhang Yating","belongs":"Kyoto University","first":1},
-{"presenid":"A1-2","name":"Jatowt Adam","belongs":"Kyoto University","first":0},
-{"presenid":"A1-2","name":"Tanaka Katsumi ","belongs":"Kyoto University","first":0},
-{"presenid":"A1-3","name":"呉 建民","belongs":"早稲田大学","first":1},
-{"presenid":"A1-3","name":"岩井原 瑞穂","belongs":"早稲田大学","first":0},
-{"presenid":"A1-4","name":"欅 惇志","belongs":"奈良先端科学技術大学院大学","first":1},
-{"presenid":"A1-4","name":"宮崎 純","belongs":"東京工業大学","first":0},
-{"presenid":"A1-4","name":"波多野 賢治","belongs":"同志社大学","first":0},
-{"presenid":"A1-4","name":"山本 豪志朗","belongs":"奈良先端科学技術大学院大学","first":0},
-{"presenid":"A1-4","name":"武富 貴史","belongs":"奈良先端科学技術大学院大学","first":0},
-{"presenid":"A1-4","name":"加藤 博一","belongs":"奈良先端科学技術大学院大学","first":0},
-{"presenid":"A1-5","name":"Bou Savong","belongs":"筑波大学","first":1},
-{"presenid":"A1-5","name":"Amagasa Toshiyuki","belongs":"筑波大学","first":0},
-{"presenid":"A1-5","name":"Kitagawa Hiroyuki","belongs":"筑波大学","first":0},
-{"presenid":"B1-1","name":"川上 未来","belongs":"筑波大学","first":1},
-{"presenid":"B1-1","name":"佐藤 哲司","belongs":"筑波大学","first":0},
-{"presenid":"B1-2","name":"安井 豪基","belongs":"京都産業大学","first":1},
-{"presenid":"B1-2","name":"王 元元","belongs":"兵庫県立大学","first":0},
-{"presenid":"B1-2","name":"細川 侑士","belongs":"京都産業大学","first":0},
-{"presenid":"B1-2","name":"河合 由起子","belongs":"京都産業大学","first":0},
-{"presenid":"B1-2","name":"秋山 豊和","belongs":"京都産業大学","first":0},
-{"presenid":"B1-2","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"B1-3","name":"小松 恭子","belongs":"KDDI研究所","first":1},
-{"presenid":"B1-3","name":"中澤 昌美","belongs":"KDDI研究所","first":0},
-{"presenid":"B1-3","name":"池田 和史","belongs":"KDDI研究所","first":0},
-{"presenid":"B1-3","name":"服部 元","belongs":"KDDI研究所","first":0},
-{"presenid":"B1-3","name":"滝嶋 康弘","belongs":"KDDI研究所","first":0},
-{"presenid":"B1-4","name":"大坂 直人","belongs":"東京大学","first":1},
-{"presenid":"B1-4","name":"秋葉 拓哉","belongs":"東京大学","first":0},
-{"presenid":"B1-4","name":"吉田 悠一","belongs":"国立情報学研究所","first":0},
-{"presenid":"B1-4","name":"河原林 健一","belongs":"国立情報学研究所","first":0},
-{"presenid":"B1-5","name":"岡本 大輝","belongs":"東京大学","first":1},
-{"presenid":"B1-5","name":"豊田 正史","belongs":"東京大学","first":0},
-{"presenid":"B1-5","name":"喜連川 優","belongs":"東京大学／国立情報学研究所","first":0},
-{"presenid":"C1-1","name":"Li Jiyi","belongs":"Kyoto University","first":1},
-{"presenid":"C1-1","name":"Shimizu Toshiyuki","belongs":"Kyoto University","first":0},
-{"presenid":"C1-1","name":"Yoshikawa Masatoshi ","belongs":"Kyoto University","first":0},
-{"presenid":"C1-2","name":"守谷 一朗","belongs":"筑波大学","first":1},
-{"presenid":"C1-2","name":"小池 大地","belongs":"筑波大学","first":0},
-{"presenid":"C1-2","name":"今田 貴和","belongs":"筑波大学","first":0},
-{"presenid":"C1-2","name":"宇津呂 武仁","belongs":"筑波大学","first":0},
-{"presenid":"C1-2","name":"河田 容英","belongs":"ログワークス","first":0},
-{"presenid":"C1-2","name":"神門 典子","belongs":"国立情報学研究所","first":0},
-{"presenid":"C1-3","name":"津川 敦朗","belongs":"岡山大学","first":1},
-{"presenid":"C1-3","name":"新妻 弘崇","belongs":"岡山大学","first":0},
-{"presenid":"C1-3","name":"太田 学","belongs":"岡山大学","first":0},
-{"presenid":"C1-4","name":"栗原 俊明","belongs":"東京大学","first":1},
-{"presenid":"C1-4","name":"豊田 正史","belongs":"東京大学","first":0},
-{"presenid":"C1-4","name":"喜連川 優","belongs":"東京大学／国立情報学研究所","first":0},
-{"presenid":"C1-5","name":"松尾 昇","belongs":"九州大学","first":1},
-{"presenid":"C1-5","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"C1-6","name":"加藤 龍","belongs":"京都大学","first":1},
-{"presenid":"C1-6","name":"大島 裕明","belongs":"京都大学","first":0},
-{"presenid":"C1-6","name":"山本 岳洋","belongs":"京都大学","first":0},
-{"presenid":"C1-6","name":"加藤 誠","belongs":"京都大学","first":0},
-{"presenid":"C1-6","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"D1-1","name":"菱沼 直子","belongs":"お茶の水女子大学","first":1},
-{"presenid":"D1-1","name":"竹房 あつ子","belongs":"産業技術総合研究所","first":0},
-{"presenid":"D1-1","name":"中田 秀基","belongs":"産業技術総合研究所","first":0},
-{"presenid":"D1-1","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"D1-2","name":"牧野 浩之","belongs":"NTT","first":1},
-{"presenid":"D1-2","name":"鬼塚 真","belongs":"NTT","first":0},
-{"presenid":"D1-3","name":"小沢 健史","belongs":"NTT","first":1},
-{"presenid":"D1-3","name":"及川 一樹","belongs":"NTT","first":0},
-{"presenid":"D1-3","name":"本庄 利守","belongs":"NTT","first":0},
-{"presenid":"D1-3","name":"鬼塚 真","belongs":"NTT","first":0},
-{"presenid":"D1-4","name":"日開 朝美","belongs":"お茶の水女子大学","first":1},
-{"presenid":"D1-4","name":"竹房 あつ子","belongs":"産業技術総合研究所","first":0},
-{"presenid":"D1-4","name":"中田 秀基","belongs":"産業技術総合研究所","first":0},
-{"presenid":"D1-4","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"D1-5","name":"若森 拓馬","belongs":"NTT","first":1},
-{"presenid":"D1-5","name":"山室 健","belongs":"NTT","first":0},
-{"presenid":"D1-5","name":"寺本 純司","belongs":"NTT","first":0},
-{"presenid":"D1-5","name":"西村 剛 ","belongs":"NTT","first":0},
-{"presenid":"D1-6","name":"西前 光","belongs":"高知大学","first":1},
-{"presenid":"D1-6","name":"三好 智也","belongs":"高知大学","first":0},
-{"presenid":"D1-6","name":"本田 理恵","belongs":"高知大学","first":0},
-{"presenid":"E1-1","name":"藤原 国久","belongs":"横浜国立大学","first":1},
-{"presenid":"E1-1","name":"高橋 慶多","belongs":"横浜国立大学","first":0},
-{"presenid":"E1-1","name":"細澤 直人","belongs":"横浜国立大学","first":0},
-{"presenid":"E1-1","name":"高橋 佳久","belongs":"横浜国立大学","first":0},
-{"presenid":"E1-1","name":"西本 直樹","belongs":"横浜国立大学","first":0},
-{"presenid":"E1-1","name":"富井 尚志","belongs":"横浜国立大学","first":0},
-{"presenid":"E1-1","name":"本藤 祐樹","belongs":"横浜国立大学","first":0},
-{"presenid":"E1-2","name":"玉田 雄基","belongs":"筑波大学","first":1},
-{"presenid":"E1-2","name":"佐藤 哲司","belongs":"筑波大学","first":0},
-{"presenid":"E1-3","name":"大羽 洋隆","belongs":"静岡大学","first":1},
-{"presenid":"E1-3","name":"廣田 雅春","belongs":"静岡大学","first":0},
-{"presenid":"E1-3","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"E1-3","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"E1-4","name":"後藤 康路","belongs":"静岡大学","first":1},
-{"presenid":"E1-4","name":"山田 竜平","belongs":"国立天文台","first":0},
-{"presenid":"E1-4","name":"山本 幸生","belongs":"宇宙航空研究開発機構","first":0},
-{"presenid":"E1-4","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"E1-4","name":"横山 昌平","belongs":"横山 昌平","first":0},
-{"presenid":"E1-5","name":"松尾 哉太","belongs":"岡山大学","first":1},
-{"presenid":"E1-5","name":"新妻 弘崇","belongs":"岡山大学","first":0},
-{"presenid":"E1-5","name":"太田 学","belongs":"岡山大学","first":0},
-{"presenid":"E1-6","name":"谷 俊廣","belongs":"立命館大学","first":1},
-{"presenid":"E1-6","name":"黄 宏軒","belongs":"立命館大学","first":0},
-{"presenid":"E1-6","name":"川越 恭二","belongs":"立命館大学","first":0},
-{"presenid":"F1-1","name":"北谷 宏紀","belongs":"東京電機大学","first":1},
-{"presenid":"F1-1","name":"井上 潮","belongs":"東京電機大学","first":0},
-{"presenid":"F1-2","name":"川上 優平","belongs":"京都大学","first":1},
-{"presenid":"F1-2","name":"清水 敏之","belongs":"京都大学","first":0},
-{"presenid":"F1-2","name":"吉川 正俊","belongs":"京都大学","first":0},
-{"presenid":"F1-3","name":"櫻木 優輝","belongs":"立命館大学","first":1},
-{"presenid":"F1-3","name":"青山 敦","belongs":"立命館大学","first":0},
-{"presenid":"F1-3","name":"木村 文則","belongs":"立命館大学","first":0},
-{"presenid":"F1-3","name":"前田 亮","belongs":"立命館大学","first":0},
-{"presenid":"F1-4","name":"鈴木 尚樹","belongs":"工学院大学","first":1},
-{"presenid":"F1-4","name":"北山 大輔","belongs":"工学院大学","first":0},
-{"presenid":"F1-5","name":"清野 悠希","belongs":"筑波大学","first":1},
-{"presenid":"F1-5","name":"佐藤 哲司","belongs":"筑波大学","first":0},
-{"presenid":"F1-6","name":"坂本 祥之","belongs":"京都大学","first":1},
-{"presenid":"F1-6","name":"清水 敏之","belongs":"京都大学","first":0},
-{"presenid":"F1-6","name":"吉川 正俊","belongs":"京都大学","first":0},
-{"presenid":"A2-1","name":"小澤 佑介","belongs":"筑波大学","first":1},
-{"presenid":"A2-1","name":"天笠 俊之","belongs":"筑波大学","first":0},
-{"presenid":"A2-1","name":"北川 博之","belongs":"筑波大学","first":0},
-{"presenid":"A2-2","name":"Luo Min","belongs":"NTT","first":1},
-{"presenid":"A2-2","name":"Honjo Toshimori","belongs":"NTT","first":0},
-{"presenid":"A2-3","name":"早水 悠登","belongs":"東京大学","first":1},
-{"presenid":"A2-3","name":"合田 和生","belongs":"東京大学","first":0},
-{"presenid":"A2-3","name":"喜連川 優","belongs":"東京大学／国立情報学研究所","first":0},
-{"presenid":"A2-4","name":"山田 浩之","belongs":"東京大学","first":1},
-{"presenid":"A2-4","name":"合田 和生","belongs":"東京大学","first":0},
-{"presenid":"A2-4","name":"喜連川 優","belongs":"東京大学","first":0},
-{"presenid":"A2-5","name":"萩本 真太朗","belongs":"横浜国立大学","first":1},
-{"presenid":"A2-5","name":"出縄 誠","belongs":"横浜国立大学","first":0},
-{"presenid":"A2-5","name":"林 拓也","belongs":"横浜国立大学","first":0},
-{"presenid":"A2-5","name":"讃井 崚","belongs":"横浜国立大学","first":0},
-{"presenid":"A2-5","name":"富井 尚志","belongs":"横浜国立大学","first":0},
-{"presenid":"A2-5","name":"本藤 祐樹","belongs":"横浜国立大学","first":0},
-{"presenid":"B2-1","name":"大本 茂史","belongs":"首都大学東京","first":1},
-{"presenid":"B2-1","name":"岸本 拓也","belongs":"首都大学東京","first":0},
-{"presenid":"B2-1","name":"高田 美樹","belongs":"首都大学東京","first":0},
-{"presenid":"B2-1","name":"高田 さとみ","belongs":"首都大学東京","first":0},
-{"presenid":"B2-1","name":"良 育英","belongs":"首都大学東京","first":0},
-{"presenid":"B2-1","name":"周 子胤","belongs":"首都大学東京","first":0},
-{"presenid":"B2-1","name":"嶋田 茂","belongs":"首都大学東京","first":0},
-{"presenid":"B2-2","name":"吉國 綺乃","belongs":"お茶の水女子大学","first":1},
-{"presenid":"B2-2","name":"渡辺 知恵美","belongs":"筑波大学","first":0},
-{"presenid":"B2-2","name":"小林 一郎","belongs":"お茶の水女子大学","first":0},
-{"presenid":"B2-3","name":"奥谷 貴志","belongs":"早稲田大学","first":1},
-{"presenid":"B2-3","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0},
-{"presenid":"B2-4","name":"山口 裕太郎","belongs":"筑波大学","first":1},
-{"presenid":"B2-4","name":"山本 修平","belongs":"筑波大学","first":0},
-{"presenid":"B2-4","name":"佐藤 哲司","belongs":"筑波大学","first":0},
-{"presenid":"B2-5","name":"大澤 純","belongs":"大阪大学","first":1},
-{"presenid":"B2-5","name":"岩田 麻佑","belongs":"KDDI","first":0},
-{"presenid":"B2-5","name":"原 隆浩","belongs":"大阪大学","first":0},
-{"presenid":"B2-5","name":"西尾 章治郎","belongs":"大阪大学","first":0},
-{"presenid":"B2-6","name":"趙 驍騏","belongs":"京都大学","first":1},
-{"presenid":"B2-6","name":"田島 敬史","belongs":"京都大学","first":0},
-{"presenid":"C2-1","name":"今村 真浩","belongs":"静岡大学","first":1},
-{"presenid":"C2-1","name":"松本 章代","belongs":"東北学院大学","first":0},
-{"presenid":"C2-1","name":"小西 達裕","belongs":"静岡大学","first":0},
-{"presenid":"C2-1","name":"高木 朗","belongs":"言語情報処理研究所","first":0},
-{"presenid":"C2-1","name":"小山 照夫","belongs":"国立情報学研究所","first":0},
-{"presenid":"C2-1","name":"三宅 芳雄","belongs":"放送大学","first":0},
-{"presenid":"C2-1","name":"伊東 幸宏","belongs":"静岡大学","first":0},
-{"presenid":"C2-2","name":"岩崎 京","belongs":"東京電機大学","first":1},
-{"presenid":"C2-2","name":"井上 潮","belongs":"東京電機大学","first":0},
-{"presenid":"C2-3","name":"柿本 由気","belongs":"佐賀大学","first":1},
-{"presenid":"C2-3","name":"掛下 哲郎","belongs":"佐賀大学","first":0},
-{"presenid":"C2-4","name":"真下 遼","belongs":"甲南大学","first":1},
-{"presenid":"C2-4","name":"灘本 明代","belongs":"甲南大学","first":0},
-{"presenid":"C2-5","name":"落合 修也","belongs":"京都大学","first":1},
-{"presenid":"C2-5","name":"加藤 誠","belongs":"京都大学","first":0},
-{"presenid":"C2-5","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"D2-1","name":"飯村 奈穂","belongs":"お茶の水女子大学","first":1},
-{"presenid":"D2-1","name":"西川 記史","belongs":"東京大学","first":0},
-{"presenid":"D2-1","name":"中野 美由紀","belongs":"芝浦工業大学","first":0},
-{"presenid":"D2-1","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"D2-2","name":"吉田 惇人","belongs":"福井大学","first":1},
-{"presenid":"D2-2","name":"樋口 健","belongs":"福井大学","first":0},
-{"presenid":"D2-2","name":"都司 達夫","belongs":"福井大学","first":0},
-{"presenid":"D2-3","name":"田村 雅寿","belongs":"富士通研究所","first":1},
-{"presenid":"D2-3","name":"飯澤 健","belongs":"富士通研究所","first":0},
-{"presenid":"D2-3","name":"前田 宗則","belongs":"富士通研究所","first":0},
-{"presenid":"D2-3","name":"加藤 純","belongs":"富士通研究所","first":0},
-{"presenid":"D2-3","name":"熊野 達夫","belongs":"富士通研究所","first":0},
-{"presenid":"D2-3","name":"野村 祐士","belongs":"富士通研究所","first":0},
-{"presenid":"D2-3","name":"小沢 年弘","belongs":"富士通研究所","first":0},
-{"presenid":"D2-4","name":"出射 英臣","belongs":"日立製作所","first":1},
-{"presenid":"D2-4","name":"久木 和也","belongs":"日立製作所","first":0},
-{"presenid":"D2-4","name":"藤原 真二","belongs":"日立製作所","first":0},
-{"presenid":"D2-4","name":"茂木 和彦","belongs":"日立製作所","first":0},
-{"presenid":"D2-4","name":"合田 和生","belongs":"東京大学","first":0},
-{"presenid":"D2-4","name":"喜連川 優","belongs":"東京大学／国立情報学研究所","first":0},
-{"presenid":"D2-5","name":"檜垣 貴良","belongs":"京都産業大学","first":1},
-{"presenid":"D2-5","name":"秋山 豊和","belongs":"京都産業大学","first":0},
-{"presenid":"D2-6","name":"山上 祥","belongs":"神戸大学","first":1},
-{"presenid":"D2-6","name":"青柳 西蔵","belongs":"神戸大学","first":0},
-{"presenid":"D2-6","name":"長松 隆","belongs":"神戸大学","first":0},
-{"presenid":"D2-6","name":"鎌原 淳三","belongs":"神戸大学","first":0},
-{"presenid":"E2-1","name":"安政 駿","belongs":"筑波大学","first":1},
-{"presenid":"E2-1","name":"手塚 太郎","belongs":"筑波大学","first":0},
-{"presenid":"E2-2","name":"馬場 匠見","belongs":"慶應義塾大学","first":1},
-{"presenid":"E2-2","name":"橋本 翔","belongs":"慶應義塾大学","first":0},
-{"presenid":"E2-2","name":"増井 俊之","belongs":"慶應義塾大学","first":0},
-{"presenid":"E2-3","name":"権守 健嗣","belongs":"筑波大学","first":1},
-{"presenid":"E2-3","name":"森嶋 厚行","belongs":"筑波大学","first":0},
-{"presenid":"E2-3","name":"北川 博之","belongs":"筑波大学","first":0},
-{"presenid":"E2-4","name":"青木 秀人","belongs":"筑波大学","first":1},
-{"presenid":"E2-4","name":"森嶋 厚行","belongs":"筑波大学","first":0},
-{"presenid":"E2-5","name":"久保田 琢也","belongs":"熊本大学","first":1},
-{"presenid":"E2-5","name":"眞鍋 雄貴","belongs":"熊本大学","first":0},
-{"presenid":"E2-5","name":"有次 正義","belongs":"熊本大学","first":0},
-{"presenid":"F2-1","name":"徐 海燕","belongs":"福岡工業大学","first":1},
-{"presenid":"F2-1","name":"山口 亨","belongs":"福岡工業大学","first":0},
-{"presenid":"F2-1","name":"史 一華","belongs":"西南学院大学","first":0},
-{"presenid":"F2-2","name":"坂爪 拓也","belongs":"東京電機大学","first":1},
-{"presenid":"F2-2","name":"井上 潮","belongs":"東京電機大学","first":0},
-{"presenid":"F2-3","name":"笠江 優美子","belongs":"NTT","first":1},
-{"presenid":"F2-3","name":"千葉 一深","belongs":"NTT","first":0},
-{"presenid":"F2-3","name":"車谷 駿介","belongs":"NTT","first":0},
-{"presenid":"F2-3","name":"赤間 浩樹 ","belongs":"NTT","first":0},
-{"presenid":"F2-4","name":"笠原 誠人","belongs":"神奈川工科大学","first":1},
-{"presenid":"F2-4","name":"鷹野 孝典","belongs":"神奈川工科大学","first":0},
-{"presenid":"F2-5","name":"萩生田 明徳","belongs":"横浜国立大学","first":1},
-{"presenid":"F2-5","name":"藤村 雄基","belongs":"横浜国立大学","first":0},
-{"presenid":"F2-5","name":"富井 尚志","belongs":"横浜国立大学","first":0},
-{"presenid":"F2-6","name":"田中 祥太郎","belongs":"京都大学","first":1},
-{"presenid":"F2-6","name":"ヤトフト アダム","belongs":"京都大学","first":0},
-{"presenid":"F2-6","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"B3-1","name":"三木 翔平","belongs":"大阪大学","first":1},
-{"presenid":"B3-1","name":"新田 直子","belongs":"大阪大学","first":0},
-{"presenid":"B3-1","name":"馬場口 登","belongs":"大阪大学","first":0},
-{"presenid":"B3-2","name":"土屋 圭","belongs":"東京大学","first":1},
-{"presenid":"B3-2","name":"豊田 正史","belongs":"東京大学","first":0},
-{"presenid":"B3-2","name":"喜連川 優","belongs":"国立情報学研究所／東京大学","first":0},
-{"presenid":"B3-3","name":"田原 琢士","belongs":"京都大学","first":1},
-{"presenid":"B3-3","name":"馬 強","belongs":"京都大学","first":0},
-{"presenid":"B3-4","name":"長谷川 馨亮","belongs":"京都大学","first":1},
-{"presenid":"B3-4","name":"馬 強","belongs":"京都大学","first":0},
-{"presenid":"B3-4","name":"吉川 正俊","belongs":"京都大学","first":0},
-{"presenid":"B3-5","name":"中井 寿一","belongs":"京都産業大学","first":1},
-{"presenid":"B3-5","name":"山本 美佳","belongs":"京都産業大学","first":0},
-{"presenid":"B3-5","name":"河合 由起子","belongs":"京都産業大学","first":0},
-{"presenid":"B3-5","name":"川崎 洋","belongs":"鹿児島大学","first":0},
-{"presenid":"B3-5","name":"赤木 康宏","belongs":"鹿児島大学","first":0},
-{"presenid":"B3-5","name":"若宮 翔子","belongs":"兵庫県立大学","first":0},
-{"presenid":"B3-5","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"B3-6","name":"村山 敬祐","belongs":"首都大学東京","first":1},
-{"presenid":"B3-6","name":"佐伯 圭介","belongs":"首都大学東京","first":0},
-{"presenid":"B3-6","name":"遠藤 雅樹","belongs":"首都大学東京","first":0},
-{"presenid":"B3-6","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"B3-6","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"C3-1","name":"松井 悠太郎","belongs":"岡山大学","first":1},
-{"presenid":"C3-1","name":"新妻 弘崇","belongs":"岡山大学","first":0},
-{"presenid":"C3-1","name":"太田 学","belongs":"岡山大学","first":0},
-{"presenid":"C3-2","name":"前田 浩邦","belongs":"京都大学","first":1},
-{"presenid":"C3-2","name":"山肩 洋子","belongs":"京都大学","first":0},
-{"presenid":"C3-2","name":"森 信介","belongs":"京都大学","first":0},
-{"presenid":"C3-3","name":"園田 匠","belongs":"法政大学","first":1},
-{"presenid":"C3-3","name":"三浦 孝夫","belongs":"法政大学","first":0},
-{"presenid":"C3-4","name":"朝永 聖也","belongs":"京都産業大学","first":1},
-{"presenid":"C3-4","name":"中島 伸介","belongs":"京都産業大学","first":0},
-{"presenid":"C3-4","name":"稲垣 陽一","belongs":"きざしカンパニー","first":0},
-{"presenid":"C3-4","name":"中本 レン","belongs":"きざしカンパニー","first":0},
-{"presenid":"C3-4","name":"張 建偉","belongs":"筑波技術大学","first":0},
-{"presenid":"C3-5","name":"大野 一樹","belongs":"同志社大学","first":1},
-{"presenid":"C3-5","name":"波多野 賢治","belongs":"同志社大学","first":0},
-{"presenid":"C3-6","name":"仁科 俊晴","belongs":"東京大学","first":1},
-{"presenid":"C3-6","name":"吉永 直樹","belongs":"東京大学","first":0},
-{"presenid":"C3-6","name":"鍜治 伸裕","belongs":"東京大学","first":0},
-{"presenid":"C3-6","name":"豊田 正史","belongs":"東京大学","first":0},
-{"presenid":"D3-1","name":"中挾 晃介","belongs":"筑波大学","first":1},
-{"presenid":"D3-1","name":"北川 博之","belongs":"筑波大学","first":0},
-{"presenid":"D3-1","name":"天笠 俊之","belongs":"筑波大学","first":0},
-{"presenid":"D3-2","name":"王 岩","belongs":"筑波大学","first":1},
-{"presenid":"D3-2","name":"北川 博之","belongs":"筑波大学","first":0},
-{"presenid":"D3-3","name":"西村 直孝","belongs":"筑波大学","first":1},
-{"presenid":"D3-3","name":"川島 英之","belongs":"筑波大学","first":0},
-{"presenid":"D3-4","name":"黒崎 裕子","belongs":"お茶の水女子大学","first":0},
-{"presenid":"D3-4","name":"山下 暁香","belongs":"お茶の水女子大学","first":0},
-{"presenid":"D3-4","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"D3-5","name":"勝沼 聡","belongs":"名古屋大学","first":1},
-{"presenid":"D3-5","name":"本田 晋也","belongs":"名古屋大学","first":0},
-{"presenid":"D3-5","name":"高田 広章","belongs":"名古屋大学","first":0},
-{"presenid":"D3-6","name":"斉藤 太郎","belongs":"東京大学","first":1},
-{"presenid":"E3-1","name":"手塚 渉太","belongs":"早稲田大学","first":1},
-{"presenid":"E3-1","name":"浅井 洋樹","belongs":"早稲田大学","first":0},
-{"presenid":"E3-1","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0},
-{"presenid":"E3-2","name":"細井 純太","belongs":"名古屋工業大学","first":1},
-{"presenid":"E3-2","name":"山本 大介","belongs":"名古屋工業大学","first":0},
-{"presenid":"E3-2","name":"高橋 直久","belongs":"名古屋工業大学","first":0},
-{"presenid":"E3-3","name":"前野 明子","belongs":"岡山大学","first":1},
-{"presenid":"E3-3","name":"岡山大学","belongs":"岡山大学","first":0},
-{"presenid":"E3-3","name":"高須 淳宏","belongs":"国立情報学研究所","first":0},
-{"presenid":"E3-4","name":"王 L)","belongs":"早稲田大学","first":1},
-{"presenid":"E3-4","name":"鬼沢 和也","belongs":"早稲田大学","first":0},
-{"presenid":"E3-4","name":"浅井 洋樹","belongs":"早稲田大学","first":0},
-{"presenid":"E3-4","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0},
-{"presenid":"E3-5","name":"木谷 将人","belongs":"慶應義塾大学","first":1},
-{"presenid":"E3-5","name":"五嶋 研人","belongs":"慶應義塾大学","first":0},
-{"presenid":"E3-5","name":"遠山 元道","belongs":"慶應義塾大学","first":0},
-{"presenid":"E3-6","name":"松村 哲郎","belongs":"横浜国立大学","first":1},
-{"presenid":"E3-6","name":"志田 駿介","belongs":"横浜国立大学","first":0},
-{"presenid":"E3-6","name":"倉光 君郎","belongs":"横浜国立大学","first":0},
-{"presenid":"F3-1","name":"伏見 卓恭","belongs":"静岡県立大学","first":1},
-{"presenid":"F3-1","name":"斉藤 和巳","belongs":"静岡県立大学","first":0},
-{"presenid":"F3-1","name":"武藤 伸明","belongs":"静岡県立大学","first":0},
-{"presenid":"F3-1","name":"郷古 浩道","belongs":"豊田中央研究所","first":0},
-{"presenid":"F3-2","name":"粟納 裕貴","belongs":"京都大学","first":1},
-{"presenid":"F3-2","name":"馬 強","belongs":"京都大学","first":0},
-{"presenid":"F3-2","name":"吉川 正俊","belongs":"京都大学","first":0},
-{"presenid":"F3-3","name":"堀田 徹","belongs":"ヤフー","first":1},
-{"presenid":"F3-3","name":"瀬賀 信一郎","belongs":"ヤフー","first":0},
-{"presenid":"F3-3","name":"下羅 弘樹","belongs":"ヤフー","first":0},
-{"presenid":"F3-3","name":"高木 潤","belongs":"ヤフー","first":0},
-{"presenid":"F3-3","name":"田島 玲","belongs":"ヤフー","first":0},
-{"presenid":"F3-4","name":"田頭 幸浩","belongs":"ヤフー","first":1},
-{"presenid":"F3-4","name":"小野 真吾","belongs":"ヤフー","first":0},
-{"presenid":"F3-4","name":"田島 玲","belongs":"ヤフー","first":0},
-{"presenid":"F3-5","name":"土井 千章","belongs":"NTTドコモ","first":1},
-{"presenid":"F3-5","name":"小西 哲平","belongs":"NTTドコモ","first":0},
-{"presenid":"F3-5","name":"中川 智尋","belongs":"NTTドコモ","first":0},
-{"presenid":"F3-5","name":"片桐 雅二","belongs":"NTTドコモ","first":0},
-{"presenid":"F3-5","name":"稲村 浩","belongs":"NTTドコモ","first":0},
-{"presenid":"F3-5","name":"太田 賢","belongs":"NTTドコモ","first":0},
-{"presenid":"F3-6","name":"山本 達也","belongs":"富士通","first":1},
-{"presenid":"F3-6","name":"池田 弘","belongs":"富士通","first":0},
-{"presenid":"F3-6","name":"松岡 英俊","belongs":"富士通","first":0},
-{"presenid":"F3-6","name":"岡田 伊策","belongs":"富士通","first":0},
-{"presenid":"F3-6","name":"齋藤 稔","belongs":"富士通","first":0},
-{"presenid":"F3-6","name":"笈田 佳彰","belongs":"富士通","first":0},
-{"presenid":"A4-1","name":"武田 十季","belongs":"九州大学","first":1},
-{"presenid":"A4-1","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"A4-2","name":"王 元元","belongs":"兵庫県立大学","first":1},
-{"presenid":"A4-2","name":"河合 由起子","belongs":"京都産業大学","first":0},
-{"presenid":"A4-2","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"A4-3","name":"顔 洪","belongs":"九州大学","first":1},
-{"presenid":"A4-3","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"A4-4","name":"仲村 哲明","belongs":"京都大学","first":1},
-{"presenid":"A4-4","name":"久保 圭","belongs":"京都大学","first":0},
-{"presenid":"A4-4","name":"臼田 泰如","belongs":"京都大学","first":0},
-{"presenid":"A4-4","name":"荒牧 英治","belongs":"京都大学／JSTさきがけ","first":0},
-{"presenid":"A4-5","name":"浅井 洋樹","belongs":"早稲田大学","first":1},
-{"presenid":"A4-5","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0},
-{"presenid":"B4-1","name":"渡部 優","belongs":"東京工業大学／JST CREST","first":1},
-{"presenid":"B4-1","name":"上野 晃司","belongs":"東京工業大学／JST CREST","first":0},
-{"presenid":"B4-1","name":"鈴村 豊太郎","belongs":"IBM Research／University College Dublin／JST CREST","first":0},
-{"presenid":"B4-2","name":"佐伯 圭介","belongs":"首都大学東京","first":1},
-{"presenid":"B4-2","name":"村山 敬祐","belongs":"首都大学東京","first":0},
-{"presenid":"B4-2","name":"遠藤 雅樹","belongs":"首都大学東京","first":0},
-{"presenid":"B4-2","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"B4-2","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"B4-3","name":"丸山 直樹","belongs":"京都産業大学","first":1},
-{"presenid":"B4-3","name":"若宮 翔子","belongs":"兵庫県立大学","first":0},
-{"presenid":"B4-3","name":"細川 侑士","belongs":"京都産業大学","first":0},
-{"presenid":"B4-3","name":"河合 由起子","belongs":"京都産業大学","first":0},
-{"presenid":"B4-3","name":"秋山 豊和","belongs":"京都産業大学","first":0},
-{"presenid":"B4-3","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"B4-4","name":"三浦 惇貴","belongs":"静岡大学","first":1},
-{"presenid":"B4-4","name":"廣田 雅春","belongs":"静岡大学","first":0},
-{"presenid":"B4-4","name":"野澤 浩樹","belongs":"シーポイント","first":0},
-{"presenid":"B4-4","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"B4-5","name":"岡田 瑞穂","belongs":"東京工業大学／JST CREST","first":1},
-{"presenid":"B4-5","name":"鈴村 豊太郎 ","belongs":"","first":0},
-{"presenid":"B4-6","name":"榎 美紀","belongs":"日本IBM／お茶の水女子大学","first":0},
-{"presenid":"B4-6","name":"村上 明子","belongs":"日本IBM","first":1},
-{"presenid":"B4-6","name":"Rudy Raymond","belongs":"日本IBM","first":0},
-{"presenid":"B4-6","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"C4-1","name":"山本 修平","belongs":"筑波大学","first":1},
-{"presenid":"C4-1","name":"佐藤 哲司","belongs":"筑波大学","first":0},
-{"presenid":"C4-2","name":"藤野 巖","belongs":"東海大学","first":1},
-{"presenid":"C4-2","name":"星野 祐子","belongs":"東海大学","first":0},
-{"presenid":"C4-3","name":"遠藤 結城","belongs":"NTT","first":1},
-{"presenid":"C4-3","name":"戸田 浩之","belongs":"NTT","first":0},
-{"presenid":"C4-3","name":"鷲崎 誠司","belongs":"NTT","first":0},
-{"presenid":"C4-5","name":"坂田 洋介","belongs":"神戸大学","first":1},
-{"presenid":"C4-5","name":"江口 浩二","belongs":"神戸大学","first":0},
-{"presenid":"C4-6","name":"山本 浩平","belongs":"神戸大学","first":1},
-{"presenid":"C4-6","name":"江口 浩二","belongs":"神戸大学","first":0},
-{"presenid":"C4-6","name":"高須 淳宏","belongs":"国立情報学研究所","first":0},
-{"presenid":"D4-1","name":"古谷 遼平","belongs":"筑波大学","first":1},
-{"presenid":"D4-1","name":"手塚 太郎","belongs":"筑波大学","first":0},
-{"presenid":"D4-2","name":"松原 靖子","belongs":"熊本大学","first":1},
-{"presenid":"D4-2","name":"櫻井 保志","belongs":"熊本大学","first":0},
-{"presenid":"D4-2","name":"Christos Faloutsos","belongs":"Carnegie Mellon University","first":0},
-{"presenid":"D4-3","name":"松井 友哉","belongs":"京都産業大学","first":1},
-{"presenid":"D4-3","name":"秋山 豊和","belongs":"京都産業大学","first":0},
-{"presenid":"D4-4","name":"史 旭","belongs":"電気通信大学","first":1},
-{"presenid":"D4-4","name":"新谷 隆彦","belongs":"電気通信大学","first":0},
-{"presenid":"D4-4","name":"大森 匡","belongs":"電気通信大学","first":0},
-{"presenid":"D4-4","name":"藤田 秀之","belongs":"電気通信大学","first":0},
-{"presenid":"D4-5","name":"高橋 真悟","belongs":"高崎健康福祉大学","first":1},
-{"presenid":"D4-5","name":"上野 宏樹","belongs":"高崎健康福祉大学","first":0},
-{"presenid":"D4-5","name":"児玉 直樹","belongs":"高崎健康福祉大学","first":0},
-{"presenid":"D4-5","name":"小杉 尚子","belongs":"NTT","first":0},
-{"presenid":"D4-5","name":"竹内 裕之","belongs":"高崎健康福祉大学","first":0},
-{"presenid":"D4-6","name":"上野 宏樹","belongs":"高崎健康福祉大学","first":1},
-{"presenid":"D4-6","name":"高橋 真悟","belongs":"高崎健康福祉大学","first":0},
-{"presenid":"D4-6","name":"児玉 直樹","belongs":"高崎健康福祉大学","first":0},
-{"presenid":"D4-6","name":"小杉 尚子","belongs":"NTT","first":0},
-{"presenid":"D4-6","name":"竹内 裕之","belongs":"高崎健康福祉大学","first":0},
-{"presenid":"E4-1","name":"大森 雅己","belongs":"静岡大学","first":1},
-{"presenid":"E4-1","name":"廣田 雅春","belongs":"静岡大学","first":0},
-{"presenid":"E4-1","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"E4-1","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"E4-2","name":"青山 賢","belongs":"静岡大学","first":1},
-{"presenid":"E4-2","name":"廣田 雅春","belongs":"静岡大学","first":0},
-{"presenid":"E4-2","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"E4-2","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"E4-3","name":"白井 元浩","belongs":"静岡大学","first":1},
-{"presenid":"E4-3","name":"廣田 雅春","belongs":"静岡大学","first":0},
-{"presenid":"E4-3","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"E4-3","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"E4-4","name":"林 亜紀","belongs":"NTT","first":1},
-{"presenid":"E4-4","name":"松林 達史","belongs":"NTT","first":0},
-{"presenid":"E4-4","name":"澤田 宏","belongs":"NTT","first":0},
-{"presenid":"E4-5","name":"稲葉 鉄平","belongs":"名古屋大学","first":1},
-{"presenid":"E4-5","name":"簗井 美咲","belongs":"名古屋大学","first":0},
-{"presenid":"E4-5","name":"高橋 正和","belongs":"名古屋大学","first":0},
-{"presenid":"E4-5","name":"石川 佳治","belongs":"名古屋大学","first":0},
-{"presenid":"E4-6","name":"早矢仕 新","belongs":"名古屋大学","first":1},
-{"presenid":"E4-6","name":"杉浦 健人","belongs":"名古屋大学","first":0},
-{"presenid":"E4-6","name":"董 ていてい","belongs":"名古屋大学","first":0},
-{"presenid":"E4-6","name":"石川 佳治","belongs":"名古屋大学","first":0},
-{"presenid":"F4-1","name":"梅澤 啓史","belongs":"京都産業大学","first":1},
-{"presenid":"F4-1","name":"宮森 恒","belongs":"京都産業大学","first":0},
-{"presenid":"F4-2","name":"山内 嶺","belongs":"工学院大学","first":1},
-{"presenid":"F4-2","name":"北山 大輔","belongs":"工学院大学","first":0},
-{"presenid":"F4-3","name":"松原 宏和","belongs":"岡山大学","first":1},
-{"presenid":"F4-3","name":"新妻 弘崇","belongs":"岡山大学","first":0},
-{"presenid":"F4-3","name":"太田 学","belongs":"岡山大学","first":0},
-{"presenid":"F4-4","name":"奥村 開里","belongs":"東京工業大学","first":1},
-{"presenid":"F4-4","name":"荒堀 喜貴","belongs":"東京工業大学","first":0},
-{"presenid":"F4-4","name":"渡辺 陽介","belongs":"東京工業大学","first":0},
-{"presenid":"F4-4","name":"横田 治夫","belongs":"東京工業大学","first":0},
-{"presenid":"F4-5","name":"野宮 浩揮","belongs":"京都工芸繊維大学","first":1},
-{"presenid":"F4-5","name":"森國 淳司","belongs":"京都工芸繊維大学","first":0},
-{"presenid":"F4-5","name":"宝珍 輝尚","belongs":"京都工芸繊維大学","first":0},
-{"presenid":"F4-6","name":"柏木 裕希","belongs":"慶應義塾大学","first":1},
-{"presenid":"F4-6","name":"佐々木 史織","belongs":"慶應義塾大学","first":0},
-{"presenid":"F4-6","name":"清木 康","belongs":"慶應義塾大学","first":0},
-{"presenid":"A5-1","name":"宮部 真衣","belongs":"京都大学","first":1},
-{"presenid":"A5-1","name":"灘本 明代","belongs":"甲南大学","first":0},
-{"presenid":"A5-1","name":"荒牧 英治","belongs":"京都大学／JSTさきがけ","first":0},
-{"presenid":"A5-2","name":"白川 真澄","belongs":"大阪大学","first":1},
-{"presenid":"A5-2","name":"原 隆浩","belongs":"大阪大学","first":0},
-{"presenid":"A5-2","name":"西尾 章治郎","belongs":"大阪大学","first":0},
-{"presenid":"A5-3","name":"Basilisa Mvungi","belongs":"Waseda University","first":1},
-{"presenid":"A5-3","name":"Mizuho Iwaihara","belongs":"Waseda University","first":0},
-{"presenid":"A5-4","name":"坂本 瑞季","belongs":"早稲田大学","first":1},
-{"presenid":"A5-4","name":"Tong Hairihan","belongs":"早稲田大学","first":0},
-{"presenid":"A5-4","name":"中島 達夫","belongs":"早稲田大学","first":0},
-{"presenid":"A5-4","name":"秋岡 明香","belongs":"明治大学","first":0},
-{"presenid":"A5-5","name":"若宮 翔子","belongs":"兵庫県立大学","first":1},
-{"presenid":"A5-5","name":"李 龍","belongs":"Korea Institute of Science and Technology Information)","first":0},
-{"presenid":"A5-5","name":"河合 由起子","belongs":"京都産業大学","first":0},
-{"presenid":"A5-5","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"B5-1","name":"佐々木 優衣","belongs":"筑波大学","first":1},
-{"presenid":"B5-1","name":"関 洋平","belongs":"筑波大学","first":0},
-{"presenid":"B5-2","name":"中里 拓哉","belongs":"早稲田大学","first":1},
-{"presenid":"B5-2","name":"奥野 峻弥","belongs":"早稲田大学","first":0},
-{"presenid":"B5-2","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0},
-{"presenid":"B5-3","name":"池田 和史","belongs":"KDDI研究所","first":1},
-{"presenid":"B5-3","name":"小松 恭子","belongs":"KDDI研究所","first":0},
-{"presenid":"B5-3","name":"服部 元","belongs":"KDDI研究所","first":0},
-{"presenid":"B5-3","name":"松本 一則","belongs":"KDDI研究所","first":0},
-{"presenid":"B5-3","name":"滝嶋 康弘","belongs":"KDDI研究所","first":0},
-{"presenid":"B5-4","name":"LE Jiawen","belongs":"Waseda University","first":1},
-{"presenid":"B5-4","name":"YAMANA Hayato","belongs":"Waseda University","first":0},
-{"presenid":"B5-5","name":"河中 照平","belongs":"東京電機大学","first":1},
-{"presenid":"B5-5","name":"井上 潮","belongs":"東京電機大学","first":0},
-{"presenid":"B5-6","name":"駒田 康孝","belongs":"早稲田大学","first":1},
-{"presenid":"B5-6","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0},
-{"presenid":"C5-1","name":"正元 修平","belongs":"京都大学","first":1},
-{"presenid":"C5-1","name":"清水 敏之","belongs":"京都大学","first":0},
-{"presenid":"C5-1","name":"難波 英嗣","belongs":"広島市立大学","first":0},
-{"presenid":"C5-1","name":"吉川 正俊","belongs":"京都大学","first":0},
-{"presenid":"C5-2","name":"樫本 達矢","belongs":"岡山大学","first":1},
-{"presenid":"C5-2","name":"太田 学","belongs":"岡山大学","first":0},
-{"presenid":"C5-2","name":"高須 淳宏","belongs":"国立情報学研究所","first":0},
-{"presenid":"C5-3","name":"石本 茜","belongs":"岡山大学","first":1},
-{"presenid":"C5-3","name":"太田 学","belongs":"岡山大学","first":0},
-{"presenid":"C5-3","name":"高須 淳宏","belongs":"国立情報学研究所","first":0},
-{"presenid":"C5-3","name":"安達 淳","belongs":"国立情報学研究所","first":0},
-{"presenid":"C5-4","name":"日向野 達郎","belongs":"東京電機大学","first":1},
-{"presenid":"C5-4","name":"増田 英孝","belongs":"東京電機大学","first":0},
-{"presenid":"C5-4","name":"山田 剛一","belongs":"東京電機大学","first":0},
-{"presenid":"C5-4","name":"清田 陽司","belongs":"ネクスト","first":0},
-{"presenid":"C5-4","name":"大向 一輝","belongs":"国立情報学研究所","first":0},
-{"presenid":"C5-4","name":"中川 裕志","belongs":"東京大学","first":0},
-{"presenid":"C5-5","name":"川上 尚慶","belongs":"岡山大学","first":1},
-{"presenid":"C5-5","name":"太田 学","belongs":"岡山大学","first":0},
-{"presenid":"C5-5","name":"高須 淳宏","belongs":"国立情報学研究所","first":0},
-{"presenid":"C5-5","name":"安達 淳","belongs":"国立情報学研究所","first":0},
-{"presenid":"C5-6","name":"杉山 いおり","belongs":"首都大学東京","first":1},
-{"presenid":"C5-6","name":"遠藤 雅樹","belongs":"首都大学東京","first":0},
-{"presenid":"C5-6","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"C5-6","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"D5-1","name":"黄 峻","belongs":"筑波大学","first":1},
-{"presenid":"D5-1","name":"小澤 佑介","belongs":"筑波大学","first":0},
-{"presenid":"D5-1","name":"天笠 俊之","belongs":"筑波大学","first":0},
-{"presenid":"D5-1","name":"北川 博之","belongs":"筑波大学","first":0},
-{"presenid":"D5-2","name":"胡 威","belongs":"筑波大学","first":1},
-{"presenid":"D5-2","name":"手塚 太郎","belongs":"筑波大学","first":0},
-{"presenid":"D5-3","name":"有村 夢香","belongs":"筑波大学","first":1},
-{"presenid":"D5-3","name":"手塚 太郎","belongs":"筑波大学","first":0},
-{"presenid":"D5-4","name":"林 史尊","belongs":"筑波大学","first":1},
-{"presenid":"D5-4","name":"小澤 佑介","belongs":"筑波大学","first":0},
-{"presenid":"D5-4","name":"天笠 俊之","belongs":"筑波大学","first":0},
-{"presenid":"D5-4","name":"北川 博之","belongs":"筑波大学","first":0},
-{"presenid":"D5-5","name":"加藤 大智","belongs":"東京工業大学","first":1},
-{"presenid":"D5-5","name":"渡辺 陽介","belongs":"東京工業大学","first":0},
-{"presenid":"D5-5","name":"横田 治夫","belongs":"東京工業大学","first":0},
-{"presenid":"E5-1","name":"新井 淳也","belongs":"NTT","first":1},
-{"presenid":"E5-1","name":"鬼塚 真","belongs":"NTT","first":0},
-{"presenid":"E5-1","name":"塩川 浩昭","belongs":"NTT","first":0},
-{"presenid":"E5-2","name":"橋本 翔太","belongs":"広島市立大学","first":1},
-{"presenid":"E5-2","name":"上土井 陽子","belongs":"広島市立大学","first":0},
-{"presenid":"E5-2","name":"若林 真一","belongs":"広島市立大学","first":0},
-{"presenid":"E5-3","name":"柚木 塁","belongs":"広島市立大学","first":1},
-{"presenid":"E5-3","name":"上土井 陽子","belongs":"広島市立大学","first":0},
-{"presenid":"E5-3","name":"若林 真一","belongs":"広島市立大学","first":0},
-{"presenid":"E5-4","name":"岡田 莉奈","belongs":"筑波大学","first":1},
-{"presenid":"E5-4","name":"渡辺 知恵美","belongs":"筑波大学","first":0},
-{"presenid":"E5-4","name":"北川 博之","belongs":"筑波大学","first":0},
-{"presenid":"E5-5","name":"柿澤 美穂","belongs":"お茶の水女子大学","first":1},
-{"presenid":"E5-5","name":"渡辺 知恵美","belongs":"筑波大学","first":0},
-{"presenid":"E5-5","name":"古川 諒","belongs":"NEC","first":0},
-{"presenid":"E5-5","name":"高橋 翼","belongs":"NEC","first":0},
-{"presenid":"F5-1","name":"碓井 義彬","belongs":"首都大学東京","first":1},
-{"presenid":"F5-1","name":"飛田 雄樹","belongs":"首都大学東京","first":0},
-{"presenid":"F5-1","name":"王 天宇","belongs":"首都大学東京","first":0},
-{"presenid":"F5-1","name":"片山 薫","belongs":"首都大学東京","first":0},
-{"presenid":"F5-2","name":"本多 宏至","belongs":"神奈川工科大学","first":1},
-{"presenid":"F5-2","name":"鷹野 孝典","belongs":"神奈川工科大学","first":0},
-{"presenid":"F5-3","name":"LING LYDIA YIENG CHEN","belongs":"豊橋技術科学大学","first":1},
-{"presenid":"F5-3","name":"立間 淳司","belongs":"豊橋技術科学大学","first":0},
-{"presenid":"F5-3","name":"青野 雅樹","belongs":"豊橋技術科学大学","first":0},
-{"presenid":"F5-4","name":"寺島 裕貴","belongs":"北海道大学","first":1},
-{"presenid":"F5-4","name":"喜田 拓也","belongs":"北海道大学","first":0},
-{"presenid":"F5-5","name":"宮脇 茄那","belongs":"立命館大学","first":1},
-{"presenid":"F5-5","name":"黄 宏軒","belongs":"立命館大学","first":0},
-{"presenid":"F5-5","name":"川越 恭二","belongs":"立命館大学","first":0},
-{"presenid":"F5-6","name":"金 応教","belongs":"京都大学","first":1},
-{"presenid":"F5-6","name":"山本 岳洋","belongs":"京都大学","first":0},
-{"presenid":"F5-6","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"B6-1","name":"張 智超","belongs":"電気通信大学","first":1},
-{"presenid":"B6-1","name":"古賀 久志","belongs":"電気通信大学","first":0},
-{"presenid":"B6-1","name":"尾久 陽平","belongs":"電気通信大学","first":0},
-{"presenid":"B6-2","name":"田中 匠","belongs":"筑波大学","first":1},
-{"presenid":"B6-2","name":"関 洋平","belongs":"筑波大学","first":0},
-{"presenid":"B6-3","name":"大原 啓詳","belongs":"甲南大学","first":1},
-{"presenid":"B6-3","name":"灘本 明代","belongs":"甲南大学","first":0},
-{"presenid":"B6-4","name":"角谷 直人","belongs":"大阪大学","first":1},
-{"presenid":"B6-4","name":"新田 直子","belongs":"大阪大学","first":0},
-{"presenid":"B6-4","name":"馬場口 登","belongs":"大阪大学","first":0},
-{"presenid":"B6-5","name":"林田 宗一郎","belongs":"九州大学","first":1},
-{"presenid":"B6-5","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"B6-6","name":"加藤 大介","belongs":"甲南大学","first":1},
-{"presenid":"B6-6","name":"宮部 真衣","belongs":"京都大学","first":0},
-{"presenid":"B6-6","name":"荒牧 英治","belongs":"京都大学","first":0},
-{"presenid":"B6-6","name":"灘本 明代","belongs":"甲南大学","first":0},
-{"presenid":"C6-1","name":"佐藤 沙紀","belongs":"筑波大学","first":1},
-{"presenid":"C6-1","name":"関 洋平","belongs":"筑波大学","first":0},
-{"presenid":"C6-2","name":"尾脇 拓朗","belongs":"鹿児島大学","first":1},
-{"presenid":"C6-2","name":"福元 伸也","belongs":"鹿児島大学","first":0},
-{"presenid":"C6-3","name":"徳永 陽子","belongs":"NTT","first":1},
-{"presenid":"C6-3","name":"数原 良彦","belongs":"NTT","first":0},
-{"presenid":"C6-3","name":"戸田 浩之","belongs":"NTT","first":0},
-{"presenid":"C6-3","name":"鷲崎 誠司","belongs":"NTT","first":0},
-{"presenid":"C6-4","name":"篠塚 敬介","belongs":"筑波大学","first":1},
-{"presenid":"C6-4","name":"若林 啓","belongs":"筑波大学","first":0},
-{"presenid":"C6-5","name":"松石 浩輔","belongs":"電気通信大学","first":1},
-{"presenid":"C6-5","name":"沼尾 雅之","belongs":"電気通信大学","first":0},
-{"presenid":"C6-6","name":"苑田 翔吾","belongs":"早稲田大学","first":1},
-{"presenid":"C6-6","name":"浅井 洋樹","belongs":"早稲田大学","first":0},
-{"presenid":"C6-6","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0},
-{"presenid":"D6-1","name":"シュウ テイ","belongs":"首都大学東京","first":1},
-{"presenid":"D6-1","name":"片山 薫","belongs":"首都大学東京","first":0},
-{"presenid":"D6-2","name":"塩川 浩昭","belongs":"NTT","first":1},
-{"presenid":"D6-2","name":"藤原 靖宏","belongs":"NTT","first":0},
-{"presenid":"D6-2","name":"鬼塚 真","belongs":"NTT","first":0},
-{"presenid":"D6-3","name":"佐伯 嘉康","belongs":"ヤフー","first":1},
-{"presenid":"D6-3","name":"田島 玲","belongs":"ヤフー","first":0},
-{"presenid":"D6-4","name":"坂倉 悠太","belongs":"筑波大学","first":1},
-{"presenid":"D6-4","name":"山口 祐人","belongs":"筑波大学","first":0},
-{"presenid":"D6-4","name":"天笠 俊之","belongs":"筑波大学","first":0},
-{"presenid":"D6-4","name":"北川 博之","belongs":"筑波大学","first":0},
-{"presenid":"D6-5","name":"田中 翔","belongs":"関西大学","first":1},
-{"presenid":"D6-5","name":"壷内 貴弘","belongs":"関西大学","first":0},
-{"presenid":"D6-5","name":"蒲原 智也","belongs":"関西大学","first":0},
-{"presenid":"D6-5","name":"上島 紳一","belongs":"関西大学","first":0},
-{"presenid":"D6-6","name":"小池 実","belongs":"関西大学","first":1},
-{"presenid":"D6-6","name":"田中 慶昭","belongs":"関西大学","first":0},
-{"presenid":"D6-6","name":"蒲原 智也","belongs":"関西大学","first":0},
-{"presenid":"D6-6","name":"上島 紳一","belongs":"関西大学","first":0},
-{"presenid":"E6-1","name":"若井 祐樹","belongs":"甲南大学","first":1},
-{"presenid":"E6-1","name":"山本 湧輝","belongs":"甲南大学","first":0},
-{"presenid":"E6-1","name":"熊本 忠彦","belongs":"千葉工業大学","first":0},
-{"presenid":"E6-1","name":"灘本 明代","belongs":"甲南大学","first":0},
-{"presenid":"E6-2","name":"山本 湧輝","belongs":"甲南大学","first":1},
-{"presenid":"E6-2","name":"若井 佑樹","belongs":"甲南大学","first":0},
-{"presenid":"E6-2","name":"熊本 忠彦","belongs":"千葉工業大学","first":0},
-{"presenid":"E6-2","name":"灘本 明代","belongs":"甲南大学","first":0},
-{"presenid":"E6-3","name":"風間 千明","belongs":"筑波大学","first":1},
-{"presenid":"E6-3","name":"関 洋平","belongs":"筑波大学","first":0},
-{"presenid":"E6-4","name":"池川 知里","belongs":"岡山大学","first":1},
-{"presenid":"E6-4","name":"新妻 弘崇","belongs":"岡山大学","first":0},
-{"presenid":"E6-4","name":"太田 学","belongs":"岡山大学","first":0},
-{"presenid":"E6-5","name":"秦 徳明","belongs":"京都産業大学","first":1},
-{"presenid":"E6-5","name":"若宮 翔子","belongs":"兵庫県立大学","first":0},
-{"presenid":"E6-5","name":"河合 由起子","belongs":"京都産業大学","first":0},
-{"presenid":"E6-5","name":"熊本 忠彦","belongs":"千葉工業大学","first":0},
-{"presenid":"E6-5","name":"張 建偉","belongs":"筑波技術大学","first":0},
-{"presenid":"E6-5","name":"白石 優旗","belongs":"筑波技術大学","first":0},
-{"presenid":"E6-6","name":"萩原 一貴","belongs":"同志社大学","first":1},
-{"presenid":"E6-6","name":"大野 一樹","belongs":"同志社大学","first":0},
-{"presenid":"E6-6","name":"波多野 賢治","belongs":"同志社大学","first":0},
-{"presenid":"F6-1","name":"澤野 良輔","belongs":"京都大学","first":1},
-{"presenid":"F6-1","name":"吉川 正俊","belongs":"京都大学","first":0},
-{"presenid":"F6-1","name":"濱崎 暁洋","belongs":"京都大学","first":0},
-{"presenid":"F6-1","name":"岡本 和也","belongs":"京都大学","first":0},
-{"presenid":"F6-1","name":"黒田 知宏","belongs":"京都大学","first":0},
-{"presenid":"F6-2","name":"牧原 健太郎","belongs":"東京工業大学","first":1},
-{"presenid":"F6-2","name":"荒堀 喜貴","belongs":"東京工業大学","first":0},
-{"presenid":"F6-2","name":"渡辺 陽介","belongs":"東京工業大学","first":0},
-{"presenid":"F6-2","name":"串間 宗夫","belongs":"宮崎大学","first":0},
-{"presenid":"F6-2","name":"荒木 賢二","belongs":"宮崎大学","first":0},
-{"presenid":"F6-2","name":"横田 治夫","belongs":"東京工業大学","first":0},
-{"presenid":"F6-3","name":"児玉 直樹","belongs":"高崎健康福祉大学","first":1},
-{"presenid":"F6-3","name":"川瀬 康裕","belongs":"川瀬神経内科クリニック","first":0},
-{"presenid":"F6-3","name":"竹内 裕之","belongs":"高崎健康福祉大学","first":0},
-{"presenid":"F6-4","name":"竹内 裕之","belongs":"高崎健康福祉大学","first":1},
-{"presenid":"F6-4","name":"児玉 直樹","belongs":"高崎健康福祉大学","first":0},
-{"presenid":"F6-5","name":"竹内 裕之","belongs":"高崎健康福祉大学","first":1},
-{"presenid":"F6-5","name":"児玉 直樹","belongs":"高崎健康福祉大学","first":0},
-{"presenid":"F6-6","name":"今 貴史","belongs":"横浜国立大学","first":1},
-{"presenid":"F6-6","name":"山本 和紀","belongs":"横浜国立大学","first":0},
-{"presenid":"F6-6","name":"平賀 辰樹","belongs":"横浜国立大学","first":0},
-{"presenid":"F6-6","name":"佐藤 貴子","belongs":"横浜国立大学","first":0},
-{"presenid":"F6-6","name":"有澤 博","belongs":"横浜国立大学","first":0},
-{"presenid":"B7-1","name":"今森 大地","belongs":"京都大学","first":1},
-{"presenid":"B7-1","name":"田島 敬史","belongs":"京都大学","first":0},
-{"presenid":"B7-2","name":"松岡 藍","belongs":"九州大学","first":1},
-{"presenid":"B7-2","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"B7-3","name":"田島 真悟","belongs":"九州大学","first":1},
-{"presenid":"B7-3","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"B7-4","name":"内金 亮太郎","belongs":"東京電機大学","first":1},
-{"presenid":"B7-4","name":"井上 潮","belongs":"東京電機大学","first":0},
-{"presenid":"B7-5","name":"野呂 勇太","belongs":"静岡大学","first":1},
-{"presenid":"B7-5","name":"三浦 惇貴","belongs":"静岡大学","first":0},
-{"presenid":"B7-5","name":"廣田 雅春","belongs":"静岡大学","first":0},
-{"presenid":"B7-5","name":"野澤 浩樹","belongs":"シーポイント","first":0},
-{"presenid":"B7-5","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"C7-1","name":"大橋 駿介","belongs":"東京大学","first":1},
-{"presenid":"C7-1","name":"高須 淳宏","belongs":"国立情報学研究所／総合研究大学院大学","first":0},
-{"presenid":"C7-1","name":"相澤 彰子","belongs":"国立情報学研究所／東京大学","first":0},
-{"presenid":"C7-2","name":"山口 信","belongs":"法政大学","first":1},
-{"presenid":"C7-2","name":"三浦 孝夫","belongs":"法政大学","first":0},
-{"presenid":"C7-3","name":"小林 えり","belongs":"静岡県立大学","first":0},
-{"presenid":"C7-3","name":"伏見 卓恭","belongs":"静岡県立大学","first":1},
-{"presenid":"C7-3","name":"斉藤 和巳","belongs":"静岡県立大学","first":0},
-{"presenid":"C7-3","name":"池田 哲夫","belongs":"静岡県立大学","first":0},
-{"presenid":"C7-4","name":"市川 敦啓","belongs":"筑波大学","first":1},
-{"presenid":"C7-4","name":"陳 漢雄","belongs":"筑波大学","first":0},
-{"presenid":"C7-4","name":"古瀬 一隆","belongs":"筑波大学","first":0},
-{"presenid":"D7-1","name":"近藤 拓也","belongs":"首都大学東京","first":1},
-{"presenid":"D7-1","name":"村山 敬祐","belongs":"首都大学東京","first":0},
-{"presenid":"D7-1","name":"杉山 いおり","belongs":"首都大学東京","first":0},
-{"presenid":"D7-1","name":"遠藤 雅樹","belongs":"首都大学東京","first":0},
-{"presenid":"D7-1","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"D7-1","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"D7-2","name":"井上 寛之","belongs":"筑波大学","first":1},
-{"presenid":"D7-2","name":"天笠 俊之","belongs":"筑波大学","first":0},
-{"presenid":"D7-2","name":"北川 博之","belongs":"筑波大学","first":0},
-{"presenid":"D7-3","name":"平山 雅之","belongs":"福井大学","first":1},
-{"presenid":"D7-3","name":"樋口 健","belongs":"福井大学","first":0},
-{"presenid":"D7-3","name":"都司 達夫","belongs":"福井大学","first":0},
-{"presenid":"D7-4","name":"吉永 光","belongs":"信州大学","first":1},
-{"presenid":"D7-4","name":"古川 孝則","belongs":"信州大学","first":0},
-{"presenid":"D7-4","name":"山本 博章","belongs":"信州大学","first":0},
-{"presenid":"D7-4","name":"金子 美博","belongs":"岐阜大学","first":0},
-{"presenid":"D7-5","name":"小柳 涼介","belongs":"筑波大学","first":1},
-{"presenid":"D7-5","name":"天笠 俊之","belongs":"筑波大学","first":0},
-{"presenid":"D7-5","name":"北川 博之","belongs":"筑波大学","first":0},
-{"presenid":"E7-1","name":"長谷川 友香","belongs":"お茶の水女子大学","first":1},
-{"presenid":"E7-1","name":"高井 峰生 ","belongs":"UCLA","first":0},
-{"presenid":"E7-1","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"E7-2","name":"塩原 慶一","belongs":"神奈川工科大学","first":1},
-{"presenid":"E7-2","name":"澤田 拳士朗","belongs":"神奈川工科大学","first":0},
-{"presenid":"E7-2","name":"陳 幸生","belongs":"神奈川工科大学","first":0},
-{"presenid":"E7-3","name":"牧野 友紀","belongs":"日本ユニシス","first":1},
-{"presenid":"E7-3","name":"道村 唯夫","belongs":"富士ゼロックス","first":0},
-{"presenid":"E7-3","name":"飯沢 篤志","belongs":"リコーITソリューションズ","first":0},
-{"presenid":"E7-3","name":"小林 茂","belongs":"先端IT活用推進コンソーシアム","first":0},
-{"presenid":"E7-3","name":"和泉 憲明","belongs":"産業技術総合研究所","first":0},
-{"presenid":"E7-4","name":"内田 篤史","belongs":"横浜国立大学","first":1},
-{"presenid":"E7-4","name":"岡本 悠希","belongs":"横浜国立大学","first":0},
-{"presenid":"E7-4","name":"倉光 君郎","belongs":"横浜国立大学","first":0},
-{"presenid":"E7-5","name":"北口 善紀","belongs":"京都大学","first":1},
-{"presenid":"E7-5","name":"大島 裕明","belongs":"京都大学","first":0},
-{"presenid":"E7-5","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"F7-1","name":"森井 洸明","belongs":"京都大学","first":1},
-{"presenid":"F7-1","name":"ヤトフト アダム","belongs":"京都大学","first":0},
-{"presenid":"F7-1","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"F7-2","name":"海津 研","belongs":"京都大学","first":1},
-{"presenid":"F7-2","name":"加藤 誠","belongs":"京都大学","first":0},
-{"presenid":"F7-2","name":"大島 裕明","belongs":"京都大学","first":0},
-{"presenid":"F7-2","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"F7-4","name":"今城 朋彬","belongs":"九州大学","first":1},
-{"presenid":"F7-4","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"A8-1","name":"佃 洸摂","belongs":"京都大学","first":1},
-{"presenid":"A8-1","name":"大島 裕明","belongs":"京都大学","first":0},
-{"presenid":"A8-1","name":"加藤 誠","belongs":"京都大学","first":0},
-{"presenid":"A8-1","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"A8-2","name":"趙 夢","belongs":"京都大学","first":1},
-{"presenid":"A8-2","name":"大島 裕明","belongs":"京都大学","first":0},
-{"presenid":"A8-2","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"A8-3","name":"秋葉 拓哉","belongs":"東京大学","first":1},
-{"presenid":"A8-3","name":"岩田 陽一","belongs":"東京大学","first":0},
-{"presenid":"A8-3","name":"吉田 悠一","belongs":"国立情報学研究所","first":0},
-{"presenid":"A8-4","name":"廣田 雅春","belongs":"静岡大学","first":1},
-{"presenid":"A8-4","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"A8-4","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"A8-5","name":"石野 亜耶","belongs":"広島市立大学","first":1},
-{"presenid":"A8-5","name":"藤井 一輝","belongs":"広島市立大学","first":0},
-{"presenid":"A8-5","name":"藤原 泰士","belongs":"広島市立大学","first":0},
-{"presenid":"A8-5","name":"前田 剛","belongs":"広島市立大学","first":0},
-{"presenid":"A8-5","name":"難波 英嗣","belongs":"広島市立大学","first":0},
-{"presenid":"A8-5","name":"竹澤 寿幸","belongs":"広島市立大学","first":0},
-{"presenid":"B8-1","name":"木村 輔","belongs":"京都産業大学","first":1},
-{"presenid":"B8-1","name":"宮森 恒","belongs":"京都産業大学","first":0},
-{"presenid":"B8-2","name":"黄 亦爽","belongs":"神戸大学","first":1},
-{"presenid":"B8-2","name":"清光 英成","belongs":"神戸大学","first":0},
-{"presenid":"B8-2","name":"大月 一弘","belongs":"神戸大学","first":0},
-{"presenid":"B8-2","name":"森下 淳也","belongs":"神戸大学","first":0},
-{"presenid":"B8-3","name":"林 佑磨","belongs":"早稲田大学","first":1},
-{"presenid":"B8-3","name":"奥野 峻弥","belongs":"早稲田大学","first":0},
-{"presenid":"B8-3","name":"山名 早人","belongs":"早稲田大学／国立情報学研究所","first":0},
-{"presenid":"B8-4","name":"小池 達也","belongs":"明治大学","first":1},
-{"presenid":"B8-4","name":"高木 友博","belongs":"明治大学","first":0},
-{"presenid":"B8-5","name":"関 匠吾","belongs":"京都産業大学","first":1},
-{"presenid":"B8-5","name":"奥 健太","belongs":"立命館大学","first":0},
-{"presenid":"B8-5","name":"中島 伸介","belongs":"京都産業大学","first":0},
-{"presenid":"B8-6","name":"大重 智志","belongs":"京都大学","first":1},
-{"presenid":"B8-6","name":"山本 岳洋","belongs":"京都大学","first":0},
-{"presenid":"B8-6","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"C8-1","name":"金岡 慧","belongs":"慶應義塾大学","first":1},
-{"presenid":"C8-1","name":"遠山 元道","belongs":"慶應義塾大学","first":0},
-{"presenid":"C8-2","name":"佐草 友也","belongs":"慶應義塾大学","first":1},
-{"presenid":"C8-2","name":"遠山 元道","belongs":"慶應義塾大学","first":0},
-{"presenid":"C8-3","name":"青木 陽介","belongs":"慶應義塾大学","first":1},
-{"presenid":"C8-3","name":"遠山 元道","belongs":"慶應義塾大学","first":0},
-{"presenid":"C8-4","name":"武田 裕介","belongs":"京都大学","first":1},
-{"presenid":"C8-4","name":"大島 裕明","belongs":"京都大学","first":0},
-{"presenid":"C8-4","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"C8-5","name":"松本 洋平","belongs":"慶應義塾大学","first":1},
-{"presenid":"C8-5","name":"北 和人","belongs":"慶應義塾大学","first":0},
-{"presenid":"C8-5","name":"遠山 元道","belongs":"慶應義塾大学","first":0},
-{"presenid":"C8-6","name":"武田 翔平","belongs":"東京電機大学","first":1},
-{"presenid":"C8-6","name":"井上 潮","belongs":"東京電機大学","first":0},
-{"presenid":"D8-1","name":"山室 健","belongs":"NTT","first":1},
-{"presenid":"D8-1","name":"若森 拓馬","belongs":"NTT","first":0},
-{"presenid":"D8-1","name":"寺本 純司","belongs":"NTT","first":0},
-{"presenid":"D8-1","name":"西村 剛","belongs":"NTT","first":0},
-{"presenid":"D8-2","name":"齋藤 和広","belongs":"KDDI研究所","first":1},
-{"presenid":"D8-2","name":"渡辺 泰之","belongs":"KDDI研究所","first":0},
-{"presenid":"D8-2","name":"村松 茂樹","belongs":"KDDI研究所","first":0},
-{"presenid":"D8-2","name":"小林 亜令","belongs":"KDDI研究所","first":0},
-{"presenid":"D8-3","name":"高塚 康成","belongs":"東京工業大学","first":1},
-{"presenid":"D8-3","name":"長尾 洋也","belongs":"東京工業大学","first":0},
-{"presenid":"D8-3","name":"矢口 尭","belongs":"東京工業大学","first":0},
-{"presenid":"D8-3","name":"華井 雅俊","belongs":"東京工業大学","first":0},
-{"presenid":"D8-3","name":"首藤 一幸","belongs":"東京工業大学","first":0},
-{"presenid":"D8-4","name":"土田 隼之","belongs":"日立製作所","first":1},
-{"presenid":"D8-4","name":"清水 晃","belongs":"日立製作所","first":0},
-{"presenid":"D8-4","name":"田中 美智子","belongs":"日立製作所","first":0},
-{"presenid":"D8-4","name":"藤原 真二","belongs":"日立製作所","first":0},
-{"presenid":"D8-4","name":"茂木 和彦","belongs":"日立製作所","first":0},
-{"presenid":"D8-4","name":"合田 和生","belongs":"東京大学","first":0},
-{"presenid":"D8-4","name":"喜連川 優","belongs":"東京大学／国立情報学研究所","first":0},
-{"presenid":"D8-5","name":"藤原 真二","belongs":"日立製作所","first":1},
-{"presenid":"D8-5","name":"茂木 和彦","belongs":"日立製作所","first":0},
-{"presenid":"D8-5","name":"田中 美智子","belongs":"日立製作所","first":0},
-{"presenid":"D8-5","name":"田中 剛","belongs":"日立製作所","first":0},
-{"presenid":"D8-5","name":"合田 和生","belongs":"東京大学","first":0},
-{"presenid":"D8-5","name":"喜連川 優","belongs":"東京大学／国立情報学研究所","first":0},
-{"presenid":"D8-6","name":"鈴木 恵介","belongs":"東京大学","first":1},
-{"presenid":"D8-6","name":"早水 悠登","belongs":"東京大学","first":0},
-{"presenid":"D8-6","name":"横山 大作","belongs":"東京大学","first":0},
-{"presenid":"D8-6","name":"中野 美由紀","belongs":"芝浦工業大学","first":0},
-{"presenid":"D8-6","name":"喜連川 優","belongs":"東京大学／NII","first":0},
-{"presenid":"E8-1","name":"早川 愛","belongs":"お茶の水女子大学","first":1},
-{"presenid":"E8-1","name":"磯村 美友","belongs":"お茶の水女子大学","first":0},
-{"presenid":"E8-1","name":"竹森 敬祐","belongs":"KDDI研究所","first":0},
-{"presenid":"E8-1","name":"山口 実靖","belongs":"工学院大学","first":0},
-{"presenid":"E8-1","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"E8-2","name":"津田 琢士","belongs":"大阪大学","first":1},
-{"presenid":"E8-2","name":"駒井 友香","belongs":"大阪大学","first":0},
-{"presenid":"E8-2","name":"佐々木 勇和","belongs":"大阪大学","first":0},
-{"presenid":"E8-2","name":"原 隆浩","belongs":"大阪大学","first":0},
-{"presenid":"E8-2","name":"西尾 章治郎","belongs":"大阪大学","first":0},
-{"presenid":"E8-3","name":"森内 彩加","belongs":"お茶の水女子大学","first":1},
-{"presenid":"E8-3","name":"村瀬 勉","belongs":"NEC","first":0},
-{"presenid":"E8-3","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"E8-4","name":"川住 涼","belongs":"大阪大学","first":1},
-{"presenid":"E8-4","name":"義久 智樹","belongs":"大阪大学","first":0},
-{"presenid":"E8-4","name":"原 隆浩","belongs":"大阪大学","first":0},
-{"presenid":"E8-4","name":"西尾 章治郎","belongs":"大阪大学","first":0},
-{"presenid":"E8-5","name":"本橋 史帆","belongs":"お茶の水女子大学","first":1},
-{"presenid":"E8-5","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"E8-6","name":"飯尾 明日香","belongs":"お茶の水女子大学","first":1},
-{"presenid":"E8-6","name":"前野 誉","belongs":"スペースタイムエンジニアリング","first":0},
-{"presenid":"E8-6","name":"高井 峰生","belongs":"UCLA","first":0},
-{"presenid":"E8-6","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"F8-1","name":"小野 滉太","belongs":"筑波大学","first":1},
-{"presenid":"F8-1","name":"関 洋平","belongs":"筑波大学","first":0},
-{"presenid":"F8-2","name":"村瀬 秀","belongs":"九州大学","first":1},
-{"presenid":"F8-2","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"F8-4","name":"橘 明穂","belongs":"兵庫県立大学","first":1},
-{"presenid":"F8-4","name":"若宮 翔子","belongs":"兵庫県立大学","first":0},
-{"presenid":"F8-4","name":"難波 英嗣","belongs":"広島市立大学","first":0},
-{"presenid":"F8-4","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"F8-5","name":"門脇 拓也","belongs":"京都大学","first":1},
-{"presenid":"F8-5","name":"山肩 洋子","belongs":"京都大学","first":0},
-{"presenid":"F8-5","name":"森 信介","belongs":"京都大学","first":0},
-{"presenid":"F8-5","name":"田中 克己","belongs":"京都大学","first":0},
-{"presenid":"F8-6","name":"花井 俊介","belongs":"甲南大学","first":1},
-{"presenid":"F8-6","name":"灘本 明代","belongs":"甲南大学","first":0},
-{"presenid":"A9-1","name":"白井 匡人","belongs":"法政大学","first":1},
-{"presenid":"A9-1","name":"三浦 孝夫","belongs":"法政大学","first":0},
-{"presenid":"A9-2","name":"若林 啓","belongs":"筑波大学","first":1},
-{"presenid":"A9-3","name":"輪島 幸治","belongs":"産業技術大学院大学","first":1},
-{"presenid":"A9-3","name":"小河 誠巳","belongs":"東京理科大学","first":0},
-{"presenid":"A9-3","name":"古川 利博","belongs":"東京理科大学","first":0},
-{"presenid":"A9-3","name":"嶋田 茂","belongs":"産業技術大学院大学","first":0},
-{"presenid":"A9-4","name":"葛西 正裕","belongs":"愛知学院大学","first":1},
-{"presenid":"A9-4","name":"古川 哲也","belongs":"九州大学","first":0},
-{"presenid":"B9-1","name":"吉田 拓実","belongs":"東京電機大学","first":1},
-{"presenid":"B9-1","name":"井上 潮","belongs":"東京電機大学","first":0},
-{"presenid":"B9-2","name":"本田 博之","belongs":"大阪大学","first":1},
-{"presenid":"B9-2","name":"岩田 麻佑","belongs":"KDDI)","first":0},
-{"presenid":"B9-2","name":"原 隆浩","belongs":"大阪大学","first":0},
-{"presenid":"B9-2","name":"西尾 章治郎","belongs":"大阪大学","first":0},
-{"presenid":"B9-3","name":"財前 元希","belongs":"兵庫県立大学","first":1},
-{"presenid":"B9-3","name":"北山 大輔","belongs":"工学院大学","first":0},
-{"presenid":"B9-3","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"B9-4","name":"切通 恵介","belongs":"京都大学","first":1},
-{"presenid":"B9-4","name":"馬 強","belongs":"京都大学","first":0},
-{"presenid":"B9-5","name":"石田 陽一","belongs":"京都大学","first":1},
-{"presenid":"B9-5","name":"清水 敏之","belongs":"京都大学","first":0},
-{"presenid":"B9-5","name":"吉川 正俊","belongs":"京都大学","first":0},
-{"presenid":"B9-6","name":"濱田 恵輔","belongs":"京都産業大学","first":1},
-{"presenid":"B9-6","name":"中島 伸介","belongs":"京都産業大学","first":0},
-{"presenid":"B9-6","name":"北山 大輔","belongs":"工学院大学","first":0},
-{"presenid":"B9-6","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"C9-1","name":"野田 勇人","belongs":"東京工業大学","first":1},
-{"presenid":"C9-1","name":"村瀬 勉","belongs":"東京工業大学","first":0},
-{"presenid":"C9-1","name":"笹島 和幸","belongs":"東京工業大学","first":0},
-{"presenid":"C9-2","name":"磯村 美友","belongs":"お茶の水女子大学","first":1},
-{"presenid":"C9-2","name":"熊谷 菜津美","belongs":"お茶の水女子大学","first":0},
-{"presenid":"C9-2","name":"村瀬 勉","belongs":"NEC","first":0},
-{"presenid":"C9-2","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"C9-3","name":"木全 崇","belongs":"NICT","first":1},
-{"presenid":"C9-3","name":"杉浦 孔明","belongs":"NICT","first":0},
-{"presenid":"C9-3","name":"董 冕雄","belongs":"NICT","first":0},
-{"presenid":"C9-3","name":"是津 耕司","belongs":"NICT","first":0},
-{"presenid":"C9-4","name":"藤井 聡佳","belongs":"お茶の水女子大学","first":1},
-{"presenid":"C9-4","name":"村瀬 勉","belongs":"NEC","first":0},
-{"presenid":"C9-4","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"C9-5","name":"熊谷 菜津美","belongs":"お茶の水女子大学","first":1},
-{"presenid":"C9-5","name":"磯村 美友","belongs":"お茶の水女子大学","first":0},
-{"presenid":"C9-5","name":"村瀬 勉","belongs":"NEC","first":0},
-{"presenid":"C9-5","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"C9-6","name":"原 瑠理子","belongs":"お茶の水女子大学","first":1},
-{"presenid":"C9-6","name":"長谷川 友香","belongs":"お茶の水女子大学","first":0},
-{"presenid":"C9-6","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"D9-1","name":"小山田 昌史","belongs":"NEC","first":1},
-{"presenid":"D9-1","name":"成田 和世","belongs":"NEC","first":0},
-{"presenid":"D9-1","name":"劉 健全","belongs":"NEC","first":0},
-{"presenid":"D9-1","name":"荒木 拓也 ","belongs":"NEC","first":0},
-{"presenid":"D9-2","name":"ZHOU Jieyun","belongs":"University of Electronic Science and Technology of China","first":1},
-{"presenid":"D9-2","name":"NUMAO Masayuki ","belongs":"University of Electro-Communications","first":0},
-{"presenid":"D9-2","name":" LI Xiaofeng","belongs":"University of Electronic Science and Technology of China","first":0},
-{"presenid":"D9-2","name":"CHEN Haitao","belongs":"University of Electronic Science and Technology of China","first":0},
-{"presenid":"D9-3","name":"日高 智貴","belongs":"京都産業大学","first":1},
-{"presenid":"D9-3","name":"白石 優旗","belongs":"筑波技術大学","first":0},
-{"presenid":"D9-3","name":"河合 由起子","belongs":"京都産業大学","first":0},
-{"presenid":"D9-3","name":"奥田 次郎","belongs":"京都産業大学","first":0},
-{"presenid":"D9-4","name":"藤野 友也","belongs":"三菱電機","first":1},
-{"presenid":"D9-4","name":"今村 誠","belongs":"三菱電機","first":0},
-{"presenid":"D9-4","name":"菅野 幹","belongs":"三菱電機","first":0},
-{"presenid":"D9-5","name":"細谷 柚子","belongs":"お茶の水女子大学","first":1},
-{"presenid":"D9-5","name":"三島 健","belongs":"NTT","first":0},
-{"presenid":"D9-5","name":"小口 正人","belongs":"お茶の水女子大学","first":0},
-{"presenid":"D9-6","name":"廣瀬 桂大","belongs":"慶應義塾大学","first":1},
-{"presenid":"D9-6","name":"五嶋 研人","belongs":"慶應義塾大学","first":0},
-{"presenid":"D9-6","name":"遠山 元道","belongs":"慶應義塾大学","first":0},
-{"presenid":"E9-1","name":"加藤 史也","belongs":"名古屋工業大学","first":1},
-{"presenid":"E9-1","name":"山本 大介","belongs":"名古屋工業大学","first":0},
-{"presenid":"E9-1","name":"高橋 直久","belongs":"名古屋工業大学","first":0},
-{"presenid":"E9-2","name":"遠藤 雅樹","belongs":"職業能力開発総合大学校／首都大学東京","first":1},
-{"presenid":"E9-2","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"E9-2","name":"大野 成義","belongs":"職業能力開発総合大学校／首都大学東京","first":0},
-{"presenid":"E9-2","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"E9-3","name":"胡 玉龍","belongs":"九州大学","first":1},
-{"presenid":"E9-3","name":"趙 耕弘","belongs":"九州大学","first":0},
-{"presenid":"E9-3","name":"顔 洪","belongs":"九州大学","first":0},
-{"presenid":"E9-3","name":"宮原 徹","belongs":"ゼンリンデータコム","first":0},
-{"presenid":"E9-3","name":"高山 敏典","belongs":"ゼンリンデータコム","first":0},
-{"presenid":"E9-3","name":"森永 久之","belongs":"ゼンリンデータコム","first":0},
-{"presenid":"E9-3","name":"出口 貴嗣","belongs":"ゼンリンデータコム","first":0},
-{"presenid":"E9-3","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"E9-4","name":"米倉 梨菜","belongs":"鹿児島大学","first":1},
-{"presenid":"E9-4","name":"赤木 康宏","belongs":"鹿児島大学","first":0},
-{"presenid":"E9-4","name":"河合 由起子","belongs":"京都産業大学","first":0},
-{"presenid":"E9-4","name":"小野 智司","belongs":"鹿児島大学","first":0},
-{"presenid":"E9-4","name":"川崎 洋","belongs":"鹿児島大学","first":0},
-{"presenid":"E9-5","name":"大図 圭介","belongs":"工学院大学","first":1},
-{"presenid":"E9-5","name":"北山 大輔","belongs":"工学院大学","first":0},
-{"presenid":"E9-5","name":"中島 伸介","belongs":"京都産業大学","first":0},
-{"presenid":"E9-5","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"E9-6","name":"井上 貴弘","belongs":"静岡大学","first":1},
-{"presenid":"E9-6","name":"廣田 雅春","belongs":"静岡大学","first":0},
-{"presenid":"E9-6","name":"石川 博","belongs":"首都大学東京","first":0},
-{"presenid":"E9-6","name":"横山 昌平","belongs":"静岡大学","first":0},
-{"presenid":"F9-1","name":"岩永 章吾","belongs":"九州大学","first":1},
-{"presenid":"F9-1","name":"牛尼 剛聡","belongs":"九州大学","first":0},
-{"presenid":"F9-1","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"F9-2","name":"渡辺 光祐","belongs":"工学院大学","first":1},
-{"presenid":"F9-2","name":"小林 亜樹","belongs":"工学院大学","first":0},
-{"presenid":"F9-3","name":"栗林 拓","belongs":"京都大学","first":1},
-{"presenid":"F9-3","name":"浅野 泰仁","belongs":"京都大学","first":0},
-{"presenid":"F9-3","name":"吉川 正俊","belongs":"京都大学","first":0},
-{"presenid":"F9-4","name":"高田 怜","belongs":"北海道大学","first":1},
-{"presenid":"F9-4","name":"喜田 拓也","belongs":"北海道大学","first":0},
-{"presenid":"F9-5","name":"三浦 亮","belongs":"北海道大学","first":1},
-{"presenid":"F9-5","name":"喜田 拓也","belongs":"北海道大学","first":0},
-{"presenid":"F9-6","name":"山岸 祐己","belongs":"静岡県立大学","first":1},
-{"presenid":"F9-6","name":"斉藤 和巳","belongs":"静岡県立大学","first":0},
-{"presenid":"P1-1","name":"鈴木 智也","belongs":"千葉工業大学","first":1},
-{"presenid":"P1-1","name":"熊本 忠彦","belongs":"千葉工業大学","first":0},
-{"presenid":"P1-2","name":"藤原 泰士","belongs":"広島市立大学","first":1},
-{"presenid":"P1-2","name":"難波 英嗣","belongs":"広島市立大学","first":0},
-{"presenid":"P1-2","name":"竹澤 寿幸","belongs":"広島市立大学","first":0},
-{"presenid":"P1-3","name":"並木 賢太郎","belongs":"京都産業大学","first":1},
-{"presenid":"P1-3","name":"朝永 聖也","belongs":"京都産業大学","first":0},
-{"presenid":"P1-3","name":"中島 伸介","belongs":"京都産業大学","first":0},
-{"presenid":"P1-3","name":"稲垣 陽一","belongs":"きざしカンパニー","first":0},
-{"presenid":"P1-3","name":"中本 レン","belongs":"きざしカンパニー","first":0},
-{"presenid":"P1-3","name":"田中 昇太郎","belongs":"きざしカンパニー","first":0},
-{"presenid":"P1-3","name":"張 建偉","belongs":"筑波技術大学","first":0},
-{"presenid":"P1-4","name":"寺田 有佑","belongs":"京都産業大学","first":1},
-{"presenid":"P1-4","name":"朝永 聖也","belongs":"京都産業大学","first":0},
-{"presenid":"P1-4","name":"小倉 僚","belongs":"京都産業大学","first":0},
-{"presenid":"P1-4","name":"中島 伸介","belongs":"京都産業大学","first":0},
-{"presenid":"P1-4","name":"稲垣 陽一","belongs":"きざしカンパニー","first":0},
-{"presenid":"P1-4","name":"中本 レン","belongs":"きざしカンパニー","first":0},
-{"presenid":"P1-4","name":"張 建偉","belongs":"筑波技術大学","first":0},
-{"presenid":"P1-5","name":"前田 剛","belongs":"広島市立大学","first":1},
-{"presenid":"P1-5","name":"河野 有希","belongs":"広島市立大学","first":0},
-{"presenid":"P1-5","name":"石野 亜耶","belongs":"広島市立大学","first":0},
-{"presenid":"P1-5","name":"難波 英嗣","belongs":"広島市立大学","first":0},
-{"presenid":"P1-5","name":"竹澤 寿幸","belongs":"広島市立大学","first":0},
-{"presenid":"P2-1","name":"西澤 健吾","belongs":"京都産業大学","first":1},
-{"presenid":"P2-1","name":"荻野 晃大","belongs":"京都産業大学","first":0},
-{"presenid":"P2-1","name":"中島 伸介","belongs":"京都産業大学","first":0},
-{"presenid":"P2-2","name":"山崎 隼也","belongs":"京都産業大学","first":1},
-{"presenid":"P2-2","name":"井狩 憲幸","belongs":"京都産業大学","first":0},
-{"presenid":"P2-2","name":"中島 伸介","belongs":"京都産業大学","first":0},
-{"presenid":"P2-3","name":"高田 夏彦","belongs":"京都産業大学","first":1},
-{"presenid":"P2-3","name":"佐々江 駿","belongs":"京都産業大学","first":0},
-{"presenid":"P2-3","name":"上田 真由美","belongs":"流通科学大学","first":0},
-{"presenid":"P2-3","name":"中島 伸介","belongs":"京都産業大学","first":0},
-{"presenid":"P2-3","name":"森下 幸俊","belongs":"大日本印刷株式会社","first":0},
-{"presenid":"P2-4","name":"浅川 拓","belongs":"京都産業大学","first":1},
-{"presenid":"P2-4","name":"濱田 恵輔","belongs":"京都産業大学","first":0},
-{"presenid":"P2-4","name":"中島 伸介","belongs":"京都産業大学","first":0},
-{"presenid":"P2-4","name":"北山 大輔","belongs":"工学院大学","first":0},
-{"presenid":"P2-4","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"P2-5","name":"北林 宏樹","belongs":"京都大学","first":1},
-{"presenid":"P2-5","name":"吉川 正俊","belongs":"京都大学","first":0},
-{"presenid":"P3-1","name":"三原 真衣子","belongs":"兵庫県立大学","first":1},
-{"presenid":"P3-1","name":"王 元元","belongs":"兵庫県立大学","first":0},
-{"presenid":"P3-1","name":"北山 大輔","belongs":"工学院大学","first":0},
-{"presenid":"P3-1","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"P3-2","name":"小島 光平","belongs":"神奈川工科大学","first":1},
-{"presenid":"P3-2","name":"岡崎 有彩","belongs":"神奈川工科大学","first":0},
-{"presenid":"P3-2","name":"佐藤 充","belongs":"神奈川工科大学","first":0},
-{"presenid":"P3-2","name":"蒔田 圭佑","belongs":"神奈川工科大学","first":0},
-{"presenid":"P3-2","name":"白井 暁彦","belongs":"神奈川工科大学","first":0},
-{"presenid":"P3-2","name":"大塚 真吾","belongs":"神奈川工科大学","first":0},
-{"presenid":"P3-3","name":"市倉 丈寛","belongs":"工学院大学","first":1},
-{"presenid":"P3-3","name":"北山 大輔","belongs":"工学院大学","first":0},
-{"presenid":"P3-4","name":"青木 孝文","belongs":"神奈川工科大学","first":1},
-{"presenid":"P3-4","name":"笹本 芳和","belongs":"神奈川工科大学","first":0},
-{"presenid":"P3-4","name":"小林 愛実","belongs":"神奈川工科大学","first":0},
-{"presenid":"P3-4","name":"小林 寛高","belongs":"神奈川工科大学","first":0},
-{"presenid":"P3-4","name":"大塚 真吾","belongs":"神奈川工科大学","first":0},
-{"presenid":"P3-5","name":"友安 航太","belongs":"兵庫県立大学","first":1},
-{"presenid":"P3-5","name":"王 元元","belongs":"兵庫県立大学","first":0},
-{"presenid":"P3-5","name":"木村 玲欧","belongs":"兵庫県立大学","first":0},
-{"presenid":"P3-5","name":"角谷 和俊","belongs":"兵庫県立大学","first":0},
-{"presenid":"P4-1","name":"藤井 一輝","belongs":"広島市立大学","first":1},
-{"presenid":"P4-1","name":"石野 亜耶","belongs":"広島市立大学","first":0},
-{"presenid":"P4-1","name":"藤原 泰士","belongs":"広島市立大学","first":0},
-{"presenid":"P4-1","name":"前田 剛","belongs":"広島市立大学","first":0},
-{"presenid":"P4-1","name":"難波 英嗣","belongs":"広島市立大学","first":0},
-{"presenid":"P4-1","name":"竹澤 寿幸","belongs":"広島市立大学","first":0},
-{"presenid":"P4-2","name":"島田 恵輔","belongs":"広島市立大学","first":1},
-{"presenid":"P4-2","name":"山本 夏生","belongs":"広島市立大学","first":0},
-{"presenid":"P4-2","name":"石野 亜耶","belongs":"広島市立大学","first":0},
-{"presenid":"P4-2","name":"難波 英嗣","belongs":"広島市立大学","first":0},
-{"presenid":"P4-2","name":"竹澤 寿幸","belongs":"広島市立大学","first":0},
-{"presenid":"P4-3","name":"峯 祥平","belongs":"工学院大学","first":1},
-{"presenid":"P4-3","name":"北山 大輔","belongs":"工学院大学","first":0},
-{"presenid":"P4-4","name":"山田 洋輔","belongs":"工学院大学","first":1},
-{"presenid":"P4-4","name":"北山 大輔","belongs":"工学院大学","first":0},
-{"presenid":"X3-4","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-5","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-6","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-7","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-8","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-9","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-10","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-11","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-12","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-13","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-14","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-15","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-16","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-17","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-18","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-19","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-20","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-21","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-22","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-23","name":"Xさん","belongs":"X大学","first":1},
-{"presenid":"X3-24","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-25","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-26","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-27","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-28","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-29","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-30","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-31","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-32","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-33","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-34","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-35","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-36","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-37","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-38","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-39","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-40","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-41","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-42","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-43","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-44","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-45","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-46","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-47","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-48","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-49","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-50","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-52","name":"Xさん","belongs":"Xさん","first":1},
-{"presenid":"X3-51","name":"Xさん","belongs":"Xさん","first":1}
-];
+[ {
+    "presenid" : "E1-1",
+    "name" : "西出 彩花",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "E1-1",
+    "name" : "三島 健",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E1-1",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "E1-2",
+    "name" : "原 瑠理子",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "E1-2",
+    "name" : "三島 健",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E1-2",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "E1-3",
+    "name" : "柳田 晴香",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "E1-3",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "E1-3",
+    "name" : "中尾 彰宏",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "E1-3",
+    "name" : "山本 周",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "E1-3",
+    "name" : "山口 実靖",
+    "belongs" : "工学院",
+    "first" : 0
+  }, {
+    "presenid" : "E1-4",
+    "name" : "白浜 勝太",
+    "belongs" : "OECU",
+    "first" : 1
+  }, {
+    "presenid" : "E1-4",
+    "name" : "森本 哲郎",
+    "belongs" : "OECU",
+    "first" : 0
+  }, {
+    "presenid" : "E1-4",
+    "name" : "上善 恒雄",
+    "belongs" : "OECU",
+    "first" : 0
+  }, {
+    "presenid" : "E1-5",
+    "name" : "卓 路",
+    "belongs" : "早稲田",
+    "first" : 1
+  }, {
+    "presenid" : "E1-5",
+    "name" : "王 チン",
+    "belongs" : "早稲田",
+    "first" : 0
+  }, {
+    "presenid" : "E1-5",
+    "name" : "浅井 洋樹",
+    "belongs" : "早稲田",
+    "first" : 0
+  }, {
+    "presenid" : "E1-5",
+    "name" : "山名 早人",
+    "belongs" : "早稲田",
+    "first" : 0
+  }, {
+    "presenid" : "E1-6",
+    "name" : "松野 友輔",
+    "belongs" : "立命館大学",
+    "first" : 1
+  }, {
+    "presenid" : "E1-6",
+    "name" : "黄 宏軒",
+    "belongs" : "立命館大学",
+    "first" : 0
+  }, {
+    "presenid" : "E1-6",
+    "name" : "川越 恭二",
+    "belongs" : "立命館大学",
+    "first" : 0
+  }, {
+    "presenid" : "E2-1",
+    "name" : "佐生 明陽",
+    "belongs" : "TUS",
+    "first" : 1
+  }, {
+    "presenid" : "E2-1",
+    "name" : "輪島 幸治",
+    "belongs" : "AIIT",
+    "first" : 0
+  }, {
+    "presenid" : "E2-1",
+    "name" : "雨車 和憲",
+    "belongs" : "TUS",
+    "first" : 0
+  }, {
+    "presenid" : "E2-1",
+    "name" : "田中 勇帆",
+    "belongs" : "TUS",
+    "first" : 0
+  }, {
+    "presenid" : "E2-1",
+    "name" : "嶋田 茂",
+    "belongs" : "AIIT",
+    "first" : 0
+  }, {
+    "presenid" : "E2-1",
+    "name" : "小河 誠巳",
+    "belongs" : "MIT",
+    "first" : 0
+  }, {
+    "presenid" : "E2-1",
+    "name" : "古川 利博",
+    "belongs" : "TUS",
+    "first" : 0
+  }, {
+    "presenid" : "E2-2",
+    "name" : "酒井 えりか",
+    "belongs" : "お茶の水女子大学",
+    "first" : 1
+  }, {
+    "presenid" : "E2-2",
+    "name" : "伊藤 貴之",
+    "belongs" : "お茶の水女子大学",
+    "first" : 0
+  }, {
+    "presenid" : "E2-3",
+    "name" : "津川 敦朗",
+    "belongs" : "岡大",
+    "first" : 1
+  }, {
+    "presenid" : "E2-3",
+    "name" : "新妻 弘崇",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "E2-3",
+    "name" : "太田 学",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "E2-4",
+    "name" : "熊谷 沙津希",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "E2-4",
+    "name" : "伊藤 貴之",
+    "belongs" : "お茶の水女子大学",
+    "first" : 0
+  }, {
+    "presenid" : "E2-4",
+    "name" : "本橋 洋介",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "E2-5",
+    "name" : "山中 優馬",
+    "belongs" : "和大",
+    "first" : 1
+  }, {
+    "presenid" : "E2-5",
+    "name" : "吉廣 卓哉",
+    "belongs" : "和大",
+    "first" : 0
+  }, {
+    "presenid" : "E2-6",
+    "name" : "北田 剛士",
+    "belongs" : "和大",
+    "first" : 1
+  }, {
+    "presenid" : "E2-6",
+    "name" : "風間 一洋",
+    "belongs" : "和大",
+    "first" : 0
+  }, {
+    "presenid" : "E2-6",
+    "name" : "榊 剛史",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "E2-6",
+    "name" : "鳥海 不二夫",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "E2-6",
+    "name" : "栗原 聡",
+    "belongs" : "電通大",
+    "first" : 0
+  }, {
+    "presenid" : "E2-6",
+    "name" : "篠田 孝祐",
+    "belongs" : "電通大",
+    "first" : 0
+  }, {
+    "presenid" : "E2-6",
+    "name" : "野田 五十樹",
+    "belongs" : "産総研",
+    "first" : 0
+  }, {
+    "presenid" : "E2-6",
+    "name" : "斉藤 和己",
+    "belongs" : "静県大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-1",
+    "name" : "近藤 拓也",
+    "belongs" : "首都大",
+    "first" : 1
+  }, {
+    "presenid" : "E3-1",
+    "name" : "遠藤 雅樹",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-1",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-1",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-1",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-2",
+    "name" : "呉 揚",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "E3-2",
+    "name" : "鈴木 伸崇",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-3",
+    "name" : "熊本 和正",
+    "belongs" : "システム情報工学研究科",
+    "first" : 1
+  }, {
+    "presenid" : "E3-3",
+    "name" : "天笠 俊之",
+    "belongs" : "システム情報系",
+    "first" : 0
+  }, {
+    "presenid" : "E3-3",
+    "name" : "北川 博之",
+    "belongs" : "システム情報系",
+    "first" : 0
+  }, {
+    "presenid" : "E3-4",
+    "name" : "林 孝紀",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "E3-4",
+    "name" : "秋葉 拓哉",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-4",
+    "name" : "吉田 悠一",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "E3-5",
+    "name" : "古川 孝則",
+    "belongs" : "信州大",
+    "first" : 1
+  }, {
+    "presenid" : "E3-5",
+    "name" : "滝澤 健斗",
+    "belongs" : "信州大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-5",
+    "name" : "山本 博章",
+    "belongs" : "信州大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-5",
+    "name" : "金子 美博",
+    "belongs" : "岐阜大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-6",
+    "name" : "須藤 篤志",
+    "belongs" : "福井大",
+    "first" : 1
+  }, {
+    "presenid" : "E3-6",
+    "name" : "都司 達夫",
+    "belongs" : "福井大",
+    "first" : 0
+  }, {
+    "presenid" : "E3-6",
+    "name" : "樋口 健",
+    "belongs" : "福井大",
+    "first" : 0
+  }, {
+    "presenid" : "E4-1",
+    "name" : "今崎 美保",
+    "belongs" : "株式会社　日立製作所",
+    "first" : 1
+  }, {
+    "presenid" : "E4-1",
+    "name" : "吉原 朋宏",
+    "belongs" : "株式会社　日立製作所",
+    "first" : 0
+  }, {
+    "presenid" : "E4-1",
+    "name" : "下薗 紀夫",
+    "belongs" : "株式会社　日立製作所",
+    "first" : 0
+  }, {
+    "presenid" : "E4-2",
+    "name" : "中村 実",
+    "belongs" : "富士通研",
+    "first" : 1
+  }, {
+    "presenid" : "E4-2",
+    "name" : "田原 司睦",
+    "belongs" : "富士通研",
+    "first" : 0
+  }, {
+    "presenid" : "E4-2",
+    "name" : "宇治橋 善史",
+    "belongs" : "富士通研",
+    "first" : 0
+  }, {
+    "presenid" : "E4-2",
+    "name" : "橋田 拓志",
+    "belongs" : "富士通研",
+    "first" : 0
+  }, {
+    "presenid" : "E4-2",
+    "name" : "河場 基行",
+    "belongs" : "富士通研",
+    "first" : 0
+  }, {
+    "presenid" : "E4-2",
+    "name" : "原田 リリアン",
+    "belongs" : "富士通研",
+    "first" : 0
+  }, {
+    "presenid" : "E4-3",
+    "name" : "川原 駿",
+    "belongs" : "神戸大学",
+    "first" : 1
+  }, {
+    "presenid" : "E4-3",
+    "name" : "関 和広",
+    "belongs" : "甲南大学",
+    "first" : 0
+  }, {
+    "presenid" : "E4-3",
+    "name" : "上原 邦昭",
+    "belongs" : "神戸大学",
+    "first" : 0
+  }, {
+    "presenid" : "E4-4",
+    "name" : "王 岩",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "E4-4",
+    "name" : "北川 博之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "E4-4",
+    "name" : "Ahmed Shaikh Salman",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "E4-4",
+    "name" : "渡辺 陽介",
+    "belongs" : "名古屋大",
+    "first" : 0
+  }, {
+    "presenid" : "E4-5",
+    "name" : "勝沼 聡",
+    "belongs" : "名大",
+    "first" : 1
+  }, {
+    "presenid" : "E4-5",
+    "name" : "渡辺 陽介",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "E4-5",
+    "name" : "本田 晋也",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "E4-5",
+    "name" : "高田 広章",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "E4-6",
+    "name" : "小柳 文乃",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "E4-6",
+    "name" : "早川 愛",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "E4-6",
+    "name" : "中村 優太",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "E4-6",
+    "name" : "半井 明大",
+    "belongs" : "KDDI研究所",
+    "first" : 0
+  }, {
+    "presenid" : "E4-6",
+    "name" : "竹森 敬祐",
+    "belongs" : "KDDI研究所",
+    "first" : 0
+  }, {
+    "presenid" : "E4-6",
+    "name" : "山口 実靖",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "E4-6",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "A1-1",
+    "name" : "小松田 卓也",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "A1-1",
+    "name" : "清水 伸幸",
+    "belongs" : "Yahoo! JAPAN研究所",
+    "first" : 0
+  }, {
+    "presenid" : "A1-1",
+    "name" : "田島 玲",
+    "belongs" : "Yahoo! JAPAN研究所",
+    "first" : 0
+  }, {
+    "presenid" : "A1-1",
+    "name" : "欅 惇志",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "A1-1",
+    "name" : "宮崎 純",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "A1-2",
+    "name" : "加藤 誠",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "A1-2",
+    "name" : "山本 光穂",
+    "belongs" : "デンソーアイティーラボラトリ",
+    "first" : 0
+  }, {
+    "presenid" : "A1-2",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "A1-3",
+    "name" : "金兵 裕太",
+    "belongs" : "電通大",
+    "first" : 1
+  }, {
+    "presenid" : "A1-3",
+    "name" : "沼尾 雅之",
+    "belongs" : "電通大",
+    "first" : 0
+  }, {
+    "presenid" : "A1-4",
+    "name" : "守谷 一朗",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "A1-4",
+    "name" : "井上 祐輔",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "A1-4",
+    "name" : "今田 貴和",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "A1-4",
+    "name" : "聶 添",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "A1-4",
+    "name" : "宇津呂 武仁",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "A1-4",
+    "name" : "河田 容英",
+    "belongs" : "ログワークス",
+    "first" : 0
+  }, {
+    "presenid" : "A1-4",
+    "name" : "神門 典子",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "A1-5",
+    "name" : "古澤 智裕",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "A1-5",
+    "name" : "松林 麻実子",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "A1-5",
+    "name" : "佐藤 哲司",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "A1-6",
+    "name" : "齋藤 祐樹",
+    "belongs" : "ヤフー",
+    "first" : 1
+  }, {
+    "presenid" : "A1-6",
+    "name" : "田頭 幸浩",
+    "belongs" : "ヤフー",
+    "first" : 0
+  }, {
+    "presenid" : "A1-6",
+    "name" : "小野 真吾",
+    "belongs" : "ヤフー",
+    "first" : 0
+  }, {
+    "presenid" : "A1-6",
+    "name" : "塚本 浩司",
+    "belongs" : "ヤフー",
+    "first" : 0
+  }, {
+    "presenid" : "E5-1",
+    "name" : "菊島 健治",
+    "belongs" : "NTT",
+    "first" : 1
+  }, {
+    "presenid" : "E5-1",
+    "name" : "山室 健",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E5-1",
+    "name" : "本庄 利守",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E5-1",
+    "name" : "岩村 相哲",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E5-2",
+    "name" : "藤森 俊匡",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "E5-2",
+    "name" : "塩川 浩昭",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E5-2",
+    "name" : "鬼塚 真",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "E5-3",
+    "name" : "新井 淳也",
+    "belongs" : "NTT",
+    "first" : 1
+  }, {
+    "presenid" : "E5-3",
+    "name" : "塩川 浩昭",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E5-3",
+    "name" : "山室 健",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E5-3",
+    "name" : "鬼塚 真",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "E5-4",
+    "name" : "武井 良太",
+    "belongs" : "未来大",
+    "first" : 1
+  }, {
+    "presenid" : "E5-4",
+    "name" : "新美 礼彦",
+    "belongs" : "未来大",
+    "first" : 0
+  }, {
+    "presenid" : "E5-5",
+    "name" : "Vu Tuan Dat",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "E5-5",
+    "name" : "横田 治夫",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "E5-6",
+    "name" : "小山田 昌史",
+    "belongs" : "NEC",
+    "first" : 1
+  }, {
+    "presenid" : "E5-6",
+    "name" : "陳 テイ",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "E5-6",
+    "name" : "成田 和世",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "E5-6",
+    "name" : "荒木 拓也",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "A2-1",
+    "name" : "森川 慎太郎",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "A2-1",
+    "name" : "大島 裕明",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "A2-1",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "A2-2",
+    "name" : "久保田 豊久",
+    "belongs" : "筑波大学",
+    "first" : 1
+  }, {
+    "presenid" : "A2-2",
+    "name" : "若林 啓",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "A2-3",
+    "name" : "今井 智宏",
+    "belongs" : "大教大",
+    "first" : 1
+  }, {
+    "presenid" : "A2-3",
+    "name" : "望月 久稔",
+    "belongs" : "大教大",
+    "first" : 0
+  }, {
+    "presenid" : "A2-4",
+    "name" : "高杉 亮介",
+    "belongs" : "早稲田大学",
+    "first" : 1
+  }, {
+    "presenid" : "A2-4",
+    "name" : "山名 早人",
+    "belongs" : "早稲田大学　理工学術院／国立情報学研究所",
+    "first" : 0
+  }, {
+    "presenid" : "A2-5",
+    "name" : "森山 諒",
+    "belongs" : "法大",
+    "first" : 1
+  }, {
+    "presenid" : "A2-5",
+    "name" : "三浦 孝夫",
+    "belongs" : "法大",
+    "first" : 0
+  }, {
+    "presenid" : "A2-6",
+    "name" : "小中 史人",
+    "belongs" : "法大",
+    "first" : 1
+  }, {
+    "presenid" : "A2-6",
+    "name" : "三浦 孝夫",
+    "belongs" : "法大",
+    "first" : 0
+  }, {
+    "presenid" : "E6-1",
+    "name" : "柿本 由気",
+    "belongs" : "佐大",
+    "first" : 1
+  }, {
+    "presenid" : "E6-1",
+    "name" : "掛下 哲郎",
+    "belongs" : "佐大",
+    "first" : 0
+  }, {
+    "presenid" : "E6-2",
+    "name" : "伏見 卓恭",
+    "belongs" : "静岡県立大学",
+    "first" : 1
+  }, {
+    "presenid" : "E6-2",
+    "name" : "斉藤 和巳",
+    "belongs" : "静岡県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "E6-2",
+    "name" : "風間 一洋",
+    "belongs" : "和歌山大学",
+    "first" : 0
+  }, {
+    "presenid" : "E6-2",
+    "name" : "佐藤 哲司",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "E6-3",
+    "name" : "塩川 浩昭",
+    "belongs" : "NTT",
+    "first" : 1
+  }, {
+    "presenid" : "E6-3",
+    "name" : "藤原 靖宏",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E6-3",
+    "name" : "飯田 恭弘",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E6-3",
+    "name" : "鬼塚 真",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "E6-4",
+    "name" : "矢野 洋祐",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "E6-4",
+    "name" : "照山 順一",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "E6-4",
+    "name" : "吉田 悠一",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "E6-5",
+    "name" : "前田 英行",
+    "belongs" : "ヤフー",
+    "first" : 1
+  }, {
+    "presenid" : "E6-5",
+    "name" : "藤田 澄男",
+    "belongs" : "ヤフー",
+    "first" : 0
+  }, {
+    "presenid" : "E6-6",
+    "name" : "岸田 吉弘",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "E6-6",
+    "name" : "塩川 浩昭",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "E6-6",
+    "name" : "鬼塚 真",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "A3-1",
+    "name" : "中村 達哉",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "A3-1",
+    "name" : "白川 真澄",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "A3-1",
+    "name" : "原 隆浩",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "A3-1",
+    "name" : "西尾 章治郎",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "A3-2",
+    "name" : "Bou Savong",
+    "belongs" : "University of Tsukuba",
+    "first" : 1
+  }, {
+    "presenid" : "A3-2",
+    "name" : "Amagasa Toshiyuki",
+    "belongs" : "University of Tsukuba",
+    "first" : 0
+  }, {
+    "presenid" : "A3-2",
+    "name" : "Kitagawa Hiroyuki",
+    "belongs" : "University of Tsukuba",
+    "first" : 0
+  }, {
+    "presenid" : "A3-3",
+    "name" : "趙 夢",
+    "belongs" : "京都大学",
+    "first" : 1
+  }, {
+    "presenid" : "A3-3",
+    "name" : "大島 裕明",
+    "belongs" : "京都大学",
+    "first" : 0
+  }, {
+    "presenid" : "A3-3",
+    "name" : "田中 克己",
+    "belongs" : "京都大学",
+    "first" : 0
+  }, {
+    "presenid" : "A3-4",
+    "name" : "Zhang Yating",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "A3-4",
+    "name" : "Jatowt Adam",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "A3-4",
+    "name" : "Tanaka Katsumi",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "A3-5",
+    "name" : "白川 真澄",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "A3-5",
+    "name" : "原 隆浩",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "A3-5",
+    "name" : "西尾 章治郎",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "E7-1",
+    "name" : "高田 実佳",
+    "belongs" : "（株）日立",
+    "first" : 1
+  }, {
+    "presenid" : "E7-1",
+    "name" : "西川 記史",
+    "belongs" : "（株）日立",
+    "first" : 0
+  }, {
+    "presenid" : "E7-1",
+    "name" : "清水 晃",
+    "belongs" : "（株）日立",
+    "first" : 0
+  }, {
+    "presenid" : "E7-1",
+    "name" : "茂木 和彦",
+    "belongs" : "（株）日立",
+    "first" : 0
+  }, {
+    "presenid" : "E7-1",
+    "name" : "藤原 真二",
+    "belongs" : "（株）日立",
+    "first" : 0
+  }, {
+    "presenid" : "E7-1",
+    "name" : "河原 大一郎",
+    "belongs" : "（株）日立",
+    "first" : 0
+  }, {
+    "presenid" : "E7-2",
+    "name" : "西川 記史",
+    "belongs" : "（株）日立",
+    "first" : 1
+  }, {
+    "presenid" : "E7-2",
+    "name" : "髙田 実佳",
+    "belongs" : "（株）日立",
+    "first" : 0
+  }, {
+    "presenid" : "E7-2",
+    "name" : "藤原 真二",
+    "belongs" : "（株）日立",
+    "first" : 0
+  }, {
+    "presenid" : "E7-2",
+    "name" : "河原 大一郎",
+    "belongs" : "（株）日立",
+    "first" : 0
+  }, {
+    "presenid" : "E7-2",
+    "name" : "清水 晃",
+    "belongs" : "（株）日立",
+    "first" : 0
+  }, {
+    "presenid" : "E7-2",
+    "name" : "茂木 和彦",
+    "belongs" : "（株）日立",
+    "first" : 0
+  }, {
+    "presenid" : "E7-3",
+    "name" : "Liu Kun",
+    "belongs" : "東京大学",
+    "first" : 1
+  }, {
+    "presenid" : "E7-3",
+    "name" : "横山 大作",
+    "belongs" : "東京大学",
+    "first" : 0
+  }, {
+    "presenid" : "E7-3",
+    "name" : "豊田 正史",
+    "belongs" : "東京大学",
+    "first" : 0
+  }, {
+    "presenid" : "E7-3",
+    "name" : "喜連川 優",
+    "belongs" : "国立情報学研究所",
+    "first" : 0
+  }, {
+    "presenid" : "E7-4",
+    "name" : "今井 良一",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "E7-4",
+    "name" : "欅 惇志",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "E7-4",
+    "name" : "宮崎 純",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "E7-4",
+    "name" : "中村 匡秀",
+    "belongs" : "神戸大",
+    "first" : 0
+  }, {
+    "presenid" : "E7-5",
+    "name" : "齋藤 和広",
+    "belongs" : "KDDI研",
+    "first" : 1
+  }, {
+    "presenid" : "E7-5",
+    "name" : "川島 英之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "E7-5",
+    "name" : "米田 信之",
+    "belongs" : "KDDI研",
+    "first" : 0
+  }, {
+    "presenid" : "E7-5",
+    "name" : "村松 茂樹",
+    "belongs" : "KDDI研",
+    "first" : 0
+  }, {
+    "presenid" : "E7-5",
+    "name" : "渡辺 泰之",
+    "belongs" : "KDDI研",
+    "first" : 0
+  }, {
+    "presenid" : "E7-5",
+    "name" : "小林 亜令",
+    "belongs" : "KDDI研",
+    "first" : 0
+  }, {
+    "presenid" : "E7-6",
+    "name" : "今野 篤人",
+    "belongs" : "電通大",
+    "first" : 1
+  }, {
+    "presenid" : "E7-6",
+    "name" : "大森 匡",
+    "belongs" : "電通大",
+    "first" : 0
+  }, {
+    "presenid" : "E7-6",
+    "name" : "新谷 隆彦",
+    "belongs" : "電通大",
+    "first" : 0
+  }, {
+    "presenid" : "A4-1",
+    "name" : "大澤 昇平",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "A4-1",
+    "name" : "松尾 豊",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "A4-2",
+    "name" : "顔 洪",
+    "belongs" : "九大",
+    "first" : 1
+  }, {
+    "presenid" : "A4-2",
+    "name" : "牛尼 剛聡",
+    "belongs" : "九大",
+    "first" : 0
+  }, {
+    "presenid" : "A4-3",
+    "name" : "曹 洋",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "A4-3",
+    "name" : "吉川 正俊",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "A4-4",
+    "name" : "横山 友也",
+    "belongs" : "京都工芸繊維大学",
+    "first" : 1
+  }, {
+    "presenid" : "A4-4",
+    "name" : "宝珍 輝尚",
+    "belongs" : "京都工芸繊維大学",
+    "first" : 0
+  }, {
+    "presenid" : "A4-4",
+    "name" : "野宮 浩揮",
+    "belongs" : "京都工芸繊維大学",
+    "first" : 0
+  }, {
+    "presenid" : "E8-1",
+    "name" : "赤澤 琢朗",
+    "belongs" : "岡大",
+    "first" : 1
+  }, {
+    "presenid" : "E8-1",
+    "name" : "太田 学",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-1",
+    "name" : "高須 淳宏",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "E8-1",
+    "name" : "安達 淳",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "E8-2",
+    "name" : "建島 広翔",
+    "belongs" : "電通大",
+    "first" : 1
+  }, {
+    "presenid" : "E8-2",
+    "name" : "新谷 隆彦",
+    "belongs" : "電通大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-2",
+    "name" : "大森 匡",
+    "belongs" : "電通大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-2",
+    "name" : "藤田 秀之",
+    "belongs" : "電通大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-3",
+    "name" : "姜 仁河",
+    "belongs" : "名大",
+    "first" : 1
+  }, {
+    "presenid" : "E8-3",
+    "name" : "趙 菁",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-3",
+    "name" : "董 テイテイ",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-3",
+    "name" : "佐々木 勇和",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-3",
+    "name" : "石川 佳治",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-4",
+    "name" : "宇都宮 圭",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "E8-4",
+    "name" : "大島 裕明",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-4",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-5",
+    "name" : "中野 翔平",
+    "belongs" : "技科大",
+    "first" : 1
+  }, {
+    "presenid" : "E8-5",
+    "name" : "吉田 光男",
+    "belongs" : "技科大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-5",
+    "name" : "岡部 正幸",
+    "belongs" : "技科大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-5",
+    "name" : "梅村 恭司",
+    "belongs" : "技科大",
+    "first" : 0
+  }, {
+    "presenid" : "E8-6",
+    "name" : "篠原 拓也",
+    "belongs" : "工学院大学",
+    "first" : 1
+  }, {
+    "presenid" : "E8-6",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "A5-1",
+    "name" : "山本 修平",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "A5-1",
+    "name" : "佐藤 哲司",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "A5-2",
+    "name" : "桂井 麻里衣",
+    "belongs" : "NII/学振",
+    "first" : 1
+  }, {
+    "presenid" : "A5-2",
+    "name" : "大向 一輝",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "A5-2",
+    "name" : "武田 英明",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "A5-3",
+    "name" : "Liu Bei",
+    "belongs" : "Kyoto U.",
+    "first" : 1
+  }, {
+    "presenid" : "A5-3",
+    "name" : "Kato Makoto",
+    "belongs" : "Kyoto U.",
+    "first" : 0
+  }, {
+    "presenid" : "A5-3",
+    "name" : "Tanaka Katsumi",
+    "belongs" : "Kyoto U.",
+    "first" : 0
+  }, {
+    "presenid" : "A5-4",
+    "name" : "白井 匡人",
+    "belongs" : "法大",
+    "first" : 1
+  }, {
+    "presenid" : "A5-4",
+    "name" : "三浦 孝夫",
+    "belongs" : "法大",
+    "first" : 0
+  }, {
+    "presenid" : "A6-1",
+    "name" : "山岸 祐己",
+    "belongs" : "静岡県立大学",
+    "first" : 1
+  }, {
+    "presenid" : "A6-1",
+    "name" : "斉藤 和巳",
+    "belongs" : "静岡県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "A6-1",
+    "name" : "武藤 伸明",
+    "belongs" : "静岡県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "A6-2",
+    "name" : "秋葉 拓哉",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "A6-2",
+    "name" : "林 孝紀",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "A6-2",
+    "name" : "則 のぞみ",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "A6-2",
+    "name" : "岩田 陽一",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "A6-2",
+    "name" : "吉田 悠一",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "A6-3",
+    "name" : "董 テイテイ",
+    "belongs" : "名大",
+    "first" : 1
+  }, {
+    "presenid" : "A6-3",
+    "name" : "石川 佳治",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "A6-3",
+    "name" : "肖 川",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "A6-4",
+    "name" : "佐々木 勇和",
+    "belongs" : "名大",
+    "first" : 1
+  }, {
+    "presenid" : "A6-4",
+    "name" : "石川 佳治",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "A6-5",
+    "name" : "若宮 翔子",
+    "belongs" : "京都産業大学",
+    "first" : 1
+  }, {
+    "presenid" : "A6-5",
+    "name" : "米倉 梨菜",
+    "belongs" : "鹿児島大学",
+    "first" : 0
+  }, {
+    "presenid" : "A6-5",
+    "name" : "河合 由起子",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "A6-5",
+    "name" : "川崎 洋",
+    "belongs" : "鹿児島大学",
+    "first" : 0
+  }, {
+    "presenid" : "A6-5",
+    "name" : "角谷 和俊",
+    "belongs" : "兵庫県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "A8-1",
+    "name" : "小池 達也",
+    "belongs" : "明治大学",
+    "first" : 1
+  }, {
+    "presenid" : "A8-1",
+    "name" : "高木 友博",
+    "belongs" : "明治大学",
+    "first" : 0
+  }, {
+    "presenid" : "A8-2",
+    "name" : "Wang Zichun",
+    "belongs" : "早稲田大学大学院情報生産システム研究科",
+    "first" : 1
+  }, {
+    "presenid" : "A8-2",
+    "name" : "Iwaihara Mizuho",
+    "belongs" : "早稲田大学大学院情報生産システム研究科",
+    "first" : 0
+  }, {
+    "presenid" : "A8-3",
+    "name" : "安井 豪基",
+    "belongs" : "京都産業大学",
+    "first" : 1
+  }, {
+    "presenid" : "A8-3",
+    "name" : "王 元元",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "A8-3",
+    "name" : "細川 侑士",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "A8-3",
+    "name" : "河合 由起子",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "A8-3",
+    "name" : "秋山 豊和",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "A8-3",
+    "name" : "角谷 和俊",
+    "belongs" : "兵庫県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "A8-4",
+    "name" : "大西 誠",
+    "belongs" : "筑波大学",
+    "first" : 1
+  }, {
+    "presenid" : "A8-4",
+    "name" : "北川 博之",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "A8-5",
+    "name" : "山本 岳洋",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "A8-5",
+    "name" : "山本 光穂",
+    "belongs" : "デンソーIT",
+    "first" : 0
+  }, {
+    "presenid" : "A8-5",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "A8-6",
+    "name" : "大原 啓詳",
+    "belongs" : "甲南大学",
+    "first" : 1
+  }, {
+    "presenid" : "A8-6",
+    "name" : "鈴木 優",
+    "belongs" : "奈良先端科学技術大学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "A8-6",
+    "name" : "灘本 明代",
+    "belongs" : "甲南大学",
+    "first" : 0
+  }, {
+    "presenid" : "F1-1",
+    "name" : "岡本 香帆里",
+    "belongs" : "関大",
+    "first" : 1
+  }, {
+    "presenid" : "F1-1",
+    "name" : "山西 良典",
+    "belongs" : "立命館大",
+    "first" : 0
+  }, {
+    "presenid" : "F1-1",
+    "name" : "松下 光範",
+    "belongs" : "関大",
+    "first" : 0
+  }, {
+    "presenid" : "F1-2",
+    "name" : "篠原 透",
+    "belongs" : "電通大",
+    "first" : 1
+  }, {
+    "presenid" : "F1-2",
+    "name" : "沼尾 雅之",
+    "belongs" : "電通大",
+    "first" : 0
+  }, {
+    "presenid" : "F1-3",
+    "name" : "上原 美咲",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "F1-3",
+    "name" : "伊藤 貴之",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "F1-4",
+    "name" : "喜田 拓也",
+    "belongs" : "北大",
+    "first" : 1
+  }, {
+    "presenid" : "F1-4",
+    "name" : "笹川 裕人",
+    "belongs" : "北大",
+    "first" : 0
+  }, {
+    "presenid" : "F1-5",
+    "name" : "谷 大樹",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "F1-5",
+    "name" : "加藤 誠",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "F1-5",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "F1-6",
+    "name" : "末吉 優",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "F1-6",
+    "name" : "関 洋平",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "F2-1",
+    "name" : "眞野 修一",
+    "belongs" : "北大",
+    "first" : 1
+  }, {
+    "presenid" : "F2-1",
+    "name" : "喜田 拓也",
+    "belongs" : "北大",
+    "first" : 0
+  }, {
+    "presenid" : "F2-2",
+    "name" : "王 元元",
+    "belongs" : "京都産業大学",
+    "first" : 1
+  }, {
+    "presenid" : "F2-2",
+    "name" : "渡部 雅俊",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "F2-2",
+    "name" : "河合 由起子",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "F2-2",
+    "name" : "角谷 和俊",
+    "belongs" : "兵庫県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "F2-3",
+    "name" : "清水 柚里奈",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "F2-3",
+    "name" : "菅野 沙也",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "F2-3",
+    "name" : "伊藤 貴之",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "F2-3",
+    "name" : "嵯峨山 茂樹",
+    "belongs" : "明大",
+    "first" : 0
+  }, {
+    "presenid" : "F2-4",
+    "name" : "佐藤 拓実",
+    "belongs" : "首都大",
+    "first" : 1
+  }, {
+    "presenid" : "F2-4",
+    "name" : "片山 薫",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F2-5",
+    "name" : "黒崎 裕子",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "F2-5",
+    "name" : "竹房 あつ子",
+    "belongs" : "AIST",
+    "first" : 0
+  }, {
+    "presenid" : "F2-5",
+    "name" : "中田 秀基",
+    "belongs" : "AIST",
+    "first" : 0
+  }, {
+    "presenid" : "F2-5",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "F2-6",
+    "name" : "北森 新",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "F2-6",
+    "name" : "宮森 恒",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "F3-1",
+    "name" : "平井 久貴",
+    "belongs" : "岡大",
+    "first" : 1
+  }, {
+    "presenid" : "F3-1",
+    "name" : "新妻 弘祟",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "F3-1",
+    "name" : "太田 学",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "F3-1",
+    "name" : "高須 淳宏",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "F3-2",
+    "name" : "萩生田 明徳",
+    "belongs" : "横浜国立大学",
+    "first" : 1
+  }, {
+    "presenid" : "F3-2",
+    "name" : "木島 彩梨沙",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "F3-2",
+    "name" : "藤村 雄基",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "F3-2",
+    "name" : "富井 尚志",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "F3-3",
+    "name" : "中橋 光",
+    "belongs" : "広市大",
+    "first" : 1
+  }, {
+    "presenid" : "F3-3",
+    "name" : "難波 英嗣",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "F3-3",
+    "name" : "竹澤 寿幸",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "F3-4",
+    "name" : "福田 悟志",
+    "belongs" : "広島市立大",
+    "first" : 1
+  }, {
+    "presenid" : "F3-4",
+    "name" : "難波 英嗣",
+    "belongs" : "広島市立大",
+    "first" : 0
+  }, {
+    "presenid" : "F3-4",
+    "name" : "竹澤 寿幸",
+    "belongs" : "広島市立大",
+    "first" : 0
+  }, {
+    "presenid" : "F3-5",
+    "name" : "石井 仁子",
+    "belongs" : "岡大",
+    "first" : 1
+  }, {
+    "presenid" : "F3-5",
+    "name" : "太田 学",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "F3-5",
+    "name" : "高須 淳宏",
+    "belongs" : "nii",
+    "first" : 0
+  }, {
+    "presenid" : "F3-6",
+    "name" : "伊藤 寛祥",
+    "belongs" : "筑波大学",
+    "first" : 1
+  }, {
+    "presenid" : "F3-6",
+    "name" : "天笠 俊之",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "F3-6",
+    "name" : "北川 博之",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "F4-1",
+    "name" : "白石 優旗",
+    "belongs" : "筑波技大",
+    "first" : 1
+  }, {
+    "presenid" : "F4-1",
+    "name" : "田村 誠志",
+    "belongs" : "筑波技大",
+    "first" : 0
+  }, {
+    "presenid" : "F4-2",
+    "name" : "松枝 知香",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "F4-2",
+    "name" : "伊藤 貴之",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "F4-3",
+    "name" : "戸山 恵佑",
+    "belongs" : "九大",
+    "first" : 1
+  }, {
+    "presenid" : "F4-3",
+    "name" : "牛尼 剛聡",
+    "belongs" : "九大",
+    "first" : 0
+  }, {
+    "presenid" : "F4-4",
+    "name" : "真下 遼",
+    "belongs" : "甲南大",
+    "first" : 1
+  }, {
+    "presenid" : "F4-4",
+    "name" : "梅谷 智弘",
+    "belongs" : "甲南大",
+    "first" : 0
+  }, {
+    "presenid" : "F4-4",
+    "name" : "北村 達也",
+    "belongs" : "甲南大",
+    "first" : 0
+  }, {
+    "presenid" : "F4-4",
+    "name" : "灘本 明代",
+    "belongs" : "甲南大",
+    "first" : 0
+  }, {
+    "presenid" : "F4-5",
+    "name" : "岩永 章吾",
+    "belongs" : "九大",
+    "first" : 1
+  }, {
+    "presenid" : "F4-5",
+    "name" : "牛尼 剛聡",
+    "belongs" : "九州大学",
+    "first" : 0
+  }, {
+    "presenid" : "F4-5",
+    "name" : "角谷 和俊",
+    "belongs" : "兵庫県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "F4-6",
+    "name" : "山田 匠",
+    "belongs" : "静大",
+    "first" : 1
+  }, {
+    "presenid" : "F4-6",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F4-6",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F4-6",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "B1-1",
+    "name" : "金 応教",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "B1-1",
+    "name" : "山本 岳洋",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "B1-1",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "B1-2",
+    "name" : "権守 健嗣",
+    "belongs" : "筑波大学大学院",
+    "first" : 0
+  }, {
+    "presenid" : "B1-2",
+    "name" : "森嶋 厚行",
+    "belongs" : "筑波大学",
+    "first" : 1
+  }, {
+    "presenid" : "B1-2",
+    "name" : "歳森 敦",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "B1-2",
+    "name" : "北川 博之",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "B1-3",
+    "name" : "福角 駿",
+    "belongs" : "筑波大学",
+    "first" : 1
+  }, {
+    "presenid" : "B1-3",
+    "name" : "森嶋 厚行",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "B1-3",
+    "name" : "北川 博之",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "B1-4",
+    "name" : "榎 美紀",
+    "belongs" : "日本IBM，お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "B1-4",
+    "name" : "吉田 一星",
+    "belongs" : "日本IBM",
+    "first" : 0
+  }, {
+    "presenid" : "B1-4",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "B1-5",
+    "name" : "小紫 弘貴",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "B1-5",
+    "name" : "田島 敬史",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "B1-6",
+    "name" : "川本 貴史",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "B1-6",
+    "name" : "豊田 正史",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "F5-1",
+    "name" : "輪島 幸治",
+    "belongs" : "AIIT",
+    "first" : 1
+  }, {
+    "presenid" : "F5-1",
+    "name" : "古川 利博",
+    "belongs" : "TUS",
+    "first" : 0
+  }, {
+    "presenid" : "F5-1",
+    "name" : "嶋田 茂",
+    "belongs" : "AIIT",
+    "first" : 0
+  }, {
+    "presenid" : "F5-2",
+    "name" : "山本 湧輝",
+    "belongs" : "甲南大学",
+    "first" : 1
+  }, {
+    "presenid" : "F5-2",
+    "name" : "熊本 忠彦",
+    "belongs" : "千葉工業大学",
+    "first" : 0
+  }, {
+    "presenid" : "F5-2",
+    "name" : "灘本 明代",
+    "belongs" : "甲南大学",
+    "first" : 0
+  }, {
+    "presenid" : "F5-3",
+    "name" : "上岡 由征",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "F5-3",
+    "name" : "若宮 翔子",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "F5-3",
+    "name" : "張 建偉",
+    "belongs" : "筑波技大",
+    "first" : 0
+  }, {
+    "presenid" : "F5-3",
+    "name" : "白石 優旗",
+    "belongs" : "筑波技大",
+    "first" : 0
+  }, {
+    "presenid" : "F5-3",
+    "name" : "河合 由起子",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "F5-3",
+    "name" : "熊本 忠彦",
+    "belongs" : "千葉工大",
+    "first" : 0
+  }, {
+    "presenid" : "F5-4",
+    "name" : "熊本 忠彦",
+    "belongs" : "千葉工大",
+    "first" : 1
+  }, {
+    "presenid" : "F5-5",
+    "name" : "加藤 大介",
+    "belongs" : "甲南大",
+    "first" : 1
+  }, {
+    "presenid" : "F5-5",
+    "name" : "宮部 真衣",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "F5-5",
+    "name" : "荒牧 英治",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "F5-5",
+    "name" : "灘本 明代",
+    "belongs" : "甲南大",
+    "first" : 0
+  }, {
+    "presenid" : "B2-1",
+    "name" : "吉田 朋史",
+    "belongs" : "工学院大学",
+    "first" : 1
+  }, {
+    "presenid" : "B2-1",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "B2-2",
+    "name" : "田中 優",
+    "belongs" : "慶大",
+    "first" : 1
+  }, {
+    "presenid" : "B2-2",
+    "name" : "増井 俊之",
+    "belongs" : "慶大",
+    "first" : 0
+  }, {
+    "presenid" : "B2-3",
+    "name" : "山崎 隼也",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "B2-3",
+    "name" : "中島 伸介",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "B2-4",
+    "name" : "越島 亮介",
+    "belongs" : "慶大",
+    "first" : 1
+  }, {
+    "presenid" : "B2-4",
+    "name" : "遠山 元道",
+    "belongs" : "慶大",
+    "first" : 0
+  }, {
+    "presenid" : "B2-5",
+    "name" : "武田 裕介",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "B2-5",
+    "name" : "大島 裕明",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "B2-5",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "B2-6",
+    "name" : "安部 高城",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "B2-6",
+    "name" : "佐藤 哲司",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "F6-1",
+    "name" : "小松 雅弥",
+    "belongs" : "静大",
+    "first" : 1
+  }, {
+    "presenid" : "F6-1",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-1",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-1",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-2",
+    "name" : "簗井 美咲",
+    "belongs" : "名大",
+    "first" : 1
+  }, {
+    "presenid" : "F6-2",
+    "name" : "高橋 正和",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-2",
+    "name" : "佐々木 勇和",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-2",
+    "name" : "石川 佳治",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-3",
+    "name" : "櫻川 直洋",
+    "belongs" : "静大",
+    "first" : 1
+  }, {
+    "presenid" : "F6-3",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-3",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-3",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-4",
+    "name" : "藤井 一哉",
+    "belongs" : "岡大",
+    "first" : 1
+  }, {
+    "presenid" : "F6-4",
+    "name" : "新妻 弘崇",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-4",
+    "name" : "太田 学",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-5",
+    "name" : "平山 拓実",
+    "belongs" : "広島市立大学",
+    "first" : 1
+  }, {
+    "presenid" : "F6-5",
+    "name" : "難波 英嗣",
+    "belongs" : "広島市立大学",
+    "first" : 0
+  }, {
+    "presenid" : "F6-5",
+    "name" : "竹澤 寿幸",
+    "belongs" : "広島市立大学",
+    "first" : 0
+  }, {
+    "presenid" : "F6-6",
+    "name" : "渡辺 陽介",
+    "belongs" : "名大",
+    "first" : 1
+  }, {
+    "presenid" : "F6-6",
+    "name" : "高木 建太朗",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-6",
+    "name" : "手嶋 茂晴",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-6",
+    "name" : "二宮 芳樹",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-6",
+    "name" : "佐藤 健哉",
+    "belongs" : "同志社大",
+    "first" : 0
+  }, {
+    "presenid" : "F6-6",
+    "name" : "高田 広章",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "B3-1",
+    "name" : "濱田 恵輔",
+    "belongs" : "京都産業大学",
+    "first" : 1
+  }, {
+    "presenid" : "B3-1",
+    "name" : "中島 伸介",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "B3-1",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "B3-1",
+    "name" : "角谷 和俊",
+    "belongs" : "兵庫県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "B3-2",
+    "name" : "飯沼 俊平",
+    "belongs" : "広市大",
+    "first" : 1
+  }, {
+    "presenid" : "B3-2",
+    "name" : "難波 英嗣",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "B3-2",
+    "name" : "竹澤 寿幸",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "B3-3",
+    "name" : "杉浦 健人",
+    "belongs" : "名大",
+    "first" : 1
+  }, {
+    "presenid" : "B3-3",
+    "name" : "佐々木 勇和",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "B3-3",
+    "name" : "石川 佳治",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "B3-4",
+    "name" : "植田 聖司",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "B3-4",
+    "name" : "欅 惇志",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "B3-4",
+    "name" : "宮崎 純",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "B3-5",
+    "name" : "鬼沢 和也",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "B3-5",
+    "name" : "浅井 洋樹",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "B3-5",
+    "name" : "山名 早人",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "B3-6",
+    "name" : "葛西 正裕",
+    "belongs" : "愛知学院大学",
+    "first" : 1
+  }, {
+    "presenid" : "B3-6",
+    "name" : "古川 哲也",
+    "belongs" : "九州大学",
+    "first" : 0
+  }, {
+    "presenid" : "F7-1",
+    "name" : "濱田 恵輔",
+    "belongs" : "京都産業大学",
+    "first" : 1
+  }, {
+    "presenid" : "F7-1",
+    "name" : "浅川 拓",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "F7-1",
+    "name" : "中島 伸介",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "F7-1",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "F7-1",
+    "name" : "角谷 和俊",
+    "belongs" : "兵庫県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "F7-2",
+    "name" : "菅澤 学",
+    "belongs" : "JR東日本研究開発センター",
+    "first" : 1
+  }, {
+    "presenid" : "F7-2",
+    "name" : "清木 康",
+    "belongs" : "環境情報学部",
+    "first" : 0
+  }, {
+    "presenid" : "F7-2",
+    "name" : "Hall Jeremy",
+    "belongs" : "環境情報学部",
+    "first" : 0
+  }, {
+    "presenid" : "F7-3",
+    "name" : "小林 啓太",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "F7-3",
+    "name" : "鬼塚 真",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-4",
+    "name" : "谷 直樹",
+    "belongs" : "和大",
+    "first" : 1
+  }, {
+    "presenid" : "F7-4",
+    "name" : "風間 一洋",
+    "belongs" : "和大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-4",
+    "name" : "榊 剛史",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-4",
+    "name" : "吉田 光男",
+    "belongs" : "技科大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-5",
+    "name" : "高木 有人",
+    "belongs" : "首都大",
+    "first" : 1
+  }, {
+    "presenid" : "F7-5",
+    "name" : "遠藤 雅樹",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-5",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-5",
+    "name" : "倉田 陽平",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-5",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-5",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-6",
+    "name" : "倉田 陽平",
+    "belongs" : "首都大",
+    "first" : 1
+  }, {
+    "presenid" : "F7-6",
+    "name" : "相 尚寿",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-6",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-6",
+    "name" : "真田 風",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "F7-6",
+    "name" : "池田 拓生",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "B4-1",
+    "name" : "吉成 未菜里",
+    "belongs" : "仙台高専",
+    "first" : 1
+  }, {
+    "presenid" : "B4-1",
+    "name" : "梅村 恭司",
+    "belongs" : "豊橋技科大",
+    "first" : 0
+  }, {
+    "presenid" : "B4-1",
+    "name" : "岡本 圭史",
+    "belongs" : "仙台高専",
+    "first" : 0
+  }, {
+    "presenid" : "B4-1",
+    "name" : "山本 英子",
+    "belongs" : "岐阜聖徳学園大学",
+    "first" : 0
+  }, {
+    "presenid" : "B4-2",
+    "name" : "田中 祥太郎",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "B4-2",
+    "name" : "Jatowt Adam",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "B4-2",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "B4-3",
+    "name" : "伊東 直弘",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "B4-3",
+    "name" : "吉永 直樹",
+    "belongs" : "東大、ＮＩＣＴ",
+    "first" : 0
+  }, {
+    "presenid" : "B4-3",
+    "name" : "鍜治 伸裕",
+    "belongs" : "東大、ＮＩＣＴ",
+    "first" : 0
+  }, {
+    "presenid" : "B4-3",
+    "name" : "豊田 正史",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "B4-4",
+    "name" : "福元 伸也",
+    "belongs" : "鹿大",
+    "first" : 1
+  }, {
+    "presenid" : "B4-4",
+    "name" : "渕田 孝康",
+    "belongs" : "鹿大",
+    "first" : 0
+  }, {
+    "presenid" : "B4-5",
+    "name" : "松井 侑祐",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "B4-5",
+    "name" : "宮森 恒",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "B4-6",
+    "name" : "樫本 達矢",
+    "belongs" : "岡大",
+    "first" : 1
+  }, {
+    "presenid" : "B4-6",
+    "name" : "太田 学",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "B4-6",
+    "name" : "高須 淳宏",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "F8-1",
+    "name" : "東羅 翔太郎",
+    "belongs" : "NTT",
+    "first" : 1
+  }, {
+    "presenid" : "F8-1",
+    "name" : "豊田 真智子",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "F8-1",
+    "name" : "中村 吉孝",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "F8-2",
+    "name" : "中村 隆顕",
+    "belongs" : "三菱電機株式会社",
+    "first" : 1
+  }, {
+    "presenid" : "F8-2",
+    "name" : "今村 誠",
+    "belongs" : "三菱電機株式会社",
+    "first" : 0
+  }, {
+    "presenid" : "F8-2",
+    "name" : "平井 規郎",
+    "belongs" : "三菱電機株式会社",
+    "first" : 0
+  }, {
+    "presenid" : "F8-2",
+    "name" : "Jones Michael",
+    "belongs" : "MERL",
+    "first" : 0
+  }, {
+    "presenid" : "F8-2",
+    "name" : "Nikovski Daniel",
+    "belongs" : "MERL",
+    "first" : 0
+  }, {
+    "presenid" : "F8-3",
+    "name" : "森本 哲郎",
+    "belongs" : "OECU",
+    "first" : 1
+  }, {
+    "presenid" : "F8-3",
+    "name" : "辻本 悠佑",
+    "belongs" : "OECU",
+    "first" : 0
+  }, {
+    "presenid" : "F8-3",
+    "name" : "白浜 勝太",
+    "belongs" : "OECU",
+    "first" : 0
+  }, {
+    "presenid" : "F8-3",
+    "name" : "上善 恒雄",
+    "belongs" : "OECU",
+    "first" : 0
+  }, {
+    "presenid" : "F8-4",
+    "name" : "小寺 暁久",
+    "belongs" : "静大",
+    "first" : 1
+  }, {
+    "presenid" : "F8-4",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "F8-4",
+    "name" : "山田 文康",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "F8-5",
+    "name" : "宮城 優里",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "F8-5",
+    "name" : "大西 正輝",
+    "belongs" : "産総研",
+    "first" : 0
+  }, {
+    "presenid" : "F8-5",
+    "name" : "渡辺 知恵美",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "F8-5",
+    "name" : "伊藤 貴之",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "F8-6",
+    "name" : "八木 佐也香",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "F8-6",
+    "name" : "伊藤 貴之",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "F8-6",
+    "name" : "高塚 正浩",
+    "belongs" : "シドニー大",
+    "first" : 0
+  }, {
+    "presenid" : "B5-1",
+    "name" : "櫻木 優輝",
+    "belongs" : "立命館大学",
+    "first" : 1
+  }, {
+    "presenid" : "B5-1",
+    "name" : "青山 敦",
+    "belongs" : "立命館大学",
+    "first" : 0
+  }, {
+    "presenid" : "B5-1",
+    "name" : "木村 文則",
+    "belongs" : "立命館大学",
+    "first" : 0
+  }, {
+    "presenid" : "B5-1",
+    "name" : "前田 亮",
+    "belongs" : "立命館大学",
+    "first" : 0
+  }, {
+    "presenid" : "B5-2",
+    "name" : "中野 峻太郎",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "B5-2",
+    "name" : "谷川 英和",
+    "belongs" : "IRD国際特許事務所",
+    "first" : 0
+  }, {
+    "presenid" : "B5-2",
+    "name" : "宮脇 正晴",
+    "belongs" : "立命館大学",
+    "first" : 0
+  }, {
+    "presenid" : "B5-2",
+    "name" : "山田 篤",
+    "belongs" : "京都高度技術研究所",
+    "first" : 0
+  }, {
+    "presenid" : "B5-2",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "B5-3",
+    "name" : "青山 賢",
+    "belongs" : "静大",
+    "first" : 1
+  }, {
+    "presenid" : "B5-3",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "B5-3",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "B5-3",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "B5-4",
+    "name" : "大橋 駿介",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "B5-4",
+    "name" : "相澤 彰子",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "B5-5",
+    "name" : "新井 誠也",
+    "belongs" : "芝浦工大",
+    "first" : 1
+  }, {
+    "presenid" : "B5-5",
+    "name" : "平川 豊",
+    "belongs" : "芝浦工大",
+    "first" : 0
+  }, {
+    "presenid" : "B5-5",
+    "name" : "大関 和夫",
+    "belongs" : "芝浦工大",
+    "first" : 0
+  }, {
+    "presenid" : "B6-1",
+    "name" : "矢口 尭",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "B6-1",
+    "name" : "首藤 一幸",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "B6-2",
+    "name" : "日開 朝美",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "B6-2",
+    "name" : "竹房 あつ子",
+    "belongs" : "AIST",
+    "first" : 0
+  }, {
+    "presenid" : "B6-2",
+    "name" : "中田 秀基",
+    "belongs" : "AIST",
+    "first" : 0
+  }, {
+    "presenid" : "B6-2",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "B6-3",
+    "name" : "梅田 昌義",
+    "belongs" : "NTT",
+    "first" : 1
+  }, {
+    "presenid" : "B6-3",
+    "name" : "吉田 悟",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "B6-4",
+    "name" : "中山 陽太郎",
+    "belongs" : "NUL",
+    "first" : 1
+  }, {
+    "presenid" : "B6-4",
+    "name" : "横石 潔和",
+    "belongs" : "NUL",
+    "first" : 0
+  }, {
+    "presenid" : "B6-4",
+    "name" : "渡辺 信幸",
+    "belongs" : "RLJ",
+    "first" : 0
+  }, {
+    "presenid" : "B6-5",
+    "name" : "細谷 柚子",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "B6-5",
+    "name" : "三島 健",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "B6-5",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "B6-6",
+    "name" : "新田 健二",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "B6-6",
+    "name" : "矢口 尭",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "B6-6",
+    "name" : "長尾 洋也",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "B6-6",
+    "name" : "首藤 一幸",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "B8-1",
+    "name" : "古屋 瑞生",
+    "belongs" : "立命館大学",
+    "first" : 1
+  }, {
+    "presenid" : "B8-1",
+    "name" : "黄 宏軒",
+    "belongs" : "立命館大学",
+    "first" : 0
+  }, {
+    "presenid" : "B8-1",
+    "name" : "川越 恭二",
+    "belongs" : "立命館大学",
+    "first" : 0
+  }, {
+    "presenid" : "B8-2",
+    "name" : "鈴木 悠太",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "B8-2",
+    "name" : "佐藤 哲司",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "B8-3",
+    "name" : "黄 亦爽",
+    "belongs" : "神戸大",
+    "first" : 1
+  }, {
+    "presenid" : "B8-3",
+    "name" : "清光 英成",
+    "belongs" : "神戸大",
+    "first" : 0
+  }, {
+    "presenid" : "B8-3",
+    "name" : "大月 一弘",
+    "belongs" : "神戸大",
+    "first" : 0
+  }, {
+    "presenid" : "B8-3",
+    "name" : "森下 淳也",
+    "belongs" : "神戸大",
+    "first" : 0
+  }, {
+    "presenid" : "B8-4",
+    "name" : "鬼頭 尚揮",
+    "belongs" : "立命館",
+    "first" : 1
+  }, {
+    "presenid" : "B8-4",
+    "name" : "奥 健太",
+    "belongs" : "立命館",
+    "first" : 0
+  }, {
+    "presenid" : "B8-4",
+    "name" : "服部 文夫",
+    "belongs" : "立命館",
+    "first" : 0
+  }, {
+    "presenid" : "B8-5",
+    "name" : "茂木 哲矢",
+    "belongs" : "ヤフー株式会社",
+    "first" : 1
+  }, {
+    "presenid" : "B8-5",
+    "name" : "田頭 幸浩",
+    "belongs" : "ヤフー株式会社",
+    "first" : 0
+  }, {
+    "presenid" : "B8-5",
+    "name" : "小野 真吾",
+    "belongs" : "ヤフー株式会社",
+    "first" : 0
+  }, {
+    "presenid" : "B8-5",
+    "name" : "田島 玲",
+    "belongs" : "ヤフー株式会社",
+    "first" : 0
+  }, {
+    "presenid" : "B8-6",
+    "name" : "工藤 真之",
+    "belongs" : "工学院大学",
+    "first" : 1
+  }, {
+    "presenid" : "B8-6",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "G1-1",
+    "name" : "高橋 翼",
+    "belongs" : "NEC",
+    "first" : 1
+  }, {
+    "presenid" : "G1-1",
+    "name" : "古川 諒",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "G1-1",
+    "name" : "側高 幸治",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "G1-1",
+    "name" : "森 拓也",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "G1-2",
+    "name" : "柿澤 美穂",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "G1-2",
+    "name" : "渡辺 知恵美",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "G1-2",
+    "name" : "古川 諒",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "G1-2",
+    "name" : "高橋 翼",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "G1-3",
+    "name" : "岡田 莉奈",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "G1-3",
+    "name" : "福地 一斗",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "G1-3",
+    "name" : "佐久間 淳",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "G1-4",
+    "name" : "田中 千沙",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "G1-4",
+    "name" : "上土井 陽子",
+    "belongs" : "広市大",
+    "first" : 1
+  }, {
+    "presenid" : "G1-4",
+    "name" : "若林 真一",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "G1-5",
+    "name" : "奥田 容子",
+    "belongs" : "電気通信大学",
+    "first" : 1
+  }, {
+    "presenid" : "G1-5",
+    "name" : "沼尾 雅之",
+    "belongs" : "電気通信大学　大学院",
+    "first" : 0
+  }, {
+    "presenid" : "G1-6",
+    "name" : "加藤 諒",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "G1-6",
+    "name" : "原 隆浩",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "G1-6",
+    "name" : "Xing Xie",
+    "belongs" : "Microsoft Research Asia",
+    "first" : 0
+  }, {
+    "presenid" : "G1-6",
+    "name" : "岩田 麻佑",
+    "belongs" : "株式会社KDDI研究所",
+    "first" : 0
+  }, {
+    "presenid" : "G1-6",
+    "name" : "西尾 章治郎",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-1",
+    "name" : "児玉 快",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "G2-1",
+    "name" : "横田 治夫",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-2",
+    "name" : "隅岡 隆之",
+    "belongs" : "産技大",
+    "first" : 1
+  }, {
+    "presenid" : "G2-2",
+    "name" : "尾崎 敏司",
+    "belongs" : "産技大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-2",
+    "name" : "村上 陽子",
+    "belongs" : "産技大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-2",
+    "name" : "邓 超穎",
+    "belongs" : "産技大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-2",
+    "name" : "畠山 智美",
+    "belongs" : "産技大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-2",
+    "name" : "輪島 幸治",
+    "belongs" : "産技大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-2",
+    "name" : "嶋田 茂",
+    "belongs" : "産技大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-3",
+    "name" : "沖田　 梨絵子",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-3",
+    "name" : "上土井 陽子",
+    "belongs" : "広市大",
+    "first" : 1
+  }, {
+    "presenid" : "G2-3",
+    "name" : "若林 真一",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-4",
+    "name" : "津田 琢士",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "G2-4",
+    "name" : "駒井 友香",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-4",
+    "name" : "原 隆浩",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-4",
+    "name" : "西尾 章治郎",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "G2-5",
+    "name" : "橋本 翔太",
+    "belongs" : "広島市立大学",
+    "first" : 1
+  }, {
+    "presenid" : "G2-5",
+    "name" : "上土井 陽子",
+    "belongs" : "広島市立大学",
+    "first" : 0
+  }, {
+    "presenid" : "G2-5",
+    "name" : "若林 真一",
+    "belongs" : "広島市立大学",
+    "first" : 0
+  }, {
+    "presenid" : "G2-6",
+    "name" : "篠塚 千愛",
+    "belongs" : "筑波大学",
+    "first" : 1
+  }, {
+    "presenid" : "G2-6",
+    "name" : "渡辺 知恵美",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "G2-6",
+    "name" : "北川 博之",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "G3-1",
+    "name" : "Silqueira Hickson Cruz Mateus",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "G3-1",
+    "name" : "小澤 佑介",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-1",
+    "name" : "天笠 俊之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-1",
+    "name" : "北川 博之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-2",
+    "name" : "加藤 千裕",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "G3-2",
+    "name" : "早水 悠登",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-2",
+    "name" : "合田 和生",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-2",
+    "name" : "喜連川 優",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-3",
+    "name" : "山室 健",
+    "belongs" : "NTT",
+    "first" : 1
+  }, {
+    "presenid" : "G3-3",
+    "name" : "鬼塚 真",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-3",
+    "name" : "本庄 利守",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "G3-4",
+    "name" : "中澤 正和",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "G3-4",
+    "name" : "西 方",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-4",
+    "name" : "荒堀 喜貴",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-4",
+    "name" : "横田 治夫",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-5",
+    "name" : "黄 峻",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "G3-5",
+    "name" : "小澤 祐介",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-5",
+    "name" : "天笠 俊之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-5",
+    "name" : "北川 博之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-6",
+    "name" : "森谷 祐介",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "G3-6",
+    "name" : "欅 惇志",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "G3-6",
+    "name" : "宮崎 純",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "G4-1",
+    "name" : "王 萌萌",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "G4-1",
+    "name" : "岩井原 瑞穂",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "G4-2",
+    "name" : "林 佑磨",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "G4-2",
+    "name" : "諏訪 晴士",
+    "belongs" : "株式会社ジーニー",
+    "first" : 0
+  }, {
+    "presenid" : "G4-2",
+    "name" : "山名 早人",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "G4-3",
+    "name" : "坂本 翔平",
+    "belongs" : "神戸大",
+    "first" : 1
+  }, {
+    "presenid" : "G4-3",
+    "name" : "江口 浩二",
+    "belongs" : "神戸大",
+    "first" : 0
+  }, {
+    "presenid" : "G4-4",
+    "name" : "大田垣 翔",
+    "belongs" : "九大",
+    "first" : 1
+  }, {
+    "presenid" : "G4-4",
+    "name" : "牛尼 剛聡",
+    "belongs" : "九大",
+    "first" : 0
+  }, {
+    "presenid" : "G4-4",
+    "name" : "角谷 和俊",
+    "belongs" : "兵庫県立大",
+    "first" : 0
+  }, {
+    "presenid" : "G4-5",
+    "name" : "岡本 里夏",
+    "belongs" : "総研大／NII",
+    "first" : 1
+  }, {
+    "presenid" : "G4-5",
+    "name" : "Garkavijs Viktors",
+    "belongs" : "総研大／NII",
+    "first" : 0
+  }, {
+    "presenid" : "G4-5",
+    "name" : "大山 敬三",
+    "belongs" : "NII／総研大",
+    "first" : 0
+  }, {
+    "presenid" : "G4-6",
+    "name" : "山本 直史",
+    "belongs" : "工学院大",
+    "first" : 1
+  }, {
+    "presenid" : "G4-6",
+    "name" : "小林 亜樹",
+    "belongs" : "工学院大",
+    "first" : 0
+  }, {
+    "presenid" : "C1-1",
+    "name" : "中岡 義貴",
+    "belongs" : "筑波大学",
+    "first" : 1
+  }, {
+    "presenid" : "C1-1",
+    "name" : "佐藤 哲司",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "C1-2",
+    "name" : "染谷 侑希",
+    "belongs" : "工学院大学",
+    "first" : 1
+  }, {
+    "presenid" : "C1-2",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "C1-3",
+    "name" : "髙田 夏彦",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "C1-3",
+    "name" : "上田 真由美",
+    "belongs" : "流科大",
+    "first" : 0
+  }, {
+    "presenid" : "C1-3",
+    "name" : "森下 幸俊",
+    "belongs" : "DNP",
+    "first" : 0
+  }, {
+    "presenid" : "C1-3",
+    "name" : "中島 伸介",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "C1-4",
+    "name" : "小林 和暉",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "C1-4",
+    "name" : "宮森 恒",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "C1-5",
+    "name" : "吉藤 大貴",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "C1-5",
+    "name" : "宮森 恒",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "C1-6",
+    "name" : "門脇 拓也",
+    "belongs" : "京都大学",
+    "first" : 1
+  }, {
+    "presenid" : "C1-6",
+    "name" : "山肩 洋子",
+    "belongs" : "京都大学",
+    "first" : 0
+  }, {
+    "presenid" : "C1-6",
+    "name" : "田中 克己",
+    "belongs" : "京都大学",
+    "first" : 0
+  }, {
+    "presenid" : "G5-1",
+    "name" : "佐々木 夢",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "G5-1",
+    "name" : "荒堀 喜貴",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "G5-1",
+    "name" : "串間 宗夫",
+    "belongs" : "宮大",
+    "first" : 0
+  }, {
+    "presenid" : "G5-1",
+    "name" : "荒木 賢二",
+    "belongs" : "宮大",
+    "first" : 0
+  }, {
+    "presenid" : "G5-1",
+    "name" : "横田 治夫",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "G5-2",
+    "name" : "竹内 裕之",
+    "belongs" : "高崎健大",
+    "first" : 1
+  }, {
+    "presenid" : "G5-2",
+    "name" : "児玉 直樹",
+    "belongs" : "高崎健大",
+    "first" : 0
+  }, {
+    "presenid" : "G5-2",
+    "name" : "高橋 真悟",
+    "belongs" : "高崎健大大学院",
+    "first" : 0
+  }, {
+    "presenid" : "G5-3",
+    "name" : "三上 拓也",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "G5-3",
+    "name" : "野口 保",
+    "belongs" : "明治薬科大学",
+    "first" : 0
+  }, {
+    "presenid" : "G5-3",
+    "name" : "菅野 敦之",
+    "belongs" : "明治薬科大学",
+    "first" : 0
+  }, {
+    "presenid" : "G5-3",
+    "name" : "山名 早人",
+    "belongs" : "早稲田大学",
+    "first" : 0
+  }, {
+    "presenid" : "G5-4",
+    "name" : "児玉 直樹",
+    "belongs" : "高崎健大",
+    "first" : 1
+  }, {
+    "presenid" : "G5-4",
+    "name" : "川瀬 康裕",
+    "belongs" : "川瀬神経内科クリニック",
+    "first" : 0
+  }, {
+    "presenid" : "G5-4",
+    "name" : "竹内 裕之",
+    "belongs" : "高崎健大",
+    "first" : 0
+  }, {
+    "presenid" : "G5-5",
+    "name" : "澤野 良輔",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "G5-5",
+    "name" : "吉川 正俊",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "G5-5",
+    "name" : "濱崎 暁洋",
+    "belongs" : "北野病院",
+    "first" : 0
+  }, {
+    "presenid" : "G5-5",
+    "name" : "岡本 和也",
+    "belongs" : "京大病院",
+    "first" : 0
+  }, {
+    "presenid" : "G5-5",
+    "name" : "黒田 知宏",
+    "belongs" : "京大病院",
+    "first" : 0
+  }, {
+    "presenid" : "G5-6",
+    "name" : "西谷 静姫",
+    "belongs" : "神奈工大",
+    "first" : 1
+  }, {
+    "presenid" : "G5-6",
+    "name" : "鷹野 孝典",
+    "belongs" : "神奈工大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-1",
+    "name" : "佐崎 悠",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "C2-1",
+    "name" : "神崎 映光",
+    "belongs" : "島大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-1",
+    "name" : "原 隆浩",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-1",
+    "name" : "西尾 章治郎",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-2",
+    "name" : "早川 愛",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "C2-2",
+    "name" : "山口 実靖",
+    "belongs" : "工学院大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-2",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-3",
+    "name" : "本橋 史帆",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "C2-3",
+    "name" : "高井 峰生",
+    "belongs" : "UCLA",
+    "first" : 0
+  }, {
+    "presenid" : "C2-3",
+    "name" : "前野 誉",
+    "belongs" : "STE",
+    "first" : 0
+  }, {
+    "presenid" : "C2-3",
+    "name" : "黒崎 裕子",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-3",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-4",
+    "name" : "磯村 美友",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "C2-4",
+    "name" : "三好 一徳",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "C2-4",
+    "name" : "村瀬 勉",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "C2-4",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-5",
+    "name" : "松尾 和哉",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "C2-5",
+    "name" : "後藤 啓介",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-5",
+    "name" : "神崎 映光",
+    "belongs" : "島大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-5",
+    "name" : "原 隆浩",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-5",
+    "name" : "西尾 章治郎",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-6",
+    "name" : "川住 涼",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "C2-6",
+    "name" : "義久 智樹",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-6",
+    "name" : "原 隆浩",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "C2-6",
+    "name" : "西尾 章治郎",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "G6-1",
+    "name" : "大野 亮仁",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "G6-1",
+    "name" : "藤 博幸",
+    "belongs" : "産総研",
+    "first" : 0
+  }, {
+    "presenid" : "G6-1",
+    "name" : "山名 早人",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "G6-2",
+    "name" : "小池 智之",
+    "belongs" : "健大",
+    "first" : 1
+  }, {
+    "presenid" : "G6-2",
+    "name" : "児玉 直樹",
+    "belongs" : "健大",
+    "first" : 0
+  }, {
+    "presenid" : "G6-2",
+    "name" : "川瀬 康裕",
+    "belongs" : "川瀬神経内科クリニック",
+    "first" : 0
+  }, {
+    "presenid" : "G6-2",
+    "name" : "竹内 裕之",
+    "belongs" : "健大",
+    "first" : 0
+  }, {
+    "presenid" : "G6-3",
+    "name" : "高橋 真悟",
+    "belongs" : "高崎健康福祉大学大学院",
+    "first" : 1
+  }, {
+    "presenid" : "G6-3",
+    "name" : "児玉 直樹",
+    "belongs" : "高崎健康福祉大学",
+    "first" : 0
+  }, {
+    "presenid" : "G6-3",
+    "name" : "小杉 尚子",
+    "belongs" : "高崎健康福祉大学",
+    "first" : 0
+  }, {
+    "presenid" : "G6-3",
+    "name" : "竹内 裕之",
+    "belongs" : "高崎健康福祉大学",
+    "first" : 0
+  }, {
+    "presenid" : "G6-4",
+    "name" : "玉田 雄基",
+    "belongs" : "筑波大学院",
+    "first" : 1
+  }, {
+    "presenid" : "G6-4",
+    "name" : " 佐藤 哲司",
+    "belongs" : "筑波大学院",
+    "first" : 0
+  }, {
+    "presenid" : "G6-5",
+    "name" : "武田 十季",
+    "belongs" : "NTT",
+    "first" : 1
+  }, {
+    "presenid" : "G6-5",
+    "name" : "水野 理",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "G6-5",
+    "name" : "田中 智博",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "G6-6",
+    "name" : "花井 俊介",
+    "belongs" : "甲南大",
+    "first" : 1
+  }, {
+    "presenid" : "G6-6",
+    "name" : "難波 英嗣",
+    "belongs" : "広島市大",
+    "first" : 0
+  }, {
+    "presenid" : "G6-6",
+    "name" : "灘本 明代",
+    "belongs" : "甲南大",
+    "first" : 0
+  }, {
+    "presenid" : "C3-1",
+    "name" : "飯村 奈穂",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "C3-1",
+    "name" : "西川 記史",
+    "belongs" : "日立",
+    "first" : 0
+  }, {
+    "presenid" : "C3-1",
+    "name" : "中野 美由紀",
+    "belongs" : "芝浦工大",
+    "first" : 0
+  }, {
+    "presenid" : "C3-1",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "C3-2",
+    "name" : "高橋 由佳",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "C3-2",
+    "name" : "藤本 悠",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "C3-2",
+    "name" : "林 泰弘",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "C3-3",
+    "name" : "西本 直樹",
+    "belongs" : "横浜国立大学",
+    "first" : 1
+  }, {
+    "presenid" : "C3-3",
+    "name" : "高橋 慶多",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-3",
+    "name" : "北島 大",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-3",
+    "name" : "本藤 祐樹",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-3",
+    "name" : "富井 尚志",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-4",
+    "name" : "細澤 直人",
+    "belongs" : "横浜国立大学",
+    "first" : 1
+  }, {
+    "presenid" : "C3-4",
+    "name" : "高橋 慶多",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-4",
+    "name" : "本藤 祐樹",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-4",
+    "name" : "富井 尚志",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-5",
+    "name" : "讃井 崚",
+    "belongs" : "横浜国立大学",
+    "first" : 1
+  }, {
+    "presenid" : "C3-5",
+    "name" : "吉本 亘汰",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-5",
+    "name" : "柏原 勇太",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-5",
+    "name" : "川沼 大輝",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-5",
+    "name" : "萩本 真太朗",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "C3-5",
+    "name" : "富井 尚志",
+    "belongs" : "横浜国立大学",
+    "first" : 0
+  }, {
+    "presenid" : "G7-1",
+    "name" : "久保田 麻美",
+    "belongs" : "九大",
+    "first" : 1
+  }, {
+    "presenid" : "G7-1",
+    "name" : "牛尼 剛聡",
+    "belongs" : "九大",
+    "first" : 0
+  }, {
+    "presenid" : "G7-2",
+    "name" : "峯 祥平",
+    "belongs" : "工学院大学大学院",
+    "first" : 1
+  }, {
+    "presenid" : "G7-2",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "G7-3",
+    "name" : "前田 剛",
+    "belongs" : "広市大",
+    "first" : 1
+  }, {
+    "presenid" : "G7-3",
+    "name" : "難波 英嗣",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "G7-3",
+    "name" : "竹澤 寿幸",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "G7-4",
+    "name" : "島田 恵輔",
+    "belongs" : "広市大",
+    "first" : 1
+  }, {
+    "presenid" : "G7-4",
+    "name" : "難波 英嗣",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "G7-4",
+    "name" : "竹澤 寿幸",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "G7-4",
+    "name" : "石野 亜耶",
+    "belongs" : "広経大",
+    "first" : 0
+  }, {
+    "presenid" : "G7-5",
+    "name" : "藤井 一輝",
+    "belongs" : "広島市立大学大学院",
+    "first" : 1
+  }, {
+    "presenid" : "G7-5",
+    "name" : "難波 英嗣",
+    "belongs" : "広島市立大学大学院",
+    "first" : 0
+  }, {
+    "presenid" : "G7-5",
+    "name" : "竹澤 寿幸",
+    "belongs" : "広島市立大学大学院",
+    "first" : 0
+  }, {
+    "presenid" : "G7-5",
+    "name" : "石野 亜耶",
+    "belongs" : "広島経済大学",
+    "first" : 0
+  }, {
+    "presenid" : "G7-6",
+    "name" : "新井 晃平",
+    "belongs" : "岡大",
+    "first" : 1
+  }, {
+    "presenid" : "G7-6",
+    "name" : "新妻 弘崇",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "G7-6",
+    "name" : "太田 学",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "C4-1",
+    "name" : "鈴木 有",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "C4-1",
+    "name" : "鍜治 伸裕",
+    "belongs" : "東大，NICT",
+    "first" : 0
+  }, {
+    "presenid" : "C4-1",
+    "name" : "吉永 直樹",
+    "belongs" : "東大，NICT",
+    "first" : 0
+  }, {
+    "presenid" : "C4-1",
+    "name" : "豊田 正史",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "C4-2",
+    "name" : "上村 卓也",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "C4-2",
+    "name" : "新田 直子",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "C4-2",
+    "name" : "馬場口 登",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "C4-3",
+    "name" : "佐伯 圭介",
+    "belongs" : "首都大",
+    "first" : 1
+  }, {
+    "presenid" : "C4-3",
+    "name" : "遠藤 雅樹",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "C4-3",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "C4-3",
+    "name" : "倉田 陽平",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "C4-3",
+    "name" : "横山 昌平",
+    "belongs" : "静岡大",
+    "first" : 0
+  }, {
+    "presenid" : "C4-3",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "C4-4",
+    "name" : "岩田 麻佑",
+    "belongs" : "株式会社KDDI研究所",
+    "first" : 1
+  }, {
+    "presenid" : "C4-4",
+    "name" : "服部 元",
+    "belongs" : "株式会社KDDI研究所",
+    "first" : 0
+  }, {
+    "presenid" : "C4-4",
+    "name" : "池田 和史",
+    "belongs" : "株式会社KDDI研究所",
+    "first" : 0
+  }, {
+    "presenid" : "C4-4",
+    "name" : "滝嶋 康弘",
+    "belongs" : "株式会社KDDI研究所",
+    "first" : 0
+  }, {
+    "presenid" : "C4-5",
+    "name" : "星川 祐人",
+    "belongs" : "筑波大学",
+    "first" : 1
+  }, {
+    "presenid" : "C4-5",
+    "name" : "若林 啓",
+    "belongs" : "図書館情報メディア系",
+    "first" : 0
+  }, {
+    "presenid" : "G8-1",
+    "name" : "森國 泰平",
+    "belongs" : "技科大",
+    "first" : 1
+  }, {
+    "presenid" : "G8-1",
+    "name" : "吉田 光男",
+    "belongs" : "技科大",
+    "first" : 0
+  }, {
+    "presenid" : "G8-1",
+    "name" : "岡部 正幸",
+    "belongs" : "技科大",
+    "first" : 0
+  }, {
+    "presenid" : "G8-1",
+    "name" : "梅村 恭司",
+    "belongs" : "技科大",
+    "first" : 0
+  }, {
+    "presenid" : "G8-2",
+    "name" : "原田 一慧",
+    "belongs" : "立命館大学",
+    "first" : 1
+  }, {
+    "presenid" : "G8-2",
+    "name" : "木村 文則",
+    "belongs" : "立命館大学",
+    "first" : 0
+  }, {
+    "presenid" : "G8-2",
+    "name" : "前田 亮",
+    "belongs" : "立命館大学",
+    "first" : 0
+  }, {
+    "presenid" : "G8-3",
+    "name" : "野呂 勇太",
+    "belongs" : "静大",
+    "first" : 1
+  }, {
+    "presenid" : "G8-3",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "G8-3",
+    "name" : "野澤 浩樹",
+    "belongs" : "シーポイント",
+    "first" : 0
+  }, {
+    "presenid" : "G8-3",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "G8-4",
+    "name" : "篠原 正太",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "G8-4",
+    "name" : "上里 和也",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "G8-4",
+    "name" : "山名 早人",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "G8-5",
+    "name" : "下吉 珠奈",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "G8-5",
+    "name" : "関 洋平",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "G8-6",
+    "name" : "伊川 洋平",
+    "belongs" : "日本IBM",
+    "first" : 1
+  }, {
+    "presenid" : "G8-6",
+    "name" : "村上 明子",
+    "belongs" : "日本IBM",
+    "first" : 0
+  }, {
+    "presenid" : "C5-1",
+    "name" : "星野 友亮",
+    "belongs" : "慶應義塾大学",
+    "first" : 1
+  }, {
+    "presenid" : "C5-1",
+    "name" : "木谷 将人",
+    "belongs" : "慶應義塾大学大学院",
+    "first" : 0
+  }, {
+    "presenid" : "C5-1",
+    "name" : "五嶋 研人",
+    "belongs" : "慶應義塾大学大学院",
+    "first" : 0
+  }, {
+    "presenid" : "C5-1",
+    "name" : "遠山 元道",
+    "belongs" : "慶應義塾大学",
+    "first" : 0
+  }, {
+    "presenid" : "C5-2",
+    "name" : "春野 健吾",
+    "belongs" : "慶大",
+    "first" : 1
+  }, {
+    "presenid" : "C5-2",
+    "name" : "五嶋 研人",
+    "belongs" : "慶大",
+    "first" : 0
+  }, {
+    "presenid" : "C5-2",
+    "name" : "遠山 元道",
+    "belongs" : "慶大",
+    "first" : 0
+  }, {
+    "presenid" : "C5-3",
+    "name" : "松本 拓馬",
+    "belongs" : "工学院大学",
+    "first" : 1
+  }, {
+    "presenid" : "C5-3",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "C5-4",
+    "name" : "原 拓矢",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "C5-4",
+    "name" : "加藤 誠",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "C5-4",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "C5-5",
+    "name" : "北口 善紀",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "C5-5",
+    "name" : "大島 裕明",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "C5-5",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "C6-1",
+    "name" : "丹治 寛佳",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "C6-1",
+    "name" : "清水 伸幸",
+    "belongs" : "ヤフー",
+    "first" : 0
+  }, {
+    "presenid" : "C6-1",
+    "name" : "森嶋 厚行",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "C6-1",
+    "name" : "北川 博之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "C6-2",
+    "name" : "櫻井 恵美",
+    "belongs" : "筑波大学",
+    "first" : 1
+  }, {
+    "presenid" : "C6-2",
+    "name" : "森嶋 厚行",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "C6-2",
+    "name" : "池田 光雪",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "C6-2",
+    "name" : "鈴木 伸崇",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "C6-3",
+    "name" : "平木 理恵",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "C6-3",
+    "name" : "森嶋 厚行",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "C6-4",
+    "name" : "羽田野 真由美",
+    "belongs" : "NTT",
+    "first" : 1
+  }, {
+    "presenid" : "C6-4",
+    "name" : "中辻 真",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "C6-4",
+    "name" : "戸田 浩之",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "C6-4",
+    "name" : "小池 義昌",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "C6-5",
+    "name" : "趙 菁",
+    "belongs" : "名大",
+    "first" : 1
+  }, {
+    "presenid" : "C6-5",
+    "name" : "姜 仁河",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "C6-5",
+    "name" : "董 テイテイ",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "C6-5",
+    "name" : "佐々木 勇和",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "C6-5",
+    "name" : "肖 川",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "C6-5",
+    "name" : "石川 佳治",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "C6-6",
+    "name" : "今城 朋彬",
+    "belongs" : "九大",
+    "first" : 1
+  }, {
+    "presenid" : "C6-6",
+    "name" : "角谷 和俊",
+    "belongs" : "兵庫県立大",
+    "first" : 0
+  }, {
+    "presenid" : "C6-6",
+    "name" : "牛尼 剛聡",
+    "belongs" : "九大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-1",
+    "name" : "菅野 真生",
+    "belongs" : "首都大",
+    "first" : 1
+  }, {
+    "presenid" : "C7-1",
+    "name" : "遠藤 雅樹",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-1",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-1",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-1",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-2",
+    "name" : "須藤 慧",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "C7-2",
+    "name" : "藤本 悠",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-2",
+    "name" : "林 泰弘",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-3",
+    "name" : "丸 千尋",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "C7-3",
+    "name" : "榎 美紀",
+    "belongs" : "日本IBM, お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-3",
+    "name" : "中尾 彰宏",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-3",
+    "name" : "山本 周",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-3",
+    "name" : "山口 実靖",
+    "belongs" : "工学院",
+    "first" : 0
+  }, {
+    "presenid" : "C7-3",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-4",
+    "name" : "村上 明子",
+    "belongs" : "日本IBM",
+    "first" : 1
+  }, {
+    "presenid" : "C7-4",
+    "name" : "伊川 洋平",
+    "belongs" : "日本IBM",
+    "first" : 0
+  }, {
+    "presenid" : "C7-5",
+    "name" : "高田 千暁",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "C7-5",
+    "name" : "黒崎 裕子",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-5",
+    "name" : "高井 峰生",
+    "belongs" : "UCLA",
+    "first" : 0
+  }, {
+    "presenid" : "C7-5",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-6",
+    "name" : "Nguyen Hoai Nam",
+    "belongs" : "東工大",
+    "first" : 1
+  }, {
+    "presenid" : "C7-6",
+    "name" : "荒堀 喜貴",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "C7-6",
+    "name" : "横田 治夫",
+    "belongs" : "東工大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-1",
+    "name" : "岩佐 祐樹",
+    "belongs" : "静大",
+    "first" : 1
+  }, {
+    "presenid" : "C8-1",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-1",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-1",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-2",
+    "name" : "三浦 惇貴",
+    "belongs" : "静大",
+    "first" : 1
+  }, {
+    "presenid" : "C8-2",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-2",
+    "name" : "野澤 浩樹",
+    "belongs" : "シーポイント",
+    "first" : 0
+  }, {
+    "presenid" : "C8-2",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-3",
+    "name" : "島田 諭",
+    "belongs" : "法政大学",
+    "first" : 1
+  }, {
+    "presenid" : "C8-3",
+    "name" : "大森 宏",
+    "belongs" : "東京大学",
+    "first" : 0
+  }, {
+    "presenid" : "C8-3",
+    "name" : "羽生 和紀",
+    "belongs" : "日本大学",
+    "first" : 0
+  }, {
+    "presenid" : "C8-3",
+    "name" : "山下 雅子",
+    "belongs" : "東京有明医療大学",
+    "first" : 0
+  }, {
+    "presenid" : "C8-4",
+    "name" : "高橋 正和",
+    "belongs" : "名大",
+    "first" : 1
+  }, {
+    "presenid" : "C8-4",
+    "name" : "簗井 美咲",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-4",
+    "name" : "佐々木 勇和",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-4",
+    "name" : "石川 佳治",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-5",
+    "name" : "藤原 泰士",
+    "belongs" : "広市大",
+    "first" : 1
+  }, {
+    "presenid" : "C8-5",
+    "name" : "難波 英嗣",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-5",
+    "name" : "竹澤 寿幸",
+    "belongs" : "広市大",
+    "first" : 0
+  }, {
+    "presenid" : "C8-5",
+    "name" : "石野 亜耶",
+    "belongs" : "広経大",
+    "first" : 0
+  }, {
+    "presenid" : "P1-1",
+    "name" : "桂井 孝明",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "P1-1",
+    "name" : "濱田 恵輔",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "P1-1",
+    "name" : "中島 伸介",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "P1-1",
+    "name" : " 角谷 和俊",
+    "belongs" : "兵庫県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "P1-2",
+    "name" : "坂本 瞭",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "P1-2",
+    "name" : "朝永 聖也",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "P1-2",
+    "name" : "中島 伸介",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "P1-3",
+    "name" : "葛谷 栞",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "P1-3",
+    "name" : "山﨑 隼也",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "P1-3",
+    "name" : "濱田 恵輔",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "P1-3",
+    "name" : "中島 伸介",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "P1-4",
+    "name" : "山口 由莉子",
+    "belongs" : "京都産業大学",
+    "first" : 1
+  }, {
+    "presenid" : "P1-4",
+    "name" : "朝永 聖也",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "P1-4",
+    "name" : "中島 伸介",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "P1-4",
+    "name" : "稲垣 陽一",
+    "belongs" : "株式会社きざしカンパニー",
+    "first" : 0
+  }, {
+    "presenid" : "P1-4",
+    "name" : "中本 レン",
+    "belongs" : "株式会社きざしカンパニー",
+    "first" : 0
+  }, {
+    "presenid" : "P1-4",
+    "name" : "森下 民平",
+    "belongs" : "株式会社きざしカンパニー",
+    "first" : 0
+  }, {
+    "presenid" : "P1-5",
+    "name" : "百々 健人",
+    "belongs" : "慶大",
+    "first" : 1
+  }, {
+    "presenid" : "P1-5",
+    "name" : "清木 康",
+    "belongs" : "慶大",
+    "first" : 0
+  }, {
+    "presenid" : "P2-1",
+    "name" : "岩館 洸太",
+    "belongs" : "北大",
+    "first" : 1
+  }, {
+    "presenid" : "P2-1",
+    "name" : "和佐 州洋",
+    "belongs" : "北大",
+    "first" : 0
+  }, {
+    "presenid" : "P2-1",
+    "name" : "有村 博紀",
+    "belongs" : "北大",
+    "first" : 0
+  }, {
+    "presenid" : "P2-2",
+    "name" : "高木 拓也",
+    "belongs" : "北大",
+    "first" : 1
+  }, {
+    "presenid" : "P2-2",
+    "name" : "有村 博紀",
+    "belongs" : "北大",
+    "first" : 0
+  }, {
+    "presenid" : "P2-3",
+    "name" : "常山 敬壱",
+    "belongs" : "慶應",
+    "first" : 1
+  }, {
+    "presenid" : "P2-3",
+    "name" : "清木 康",
+    "belongs" : "慶應",
+    "first" : 0
+  }, {
+    "presenid" : "P2-4",
+    "name" : "松永 知也",
+    "belongs" : "高知大",
+    "first" : 1
+  }, {
+    "presenid" : "P2-4",
+    "name" : "本田 理恵",
+    "belongs" : "高知大",
+    "first" : 0
+  }, {
+    "presenid" : "P2-5",
+    "name" : "森 啓太",
+    "belongs" : "高知大",
+    "first" : 1
+  }, {
+    "presenid" : "P2-5",
+    "name" : "本田 理恵",
+    "belongs" : "高知大",
+    "first" : 0
+  }, {
+    "presenid" : "P3-1",
+    "name" : "松波 友稀",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "P3-1",
+    "name" : "上田 真由美",
+    "belongs" : "流科大",
+    "first" : 0
+  }, {
+    "presenid" : "P3-1",
+    "name" : "中島 伸介",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "P3-2",
+    "name" : "田川 和幸",
+    "belongs" : "京都産業大学",
+    "first" : 1
+  }, {
+    "presenid" : "P3-2",
+    "name" : "朝永 聖也",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "P3-2",
+    "name" : "中島 伸介",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "P3-2",
+    "name" : "稲垣 陽一",
+    "belongs" : "株式会社きざしカンパニー",
+    "first" : 0
+  }, {
+    "presenid" : "P3-2",
+    "name" : "中本 レン",
+    "belongs" : "株式会社きざしカンパニー",
+    "first" : 0
+  }, {
+    "presenid" : "P3-2",
+    "name" : "張 建偉",
+    "belongs" : "筑波技術大学",
+    "first" : 0
+  }, {
+    "presenid" : "P3-3",
+    "name" : "王 元元",
+    "belongs" : "京都産業大学",
+    "first" : 1
+  }, {
+    "presenid" : "P3-3",
+    "name" : "山下 涼介",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "P3-3",
+    "name" : "河合 由起子",
+    "belongs" : "京都産業大学",
+    "first" : 0
+  }, {
+    "presenid" : "P3-3",
+    "name" : "宮本 節子",
+    "belongs" : "兵庫県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "P3-3",
+    "name" : "角谷 和俊",
+    "belongs" : "兵庫県立大学",
+    "first" : 0
+  }, {
+    "presenid" : "P3-4",
+    "name" : "森下 雄太",
+    "belongs" : "大阪教育大",
+    "first" : 1
+  }, {
+    "presenid" : "P3-4",
+    "name" : "佐藤 隆士",
+    "belongs" : "大阪教育大",
+    "first" : 0
+  }, {
+    "presenid" : "P3-4",
+    "name" : "青木 真吾",
+    "belongs" : "大阪教育大",
+    "first" : 0
+  }, {
+    "presenid" : "P3-5",
+    "name" : "川元 杏珠",
+    "belongs" : "慶應義塾大学",
+    "first" : 1
+  }, {
+    "presenid" : "P3-5",
+    "name" : "清木 康",
+    "belongs" : "慶應義塾大学",
+    "first" : 0
+  }, {
+    "presenid" : "P3-6",
+    "name" : "林 佑明",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "P3-6",
+    "name" : "酒井 哲也",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "P4-1",
+    "name" : "小島 光平",
+    "belongs" : "神奈川工科大学",
+    "first" : 1
+  }, {
+    "presenid" : "P4-1",
+    "name" : "井上 拓馬",
+    "belongs" : "神奈川工科大学",
+    "first" : 0
+  }, {
+    "presenid" : "P4-1",
+    "name" : "村瀬 哲平",
+    "belongs" : "神奈川工科大学",
+    "first" : 0
+  }, {
+    "presenid" : "P4-1",
+    "name" : "蒔田 圭佑",
+    "belongs" : "神奈川工科大学大学院",
+    "first" : 0
+  }, {
+    "presenid" : "P4-1",
+    "name" : "大塚 真吾",
+    "belongs" : "神奈川工科大学",
+    "first" : 0
+  }, {
+    "presenid" : "P4-2",
+    "name" : "青木 孝文",
+    "belongs" : "神奈川工科大学",
+    "first" : 1
+  }, {
+    "presenid" : "P4-2",
+    "name" : "杉崎 洋祐",
+    "belongs" : "神奈川工科大学",
+    "first" : 0
+  }, {
+    "presenid" : "P4-2",
+    "name" : "山岸 佑多",
+    "belongs" : "神奈川工科大学",
+    "first" : 0
+  }, {
+    "presenid" : "P4-2",
+    "name" : "大塚 真吾",
+    "belongs" : "神奈川工科大学",
+    "first" : 0
+  }, {
+    "presenid" : "P4-3",
+    "name" : "田家 花純",
+    "belongs" : "工学院大学",
+    "first" : 1
+  }, {
+    "presenid" : "P4-3",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "P4-4",
+    "name" : "川嵜 雅央",
+    "belongs" : "京産大",
+    "first" : 1
+  }, {
+    "presenid" : "P4-4",
+    "name" : "赤崎 孝文",
+    "belongs" : "京産大",
+    "first" : 0
+  }, {
+    "presenid" : "P4-4",
+    "name" : "小川 剛史",
+    "belongs" : "ATR",
+    "first" : 0
+  }, {
+    "presenid" : "P4-4",
+    "name" : "鹿内 学",
+    "belongs" : "ATR",
+    "first" : 0
+  }, {
+    "presenid" : "P4-5",
+    "name" : "西脇 達也",
+    "belongs" : "工学院大学",
+    "first" : 1
+  }, {
+    "presenid" : "P4-5",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "D1-1",
+    "name" : "濱﨑 邦秀",
+    "belongs" : "法大",
+    "first" : 1
+  }, {
+    "presenid" : "D1-1",
+    "name" : "三浦 孝夫",
+    "belongs" : "法大",
+    "first" : 0
+  }, {
+    "presenid" : "D1-2",
+    "name" : "奥村 直也",
+    "belongs" : "法大",
+    "first" : 1
+  }, {
+    "presenid" : "D1-2",
+    "name" : "三浦 孝夫",
+    "belongs" : "法大",
+    "first" : 0
+  }, {
+    "presenid" : "D1-3",
+    "name" : "及川 将仁",
+    "belongs" : "産技高専",
+    "first" : 1
+  }, {
+    "presenid" : "D1-3",
+    "name" : "小早川 倫広",
+    "belongs" : "産技高専",
+    "first" : 0
+  }, {
+    "presenid" : "D1-4",
+    "name" : "堀内 佑城",
+    "belongs" : "理科大",
+    "first" : 1
+  }, {
+    "presenid" : "D1-4",
+    "name" : "輪島 幸治",
+    "belongs" : "産業技術大学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "D1-4",
+    "name" : "古川 利博",
+    "belongs" : "東京理科大学",
+    "first" : 0
+  }, {
+    "presenid" : "D1-5",
+    "name" : "鈴木 愛加",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "D1-5",
+    "name" : "関 洋平",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D1-6",
+    "name" : "加瀬 雄一朗",
+    "belongs" : "法大",
+    "first" : 1
+  }, {
+    "presenid" : "D1-6",
+    "name" : "三浦 孝夫",
+    "belongs" : "法大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-1",
+    "name" : "渡辺 知恵美",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "D2-1",
+    "name" : "今川 裕士",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-1",
+    "name" : "古谷 翔太",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-1",
+    "name" : "鄒 一民",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-1",
+    "name" : "万 姗姗",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-1",
+    "name" : "天笠 俊之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-1",
+    "name" : "木塚 あゆみ",
+    "belongs" : "未来大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-2",
+    "name" : "片岡 えり",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "D2-2",
+    "name" : "天笠 俊之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-2",
+    "name" : "Gass Franck",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-2",
+    "name" : "北川 博之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-3",
+    "name" : "横山 大作",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "D2-3",
+    "name" : "伊藤 正彦",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-3",
+    "name" : "豊田 正史",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-4",
+    "name" : "飯田 真也",
+    "belongs" : "nitech",
+    "first" : 1
+  }, {
+    "presenid" : "D2-4",
+    "name" : "立岩 佑一郎",
+    "belongs" : "nitech",
+    "first" : 0
+  }, {
+    "presenid" : "D2-4",
+    "name" : "山本 大介",
+    "belongs" : "nitech",
+    "first" : 0
+  }, {
+    "presenid" : "D2-4",
+    "name" : "高橋 直久",
+    "belongs" : "nitech",
+    "first" : 0
+  }, {
+    "presenid" : "D2-5",
+    "name" : "伊藤 正彦",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "D2-5",
+    "name" : "横山 大作",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-5",
+    "name" : "豊田 正史",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-6",
+    "name" : "三富　 恵佑",
+    "belongs" : "首都大",
+    "first" : 1
+  }, {
+    "presenid" : "D2-6",
+    "name" : "遠藤 雅樹",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-6",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大学",
+    "first" : 0
+  }, {
+    "presenid" : "D2-6",
+    "name" : "倉田 陽平",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-6",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "D2-6",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-1",
+    "name" : "今田 貴和",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "D3-1",
+    "name" : "守谷 一朗",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "D3-1",
+    "name" : "井上 祐輔",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-1",
+    "name" : "宇津呂 武仁",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-1",
+    "name" : "河田 容英",
+    "belongs" : "ログワークス",
+    "first" : 0
+  }, {
+    "presenid" : "D3-1",
+    "name" : "神門 典子",
+    "belongs" : "NII",
+    "first" : 0
+  }, {
+    "presenid" : "D3-2",
+    "name" : "廣田 洋平",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "D3-2",
+    "name" : "山本 岳洋",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-2",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-3",
+    "name" : "趙 耕弘",
+    "belongs" : "九大",
+    "first" : 1
+  }, {
+    "presenid" : "D3-3",
+    "name" : "角谷 和俊",
+    "belongs" : "兵庫県立大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-3",
+    "name" : "牛尼 剛聡",
+    "belongs" : "九大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-4",
+    "name" : "木村 湧志",
+    "belongs" : "工学院大学",
+    "first" : 1
+  }, {
+    "presenid" : "D3-4",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "D3-5",
+    "name" : "内田 臣了",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "D3-5",
+    "name" : "山本 岳洋",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-5",
+    "name" : "加藤 誠",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-5",
+    "name" : "大島 裕明",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-5",
+    "name" : "田中 克己",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-6",
+    "name" : "川本 淳平",
+    "belongs" : "九大",
+    "first" : 1
+  }, {
+    "presenid" : "D3-6",
+    "name" : "俵本  一輝",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-6",
+    "name" : "浅野  泰仁",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D3-6",
+    "name" : "吉川 正俊",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D4-1",
+    "name" : "伊藤 淳",
+    "belongs" : "NTT",
+    "first" : 1
+  }, {
+    "presenid" : "D4-1",
+    "name" : "宋 静",
+    "belongs" : "北大",
+    "first" : 0
+  }, {
+    "presenid" : "D4-1",
+    "name" : "戸田 浩之",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "D4-1",
+    "name" : "小池 義昌",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "D4-1",
+    "name" : "小山 聡",
+    "belongs" : "北大",
+    "first" : 0
+  }, {
+    "presenid" : "D4-2",
+    "name" : "吉次 優",
+    "belongs" : "岡大",
+    "first" : 1
+  }, {
+    "presenid" : "D4-2",
+    "name" : "新妻 弘崇",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "D4-2",
+    "name" : "太田 学",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "D4-3",
+    "name" : "中村 晃",
+    "belongs" : "名大",
+    "first" : 1
+  }, {
+    "presenid" : "D4-3",
+    "name" : "鈴木 優",
+    "belongs" : "NAIST",
+    "first" : 0
+  }, {
+    "presenid" : "D4-3",
+    "name" : "石川 佳治",
+    "belongs" : "名大",
+    "first" : 0
+  }, {
+    "presenid" : "D4-4",
+    "name" : "興梠 紗和",
+    "belongs" : "法政大",
+    "first" : 1
+  }, {
+    "presenid" : "D4-4",
+    "name" : "木村 昭悟",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "D4-4",
+    "name" : "藤代 裕之",
+    "belongs" : "法政大",
+    "first" : 0
+  }, {
+    "presenid" : "D4-4",
+    "name" : "西川 仁",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "D4-5",
+    "name" : "清水 翔太",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "D4-5",
+    "name" : "豊田 正史",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "D4-6",
+    "name" : "藤 一鶴",
+    "belongs" : "明大",
+    "first" : 1
+  }, {
+    "presenid" : "D4-6",
+    "name" : "疋田 輝雄",
+    "belongs" : "明大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-1",
+    "name" : "郭 元鎮",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "D5-1",
+    "name" : "岩井原 瑞穂",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-2",
+    "name" : "韓 笑琳",
+    "belongs" : "早大",
+    "first" : 1
+  }, {
+    "presenid" : "D5-2",
+    "name" : "王 任之",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-2",
+    "name" : "岩井原 瑞穂",
+    "belongs" : "早大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-3",
+    "name" : "生田 史織",
+    "belongs" : "慶大",
+    "first" : 1
+  }, {
+    "presenid" : "D5-3",
+    "name" : "遠山 元道",
+    "belongs" : "慶大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-4",
+    "name" : "Li Jiyi",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "D5-4",
+    "name" : "Shimizu Toshiyuki",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-4",
+    "name" : "Asano Yasuhito",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-4",
+    "name" : "Yoshikawa Masatoshi",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-5",
+    "name" : "河野 慎",
+    "belongs" : "東大",
+    "first" : 1
+  }, {
+    "presenid" : "D5-5",
+    "name" : "遠藤 結城",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "D5-5",
+    "name" : "戸田 浩之",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "D5-5",
+    "name" : "小池 義昌",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "D5-5",
+    "name" : "植田 一博",
+    "belongs" : "東大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-6",
+    "name" : "古堂 和音",
+    "belongs" : "北大",
+    "first" : 1
+  }, {
+    "presenid" : "D5-6",
+    "name" : "佐藤 晴彦",
+    "belongs" : "北大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-6",
+    "name" : "小山 聡",
+    "belongs" : "北大",
+    "first" : 0
+  }, {
+    "presenid" : "D5-6",
+    "name" : "栗原 正仁",
+    "belongs" : "北大",
+    "first" : 0
+  }, {
+    "presenid" : "D6-1",
+    "name" : "清水 祐弥",
+    "belongs" : "工学院大",
+    "first" : 1
+  }, {
+    "presenid" : "D6-1",
+    "name" : "小林 亜樹",
+    "belongs" : "工学院大",
+    "first" : 0
+  }, {
+    "presenid" : "D6-2",
+    "name" : "大西 洋",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "D6-2",
+    "name" : "田島 敬史",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "D6-3",
+    "name" : "柴田 秀哉",
+    "belongs" : "三菱電機",
+    "first" : 1
+  }, {
+    "presenid" : "D6-3",
+    "name" : "高山 茂伸",
+    "belongs" : "三菱電機",
+    "first" : 0
+  }, {
+    "presenid" : "D6-4",
+    "name" : "水野 陽平",
+    "belongs" : "阪大",
+    "first" : 1
+  }, {
+    "presenid" : "D6-4",
+    "name" : "岸田 吉弘",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "D6-4",
+    "name" : "荒瀬 由紀",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "D6-4",
+    "name" : "本庄 利守",
+    "belongs" : "NTT",
+    "first" : 0
+  }, {
+    "presenid" : "D6-4",
+    "name" : "鬼塚 真",
+    "belongs" : "阪大",
+    "first" : 0
+  }, {
+    "presenid" : "D6-5",
+    "name" : "中挾 晃介",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "D6-5",
+    "name" : "北川 博之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D6-5",
+    "name" : "Salman Ahmed Shaikh",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D6-5",
+    "name" : "天笠 俊之",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-1",
+    "name" : "清野 悠希",
+    "belongs" : "筑波大",
+    "first" : 1
+  }, {
+    "presenid" : "D7-1",
+    "name" : "佐藤 哲司",
+    "belongs" : "筑波大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-2",
+    "name" : "宮城 雄太",
+    "belongs" : "岡大",
+    "first" : 1
+  }, {
+    "presenid" : "D7-2",
+    "name" : "新妻 弘崇",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-2",
+    "name" : "太田 学",
+    "belongs" : "岡大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-3",
+    "name" : "藤森 雅人",
+    "belongs" : "静大",
+    "first" : 1
+  }, {
+    "presenid" : "D7-3",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-3",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-3",
+    "name" : "横山 昌平",
+    "belongs" : "静大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-4",
+    "name" : "安東 翔",
+    "belongs" : "慶應義塾大学",
+    "first" : 1
+  }, {
+    "presenid" : "D7-4",
+    "name" : "遠山 元道",
+    "belongs" : "慶應義塾大学",
+    "first" : 0
+  }, {
+    "presenid" : "D7-5",
+    "name" : "遠藤 雅樹",
+    "belongs" : "職業大、首都大",
+    "first" : 1
+  }, {
+    "presenid" : "D7-5",
+    "name" : "廣田 雅春",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-5",
+    "name" : "倉田 陽平",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-5",
+    "name" : "横山 昌平",
+    "belongs" : "静岡大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-5",
+    "name" : "大野 成義",
+    "belongs" : "職業大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-5",
+    "name" : "石川 博",
+    "belongs" : "首都大",
+    "first" : 0
+  }, {
+    "presenid" : "D7-6",
+    "name" : "出口 萌子",
+    "belongs" : "慶應大学",
+    "first" : 1
+  }, {
+    "presenid" : "D7-6",
+    "name" : "北 和人",
+    "belongs" : "慶應大学",
+    "first" : 0
+  }, {
+    "presenid" : "D7-6",
+    "name" : "遠山 元道",
+    "belongs" : "慶應大学",
+    "first" : 0
+  }, {
+    "presenid" : "D8-1",
+    "name" : "奥野 峻弥",
+    "belongs" : "早稲田大学",
+    "first" : 1
+  }, {
+    "presenid" : "D8-1",
+    "name" : "浅井 洋樹",
+    "belongs" : "早稲田大学",
+    "first" : 0
+  }, {
+    "presenid" : "D8-1",
+    "name" : "山名 早人",
+    "belongs" : "早稲田大学／国立情報学研究所",
+    "first" : 0
+  }, {
+    "presenid" : "D8-2",
+    "name" : "藤井 聡佳",
+    "belongs" : "お茶大",
+    "first" : 1
+  }, {
+    "presenid" : "D8-2",
+    "name" : "村瀬 勉",
+    "belongs" : "NEC",
+    "first" : 0
+  }, {
+    "presenid" : "D8-2",
+    "name" : "Lua Eng Keong",
+    "belongs" : "NECラボラトリーズシンガポール",
+    "first" : 0
+  }, {
+    "presenid" : "D8-2",
+    "name" : "小口 正人",
+    "belongs" : "お茶大",
+    "first" : 0
+  }, {
+    "presenid" : "D8-3",
+    "name" : "柘植 大",
+    "belongs" : "筑波大学",
+    "first" : 1
+  }, {
+    "presenid" : "D8-3",
+    "name" : "佐藤 哲司",
+    "belongs" : "筑波大学",
+    "first" : 0
+  }, {
+    "presenid" : "D8-4",
+    "name" : "鴨下 海人",
+    "belongs" : "工学院大学",
+    "first" : 1
+  }, {
+    "presenid" : "D8-4",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学",
+    "first" : 0
+  }, {
+    "presenid" : "D8-5",
+    "name" : "上里 和也",
+    "belongs" : "早稲田大学",
+    "first" : 1
+  }, {
+    "presenid" : "D8-5",
+    "name" : "浅井 洋樹",
+    "belongs" : "早稲田大学",
+    "first" : 0
+  }, {
+    "presenid" : "D8-5",
+    "name" : "奥野 峻弥",
+    "belongs" : "早稲田大学",
+    "first" : 0
+  }, {
+    "presenid" : "D8-5",
+    "name" : "山名 早人",
+    "belongs" : "早稲田大学,国立情報学研究所",
+    "first" : 0
+  }, {
+    "presenid" : "D8-6",
+    "name" : "今森 大地",
+    "belongs" : "京大",
+    "first" : 1
+  }, {
+    "presenid" : "D8-6",
+    "name" : "田島 敬史",
+    "belongs" : "京大",
+    "first" : 0
+  }, {
+    "presenid" : "X1-1",
+    "name" : "泥田米須",
+    "belongs" : "-",
+    "first" : 1
+  }, {
+    "presenid" : "X1-2",
+    "name" : "泥田米須",
+    "belongs" : "-",
+    "first" : 1
+  }, {
+    "presenid" : "X1-3",
+    "name" : "泥田米須",
+    "belongs" : "-",
+    "first" : 1
+  }, {
+    "presenid" : "X1-4",
+    "name" : "泥田米須",
+    "belongs" : "-",
+    "first" : 1
+  }, {
+    "presenid" : "X1-5",
+    "name" : "泥田米須",
+    "belongs" : "-",
+    "first" : 1
+  }
+   ];
 
 keyword = 
-[
-{"presenid":"A1-1","keyword":"固有表現抽出, 新出語,HYENA"},
-{"presenid":"A1-2","keyword":"Temporal Image Retrieval, Historical Importance, Wikipedia"},
-{"presenid":"A1-3","keyword":"Wikipedia, text summarization, text mining\n"},
-{"presenid":"A1-4","keyword":"XML 情報検索，部分文書検索，Web 文書，構造整形，サブコンテンツ，フィルタ"},
-{"presenid":"A1-5","keyword":"XML Streams, Keyword Search, XPath, Xquery"},
-{"presenid":"B1-1","keyword":"配信型授業, コミュニケーション, e-ラーニング"},
-{"presenid":"B1-2","keyword":"マイクロブログ，SNS，Twitter，コミュニケーション"},
-{"presenid":"B1-3","keyword":"Web マイニング，ソーシャルネットワーク，経路探索，テキストマイニング"},
-{"presenid":"B1-4","keyword":"ソーシャルネットワーク，影響最大化問題，バイラルマーケティング"},
-{"presenid":"B1-5","keyword":"Micro Blog, Twitter, User Recommendation, Random Walk"},
-{"presenid":"C1-1","keyword":"Knowledge Base, Metadata, Domain-Specific, Relation Extraction"},
-{"presenid":"C1-2","keyword":"検索エンジン・サジェスト, 観点, Wikipedia, 集約, 俯瞰"},
-{"presenid":"C1-3","keyword":"因果関係, 可視化, Web マイニング"},
-{"presenid":"C1-4","keyword":"未来情報検索, 時間情報分析, 知識獲得, テキストマイニング"},
-{"presenid":"C1-5","keyword":"NULL"},
-{"presenid":"C1-6","keyword":"情報検索, タスク検索"},
-{"presenid":"A2-1","keyword":"GPU, 並列ソート, サンプルソート, マージソート"},
-{"presenid":"A2-2","keyword":"Hardware Acceleration，MapReduce，Many-core，Hadoop"},
-{"presenid":"A2-3","keyword":"OoODE，データベースエンジン，アウトオブオーダ型実行，フラッシュストレージ，クエリ処理"},
-{"presenid":"A2-4","keyword":"アウトオブオーダ型実行，並列データ処理，並列問合せ処理，大規模データ解析，Hadoop"},
-{"presenid":"A2-5","keyword":"電気自動車，車載センサ，センサデータベース，消費エネルギー推定，走行ログ，精度評価，GPS，ス\nマートフォン"},
-{"presenid":"B2-1","keyword":"ウェアラブルカメラ，プライバシー侵害，SNS，ビデオ投稿，感情分析，特徴分析"},
-{"presenid":"B2-2","keyword":"能性算出モデルを検討する．\nキーワード ソ"},
-{"presenid":"B2-3","keyword":"Twitter，ソーシャルグラフ，プロフィール推定"},
-{"presenid":"B2-4","keyword":"マイクロブログ，投稿活動，時系列，クラスタリング"},
-{"presenid":"B2-5","keyword":"スマートフォン, アプリケーション, コンテキスト"},
-{"presenid":"B2-6","keyword":"Twitter，ナップサック問題，情報フィルタリング"},
-{"presenid":"C2-1","keyword":"Web ページ構造解析、非主要部分特定、決定木学習"},
-{"presenid":"C2-2","keyword":"NoSQL データベース 管理ツール DB システム開発"},
-{"presenid":"C2-3","keyword":"多次元ツリー、OLAP、ファイル整理ツール"},
-{"presenid":"C2-4","keyword":"ロボット，Web，漫才台本自動生成，対立語\n"},
-{"presenid":"C2-5","keyword":"クエリ修正，質問提示，対話的情報検索\n"},
-{"presenid":"B3-1","keyword":"ローカル語, マイクロブログ, 位置推定, 経時変化, 逐次学習\n"},
-{"presenid":"B3-2","keyword":"データマイニング，ウェブマイニング，マイクロブログ，イベント抽出"},
-{"presenid":"B3-3","keyword":"マイクロブログ，Twitter，地域情報，地域ユーザ検索"},
-{"presenid":"B3-4","keyword":"マイクロブログ, Twitter, ユーザ体験, 特徴語辞書, 時空間連続性, 共起関係"},
-{"presenid":"B3-5","keyword":"Twitter，二輪車ナビゲーション，遷移確率行列"},
-{"presenid":"B3-6","keyword":"Twitter，ベイジアンフィルタ，クラスタリング，原因推定・状況把握"},
-{"presenid":"C3-1","keyword":"英語形容詞の語順、検索エンジン, 形容詞の配列ルール"},
-{"presenid":"C3-2","keyword":"手順文章, レシピ, 意味構造, 自然言語処理"},
-{"presenid":"C3-3","keyword":"テキストマイニング 特徴選択 条件付き連語"},
-{"presenid":"C3-4","keyword":"ブログマイニング, ブロガー先読み度, 流行語発見"},
-{"presenid":"C3-5","keyword":"トピックモデリング，文書分類，構文解析"},
-{"presenid":"C3-6","keyword":"知識獲得，情報抽出，テキストマイニング"},
-{"presenid":"A4-1","keyword":"コミュニケーション，写真管理，ランキング，RWR，情報推薦"},
-{"presenid":"A4-2","keyword":"exploratory search, browsing behavior, presentation contents, interactive poster"},
-{"presenid":"A4-3","keyword":"スマートフォン，SNS，ストリームコンテンツ，協調フィルタリング，振る舞い，読み飛ばし"},
-{"presenid":"A4-4","keyword":"うつ，闘病記，SNS，ソーシャルメディア，言語処理，医療情報"},
-{"presenid":"A4-5","keyword":"電子ドキュメント，手書き，アノテーション"},
-{"presenid":"B4-1","keyword":"Twitter,シミュレーション,大規模グラフ,ソーシャルネットワーク"},
-{"presenid":"B4-2","keyword":"Twitter，観光，情報推薦"},
-{"presenid":"B4-3","keyword":"災害情報，行動推定，情報推薦，協調フィルタリング"},
-{"presenid":"B4-4","keyword":"ユーザ評価，レビュー，Foursquare"},
-{"presenid":"B4-5","keyword":"Twitter，シミュレーション，大規模グラフ，ソーシャル・ネットワーク"},
-{"presenid":"B4-6","keyword":"マイクロブログ，Twitter，情報拡散，ソーシャルネットワーク"},
-{"presenid":"C4-1","keyword":"Twitter，実生活，LDA，階層的推定法，マルチラベル分類"},
-{"presenid":"C4-2","keyword":"Twitter，トピックモデル，LDA 法，相関係数検定，トピックの同定，トピックの変遷"},
-{"presenid":"C4-3","keyword":"Emerging topic, ローカルクラスタリング, トピックモデル, NMF, クエリ依存"},
-{"presenid":"C4-5","keyword":"潜在トピックモデル, 関係トピックモデル, マルチモーダルデータ, 多言語データ,MedLDA"},
-{"presenid":"C4-6","keyword":"カテゴリ階層，階層的トピックモデル，nested Chinese Restaurant Process"},
-{"presenid":"A5-1","keyword":"マイクロブログ，Twitter，流言，デマ，自然言語処理"},
-{"presenid":"A5-2","keyword":"Twitter, 言語横断検索, ジャーナリズム, Wikipedia, Explicit Semantic Analysis, クラスタリング"},
-{"presenid":"A5-3","keyword":"Accuracy, c-statistics, dimensional reduction, f1-score, Facebook, kappa, motivations of using SNS."},
-{"presenid":"A5-4","keyword":"ソーシャルメディア，モバイルクラウドソージング，インセンティブデザイン，社会性"},
-{"presenid":"A5-5","keyword":"県民性，パーソナリティ，地理的クラスタリング，Twitter，位置ベース SNS"},
-{"presenid":"B5-1","keyword":"レビュー, 有用性, SVM"},
-{"presenid":"B5-2","keyword":"レビュー, 信頼性評価, スパム"},
-{"presenid":"B5-3","keyword":"自然言語処理、要約、キュレーション、SNS、Twitter"},
-{"presenid":"B5-4","keyword":"Sentiment analysis, Twitter, reviews, multi-cultural\nbackgrounds"},
-{"presenid":"B5-5","keyword":"自然言語処理,情報推薦,ランク付け"},
-{"presenid":"B5-6","keyword":"テキストマイニング，Twitter，情報抽出，評判情報"},
-{"presenid":"C5-1","keyword":"共引用テキスト，関係抽出，共引用分析"},
-{"presenid":"C5-2","keyword":"情報抽出，機械学習，学術論文"},
-{"presenid":"C5-3","keyword":"情報抽出，CRF，電子図書館，参考文献"},
-{"presenid":"C5-4","keyword":"メタデータの統合，MediaWiki，名寄せ，情報修正，クラウドソーシング"},
-{"presenid":"C5-5","keyword":"情報抽出，CRF，参考文献文字列，能動学習"},
-{"presenid":"C5-6","keyword":"オープンアクセス・ジャーナル，時系列データ，Dynamic Time Warping，クラスタリング，BIRCH"},
-{"presenid":"B6-1","keyword":"Twitter Mining, Sport Event, Summary Generation"},
-{"presenid":"B6-2","keyword":"マイクロブログ，Twitter，クエリ提示"},
-{"presenid":"B6-3","keyword":"Twitter，意外性，ユーザ分析，テキストマイニング"},
-{"presenid":"B6-4","keyword":"マイクロブログ，情報抽出，実世界観測情報，単語間関係"},
-{"presenid":"B6-5","keyword":"Twitter，ユーザ反応，テキスト分類"},
-{"presenid":"B6-6","keyword":"Twitter，食品，シズルワード"},
-{"presenid":"C6-1","keyword":"意見抽出, 発言者, 引用意見"},
-{"presenid":"C6-2","keyword":"テキスト分類，共起行列，ランダムフォレスト"},
-{"presenid":"C6-3","keyword":"音声対話エージェント，マルチクラス分類，教師あり学習"},
-{"presenid":"C6-4","keyword":"強化学習，アルゴリズム，行動選択"},
-{"presenid":"C6-5","keyword":"相関分析，バスケット分析，データ生成，実データらしさ，頻出パターン"},
-{"presenid":"C6-6","keyword":"タブレット端末，手書き，HCI，記憶"},
-{"presenid":"B7-1","keyword":"Twitter，ハブ度，hub，情報源発見能力，影響力，グラフ構造"},
-{"presenid":"B7-2","keyword":"ソーシャルビューイング、共感、??、?N?、クラスタリング"},
-{"presenid":"B7-3","keyword":"Twitter、アドホックフォローネットワーク、情報共有"},
-{"presenid":"B7-4","keyword":"Twitter，クラスタリング，プロファイリング"},
-{"presenid":"B7-5","keyword":"記事統合，イベント発見，ブログ，マイクロブログ，Hamazo，Twitter"},
-{"presenid":"C7-1","keyword":"数式検索，木構造索引付け，pq-gram，MathML"},
-{"presenid":"C7-2","keyword":"近似検索, ストリームデータ 変動する検索語"},
-{"presenid":"C7-3","keyword":"類似検索，ピボット法，マンハッタン，ユークリッド"},
-{"presenid":"C7-4","keyword":"問合せ処理, 距離索引, 逆遠方検索"},
-{"presenid":"A8-1","keyword":"意外性, オブジェクト集合, 知識抽出"},
-{"presenid":"A8-2","keyword":"adjacency relationships, context cognition"},
-{"presenid":"A8-3","keyword":"グラフ，ソーシャルネットワーク，ウェブグラフ，最短経路クエリ"},
-{"presenid":"A8-4","keyword":"メタデータ推定，ジオタグ付き写真，Flickr"},
-{"presenid":"A8-5","keyword":"観光情報処理, 旅行ガイドブック, ブログ, 質問応答コンテンツ"},
-{"presenid":"B8-1","keyword":"Twitter，ハッシュタグ，folksonomy，フォクソノミー，構造化，情報推薦"},
-{"presenid":"B8-2","keyword":"情報推薦，人間関係，パーソナライゼーション"},
-{"presenid":"B8-3","keyword":"意味概念, キーフ レ ーズ抽出, ク エリ 拡張"},
-{"presenid":"B8-4","keyword":"情報推薦，トピック，多様性"},
-{"presenid":"B8-5","keyword":"情報推薦，コンテキストアウェア情報推薦，ユーザコンテキスト，ハイブリッド型推薦，コールドスター\nト問題"},
-{"presenid":"B8-6","keyword":"協調検索，ユーザインタフェース，可視化，クエリ推薦"},
-{"presenid":"C8-1","keyword":"Web IndeX 、Web 情報システム、Web スクレイピング、コンテンツ"},
-{"presenid":"C8-2","keyword":"Web Index, Web 情報システム, Web, Web コンテンツ, ハイパーリンク"},
-{"presenid":"C8-3","keyword":"Web Index, Web 情報システム, Web, データマイニング, 情報抽出"},
-{"presenid":"C8-4","keyword":"履歴，ブックマーク，再検索，再発見"},
-{"presenid":"C8-5","keyword":"電子メール, RMX"},
-{"presenid":"C8-6","keyword":"Google ストリートビュー, マッシュアップ, GPS, Exif 情報"},
-{"presenid":"A9-1","keyword":"文書ストリーム，トピックモデル，マルチラベル分類"},
-{"presenid":"A9-2","keyword":"トピックモデル，フレーズ抽出，階層型隠れマルコフモデル"},
-{"presenid":"A9-3","keyword":"トピックモデル，感情極性分類，顧客関係管理，潜在的ディリクレ配分法，テキストマイニング"},
-{"presenid":"A9-4","keyword":"階層的分類，ランク付集合ラベル，ラベル集合の順序，データの指定"},
-{"presenid":"B9-1","keyword":"情報推薦，ソーシャルブックマーク，Wikipedia"},
-{"presenid":"B9-2","keyword":"複数人 Web 検索，検索行動，嗜好推定，意見集約"},
-{"presenid":"B9-3","keyword":"Online shopping, A recommender system, Category structures"},
-{"presenid":"B9-4","keyword":"ニュース 差異分析　バイアス　ランキング"},
-{"presenid":"B9-5","keyword":"地球科学，分野連携，タグ，検索語，推薦，メタデータ"},
-{"presenid":"B9-6","keyword":"情報推薦，経路探索，差異増幅アルゴリズム，カーナビゲーション"},
-{"presenid":"C9-1","keyword":"モバイルネットワーク，無線通信，性能評価"},
-{"presenid":"C9-2","keyword":"無線 LAN, チャネル, 干渉, 競合，チャネル割当"},
-{"presenid":"C9-3","keyword":"SDN，QoS 制御，OpenFlow，参加型センシング"},
-{"presenid":"C9-4","keyword":"マルチホップネットワーク，無線 LAN，接続先選択，スループット"},
-{"presenid":"C9-5","keyword":"無線 LAN，通信品質，Qos干渉"},
-{"presenid":"C9-6","keyword":"SDN，OpenFlow，トラフィックエンジニアリング"},
-{"presenid":"P1-1","keyword":"Twitter，ユーザモデリング，印象マイニング，Sentiment Analysis，つながり構築支援"},
-{"presenid":"P1-2","keyword":"Twitter, YouTube, ブログ, テキストマイニング, イベント開催支援"},
-{"presenid":"P1-3","keyword":"ブロブマイニング, 流行語分析"},
-{"presenid":"P1-4","keyword":"ブログマイニング，ブロガーコミュニティ判定，トピック推定"},
-{"presenid":"P1-5","keyword":"旅行，画像，自動要約，ブログ"},
-{"presenid":"P2-1","keyword":"ラフ集合, 　洋服推薦システム"},
-{"presenid":"P2-2","keyword":"NULL"},
-{"presenid":"P2-3","keyword":"レシピ推薦，レシピ類似度判定，特徴ベクトル抽出，メタデータ付与"},
-{"presenid":"P2-4","keyword":"ナビゲーション利用履歴, 差異増幅アルゴリズム, 集合知"},
-{"presenid":"P2-5","keyword":"ビッグデータ，マイニング，ライフログ"},
-{"presenid":"P3-1","keyword":"テレビ番組，地理的メタデータ，時間的関係，地理的関係，ストリートビュー"},
-{"presenid":"P3-2","keyword":"測域センサ、情報可視化、データ解析"},
-{"presenid":"P3-3","keyword":"クエリ生成，web 検索，グラフインタフェース"},
-{"presenid":"P3-4","keyword":"農業支援、Web サイト構築、ネット販売"},
-{"presenid":"P3-5","keyword":"disaster response, evacuation information, dissemination processes, e-mail"},
-{"presenid":"D1-1","keyword":"分散並列処理，     ，分散    ，                ，通信データ量"},
-{"presenid":"D1-2","keyword":"大規模分散処理, MapReduce, データマイニング, 行列分解"},
-{"presenid":"D1-3","keyword":"MapReduce, Hadoop, 列指向ストレージ\n"},
-{"presenid":"D1-4","keyword":"分散ファイルシステム，HDFS，レプリカ再配置，ノード削除"},
-{"presenid":"D1-5","keyword":"Hadoop，PostgreSQL，バルクロード，圧縮"},
-{"presenid":"D1-6","keyword":"Hadoop,MapReduce, 時系列画像, 相関分析, 気象画像, 分散データマイニング"},
-{"presenid":"D2-1","keyword":"省電力，ストレージ，データインテンシブアプリケーション，性能評価，TPC-H\n"},
-{"presenid":"D2-2","keyword":"分散 Key-Value ストア, Skip Graph, 線形ハッシュ法, 範囲検索"},
-{"presenid":"D2-3","keyword":"パケットキャプチャ, セッション検索, 分散オブジェクトストレージ"},
-{"presenid":"D2-4","keyword":"OoODE，アウトオブオーダ型，データベースエンジン，フラッシュメモリ，省電力モード"},
-{"presenid":"D2-5","keyword":"Pub/Sub，オーバーレイネットワーク，エージェント移動　　 Overay netowork，Agent migration"},
-{"presenid":"D2-6","keyword":"P2P，画像検索，エージェント"},
-{"presenid":"D3-1","keyword":"ストリーム処理エンジン，OLAP 処理\n"},
-{"presenid":"D3-2","keyword":"Stream processing engine，Designated event-based processing"},
-{"presenid":"D3-3","keyword":"ee"},
-{"presenid":"D3-4","keyword":"オンライン機械学習，情報抽出\n"},
-{"presenid":"D3-5","keyword":"データストリーム管理システム，クエリ処理効率化，リアルタイム，車載システム，RTOS\n"},
-{"presenid":"D3-6","keyword":"分散データベース、クラウドコンピューティング\n"},
-{"presenid":"D4-1","keyword":"スパイク系列，mCI カーネル，van Rossum 距離"},
-{"presenid":"D4-2","keyword":"時系列データ，特徴自動抽出\n"},
-{"presenid":"D4-3","keyword":"多変量外れ値検出，MSD，エントロピー　　　 Multivariate Outlier Detection，MSD，Entropy"},
-{"presenid":"D4-4","keyword":"時系列パターンマイニング，継続時間，時間間隔，マルチ最小サポート\n"},
-{"presenid":"D4-5","keyword":"時系列データ解析，医療データ\n"},
-{"presenid":"D4-6","keyword":"近赤外光，脳血流量，経時的変化"},
-{"presenid":"D5-1","keyword":"不確実時系列データ，時系列データマイニング，GPGPU"},
-{"presenid":"D5-2","keyword":"spike train distance, coupled escape rate model, kernel methods, multichannel spike trains, neuronal coding"},
-{"presenid":"D5-3","keyword":"K-SVD，スパース符号化，ブラインド信号源分離，辞書学習，自動採譜\n"},
-{"presenid":"D5-4","keyword":"データクラスタリング, Canopy クラスタリング, GPU"},
-{"presenid":"D5-5","keyword":"クラスタリング, クラスタラベリング, SVM, 情報利得, リサーチマイニング\n"},
-{"presenid":"D6-1","keyword":"算術符号，ウェブグラフ，圧縮"},
-{"presenid":"D6-2","keyword":"グラフ，クラスタリング，コミュニティ抽出"},
-{"presenid":"D6-3","keyword":"グラフマイニング, リコメンデーション, エンティティネットワーク"},
-{"presenid":"D6-4","keyword":"PageRank，推定，リンク構造解析，データマイニング，情報検索\n"},
-{"presenid":"D6-5","keyword":"経路索引, 全対最短経路, 経路コヒーレンス, 道路網, グラフ\n"},
-{"presenid":"D6-6","keyword":" 経路スカイライン，経路探査, グラフ，ボロノイ領域, モバイルアプリ"},
-{"presenid":"D7-1","keyword":"オープンデータ，地方公共団体，web マイニング，クラスタリング，LOD"},
-{"presenid":"D7-2","keyword":"Linked Open Data，ビュー，LINQ，JSON"},
-{"presenid":"D7-3","keyword":"XML，XPath，並列処理"},
-{"presenid":"D7-4","keyword":"XML，キーワード検索，SLCA，トライ木"},
-{"presenid":"D7-5","keyword":"XML, 部分木マッチング, 類似検索, 木編集距離\n"},
-{"presenid":"D8-1","keyword":"列指向 DB，実行計画，データ圧縮"},
-{"presenid":"D8-2","keyword":"大規模データベース，マルチデータベースシステム，データ仮想化，処理データサイズ推定\n"},
-{"presenid":"D8-3","keyword":"データ新鮮度，キャッシュ，データベース\n"},
-{"presenid":"D8-4","keyword":"OoODE，アウトオブオーダ型，データベースエンジン，結合方式，処理時間見積り\n"},
-{"presenid":"D8-5","keyword":"OoODE，アウトオブオーダ型，データベースエンジン，TPC-H，ベンチマーク\n"},
-{"presenid":"D8-6","keyword":" リレーショナルデータベース, 結合演算, OLAP, SSD"},
-{"presenid":"D9-1","keyword":"行列計算，ベクトル計算，機械学習，情報検索，圧縮，組み合わせ最適化"},
-{"presenid":"D9-2","keyword":"Objects Tracking，Particle filter，3D，GPU"},
-{"presenid":"D9-3","keyword":" 脳波，簡易脳波計測器，意図抽出\n"},
-{"presenid":"D9-4","keyword":"多次元データ, 保守業務, 分析支援, OLAP, 層別分析"},
-{"presenid":"D9-5","keyword":"ハイブリッドクラウド，データベース同期"},
-{"presenid":"D9-6","keyword":"SuperSQL, SQL, window function\n"},
-{"presenid":"E1-1","keyword":"消費電力可視化，エネルギーマネジメント，データベース，ユビキタス環境，状況タグ付け，電力タイムライン"},
-{"presenid":"E1-2","keyword":"情報の可視化，情報検索，インタラクション"},
-{"presenid":"E1-3","keyword":"Flickr，GIS，可視化，User Generated Content(UGC)"},
-{"presenid":"E1-4","keyword":"可視化, 月地震, Hadoop"},
-{"presenid":"E1-5","keyword":"Twitter，可視化，ユーザインタフェース"},
-{"presenid":"E1-6","keyword":"移動軌跡, マイニング, スポーツ, 戦略分析, 可視化\n"},
-{"presenid":"E2-1","keyword":"創造性, 拡散的思考, n-gram, 発想支援\n"},
-{"presenid":"E2-2","keyword":"ヒューマンコンピュテーション, プログラミング環境, 実世界プログラミング\n"},
-{"presenid":"E2-3","keyword":"クラウドソーシング，変換，最適化"},
-{"presenid":"E2-4","keyword":"クラウドソーシング"},
-{"presenid":"E2-5","keyword":"クラウドソーシング，EM アルゴリズム，ラベリング精度，スパマー，既知ラベル"},
-{"presenid":"E3-1","keyword":"携帯端末，カメラ，モーションブラー"},
-{"presenid":"E3-2","keyword":"WEB マップ，モバイル端末，フリック入力\n"},
-{"presenid":"E3-3","keyword":"HCI，閲覧支援，学術論文閲覧インタフェース"},
-{"presenid":"E3-4","keyword":"手書き認識，テキスト入力\n"},
-{"presenid":"E3-5","keyword":"SQL, SuperSQL, Swing, GUI, IDE, Java, JavaFX"},
-{"presenid":"E3-6","keyword":"Wiki，Assurance Cases，GSN"},
-{"presenid":"E4-1","keyword":"ジオタグ，ソーシャルタギング，GIS\n"},
-{"presenid":"E4-2","keyword":"Travel Route マイニング, 情報抽出, Flickr"},
-{"presenid":"E4-3","keyword":"関心領域，撮影スポット，撮影方向付き写真，Flickr"},
-{"presenid":"E4-4","keyword":"位置情報，確率モデル, ソーシャルメディア，情報配信"},
-{"presenid":"E4-5","keyword":" オントロジー, Linked Open Data, LBSN, イベント処理"},
-{"presenid":"E4-6","keyword":"曖昧な位置情報, 空間問合せ, 索引構造"},
-{"presenid":"E5-1","keyword":"匿名化, クラスタリング, プライバシー保護"},
-{"presenid":"E5-2","keyword":"階層的 k-匿名化，特殊化，分類"},
-{"presenid":"E5-3","keyword":"動的データテーブル，挿入，削除，m-不変性"},
-{"presenid":"E5-4","keyword":"Privacy，Social network，k-Anonymity\n"},
-{"presenid":"E5-5","keyword":"データベース, プライバシ保護, 匿名化"},
-{"presenid":"E6-1","keyword":"Twitter，感情抽出，時系列，特有表現"},
-{"presenid":"E6-2","keyword":"感情抽出, Twitter, 顔文字"},
-{"presenid":"E6-3","keyword":"Twitter，情報抽出，コミュニケーション表現"},
-{"presenid":"E6-4","keyword":"顔文字, 感情推定, Twitter, ツイート"},
-{"presenid":"E6-5","keyword":"Web 検索，感情分析，可視化"},
-{"presenid":"E6-6","keyword":"評判分析， 情報抽出， 構文解析"},
-{"presenid":"E7-1","keyword":"災害，Web アプリケーション，DTN，メッセージフェリー，Android\n"},
-{"presenid":"E7-2","keyword":"クラウドコンピューティングシステム, モバイル端末, クラウドサービス, 分散システム, サービ\nスアプリケーション, 防災, 減災"},
-{"presenid":"E7-3","keyword":"コンテキスト・コンピューティング，情報共有，情報の個人化，社会知能，RDF"},
-{"presenid":"E7-4","keyword":"アシュアランス・ケース，ログ，モニタリング"},
-{"presenid":"E7-5","keyword":"リスク, 言語パターン, トラブル, データマイニング"},
-{"presenid":"E8-1","keyword":"スマートフォン，省電力，Android，インテント\n"},
-{"presenid":"E8-2","keyword":"アドホックネットワーク，Top-k 検索，データ差替え攻撃，グルーピング\n"},
-{"presenid":"E8-3","keyword":" WLAN   ，モバイルルータ，干渉， QoS  ，公平性制御"},
-{"presenid":"E8-4","keyword":"センシング，空間データベース，インデクシング"},
-{"presenid":"E8-5","keyword":"Android, モバイル端末, Thick/Thin クライアント, 制御機能"},
-{"presenid":"E8-6","keyword":"コンテキスト，TCP，輻輳制御方式，WLAN，モバイル通信，公平性\n"},
-{"presenid":"E9-1","keyword":"Web マップ，Focus+Glue+Context マップ，幾何学\n"},
-{"presenid":"E9-2","keyword":"観光情報，キーワード抽出，Web マイニング"},
-{"presenid":"E9-3","keyword":"ビッグデータ，観光エリア，移動履歴，ランキング手法，旅行情報\n"},
-{"presenid":"E9-4","keyword":"ナビゲーション, ランドマーク，可視性，経路探索，遺伝的アルゴリズム"},
-{"presenid":"E9-5","keyword":"経路探索，情報推薦，滞在時間，オブジェクト間の関係\n"},
-{"presenid":"E9-6","keyword":"軌跡分割，ライフログ，ランドマーク，Flickr"},
-{"presenid":"F1-1","keyword":"プログラム自動評価, 教育学習支援システム\n"},
-{"presenid":"F1-2","keyword":"対応付け， 論文， プレゼンテーションスライド\n"},
-{"presenid":"F1-3","keyword":"PowerPoint，OpenXML，図形検索"},
-{"presenid":"F1-4","keyword":"e-learning，添削，理解箇所判定，プロダクションルール，仮想生徒"},
-{"presenid":"F1-5","keyword":"教育工学, ファカルティ・ディベロップメント, センサ"},
-{"presenid":"F1-6","keyword":"プレゼンテーションスライド\n"},
-{"presenid":"F2-1","keyword":"ソーシャルボタン機能，情報工学実験，ランキング，情報推薦"},
-{"presenid":"F2-2","keyword":"SQL, e-ラーニング, 学習システム, 学習支援\n"},
-{"presenid":"F2-3","keyword":"Web，エミュレータ，教育\n"},
-{"presenid":"F2-4","keyword":"動植物コンテンツ，生態系，フィールドワーク，自然環境，パーソナライゼーション"},
-{"presenid":"F2-5","keyword":"デジタルアーカイブ，文化財データベース，情報検索，情報推薦，感性情報，高臨場感\n"},
-{"presenid":"F2-6","keyword":"時系列データマイニング, ニュースアーカイブ, 歴史的事象\n"},
-{"presenid":"F3-1","keyword":"企業間取引ネットワーク，付加量率，パラメータ推定，EM アルゴリズム\n"},
-{"presenid":"F3-2","keyword":"因果関係, 投資, 比較"},
-{"presenid":"F3-3","keyword":"オンライン広告，機械学習，統計モデル\n"},
-{"presenid":"F3-4","keyword":"オンライン広告, コンバージョン率，CVR 予測, 機械学習, 統計モデル"},
-{"presenid":"F3-5","keyword":"購買履歴，ライフスタイル，ランダムフォレスト，店舗クラスタ"},
-{"presenid":"F3-6","keyword":"情報推薦, 情報フィルタリング, BI\n"},
-{"presenid":"F4-1","keyword":"Web コンテンツ, 情報信頼性, 動向情報, テレビ番組, 図表画像\n"},
-{"presenid":"F4-2","keyword":"ユーザコメント，評価表現，共有動画，シーン抽出\n"},
-{"presenid":"F4-3","keyword":"動画ナビゲーション，ニコニコ動画，コメント，要約\n"},
-{"presenid":"F4-4","keyword":" 遠隔カメラ, 類似判定, 動画転送方法"},
-{"presenid":"F4-5","keyword":"ライフログ，表情認識，映像検索，教師なし学習，クラスタリング"},
-{"presenid":"F4-6","keyword":"多次元空間計量，コンテクスト分析，イベント情報"},
-{"presenid":"F5-1","keyword":"アセンブリ構造，3 次元モデル，投影データ"},
-{"presenid":"F5-2","keyword":"拡張現実 UI，3 次元 CG，動植物コンテンツ，Web サービス，データ配信"},
-{"presenid":"F5-3","keyword":"二次元スケッチ画像，三次元物体，類似検索，特徴抽出\n"},
-{"presenid":"F5-4","keyword":"Local Binary Pattern, Gradient Local Auto-Correlations, 画像認識, 画像分類, 勾配, 局所特徴量"},
-{"presenid":"F5-5","keyword":"ROI 抽出, 領域分割, 画像図形処理, 地図応用"},
-{"presenid":"F5-6","keyword":"画像検索，ファセット，ファセット多様性"},
-{"presenid":"F6-1","keyword":"情報検索, アクセスログ, 診療文書, HITS"},
-{"presenid":"F6-2","keyword":"データマイニング, シーケンシャルパターンマイニング, 電子カルテ, クリニカルパス\n"},
-{"presenid":"F6-3","keyword":"大規模データ，MRI 画像，認知機能検査，認知症，早期診断\n"},
-{"presenid":"F6-4","keyword":"個人健康管理システム 健康データマイニング 時系列データ解析"},
-{"presenid":"F6-5","keyword":"医学画像処理，PET，CT"},
-{"presenid":"F7-1","keyword":"時系列データマイニング, ニュースアーカイブ, 歴史的事象"},
-{"presenid":"F7-2","keyword":"印象，根拠，関連語抽出，Web マイニング，PageRank"},
-{"presenid":"F7-4","keyword":"SNS， 相互扶助， 実空間"},
-{"presenid":"F8-1","keyword":"レシピ推薦，SVM，内容分析"},
-{"presenid":"F8-2","keyword":"レシピ選別， 可視化手法， 階層的クラスタリング\n"},
-{"presenid":"F8-4","keyword":"Modifiers, Cooking Recipe, Naming Concepts.\n"},
-{"presenid":"F8-5","keyword":"ブログ, レシピ, 料理, 周辺情報の抽出"},
-{"presenid":"F8-6","keyword":"酷似レシピ抽出，クラスタリング，GibbsLDA++，Repeated Bisection\n"},
-{"presenid":"F9-1","keyword":"SNS，音声ブラウジング，飛?し読み，ソーシャルストリーム"},
-{"presenid":"F9-2","keyword":"精神テンポ, パーソナライズ"},
-{"presenid":"F9-3","keyword":"情報検索, クラシック音楽, LDA, Labeled LDA"},
-{"presenid":"F9-4","keyword":"音楽情報処理，楽曲検索，音楽指紋，接尾辞配列"},
-{"presenid":"F9-5","keyword":"??????s??t③?????????????④⑤??P④⑤??s?t?????"},
-{"presenid":"F9-6","keyword":"ニコニコ動画，ランキング，統計モデル，Z-score，時系列分析"},
-{"presenid":"P4-1","keyword":"旅行ブログエントリ，文書分類，地図，多言語"},
-{"presenid":"P4-2","keyword":"イベント情報，動画，ブログ，マッピング"},
-{"presenid":"P4-3","keyword":"情報集約，スマートスクラップブック，観光情報，検索行動パターン"},
-{"presenid":"P4-4","keyword":"ユーザ嗜好抽出，電子チラシ，実店舗行動"},
-{"presenid":"X3-8","keyword":"ダミーポスター"},
-{"presenid":"X3-9","keyword":"ダミーポスター"},
-{"presenid":"X3-10","keyword":"ダミーポスター"},
-{"presenid":"X3-11","keyword":"ダミーポスター"},
-{"presenid":"X3-12","keyword":"ダミーポスター"},
-{"presenid":"X3-13","keyword":"ダミーポスター"},
-{"presenid":"X3-14","keyword":"ダミーポスター"},
-{"presenid":"X3-15","keyword":"ダミーポスター"},
-{"presenid":"X3-16","keyword":"ダミーポスター"},
-{"presenid":"X3-17","keyword":"ダミーポスター"},
-{"presenid":"X3-18","keyword":"ダミーポスター"},
-{"presenid":"X3-19","keyword":"ダミーポスター"},
-{"presenid":"X3-20","keyword":"ダミーポスター"},
-{"presenid":"X3-21","keyword":"ダミーポスター"},
-{"presenid":"X3-22","keyword":"ダミーポスター"},
-{"presenid":"X3-23","keyword":"ダミーポスター"},
-{"presenid":"X3-24","keyword":"ダミーポスター"},
-{"presenid":"X3-25","keyword":"ダミーポスター"},
-{"presenid":"X3-26","keyword":"ダミーポスター"},
-{"presenid":"X3-27","keyword":"ダミーポスター"},
-{"presenid":"X3-28","keyword":"ダミーポスター"},
-{"presenid":"X3-29","keyword":"ダミーポスター"},
-{"presenid":"X3-30","keyword":"ダミーポスター"},
-{"presenid":"X3-31","keyword":"ダミーポスター"},
-{"presenid":"X3-32","keyword":"ダミーポスター"},
-{"presenid":"X3-33","keyword":"ダミーポスター"},
-{"presenid":"X3-34","keyword":"ダミーポスター"},
-{"presenid":"X3-35","keyword":"ダミーポスター"},
-{"presenid":"X3-36","keyword":"ダミーポスター"},
-{"presenid":"X3-37","keyword":"ダミーポスター"},
-{"presenid":"X3-38","keyword":"ダミーポスター"},
-{"presenid":"X3-39","keyword":"ダミーポスター"},
-{"presenid":"X3-40","keyword":"ダミーポスター"},
-{"presenid":"X3-41","keyword":"ダミーポスター"},
-{"presenid":"X3-42","keyword":"ダミーポスター"},
-{"presenid":"X3-43","keyword":"ダミーポスター"},
-{"presenid":"X3-44","keyword":"ダミーポスター"},
-{"presenid":"X3-45","keyword":"ダミーポスター"},
-{"presenid":"X3-46","keyword":"ダミーポスター"},
-{"presenid":"X3-47","keyword":"ダミーポスター"},
-{"presenid":"X3-48","keyword":"ダミーポスター"},
-{"presenid":"X3-49","keyword":"ダミーポスター"},
-{"presenid":"X3-50","keyword":"ダミーポスター"},
-{"presenid":"X3-52","keyword":"ダミーポスター"},
-{"presenid":"X3-51","keyword":"ダミーポスター"}
-];
+[ {
+    "presenid" : "E1-1",
+    "keyword" : "OpenStack, Ryu, クラウド, OpenFlow"
+  }, {
+    "presenid" : "E1-2",
+    "keyword" : "OpenFlow, OpenStack, ハイブリッドクラウド"
+  }, {
+    "presenid" : "E1-3",
+    "keyword" : "SDN, OpenFlow, DPN"
+  }, {
+    "presenid" : "E1-4",
+    "keyword" : "パーソナライズ, デジタルサイネージ, アクティブマーカー, スマートフォン"
+  }, {
+    "presenid" : "E1-5",
+    "keyword" : "割り込み可能性，ウェアラブルセンサ，3軸加速度，心拍数，デスクワーク"
+  }, {
+    "presenid" : "E1-6",
+    "keyword" : "ユーザID, 登録, 推薦"
+  }, {
+    "presenid" : "E2-1",
+    "keyword" : "プライバシー，SNS，語彙的結束性, KeyGraph, N-gram"
+  }, {
+    "presenid" : "E2-2",
+    "keyword" : "高次元データ, 可視化手法, Parallel Coordinate Plot"
+  }, {
+    "presenid" : "E2-3",
+    "keyword" : "因果関係, 可視化, Webマイニング"
+  }, {
+    "presenid" : "E2-4",
+    "keyword" : "高次元時系列データ, 可視化"
+  }, {
+    "presenid" : "E2-5",
+    "keyword" : "ベイジアンネットワーク, 遺伝的アルゴリズム, PBIL"
+  }, {
+    "presenid" : "E2-6",
+    "keyword" : "トピックモデル, LDA, トピック追跡, Twitter, 東日本大震災, 可視化"
+  }, {
+    "presenid" : "E3-1",
+    "keyword" : "HTML解析，PDF解析，構造解析"
+  }, {
+    "presenid" : "E3-2",
+    "keyword" : "XML, XSLT, スキーマ進化, 木変換機"
+  }, {
+    "presenid" : "E3-3",
+    "keyword" : "Linked Open Data, RDF, SPARQL, JSON, LINQ"
+  }, {
+    "presenid" : "E3-4",
+    "keyword" : "グラフ, ソーシャルネットワーク, グラフマイニング, 媒介中心性, 動的ネットワーク"
+  }, {
+    "presenid" : "E3-5",
+    "keyword" : "XML, キーワード検索, SLCA, トライ木"
+  }, {
+    "presenid" : "E3-6",
+    "keyword" : "木グラフ, XML, グラフ分割"
+  }, {
+    "presenid" : "E4-1",
+    "keyword" : "応答時間, 性能評価モデル, 待ち行列, ストレージシステム, 非同期処理"
+  }, {
+    "presenid" : "E4-2",
+    "keyword" : "カラムナー, ベクター処理, PostgreSQL, OLXP"
+  }, {
+    "presenid" : "E4-3",
+    "keyword" : "不適合フィードバック, リアルタイム, 並列分散, TREC, KBA, Wikipedia"
+  }, {
+    "presenid" : "E4-4",
+    "keyword" : "Stream processing, Event-driven processing, Smart approach"
+  }, {
+    "presenid" : "E4-5",
+    "keyword" : "DSMS, ストリームデータ処理, 車載システム, コミット, 組込みソフトウェア"
+  }, {
+    "presenid" : "E4-6",
+    "keyword" : "スマートフォン, Android, インテント"
+  }, {
+    "presenid" : "A1-1",
+    "keyword" : "情報検索、コピュラ、スコア統合、機械学習"
+  }, {
+    "presenid" : "A1-2",
+    "keyword" : "音声検索, 質問応答, 対話的情報検索"
+  }, {
+    "presenid" : "A1-3",
+    "keyword" : "テキストマイニング, CGM分析, 評価表現辞書, クラスタリング"
+  }, {
+    "presenid" : "A1-4",
+    "keyword" : "ノウハウ知識, 質問回答サイト, 検索エンジン・サジェスト, トピックモデル, 収集・集約"
+  }, {
+    "presenid" : "A1-5",
+    "keyword" : "QAコミュニティ, レファレンスサービス, 質問分類, 主題分析"
+  }, {
+    "presenid" : "A1-6",
+    "keyword" : "E コマース, 多様性 (diversity), トピックモデル, 情報検索"
+  }, {
+    "presenid" : "E5-1",
+    "keyword" : "分散並列処理, グラフパーティショナ, Apache Spark"
+  }, {
+    "presenid" : "E5-2",
+    "keyword" : "グラフ分割, グラフマイニング, 分散処理"
+  }, {
+    "presenid" : "E5-3",
+    "keyword" : "グラフ処理, 並列処理, キャッシュ, 疎行列, SpMV"
+  }, {
+    "presenid" : "E5-4",
+    "keyword" : "グラフマイニング, MapReduce, Hadoop, PageRank"
+  }, {
+    "presenid" : "E5-5",
+    "keyword" : "RDF, RDF復号化, MapReduce"
+  }, {
+    "presenid" : "E5-6",
+    "keyword" : "集約処理，軽量インデックス，データウェアハウス，SQL-on-Hadoop，Hive"
+  }, {
+    "presenid" : "A2-1",
+    "keyword" : "比較のための情報検索, 属性語抽出, 経験的属性"
+  }, {
+    "presenid" : "A2-2",
+    "keyword" : "統計的意味論, 分布仮説, 係り受け構造, word2vec"
+  }, {
+    "presenid" : "A2-3",
+    "keyword" : "特徴ベクトル，係り受け関係，共起関係"
+  }, {
+    "presenid" : "A2-4",
+    "keyword" : "経済指標予測，ナウキャスティング，国会議事録"
+  }, {
+    "presenid" : "A2-5",
+    "keyword" : "Ngram, 文節分かち書き, データマイニング, マルチレベル"
+  }, {
+    "presenid" : "A2-6",
+    "keyword" : "STS"
+  }, {
+    "presenid" : "E6-1",
+    "keyword" : "ファイル整理, ソフトウェアツール, 多次元ツリー"
+  }, {
+    "presenid" : "E6-2",
+    "keyword" : "PageRank, 構造変化, ネットワーク"
+  }, {
+    "presenid" : "E6-3",
+    "keyword" : "グラフ, クラスタリング"
+  }, {
+    "presenid" : "E6-4",
+    "keyword" : "グラフ, コミュニティ検出, 極大クリーク列挙"
+  }, {
+    "presenid" : "E6-5",
+    "keyword" : "Web検索，検索意図，サブトピック発見"
+  }, {
+    "presenid" : "E6-6",
+    "keyword" : "グラフクラスタリング, 時系列, 可視化"
+  }, {
+    "presenid" : "A3-1",
+    "keyword" : "エンティティリンキング, ソーシャルメディア, 言語横断解析"
+  }, {
+    "presenid" : "A3-2",
+    "keyword" : "Keyword search, Relational databases, Relational data streams"
+  }, {
+    "presenid" : "A3-3",
+    "keyword" : "paraphrase acquisition, coordinate relationship, Web mining, mutual reinforcement"
+  }, {
+    "presenid" : "A3-4",
+    "keyword" : "neural network, temporal correspondence"
+  }, {
+    "presenid" : "A3-5",
+    "keyword" : "IDF, コルモゴロフ複雑性, 情報距離, 特徴語抽出, 複合語抽出"
+  }, {
+    "presenid" : "E7-1",
+    "keyword" : "データ分析プラットフォーム, 送電系統, 位相計測装置, データ検索, パターン分析, アーカイブ検索"
+  }, {
+    "presenid" : "E7-2",
+    "keyword" : "データ分析プラットフォーム, 送電系統, 位相計測装置, データ蓄積, データ検索"
+  }, {
+    "presenid" : "E7-3",
+    "keyword" : "Hadoop, CPU scheduling, resource demands"
+  }, {
+    "presenid" : "E7-4",
+    "keyword" : "分散KVS, 問合せ処理の効率化"
+  }, {
+    "presenid" : "E7-5",
+    "keyword" : "データ仮想化システム, マルチデータベースシステム, 問合せ処理"
+  }, {
+    "presenid" : "E7-6",
+    "keyword" : "MapReduce, 編集距離結合, アルゴリズム"
+  }, {
+    "presenid" : "A4-1",
+    "keyword" : "能力予測, 情報統合, エキスパート検索, GitHub, oDesk"
+  }, {
+    "presenid" : "A4-2",
+    "keyword" : "オンラインショッピング，スマートフォン，振舞い，商品選別"
+  }, {
+    "presenid" : "A4-3",
+    "keyword" : "differential privacy, l-trajectory, infinite streams"
+  }, {
+    "presenid" : "A4-4",
+    "keyword" : "Q&A sites，Factor Score，Impression"
+  }, {
+    "presenid" : "E8-1",
+    "keyword" : "情報抽出，CRF，電子図書館，参考文献"
+  }, {
+    "presenid" : "E8-2",
+    "keyword" : "データマイニング, 不確実データ, 頻出パターン"
+  }, {
+    "presenid" : "E8-3",
+    "keyword" : "軌跡, 意味的な軌跡, 系列パターン, クラスタリング, DBSCAN"
+  }, {
+    "presenid" : "E8-4",
+    "keyword" : "隠喩表現, Webマイニング, 語句パターン"
+  }, {
+    "presenid" : "E8-5",
+    "keyword" : "情報抽出，企業名，N-gram"
+  }, {
+    "presenid" : "E8-6",
+    "keyword" : "Web検索，検索支援，未知度，閲覧履歴"
+  }, {
+    "presenid" : "A5-1",
+    "keyword" : "Twitter, LDA, バースト, 時系列マイニング, ユーザプロファイリング"
+  }, {
+    "presenid" : "A5-2",
+    "keyword" : "学術論文, 研究者, 著者同定, トピックモデル応用, LDA"
+  }, {
+    "presenid" : "A5-3",
+    "keyword" : "Interestingness, Social Data Analysis, Image Processing"
+  }, {
+    "presenid" : "A5-4",
+    "keyword" : "能動学習，マルチラベル分類，トピックモデル"
+  }, {
+    "presenid" : "A6-1",
+    "keyword" : "数理モデル, 時間減衰, z-score, 順位統計量"
+  }, {
+    "presenid" : "A6-2",
+    "keyword" : "グラフ, ソーシャルネットワーク, グラフマイニング, リンク予測, 最短経路クエリ"
+  }, {
+    "presenid" : "A6-3",
+    "keyword" : "ガウス分布, 類似検索, カルバック・ライブラー情報量"
+  }, {
+    "presenid" : "A6-4",
+    "keyword" : "経路検索, スカイライン, グラフ"
+  }, {
+    "presenid" : "A6-5",
+    "keyword" : "Landmarks, Popularity, Visibility, Navigation, Location-based Social Networks, Twitter"
+  }, {
+    "presenid" : "A8-1",
+    "keyword" : "情報フィルタリング, Twitter"
+  }, {
+    "presenid" : "A8-2",
+    "keyword" : "Microblog, BiLDA, Cross-lingual, Recommendation"
+  }, {
+    "presenid" : "A8-3",
+    "keyword" : "複合施設, ツイート発見, 集約情報提示"
+  }, {
+    "presenid" : "A8-4",
+    "keyword" : "Twitter, News, ソーシャルメディア, マイクロブログ, 統合"
+  }, {
+    "presenid" : "A8-5",
+    "keyword" : "協調検索, 役割, 検索行動分析"
+  }, {
+    "presenid" : "A8-6",
+    "keyword" : "Twitter, 時系列情報, データマイニング"
+  }, {
+    "presenid" : "F1-1",
+    "keyword" : "効果音, 音楽情報処理, オノマトペ, 探索的検索"
+  }, {
+    "presenid" : "F1-2",
+    "keyword" : "シーケンシャルパターンマイニング, 音楽情報処理, 作曲支援"
+  }, {
+    "presenid" : "F1-3",
+    "keyword" : "コード進行, 楽曲特徴量, 情報可視化, 楽曲推薦"
+  }, {
+    "presenid" : "F1-4",
+    "keyword" : "楽曲検索, 近似文字列照合, 接尾辞配列, 音楽指紋"
+  }, {
+    "presenid" : "F1-5",
+    "keyword" : "音楽推薦, マイクロブログ, 懐かしさ"
+  }, {
+    "presenid" : "F1-6",
+    "keyword" : "ニコニコ動画, 印象推定, クリエータ検索"
+  }, {
+    "presenid" : "F2-1",
+    "keyword" : "シーン解析, スポーツデータ, トラジェクトリーデータマイニング"
+  }, {
+    "presenid" : "F2-2",
+    "keyword" : "話題抽出, シーン検出, 受動的映像視聴"
+  }, {
+    "presenid" : "F2-3",
+    "keyword" : "動画解析, 色, 動き, 楽曲生成, 音楽特徴量, 印象推定"
+  }, {
+    "presenid" : "F2-4",
+    "keyword" : "３次元モデル、投影画像、アセンブリ構造、データ構造"
+  }, {
+    "presenid" : "F2-5",
+    "keyword" : "センサデータ解析, ストリーム処理, ファットクライアント"
+  }, {
+    "presenid" : "F2-6",
+    "keyword" : "根拠探索, 動向情報, 図表画像, テレビ番組, 情報信頼性, 分割, 学習"
+  }, {
+    "presenid" : "F3-1",
+    "keyword" : "情報抽出, 実験情報, 学術論文, ルール"
+  }, {
+    "presenid" : "F3-2",
+    "keyword" : "デジタルアーカイブ, 文化財データベース, 興味喚起, 横断検索, 高精細画像"
+  }, {
+    "presenid" : "F3-3",
+    "keyword" : "論文, Twitter, 重要度"
+  }, {
+    "presenid" : "F3-4",
+    "keyword" : "文書分類，情報抽出，学術論文"
+  }, {
+    "presenid" : "F3-5",
+    "keyword" : "引用意図, 閲覧支援, 被引用論文"
+  }, {
+    "presenid" : "F3-6",
+    "keyword" : "トピック抽出, 情報可視化"
+  }, {
+    "presenid" : "F4-1",
+    "keyword" : "コミュニケーション支援, 視覚言語, 手話書記法"
+  }, {
+    "presenid" : "F4-2",
+    "keyword" : "マガジンスタイル, レイアウト, bin packing, ビンパッキング問題, 閲覧履歴, 要約, ブラウザ履歴"
+  }, {
+    "presenid" : "F4-3",
+    "keyword" : "ユーザインターフェース，ダンス，スキル学習，加速度センサ"
+  }, {
+    "presenid" : "F4-4",
+    "keyword" : "ロボット, Web, 漫才台本自動生成, 感情"
+  }, {
+    "presenid" : "F4-5",
+    "keyword" : "SNS, 音声ブラウジング, 読み飛ばし, ソーシャルストリーム"
+  }, {
+    "presenid" : "F4-6",
+    "keyword" : "時系列変化, ソーシャルタギング, Flickr, 可視化"
+  }, {
+    "presenid" : "B1-1",
+    "keyword" : "画像検索, ソーシャルキュレーション"
+  }, {
+    "presenid" : "B1-2",
+    "keyword" : "クラウドソーシング, 最適化, ヒューリスティクス"
+  }, {
+    "presenid" : "B1-3",
+    "keyword" : "クラウドソーシング, インセンティブ, 関心の分離, データ品質"
+  }, {
+    "presenid" : "B1-4",
+    "keyword" : "ソーシャルメディア, 情報拡散, インメモリデータベース, Twitter"
+  }, {
+    "presenid" : "B1-5",
+    "keyword" : "情報抽出, 情報要約, Webマイニング, 検索結果数"
+  }, {
+    "presenid" : "B1-6",
+    "keyword" : "ソーシャルグラフ, Twitter, カスケード, 情報伝播, データマイニング"
+  }, {
+    "presenid" : "F5-1",
+    "keyword" : "KeyGraph，評価極性，ヘルプデスク，ソーシャルメディア，テキストマイニング"
+  }, {
+    "presenid" : "F5-2",
+    "keyword" : "感情分析, Twitter"
+  }, {
+    "presenid" : "F5-3",
+    "keyword" : "ニュース, Twitter, 俯瞰グラフ, 感情"
+  }, {
+    "presenid" : "F5-4",
+    "keyword" : "Twitter, ツイート, 利用者層，印象タイプ"
+  }, {
+    "presenid" : "F5-5",
+    "keyword" : "食品, シズルワード, Twitter, レシピサイト"
+  }, {
+    "presenid" : "B2-1",
+    "keyword" : "商品レビュー, テキストマイニング, 評価表現抽出"
+  }, {
+    "presenid" : "B2-2",
+    "keyword" : "情報フィルタリング, 情報推薦, チャンネル指向, ニュース推薦"
+  }, {
+    "presenid" : "B2-3",
+    "keyword" : "情報推薦, Serendipity, 有用性"
+  }, {
+    "presenid" : "B2-4",
+    "keyword" : "Web Index, Web情報システム, Webコンテンツ, 情報抽出, Wikipedia"
+  }, {
+    "presenid" : "B2-5",
+    "keyword" : "再発見, ブックマーク"
+  }, {
+    "presenid" : "B2-6",
+    "keyword" : "セレンディピティ, ユーザ推薦, Ｔｗｉｔｔｅｒ"
+  }, {
+    "presenid" : "F6-1",
+    "keyword" : "カテゴリ推定, 情報抽出, 移動軌跡, Flickr"
+  }, {
+    "presenid" : "F6-2",
+    "keyword" : "オントロジ，位置情報サービス，セマンティックWeb"
+  }, {
+    "presenid" : "F6-3",
+    "keyword" : "ユーザ分類, 関心領域, Flickr"
+  }, {
+    "presenid" : "F6-4",
+    "keyword" : "アノテーション, 周辺テキスト, 類似画像検索"
+  }, {
+    "presenid" : "F6-5",
+    "keyword" : "可視化, ジオコーディング, 経路抽出, テキスト要約"
+  }, {
+    "presenid" : "F6-6",
+    "keyword" : "ダイナミックマップ, 交通情報, ストリームデータ"
+  }, {
+    "presenid" : "B3-1",
+    "keyword" : "情報推薦, 経路探索, 差異増幅アルゴリズム, カーナビゲーション"
+  }, {
+    "presenid" : "B3-2",
+    "keyword" : "情報推薦，学術論文，サーベイ論文作成支援"
+  }, {
+    "presenid" : "B3-3",
+    "keyword" : "複合イベント処理（CEP）, 確率的データストリーム, パターン照合, グループ化"
+  }, {
+    "presenid" : "B3-4",
+    "keyword" : "情報推薦, スカイライン演算, ランキング付け"
+  }, {
+    "presenid" : "B3-5",
+    "keyword" : "手書き, 文章, 平均"
+  }, {
+    "presenid" : "B3-6",
+    "keyword" : "ランク付集合ラベル，関連の強さ，データのレベル，データ分析"
+  }, {
+    "presenid" : "F7-1",
+    "keyword" : "ナビゲーション利用履歴, 集合知, 非常時行動分析"
+  }, {
+    "presenid" : "F7-2",
+    "keyword" : "可視化, 旅客情報提供"
+  }, {
+    "presenid" : "F7-3",
+    "keyword" : "グラフデータベース，経路探索，旅行計画問題"
+  }, {
+    "presenid" : "F7-4",
+    "keyword" : "Twitter, ジオタグ, Hough変換, 交通路, 可視化"
+  }, {
+    "presenid" : "F7-5",
+    "keyword" : "観光情報, 空間分析, クラスタリング, Flickr"
+  }, {
+    "presenid" : "F7-6",
+    "keyword" : "写真共有サイト, Flickr, タイムスタンプ補正, 写真撮影地点, ヒートマップ, 観光ポテンシャルマップ"
+  }, {
+    "presenid" : "B4-1",
+    "keyword" : "類似度, データマイニング, 包含関係，"
+  }, {
+    "presenid" : "B4-2",
+    "keyword" : "ニュース記事, 背景情報, 理解容易性"
+  }, {
+    "presenid" : "B4-3",
+    "keyword" : "知識獲得、推論規則、汎化、シソーラス"
+  }, {
+    "presenid" : "B4-4",
+    "keyword" : "文書分類, 特徴ベクトル, シソーラス, 共起行列, 機械学習"
+  }, {
+    "presenid" : "B4-5",
+    "keyword" : "統計表認識, 系列データ, 機械学習, CRF, 根拠探索, 動向情報"
+  }, {
+    "presenid" : "B4-6",
+    "keyword" : "情報抽出, SVM, 学術論文"
+  }, {
+    "presenid" : "F8-1",
+    "keyword" : "Convolutive NMF, 時系列パターン処理, 時間推移, イベントログ"
+  }, {
+    "presenid" : "F8-2",
+    "keyword" : "時系列データ, 特異点検出, 標本抽出"
+  }, {
+    "presenid" : "F8-3",
+    "keyword" : "位置情報, 人流解析, 可視化, Wi-Fi"
+  }, {
+    "presenid" : "F8-4",
+    "keyword" : "ソーシャルメディア, ソーシャルグラフ"
+  }, {
+    "presenid" : "F8-5",
+    "keyword" : "可視化, 人流, マイニング"
+  }, {
+    "presenid" : "F8-6",
+    "keyword" : "情報可視化, 時系列データ, storyline, クラスタリング"
+  }, {
+    "presenid" : "B5-1",
+    "keyword" : "PowerPoint，OpenXML，図形検索"
+  }, {
+    "presenid" : "B5-2",
+    "keyword" : "類似商標, 商標審査基準, 称呼類似"
+  }, {
+    "presenid" : "B5-3",
+    "keyword" : "Travel Routeマイニング, 情報抽出, Flickr"
+  }, {
+    "presenid" : "B5-4",
+    "keyword" : "数式検索, 類似検索, MathML"
+  }, {
+    "presenid" : "B5-5",
+    "keyword" : "マイクロブログ, ソーシャルセンサ, 抽出ルール, 運行情報推定"
+  }, {
+    "presenid" : "B6-1",
+    "keyword" : "因果整合性, ミドルウェア, 分散データストア"
+  }, {
+    "presenid" : "B6-2",
+    "keyword" : "HDFS, 分散ファイルシステム, レプリカ, 再配置"
+  }, {
+    "presenid" : "B6-3",
+    "keyword" : "大規模分散処理システム，システム検証，テスト環境"
+  }, {
+    "presenid" : "B6-4",
+    "keyword" : "データ統合, 整合性制約, 確率推定"
+  }, {
+    "presenid" : "B6-5",
+    "keyword" : "データベース同期，遠隔バックアップ，分散処理"
+  }, {
+    "presenid" : "B6-6",
+    "keyword" : "分散データベース, 並列処理, 性能評価"
+  }, {
+    "presenid" : "B8-1",
+    "keyword" : "音楽推薦, 感情分類, 歌詞情報"
+  }, {
+    "presenid" : "B8-2",
+    "keyword" : "映画推薦, 印象表現"
+  }, {
+    "presenid" : "B8-3",
+    "keyword" : "情報推薦, 同伴者, ランキング"
+  }, {
+    "presenid" : "B8-4",
+    "keyword" : "推薦システム，楽曲推薦，セレンディピティ"
+  }, {
+    "presenid" : "B8-5",
+    "keyword" : "オンライン広告, 機械学習, 転置インデックス"
+  }, {
+    "presenid" : "B8-6",
+    "keyword" : "動画推薦, 動画共有サイト, CGM, ソーシャルタグ"
+  }, {
+    "presenid" : "G1-1",
+    "keyword" : "匿名化, データマイニング, パーソナルデータ, 有用性評価"
+  }, {
+    "presenid" : "G1-2",
+    "keyword" : "データベース, プライバシ保護, 匿名化"
+  }, {
+    "presenid" : "G1-3",
+    "keyword" : "外れ値検出, 差分プライバシ, 平滑敏感度"
+  }, {
+    "presenid" : "G1-4",
+    "keyword" : "microaggregation, 高次元データ、k-匿名化"
+  }, {
+    "presenid" : "G1-5",
+    "keyword" : "セキュリティ, プライバシー, k-匿名化"
+  }, {
+    "presenid" : "G1-6",
+    "keyword" : "位置情報サービス, 位置プライバシ, ダミー, GPS"
+  }, {
+    "presenid" : "G2-1",
+    "keyword" : "プロキシ再暗号化, データ共有, リボケーション"
+  }, {
+    "presenid" : "G2-2",
+    "keyword" : "ウェラブルカメラ, プライバシー, ソーシャルネットワーク, トピック分析, コンテキスト"
+  }, {
+    "presenid" : "G2-3",
+    "keyword" : "動的データセット，再公開，安全性"
+  }, {
+    "presenid" : "G2-4",
+    "keyword" : "アドホックネットワーク, Top-k検索, データ差替え攻撃, 認証子"
+  }, {
+    "presenid" : "G2-5",
+    "keyword" : "多ビット長, 暗号化, 乗算"
+  }, {
+    "presenid" : "G2-6",
+    "keyword" : "Privacy Preservation, Private search, Database as a Service"
+  }, {
+    "presenid" : "G3-1",
+    "keyword" : "GPU, Parallel Processing, Similarity Join, Set Similarity Join, MinHash"
+  }, {
+    "presenid" : "G3-2",
+    "keyword" : "データベース, クエリ最適化, エージング"
+  }, {
+    "presenid" : "G3-3",
+    "keyword" : "圧縮，簡潔データ構造, ランダムアクセス"
+  }, {
+    "presenid" : "G3-4",
+    "keyword" : "メニーコア, 並列処理, ハッシュ結合"
+  }, {
+    "presenid" : "G3-5",
+    "keyword" : "GPU, 時系列データ, 不確実データ"
+  }, {
+    "presenid" : "G3-6",
+    "keyword" : "GPU, MapReduce, 索引語重み付け"
+  }, {
+    "presenid" : "G4-1",
+    "keyword" : "twitter, hashtag, sense induction, co-occurrence graph"
+  }, {
+    "presenid" : "G4-2",
+    "keyword" : "オンライン広告, CTR予測, AROW, 非テキスト情報"
+  }, {
+    "presenid" : "G4-3",
+    "keyword" : "ネットワーク解析, 統計的ネットワークモデル, 潜在変数モデル, 逐次推定"
+  }, {
+    "presenid" : "G4-4",
+    "keyword" : "SNS, ソーシャルビューイング, Twitter, クラスタリング, 集約化"
+  }, {
+    "presenid" : "G4-5",
+    "keyword" : "情報検索, 擬似レレバンス・フィードバック, クエリ拡張, Twitter, パーソナライゼーション"
+  }, {
+    "presenid" : "G4-6",
+    "keyword" : "SNS, Twitter"
+  }, {
+    "presenid" : "C1-1",
+    "keyword" : "調理経験, レパートリー拡大, 食材, 調理法"
+  }, {
+    "presenid" : "C1-2",
+    "keyword" : "レシピ, 順序関係, 手順分析"
+  }, {
+    "presenid" : "C1-3",
+    "keyword" : "メタデータ自動付与, 料理レシピ推薦, 気分"
+  }, {
+    "presenid" : "C1-4",
+    "keyword" : "レシピ検索，食材管理，バーコードリーダー，冷蔵庫食材，Android，ZXing"
+  }, {
+    "presenid" : "C1-5",
+    "keyword" : "料理レシピ，調理道具，画像認識，調理環境，登録，携帯情報端末"
+  }, {
+    "presenid" : "C1-6",
+    "keyword" : "食, 推薦, 状況, 欲求, 根拠"
+  }, {
+    "presenid" : "G5-1",
+    "keyword" : "データマイニング, シーケンシャルパターンマイニング, 電子カルテ"
+  }, {
+    "presenid" : "G5-2",
+    "keyword" : "健康データマイニング, 時系列データ解析, 遅延相関分析法"
+  }, {
+    "presenid" : "G5-3",
+    "keyword" : "医薬品, 副作用, 推定"
+  }, {
+    "presenid" : "G5-4",
+    "keyword" : "生活習慣病、時系列データ、認知機能"
+  }, {
+    "presenid" : "G5-5",
+    "keyword" : "情報検索, アクセスログ, 電子カルテ, グラフアルゴリズム"
+  }, {
+    "presenid" : "G5-6",
+    "keyword" : "アレルギー症状, 観察記録, 検索意図, 個人プロファイル, ICカード"
+  }, {
+    "presenid" : "C2-1",
+    "keyword" : "時空間データ, モバイルセンサデータ, 検索支援, 可視化"
+  }, {
+    "presenid" : "C2-2",
+    "keyword" : "無線通信，輻輳制御"
+  }, {
+    "presenid" : "C2-3",
+    "keyword" : "無線通信, ファイル共有システム"
+  }, {
+    "presenid" : "C2-4",
+    "keyword" : "無線LAN, 干渉, キャプチャエフェクト, 通信品質, QoS"
+  }, {
+    "presenid" : "C2-5",
+    "keyword" : "密なモバイルセンサネットワーク，定期的な境界線検出，トラヒック削減"
+  }, {
+    "presenid" : "C2-6",
+    "keyword" : "センシング, 時空間データベース, インデクシング"
+  }, {
+    "presenid" : "G6-1",
+    "keyword" : "GPCR，化合物，結合予測，SVM"
+  }, {
+    "presenid" : "G6-2",
+    "keyword" : "近赤外分光法を用いた脳血流計測データの解析と評価"
+  }, {
+    "presenid" : "G6-3",
+    "keyword" : "データ解析, 医療データ, 近赤外光計測"
+  }, {
+    "presenid" : "G6-4",
+    "keyword" : "ウェアラブルデバイス, ライフログ, Webサービス, 情報推薦"
+  }, {
+    "presenid" : "G6-5",
+    "keyword" : "心拍, 睡眠段階, 推定"
+  }, {
+    "presenid" : "G6-6",
+    "keyword" : "代替食品, 健康, 情報抽出"
+  }, {
+    "presenid" : "C3-1",
+    "keyword" : "ストレージ, 省電力, TPC-H, データインテンシブアプリケーション, 性能評価"
+  }, {
+    "presenid" : "C3-2",
+    "keyword" : "風力発電, 出力変動, 予測, Random Forests, Mixture of Experts"
+  }, {
+    "presenid" : "C3-3",
+    "keyword" : "ウェアラブル端末, エネルギーマネジメント, データベース, ユビキタス環境, 電力使用状況推定"
+  }, {
+    "presenid" : "C3-4",
+    "keyword" : "ライフログ, 消費電力可視化, 電力予測, エネルギーマネジメント"
+  }, {
+    "presenid" : "C3-5",
+    "keyword" : "センサデータベース, スマートグリッド, ライフログ, エネルギー"
+  }, {
+    "presenid" : "G7-1",
+    "keyword" : "可視化, 写真, Instagram"
+  }, {
+    "presenid" : "G7-2",
+    "keyword" : "観光情報, 属性抽出, 対応関係抽出, Wikipedia"
+  }, {
+    "presenid" : "G7-3",
+    "keyword" : "複数文書要約, 画像, 旅行, ブログ"
+  }, {
+    "presenid" : "G7-4",
+    "keyword" : "イベント情報, 動画, ブログ, マッピング, 機械学習"
+  }, {
+    "presenid" : "G7-5",
+    "keyword" : "旅行ブログエントリ，情報抽出，行動分析"
+  }, {
+    "presenid" : "G7-6",
+    "keyword" : "マイクロブログ, Twitter, 観光情報, ルート推薦"
+  }, {
+    "presenid" : "C4-1",
+    "keyword" : "geolocation, 位置情報, マイクロブログ, twitter"
+  }, {
+    "presenid" : "C4-2",
+    "keyword" : "マイクロブログ, 発信位置推定, ローカル語"
+  }, {
+    "presenid" : "C4-3",
+    "keyword" : "観光情報, ユーザ属性, 属性推定, 位置情報, ソーシャルメディア分析"
+  }, {
+    "presenid" : "C4-4",
+    "keyword" : "SNS, Twitter, Webマイニング, 購買行動"
+  }, {
+    "presenid" : "C4-5",
+    "keyword" : "隠れマルコフモデル, チャット対話, 発話タイプ推定"
+  }, {
+    "presenid" : "G8-1",
+    "keyword" : "Twitter, 位置情報推定, TF-IDF"
+  }, {
+    "presenid" : "G8-2",
+    "keyword" : "Wikipedia, 多言語"
+  }, {
+    "presenid" : "G8-3",
+    "keyword" : "ユーザの属性推定, ブログ"
+  }, {
+    "presenid" : "G8-4",
+    "keyword" : "語義曖昧性解消, マイクロブログ, Twitter"
+  }, {
+    "presenid" : "G8-5",
+    "keyword" : "Twitter, 言い換え, コミュニケーション"
+  }, {
+    "presenid" : "G8-6",
+    "keyword" : "Twitter, イベントモニタリング, ノイズ除去"
+  }, {
+    "presenid" : "C5-1",
+    "keyword" : "SuperSQL, SQL, ユーザインタフェース"
+  }, {
+    "presenid" : "C5-2",
+    "keyword" : "SQL, SuperSQL, JavaScript, ユーザインタフェース"
+  }, {
+    "presenid" : "C5-3",
+    "keyword" : "クエリ変換, Webページクラスタリング, Web検索, 上位下位関係"
+  }, {
+    "presenid" : "C5-4",
+    "keyword" : "レビュー分析"
+  }, {
+    "presenid" : "C5-5",
+    "keyword" : "ハウツー検索, ブートストラップ法, 具体性, 検索結果多様化"
+  }, {
+    "presenid" : "C6-1",
+    "keyword" : "クラウドソーシング, マイクロタスク"
+  }, {
+    "presenid" : "C6-2",
+    "keyword" : "クラウドソーシング，グループ作成，ヒューマンコンピュテーション"
+  }, {
+    "presenid" : "C6-3",
+    "keyword" : "クラウドソーシング, Skyline問合せ, 効率化"
+  }, {
+    "presenid" : "C6-4",
+    "keyword" : "クラウドソーシング, 数理最適化, タスク割当て"
+  }, {
+    "presenid" : "C6-5",
+    "keyword" : "参加型センシング，空間データベース，多様性，アルゴリズム"
+  }, {
+    "presenid" : "C6-6",
+    "keyword" : "実空間, SNS, 影響関係, 貢献活動, 恊働"
+  }, {
+    "presenid" : "C7-1",
+    "keyword" : "災害情報, ルート分析, 位置情報, Twitter"
+  }, {
+    "presenid" : "C7-2",
+    "keyword" : "デマンドレスポンス, Random Forests"
+  }, {
+    "presenid" : "C7-3",
+    "keyword" : "Twitter, イベント検知, 大規模災害, 通信障害, ネットワークトラフィック障害"
+  }, {
+    "presenid" : "C7-4",
+    "keyword" : "SNS, 評判分析, 災害情報"
+  }, {
+    "presenid" : "C7-5",
+    "keyword" : "DTN, 災害時アプリケーション"
+  }, {
+    "presenid" : "C7-6",
+    "keyword" : "避難場所情報、RDF記述法、ベンチマークツール"
+  }, {
+    "presenid" : "C8-1",
+    "keyword" : "繰り返し度合い, テキストタグ, Flickr"
+  }, {
+    "presenid" : "C8-2",
+    "keyword" : "ユーザ評価, レビュー, ゲーミフィケーション, Venue, Foursquare"
+  }, {
+    "presenid" : "C8-3",
+    "keyword" : "Twitter, Instagram, テキストマイニング, クラスタリング"
+  }, {
+    "presenid" : "C8-4",
+    "keyword" : "複合イベント処理, イベント検出"
+  }, {
+    "presenid" : "C8-5",
+    "keyword" : "イベント, データベース, ブログ, 情報抽出, 機械学習"
+  }, {
+    "presenid" : "P1-1",
+    "keyword" : "情報推薦, 意図推定, 先読み推薦, コンテキスト分析"
+  }, {
+    "presenid" : "P1-2",
+    "keyword" : "人物推薦, パートナー相互推薦"
+  }, {
+    "presenid" : "P1-3",
+    "keyword" : "Serendipity, セレンディピティ，情報推薦, 歩行者ナビ・自転車ナビ，寄り道推薦"
+  }, {
+    "presenid" : "P1-4",
+    "keyword" : "web広告, ユーザプロファイリング, アクセスログ分析"
+  }, {
+    "presenid" : "P1-5",
+    "keyword" : "商品検索, テキストマイニング, 感性メタデータ, 多次元空間計量, 問い合わせ自動生成"
+  }, {
+    "presenid" : "P2-1",
+    "keyword" : "疎な軌跡データ，隠れマルコフモデル，GPSデータ，系列カーネル"
+  }, {
+    "presenid" : "P2-2",
+    "keyword" : "オンライン接尾辞トライ構築, 非同期マルチストリーム処理, 低メモリアルゴリズム, 時系列処理"
+  }, {
+    "presenid" : "P2-3",
+    "keyword" : "音楽, クリエイション, 時系列, 相関計量, フーリエ変換"
+  }, {
+    "presenid" : "P2-4",
+    "keyword" : "時系列画像、オブジェクト、多変量正規混合分布、気象画像"
+  }, {
+    "presenid" : "P2-5",
+    "keyword" : "時空間データ, 相関係数, 相関ルール"
+  }, {
+    "presenid" : "P3-1",
+    "keyword" : "コスメ，レビュー分析，情報推薦"
+  }, {
+    "presenid" : "P3-2",
+    "keyword" : "ブログマイニング, 先読みブロガー, 流行語抽出"
+  }, {
+    "presenid" : "P3-3",
+    "keyword" : "online reports, students’ mutual evaluation, groupware"
+  }, {
+    "presenid" : "P3-4",
+    "keyword" : "情報検索, 自動分類, 全文検索, レシピ検索"
+  }, {
+    "presenid" : "P3-5",
+    "keyword" : "コラージュ, 感情, 画像データベース, 感性データベース"
+  }, {
+    "presenid" : "P3-6",
+    "keyword" : "自然言語処理、情報検索、多言語"
+  }, {
+    "presenid" : "P4-1",
+    "keyword" : "高齢者支援, センシング技術, 遠隔支援"
+  }, {
+    "presenid" : "P4-2",
+    "keyword" : "センサデータ, データ解析, 農業支援"
+  }, {
+    "presenid" : "P4-3",
+    "keyword" : "モバイルデバイス, 地理情報, GIS"
+  }, {
+    "presenid" : "P4-4",
+    "keyword" : "共通データフォーマット, データの品質保証, データトレーサビリティ, ライフログ, パーソナルデータ, 再利用性, 個人情報保護, 計測・データ・解析の知財保護"
+  }, {
+    "presenid" : "P4-5",
+    "keyword" : "観光情報, 位置情報, DBSCAN, GIS"
+  }, {
+    "presenid" : "D1-1",
+    "keyword" : "分類, 多重ラベル, Apriori, 最大エントロピーモデル"
+  }, {
+    "presenid" : "D1-2",
+    "keyword" : "情報要約, クラスタリング, ラベル付け, 上位語"
+  }, {
+    "presenid" : "D1-3",
+    "keyword" : "文書クラスタリング, 相互隣接グラフ"
+  }, {
+    "presenid" : "D1-4",
+    "keyword" : "ヘルプデスク"
+  }, {
+    "presenid" : "D1-5",
+    "keyword" : "テキスト分割, TopicTiling, LDA"
+  }, {
+    "presenid" : "D1-6",
+    "keyword" : "分類, 多重ラベリング, データマイニング, 同時関係"
+  }, {
+    "presenid" : "D2-1",
+    "keyword" : "行動分析，データ分析，可視化，顧客経験マップ"
+  }, {
+    "presenid" : "D2-2",
+    "keyword" : "電子書籍, EPUB, ソーシャルリーディング, ユーザ分析"
+  }, {
+    "presenid" : "D2-3",
+    "keyword" : "ドライブレコーダ, 時空間データ解析"
+  }, {
+    "presenid" : "D2-4",
+    "keyword" : "e-learning, プログラミング演習, 解答時間, 演習履歴データベース"
+  }, {
+    "presenid" : "D2-5",
+    "keyword" : "ドライブレコーダ, 交通ビッグデータ, 時空間探索, 3次元情報可視化, ヒヤリハッ ト地図"
+  }, {
+    "presenid" : "D2-6",
+    "keyword" : "感性分析, 評判部席, Twitter"
+  }, {
+    "presenid" : "D3-1",
+    "keyword" : "検索エンジン・サジェスト, トピックモデル, 収集・集約, 商品ジャンル, 市場シェア"
+  }, {
+    "presenid" : "D3-2",
+    "keyword" : "レビュー情報分析, 商品検索"
+  }, {
+    "presenid" : "D3-3",
+    "keyword" : "レビュー, ランキング, 選別支援"
+  }, {
+    "presenid" : "D3-4",
+    "keyword" : "ユーザレビュー, オンラインショッピングサイト, 共起グラフ"
+  }, {
+    "presenid" : "D3-5",
+    "keyword" : "レビュー分析, オブジェクト検索, 経験的属性"
+  }, {
+    "presenid" : "D3-6",
+    "keyword" : "レビューサイト, 早期レビュー, 予測"
+  }, {
+    "presenid" : "D4-1",
+    "keyword" : "Information Credibility, Social Media, Twitter, Topic Model"
+  }, {
+    "presenid" : "D4-2",
+    "keyword" : "信頼性, Wikipedia, 参照情報"
+  }, {
+    "presenid" : "D4-3",
+    "keyword" : "共同編集コンテンツ, 質予測, Wikipedia, 編集者グラフ"
+  }, {
+    "presenid" : "D4-4",
+    "keyword" : "ソーシャルメディア, ニュース, 文書要約, ランキング学習"
+  }, {
+    "presenid" : "D4-5",
+    "keyword" : "マイクロブログ, ソーシャルグラフ, リンク誘導型スパム"
+  }, {
+    "presenid" : "D4-6",
+    "keyword" : "Twitter, 信頼度, 決定木, 情報検索"
+  }, {
+    "presenid" : "D5-1",
+    "keyword" : "Wikipedia, deep learning, advertisement detection"
+  }, {
+    "presenid" : "D5-2",
+    "keyword" : "Automatic Construction and Ranking of Keyphrases on Wikipedia Article Sections"
+  }, {
+    "presenid" : "D5-3",
+    "keyword" : "WebIndex、web情報システム、Webコンテンツ、Wikipedia"
+  }, {
+    "presenid" : "D5-4",
+    "keyword" : "Document Similarity, Human Rating, Model Selection, Performance Prediction"
+  }, {
+    "presenid" : "D5-5",
+    "keyword" : "Deep Learning, Recursive Autoencoder, 移動手段推定, 移動軌跡"
+  }, {
+    "presenid" : "D5-6",
+    "keyword" : "ペアワイズ分類, エンティティ解決, 深層学習, ニューラルネットワーク, 正則化"
+  }, {
+    "presenid" : "D6-1",
+    "keyword" : "経路案内, インタフェース, 乗り換え案内"
+  }, {
+    "presenid" : "D6-2",
+    "keyword" : "集計処理, スプレッドシート, OLAP, 関係データモデル, 関係代数"
+  }, {
+    "presenid" : "D6-3",
+    "keyword" : "データ圧縮, 整数列圧縮, センサデータ，高変動"
+  }, {
+    "presenid" : "D6-4",
+    "keyword" : "マイニング, 可視化"
+  }, {
+    "presenid" : "D6-5",
+    "keyword" : "StreamOLAP, ストリームデータ処理, SPE, 問合せ最適化"
+  }, {
+    "presenid" : "D7-1",
+    "keyword" : "教育, センサ, STFT, e-learning"
+  }, {
+    "presenid" : "D7-2",
+    "keyword" : "検索エンジン, 英作文, 冠詞, 名詞, 誤り検出, 誤り修正"
+  }, {
+    "presenid" : "D7-3",
+    "keyword" : "電子教科書、インタフェース、学習システム、集合知"
+  }, {
+    "presenid" : "D7-4",
+    "keyword" : "電子メール, RMX"
+  }, {
+    "presenid" : "D7-5",
+    "keyword" : "トレンド分析，生物季節観測，傾向推定，Twitter"
+  }, {
+    "presenid" : "D7-6",
+    "keyword" : "RMX, メール, WEBアプリケーション, メーリングリスト, フレームワーク"
+  }, {
+    "presenid" : "D8-1",
+    "keyword" : "著者推定, Authorship Identification, マイクロブログ, Twitter"
+  }, {
+    "presenid" : "D8-2",
+    "keyword" : "マルチホップ, 無線LAN, ソーシャルネットワーク, 経路選択, スループット"
+  }, {
+    "presenid" : "D8-3",
+    "keyword" : "Twitter, ネットワーク, ユーザ推薦, 成長率"
+  }, {
+    "presenid" : "D8-4",
+    "keyword" : "Twitter, ユーザ推薦, マイクロブログ"
+  }, {
+    "presenid" : "D8-5",
+    "keyword" : "Twitter, 属性推定"
+  }, {
+    "presenid" : "D8-6",
+    "keyword" : "マイクロブログ, リンク伝搬, ハブ, 影響力, リンク予測, グラフ分析, リンク推薦"
+  }, {
+    "presenid" : "X1-1",
+    "keyword" : "dammy"
+  }, {
+    "presenid" : "X1-2",
+    "keyword" : "dammy"
+  }, {
+    "presenid" : "X1-3",
+    "keyword" : "dammy"
+  }, {
+    "presenid" : "X1-4",
+    "keyword" : "dammy"
+  }, {
+    "presenid" : "X1-5",
+    "keyword" : "dammy"
+  } ];
 
 presen = 
-[
-{"presenid":"A1-1","title":" YAGOを用いた拡張固有表現抽出における新出語のクラス推定精度の検証","abstract":"固有表現抽出は，文書中から人名・地名・組織名などの固有表現を抜き出す技術であり，一般的に数種類\n程度の固有表現クラスに分類する．最近では 100 クラス以上に細分化・階層化した拡張固有表現が提案されているが，高い精度で拡張固有表現抽出を実現した事例は少ない．その中で，HYENA と呼ばれる手法は，Wikipedia の情報を利用することで F 値 0.9 程度の性能を達成している．しかし，この性能は Wikipedia の情報に依存するものであり，Wikipedia で定義されていないような新出語に対しては大きく精度が低下することが予測される．本研究では，HYENA の既出語と新出語に対する性能の差について検証し，また，その検証結果から，新出語に対応可能な手法のデザインについて模索する．","bookmark":0},
-{"presenid":"A1-2","title":" Search for Images of Historical Objects Using Wikipedia","abstract":"We investigate the temporal image retrieval problem by utilizing knowledge from Wikipedia to help retrieve\nimages. Since current search engines do not explicitly consider the time related to the objects displayed in images, we believethat our proposed temporal image retrieval algorithm can more completely satisfy search intentions. A search is done byinputting an entity name (with/without location and time information), and chronologically sorted search results are output tocapture the evolution of the queried entity and consider its co-occurrence with other historically important entities. We proposea novel way to map images to Wikipedia articles to utilize Wikipedia’s structure to estimate the historical importance ofdisplayed objects. A combination of criteria is proposed to measure the historical importance of images under entity evolutionscenarios and co-occurrence with other historically important objects.","bookmark":0},
-{"presenid":"A1-3","title":" Edit summarization in Wikipedia based on supergram selection","abstract":"Document summarization has been well studies in recent years, but the basis of the existing methods fails in the\nscenario of Wikipedia edit history, in which revisions have significant mutual overlaps. In this paper, we propose a method toautomatically summarize contributed contents during a specified edit period of a Wikipedia article, into a group ofmaximal-length phrases, which we call supergrams. Two supergram selection algorithms, TF-IDF and Extended LDA rankingare developed to pick up representative supergrams. We conduct a preliminary objective evaluation on these methods’capabilities of summarizing on short text fragments against conventional document summarization methods.","bookmark":0},
-{"presenid":"A1-4","title":" XML部分文書検索技術の Web 文書への適用","abstract":"本稿では，XML 部分文書検索技術の Web 文書 (HTML 文書) への適用を行う．XML 部分文書検索技術\nでは，検索結果としてユーザの情報要求を満たす箇所そのものを提示し，検索時のユーザの負担を軽減することを目指す．XML 部分文書検索技術を適用する上で，HTML 文書の特徴である，1) 文書内容の論理構造と文書の物理構造が一致しないため，部分文書検索において利用する文書構造を適切に用いられない可能性がある，2) 文書中にサイトの目次やリンク集などのように直接ユーザの情報要求を満たさない箇所を多分に含むことにより生じる問題を解決する必要がある．1) に対して，潜在的に文書の構造情報を表現すると考えられるタグの情報を利用した，論理構造に沿った文書構造への再構造化手法を提案する．また，2) の問題には，目次やリンク集などのハイパーリンクを多分に含むという特徴に着目したサブ ・ コンテンツフィルタの提案を行う． 評価実験の結果，再構造化によってより適切な粒度の部分文書を抽出できたことによる検索精度の向上と，サブ ・ コンテンツフィルタによって文書中のメインコンテンツ以外の箇所の除外に成功した．また，部分文書検索を行うことで，文書検索と比較して再現率が低下するものの，より高精度な検索を実現できることが判明した．","bookmark":0},
-{"presenid":"A1-5","title":" Path-based Keyword Search over XML Streams","abstract":"Recently, a great deal of attention has been focusing on processing keyword search over XML and XML\nstreams. The keyword search is simple and provides a user-friendly way of retrieving required data from an XMLdata. Though its popularity, there is a concern over its efficiency. For this reason, several methods have beenproposed to enable keyword search over XML streams. However, most of them primarily aim at processing purekeyword search where only keywords are allowed as a query. However, in many cases, there is a demand to combinekeyword search and path-based query. To address this problem, we propose a method to integrate XPath andkeyword search so that we can combine XPath- and keyword-based query, thereby making users possible to expresstheir search demands in more specific ways. The experimental results show that the proposed scheme can processqueries over XML streams practically.","bookmark":0},
-{"presenid":"B1-1","title":" 配信型授業のコミュニケーションを支援するコメント共有手法の提案","abstract":"情報通信機器の普及・発展に伴って，遠隔地をつないで講義型授業を行う配信型授業が広まってきている．\n本研究では，近年，中高等教育の現場において注目されているコミュニケーションを，講師と受講者間だけでは無く，受講者相互にも行うことができるコメント共有手法を提案する．提案法では，コメントの匿名度および伝わる範囲を発言ごとに制御する機能を導入することで，現実空間での議論型学習の効用を配信型授業でも達成することを目指す．記名・匿名，公開範囲を指定してなされた質問に対する回答の範囲の決定法等，提案法で導入した機能を実現するためのプロトコルを詳細化したプロトタイプシステムを実装するとともに，導入した機能を受講者が受け入れるかどうかのアンケート調査を実施した．その結果，匿名度および公開範囲を発言者が指定することの受容と課題が明らかとなったので報告する．","bookmark":0},
-{"presenid":"B1-2","title":" SNS・Web間のシームレスなコミュニケーションシステムの提案","abstract":"本研究では，ツイートユーザと Web ユーザが各々が利用しているメディア (Twitter と Web) を通して，リ\nアルタイムにコミュニケーションが可能なシステムの構築を目指す．具体的には，ツイートの発信場所とページの内容 (場所名) を抽出することで，ツイートと Web ページを対応付ける．対応付けられたツイートはページ上に提示される．これにより，Web ユーザは，ページを閲覧しながら内容に関わる場所で発信されたその場所に関するツイートを閲覧できる．また，Web ユーザは発信したツイートに対して，メッセージを発信できる．発信されたメッセージは，ツイートユーザに対して，ツイートメッセージとして提示される．本論文では，位置情報に基づいたツイートと Webページ関連付け手法ならびに Twitter と Web のシームレスなリアルタイム通信システムの構築手法について述べ，実装システムを検証する．","bookmark":0},
-{"presenid":"B1-3","title":"円滑な人脈形成のためのSNS投稿に着目した仲介者探索手法","abstract":"本稿では、面識のない 2 者を円滑に引き合わせるための仲介者を探索する手法を提案する。従来研究\nでは、SNS 上のソーシャルグラフを用いることで 2 者を繋げる直接的な経路を探索する手法が提案されている。しかし、面識のない 2 者の場合、必ずしも直接的な経路が存在するとは限らない。また、間接的な経路を発見したとしても、実世界における 2 者間の繋がりが親密でない場合、仲介は非現実的となる。本稿では、これらの課題を解決するため、立場や環境が異なる面識のない 2 者を円滑に繋げる経路探索手法を提案する。提案手法では、ソーシャルグラフだけでなく、投稿内容から実世界での繋がりを抽出すると共に、投稿行為から 2 者の親密度合いを推定することが特徴である。提案手法における有効性を検証するため、社内の SNS データを使用して評価実験を行った。","bookmark":0},
-{"presenid":"B1-4","title":"枝刈り探索によるソーシャルネットワークでの影響最大化アルゴリズム","abstract":"バイラルマーケティングは「口コミ」を通して商品の購入を効率的に促すマーケティング戦略である．こ\nの考えにもとづく影響最大化問題は，影響力の高い少数の頂点集合をソーシャルネットワーク上から選択する問題である．NP-hard に属するため現実的な時間で厳密解を計算することは望めないが，近似比 1 ? 1/e を保証する貪欲アルゴリズムが知られている．Monte-Carlo シミュレーションによる頂点集合の影響力の計算に膨大なコストがかかるため，このアルゴリズムを大規模なネットワークに適用することは困難である．我々は，枝刈り探索及び理論的解析にもとづく Monte-Carlo シミュレーションの回数の削減による影響最大化問題の高速アルゴリズムを提案する．実験により，提案手法が既存手法と同等以上の速度を保ちつつ，ほとんど常に最も影響力の高い頂点集合を選択可能であることを示した．","bookmark":0},
-{"presenid":"B1-5","title":" マイクロブログにおける対話手段と投稿内容に着目したユーザ推薦に関する研究と分析","abstract":"ソーシャルネットワークサービス等では，ユーザ推薦によって，他ユーザと効率的に，そして円滑に，コ\nミュニケーションを取ることが可能になる．ユーザ推薦には，ソーシャルネットワークのグラフ構造に着目した手法や，投稿内容に基づく手法等が提案されているが，これらはソーシャルメディアの環境によって様々な併用方法が考えられる．本論文では，マイクロブログサービスの１つである Twitter 上において，ユーザ間の対話関係からグラフを構築し，対話の種類や回数，投稿内容の類似度を活用した Random Walk 手法を提案し，その精度と意義を検証した．","bookmark":0},
-{"presenid":"C1-1","title":"Semantic Knowledge Base Construction from Domain-Specified Metadata","abstract":"Existing semantic knowledge bases such as WordNet and Yago contain the information of relations\nbetween entities. Although they are not domain-specific, they contain limited information and have limitations onthe usage scopes and domains. For example, they do not hold the information about the domain-specific commonsenserelations between concepts like “horse” and “farm” or “ocean” and “atmosphere” which intuitively have closerelations on semantics in the domains of image description or earth observation data description. Such semanticknowledge are useful in the corresponding domains for various applications such as annotation, recommendation,search, suggestion and so on. Because in data collections, metadata which is used to describe data is widespreadin various domains, in this paper we propose an approach to collect this kind of relations and construct knowledgebases for specific domains by mining knowledge of global structure and internal association in the metadata of datacollections.","bookmark":0},
-{"presenid":"C1-2","title":"Wikipedia掲載事項との間の差分に着目したウェブ検索者の情報要求観点の分析","abstract":"本論文では，検索エンジン・サジェストを情報源としてウェブ検索者の情報要求観点を収集し，それらの観\n点の中でも，Wikipedia には掲載されていない観点に焦点を当てて，Wikipedia とは異なる観点についての情報を収集して集約し，提示することを目的とする．特に，Wikipedia においては，物事を解決するための実用的な知識や経験談，些細な雑談の類いや最新の話題等が掲載されることはあまり多くない．その一方で，検索エンジン・サジェストを分析することによって，ウェブ検索者がそれらの話題についても高い関心を持っていることが容易に分かる．そこで，Wikipedia に未掲載のそれらの情報に焦点を当て，検索エンジン・サジェストを通してウェブページ集合を収集し，その要点を要約・集約することにより，Wikipedia とは相補的な情報を掲載した百科事典を作成することを目的とする．","bookmark":0},
-{"presenid":"C1-3","title":"三事象間の因果関係分析のための因果関係ネットワーク構築の一手法","abstract":"今日, 我々は Web 等のメディアを通じて様々な出来事について情報を入手することができる. しかし, 複数\nの事象が複雑に絡み合う場合, それを深く理解することは容易ではない. そこで本研究では関連する事象間の因果関係に着目する. 事象間の因果関係を容易に把握できるように, Web 検索を利用して因果関係を抽出し, それらを因果関係ネットワークとして可視化する手法がいくつか提案されている. しかし, これらでは指定した一または二事象についての因果関係しか調べることができなかった. そこで本研究ではこの因果関係ネットワークを拡張し, 三つの事象間の因果関係を分析するための因果関係ネットワーク生成の方法を提案する.","bookmark":0},
-{"presenid":"C1-4","title":" テキストデータにおける予定変更情報の獲得および未来に起こり得る派生事象の予測","abstract":"我々人間が適切な意思決定を行う上で，未来の予定や計画について知っておくことは必要不可欠である．\n例えば，企業は未来の市場変化や競合他社の計画を知ることはビジネスの成功に大きく役に立つ．政府機関であれば国際情勢の変化，一般的の家族であれば週末のイベントなどを知りたいとも考えるだろう．しかし，未来の予定や計画は変更されることが多々ある．変更になったことに気づかずに，誤った未来を想定していれば，不適切な意思決定をしてしまうことにつながる．さらに，予定間には複雑な関連性があるため，一つの予定の変更はその他の予定の実施にも影響を及ぼす．そこで本研究では，テキストデータにおける予定変更が未来の予定や計画に与える影響を把握することを目的として，テキストデータから予定変更情報を獲得し，さらにその予定変更情報が与える影響を獲得する手法を提案する．","bookmark":0},
-{"presenid":"C1-5","title":"差異を明確化する「たとえ」の提示によるコンテンツ選別支援手法","abstract":"近年，Web の普及に伴うコンテンツの急激な増加を受け，多くの検索システムの研究が行われてきた．それらの\nシステムは，ユーザの要求に適すると考えられる複数のコンテンツを提示するが，その中からコンテンツを一つ決定するということに関してはユーザ任せである．そこで本研究では，複数のコンテンツを比較した際の差異を明確化することで，コンテンツの選別を支援する手法を提案する．具体的には，コンテンツとして映画を対象とし，二つの映画の関係性を同様の関係性をもつ他の映画で例えることで，二つ映画の違いを明確にし，ユーザにコンテンツ決定のヒントを与える．","bookmark":0},
-{"presenid":"C1-6","title":" タスクの汎化と特化に着目したWebからのタスク検索","abstract":"本稿では，クエリとしてあるタスクが与えられた際に，そのタスクを達成するために必要なタスク集合を\nWeb から発見する「タスク検索」を提案する．提案手法では，実行することで入力タスクを達成できるタスクを Web検索エンジンを用いて発見し，一連のタスクをまとめることでタスク集合を形成し，タスク集合の達成度（それを実行することで入力タスクを達成できる度合い）によってランキングを行う．タスクの汎化・特化関係を考慮することで，同種のタスクを同定しその頻度を利用することでタスクの達成度を推定する．","bookmark":0},
-{"presenid":"A2-1","title":" データ分割と協調的マージに基づくGPU上の効率的ソートアルゴリズム","abstract":"ソートはデータベースをはじめ，コンピュータサイエンスにおける基本的な処理の一つであり，その高速\n化は非常に重要である．そのため，近年急速に性能が向上している GPU (Graphics Processing Unit) を用いたソートの研究が数多く存在する．GPU を用いたソートアルゴリズムの代表の一つにマージソートベースのものがある．このアルゴリズムには，ソートするデータが巨大な場合に性能が劣化する，という問題がある．本稿では，この欠点を解消した新たなアルゴリズムを提案する．本アルゴリズムは，データを複数のバケットに分割してから，これらのバケットを GPU 上で協調的にソートすることで，高性能を達成する．","bookmark":0},
-{"presenid":"A2-2","title":" A Study of Many-Core Hardware Accelerated Hadoop MapReduce","abstract":"MapReduce is a widely used framework for massive data processing. It was originally designed to overcome the\nI/O bottleneck, and enabled us to process Bigdata with the commodity clusters systems. However, several existing work haverecently shown that the emerging high speed storage and network devices are capable to remove the I/O bottleneck and madethe CPU the next serious bottleneck in the MapReduce framework. In this paper, we propose hardware accelerated (HA)Hadoop MapReduce framework and implement it on a Tilera’s many-core processor board to overcome the CPU bottleneck.Our proposed solution offloads the main parts of Map and Reduce procedures, including the data parsing, sorting and merging.Based on our experimental evaluations, we verify the feasibility of our proposal.","bookmark":0},
-{"presenid":"A2-3","title":" フラッシュストレージ環境におけるアウトオブオーダ型データベースエンジンOoODEの実験的クエリ処理性能評価","abstract":"アウトオブオーダ型データベースエンジン OoODE は，クエリ処理の動的タスク分解と高多重非同期入出\n力発行に基づき，入出力帯域および並列演算性能を高効率に活用することで高速なクエリ処理を実現するデータベースエンジンである．本論文では近年高速ストレージとして注目を集めるフラッシュストレージ環境を用いた評価実験により，OoODE のクエリ処理性能評価を行う．","bookmark":0},
-{"presenid":"A2-4","title":" 128ノード規模のストレージインテンシブクラスタ環境におけるアウトオブオーダ型並列データ処理系の性能評価と実データを用いた有効性の検証","abstract":"著者らは，アウトオブオーダ型並列データ処理系と称する高性能並列データ処理系を開発している．アウ\nトオブオーダ型並列データ処理系では，各々の計算機において，並列データ処理の実行時にタスク分解を行い，分解されたタスクにおいて自らの二次記憶ならびにネットワークを介した他の計算機の二次記憶への入出力を行い，入出力の完了に伴い関連する演算を実行する．即ち，並列データ処理における入出力全体を非同期化する．データインテンシブな並列データ処理においては，入出力に性能が律速されることが多く，当該入出力を非同期化することにより，従来型の処理系に比して，特にデータセット空間の一部のデータを対象とするデータ処理において，飛躍的な高速化が期待される．本論文では，著者らが試作を行った Hadoop をベースとするアウトオブオーダ型並列データ処理系Hadooode の構成法を示すとともに，128 台の計算機からなるクラスタマシンにおいて当該試作を用いて行った性能評価実験を示し，その有効性を明らかにする．","bookmark":0},
-{"presenid":"A2-5","title":"車載センサを用いたEVエネルギー消費ログDBの長期運用実験と精度評価","abstract":"我々は自動車に後付けで搭載したスマートフォンなどの簡易なセンサから日常的な走行ログをデータベー\nスに蓄積してきた．蓄積した走行ログには電気自動車（EV）の力学的な運動モデル（EV モデル）を適用し，エネルギー消費量の推定を行う．これらのデータからエネルギー消費に関する検索や比較を行うことが可能となる．このデータベースを長期的に運用することで，地点ごとや状況ごとなどの大量のデータを基にした統計的な情報を検索できる．本論文では，長期運用により得られたデータを示すとともに，EV モデルの評価として実際の EV から取得した CANデータと EV モデルを適用した推定量との比較を行い，EV モデルの推定精度の評価を行った．","bookmark":0},
-{"presenid":"B2-1","title":"ウェアラブルカメラを利用したSNS記事投稿からのプライバシー侵害保護サービスの提案","abstract":"Google Glass などウェアラブルカメラによるプライバシー侵害を危惧する意見が増えつつあり，その\n利便性が否定されかねない．そこでプライバシー侵害の要因分析を目的とし，Google Glass に関する YouTube 記事から機微な意見の抽出や感情分析により，プライバシー侵害に関する記事を収集した．その中でプライバシー侵害に関する意見が多く寄せられている記事に含まれるビデオのシーンをキャプション分析により抽出し，その特徴をベクトル化して，学習することでプライバシー侵害を予知する学習型のアルゴリズムを開発した．","bookmark":0},
-{"presenid":"B2-2","title":" SNS の投稿内容に含まれる地域情報を用いたアカウント到達可能性算出モデルの検討","abstract":"近年，ソーシャルネットワーキングサービス（SNS）の利用において自身が投稿した内容やプロファイル\nがどの程度のプライバシリスクになっているかを把握する必要性が増している．我々は SNS におけるプライバシリスクの提示指標として，アカウント到達可能性を定義している．アカウント到達可能性は，攻撃者が利用者の既知のアカウントから別のアカウントを見つけ出す可能性を表す．本論文ではアカウント到達可能性を求める具体的な手法のひとつとして，SNS の投稿内容に含まれる地域情報をもとにアカウント到達可能性算出モデルを検討する．","bookmark":0},
-{"presenid":"B2-3","title":" メンション情報を利用したTwitterユーザプロフィール推定","abstract":"日々様々な情報発信が行われている Twitter では，有用な情報を発信しているユーザを発見したり，マ\nーケティングに利用したりするために，Twitterユーザの所属や趣味といったプロフィールを知ることが重要である．従来のプロフィール推定では，ユーザ間のフォロー情報によって構築される交友関係のグラフからプロフィール推定を行っているが，１）友人・有名人・ニュースのような混在したフォロー目的を区別できない，２）一度フォローしたユーザに対して現在も交流があるかなど最新の交友関係を判断しにくい，という問題があった．こうした問題を解決するため，本研究ではフォローに代えてユーザ間でやり取りされるメンションを解析することで，Twitterユーザのプロフィールを最新の交友関係に基づき詳細に推定する手法を提案する．実験の結果，フォロー情報を用いたプロフィール推定と比較して Precision@10 が 48.6%から 58.6%，MRR が 1.55 から 1.86 に向上した．","bookmark":0},
-{"presenid":"B2-4","title":" 投稿活動遷移に着目したマイクロブログユーザプロファイリングに関する一検討","abstract":"近年 Twitter に代表されるマイクロブログの利用が定着してきている．Twitter では，ユーザはツイート\nと呼ばれる短文をリプライやリツイートといった様々な機能を使用して投稿している．本稿では，ユーザがマイクロブログに記事を投稿する時間帯や頻度，リプライやリツイートといった，投稿活動を構成する特徴量のうち，投稿数の変動に着目する．ユーザの投稿数の時系列変化を用いてユーザをクラスタリングする．ユーザが長期間利用を継続する要因を明らかにするために，利用継続時間の長短で抽出した 2 つのユーザグループに対して，約 1 年間の投稿活動の遷移を分析する．分析結果から，投稿活動の遷移と利用継続時間との関係を議論する．","bookmark":0},
-{"presenid":"B2-5","title":" スマートフォンユーザのコンテキストと利用アプリケーションの関連性調査","abstract":"スマートフォン向けアプリケーションの爆発的な増加に伴い，ユーザが利用するアプリケーションは多様\n化している．また，スマートフォンは様々な状況で利用されるため，ユーザの身の回りの状況に応じてアプリケーションの利用傾向は変化すると考えられる．そこで，筆者らの研究グループでは，「どこにいるか」，「誰と一緒にいるか」，「何をしているか」などといった様々なコンテキスト情報とアプリケーションの利用履歴を結びつけたログを収集するシステムを，ゲームアプリケーションとして実装，配布し，約 200 人の一般ユーザから約 50 万件のログを収集している．本稿では，これらのログを分析して，コンテキストとアプリケーションの利用傾向の関連性を調査した．その結果，特定のコンテキストのみでよく利用される傾向のあるアプリケーションの存在を確認した．","bookmark":0},
-{"presenid":"B2-6","title":" ツイート数上限付きのオンラインリツイート推薦手法","abstract":"Twitter のアカウントの中には，自らのツイートの発信を目的とするのではなく，自分のフレンドの投稿\nをリツイートすることでフォロワーへ情報提供することを目的としているものがある．そのようなアカウントの運用では，既存のフォロアーを維持することが大切である．よって，フレンドの投稿の中から，よりフォロワーの興味に合う投稿を，より速く，そして，フォロワーにとって過剰とならない適切な発信頻度の範囲内で，選択して発信することが重要となる．そこで，本研究では，オンライン・アルゴリズムによる，ツイート数上限付きリツイート推薦手法を提案する．","bookmark":0},
-{"presenid":"C2-1","title":" Webページの領域分割と領域タイプの判定に関する研究","abstract":"多くの Web ページには主題とは直接関係ない領域（非主要領域）が含まれている。先行研究では、ページ中の非\n主要領域を特定する手法を提案した。これは、Web ページの構造的な切れ目を用いてページをブロック化した後、教師データを用いて決定木学習を行うという手法と、Web ページ中に存在するナビゲーション領域を検出することでヒューリスティックに非主要領域を特定するという手法を組み合わせたものである。本稿では、ブロック化の前にページ全体の構造を把握する処理を行うことで、ブロック化の精度を向上させる。また同時に、各ブロックにおけるレンダリング後の面積情報を利用することで、非主要領域の特定精度を向上させる。","bookmark":0},
-{"presenid":"C2-2","title":" NoSQLデータベースをブラウザ上で管理するシステムの検討","abstract":"SNS（twitter や Facebook 等）や検索サイト（google や yahoo 等）といった大量の情報を扱うサービス\nが急速に増えてきている。従来は情報を管理するのに RDBMS が使われてきた。しかしながら膨大なデータを格納及び管理の手段として RDBMS は必ずしも向いていない。そこで高速性にすぐれ、分散化の容易な NoSQL データベースが開発されている。しかしながら、一口に NoSQL データベースと言っても、それぞれのデータ構造や操作言語が全く違うため、データベースの移行や移行後の管理が容易ではない。本研究では、ユーザインタフェースを抽象化することにより、複数の NoSQL データベースを同じインタフェースで管理できるシステムについて検討を行う。","bookmark":0},
-{"presenid":"C2-3","title":" 多次元ツリー自動構成ツールMD-TACTの開発と評価","abstract":"近年多くの企業や企業で大量の情報が電子化されており、それらの整理や検索が困難になっている。\n我々は増え続けるファイル群を系統的に整理するべく、多次元ツリーを用いたファイル整理ツール HyperClassifierを開発している。本論文では既存の分類で良く使われる単一ツリーを HyperClassifier の多次元ツリーに変換する手間を軽減するため、多次元ツリー自動構成ツール MD-TACT を開発する。MD-TACT は単一ツリーを多次元ツリーに自動変換し、さらに手動で洗練する機能を提供する。また、ツリーの再構成情報を利用することで、それ以降の自動構成の精度向上を図る。MD-TACT の評価実験を行った結果、被験者からは良好な評価が得られた。また、MD-TACT を使用することで、手作業と比較して 3.8 倍程度の効率化が図れることが分かった。現在、評価実験を通じて得たログデータを詳細に分析中である。","bookmark":0},
-{"presenid":"C2-4","title":"対立語抽出に基づくWebニュースからのロボット漫才台本自動生成手法の提案","abstract":"ロボット工学の進歩によりコミュニケーションロボットの開発が進んでいる．しかし，人がロボットをコ\nミュニケーションの対象と捉えるのは未だ困難である．これまで我々は，人とロボットとの円滑なコミュニケーションの実現を目的とした漫才ロボットを行うために，ロボットに実装し実演するための漫才台本自動生成システムを提案してきた．本論文ではさらに，Web ニュースの主題の対立語を抽出し，その対立語を用いた漫才台本自動生成手法を提案する．","bookmark":0},
-{"presenid":"C2-5","title":" エピソード情報に基づいた検索における再認と再生","abstract":"本論文では，あいまいなエピソード情報に基づいた情報検索タスクにおける，ユーザの再認および再生の\n傾向を明らかにする．我々は，400 人の被験者を対象に，ニュース記事を用いて特定のエピソード情報を記銘させ，一定期間後にそれを検索することを想定した実験を行った．実験の結果，一定期間後にユーザが入力するクエリは動詞を多く含むようになり，検索性能を著しく低下させることがわかった．また，システムがエピソード情報に関する質問をユーザに与え，それに回答させることによってクエリ拡張などに有効な情報を引き出す対話的手法を提案し，同実験にてその有効性を検証した．さらに，再認の傾向を分析することにより，ユーザによる検索結果の適合性判定を容易にするようなスニペット生成手法についても提案する．","bookmark":0},
-{"presenid":"B3-1","title":"単語の地理的局所性の経時変化を考慮したツイートの発信位置推定","abstract":"本研究では，マイクロブログの代表である Twitter に投稿される各ツイートに対し，ツイートに含まれる\n単語の地理的局所性に基づき発信位置を推定する手法を提案する．提案手法ではまず，発信位置の緯度・経度を表すジオタグが付与された少数のツイートから単語の地理的局所性を解析し，特定の地域から発信される地理的局所性の高い単語であるローカル語と，ローカル語が示す位置情報を対にして学習する．提案手法は特に，地理的局所性が経時的に変化する単語が存在することに着目し，短期間に投稿されたジオタグ付きツイートからの学習を繰り返す逐次学習により，ローカル語の追加およびローカル語が示す位置情報の更新を行い，発信位置推定精度の向上を目指す．","bookmark":0},
-{"presenid":"B3-2","title":"マイクロブログを用いた鉄道の運行トラブル発生期間および付帯情報の抽出","abstract":"近年，スマートフォンやソーシャルネットワークサービスの普及によって，リアルタイム性のある，詳細\nな情報がウェブにアップロードされるようになった．その結果，ソーシャルメディアには他のメディアよりも実世界の動きが早期に反映される．また，ソーシャルメディアには他メディアの報道内容を補完するような，より詳細な情報が含まれることもある．実世界のイベントについて，リアルタイムかつ詳細に把握することは意思決定を下す際に非常に重要である．そこで，ソーシャルメディアから実世界のイベントを抽出するという機運が高まっている．本論文では，鉄道運行トラブル発生時の意思決定支援を目的に，Twitter の投稿を解析することによってトラブルの検出および影響の予測を行う手法を提案する．トラブル検出ではバースト検出手法を用いた実験により，トラブルを早期に検出できることを示す．影響の予測ではトラブルの継続時間および他路線への影響の予測を行い，実際の運行データと比較して提案手法の有効性を示す．","bookmark":0},
-{"presenid":"B3-3","title":" Twitterから有益な日常情報を発見するための特徴語による地域ユーザの検索","abstract":"Twitter などのマイクロブログで発信されている地域・日常生活に役立つ “その場” の情報を発見するには，\n地域情報を発信するユーザの検索が重要な課題である．そこで，本研究では出現頻度，発信ユーザ数と発信時間，およびその他の地域との差異を考慮して対象地域の特徴語を抽出し，それに基づく地域ユーザの検索手法を提案する．","bookmark":0},
-{"presenid":"B3-4","title":" Twitterからの地域特徴語辞書の構築とその観光情報検索への応用","abstract":"本研究では，観光地域に関する記述の時空間的遷移を明らかにするため，Twitter からの地域特徴語辞書を\n構築する手法を提案する．地名との共起を利用して観光スポットの特徴語をツイートから抽出し，隣接スポットの特徴語との類似に基づいて観光地域を動的に特定し，その特徴語辞書の構築手法を提案する．さらに，時間軸での特徴語の分布を考慮して，その観光地域の時期ごとの特徴語辞書を生成する．また，構築された特徴語辞書を用いた観光ツイートの検索手法も提案する．","bookmark":0},
-{"presenid":"B3-5","title":" Tweetを用いた歩行者推移推定モデルに基づく二輪車ナビシステムの提案","abstract":"本論文では，二輪車向け Twitter データを用いた歩行者混雑予測手法，ならびに二輪車向けナビゲーショ\nンシステムについて述べる．四輪車より歩道側を走ることが多い二輪車は四輪車と比べ，歩行者との接触等の危険性が高い．そこで本研究では位置情報付きツイートを取得し，交差点をノード，歩道をエッジとする双方向グラフを作成し，遷移確率行列を構築することで交差点への人の推移を算出し，交差点と歩道の混雑を予測する．また算出した混雑度からダイクストラ法を用いてルートを算出するナビゲーションシステムを構築する．本論文では歩行者混雑予測手法の提案ならびに構築したシステムの有効性を検証する．","bookmark":0},
-{"presenid":"B3-6","title":" マイクロブログマイニングによるイベント時の駅混雑原因の特定と状況の把握","abstract":"日本の都市部で主に用いられている交通機関は鉄道であるが，事故などが起きた際，混雑が発生すること\nが問題となっている．混雑の原因を特定することができれば，鉄道会社側が把握していない未知の混雑にも対応することができる．加えて状況を詳細に知ることができれば，同一種の混雑が起こった場合その対策を立てることも可能である．その情報を得るための手段としてマイクロブログが挙げられる．なぜならマイクロブログは即時性があり，状況を知る際非常に有効だからである．しかし，マイクロブログは多くの人が利用しているため，欲しい情報だけを手に入れる際には関連するデータとそうでないものを正しく分類する必要がある．駅混雑に関する情報だけを抽出し利用するために，マイクロブログから抽出した駅の混雑に関する情報をベイズ分類器を用いて分類し，さらにクラスタリングすることで，必要な情報とそうでないものをより分ける方法について提案する．","bookmark":0},
-{"presenid":"C3-1","title":"英語形容詞の語順決定システム","abstract":"名詞を前置修飾する形容詞の語順は, 日本語では自由に決められるが, 英語の場合は自由に変更できない.\n本稿では, 英語形容詞を自然な語順に決定するシステムを提案する. 提案システムは, 形容詞を色や材料などのカテゴリに分類し, 形容詞をそのカテゴリの配列順序に基づいて並べる. カテゴリに分類できない, または同じカテゴリに分類される形容詞があるなど形容詞の語順が決定しない場合には, 検索エンジンを用いて語順を決定する. 実験の結果,提案システムの正解率は 91.20% であった. また, Lapata らの手法より正解率が 6.75 ポイント高いことを示した.","bookmark":0},
-{"presenid":"C3-2","title":" 検索・分析のための手順文章からの意味構造抽出","abstract":"より賢い検索や分析を可能とするために、手順文章から意味構造を抽出する手法を提案する。具体的には、\n手順文章としてレシピを題材とし、手順を記述している文章に対して、単語分割、固有表現認識、文章解析を順に行う。単語分割と固有表現認識は、既存手法を用いることとし、本論文では、意味構造の表現としてフローグラフ（無閉路有向グラフ）を提案し、単語に分割されレシピ固有表現タグが付与された文章をフローグラフに変換する文章解析について述べる。","bookmark":0},
-{"presenid":"C3-3","title":"条件付き連語を用いた名詞句の文脈抽出","abstract":"人間が日常的に用いている言語を計算機で処理させる自然言語処理において，文章に含まれる出現傾向や\n時系列解析を行うテキストマイニングの分野が存在する．形態素解析や構文の解析等, 文章にあらわれる語句を表層的に扱う研究は多く存在するが，語句が潜在的に持ち合わせている意味を捉え，それを抽出する研究はあまりなされていない．本研究ではテキストマイニング手法である頻出共起語抽出と条件付き連語を用いて，名詞句に対し適切な文脈を表す語群を抽出する手法を提案する．","bookmark":0},
-{"presenid":"C3-4","title":"流行先読みブロガー発見のための流行語分析手法","abstract":"有望な流行語候補を早期に発見する手法の一つとして，流行語先読みブロガーの発見を目指している．こ\nの流行語先読みブロガーは，過去の流行語を早期に投稿しているブロガーであるため，過去の流行語をどの時点で投稿しているかに着目することが重要だと考えている．具体的には，対象流行語の流行時の話題が語り始められた時期（成長期間）を推測することで，流行語先読みブロガーの発見が可能となると考えている．そこで，本稿では，対象流行語の成長期間の推測に有効な流行語の分析手法について検討したので，報告する．","bookmark":0},
-{"presenid":"C3-5","title":" 係り受け関係の階層化に基づいた構文木モデルを利用したトピック推定手法の提案","abstract":"文書集合内における各文書のトピックを推定する際に用いられるモデリングの分野では，常に文書に対す\nるトピックの推定精度向上を目指した研究が行われている．従来は語の出現頻度である n-gram に基づいてトピックが各語に割り当てられ，それらの語を含んだ文書に各語が属するトピックを対応させることで文書のトピック分類が行われてきた．最近では， n-gram 以外に語の順序やフレーズ間の依存構造がモデリングの際の素性として用いられており，これらの併用によってトピック推定精度の向上が確認されている．そこで，この素性に着目し，階層化を行った係り受け関係をモデリングの素性として利用することで，日本語におけるトピック推定において精度の向上を目指した．","bookmark":0},
-{"presenid":"C3-6","title":" 概念語に関する順序付け知識のオンデマンド獲得","abstract":"出張先の宿泊地を決める場合など，複数候補を様々な観点（「安さ」，「近さ」など）から順序付けして比較\nし，それに基づいて意思決定を行う場面は多い．この時，多くの候補と観点を考慮することでより良い選択が可能になるが，あらゆる候補や観点を予め想定することは難しい．本稿では，順序付け知識獲得のオンデマンドな支援を目的として，ユーザが与えた複数の概念語をもとに，順序付けする際の観点となる形容詞をオンデマンドで自動収集する手法を提案する．得られた形容詞の妥当性を人手で評価するとともに [7] の手法を用いて概念語の順序付けを行い，得られた順序付けを人手でつけた順序付けと比較することで評価する．","bookmark":0},
-{"presenid":"A4-1","title":" Win-Winランキングによる写真を介した対面コミュニケーション支援","abstract":"我々は，2 者間の対面コミュニケーションにおいて，両者が保有する写真等の記録の中から，コミュニケー\nションの観点から高い満足度を得られる記録を探り出してランキングするシステム Auto SAGURU を開発中である．ここで記録とは，SNS 上への投稿情報や Web 上で閲覧した記事情報，また，本人が撮影した写真等を含む．本稿では，コミュニケーションの話題に応じた動的なランキングの実現に向けて，各記録をノードとし，記録のテキスト情報からノード間のエッジが張られるグラフを考え，Random Walk with Restart 法を応用した Win-Win ランキング手法を提案する．本手法を Auto SAGURU に導入することで，双方にとって満足な対話を実現する記録を高精度かつインタラクティブに提示することができる．さらに，同一ユーザ内の記録ノード遷移とユーザ間の記録ノード遷移の確率に対して重み付けを行うことで，お互いが相手の興味を優先した記録選択を行える提示方法の検討を行う．","bookmark":0},
-{"presenid":"A4-2","title":" An Exploratory Search Method for Presentation Contents based on User Browsing Behavior","abstract":"MOOC is a crucial platform for improving education; students are able to browse various educational\npresentation contents through the Web. Any single presentation content can only cover a small fraction of knowledgein a specific domain, and thus offers a limited depth of information. Students then have to go through variouspresentation contents, but this would be time-consuming and difficult to explore. Therefore, we propose a novelexploratory search tool for presentation contents based on a meaningfully structured presentation by using slides,called an interactive poster. The interactive poster places textual and graphic elements of slides in a structurallayout with a zooming user interface by semantically analyzing the slide structure. Through this, our exploratorysearch can support students interactively browsing an interactive poster with their operations, for retrieving andnavigating information from other presentation contents maps students’ specific needs by considering the students’browsing behavior on the structure of the interactive poster. In this paper, we discuss two types of exploratorysearch, (1) topic focused searching based on well-matched browsing behavior that enables users obtain details ofspecific topics; and (2) exploratory browsing based on distributed browsing behavior that enables the users findvarious relevant information on topics of interest.","bookmark":0},
-{"presenid":"A4-3","title":"振る舞い協調フィルタリングによるソーシャルストリームの効率的な閲覧手法","abstract":"近年，ソーシャル・ネットワーキング・サービス（SNS）が普及し，刻一刻と新しいコンテンツが生まれている．しか\nし，SNS から配信される膨大なコンテンツのストリームを閲覧する場合，価値があるコンテンツを見逃す可能性があり，効果的な閲覧は容易ではない．本研究では，情報推薦の典型的な手法である協調フィルタリングを，閲覧者間の振る舞いに活用することで，効率的なソーシャルコンテンツのブラウジングを実現する手法を提案する．本手法では，対象ユーザと振る舞いが似ているユーザが，コンテンツを読んだ際の振る舞いに基づいて，対象ユーザの未読コンテンツに対する適切な提示時間を推定することにより，効率的な閲覧を実現する．","bookmark":0},
-{"presenid":"A4-4","title":"ソーシャル・カウンセリング： SNSは闘病者の心を癒すのか？","abstract":"長引く不況や経済状況の悪化，失業率の上昇，核家族化などを背景に，うつを惹起する種々の社会・心理\n的要因が増加している．また，慢性疾患やがんなど，長期に渡る治療が必要となる疾患を罹患中に，うつを併発し，自殺に結びつくことも多く，大きな社会問題となっている．以上の背景のもと，我々は，闘病中のうつの予防/回復/再発防止の方法を模索している．本研究では，まず，うつ患者が執筆した闘病記ブログと非うつ患者が執筆した闘病記ブログを分析することで，文章におけるうつ傾向を測る指標を提案する．さらに，この指標を用いて，闘病記 SNSに投稿された大量のブログ記事を解析し，そのうつ傾向を分析する．この結果，闘病記 SNS での記事執筆を長期間継続することが，執筆者の文章におけるうつ傾向の低下につながり得る可能性を示す．すなわち，闘病記執筆，および，それを補助する SNS 環境が，闘病中のうつの予防/回復/再発防止につながる可能性を示す．","bookmark":0},
-{"presenid":"A4-5","title":"電子ドキュメント上での書き込みを支援する手書きアノテーション認識モデル","abstract":"ドキュメント上にペンで情報を付加する手書きアノテーションは，資料に関するメモの記録や理解を\n深めるために広く行われている．電子ドキュメント上での手書きアノテーションを実現するためには，自由に書き込めながらも複雑な操作で思考を妨げない手書きの特長を生かせる UI 設計や，動的に変化するコンテンツに対応するためのアノテーション認識が必要となる．本研究では，電子ドキュメント手書きアノテーションシステム設計支援，およびアノテーション範囲認識を目的とした手書きアノテーション認識モデルを提案する．本提案モデルでは下線や囲い込み，縦線といった一般的な範囲選択アノテーションの自動検出に加え，筆記者の意図する選択範囲推定を実現する．認識精度評価の結果，83～96%程度の精度でアノテーションを認識可能であることを確認した．","bookmark":0},
-{"presenid":"B4-1","title":" 大規模ソーシャルネットワークにおける時間的構造変化の解析手法の研究","abstract":"近年，Twitter や Facebook などの SNS が急?に普及してきたが，このような多様化する SNS 上のネ\nットワークの性質を深く理解するためには，成長を続けるネットワークに対し時間的な変化を解析する必要がある．しかし，ネットワークの巨大化に伴うデータ収集や解析コストの増大が大きな課題となっている．そこで本研究では，Twitter 特有の構?変化のルールを抽出し，ユーザの行動パターンを定義することで，ネットワークの時間的な変化を解析するためのモデルを提案した．さらに，2009 年の Twitter の実ネットワークとの比較実験を行うことで，このモデルが実際のネットワークに近い振る舞いを示すことを確認した．","bookmark":0},
-{"presenid":"B4-2","title":"外国人向け観光プロモーション支援のためのソーシャルメディア分析手法の研究","abstract":"近年，日本を訪れる外国人観光客の数は増加傾向にある．今後観光客をさらに増やすためには，海外にお\nける観光宣伝の強化が必要と考えられる．しかし，外国人の興味，関心は日本人の考えとは異なる可能性がある．日本人が外国人の興味を知る方法のひとつにソーシャルメディアがある．特に Twitter はユーザの人数が多く，公開されていれば誰でも閲覧が可能である．そこで外国人の Twitter へのツイートを取得し，場所ごとの使用言語の違いや頻出する訪問順序に注目して，外国人の興味や関心を分析，可視化することにより，外国人に向けたプロモーションの支援を行うための手法を提案する．","bookmark":0},
-{"presenid":"B4-3","title":" 実世界ユーザ行動予測のための閲覧履歴に基づく欠損データ補間手法の提案","abstract":"近年，SNS から発せられる大量データを分析し有用な情報を抽出する研究や，それらの情報を用いて，災\n害時の被災支援へ応用するサービスが活発に行われている．本論分ではユーザの 閲覧操作履歴等を用いることで，実空間での将来のユーザ行動を予測する手法を提案し，構築したシステムを用いて評価実験を行う．具体的には，ユーザの操作・閲覧履歴から時間と場所に関係するデータを抽出・分類し，ベイズ推定等を用いて移動確率を算出する．また，イベント発生に関しても，発生予測を行う．これにより，イベントが発生前及び発生直後に発生場所における居住者，訪問者，訪問予定者の判定が可能になる．本システムにより，地震などの災害発生前，または発生直後に各ユーザ毎に適切な避難経路や交通情報等を提供可能となる．","bookmark":0},
-{"presenid":"B4-4","title":" ゲーミフィケーションをユーザに無負担で導入するためのLocal Expert抽出手法 ～浜松を対象とした地域ブログサイト全量解析によるVenueの発見～","abstract":"近年，日々の様々な活動にゲーム性を加えるゲーミフィケーションに注目が集まっている．しかしながら\nアーリーアダプター以外のユーザにとって新しいサービスへ参加するという心理障壁は大きい．本研究では，既存サービスの全てのユーザが，無自覚のままゲームに参加している状態を作り出すことにより，ゲーミフィケーションをホットスタートさせる手法を提案する．我々は浜松を中心とした地域ブログサイト [はまぞう] のブログ記事全量を解析する事によって浜松市内の Venue を発見し，各 Venue に詳しく言及しているユーザ (Local Expert) のランキングを提示するシステムを構築した．ブログユーザはこれまで通りブログ記事を書くだけで，いわゆる Venue に対するチェックインを行う事ができる．また，提案手法を過去のブログ記事に適用しランキングを作成すれば，システムをホットスタートさせる事ができる．","bookmark":0},
-{"presenid":"B4-5","title":" 大規模ソーシャル・ネットワークシミュレーション基盤の設計と実装","abstract":"近年，Twitter などの SNS における情報拡散に関する研究が多く行われている．既存の研究では，過\n去の現象を分析してモデル化する一方で，それらのモデルを用いた情報拡散のシミュレーション実験に関しては，小規模な実験しか行われていない．そこで本研究では，Twitter から収集したデータを用いて数億ユーザ，数百億エッジから成る実ネットワークを再現し，ネットワーク上を流れる情報の広がり方を再現するための大規模情報拡散シミュレーション基盤をスーパーコンピュータ TSUBAME 上に構築した．さらに，リツイートによって情報が拡散される際に，同じ情報が流れることを利用してメッセージの圧縮を行い，通信量の削減を行った．","bookmark":0},
-{"presenid":"B4-6","title":" ソーシャルメディア上の情報拡散分析","abstract":"Twitter に代表されるマイクロブログサービスでは，リアルタイムに情報を発信したり，他のユーザー\nのメッセージへの返信や再共有等のユーザー間のやりとりも多い．情報がユーザーに再共有されて広がる様子を可視化すると，どのような経路で情報が拡散されたのか，拡散影響力の高いユーザーは誰か，等を知るために役立つ．しかし，Twitter の公式リツイート機能のように，再共有したデータが情報発信元と，それを再共有したユーザーのデータしか保持していない場合は，実際にどのユーザーの再共有をみて，その情報を共有したのか，という真の情報拡散経路がわからない．本研究では，ソーシャルメディアの友人関係のネットワークを用いることによって，実際にどのような経路で情報が流れたのかを推定する手法を提案する．また，情報が他のユーザーへ段々と広げることができているユーザーほど，高い値が付与されるようにユーザー階層ランク付けを行い，情報拡散力の高いユーザーを発見する．2013 年の参議院選挙の Twitter の実データを対象に，本手法を適用する．","bookmark":0},
-{"presenid":"C4-1","title":"実生活tweetに対する局面の階層的推定法","abstract":"身近な出来事や感心事を投稿し共有する Twitter 上には，食事や交通，災害，気象など，様々な生活の局\n面で有益な Tweet が数多く投稿されている．本論文では，これらの有益な Tweet に適切な局面を，一つ或いは複数個付与するマルチラベリングを実現する階層的推定法を提案する．第一段階では，大量の Tweet に対して教師データを必要としない LDA を用いてトピックを抽出し，第二段階では，ラベル付けされた少量の Tweet を用いてトピックと局面の対応関係を構築する．未知の Tweet に対して局面毎にスコアを算出し，閾値を超えたスコアを持つ局面を動的に付与する．提案法を実装したプロトタイプシステムを用いて評価を行い，未知の Tweet に対して適切な複数の局面を網羅的に推定できることを明らかにした．","bookmark":0},
-{"presenid":"C4-2","title":" Twitterにおけるトピックの同定手法の提案とそれを用いたトピックの変遷解析","abstract":"Twitter は、マスメディアよりも日々の社会の実情を反映するあたらしいメディアとして注目されてい\nる。Twitter 上のトピックの出現と消滅、あるいはその継続期間や変動状況は、社会情勢の変動を把握するために、大変重要な意義があると考える。本研究では、Twitter Streaming から集めたデータを日付順に保管して時系列データセットを作成した。そして、各時系列データセットに対して標準 LDA 法を用いてトピックの抽出を行った。その上で相関係数検定に基づいて、トピック数の決定法について提案した。さらに日付順に並べたトピック間の相関係数を計算してトピック間の同定を行い、時間推移に伴うトピックの変遷を日付順に図示した。","bookmark":0},
-{"presenid":"C4-3","title":" 時系列テキストにおけるクエリ依存の局所的なEmerging Topic の抽出","abstract":"ソーシャルメディアにおける時系列テキストを分析することで, 世の中で盛り上がっている話題 (Emerging\ntopic) を特定する研究が多く行われている. しかし既存手法の多くは, 与えられたデータセットにおいて大域的なEmerging topic を特定することが前提であるため, 任意の情報と関連する局所的な Emerging topic を特定するのが困難であった. この問題を解決するために, 本研究では関連文書の絞り込みと Non-negative Matrix Factorization (NMF)にもとづく Emerging topic 抽出の枠組みを提案する. 提案手法では膨大なテキストストリームにおいて, クエリをもとに Coverage 優先で関連文書を高速に絞り込む. 広く絞り込まれたデータにおいてはノイズとなる非関連文書が存在しうるため, クエリと関連性の高い Emerging topic を抽出するために, 従来の時間依存 NMF をさらにクエリ依存に拡張する. 評価実験を通して, 提案手法がベースラインと比較して効率的かつ高精度に局所的な Emerging topic を抽出できることを示す.","bookmark":0},
-{"presenid":"C4-5","title":" マルチモーダル関係トピックモデルによる多言語間関係予測","abstract":"複数の表現によるマルチモーダルデータとして，多言語データやテキストアノテーション付き画像データ\nなどが挙げられるが，その解析手法の高度化が望まれている．その有望なアプローチの一つに潜在トピックモデルが挙げられる．本稿では，マルチモーダルデータにおいて複数の異なる表現を横断して未知の関係を予測できるような潜在トピックモデルとして，マルチモーダル関係トピックモデルを提案する．これはユニモーダルデータを想定したGibbs-MedLDA に基づく関係トピックモデルを，マルチモーダルデータに発展させたものである．本稿では，提案するマルチモーダル関係トピックモデルの評価のため，日英二言語対訳文書集合を用いて，同一の内容をもつ日本語表現と英語表現の関係を予測する実験を行う．","bookmark":0},
-{"presenid":"C4-6","title":"カテゴリ階層の拡張を目的とした階層的トピックモデル","abstract":"カテゴリ階層付き文書データにおいて，新たなデータの追加によって既存のカテゴリ階層が不完全になり，\nカテゴリ階層への新規カテゴリの挿入や既存カテゴリの分割が必要とされることがある．そのようなカテゴリ階層の拡張と文書データの再配置はしばしば困難を伴う．解決策として，カテゴリ階層を教師情報として利用する階層的トピックモデルの推定を行い，カテゴリ階層を自動的に拡張することが考えられる．そこで，階層の拡張を目的とした階層的トピックモデルである Generalized SSHLDA (G-SSHLDA) を提案する．提案モデルは，任意の既存カテゴリの子孫となる潜在トピック階層をモデル化している点で従来モデルと異なる．実験では，現実データを利用して，提案モデルが推定した拡張カテゴリ階層と，提案モデルの汎化能力・クラスタリング能力の評価を行う．","bookmark":0},
-{"presenid":"A5-1","title":"有害な流言は訂正されうるか？～Twitterから収集した1年間の流言訂正情報の分析～","abstract":"Twitter などのマイクロブログの普及により，ユーザは様々な情報を瞬時に取得・拡散することができるよ\nうになった．一方，マイクロブログでは流言も拡散されやすい．流言は適切な情報共有を阻害し，場合によっては深刻な問題を引き起こす．特に災害時は，流言が救援活動などに悪影響を及ぼす可能性が高いため，流言の広がりにくい環境を作る必要がある．我々はこれまでに，流言拡散防止を目的とし，人間の発信した訂正情報に基づき流言情報を収集・提供するシステムを構築してきた．本稿では，1 年間収集した流言情報の分析を行い，訂正情報をもとに収集可能な流言の特徴および流言の有害性と訂正情報の発信との関連について述べる．","bookmark":0},
-{"presenid":"A5-2","title":"Twitter上での多言語ジャーナリズムの実現に向けたシステムの試作","abstract":"メディアやジャーナリストが報じる内容やその偏向は国によって大きく異なるが，言語の壁の存在により，\n他国の報道内容を人々が目にする機会は少ない．しかし，他国の実情を知るためには，その国で実際にどのような報道が行われているかを知ることが重要である．本稿では，多言語ジャーナリズム実現の第一歩として，世界各国のメディアやジャーナリストがリアルタイムに投稿したツイートを，任意の言語によるクエリで検索可能とする試作システムについて述べる．本研究で試作したシステムでは，9ヶ国語（日本語，英語，韓国語，スペイン語，ポルトガル語，ドイツ語，フランス語，イタリア語，アラビア語），24ヶ国のメディアおよびジャーナリストを対象としている．","bookmark":0},
-{"presenid":"A5-3","title":"Predicting Facebook Users’ Interactive Motivations from Observable Factors","abstract":"Motivations to use social networking service (SNS) can be classified into inward, outward, and neutral. Inward\nmotive is to interact with existing SNS friends, outward motive is to acquire new friends via the SNS, and neutral motive is themotive which cannot classify whether a user has inward or outward motive. Predicting users’ interactive (inward, outward, andneutral) motivations of using Facebook is important for its users, providers, application developers, and marketers for targetadvertising and friendship recommendation. We have conducted a survey via a questionnaire, to study relationship betweenmotivations and observable factors that are visible from the public. In this paper, we discuss constructing prediction models;based on binary logistic regressions, to predict motivations from observable factors such as profile photo, number of friends,contact openness, non-contact openness, gender, and age. Results show that our prediction models (inward and outward) havehigh accuracy and c statistics, indicating that the models can predict latent motives well and have good discrimination power.We also report that our prediction models perform better than a random selection model. Furthermore, using dimensional reductiontechnique important predictors for optimum prediction models were identified.","bookmark":0},
-{"presenid":"A5-4","title":"コミュニティベースモバイルクラウドソージングサービスを構築するための人間の動機に関する検討","abstract":"クラウドソージング・システムをデザインする際，優れたデザイン戦略はシステム成功の重要な役割\nを果たす．しかし，現在は，システムはデザイナーの直感に基づいてアドホックにデザインされることが一般的である．本論文では，我々が開発した 3 つのコミュニティベースのモバイルクラウドソージング・システムをケーススタディとして分析をおこない，それらの開発・運用経験から 5 つのデザイン戦略を抽出する．クラウドソージング・システムを構築する際に重要なポイントは，システムを利用する人々の動機を高めることである．抽出するデザイン戦略は，ケーススタディにおいて如何に人間の動機を高める仕組みが使われているかの教訓を含んでおり，これらのデザイン戦略は今後のクラウドソージング・システムを構築する際に有益な情報を提供する．","bookmark":0},
-{"presenid":"A5-5","title":"Twitterを用いた群衆のパーソナリティのクラスタ分析による県民性抽出","abstract":"地域の特徴を理解することは，引っ越し，マーケティングや広告のような地理的な意思決定を行う様々\nな場面において重要である．従来，社会調査のデータに基づく地域特徴の分析・抽出が行われている．しかしながら，社会調査に基づく地域特徴は，頻繁に実施することが困難であるためリアルタイム性が低いという問題や，大規模な地域の人々を対象とした調査が難しいという地理的な拡張性に関する問題がある．これに対し，近年普及している位置ベース SNS を活用することで，大規模な群衆の経験をリアルタイムかつ客観的に観察することができるようになり，従来の社会調査に基づき抽出される地域特徴を補完することが可能である．本稿では，地域特徴の一つとして地域の人々に共通する気質や性格のバロメータである県民性に着目し，これを抽出するためのプラットフォームを提案する．具体的には，Twitter から収集した群衆のライフログのメタデータに基づき各ユーザの行動を抽出する．そして，行動に基づくパーソナリティを分析することによりユーザのタイプを判定し，ユーザごとに社会的遺伝子リストを抽出する．次に，ユーザを実空間にマッピングし，ユーザ間の物理的な近接性とタイプの類似に基づく地理的クラスタリングを行う．最後に，地域クラスタごとに特徴的なユーザタイプをそのクラスタの県民性として特定する．これにより，行政区画に基づく都道府県だけでなく，より小さい地理的領域あるいはより大きい地理的領域において共通の人々の行動パターンを発見することが可能になる．さらに，Twitter を用いてユーザの行動を客観的に観察することで，従来の社会調査とは異なる観点に基づく地域特徴を把握することが可能になると期待される．","bookmark":0},
-{"presenid":"B5-1","title":"商品レビューを対象とした有用性の定義と判別","abstract":"Web 上で公開されているレビューは，ユーザが商品の購入やサービスの選択を検討する際の重要な情報源\nとなっている．しかし，Web 上に存在するレビューの数は膨大であり，その全てを閲覧し，有用な情報を判断した上で利用することは困難である．また，評価の根拠に乏しいレビューや，業者によるレビューなどがあることから，有用性の高いレビューばかりではないという問題がある．本研究では，機械学習を用いた有用なレビューの判別の実現に取り組む．これにより，オンラインショッピングにおけるユーザの購入の意思決定を支援することが可能となる．まず，被験者 2 名によって 303 件のレビューの有用性の判定を行うと同時に，被験者間の判定の一貫性を調査した．次に，有用なレビューの特徴を分析し，SVM で用いる素性の選択を行った．分類器を 10 分割交差検定で評価したところ，素性を適切に組み合わせることで，F 値で 0.8 を超える精度を実現した．","bookmark":0},
-{"presenid":"B5-2","title":"レビューサイトにおけるレビュアーの信頼性評価","abstract":"近年、レビューサイトが多くの人に利用されるようになった。しかし、レビューは個人の主観的な意\n見や感想であり、信頼性の低い情報とされている。そのため、不当な評価の検出やレビューの品質評価など、レビューの信頼性に関する研究は多く行われている。しかし、レビューの信頼性を具体的に示す数値的指標が提示されるに至っていない。そのため、レビューを参考にするか否かの判断はユーザの感覚に委ねられている。本研究では、レビューの信頼性をレビュアーの信頼度を算出することで定義する。提案手法ではレビュアーが投稿した各レビューをスコア付けし、全レビューのスコアからレビュアーの信頼度を数値として算出し、評価する。","bookmark":0},
-{"presenid":"B5-3","title":"キュレーションサービスのための主観的コメントの要約手法","abstract":"近年、インターネット上にあふれる多数の情報を集約し、有益な情報のみを利用者に提示するキュレ\nーションサービスが注目されている。コンテンツに対するネット上のコメントを人手で集約するサービスも提供されており、他の閲覧者がどのようにコンテンツを捉えたかが重要視される傾向にある。本稿では、このような利用者のニーズに応じたキュレーションサービスを実現するためのコメント要約手法を提案する。提案手法では、コメントの主観的な表現に着目することで、コンテンツがどのように捉えられたかを端的に表す要約語と、代表的なコメントを提示する。主観評価実験により提案手法とベースライン手法を比較し、有効性を確認した。","bookmark":0},
-{"presenid":"B5-4","title":"Cross-lingual Investigation of User Evaluations for Global Restaurants","abstract":"Twitter, as one of the most popular social network\nservices, is now widely used to query public opinions. Inthis research, Twitter data, along with the reviewscollected from review websites is used to carry out somebasic, sentimental, and culture-based analysis, so as tofigure out the cultural effects on user evaluations forglobal restaurants.This research is based on the authors’ previous work,which only considers posts and reviews written inEnglish. In this research, a language expansion is carriedout that more than 30 languages are taken into account.By using a range of new and standard features, a series ofclassifiers are trained and applied in the later steps ofsentiment analysis, through which some informativeresults are obtained considering the relationship betweenuser evaluations and cultural backgrounds. ","bookmark":0},
-{"presenid":"B5-5","title":" 閲覧者にとって有用性の高いWebユーザレビューランク付け手法の検討","abstract":"既存のインターネット通販サイトの多くは、他の閲覧者の評価の高いレビューを推薦している。しか\nし、レビューの用途は人それぞれであるため、閲覧者が求めていないレビューが推薦されてしまう場合があり、閲覧者の負担になっている。本研究では、係り受け解析と自作した評価項目辞書を用いてレビューから評価項目に関連する情報を抽出し、閲覧者が求める評価項目が多く含まれるレビューを優先的に推薦する手法を提案する。Amazon.com のレビューを用いて評価実験を行った結果、提案手法によって閲覧者が読まなければならないレビュー数を大幅に削減できることを確認できた。","bookmark":0},
-{"presenid":"B5-6","title":"商品評価ツイートからの属性語自動抽出手法の提案","abstract":"Web 上に存在する評判情報は，消費者の意思決定や企業のマーケティングにおいて有用な指標となっ\nている．中でも近年利用者数が増加している Twitter は，有用な情報源として注目されている．しかし，既存のサービスでは評価に使う語のみをツイートの抽出対象としており，商品のどんな属性に対して評価しているかを把握することは難しかった．さらに，商品ごとに評価される属性は異なるため，属性語抽出の為に予め属性語辞書を用意するにはコストが大きい．また，既存の属性語抽出手法では，Twitter における多様な表現に対応しきれていないという問題があった．そこで本研究では，Twitter における表現の多様性に対応しつつ属性語，評価語の対を取得するために，基本的な評価語辞書のみを利用し属性語の自動的な抽出を行い，属性語辞書を構築する手法を提案する．","bookmark":0},
-{"presenid":"C5-1","title":" 共引用テキストを利用した論文間の関係抽出","abstract":"研究者が論文をサーベイする際，二つの論文間の関係を提示することは，それらの位置づけや違いを理解\nするために重要である．本稿では，二論文を共引用している論文における引用部周辺テキストを “共引用テキスト”と呼び，共引用テキストの特徴と，これを用いて論文間の関係を抽出する手法について考察する．既存研究では，二論文間の直接の参照関係や，引用部周辺テキストを用いた関係提示については行われているが，共引用テキストを用いた関係提示は行われていない．共引用テキストを利用することで，多様な側面から論文間の関係を抽出できる可能性がある．","bookmark":0},
-{"presenid":"C5-2","title":" 学術論文からの構成要素抽出の一手法","abstract":"本稿では，学術論文から表，図，脚注，参考文献領域の四つの論文構成要素を，ルールと SVM により自動\n抽出する手法を提案する．本研究では，学術論文の XML のテキストにこれらの構成要素タグを付与することで抽出する．そのため，テキストに付与された XML 文書タグから，ページ内における位置情報，フォントの情報，特徴的な語句などを抽出して利用する．DEIM2013 の学術論文 50 件に対して論文構成要素抽出を行い，ルールによる手法において，タグ付与精度の F 値 0.936，論文構成要素毎の抽出精度の F 値 0.897 を確認した．SVM による手法では，タグ付与精度で F 値 0.750，構成要素毎の抽出精度で F 値 0.617 となった．","bookmark":0},
-{"presenid":"C5-3","title":"CRFによる学術論文からの参考文献文字列の抽出","abstract":"電子図書館に収録された学術論文の中から目的の論文を探すには，論文の表題や著者名等の書誌情報が必\n須である．とりわけ論文中の参考文献欄に記述された書誌情報は，文書間リンクの生成等にも利用できるため有用である．しかし，これらの書誌情報データベースを整備するには膨大なコストがかかる．そのため本研究では，論文の参考文献欄から個々の参考文献を表す参考文献文字列を，自動で抽出する手法を提案する．論文 PDF ファイルを変換した XML ファイルを入力とし，参考文献文字列の視覚的特徴と言語的特徴を CRF で学習し抽出する．DEIM2013の論文 139 編を対象に評価実験を行い，最終的な参考文献文字列の抽出精度が 92%～96%となることを確認した．","bookmark":0},
-{"presenid":"C5-4","title":"文献検索サイトの著者レコードの曖昧性解消における著者との関係の近さと信頼性","abstract":"文献検索サービスでは，著者に着目して文献を検索したいというニーズに応えるため，文献レコードから\n機械的に生成された著者情報に関するレコードを整備している．しかし，同一人物のレコードがスプリットしてしまう問題があり，人手による名寄せが必要とされているが，著者の研究分野に関する知識が必要とされるためクラウドソーシングの適用が難しい．そこで，著者と関係が近い人物にレコードの分類を SNS を介して依頼することで高い信頼性を確保するという手法を提案する．今回，学内の複数の教員を対象として，関係の近さがそれぞれ異なる学生達にレコードの分類を行ってもらうという実験を行なった．実験の結果から，近い関係であるほど正解率は高いということを実証することができた．","bookmark":0},
-{"presenid":"C5-5","title":" CRFによる参考文献書誌情報抽出のための学習コストの削減","abstract":"膨大な電子化文書が格納されている電子図書館を快適に利用するには，書誌情報データベースの整備が必\n須である．特に，学術論文の参考文献欄には著者名，論文題目名などの有用な書誌情報が集約されている．我々は，CRF を用いて参考文献文字列から自動で書誌情報を抽出する方法を提案したが，高い抽出精度を得るには少なくとも数百件の参考文献文字列を学習データとして用意する必要があった．そこで本稿では，能動学習と擬似データを用いて CRF の学習データ量を削減する方法を提案し，実験により評価する．一年分の電子情報通信学会英文論文誌に含まれる参考文献文字列を対象にした実験では，能動学習により，高い抽出精度を維持したまま，CRF の学習に必要な学習データ量を百件程度に削減できることがわかった．また，擬似学習データの利用により，さらに書誌情報抽出精度を向上させることに成功した．","bookmark":0},
-{"presenid":"C5-6","title":" オープンアクセス・ジャーナルの時系列データクラスタリングによる高被引用学術文献推定方法の検討","abstract":"現在，学術文献やその著者は，計量書誌学 (bibliometrics) を用いて，被引用数や h-index，インパクトファ\nクターなどの数値によって評価されることが主である．しかし，計量書誌学による評価では，学術文献評価に少なくとも半年以上もの年月を要することが多い．近年，閲覧者を限定しないオープンアクセス・ジャーナルが米国を中心に普及しつつある．そして，そのオープンアクセス・ジャーナルで公開されている学術文献の閲覧数やその文献について言及しているソーシャルメディアへの投稿は年々増え続け，それらは時系列データとして扱うことができる．これらの即時性を持つ時系列データに対してクラスタリングを行い，学術文献から高被引用学術文献の特徴を抽出することが可能だと考える．本稿は，従来の計量書誌学による学術文献評価に代わり，これらの時系列データに基づいて将来高被引用学術文献になる可能性を持つ文献の推定を行う方法を検討した．","bookmark":0},
-{"presenid":"B6-1","title":"Discovering NBA Game Stories from Twitter","abstract":"This paper proposes a system which generates the game summary for basketball games by quoting the\nrepresentative tweets during the game period for the first time, whereas the previous similar researches treatedsoccer and American football. Basketball is a more challenging subject than football or or soccer for making asummary. This paper introduces a unique idea to put the discussions at the break times between quarters and atthe end of the game into the game summary, since spectators state the game status at that moment and commentsupon the activities of the players and the teams then. Without specifying keywords, our heuristics attempt to suchdiscussions as the peaks of long duration in the tweet volume graph. Experimentally, our summary covers up to87% of the items written in the NBA Official Game Summary.","bookmark":0},
-{"presenid":"B6-2","title":" マイクロブログユーザのクラスタに着目したイベント手がかり語の抽出","abstract":"本研究では，ある期間に起こった自分の知りたい出来事に関連したイベントの手がかりとなるような単語\nを，Twitter のつぶやきデータを用いて検索できるようなシステムの構築を目指す．このシステムにより，利用者は自分が興味のある事柄に関連したイベントについて，その詳細な情報を効率よく調査できる．具体的な方法としては，まず，システムの利用者が単語と期間のクエリを与えると，関連語によるクエリ拡張を行う．そして，クエリについてよく情報発信するユーザを集め，そのユーザたちの期間内のつぶやきを集約して手がかり語を出力する．実験では，リアルタイム性の高いイベントを示すような手がかり語の出力を確認した．","bookmark":0},
-{"presenid":"B6-3","title":" Twitter上のあるユーザの意外な情報抽出手法の提案","abstract":"自らの近況や興味を持った事柄について手軽に記事を投稿することができる Twitter には，行動パターン\nや趣味嗜好といった発信者の特徴を表す情報が多数存在する．また，Twitter は単方向のリアルタイム情報発信ツールのみならず，共通の話題を持つ人々の双方向コミュニケーションツールとしての側面も持ち合わせている．本論文では Twitter ユーザの特徴を表す Tweet に着目し，ある Twitter ユーザの Tweet の内容や Tweet の属性データから、ある Twitter ユーザの意外な行動や意外な趣味嗜好，近況の変化等の情報を抽出する手法の提案を行う．","bookmark":0},
-{"presenid":"B6-4","title":"単語間の経時変化を考慮したマイクロブログからの実世界観測情報の抽出","abstract":"マイクロブログにはユーザによるリアルタイムの実世界観測情報が多く投稿されるため，これらの自動抽\n出により実世界の状況が迅速に把握できる．ユーザから与えられるクエリにより観測対象が設定されるとき，クエリと関連性の高い単語を用いて，観測対象に関する観測情報が抽出可能と考えられる．提案手法では特に，単語間の関連性の経時変化に着目し，マイクロブログへの短期間の投稿から逐次的に学習した長期的・短期的という二つの側面の単語間関連性に基づき各投稿のクエリへの関連度を算出することにより，クエリで表される対象に加え，それに関連した対象に関する観測情報の抽出を目指す．","bookmark":0},
-{"presenid":"B6-5","title":" ユーザの反応を利用したネタツイートの自動分類手法","abstract":"近年，SNS は爆発的に普及し，情報源として重要な役割を担っている．SNS には様々な種類が存在するが，代表的な SNS の一\nつに Twitter がある．一般的に，Twitter のユーザは，日常的に膨大な数の記事（ツイート）を閲覧している．そして，閲覧したツイートの中には，ユーザにとって価値があり，後から見直したいツイートが存在する場合がある．それらを管理するために，ユーザはツイートを「お気に入り」に登録することが多い．一般に，ユーザは，「お気に入り」に登録されたツイートをフォルダに分類したり，タグを付与したりすることはなく，全てのツイートを「お気に入り」用のフォルダに一括して格納するだけである．そうしたことから，ユーザがお気に入りに入れたツイートを後で読み返そうとしても，自分が読み返したいツイートを見つけることが困難な場合がある．この問題を解決するために，ツイートを自動的に分類することが期待されている．分類には，様々な基準が考えられるが，ユーザにとってのツイートの価値や目的に基づいた分類が重要である．しかし，そのような分類においては，ツイート本文に出現する単語等の言語的特徴に一貫性がなく，従来の一般的なテキスト分類法での分類は困難である．本論文では，そのような分類の代表例として，読み手を笑わせることを目的とした「ネタツイート」を例題として，ツイートに対するユーザ反応を利用することでネタツイートを自動的に分類する手法を提案する．具体的には「引用ツイート」，「ツイートへのリプライ（コメント）」，「リツイート直後のツイート」によるユーザの反応を利用して，ネタツイートの自動分類を行う．","bookmark":0},
-{"presenid":"B6-6","title":" シズルワードに着目したTwitter上のおいしさの表現の分析","abstract":"近年，Twitter に代表されるマイクロブログサービスの普及により情報発信が容易になり，食品の感想や\n紹介，宣伝を気軽に発信することが可能になっている．そこで本論文では， Twitter には多くの人が食品の率直な感想を投稿していることに着目し，食品のおいしさを表す「さくさく」や「芳醇」といったようなシズルワードを用いて，ツイートを分析する．さらに，一般の Web で用いられているシズルワードとツイート上で用いられているシズルワードを比較する．これにより，ある食品に対する人々のおいしさの表現方法を抽出することが可能になり，今後シズルワードを用いた食品検索等への応用が期待される．","bookmark":0},
-{"presenid":"C6-1","title":"引用意見とその発言者を利用した意見情報の提示","abstract":"論説型レポートの執筆や，政策判断のための世論調査を行うために，Web 上の意見情報を有効に活用する\nことが望まれている．本研究では，ユーザの情報要求に適合した意見情報を収集・整理することを目的として，発言者の立場に着目した意見情報の提示手法を提案する．まず，ニュースサイトを中心に Web 記事を収集し，記事中の引用部分 “「…」” に着目し，その中に含まれる意見を抽出する．次に，引用意見の周囲に現れる人名や組織名を，発言者として抽出することで，立場に基づいた意見情報の分類を試みた．いくつかのクエリについて調査した結果，特に複数の立場に分かれて論争が行われている話題について，提案手法が有効であることを明らかにした．","bookmark":0},
-{"presenid":"C6-2","title":" 単語の意味を考慮した共起ベクトルによるテキスト分類","abstract":"本研究では，シソーラスを利用し単語の分類的意味属性に基づいて，テキストの共起行列を生成\nし識別する手法を提案する．出現単語のみによる共起行列では，意味的に近い単語の共起頻度が別々にカウントされたり，また，共起ベクトルの次元数が増大するなどの問題があった．そこで，分類語彙表を利用して，意味的に近い単語を分類語に当てはめた共起行列を作成し，ランダムフォレストを用いて識別する．単語の属性を反映させることにより，次元数の増大を抑え，意味的に近い単語の共起ベクトルが，より的確なベクトルとして表現されることが期待できる．実験では，ニュース記事に含まれる単語を用いて，提案手法の有効性について検証する．","bookmark":0},
-{"presenid":"C6-3","title":"単語の出現度合いを考慮した質問文マルチクラス分類","abstract":"音声によって入力された質問文に対して回答を返す検索サービスでは，カテゴリごとに用意されたデータ\nベースを用いた検索方式が取り入れられている．検索の際には，予め質問文がどのカテゴリに関するものなのかを判定することで，検索対象とするデータベースを絞ることが出来，回答精度を向上することができる．本研究では，まず，約 45,000 文の質問文の分析を行い，単一のカテゴリのみに出現する頻度が高い単語を含む質問文とそうでない質問文が含まれていることがわかった．そこで，後者のような質問文についてカテゴリを判定する課題を，教師あり学習を用いたマルチクラス分類問題として解く．質問文は短文である場合が多く，単語の出現を特徴とする方法では分類性能に限界がある．そこで本稿では，全クラスにおける単語の出現度合いを数値化した拡張特徴表現を提案し，これを用いることで分類性能を向上し，高精度なカテゴリ判定を実現する．","bookmark":0},
-{"presenid":"C6-4","title":"異なる環境に適用可能な知識を考慮した強化学習手法の構築","abstract":"本研究では，強化学習の代表的な手法である Q 学習に，環境における「状態の変化量」とエージェン\nトの「行動」が意味において不変であるという前提を用い，これらの関係を知識として持ち越し，記憶させる学習手法を提案する．この手法では，ドメイン（問題領域）が同じであれば，その中のどのような環境であっても共通であるものを過去の知識として利用するため，環境の大きな変化にも左右されることのない効率的な学習を可能にする．また，実験により，同一のドメインであれば，提案手法は環境に依存することなく，効率的な学習を行えることを示した．","bookmark":0},
-{"presenid":"C6-5","title":" 相関分析のためのラティス構造に基づくデータセット生成器","abstract":"相関分析の分野では，マイニング手法の評価のため，しばしば人工データセット生成器が利用される．\nしかし，事実上の標準として多用されている IBM の生成器 [1]は，その出力が“実データらしくない”との指摘がある [2] [3]．また既存の生成器は，出力に現れる頻出アイテム集合や相関ルールを指定できない．そこで本研究では，頻出パターンを入力し，それに従うデータセットを出力する生成器を提案する．提案手法は，トランザクションを生成しながら，生成済みのデータセットの頻出パターンを随時更新し，さらに必要に応じて生成済みのトランザクションをマージするものである．評価実験の結果，パラメータによっては提案手法により実データらしい出力が得られるが，提案手法の一部には課題があることも明らかとなった．","bookmark":0},
-{"presenid":"C6-6","title":"認知心理学的記憶調査に基づく記憶支援システムの構築","abstract":"物事を記憶するという行為は，私たちが社会で生きる上で必要不可欠な行為である．近年，タブレット端末が教\n育現場へ導入され始めたこともあり，タブレット端末における効率の良い記憶支援システムの設計が必要とされる．そこで，本研究では，まず学習者の主観的な記憶度と客観的な記憶度に関する調査を行った．そして，タブレット端末上で取得可能なオンライン手書きデータに着目し，オンライン手書きデータから記憶の定着具合を客観的に推定することで，記憶支援を行うシステムを提案する．本システムでは，将来忘れることのない記憶を定着記憶，近い将来忘れる可能性がある記憶を未定着記憶とし，学習した事象をいずれかに分類する．被験者実験の結果，未定着記憶の事象を精度約 100%，再現率約 95%で分類可能である結果が得られた．本システムを利用することによって未定着記憶を効率よく学習することが可能となり，記憶学習の効率向上へとつながる可能性が示された．","bookmark":0},
-{"presenid":"B7-1","title":" Twitterにおけるフォローに関する影響力に基づくHub度の推定","abstract":"急速に普及してきた SNS やマイクロブログなどのソーシャルメディアにおいて，多くのユーザが情報源と\nなり，多くの情報を発信している．そのため，これらの多くの情報源から有益なものを選択する能力が今まで以上に必要とされている．有益な情報源を選択するための重要な手段の一つが，有益な情報源を選択する能力に優れたユーザ，すなわちハブ度の高いユーザを見つけることである．ハブ度の高いユーザは，有益な情報源を参照していると期待できるため，その参照を模倣することで，有益な情報源を選択できると考えられる．Twitter 上では，ハブ度の高いユーザは，他ユーザからそのフォローを模倣される頻度が高いと予想されるため，本論文では，この仮定に基づき，各ユーザが他ユーザからフォローをどれだけ模倣されているかを推定することで，そのユーザのハブ度を推定する手法を提案する．","bookmark":0},
-{"presenid":"B7-2","title":" 共感ビューイング：波長の合うユーザとのソーシャルTVビューイング","abstract":"近年、?witter 等? ?N? でメッセージを交換しながら ?? 番組を見る「ソーシャルビューイング」という新しい視聴形態が注目されている。\n?witter でソーシャルビューイングを行うために?、ハッシュタグを使って対象とする番組に関するツイートを収集することが多い。しかし、こ?方法で?、ツイートが多すぎて読み切れないことや、宣伝など?不快なツイートが混ざってしまうことが問題となる。また、ソーシャルビューイング?知識を得ることが目的で?なく、他?人と?共感を楽しむことを目的とする場合が多い。そこで、本研究で?番組に関する大量?ツイート?中からユーザが共感できる「波長?合う人」?発するツイート?みをユーザに提示することにより，ユーザが快適に満足度?高いソーシャルビューイングを実現する手法を提案する。","bookmark":0},
-{"presenid":"B7-3","title":" 短期持続型情報取得を目的としたTwitter上でのアドホックフォローネットワーク自動構成手法","abstract":"Twitter は多くの利用者を有する代表的な SNS サービスのひとつであり、ユーザは実世界で起こってい\nる様々な事象に関してリアルタイムな情報を投稿する。Twitter においてユーザは他のユーザをフォローすることで自らのフォローネットワークを構成し、フォローしたユーザが発するツイートをリアルタイムに取得できる。しかし、一般的に Twitter 上でのフォローネットワークは静的なものであり、目的に応じて変更されることはない。一方、ユーザが地域の祭りや音楽フェスティバルといった実世界イベントに参加した際、そのイベント内での情報を短期間だけ持続的に取得したいという情報要求を有するケースは多い。本研究ではこの問題を解決するため、Twitter 上で目的に応じたアドホックフォローネットワークを構成する手法を提案し、ユーザの短期持続型情報要求に応えることを目的とする。そして、プロトタイプシステムを利用した実験により提案手法の有効性を評価する。","bookmark":0},
-{"presenid":"B7-4","title":" マイクロブログ上の匿名ユーザの所属ネットワーク構築","abstract":"近年ソーシャルネットワークサービス(SNS)の利用の高まりにつれ, SNS データの分析サービスが注目\nを浴びている. 多くの分析は男女や年齢などのグループに分けることで詳細に分析することが多い. しかし, SNS の一形態であるマイクロブログは匿名で利用されることが多く, グループに分けることが難しい. しかし, 特定のグループとしてユーザを抽出することができれば, 多くの有用な情報が得られるようになると思われる. また, マイクロブログは学生など若者の利用率高く, 学校の友達というグループで利用することが多い. 本稿ではマイクロブログの代表例である Twitter から大学と関連が強い学生のユーザを友達の輪のグループとして抽出し, 大学を中心としたネットワークを構築する手法を提案する. ","bookmark":0},
-{"presenid":"B7-5","title":" イベントの時空間推定に基づくブログとマイクロブログの統合閲覧システムの提案","abstract":"本研究では，ブログとマイクロブログの記事を統合することにより，自然言語処理を用いずにイベント内\nの盛り上がりを要約する手法を実現する．マイクロブログの記事は，イベントに参加している人々の行動や感想が逐一に投稿されるため，投稿数のバーストからイベント内での盛り上がりを検知することができる．しかしながら，1つの記事の文字数が少なく，また，連続する記事間の関係も明示的ではないため，バーストの内容を把握することが困難である．それに対し，ブログの記事は整形された文章であるため，イベントの内容を把握しやすいが，イベント全体を単位とした記事が多く，イベント内のバーストの検知はできない．そこで，本論文では，マイクロブログからバーストを検知し，ブログ記事が内包する写真の撮影時刻からバースト毎に記事を分割し，要約として提示する．","bookmark":0},
-{"presenid":"C7-1","title":" 表記が異なる同義の数式の高速な検索法","abstract":"従来情報検索の分野では、文献中のテキストに着目した検索手法が中心に研究されてきた。しかし学\n術論文などではテキストとともに「数式」が重要であり、数式を対象とした検索手法が有用である。数式の検索には、数式を木構?で表現し、pq-gram などの一般的な木構?の類似度計算アルゴリズムを用いることができるが、表記や木の構?が異なるが同義の数式が検索できないため、十分ではない。そこで本研究では、あらかじめ用意した値を引数として数式に代入し、計算した値を特徴量として検索インデックスに利用することで、表記が異なっていても外延的に同値な関数を高?に検索する手法を提案する。また、実際の論文に含まれる数式データを用いて提案手法を評価する。","bookmark":0},
-{"presenid":"C7-2","title":" 変動する検索語の近似文字列検索","abstract":"インターネット上では Blog や Twitter など, 大量の情報が文字列の形式で蓄積されている。これらの情報\nは変化の激しい環境にあり, データベースのオンライン変化だけでなく, 要求の変化に対応して検索語が連続的に変化す状況を想定しなければならない。このため検索語が連続的に増加, 減少すると仮定し文字列を検索する。また検索語は文字列と完全に一致するとは限らない。本稿では近似一致検索により検索性能を拡張する。提案する手法は従来と同様に動的計画法に基づいているが, その構築法が異なる。すなわち検索語の増加減少に対する変化を差分的に反映させ, 高速に近似検索できることを示す。","bookmark":0},
-{"presenid":"C7-3","title":" 一般化ピボット法の距離定義による特性評価","abstract":"類似検索の高速化を目的にピボット法が提案されており，従来のピボット法ではピボットを与えられたオ\nブジェクト集合から選択していた．これに対し，ピボットをオブジェクト集合の中から選択するのではなく，オブジェクト空間から最適なピボットを構成する一般化ピボット法が提案されている．これまでの研究により一般化ピボット法はユークリッド距離定義，マンハッタン距離定義に対応可能となった．本論文ではそれぞれの距離定義による結果の違いに着目し，目的関数，計算時間，類似検索性能，可視化結果，４つの観点からそれぞれ距離定義を比較する．本実験ではマンハッタン距離定義によるものが目的関数，類似検索性能の２観点において最も優れた結果を示し，また可視化結果ではデータ間の隠れた関係性の抽出に成功したことを確認した．","bookmark":0},
-{"presenid":"C7-4","title":" 逆遠方検索とその効率的な検索方法に関する研究","abstract":"データ工学で研究されている分野、類似検索のバリエーションの一つに、逆最遠方検索がある。これはデー\nタセット O 及びクエリ q が与えられたとき、O の中から q を最遠方とするような全てのオブジェクトを求めるという検索手法である。逆最遠方検索は施設配置に関する最適化問題などに非常に有用であるが、最遠方のみを考えるため、尺度として問題がある。そこで本研究では、一般的な逆遠方検索を提案し、新たに 2 つの検索アルゴリズム (RFarN,RkFN) を考案する。さらにその効率的な検索手法を提案し実験を行い、それらの有用性を検証する。","bookmark":0},
-{"presenid":"A8-1","title":"オブジェクト間の意外な共通点の発見","abstract":"本稿では，オブジェクトと属性値を入力として与えたときに，オブジェクトと属性値の関係の認知度を推\n定するための手法を提案する．提案手法を用いることで，たとえばオブジェクトを “中国”，属性値を “ワイン” としたとき，“中国” と “ワイン” は実際の関連度は高いがその関係の認知度は低い，といったことが求められる．提案手法では，（1）オブジェクトの認知度が高（低）ければ，オブジェクトと属性値の関係の認知度は実際の関連度よりも高（低）くなる．（2）オブジェクトの多くの類似オブジェクトと属性値の関係の認知度が高（低）ければ，オブジェクトと属性値の関係の認知度は実際の関連度よりも高（低）くなる．という仮説のもと関係の認知度を推定する．さらに，提案手法を用いた，オブジェクト間の意外な共通点の発見について考察を行う．","bookmark":0},
-{"presenid":"A8-2","title":"Discovery of Surrounding Fact Information Based on Fact Adjacency Relationships","abstract":"During daily web surfing, users encounter vast quantities of information everyday and at most time just\npass by. It maybe because there is no more time for further search, or even users did not notice the informationat all. However, among those missed information, there are some meaningful pieces. In this paper, we propose asystem that given a fact, surrounding information of the fact are discovered, and then ranked according to cognitiondifference with context formed by surrounding facts. The objective of our system is to help users efficiently findrelated and useful information, reducing users ’searching cost.","bookmark":0},
-{"presenid":"A8-3","title":"2-Hop ラベルの直接的な計算によるグラフ最短経路クエリ処理の効率化","abstract":"2 点間の最短経路の計算は大規模グラフデータにおける最も重要な処理の 1 つであり，グラフデータベー\nスのクエリ処理やネットワークを考慮した情報検索などの幅広い応用を持つ．本論文では (1) グラフに対し予め索引を作成し (2) それを用いて 2 点間の最短経路の問合せに効率的に応答するという問題を扱う．多くの手法が既に提案されているが，今日の規模のグラフデータにおいて満足な性能を持つものは未だに存在していなかった．本論文の提案手法は，索引のデータ構造と問合せ時のアルゴリズムとして 2-Hop と呼ばれる一部の既存手法と共通した枠組みを利用する．しかし，それらの既存手法は索引の計算を最適化問題に帰着し間接的に計算していたのに対し，提案手法は巧妙な枝刈りを伴う幅優先探索により索引を直接的に計算する．実験により既存手法に対し約 100 倍大規模なグラフを同等の前計算時間・問合せ時間で処理できることを確認した．","bookmark":0},
-{"presenid":"A8-4","title":"ジオタグ付き写真を用いた写真の撮影方向の推定手法","abstract":"写真の撮影方向情報は，撮影者の関心を表す重要な情報としていくつかの研究で用いられている．しかし，\nその情報が付与された写真は未だに少ない．また，写真に撮影方向情報が付与されていた場合でも，誤った撮影方向を表している場合がある．そのため，正確な撮影方向情報が付与された写真の数を増加させることは，重要な課題である．撮影方向情報を推定する手法のひとつとして，建物を表すタグが付与されている写真に対して，その建物の地点を推定し，写真の撮影方向情報を推定する手法が提案されている．しかしながら，この手法では，その建物が写真の中央で撮影されていない場合，正確に写真の撮影方向情報を推定することはできない．そのため，本論文では，その手法で推定された撮影方向情報に対して，写真に撮影された建物の位置に基づいて，撮影方向情報を修正する手法を提案する．提案手法では，ある地点で撮影された写真とその周辺で撮影された写真に対して，領域分割により抽出された領域を比較することで，写真に含まれる建物の位置を推定する．画像共有サイトから取得した写真に対して提案手法を適用することで，その結果についての評価・考察を行った．","bookmark":0},
-{"presenid":"A8-5","title":"旅行ブログエントリと質問応答コンテンツを利用した旅行ガイドブックの情報拡張","abstract":"観光を支援する媒体のひとつとして，旅行ガイドブックが挙げられる．しかし，旅行ガイドブックに\n掲載されている情報は，一般的な情報であり，様々な年齢層や性別の旅行者が求める多様な情報は掲載されていないといった問題点がある．不足する観光情報を補うための情報源として，旅行での体験を記述した旅行ブログエントリや，旅行に関する知識や知恵を教え合う場である質問応答コンテンツが挙げられる．そこで本研究では，これらのコンテンツを旅行ガイドブックへ自動的に対応付けることで，旅行ガイドブックの情報拡張を目指す．有効性を確認するための実験を行い，旅行ブログエントリでは 0.820，質問応答コンテンツでは 0.770 の割合で，適切に対応付けを行うことができた．また，実験で得られた結果を使用して，情報拡張された旅行ガイドブックを閲覧するシステムを構築した．","bookmark":0},
-{"presenid":"B8-1","title":"共起と潜在トピックを考慮したハッシュタグの構造化手法","abstract":"Twitter には，自身の投稿にタグを付ける，ハッシュタグという機能がある．これは，SBS（注1）などで発展\nしたフォクソノミーという分類法の亜種である．ハッシュタグを用いて話題が明示されたツイートを検索・共有することで，ユーザは有益な情報を得ることができる．しかし，既存の手法によって推薦されたハッシュタグは，必ずしもユーザが求めていたものではない場合がある．そこで我々は，推薦精度向上のため，関連する他のハッシュタグの意味や利用の差異が分かるよう提示し補間することが重要であると考えた．本稿では，フォクソノミーの 3 部グラフ構造と，ハッシュタグの潜在トピックを用いて，ハッシュタグの構造化を行う手法を検討する．","bookmark":0},
-{"presenid":"B8-2","title":" 母娘関係を例として同伴者との関係に基づく情報推薦法の提案","abstract":"人の行動は同伴者の有無や同伴者との関係により変化する．本報告は同伴者との関係に起因したユーザの要求\nの変化を反映する情報推薦法を提案する．まず，母娘関係を足掛かりとして同伴者との関係（家族，恋人，目上など）を整理する．さらに，ユーザが推薦されたい情報が同伴者との関係によってどのように変化するのかを推測するための要素ならびにそれぞれの相関などを参考にして一推薦法の提案を試みる．","bookmark":0},
-{"presenid":"B8-3","title":" 意味概念に基づいた関連論文検索システム ～近傍文書からのキーフレーズ抽出を用いた自動クエリ生成～","abstract":"研究者は， 研究を 行う にあたり ， 先行研究の調査を 行う ． こ の際， 主と し て論文検索システムが用いら れ\nる ． 一般的な論文検索システムは， 与えら れたク エリ のみに対し 最も 適合する論文を 提示する ． そのため， ユーザが適切なキーワ ード を 思いつかない場合， 関連論文の発見が難し く なる ． こ のよ う な問題を 解決する ため本稿では， ユーザがク エリ を 考案する 必要のない， 意味概念に基づいた関連論文検索システムを 提案する ． 我々 は， 入力を 英語論文の一部と し ， 意味概念を 用いた近傍文書から のキーフ レ ーズ抽出を 行う こ と で， 入力文書と の意味的な関わり が強いク エリ の生成に成功し た． 既存システムと の比較実験を 行っ た結果， P 10 を 平均 0.113 向上さ せる こ と ができ ， 本システムの有用性を 示すこ と ができ た ．","bookmark":0},
-{"presenid":"B8-4","title":"話題を考慮した多様性のある情報推薦手法の提案","abstract":"従来の協調フィルタリングでは，推薦する情報にユーザの好みが反映されていない可能性があり，ま\nた内容に基づくフィルタリングでは，推薦する情報が収束してしまいがちになる．そこで，我々は推薦する情報に，なぜこの情報を推薦するのかという明確な理由付けが必要であると考える．本稿では，ターゲットユーザと共通な話題を持つユーザに基づきアイテムを推薦する手法を提案する．これにより，推薦する情報と併せてどのユーザのどの話題を用いて推薦したか提示することで理由付けができる．ソーシャルブックマークを用いて評価実験を行った結果，我々の提案手法はユーザの好みを考慮し，かつ多様性のある情報を推薦することができた．","bookmark":0},
-{"presenid":"B8-5","title":" ユーザモデル・アイテムモデルの統合に基づくContext-Aware推薦システムの実験的評価","abstract":"近年，ユーザに適切な情報の提供を可能にする情報推薦技術が注目されている．その技術として，ユーザ\nモデルに基づく情報推薦とアイテムモデルに基づく情報推薦の 2 つの手法がある．前者では新規ユーザに対してコールドスタート問題が起こり，後者では新規アイテムに対してコールドスタート問題が起こる．そこで 我々はそれぞれの問題を解決するため，この 2 つの手法をハイブリッド的に統合する手法の提案を行なっている．本稿ではシステム構築に向けた検討を行い，プロトタイプシステムを開発した．さらに，プロトタイプシステムを用いて新規ユーザ及び新規アイテムのコールドスタート問題に対する有効性を確認する．","bookmark":0},
-{"presenid":"B8-6","title":"協調検索における検索・閲覧行動の共有とクエリ推薦に基づく制御","abstract":"本稿では，協調検索を行っているグループ全体の検索行動を可視化するためのインタフェースと，それに\n付随したクエリ推薦手法を提案する．協調検索では，情報の共有が難しいため，グループ全体として現在何を調べているか，これまで何を調べてきたか，といった情報の共有が難しい．提案インタフェースは，これにより，十分に調べられているトピックや十分に調べられていないトピックとして何があるか，ユーザは把握することができる．しかし，十分に調べられていないトピックについてユーザが調べようと思ったとしても，それを行動に移すことが容易であるとは限らず，例えば，どのようなクエリを入力すれば良いか分からない場合がある．そこで，検索行動を共有するためのインタフェースにクエリ推薦を付加する．これにより，どのように検索を進めればいいか分からないユーザの指針となり，グループの検索状況に応じて，ユーザが探索範囲を広げたり，より詳細に調べたりすることが可能となる．","bookmark":0},
-{"presenid":"C8-1","title":" 自動更新型WIXファイル生成システムおよびDeep Webに対するアタッチ機構の構築","abstract":"Web IndeX (WIX) とは, キーワードと URL の組み合わせであるエントリの集合が記述された WIX ファ\nイルを用い, Web ページ内の文章に出現するキーワードに対して, それに対応する URL へのハイパーリンクを生成(アタッチ) するシステムである. 本研究ではエントリを取得するための設定ファイルを記述することで, WIX ファイルの生成・自動更新を行うシステムを構築した. また検索エンジン結果ページなどのクエリパラメータのみが変化する URL 集合は無限に存在するため, WIX ファイル化が困難となる. そこで本研究では, 大規模な固有名詞のリストを用いた動的 URL を生成する新たなアタッチ機構を提案する. 固有名詞のリストは日本語版 Wikipedia の見出し語一覧、Google・Yahoo 検索急上昇ワードなどをベースとし, また Web ページを形態素解析することで得られる新規語によって構築した.","bookmark":0},
-{"presenid":"C8-2","title":"Web Indexにおけるオーサ主導アタッチの拡張に関する研究","abstract":"著者らは, キーワードと URL の組み合わせであるエントリの集合が記述された WIX ファイルを用い, Web\nページ内の文章に出現するキーワードに対して, それに対応するハイパーリンクを生成する Web Index (WIX) システムを開発している. 従来, WIX システムによるリンクの生成は主にユーザ主導で行われていた. 本研究では, ユーザがWeb ページを閲覧する際, Web オーサがアンカータグを記述すること無く指定したリンクを自動的に生成する, オーサ主導のリンク生成における新手法を提案し, 実装した.","bookmark":0},
-{"presenid":"C8-3","title":"Web IndexにおけるWIXファイル作成支援のためのリンク解析ツール","abstract":"著者らは, キーワードと URL の組み合わせであるエントリの集合が記述された WIX ファイルを用い, Web\nページ内の文章に出現するキーワードに対して, それに対応するハイパーリンクを生成する Web Index(WIX) システムを開発している. 利用価値の高いエントリで構成された WIX ファイルほど有用性が高い. 本論文では, WEB ページ群内のアンカーテキストと URL の組合せの抽出し, 解析することでアンカーテキストに対するリンク先の一意度を割合で提示するとともに分布図で可視化するツールを実装した. また, その一意度が閾値を越えたエントリから構成される WIX ファイルを生成することもできる.","bookmark":0},
-{"presenid":"C8-4","title":" Web閲覧・検索情報の構造化とその再利用","abstract":"本論文では，ユーザの Web 閲覧・検索行動を構造化して保存し，再利用する手法を提案する．タブブラウ\nザの普及により，Web ページの閲覧を行う際に，同時に複数のページを開くことがある．また，以前に閲覧したページを再度閲覧することも多い．このような閲覧情報の再発見のためには，ブックマークなどの手法があるが，ページ単位でのブックマークでは，作業中の文脈やアクセスした複数の Web ページ間の関係が失われるという問題点がある．本研究では，タスクの再開をスムーズにするという目的のもと，ユーザが閲覧したページに対して再閲覧ページを自動推定し，保存する手法を提案する．あるページに対する再閲覧ページとは，ユーザが閲覧したページの内，そのページとの関連が強く，タスクの再開に有用なページを指す．また，現在閲覧しているページに応じて再閲覧ページを表示する手法を提案する．","bookmark":0},
-{"presenid":"C8-5","title":" RMXにおける拡張プラグイン機構の導入及び各種プラグインの開発","abstract":"ルールベースメール配送システム RMX において, 先行研究では, データベースを利用したメール配送の基\n本的な機能が実装されていて, アイディア次第で RMX に様々なアプリケーションを導入できる. しかし, 現在の RMXでは, アプリケーションの機能と RMX 本来のメール配信機能は分離されていないため, 第三者が拡張機能を開発することが困難だった. 本論文では, RMX からメール配送やデータベース情報取得機能以外の機能を切り離し, 拡張機能をプラグインとして追加する手法を提案した. これらのプラグインは, 本体の RMX とは分離されているため, 本体側の処理に影響を与えない. プラグインの例として, ある特定のイベントへの出席・欠席を管理する拡張機能や, 使用可能なルール及び各ルールの使い方をメールで確認できる拡張機能などがある.","bookmark":0},
-{"presenid":"C8-6","title":" Googleストリートビューと利用者撮影画像のマッシュアップ法","abstract":"Google ストリートビュー(GSV)は、実際の道路上の周囲 360 度を切れ目なく見渡せるパノラマ画像を\n提供するサービスであり、利用者が現地に行く前にその周辺の情報を知るために有用である。しかし、表示されているパノラマ画像の撮影頻度は少なく古い画像が更新されないため、車などの障害物により対象物が見えない画像や、建物が立て替えられる前の古い建物の画像が表示され続けるなどの問題がある。本稿では、利用者が撮影した画像を GSV とマッシュアップさせる手法を提案する。本手法は、GPS 機能を搭載したデバイスで撮影した画像のExif 情報と利用者が付加した対象物名から対象物の位置を特定し、その位置を示すマーカーを GSV 上に表示させ、利用者がマーカーをクリックすると当該画像を GSV 上に表示させることを特徴とする。","bookmark":0},
-{"presenid":"A9-1","title":" トピックモデルに基づく文書ストリームのマルチラベル分類","abstract":"本研究では文書ストリームを対象としたマルチラベル分類手法を提案する．文書ストリームでは新しい文\n書が逐次発生し文書集合が動的に変化することから，同一の分類基準を用いて分類を行うことは困難となる．このため，ラベルの特徴を動的に学習して分類を行う必要があるが，文書は一般に複数のラベルから構成されるため，マルチラベルでの特徴の変化も考慮することが求められる．提案手法では，トピックモデルによりラベルの特徴を動的に学習し，ラベル間の相関関係をラベリングに利用することで文書ストリームのマルチラベル分類を行う．","bookmark":0},
-{"presenid":"A9-2","title":"階層型HMMに基づくフレーズ生成トピックモデルの提案","abstract":"近年，トピックモデルは潜在的なデータの傾向を抽出する機械学習手法として様々な分野で注目を集めて\nいる．多くのトピックモデルでは，文書を bag-of-words として扱い，潜在トピックと単語が 1 対 1 で対応することを仮定する．本研究では，潜在トピックが隠れマルコフモデル (HMM) と対応し，複数の単語から成るフレーズを生成するトピックモデルを提案する．このモデル化においては，トピックの推論は本質的に単語系列のセグメンテーション問題を含んでいるが，階層型 HMM を用いることにより効率的に推論および学習を行うことができる．実験により，提案手法を用いることで文書中の特徴的なフレーズをトピックと対応付けて抽出できることを示す．","bookmark":0},
-{"presenid":"A9-3","title":" 潜在的ディリクレ配分法を用いたネガティブ要因分析","abstract":"企業には，問い合わせとして製品の使い方など様々な質問が寄せられる．その質問の中には，製品に\n対するネガティブな意見やクレームも少なくない．質問の内容がネガティブなほど，顧客離れを招く可能性があり，早期の対応が求められる．現状，質問のネガティブさの判断と対応の優先付けは対応者の経験則によって行われている．それはネガティブさの度合いが一意的でなく，質問ごとにあいまいであり，単語のような表層的な情報だけでは判別が困難であることに起因している．そこで本研究では，質問内に潜在的に含まれているネガティブさの因子特定を目的とする．因子を特定することで，”質問のネガティブさ”が定量的に計測でき，適切な対応の優先付けが行える．今回は，感情極性による極性値ごとにレベル分けした文書から，潜在的ディリクレ配分法を用いた潜在トピックを推定し，トピックの分布について評価実験を実施した．","bookmark":0},
-{"presenid":"A9-4","title":"データ分析におけるランク付集合ラベルの利用","abstract":"データに対する階層的分類は，多様化したデータを一元的に分析に供するのに有用である．データの多様\n性は分類時にデータの不均一性となって現れ，1 件のデータに複数のカテゴリのラベルが付され，各カテゴリとデータの関連性の強さは異なる場合が多い．関連性の程度を示すランクを与えたラベルの集合（ランク付集合ラベル）をデータに付すことにより，関連性の強弱を反映させて分析の対象となるデータを指定できるが，ランク付集合ラベルに応じたデータの指定が問題となる．本稿は，ランク付集合ラベルを利用したデータの指定に関する理論的枠組みを明らかにする．さらに，ラベル集合の順序を用いることでデータの指定を平易に表し，指定法の十分性を検討する．","bookmark":0},
-{"presenid":"B9-1","title":"ソーシャルブックマークとWikipediaカテゴリを用いたブックマーク推薦システム","abstract":"ユーザが Web ページを検索する際，検索クエリの試行錯誤が必要となる．この問題の解決のためにユ\nーザの興味・関心に合った Web ページを提示する様々な推薦システムが研究，開発されてきた．そのなかでも，Web 上でブックマークを共有するソーシャルブックマークのタグ情報を用いてブックマークを推薦する研究が盛んに行われてきた．しかし，これらの推薦システムでは，２つの問題が存在した。１つめは，ベクトル空間や確率モデルに基づき類似するユーザの検索を行うため，処理速度が遅いという問題である．２つめは，ソーシャルブックマークのタグの表記の揺れ問題である．本稿では，ソーシャルブックマークのタグ情報と Wikipedia のカテゴリ情報を用いて上記の２つの問題に対応した推薦手法を提案し，提案手法を実装したシステムと評価結果を報告する．","bookmark":0},
-{"presenid":"B9-2","title":" ユーザの検索行動に基づく嗜好推定を用いた複数人Web検索における意見集約支援システムの提案","abstract":"実環境では，複数のユーザが Web 検索を行い，グループで食事するレストランを決定する場合など，各\nユーザの嗜好に基づいて意見を集約するといったことがよく起こる．この際，複数のユーザがまず個別にWeb 検索を行い候補を選んだ後，グループで議論することが一般的である．しかし，複数の候補の中から全員が納得する意見集約を行うことは容易ではない．そこで本研究では，ユーザの検索行動に基づく嗜好推定及び，意見集約の手法を提案する．提案手法ではまず，閲覧時間などの検索行動履歴の偏りに着目した嗜好推定を行う．その後，ユーザの嗜好を階層的に表現する手法を用い，グループにとって公平な意見集約を行う．提案手法に基づくシステムを設計・実装し，被験者実験によってシステムの有効性を検証する．","bookmark":0},
-{"presenid":"B9-3","title":"An E-commerce Recommender System Based on Degree of Specialties in Online Shops","abstract":"Use of online shopping sites, such as Amazon and Rakuten, has increased in recent years. Many shops\nparticipate in these sites. The categories of shops represent various intended uses for listed items. For example,a flashlight is often used for camping or emergency items, so some shops use a category such as “Outdoors” or“Emergency Supplies” for that item. In this paper, we aim to build a recommender system for specialty shopsbased on the viewpoints of items browsed by users. We first extract viewpoints of browsed items by using categorystructures of online shops. Through this, we analyze the category structures and selection of goods to determinespecialty shops.","bookmark":0},
-{"presenid":"B9-4","title":" Named Entityに対する記述の差異分析に基づく関連ニュースランキング手法","abstract":"本研究では，多様な視点から情報獲得を支援するため，ニュース記事内の組織・地域・人物などの固有表\n現（Named Entity）に着目し，Named Entity に対する差異に基づくニュース記事のランキング手法を提案する．小川らが提唱しているステークホルダーマイニング手法を拡張して，記事内の Named Entity に対する記述を抽出する．そして，Named Entity に対する言及の有無，トピックの被覆範囲及び記述極性を分析して，詳細の差・関連度・擁護度の差・発散度といったランキング指標を計算し，与えられた記事の関連記事をランキングする．","bookmark":0},
-{"presenid":"B9-5","title":" 地球科学データに対するタグと検索語の推薦手法","abstract":"近年，農業や海洋等の様々な分野に関する地球科学データが爆発的に増加している．地球環境情報統融合\nプログラム (DIAS-P) では，分野間でデータを相互利用するためのデータ基盤を構築しているが，メタデータの記述が不十分なデータセットも数多く存在し，関連データセットの発見は困難である．また，データベース中に，どのようなデータが存在するか把握することは難しい．そこで本研究では，各データセットに対してタグを自動推薦することで，データの統合的利用の支援を行い，同時にデータ利用者に対して検索語を推薦することで，データの発見を補助する．タグおよび検索語の推薦には，地球科学に関する統制語彙を利用した．また，実際に DIAS-P が管理するデータセットのメタデータに対して提案手法を適用し，有効性を検証した．","bookmark":0},
-{"presenid":"B9-6","title":"カーナビ利用時の運転者の意向を考慮したルート推薦およびその学習方法","abstract":"カーナビは非常に利便性の高いものであるが，常に運転者の意向に沿った経路推薦を行えるわけではない．\n例えば，カーナビが提示する推薦経路に対して，運転者が意識的に別ルートを走行することがある．これに対してカーナビが元の推薦経路に戻るような経路を再推薦することがしばしば起こるが，これでは運転者の意向に沿ったルートを提案しているとはいえない．我々はこれまでに，カーナビの推薦経路と運転者の選択経路の差異を分析する事で運転者の意向に沿ったルート推薦を可能にする手法および複数のコスト (距離，道幅，信号数など) を考慮することができる手法を提案した．本稿では，これら複数コストを考慮する際の重みの計算方法を検討したので，実験結果を交えて報告する．","bookmark":0},
-{"presenid":"C9-1","title":"性質の異なる複数ロボットの移動協力によるリンクアグリゲーション通信の制御と評価","abstract":"移動可能なロボットや移動センサなどのデバイスを用いたセンシングが盛んになっており、所望の地\n域を調査する場合、複数のノードが分散してなおかつ協調し合うことにより、効率的に、また新たな価値を生み出すような調査が可能になってきている。さらに、LTE や無線 LAN などの無線通信技術の発展により、ロボットが収集している情報を蓄積するのみならず、通信回線で遅滞なく所望の相手に送ることが可能となっている。このとき、ロボット自身の所有する通信回線容量よりも多くの情報を送りたいという状況においては、他のロボットとの協働が必要になる。本研究では、個々のロボットの調査活動と、協働による調査活動のバランスを最適にとるような最適化問題を提案し、その問題の特性を評価する。他のロボットに情報転送を依頼する場合、ロボット間通信に用いている無線 LAN の特性から、ロボットが移動して近接し、高速な通信を行う必要があるが、ロボットは移動すると、自己の調査活動が疎かになる。これらを協働のゲインと移動コスト、と捉えて最適問題を解き、問題の特性を明らかにする。","bookmark":0},
-{"presenid":"C9-2","title":"多数の近接する無線LANのチャネル割当方法の提案と評価","abstract":"近年, モバイルルータやテザリングなどの普及により個人が移動無線 LAN を持ち歩き，会議の場やカフェ\nなどのように, 近接した状況で多くの無線 LAN を利用する機会が増えている．従来は，アクセスポイント（AP）が固定されている環境で使用することが前提であり, 電波干渉を避けたチャネル割当を行うことで性能劣化を避けることが出来た. しかし, 多数の無線 LAN が近接して存在する場合においては, 近隣, あるいは同一チャネルを使用せざるを得なくなり，全ての無線 LAN のトータルスループットなどの性能劣化が避けられなくなる. このような状況における無線 LAN 全体の性能向上にはチャネル割当方法が重要な鍵となる．以上のことから本研究では, 近接して多数の無線LAN が存在する場合のチャネル割当方法の提案と性能評価を行った.","bookmark":0},
-{"presenid":"C9-3","title":"Service-Controlled Networking: アプリケーション構造やユーザ要求に連動したネットワーク制御技術","abstract":"筆者らは、センサデータやソーシャルメディアなどの実世界を反映した多種多様なビッグデータを個\n人が手軽に収集し，効率的に可視化・解析する実世界情報収集解析基盤の実現を目標に研究開発を行っている．このような基盤の実現においてアプリケーションやユーザ毎の要求に連動して効率的にインフラを制御する機能が重要であると考える．本稿では，そのようなインフラ制御技術として Service-Controlled Networking 技術を提案し，OpenFlow を用いて実装したプロトタイプ実装を使って実施した評価実験の内容を持ってアプリケーションやユーザの要求に連動したネットワーク制御が実現できていることを示す．","bookmark":0},
-{"presenid":"C9-4","title":" マルチホップマルチレートネットワークでの接続先選択ポリシーと接続元別重み付けスケジューリングにおける通信性能評価","abstract":"近年，テザリングやモバイルアクセスポイントなどの移動無線ノードの普及および Wi-Fi ダイレクトを用\nいた仮想マルチホップ網の構成技術などにより，近接かつ多数のノードが連携するマルチホップネットワークの実現性が高まってきた．従来とは異なり，近接かつ多数のノードが連携するマルチホップネットワークでは，その QoS(例えばスループット) は，トラヒックリレー時の各ユーザの接続先選択方法に大きく依存する．例えば，1 端末でも遠方に低レートで接続してしまうと，マルチホップネットワーク全体が，Performance anomaly と呼ばれる通信品質劣化を起こしてしまう．しかし，近距離でマルチホップ通信時には，中継ノードは，それ自身が能動的な端末であるため，転送トラヒックだけでなく自身のトラヒックも送信する可能性が高いことも特徴として挙げられる．このような条件において，マルチホップ通信での転送トラヒックと自身のトラヒックの優先制御を行うスケジューリングや，マルチレート通信における特性を考慮した接続先選択制御に関する研究がそれぞれ行われてきたが，これらを同時に考慮した適切な接続先選択と，そのときのスループットとの関係はほとんど明らかになっていない．筆者らの研究において，すでに，マルチホップマルチレートネットワークにおいて，伝送レートと送信スケジューリング方法の組み合わせが全体スループットに与える影響について基本的なモデルで評価している．そこで本稿では，これを拡張して，異なる複数の経路から最大のスループットを得るために接続先選択を行った場合の，送信スケジューリング方法が全体スループットに与える影響について評価する．","bookmark":0},
-{"presenid":"C9-5","title":" 多数の近接した無線LANにおけるコンテキストアウェアなマルチレート制御による通信品質向上","abstract":"近年，モバイルルータやテザリングなど移動無線     システムが増加している．このことから，従来の想\n定以上の多くの無線     システムが近距離にひしめき，通信品質劣化が懸念される．従来，多くの固定無線     がお互いに干渉する場合に関しては，マルチレートにおける適応レート制御が必須であった．しかしながら，移動無線    システムでは，   と端末の距離が非常に近いというような状況  コンテキスト）の違いから，従来の適応レート制御が逆に通信品質を劣化させる原因となり得る．さらに，多数の無線     が近接する状況では，  つの通信帯域を共有することになるため，  つの無線     において通信品質が劣化すると，他の全ての無線     の通信品質も劣化させてしまうという，連鎖反応にも似た状況になり，非常に大きな問題になる．そこで，本研究では，コンテキストに応じた適応レート制御を提案し，その効果を評価した．評価結果は，提案するコンテキストアウェアな制御により，通信品質が大きく改善したことを示している．","bookmark":0},
-{"presenid":"C9-6","title":" モニタリング情報に基づくOpenFlowを用いたネットワークトラフィック制御モデル","abstract":"近年，社会が生み出すデジタルデータが急増する上で，多種多様なデータを多角的に解析可能なビッグデー\nタ処理基盤は社会情報基盤として注目されている．大規模な自然災害などが発生する場合，ビッグデータ処理基盤に実世界を反映する形でバースト的な負荷変動がかかる．また，ネットワークをソフトウェアのように柔軟に制御可能な技術 (SDN:Software-Defined Network) として OpenFlow 技術が注目されている．そこで本研究では，バースト的な負荷変動の要因となる社会情報をモニタリングし，そのモニタリング情報を元に OpenFlow/SDN 技術を用いてネットワークトラフィックを制御することで，緊急災害時に発生する問題の解決を図る．一度，重い負荷が生じてからシステムの再構成を速やかに行うことは難しく，社会情報基盤として求められている安定した稼働状況を実現するために，提案手法ではモニタリング情報から投機的にトラフィックエンジニアリングを行い，緊急災害時にも耐えうる安定した情報処理基盤の構築を目指す．","bookmark":0},
-{"presenid":"P1-1","title":"Twitterユーザの印象選好の可視化","abstract":"Twitter には，面識のない人でも気軽にフォローできるという特徴があり，他者とつながるための手段\nとして有用と言える．しかしながら，その一方で，匿名の人からフォローされたり，すでにフォローしているユーザのリツイート等により，知らない人のツイートを目にしたりする機会も多く，そのような人たちをフォローすべきか否か迷うことがある．そこで本論文では，フォロー候補となるようなユーザの印象選好（普段，どのような話題の，どのような印象のツイートを見たり投稿したりしているか）を可視化することで，フォローの是非の判断を支援するシステムを提案する．本システムを用いることで，有益な情報源かどうかといった単なる損得勘定だけでなく，自身の感性に合ったユーザかどうかという視点からの判断も可能となる．","bookmark":0},
-{"presenid":"P1-2","title":" ソーシャルメディアの分析によるイベント開催支援","abstract":"近年，民間事業者や公共団体などがイベントを開催する際，イベント参加者の声を把握するために，\nブログなどのソーシャルメディアの情報を，テキストマイニング技術を用いて分析し，イベントの運営改善に活用する事例が増加している．しかし，ソーシャルメディア上の情報は膨大であるため，例えば，イベントに対する改善案や要望など，イベントの改善に役立つ情報を人手で収集するのは容易ではない．そこで，本研究では，こうした情報を，Twitter，YouTube のコメント，旅行ブログから効率的に抽出する手法を提案する．","bookmark":0},
-{"presenid":"P1-3","title":" ブログ投稿数の時系列変化を考慮した対象キーワードの影響度分析手法の提案","abstract":"世の中のブログとその繋がりを表すブロゴスフィアは，様々な世間の話題を反映したメディアであり，ブ\nロゴスフィアを分析することで世間に影響を与えた出来事や話題を知ることが出来ると考えられる．そこで我々はブロゴスフィア分析により，将来話題となりそうなキーワードの抽出に取り組んでいる．将来話題となるキーワードを発見するには，学習データである過去に流行したキーワードの分析が必要不可欠である．そこで本稿では，過去に世間に対して大きな影響があったキーワードの抽出を目指しており，そのためブログ投稿数の時系列変化を考慮した対象キーワードの世間に対する影響度分析手法を提案する．なお，対象キーワードに対するアンケート調査により，世間の認知度と提案手法により算出された影響度の比較実験を行ったので報告する．","bookmark":0},
-{"presenid":"P1-4","title":" 対象トピックとの関連度の高いブロガーコミュニティ判定方式の実験的評価","abstract":"あるトピックの関連情報をブログから取得しようとする場合，対象トピックとの関連度の高いブロガーコ\nミュニティを判定することで，そのトピックに興味・関心を持つコミュニティを判定することができ，効率よく関連するブログ記事を見つけることが可能となる．したがって，本研究では対象トピックとの関連度の高いブロガーコミュニティ判定方式の開発を行う．これまで著者らの先行研究において，コミュニティ内のブロガー発言割合や，対象トピックの共起語集合とブロガーコミュニティの関連語辞書との類似度を分析することに基づく手法を提案してきた．本稿では，これらの手法に対して詳細な実験を行うことで，各手法の有効性を検証する．","bookmark":0},
-{"presenid":"P1-5","title":" 場所に焦点を当てた複数ブログの自動要約","abstract":"我々は，ブログ集合から，旅行ブログエントリを自動的に検出し，さらに各エントリを地図上でアイ\nコンとして表示するシステムを構築している．ある地点を訪れた複数の旅行者が，それぞれ旅行ブログエントリを書いた場合，我々のシステム上ではある 1 点に多数の旅行ブログエントリが重なって表示されてしまうため，その地点で何ができるのかがユーザにとって分かりにくいという問題がある．そこで，ある地点に関する複数の旅行ブログエントリの要約を試みる．本研究では，エントリ中のテキストだけでなく画像も要約の対象とし，その地点における代表画像付きの要約を出力するため，内容の理解が容易になると考えられる．","bookmark":0},
-{"presenid":"P2-1","title":" ラフ集合を用いた感性のモデル化に基づく推薦手法の提案","abstract":"本研究の目的は, 各個人の好みに適する洋服や雑貨など (以後, 対象) をデータベース内から検索する個人適\n応型の情報検索システムを開発し, そのシステムを利用した個人適応型 Web サイトを構築することである. 本論文では, 個人適応型の情報検索システムを実現するために, 対象に関する人の好みを決定する過程をシステム上で模倣するためのモデル (以後, 嗜好モデル) を生成する方法を提案する. 本提案手法は, 対象に関する個人の好み (好き・嫌い) の情報から, 人の好みの決定に関連する対象の特徴を抽出し, かつ, その特徴と人の好みとの関係の度合いを推定する. 本提案手法により, 各個人が好みの判断するときに重要視する対象の特徴とその関連の度合いを導出できる. 本論文では,嗜好モデルの生成方法と嗜好モデルの推定能力の評価実験結果について示し, その嗜好モデルの有効性について述べる.","bookmark":0},
-{"presenid":"P2-2","title":" アイテムに対する認知度とユーザ評価を考慮したSerendipity指向情報推薦方式","abstract":"近年，単に精度の高い推薦を行うだけでなく，Serendipity の高い情報推薦技術の開発が注目されている．\n高い Serendipity を実現するためには，意外性を高めつつ，ユーザにとって有用性の高いアイテムを推薦する必要がある. そこで我々は，世間の認知度は低いが Fmiliarity の高いユーザからの評価が高いアイテムを判別することで，Serendipity の高いアイテムを提示することが可能な情報推薦方式の提案を行う．","bookmark":0},
-{"presenid":"P2-3","title":" 類似度分析に基づく未知レシピへのメタデータ自動付与方式の提案","abstract":"近年，料理レシピの検索・推薦に関する取り組みが盛んに行われている．レシピ推薦サービスにおいて，各\nレシピに対してメタデータを付与することで推薦精度を向上させることが考えられる．しかしながら，全てのレシピに手動でメタデータを付与することは容易ではない．そこで本稿では，既にメタデータが付与されているマスターレシピとの類似度分析に基づいた，未知レシピへのメタデータ自動付与方式について提案する．","bookmark":0},
-{"presenid":"P2-4","title":" ナビ利用を伴う群集移動の分析に基づいた経路選択における集合知獲得手法の提案","abstract":"事故, 渋滞, 災害等の突発的な理由により, 一部交通機関がマヒすることで目的地までの移動手段の選択に\n迷うことがある. その時の状況に応じて, ベストの選択を行うことは容易ではないが, 実際のナビ利用履歴を分析すれば, 比較的良好な経路を選択できたケースやそうでないケースを検出することが可能となる. 本研究では, ユーザの最終目的地までの過程において, ナビシステムにて推薦されたが選択しなかった経路と, 実際に選択した経路の特徴的な差異から, ユーザの経路決定に対する意図を抽出する技術を提案する. 特に経路選択としての成功例に着目することで,経路選択における集合知獲得が可能になると考えている.","bookmark":0},
-{"presenid":"P2-5","title":" 身体データの解析による健康情報マイニング","abstract":"近年，あらゆるデータのビッグデータ化が進み，個人の身体データの記録も容易に行えるようになってき\nている．身体データとは，体温・血圧・心拍数などであり，センサを身につけることにより記録することが可能である．このような個人的な身体データを時系列で連続して記録し，ビッグデータとして有効に利活用するためのマイニング手法を提案する．ビッグデータを分析することにより，隠れたトレンドの発見や将来のイベント予測が可能である．ビッグデータを分析する手法として非負値行列因子分解（NMF）を用いる．血圧や心拍数といった身体データを分析することにより，個人の健康状態の将来予測などを行うこと目標とする．","bookmark":0},
-{"presenid":"P3-1","title":"映像の地理的メタデータに基づくストリートビュー制御方式","abstract":"TV 番組の中には歴史的な場所や観光名所などを紹介しているコンテンツが存在する．これらのコンテンツ\nは視聴者に番組におけるトピックとなるスポットの地理情報を提示することが可能であるが，番組の構成上，スポット間の移動などはシーンの切り替えによって瞬時に行われるため，視聴者はスポット間の距離感やスポットの周辺状況を把握することが困難な場合がある．そこで，本研究では，TV 番組の字幕データを用いることにより，番組における時間的関係と実空間における地理的関係といった地理的メタデータを抽出する．それらの地名を用いて地図や写真とストリートビューとを対応付け，時間的関係と地理的関係に基づいて自動的にストリービューの演出を施す．これにより，映像に連動したストリートビューの自動制御方式を提案する．","bookmark":0},
-{"presenid":"P3-2","title":"測域センサデータのリアルタイム可視化システム","abstract":"コミュニケーションロボットやデジタルサイネージといったデジタルコンテンツを体験しているユーザに対して\n物理的な評価を行うことで，システムの質的向上や工学的なコンテンツ開発ノウハウを蓄積できる．そこで非接触でユーザ属性を測ることが可能な測域センサを用いてユーザ動作の可視化をリアルタイムで行うことが可能なシステムの提案をする","bookmark":0},
-{"presenid":"P3-3","title":" グラフインタフェースにおけるクエリ操作に基づく検索結果予見システム","abstract":"多くの Web 検索サービスではクエリの推薦機能が提供されている．ユーザは推薦されたキーワードから自\n身の検索意図に合うキーワードを選択することで容易に検索結果を改善することができる．しかしそれらの推薦キーワードは検索結果の概要については予想は困難である．本研究では入力クエリに対して，得られる検索結果をクラスタリングし，クラスタの重心となる特徴語をノードとした操作可能なグラフインタフェースにより次の検索結果の概要を予見する手法を提案する．提案手法では推薦キーワード同士の共起を計算することで，対話的な推薦キーワードを操作にともない，関連ある他の推薦キーワードも連動して動くインタフェースを提案する．その動作によりどのような結果が得られるか予見させる．","bookmark":0},
-{"presenid":"P3-4","title":"果物の販売促進のためのWebサイト構築","abstract":"現状の果樹園農家は作業量の多さに見合った報酬を得ることが難しいため，若者から敬遠される傾向があり，こ\nれが果樹園における後継者不足につながっている．農家の収益を上げるためには，高品質な果物を多く生産し，できるだけ手売り(直売)で消費者に届けることが重要である．そこで，本稿では売上数・販売数の向上を目的とした生産物の直販サイトの構築を行った．","bookmark":0},
-{"presenid":"P3-5","title":" Analyzing Dissemination Processes of Mail-based Disaster Information Systems -A Case Study of Typhoon Man-yi in 2013-","abstract":"Japan’s recent disaster response management planning efforts have focused on non-structural measures.\nMany local governments often disseminate evacuation information through mail-based disaster information systems.Local governments make evacuation announcements based on their best judgment, and after that, they disseminatethese announcements further using e-mails. However, there are no format of mail-based disaster information systems,and it has proven difficult to disseminate the appropriate evacuation information at the right time. Further,there are no current studies focused on developing a more suitable and effective management of mail-based disasterinformation system. We intend to analyze problems associated with current disaster information systems?with theobjective of being able to recommend improvements?by focusing on actual evacuation information disseminationprocesses of mail-based disaster information systems. We begin with a survey of the actual content and timing oftext messages issued by local governments. In this way, we are able to identify differences between text messagesand time delays in the dissemination of evacuation information by local governments. Our case study is based on asurvey of the evacuation information dissemination processes used in the case of Typhoon Man-yi (2013).","bookmark":0},
-{"presenid":"D1-1","title":" Hadoop Cassandra とCassandraを用いた並列分散処理機構の性能比較","abstract":"クラウドコンピューティングの発展に伴い，大量に生成されるデータを蓄積し，高速に処理することが求\nめられている．このような処理は従来の    では難しいことから，大量に生成されるデータの蓄積には分散    が，高速な処理には          処理系と分散ファイルシステムが用いられている．しかし，蓄積した大容量データを処理するためには分散     から分散ファイルシステムにデータを転送しなければならず，そのコストが問題となる．                 には，              連携機能がある．この連携機能を使用すると転送コストの発生を防ぐことが予想されるが，その性能は明らかでない．我々は，既発表研究において，データを蓄積した分散     上で直接高速データ処理を行う手法を提案し，分散     の                  を拡張した並列データ処理機構を実装した．本稿では，                 と本実装との比較を行い，これらの特性を明らかにする．比較実験より並列データ処理機構では，データサイズによらず高速に処理することができ，本提案手法の有効性が示された．","bookmark":0},
-{"presenid":"D1-2","title":"分散NMFにおけるAdaptive差分更新手法の適用","abstract":"非負値行列因子分解 (NMF: Non-negative Matrix Factorization) は，行列表現で表されるテキスト，画像，\n音声など様々なデータに対し，指定した基底数に行列を分解し，低ランク表現によって特徴抽出を行う行列近似手法である．数百万次元以上の大規模な行列を用いて NMF を行うユースケースにおいては，MapReduce 上での処理が不可欠である．しかし既存の MapReduce における分散 NMF 実装では，全体で数百回の多段 Job となるため，膨大な処理時間を要する．本研究では分散 NMF 処理において処理時間を改善するため，収束したレコードの処理をスキップして処理を高速化する Adaptive 計算手法と Incremental 計算手法を提案する．提案手法を適用した実験の結果，処理時間を最大で 1/4 に削減できることが分かった．","bookmark":0},
-{"presenid":"D1-3","title":" 列指向バッファ管理を用いたMapReduceの高速化","abstract":"蓄積された大量のデータを安く，実用的な速度で処理するために，安価な計算機クラスタを用いて効率的\nに分散計算を行うフレームワークに注目が集まっている．特に，MapReduce は最も普及している分散処理フレームワークの 1 つであり，Google, Facebook, Yahoo! をはじめとする多くの企業に利用されている．MapReduce では，処理の耐故障性を確保するため，チェックポイントとして中間出力をディスクに保存するが，既存の MapReduce 処理系ではそのファイルレイアウトとして圧縮効率が悪いレイアウトを採用していた．本稿では，MapReduce における出力形式として圧縮効率の高い列指向バッファ管理を用いることで，MapReduce 上で動作するジョブを高速化できる可能性を示す．","bookmark":0},
-{"presenid":"D1-4","title":" 大規模環境におけるHDFSの効率的なレプリカ再配置制御に向けたシミュレーション評価","abstract":"大規模データに対応した処理システムとして，汎用なハードウェアを用いて高度な集約処理を行う分散ファ\nイルシステムに注目が集まっている．分散ファイルシステムでは従来よりも大規模なシステムが構成されるようになり，複数のレプリカを分散配置することで可用性や耐故障性を維持している．ノードが故障すると，そのノードが管理していたレプリカが一時的に不足し，そのデータを保持している他のノードへのアクセス負荷が増加してシステム全体の性能が低下するため，不足レプリカの再配置の高速化が重要である．しかしながら，一般に広く利用されている Hadoop Distributed File System(HDFS) のレプリカ再配置では，データ移動に偏りが生じており，効率良く処理されていない．この問題を解消するために，我々はリング構造に基づく一方向のデータ転送を行い負荷分散を行う制御手法を提案した．本稿では，この制御手法を 0-1 整数計画問題として定式化した最適化手法を提案し，7 台からなる実クラスタを用いた小規模環境での評価とシミュレーションによる大規模環境での評価を行った．評価実験より，いずれの環境においても提案手法が有効であり，小規模実環境ではスループットが最大で 45%向上することを確認した．","bookmark":0},
-{"presenid":"D1-5","title":" カラム構造と圧縮によるHadoopからPostgreSQLへのロード高速化に関する実験と考察","abstract":"ログ分析などの用途で Apache Hadoop 上に蓄積された大規模データを単一の RDBMS へロードする際，\nロード時間が長期化する問題がある．ロード時間の中では，特にネットワーク転送時間が大きいことから，データの圧縮によって転送時間短縮を図る．圧縮を行う場合，圧縮率，圧縮・伸長速度がロード時間に影響する．本論文では，データ転送ツールのプロトタイプを設計・実装し，異なる圧縮率，圧縮・伸長速度をもつ複数の圧縮形式について速度比較実験を行った．実験結果をもとに，データ圧縮のロード時間短縮に対する有効性について考察した．","bookmark":0},
-{"presenid":"D1-6","title":" Hadoopによる時系列画像分散データマイニングシステムの検討 -気象衛星画像への応用-","abstract":"近年諸分野で大量の時系列画像が蓄積されるようになっている。時系列画像を用いた時空間データマイニ\nングでは，多数のファイルから目的に応じた時空間断面を抽出して分析を行う必要があるため，分散処理フレームワークの利用が期待される。本研究では Hadoop，MapReduce を用いた “時空間データマイニング” の汎用システムの構築を目標として，時系列データの抽出，統計量の計算，相関分析など，必要なプロセスの実装と評価を通し，パフォーマンスのチューニングの指針を検討した。その結果，時系列画像に適した処理方法として，画像のブロックを分散化の単位として扱い，圧縮を取り入れることによって，Map-Reduce 間の伝送データを削減して計算速度を向上し，スケーラビリティを改善できることがわかった。また，実際の気象衛星画像を用いて雲量変化の時空間相関分析に適用し，その効果を確認した。","bookmark":0},
-{"presenid":"D2-1","title":" TPC-H実行時省電力化のためのストレージ制御手法の提案","abstract":"近年デジタル情報量は爆発的に増加しており，データセンタの大規模化が進んでいる．これにより，デー\nタセンタ内の管理運用コストも増加しており，その中でも電力コストの増加は見過ごせないものとなっている．そこで本研究ではデータセンタの省電力化に向け，データセンタの電力消費の中で一定の割合を占めるストレージに注目し，アプリケーションの性能劣化を最小限に抑えつつ，消費電力を抑えることを研究目的とする．本稿では，データベースベンチマークである TPC-H に注目し，大規模システム環境での TPC-H 実行時におけるストレージの省電力化に向けて，実行時の消費電力と性能評価およびデータ配置による省電力化手法の検討を行った．","bookmark":0},
-{"presenid":"D2-2","title":" 線形ハッシュ法とSkip Graphを用いた分散キーバリューストアの実装と評価","abstract":"データ構造の一種である線形ハッシュ法とオーバレイネットワークである Skip Graph を用いることに\nより，柔軟にノードの参加離脱が可能で，範囲検索可能な分散キーバリューストアの構成方法を提案する．本研究では，線形ハッシュ法により得られたハッシュ値を各ノードにラベルとして割り当て，そのラベルを元に経路表を作成することで，各レベルの経路表における距離が等間隔となり，効率的なノード探索及び範囲検索が可能な分散キーバリューストアの構成方法を提案する．本提案手法では，ノード参加離脱時に関わるノードが減り，効率的な参加離脱処理が可能となる．実際に PC クラスタ上に分散キーバリューストアの実装を行い，性能評価を行った結果について示す．","bookmark":0},
-{"presenid":"D2-3","title":"高速ネットワークを流れるパケットデータの蓄積・活用に向けた分散ストレージの提案","abstract":"近年、ネットワークを流れるデータ量の増大とともに、複雑なトラフィックパターンのアプリケーシ\nョンも増加してきており、通信品質やトラブルシューティング等に向けたパケットデータ解析の重要性が高まってきている。特に、ネットワークや端末にどのような現象が発生したかを詳細に診断するために、統計情報に基づく解析だけでなく、個々のパケットデータを蓄積・解析することへの要望が強まっている。本論文では、パケットデータの高スループットな蓄積と、セッションの高速な検索を両立させる分散オブジェクトストレージを提案する。パケットデータのような小さいサイズのデータを、古いデータの削除と検索を行いつつも高スループットに蓄積できる方式の提案・評価を行い、その評価結果を示す。","bookmark":0},
-{"presenid":"D2-4","title":"フラッシュメモリ構成のストレージ環境における商用アウトオブオーダ型データベースエンジンの性能にプロセッサ省電力モードが与える影響の評価","abstract":"近年，企業や社会活動で発生するデータが増加しており，ビッグデータ利活用への期待が高まっている．\nこのような中，我々は内閣府最先端研究開発支援プログラムにおいて，アウトオブオーダ型データベースエンジン(OoODE)と称する実行原理に基づく超高速データベースエンジンの研究開発を推進している．近年注目を集めているフラッシュメモリ構成のストレージ環境では，I/O のレスポンス時間が従来 HDD と比較して２桁以上短いため，プロセッサの省電力モードが OoODE の性能に影響を与えることが考えられる．そこで，今回本研究成果を基に開発した商用 OoODE を用い，フラッシュメモリ構成のストレージ環境においてプロセッサの省電力モードが性能に与える影響について評価した．本稿では，その評価に関して報告する．","bookmark":0},
-{"presenid":"D2-5","title":" Pub/Sub基盤におけるユーザエージェントの移動によるシステム最適化に関する一考察","abstract":"PIAX（P2P Interactive Agent eXtensions）は、P2P 構造化オーバーレイネットワークとエージェント\n機構を組み込んだオープンソースのフレームワークであり，Pub/Sub メッセージングモデルをサポートしている．本研究では，PIAX をエンドユーザとネットワークを調停するためのミドルウェアとして利用し，Software DefinedNetwork (SDN) との連携によりネットワークの最適化が可能な Pub/Sub 基盤の構築を目指している．本稿ではまず，SDN を用いたシステムの事前評価として，SDN を用いていない PIAX の配信を最適化する方法として，エンドユーザの Pub/Sub 基盤へのランデブポイントであるユーザエージェントの移動を利用することを想定し，PIAX 上でのユーザエージェント移動性能の計測を実施する．計測結果からユーザエージェント移動による最適化の可能性について考察する．PIAX (P2P Interactive Agent eXtensions) is an open source framework that incorporates the agent mechanism andstructured P2P overlay network. and it supports the Publish / Subscribe (Pub / Sub) messaging model. In thisreserch, we are aiming to construct a Pub/Sub infrastructure that can optimize network through the cooperationwith Software Defined Network (SDN) by utilizing PIAX as a middleware for arbtrating the network and end-users.In this paper, as a pre-evaluation of the SDN aware Pub/Sub system, we evaluate the agent migration performanceof PIAX because we assume that the agent migration can be used for the optimization of message delivery in ourPub/Sub environment. From the evaluation results, we will discuss the applicability of the agent migration to thedelivery optimization.","bookmark":0},
-{"presenid":"D2-6","title":" P2Pを用いた類似画像検索の問合せ処理の設計と実装","abstract":"我々は P2P ネットワークによるコンテンツベースの画像検索システムの開発を行っている. こ\nのシステムはエージェントベースの P2P プラットフォームである PIAX を利用しており，分散処理によって効率的に並列な類似度計算を行うことができる．また，各ピアは位置情報に基づいたクラスタリングにより，画像エージェントを管理しており，位置情報付き画像の効率的な検索が行える．これまで検索処理をコンソールインタフェースで行っていたため検索の実行と結果の確認が難しいという問題があった．そこで Web ページを通して検索が行える Web エージェント機能を実装した．ユーザが検索したい画像を検索用ページのフォームで指定すると，Web エージェントは画像から問合せ処理を行うクエリエージェントを生成し，検索対象の存在するピアに移動させ，ピア内で類似画像を検索させる．検索結果は，類似度順に Web エージェントを通じて表示され，これにより検索結果の確認がしやすくなった．","bookmark":0},
-{"presenid":"D3-1","title":" ストリーム処理エンジンを用いたストリームデータのOLAP処理","abstract":"センサデータやログデータやマイクロブログ等，連続的に生成，配信されるストリームデータの増加に伴\nい，その処理を行うストリーム処理エンジンが開発されている．ストリームデータに対する分析としては様々なものがあるが，その一つに多次元分析に基づく OLAP 処理がある．これまでストリームデータの OLAP 処理についてはJ. Han らの研究があるが，ストリーム処理エンジンの利用は想定されていない．このため，OLAP 処理のために個別のシステムを開発する必要があったり，他のストリームデータ応用との連携が十分にとれないなどの問題がある．本研究では，ストリーム処理エンジンが持つ集約計算機能を用いてストリームデータに対する OLAP 処理を実現するための手法とその処理の効率化手法について検討する．","bookmark":0},
-{"presenid":"D3-2","title":" An Efficient Execution Scheme for Designated Event-based Stream Processing","abstract":"With the increase of streaming information sources, stream processing has been an important research issue. In\nthis paper, we introduce the designated event-based stream processing scheme in the stream processing engine. Different fromthe traditional stream processing scheme, the query results are supposed to be generated only when tuples come fromdesignated streams specified by the user. After introducing the proposed scheme, we consider its implementation. We discusssome important implementation internals of the stream processing engine and show an efficient designated event-basedexecution scheme. We also consider multi-queries which is a common situation in the stream processing engine. Theexperiment shows the advantages of the proposed execution scheme.","bookmark":0},
-{"presenid":"D3-3","title":" リンク集約とパタンキャッシュを用いた複合イベント処理の高性能化","abstract":"oo","bookmark":0},
-{"presenid":"D3-4","title":" オンライン機械学習フレームワークJubatusによるライフログからの情報抽出","abstract":"近年ではカメラやセンサ等の利用により, 一般家庭でもライフログの取得が容易になった. 防犯対策やセ\nキュリティ, お年寄りや子供のための安全サービスを目的として, ライフログ解析アプリケーションは多く開発されてきたが, 実際に一般家庭で採用する場合, サーバやストレージを設置して解析までを行うことは難しい. また, ライフログは常時蓄積され, ビッグデータに発展するため, クラウド上での処理が好ましいと考えられる. 本研究ではクラウド上の機械学習, ストレージに注目し, クラウド上でのライフログの解析を試みた. 今回の実験ではクラウド上での機械学習に焦点をあて, ライフログは常時生成されるものであることから, オンライン機械学習フレームワーク Jubatus を用いてライフログ解析アプリケーションの実装を行う. Jubatus に入力する学習用動画像データの種類によってどのように学習精度が変化するかを評価し, また動画像データのみによる機械学習だけでなく, ベイズを用いた解析方法でもライフログの解析を行い, 学習精度等の比較を行った.","bookmark":0},
-{"presenid":"D3-5","title":" リアルタイム性を考慮した車載システム向けDSMSのクエリ処理効率化","abstract":"車載システムの複雑化に伴う開発コスト削減を目的とし，車載システムへの DSMS の適用を検討している．\n車載システムにおいて，従来の汎用システム向け DSMS のクエリ処理共有方式を適用した場合，優先度が逆転する時間（優先度逆転時間）が大きくなり，リアルタイム性が保つのが難しい．そこで本稿で提案するクエリコンテキスト共有方式では，優先度逆転時間を削減するために，アプリケーション毎に独立して決められた優先度でクエリを実行する．そして処理が等価なクエリ間で，クエリの処理過程で必要となるデータ（コンテキスト）を共有可能とし，あるクエリの実行がスケジューリングの関係上，中断され，他のクエリが実行された場合，前のクエリのコンテキストを引き継ぐことで処理時間を削減する．クエリコンテキスト共有方式を評価した結果，従来方式であるクエリ処理共有方式と異なり優先度逆転時間が低減され，また処理時間の増加も 2.13% に留まりクエリの処理効率化の効果を示した．","bookmark":0},
-{"presenid":"D3-6","title":"Silkによる分散データ処理のストリーミング","abstract":" Silk は並列・分散計算とそのパイプライン処理 (ストリーミング) の融合を目指したフレームワークである。\nSilk ではプログラム中のデータ（変数）と分散演算 (map, reduce, join など) の依存関係をプログラムの AST から解析し、クラスタの空き状況に応じて実行プランの最適化やデータの分割を行う。また、プログラムの部分実行により、GNU Make のように障害からの回復やプログラムの変更後のパイプラインの再計算が可能であり、変数名を指定した中間データの検索（ワークフロークエリ）を実現できるのが特徴である。本研究では Silk のプログラミングモデルとシステムの設計・実装について紹介し、その応用について議論する。","bookmark":0},
-{"presenid":"D4-1","title":"カーネル法を用いたスパイク系列集合間の距離計測","abstract":"生物の神経活動のデータは BMI(Brain Machine Interface)等の応用や理論面からの興味もあり、その蓄\n積が近年急?に進んでいる。神経における情報処理の基本単位は膜電位の急激な増加である活動電位（スパイク）とされており、その系列であるスパイク系列に対する適切なデータ解析の手法が求められている。本研究では複数のチャネルから得られたスパイク系列集合の間の類似度を推定する手法を提案する。具体的には mCI(memorylessCross-Intensity)カーネルを多チャネルに拡張し、異なる刺激に対する反応をスパイク系列集合だけを用いて区別する際の識別力に関して比較する。実験の結果、mCI カーネルを用いる手法において van Rossum 距離の多チャネル拡張よりも高い識別力が得られた。","bookmark":0},
-{"presenid":"D4-2","title":" 大規模時系列データからの特徴自動抽出","abstract":"本論文では，大規模時系列データのための特徴自動抽出手法である AUTOPLAIT について述べる．AUTOPLAIT\nは，様々な時系列パターンを含む複雑なシーケンスが与えられたときに，そのシーケンスデータの中から重要な特徴を発見し，それらの情報を統計的に要約，表現する．実データを用いた実験では，AUTOPLAIT が様々な時系列データの中から有用なパターンを正確に発見することを確認し，さらに，最新の既存手法と比較を行い提案手法が大幅な精度，性能向上を達成していることを明らかにした．","bookmark":0},
-{"presenid":"D4-3","title":" マハラノビス距離によるトラフィック異常検知へのMSD法の適用","abstract":"異常検知手法では，データ間の相関を考慮したマハラノビス距離を用いることが多い．しかし，マハラノ\nビス距離を用いた異常検知手法では，外れ値の影響を受けやすく異常の検知精度が低下する．多くの場合，外れ値の影響を除外するため，外れ値を除いた過去の系列に対する平均ベクトル，分散共分散行列を用いて，現在の系列に対する異常検知が行われている．本研究では，マハラノビス距離を用いた異常検知手法において外れ値の影響を受けにくい MSD 法を適用することにより，外れ値を含んだ最新の系列を用いて異常検知を可能にする．対象データとしては，トラフィックデータから抽出したエントロピー値を用い，従来の手法と異常検知精度の比較を行う．異常検出時には，マハラノビス距離が χ2 分布に従うことを利用し，品質管理時に利用される 2 σ法，3 σ法と同様に，分布の95.4%点，99.7%点，99.9%点などの信頼区間を閾値として異常検出する．評価結果より，MSD 法のトラフィック異常検知への適用可能性について議論する．The Mahalanobis distance is often used for anomaly detection because it can handle data correlation．However，since the Mahalanobis distance based anomaly detection methods are sensitive to outliers，it is easy to decreasetheir accuracy．In order to exclude the influence of outliers，the average and variance values of the past sequencedata without outliers are mostly used for the current sequence investigation．In this study，we propose to applythe MSD method，which is less sensitive to outliers ，to the Mahalanobis distance based method．It enables usto use recent sequence including outliers．We use the entropy value extracted from the traffic data as the targetdata，and compare the accuracy with conventional methods．Since the distribution of Mahalanobis square distanceis known to be the chi-square distribution，we adopt its confidence interval，e.g. 95.4% or 99.7%，as a thresholdfor anomaly detection．From the evaluation results，we will discuss the applicability of MSD method to the trafficanomaly detection．","bookmark":0},
-{"presenid":"D4-4","title":" マルチ最小サポートを用いて継続時間と時間間隔を考慮した時系列パターンマイニングアルゴリズム","abstract":"時系列パターンマイニングはイベントの発生順序を考慮したパターンを抽出する重要な技術である．しか\nし，従来の手法は，イベントが時間的にどれだけ継続したか，また二つのイベント間にどれだけ間隔があるかを考慮しないため，意思決定を十分に支援できない場合がある．本研究では，イベントそれぞれの継続時間と時間間隔を階層に分割し，マルチレベルで継続時間と時間間隔を考慮した時系列パターンを抽出することを目的とする．さらに階層のレベルに従って異なる最小サポートとするマルチ最小サポートを用いて時系列パターンを抽出するアルゴリズムを提案する．","bookmark":0},
-{"presenid":"D4-5","title":" 認知症の脳血流量と神経心理検査データの時系列データ解析","abstract":"近年，情報技術の発展とともに医療現場においてもデータ管理が重要となってきている．医療の場に\nおいてはデータを時系列で計測することが重要であり，時系列データについてさまざまな検討を行うことで，個人の身体変化やデータの有用性ついても検討を行うことができる．本研究では認知症患者における前頭前野の脳血流量と神経心理学的検査であるカテゴリー流暢性課題について，1 年間の経過を評価した．計測の結果，カテゴリー流暢性課題については変化がみられなかったが，近赤外光計測データについては変化がみられた．これらの知見から近赤外光計測とカテゴリー流暢性課題の時系列データについて検討を行った．","bookmark":0},
-{"presenid":"D4-6","title":"認知機能と脳血流量の時系列データ解析","abstract":"認知症高齢者の認知機能の変化を経時的に把握することは、適切はケアを提供するうえで重要である。\nそこで本研究では、近赤外光計測装置による脳血流量と MMSE スコアの時系列データを解析することで脳血流量と認知機能との関係を検討した。対象は認知症高齢者であり、1 年にわたり脳血流量の経過を測定した。測定部位は前頭前野の領域である Fp1(左前頭局部)および Fp2(右前頭局部)とし、ストループ課題遂行中の脳血流量の変化とMMSE を同時期に測定し、認知症高齢者における認知機能と脳血流量の経時的変化の関係を考察した。","bookmark":0},
-{"presenid":"D5-1","title":"GPGPUを用いた不確実時系列データ類似検索の高速化","abstract":"計算機によって処理されるデータ量は日々急速に増大しており，計算手法の高速化及び効率化が求められ\nている．これは科学研究の分野においても同様である．誤差を含む時系列データ間の類似度を評価する手法はいくつか存在するが，いずれも確率計算を行うためコストが大きく，大量のデータに対して類似度計算を行うことが難しいという問題がある．本研究では DUST [1] と呼ばれる類似検索手法を対象に GPGPU を用いた高速化手法を提案する．具体的には，DUST 内の距離計算において必要となる積分計算や確率計算を GPU 上で並列に行い，高速な処理を実現する．","bookmark":0},
-{"presenid":"D5-2","title":"Measuring spike train distance from two spike trains data simulated by coupled escape rate model","abstract":"Estimating the population activity patterns between two or more spike trains is a fundamental problem in studying\nneural coding in computational neuroscience. In recent years, there are many different methods proposed to build a frameworkto deal with these problems by using spike train metric. Here we suggest a kernel method for multichannel spike trains that canprovide an opportunity to measure spike trains. As kernels can be used for various tasks in machine learning, includingregression, clustering and dimension reduction. We believe this method is effective at measuring multichannel spike trainssimulated using a distance.","bookmark":0},
-{"presenid":"D5-3","title":" スパース符号化を用いたブラインド信号源分離","abstract":"スパース符号化はデータを本質的な特徴の重ね合わせとして分解するための一般的な枠組みと\nして大きな注目を集めている．適切なスパース符号化を行うためには，データの本質的な特徴の集合である辞書が必要であり，その代表的な手法が K-SVD である．本研究では K-SVD ならびに非負 K-SVD を用いたブラインド信号源分離の手法を提案する．ブラインド信号源分離は観測信号が複数の信号源からの信号の重ね合わせで生成された時，観測信号だけを用いてそれを重ね合わせの前の信号に分解するタスクであり，幅広い応用を持つ．本研究では，音声信号の単音や和音への分解，ならびに神経組織において記録された電位変化を個々の神経細胞の活動に分解する課題に適用する．実験の結果，実用的な時間内で一定の精度を持った分解が可能であることを示した．","bookmark":0},
-{"presenid":"D5-4","title":" GPUを用いたCanopyクラスタリングの高速化","abstract":"大規模データに対するクラスタリングは計算コストが高く，高速化が求められている．高速化を実現する\n手法の一つに Canopy クラスタリングがある．Canopy クラスタリングは，凝集法や k-means 法といった一般的なクラスタリングアルゴリズムを高速に実行するための事前処理として行われる．また，クラスタリングアルゴリズムの並列計算による高速化もさかんに研究されており，その中で並列計算に優れた GPU の利用が注目されている．一般的なアルゴリズムは GPU を用いた高速化が研究されているが，Canopy クラスタリングを GPU 上で行う試みは現在までなされていない．本研究では，GPU を用いて Canopy クラスタリングを実行し，高速化の程度を検証した．","bookmark":0},
-{"presenid":"D5-5","title":" 情報利得を用いたラベル選定に基づく階層的なクラスタリング手法の評価","abstract":"インターネットの普及などによるデータ量の増加から，大量のファイルを高精度で分類することが求めら\nれている．しかし教師なしのクラスタリングでは利用者の意図しない分類になることが多い．そこでファイル毎に付与されたキーワードを利用することを考える．本研究では，クラスタリング精度向上のため，キーワードの中から分類のラベルとして適するものを情報利得を指標として選定する．この結果を基にキーワードがないファイルを SVMに基づく半教師付きクラスタリング手法を用いて分類する．2 値クラスタリングの結果をマルチクラスタリングに適用するにはいくつかの戦略が考えられるため，本研究では論文ファイルの分類を通してこれらを比較し評価する．","bookmark":0},
-{"presenid":"D6-1","title":"算術符号を用いたウェブ グラフ表現のための圧縮方法","abstract":"ウェブグラフとは，クローリングされたウェブページをノード，ウェブページ間のハイパーリンクをエッジ\nとして構築されるグラフである．近年，インターネットの急速な発展に伴い，大規模なウェブグラフを効率的に保存することはますます重要になっている．ウェブグラフを圧縮する際，圧縮するとともにウェブグラフの情報を効率的に検索することも求められる．本稿では，算術符号を用いたウェブグラフの圧縮方法を提案する．ベンチマークデータを用いて，Boldi と Vigna が提案した WebGraph 等の既存の方法と比較した．","bookmark":0},
-{"presenid":"D6-2","title":"構造的類似度に基づくグラフクラスタリングの高速化","abstract":"グラフクラスタ分析はグラフの中に存在するコミュニティ構造を理解する上で重要な要素技術である．そ\nの中でもノード間の構造的類似度を用いたクラスタリング手法 SCAN は，グラフ中のクラスタを抽出するだけでなく，ハブや外れ値などのノードも併せて抽出可能な手法として知られている．しかしながら，SCAN は全てのエッジに対する計算を行うため，グラフに含まれるエッジ数を |E| とした時に O(|E|) の計算量を要する．この SCAN の計算量は，グラフに含まれるノード数を |V | とした時に，最悪の場合 |E| ? |V |2 となることから最悪計算量が O(|V |2) となり，大規模なグラフへの適用が難しい．本稿では SCAN の高速化手法を提案する．提案手法では，最短ホップ数が 2となる様なノードに接続したエッジのみを計算対象としてクラスタリングを行う．これにより，提案手法は SCAN と同一の結果をより高速に抽出ことを可能にする．本稿では，実データに対する評価実験を行い，SCAN の計算時間を最大で約 70% 短縮することを示した．","bookmark":0},
-{"presenid":"D6-3","title":"分散環境上のグラフ構造解析を用いた非構造化データの類似度の算出","abstract":"Linked Data を代表とし，異なるサービス間で管理しているデータ同士を内容に応じ結び付け，類似など\nの関係を算出し，互いのデータの発見・利用効率を高めようという動きがある．これらの応用には，推薦やオントロジーの構築がある．本稿では，そうした応用の土台となるデータ間の類似度を求める手法として，実サービスで利用されている非構造化データから，1）それが指すエンティティと，エンティティの特徴となる要素を抜き出し，2）要素同士を連結したグラフ構造データに変換し，3）グラフ構造データ間の非対称類似度を求める手法を提案した．検証は，動画情報からの類似動画の発見を想定し，分散環境 Hadoop で動作するグラフ処理フレームワークである Giraphと，実サービスデータを用いて行い，データ間の類似度の算出の結果を複数評価者の目視と計算時間の計測により，定性・定量の両面で評価を実施し，有用性を確認した．","bookmark":0},
-{"presenid":"D6-4","title":" 部分グラフに基づく効率的なPageRank推定","abstract":"PageRank はグラフ上のノードの重要度を評価するリンク構造解析手法であり，様々な分野で用いられて\nいる．しかし，PageRank には計算コストが大きいという問題がある． 一方で，一部のノードの重要度だけが必要とされる場合が多い．そのため，グラフ全体の情報を用いずに特定のノードの PageRank 値を推定する手法がいくつか提案されている．具体的には，Chen らの手法は特定のノードを含む部分グラフを作成し，その PageRank 値を推定する．しかし，部分グラフを作成するために反復計算を何度も繰り返すため，その計算コストはまだ大きい．本稿では，反復計算を行わずに再帰的な計算を用いることで，効率的に部分グラフを作成する手法を提案する．評価実験により，提案手法は推定精度を維持しながら効率的に PageRank 値を推定できることを示した．","bookmark":0},
-{"presenid":"D6-5","title":" 道路網における全対最短経路索引に関する検討","abstract":"本稿では，道路網上の任意の 2 点間の全対最短経路の経路索引を生成する手法について検討する. 本手法\nでは最短経路の持つ経路コヒーレンスの特徴を生かすため, ノードの位置座標による領域分割を用い, 最短経路が領域分割線と交差してできる境界に着目して, 最短経路の部分経路と経路索引を生成する. これにより最短経路は出発地点と目的地点と境界の列を用いて表すことができ, 　最短経路抽出のみならず, 領域の包含関係を用いた刈込処理や道路網の詳細度に応じた経路の抽出が可能となる. 経路索引は, 全対最短経路集合の全データ量に対して小さく, モバイル応用などに利用しやすい特徴を持つ. 提案手法を評価するため, 国土地理院発行数値地図を用いて経路索引の生成時間,サイズ, 問合せ時間などを定量的に検討する. また経路索引のデータベース格納についても検討する．","bookmark":0},
-{"presenid":"D6-6","title":" 経路スカイラインの近傍探査と対話型モバイルアプリケーション","abstract":"経路スカイラインは, 利用者選好コスト関数に対するパレート最適解の集合であり, 多様な選好経路を与え\nるため, 経路計画, 散策計画, 施設配置, 工程管理, グラフ航行等の様々な分野での応用が期待できる．著者らは経路スカイラインの任意の部分経路がスカイラインであることに着目して, 部分領域の全対経路索引を用いた経路スカイライン集合の 2 段階抽出手法を提案している. しかし経路スカイラインは, 最短経路とは異なり, グラフ上の 2 点間に対して複数経路存在するため, 離れた 2 地点間の経路を抽出する場合は, 経路索引の組合せ数が増大する特徴を持つ. 本稿では, この点に対処するため, 経路スカイラインの特徴を用いて必要な経路索引を選択的に指定して, 探査領域を刈込んで経路スカイラインの近傍経路を効率的に抽出する手法を提案し, その効果を検討する. さらに国土地理院数値地図とGoogle Map を用いるモバイル対話型インタフェースを試作して利用者選好と経路探査について議論する.","bookmark":0},
-{"presenid":"D7-1","title":" 地方公共団体のオープンデータ化に向けたwebページ間の関係性抽出技法の提案","abstract":"各地方公共団体の web ページでは様々な公共データが公開されている．しかし，いくつものリンクを経な\nければ目的のデータに辿りつけないことや，同種のデータでも扱う団体が異なるため別々の形式にまとめられていることがある．そこで，各地方公共団体の web ページのオープンデータ化，アクセシビリティの向上を図ることで，基幹データの有用性や価値を高める目的で研究を行った．本論文では複数の地方公共団体の web ページを用いて，クラスタリングや分類を行い，関連する情報が記載された web ページをまとめ，またリンクの繋がる web ページ間の類似度を算出した結果について報告する．","bookmark":0},
-{"presenid":"D7-2","title":" LINQを用いたLinked Open Dataに対する問合せ","abstract":"コンピュータによる処理に適したデータの公開，共有，および利用を Web 上で行う方法の一つとして，\nLinked Open Data（LOD）が注目を集めている．近年，様々な種類のデータが LOD として公開され始めており，誰でも自由にアクセスすることができるため，LOD を利用するアプリケーションの開発が強く期待されている．一方，LOD の利用には，一般的に SPARQL と呼ばれる問合せ言語を用いるが，SPARQL の学習，記述にコストを要する．また，LOD は巨大で複雑なグラフ構造を構成し，必要なデータへのアクセスは容易とは言えない．本研究では，アプリケーションやサービス等から目的の LOD へのアクセスを容易にするために，JSON 形式のビューを提供するシステムを提案する．具体的には，データベース設計者等が予め LOD に対して JSON 形式のビューを定義する，これに対して，利用者は C#言語などから利用可能な LINQ 構文を用いて問合せを行う事を可能にする．","bookmark":0},
-{"presenid":"D7-3","title":"XML文書分散管理システムにおけるposition関数の実装と評価","abstract":"XML は，構造化された様々なデータの標準的な記述ファーマットの一つとして広く普及しており，XML\n文書を高速に検索するための様々な手法やシステムが開発されている．本稿で扱う，XML 文書分散管理システムは，XML における要素の親子関係を索引化し，非共有メモリ型 並列計算機に分散配置して管理するシステムである．XML 文書には重要な概念の一つとして文書の記述順があり，XPath 式では述語の条件式である position 関数が文書順に対しての指定方法となる．文書順に対する処理を行うためには，position 関数直前までのシーケンスを一時的に集計してソートする必要があり，並列処理環境では特にその処理方法が課題となる．そこで本稿では，position関数を効率的に処理するための３つの手法を提案する．また，それぞれ提案手法を用いた検索時間を評価する．","bookmark":0},
-{"presenid":"D7-4","title":"トライ木を用いたXMLキーワード検索法","abstract":"XML は情報を交換したり保存するための標準的な形式として急速に広まってきている．そのため，XML\n形式のデータを検索する技術の開発は重要な研究課題である．XML データを検索するための手法として，XPath やXQuery などを利用した方法があるが，これらの手法は XPath や XQuery を理解する必要がある．より簡単な検索法としてキーワードによる検索法が開発されている．これはクエリとして，単にキーワードを与えるだけで検索できるもので，初心者でも簡単に検索することができる．XML のキーワード検索に対しては，検索結果として SLCA(SmallestLowest Common Ancestor) が広く採用されており，SLCA を検索するアルゴリズムが開発されてきた．本論文は，情報検索で用いられているトライ木を採用し，SLCA を見つける効率的な手法を提案する．","bookmark":0},
-{"presenid":"D7-5","title":" テキストおよび構造の類似度に基づいたXMLデータに対する効率的な類似検索","abstract":"XML は構造データや半構造データを記述するためのデータフォーマットであり，今日では広く用いられる\nようになっている．現在 Web 上には膨大な XML データが存在するが，中には内容が大きく類似している情報も多数存在している． 膨大な情報からある文書との類似度を効率的に計算することができれば，類似部分の検出を行うことができ， 引用，盗用の検出や重複除去等様々な用途に活用できると考えられる．XML データにはテキスト情報に加えて文書の構造情報を持つという特徴がある．このため，類似した XML データを検索するには，テキスト上の類似度と構造上の類似度を考慮した手法が必要である．本研究では，XML の木構造とテキストノードのラベルの情報を利用して類似度を計算し与えられた XML データの重複部分を検出する手法を提案する．","bookmark":0},
-{"presenid":"D8-1","title":"復元せずに処理可能な圧縮形式による列指向DBの評価と考察","abstract":"蓄積されたログデータに対する分析処理は，数多い属性（列）から限られた部分だけを参照する傾向があ\nることから I/O 量削減を目的としたデータの列配置や，列構造の利点を活かした圧縮を特徴とする列指向 DB が広く採用されている．列指向 DB では圧縮された内部データをクエリ実行中に復元する必要があるため，I/O だけでは無く CPU やメモリ参照のコストを考慮したクエリの実行計画が重要となる．本研究では列指向 DB の特徴の 1 つである透過的な圧縮手法を用いたクエリの述語評価に着眼する．これらの手法は圧縮されたデータを復元した後に述語の評価するのではなく，直接評価可能な形式で圧縮されたデータを活用することで処理の効率化を行う．列指向 DB のプロトタイプを用いて圧縮されたデータに対するクエリの実行時間の評価を行い，実行コストとの関係を分析することで実行計画に必要なコストモデル構築に向けた考察を行う．","bookmark":0},
-{"presenid":"D8-2","title":" 大規模データベースにおけるリアルタイムな処理データサイズ計測手法の検討","abstract":"アドホックなクエリにおける実行時間予測や，複数データベースへのクエリ振り分け等，クエリ実行\n前にクエリ内の処理毎のデータサイズが必要となる場合がある．このような場面ではユーザクエリ実行時に処理データサイズを計測する必要があるが，対象となるテーブルが大規模な場合，このような計測によってユーザクエリに大幅な遅延が発生する．そこで，ユーザクエリ実行時に，処理対象テーブルからランダム抽出したサンプリングデータに対して対象クエリを実行することで選択率（Selectivity Factor）を計算し，リアルタイムに処理データサイズを計算する手法を提案し，ランダムデータ取得方法，ユーザクエリへの影響，処理データサイズの正確性を検証する．","bookmark":0},
-{"presenid":"D8-3","title":" 読み出しデータの新鮮度を考慮するキャッシュ機構の提案","abstract":"メモリ等を用いたキャッシュはデータベースのアクセス性能向上に有効である．しかし一方で， データベー\nスへの書き込み時にキャッシュ上のデータを無効化または更新しない限りは，キャッシュ上のデータがデータベース上のものと異なる可能性が時間の経過とともに高くなっていく．つまりデータの新鮮度が下がっていくというトレードオフがある．そこで，データベースの負荷やアクセス性能に応じてキャッシュの使用/不使用を切り替えることで，アクセス性能とデータ新鮮度のトレードオフを調整すること，および，その切り替え方を提案する．また，既存のデータベース管理システムを用いて，提案手法に基づき設計，および実装を行ったキャッシュ機構の性能を評価する．","bookmark":0},
-{"presenid":"D8-4","title":"アウトオブオーダ型データベースエンジンにおける2表結合問合せの処理時間見積り方式の提案と評価","abstract":"実世界で発生するデータが爆発的に増加しており，ビッグデータ利活用への期待が高まっている．この\nような中，我々は内閣府最先端研究開発支援プログラムにおいて，アウトオブオーダ型データベースエンジン(OoODE)と称する実行原理に基づく超高速データベースエンジンの研究開発を推進している．OoODE はアンフォールドした処理を複数並行して進めるため，インデックスアクセス時に高多重リード要求を行う．ストレージ性能の限界に達する場合， その影響を考慮しないと 2 表結合であっても処理時間見積りに誤差が生じる．本論文では，OoODE の特性を踏まえた 2 表結合問合せの時間見積り方式の検討と評価結果について報告する．","bookmark":0},
-{"presenid":"D8-5","title":" TPC-Hベンチマークの100TBクラスを用いた商用アウトオブオーダ型データベースエンジンの評価と同クラスへの世界初登録","abstract":"多機能情報端末の普及などにより，企業や社会活動で発生するデータが増加しており，ビッグデータ利\n活用への期待が高まっている．このような中，我々は内閣府最先端研究開発支援プログラムにおいて，アウトオブオーダ型データベースエンジン(OoODE)と称する実行原理に基づく超高速データベースエンジンの研究開発を推進している．本研究開発の成果を基に日立が製品化した商用アウトオブオーダ型データベースエンジンの大規模環境における有効性を確認するため，業界標準の TPC-H ベンチマークにおける最大のデータベース規模である 100TBのクラスを用いて性能評価を実施し，同クラスの性能測定結果リストに世界で初めて登録された．本論文では，この TPC-H ベンチマークの評価結果について報告する．","bookmark":0},
-{"presenid":"D8-6","title":" SSDを用いた大規模データベースにおける複数問い合わせ処理高速化手法とその評価","abstract":"SSD は、高い転送レートを持つストレージデバイスとして注目されており、大規模データ処理を行うデー\nタセンターで導入が進んでいる。SSD のアクセス特性としては、HDD の 100 倍から 1000 倍高速なランダム I/O や、内部のフラッシュチップの並列構造による I/O の並列処理能力などが挙げられる。これらを生かす方法として、本稿では、まずデータベースシステムのハッシュ結合演算において、データベースバッファ使用量を小さくしランダム I/Oが増加しても、I/O の処理コストが増加しないことを実測によって確認する。これにより、さらにキャッシュ使用効率が高まり、全体の処理性能が向上することを示す。また、メモリやキャッシュの使用量を抑えることで、複数の演算でこれらを分割して使用することが可能になる。これを利用し、並列問い合わせ処理の制御を行うことで処理性能向上を実現する方法を探求する。","bookmark":0},
-{"presenid":"D9-1","title":" MOARLE: 高速・省メモリな行列圧縮計算フレームワーク","abstract":"行列計算は，データマイニング処理，機械学習処理，情報検索処理をはじめとするさまざまなデータ処理\nの中心をなす．行列計算の対象となる行列のサイズは，計算資源の発展やビッグデータの普及に伴い巨大となっている．巨大な行列はコンピュータの記憶領域を逼迫し，またその計算に長大な時間を要する．そのため，巨大な行列の記憶容量と計算時間を削減することは肝要な課題である．この課題に対し，本稿は行列の記憶容量削減，計算高速化，計算省メモリ化を同時に実現する行列の圧縮計算フレームワーク MOARLE を提案する．MOARLE は，事前に行列を連長圧縮して行列の記憶容量を削減した上で，その後何度もおこなわれる計算を連長圧縮情報の利用により高速かつ省メモリにおこなう．疎行列表現とは異なり，MOARLE は密行列に対しても効果的である．実データを用いた実験により MOARLE は内積計算やユークリッド距離計算などのコア演算処理におけるメモリ使用量を最大で 98%削減し，また処理速度を最大で 124 倍高速化することが分かった．","bookmark":0},
-{"presenid":"D9-2","title":" 3D Objects Tracking by GPGPU-Enhanced Particle Filter Algorithms","abstract":"Objectsracking methods have ben wildy used in the fild of video surveilance, motin monitorng, robtics\nand son. Particle filter is one of the promisng methods, but is difculto aply foreal time objectsracking because of itshig computaion cost. In orde to reduce the procesing cost without sacrifcng the tracking quality,his paer pose a newmethod foreal-time 3D objectsracking, using GPU-enhanced particle filter algorithms.","bookmark":0},
-{"presenid":"D9-3","title":" 脳波分析による意図および気分抽出に基づく制御システムの提案","abstract":"本研究では，視覚情報なしで脳波によるアプリケーションやコンテンツの制御を行う．近年，携帯端末や\nカーナビといった情報機器が身近なものとなり，様々な場面で情報を取得することが可能となっている．しかし，様々な場面での情報取得により，情報を閲覧しながら操作することが多くなると同時に危険性も増している．例えば，歩行中または運転中の携帯電話の操作による事故が考えられる．そこで本研究では，視覚的に情報を得ることなく，脳波でアプリケーションやコンテンツを制御可能とするシステムを提案する．本論文では，音声案内によるユーザの意図からアプリケーションやコンテンツを起動する制御手法と，車運転時にユーザの気分により楽曲を選出し再生する制御手法の二つの制御手法を提案し，制御手法で使用する脳波判定手法について評価を行った．","bookmark":0},
-{"presenid":"D9-4","title":"多次元データ分析システムによる保守業務分析支援の検討","abstract":"今日，保全業務に関する多次元データの分析は，設備･機器を効率的に維持するために重要となってきている．\n例えば OLAP(On-Line Analytical Processing) のような典型的な多次元データ分析システムでは，膨大な分析視点を全て確認できないこと，また試行錯誤に伴い分析時間が長くなることなどの課題がある．本論文では，分析推薦機能と対話的集計機能を備えた多次元データ分析システム dCOMPASS による保守業務分析の効率化の検討を行う．故障率の経年変化などの典型的な分析業務において，分析の過程における GUI 操作量(クリック数)，分析担当者の判断回数，および所要時間の改善効果について報告する．","bookmark":0},
-{"presenid":"D9-5","title":" ハイブリッドクラウドにおけるデータベース同期方式の検討","abstract":"近年，クラウドコンピューティングモデルの出現に伴いパブリッククラウドやプライベートクラウドが普\n及しつつあり，その両者をシームレスに結合するハイブリッドクラウドが注目されつつある．しかし，実社会においてはデータの一貫性などの技術的な問題によりハイブリッドクラウドの導入はあまり進んでいない．他方で，データベースサーバは企業の基幹を構成しているため，クラウドで動作させるべき重要度の高いシステムである．そこで，本研究では，ハイブリッドクラウド環境でデータベースを同期させることに注目した．LAN 環境を前提としてデータベースサーバを同期する Pangea という既存のミドルウェアがある．これをハイブリッドクラウドに適用し，TPC-Wベンチマークを用いて評価実験を行った．データセンタが遠隔地にあることを想定して，Dummynet を使って人工的に遅延を挿入した．近隣の街にバックアップを置く場合と，海外のような遠隔にバックアップを置く場合を想定し，遅延は RTT16ms と RTT256ms で測定した．LAN 環境における結果と 2 つの遅延時間における結果とを比較し，考察を行った．","bookmark":0},
-{"presenid":"D9-6","title":" SuperSQLにおける窓関数機構の実装","abstract":"データをデータベースから取り出す際に, 窓関数を用いる事により, 複雑なクエリを用いる事なくそのデー\nタを活用する事が可能となる. 本研究では, 代表的な窓関数を SuperSQL 上に実装し, 通常の SQL の文法と比べて, 汎用性を損なう事なく記述の簡便性の向上を実現した. 具体的には, SuperSQL のグルーピングによる文脈を生かす事により, 窓関数を使用する際に SQL で書かなければならない order by や partition by といった窓関数特有の指定の省略を許し, 窓関数になじみの浅い人でも感覚的に正確に用いる事の出来る関数の記法を提案し, 実現した.","bookmark":0},
-{"presenid":"E1-1","title":" 電力使用時の多様な状況組み合わせが可能なDBの構築と情報提示による評価","abstract":"社会的な電力削減要求が高まる中，オフィスなどの業務部門においては，生産性を損なわず，なおかつ効\n果的な電力削減が求められている．そのためには電力使用時の人・モノ・環境などの状況に応じて適切な措置をとる必要があるが，現在施行されている節電マニュアルや電力管理システムなどは，ミクロな状況まで考慮した情報を示すことはできない．本研究では，電力ログをタイムラインデータとして蓄積し，センサや情報端末により取得される人・モノ・環境の状況をタグ付けすることで，電力使用時の状況をキーとした検索・集約により消費電力を可視化する DB の構築を行う．また，その DB を用いた情報提示システムを実装し，実験により有用性の評価を行った．","bookmark":0},
-{"presenid":"E1-2","title":" 多様な検索結果を表示する可視化手法に関する一検討","abstract":"ユーザが求める多様で複雑な情報要求に応えるには，単純なキーワード検索で特定の Web ページを探すだ\nけでは不十分であり，関連するいくつかの Web ページを辿りながら横断的に閲覧する探索的な情報検索を行わなければならない．複数ページにまたがる情報を閲覧・収集するためには，ハイパーリンクを辿る方法などがある．しかし，ハイパーリンクを辿って閲覧ページを次々に切り替えることは，情報の整理や理解が難しくなるなどの問題がある．本研究では，検索条件を満たす候補ページへのリンク集である検索結果の横断的検索の支援を目的に，具体的には，検索結果を俯瞰しながら簡単に情報の比較・理解が出来る， 新しい検索インターフェースを提案する．検索結果を二次元平面に配置し，ハイパーリンク関係に基づいて個々のページ間の関係や全体の分布を可視化する．","bookmark":0},
-{"presenid":"E1-3","title":"ジオタグ付き写真を用いた土地被覆の分析と可視化","abstract":"地球の地表面を表す土地被覆図は，衛星観測データに基づいて作成されるが，既存の土地被覆図を比較し\nた場合の一致率はあまり高くない．これは，既存の土地被覆の分類手法の違いや，分類の際に用いる衛星観測データの観測条件などによる誤差に起因する．実際に現地に赴けば，正しい土地被覆が判断できるが，全世界を網羅するのは現実的ではない．そこで我々は，Flickr などの写真共有サイトに投稿された大量の写真の画像特徴量，Exif，ジオタグを用いて，撮影場所付近の土地被覆を判別する手法を提案する．また，提案手法で得られた土地被覆を集約し，OpenLayers 上に土地被覆図として可視化を行うシステムを実装した．","bookmark":0},
-{"presenid":"E1-4","title":" 階層型SOMに基づいた大規模月地震波形の可視化システム","abstract":"1969 年から 1977 年の間，アポロミッションにおいて，膨大な量の月地震データが取得された．これらの\nデータを用いた先行研究により，複数の月地震波形間において高い類似性が発見されている．この波形の類似性は，震源の分類や，月地震の発生原因の究明において重要な情報であり，現在も人手による月地震の分類が行われている．しかし，膨大な量の月地震データを人手によって分類することは困難である．そこで，本研究では，月地震データの分類研究を促進するため，波形の類似性を考慮した月地震データの可視化システムを実装する．本システムでは，月地震データを 2 次元空間上へマッピングするため，階層型 Self-Organizing Map を用いる．また，システムのバックエンドに Hadoop を用いることにより，膨大な量の月地震データの処理に対応する．","bookmark":0},
-{"presenid":"E1-5","title":" Twitterタイムラインの話題の可視化の一手法","abstract":"Twitter では，多くのユーザにより多様な話題に関する情報が投稿され，タイムラインが時々刻々と変化す\nるため，有用な情報を収集することが困難である．そこで本稿では，Twitter タイムラインの話題の内容理解を支援するために，その話題を可視化する一手法を提案する．提案する可視化手法は，タイムラインに現れる名詞や形容詞等の単語の出現頻度等を利用して，主要な話題や，時間経過による話題の変化を可視化する．実験では，Twitter のツイート検索で得られるツイートのログを利用し，提案手法の有効性を評価する．","bookmark":0},
-{"presenid":"E1-6","title":"スポーツ競技戦略決定支援のための移動軌跡のマイニングと可視化システム","abstract":"本研究は，スポーツ競技の過去の試合データからチーム戦術や傾向を理解，発見するための，プレーデー\nタの複合的可視化システムを提案する．スポーツ競技では，過去の試合内容からチーム戦術を分析することは，競技水準の向上のために非常に大切である．チーム戦術分析には計数データと選手の動き (移動軌跡) が重要視される．しかし，スポーツ競技でも容易にデータを取得できるようになったため，大量の計数データと選手の動きを集約し，直感的に分かり易く表示するための技術が求められている．そこで本研究では，アメリカンフットボールを対象としたスポーツ競技戦略可視化システム (SportsVis) を提案する．本システムでは，コーチや選手等の利用者が入力したプレー状況を満たすプレーを求め，そのプレーでの選手の動きパターンを可視化することができる．本システムによりシーン別の戦術や傾向を見つけ出せるため，次戦術の決定や新戦術の立案に活用することができる．","bookmark":0},
-{"presenid":"E2-1","title":"創造力テスト；n-gramを用いた拡散的思考力の定量的評価","abstract":"近年，デジタル機器の普及や技術の体系化により，一般の人々であってもアプリの開発や小説の執筆など創造的\nな活動を行える環境が整っている．人々が自らの創造的な能力を定量的に評価する簡便な手法があれば，それを高めるための努力に関してフィードバックを得ることができ，より効果的な訓練を行うことも可能になると考えられる．本研究では創造性のひとつの重要な要素とされる拡散的思考力に着目し，それを定量的に評価する手法を提案する．その実装として，被験者に数値を一定時間入力させ，その n-gram の偏り具合を求めることで拡散的思考力を推定する「創造力テスト」を提案する．実験の結果，多くの被験者において同じパターンの数列が繰り返し入力されていることが明らかとなった．これによって拡散的思考は意識的に行わなければ困難であり，訓練が必要であるという結果が示唆された．","bookmark":0},
-{"presenid":"E2-2","title":"実世界プログラミングのための分散人力処理環境","abstract":"コンピュータの動作の手順書としてプログラムが、人間の行動の手順書としてマニュアルやレシピといっ\nたものが存在するが、両者を同一のフォーマットで記述することは実現されていない。本論文では、プログラム上で人の行動を記述するためのプログラミング環境 BabaScript を提案する。また、提案するプログラミング環境の応用例について述べ、考察を行う。BabaScript は、人への命令構文と命令を受け取り、値を返すことのできるクライアントアプリケーションを組み合わせることで実現する。BabaScript を用いることで、人とコンピュータの処理をプログラムという同一のフォーマットで記述し、実行することができるようになる。","bookmark":0},
-{"presenid":"E2-3","title":"マイクロタスク型クラウドソーシング処理の変換","abstract":"近年，Amazon Mechanical Turk 等のマイクロタスク型クラウドソーシングプラットフォームの登場によ\nり，それらを利用した問題解決が注目を集めている．本論文では，そのようなマイクロタスク型クラウドソーシング処理の最適化について議論する．具体的には，与えられたマイクロタスクの集合を，同等の結果が期待される他のマイクロタスクの集合に変換する手法を提案する．本提案手法の特徴は次の通りである．(1) 既に存在するマイクロタスクからの書き換えを可能にする． (2) 既存のリレーショナル代数演算式等の変換とは異なる変換が可能になる．本論文では，変換手法の説明に加え，提案手法を利用することにより様々な観点からの最適化を行えることを示す．","bookmark":0},
-{"presenid":"E2-4","title":"クラウドソーシングによるデータ列挙のための分割統治手法","abstract":"近年，Web 上の多くのサービスにおいて，クラウドソーシングによるデータ列挙が広く行われている．例\nえば，レストランのレビューサイトにおけるレストラン名の列挙は，不特定多数の人々によって行われている．このように，クラウドソーシングによるデータ列挙は，機械的にデータを列挙することが困難である場合に有用である．本論文では，マイクロタスク型のクラウドソーシングによるデータ列挙処理について焦点を当て，再現率が高くなるようにタスク分割を行いながらデータ列挙を行う手法を提案する．提案手法では，分割統治のプロセスに群衆が参加するという点に特徴がある．本論文は，提案手法の説明に加え，シミュレーションを用いた提案手法の詳細な評価について報告する．","bookmark":0},
-{"presenid":"E2-5","title":"クラウドソーシングの回答品質向上のための既知ラベル数決定手法","abstract":"クラウドソーシングによるラベリングタスクにおいて，ラベリングの精度は重要な問題の一つである．こ\nれまで，各回答者の正答率に基づいて，回答結果から正しいラベルを推定する研究がなされてきた．しかし，回答者集団の多数がスパマーで占められている状況では正確にラベル推定を行うことが困難である．ラベルの推定精度の向上のために回答データ中にラベルの真値が既知のデータを加える手法がある．だが，用いる既知ラベル数が少なくては推定精度を向上させることができない．一方で多くの既知ラベルを用いることはコストの増大につながる．本論文では，用いるべき既知ラベルの適切な数を推定する手法を提案する．","bookmark":0},
-{"presenid":"E3-1","title":" 携帯端末に適用可能なモーションブラー警告システム","abstract":"スマートフォンのような小さな端末で撮影した写真を確認する際，写真にブレが生じていても小さな\n画面では確認が困難である．また，ブレの検出・補正に関する従来手法では，被写体が動くことに起因するモーションブラーには，対応できていないか，対応できたとしても完全に検出・補正ができないという問題があった．そこで本研究では，携帯端末に適用可能なブレ領域をリアルタイムでユーザに警告するモーションブラー警告システムを提案する．警告するブレには，手ブレや被写体の動きによって生じるモーションブラーに加えてピンボケも含まれる．本システムでは，撮影した写真を縦横均等に分割した領域ごとにブレ領域を検出する．ユーザは，ブレが生じた領域を拡大することでブレを確認しやすくなり，撮り直すか否かの判断が容易になる．実験では，本システムを Android 端末に実装した際のシステムの使いやすさ・満足度を 7 人の被験者が評価した結果，5 段階評価の 5点満点で使いやすさの被験者平均が 4.3 点，満足度の被験者平均が 4.0 点という結果が得られた．","bookmark":0},
-{"presenid":"E3-2","title":"フリック入力型マップ操作機能を有するモバイルEMMA","abstract":"我々は，モバイル端末向け Focus+Glue+Context マップの開発を進めている．このマップシステムの操作\n手法として，フリック入力型マップ操作手法を提案し，その実現方法について述べる．この操作手法は，簡単なタッチ操作とフリック入力を組み合わせて，Focus，Glue，Context 領域の描画パラメータを変更できる手法である．EMMAにおいては，特に Focus の描画パラメータ ( 縮尺，大きさ，位置) を変更する操作が重要である．この手法では，領域のフリック入力により，その領域の縮尺と大きさを変更することができる．簡単なフリック入力により操作できるため，モバイル端末のような小さな画面上で地図を操作する場合でも，各領域の縮尺や大きさの変更操作が容易になる．また，提案手法を実装した Android 端末用マップシステムのプロトタイプについて述べる．","bookmark":0},
-{"presenid":"E3-3","title":" 学術論文閲覧支援インタフェースの試作","abstract":"iPad や Nexus といったタブレット端末，また Kindle や kobo 等で代表される電子書籍端末が普及したこ\nとにより，電子媒体で文書を読むことが以前よりも身近になった．電子書籍端末は複数の文書等を携帯する際，紙媒体よりも優位性を発揮するが，熟読する際には依然紙媒体のほうが優位である．そこで本稿では，iPad における電子文書から必要な情報を素早く参照することができる，学術論文の閲覧支援を目的とした学術論文閲覧インタフェースを提案する．提案する学術論文閲覧インタフェースは，学術論文 PDF から抽出した重要語に複数の有用な Web コンテンツへのリンクを生成し，そのリンク先のページを提示する．メディア間の移動が多い読み方に注目し，実験では本インタフェースと ibooks で，被験者が選択した単語の該当ページに到達するまでの擬似インタラクション数を比較した．その実験において，本インタフェースは他リーダよりも少ない擬似インタラクション数で該当ページに到達することができた．","bookmark":0},
-{"presenid":"E3-4","title":" 入力ストローク数削減による高速手書き入力手法","abstract":"コンピュータ上での手書き文字入力は認識エンジンが判別可能な品質で記入しようとするとキーボードによる\n入力と比較して入力に時間がかかる．一方，品質を犠牲にして高速に手書き入力しようとすると誤認識が増える結果となり，入力速度が低下してしまう．こうした問題に対し既存研究では，単語の予測入力や入力途中に随時変換することにより入力速度を向上させている．しかし多くの従来のシステムでは，各漢字を完全に書いた後でないと認識結果に書きたい文字が表示されず，画数の多い漢字を認識させるためには手の動きと時間をかなり要することになる．本研究では，単語を書く際に各漢字を途中までしか書かなくとも，希望する単語を動的に予測し，手書き入力を高速化する手法を提案する．評価実験では，提案手法と既存手法で同じテキストを入力し，入力にかかる時間とストローク数を記録する．提案手法を用いた場合，入力にかかる時間は削減できなかったが，ストローク数が既存手法より少なくなることより，提案手法の有効性を示すことができた．","bookmark":0},
-{"presenid":"E3-5","title":" SuperSQLクエリ作成支援システムの開発","abstract":"SuperSQL は関係データベースの出力結果を構造化し, 多様なレイアウト表現を可能とする SQL の拡張言\n語である. 本論文では, SuperSQL の使用経験のないユーザでも容易に使用することができる専用のクエリエディタ（ssqltool）を提案し, 実装した. ssqltool は, SuperSQL クエリの強力な作成支援機能（装飾子・関数補完機能, リアルタイム Viewer 機能など）をユーザへ提供する. リアルタイム Viewer 機能は, SuperSQL のレイアウト演算子の効果が即時にフィードバックされるため, 初心者の習得に特に効果的である. さらに, データベースのテーブル・スキーマ閲覧, クエリの作成から実行, 生成された HTML ページの確認, その他設定などを行うことができる.","bookmark":0},
-{"presenid":"E3-6","title":" AssureNote: Wiki ベースのGSNオーサリングツール","abstract":"本論文では，Wiki 記法ベースの GSN エディタ AssureNote の提案を行う．GSN は，Assurance Cases\nのビジュアル表記法として標準化が進み，オーサリングツールが開発されている．しかし，従来のオーサリングツールは，図形エディタをベースにしており，エディタを利用出来ない環境では Assurance Cases の再利用性がえられない．我々は，Wiki 記法ベースの表記法を提案し，データ再利用性とグラフィカル編集の両立を実現するツールを開発した．","bookmark":0},
-{"presenid":"E4-1","title":"Flickrは海岸線を描けるか？","abstract":"Flickr などで共有されている写真には，写真の撮影位置を示すジオタグや，写真が何であるかを表すタグ\nが付与されているものが数多くある．我々は，任意のタグ X を持つ写真群の，世界地図空間における撮影位置の偏在が，X の地理的な特徴を示しているのではないかという仮説を立てた．この仮説を検証するために，「beach」というタグから「海岸線」を描画する事に取り組んだ．我々の調査で，「beach」とタグづけられた写真の約 80%が実際の海岸線から 500m 以内で撮影されている事が分かった．そこで，その膨大な撮影位置の点群から，海岸線を描く手法を提案し評価する．提案手法は特定の地物のみに対応するものではないが，明確な正解を有する海岸線に着目して定量的な評価をする事でソーシャルタギング全体の信憑性の推定ができると考えている．","bookmark":0},
-{"presenid":"E4-2","title":"写真に付与されたジオタグに基づいた道草発見","abstract":"近年，GPS 機能を持つ携帯端末の普及により，ソーシャルメディアサイトで共有されているジオタグ付き\n写真が増加している．また，それらを応用する旅行支援を目的とした研究が行われている．従来手法では，多くの人々が訪れる主要な場所と順路の発見は行われているが，旅行の満足度は，そのような主要な場所だけでなく，移動中の道草にも影響される．そこで，本研究では，道草候補をユーザの移動開始地から目的地への移動中に立ち寄ることのできる場所と定義し，ソーシャルメディアサイトに投稿された写真のジオタグに基づいてユーザの順路を集約し，道草候補を発見する手法を提案する．また，ユーザの指定した 2 つの主要な観光地間の移動中に立ち寄ることが可能な道草候補を抽出し，閲覧可能なシステムを実装する．","bookmark":0},
-{"presenid":"E4-3","title":" ジオタグ付き写真を用いたホットスポットの分類と関連の抽出","abstract":"本研究では，ソーシャルメディアサイトに投稿されたジオタグ付き写真を用いて，ホットスポット (多くの\n写真が撮影されている地域) の発見を行う．ホットスポットは，抽出される位置や写真が撮影された方向により，関心領域や撮影スポットなど，複数の種類に分類することが可能である．加えて，撮影地点とその撮影地点から主に撮影される被写体や，人々が連続して訪れる地点などの関連をホットスポットから算出することが可能である．本論文では，写真に付与された撮影位置，撮影方向，および撮影時間情報を用いて，ホットスポットの分類とホットスポット間の関連を抽出する手法を提案する．また，それぞれのホットスポットやホットスポット間の関連を可視化するシステムを作成する．","bookmark":0},
-{"presenid":"E4-4","title":"位置情報を利用した情報配信のための習慣度算出手法","abstract":"本研究では，行動が本人の習慣に沿っているかを示す「習慣度」を定義する．位置情報を利用した情報配\n信において，利用者と情報提供者双方のニーズに合った配信内容・タイミングの決定が課題となっている．従来法では自宅からの距離や履歴頻度を用いた習慣/非習慣判別により，ニーズの把握を試みた．提案法では，曜日・時間帯を考慮した複数の多項分布の重み付き線形和を用いた習慣度定義により，自宅近くにおける非習慣も含めた詳細な行動理解を実現する．チェックインログを使用した検証により，本人履歴にない場所を推薦可能なタイミングの検出に加え，同等の習慣度で他ユーザが訪問した場所の抽出から，例えば出張者同士の履歴の考慮が可能になるなどの効果を示す．","bookmark":0},
-{"presenid":"E4-5","title":" オントロジーを利用したLBSN基盤フレームワークの設計","abstract":"位置情報を利用した SNS(Location Based Social Network, LBSN) が次々と登場し，GPS 付きデバイスの\n普及とともに多くのユーザを獲得している．本稿では，LBSN アプリケーションの開発支援とアプリケーションの表現力の向上を目的とした LBSN 基盤フレームワークを提案する．本研究の特徴は，周辺環境の情報源として LinkedOpen Data を想定し，オントロジーを利用した意味的な処理を行うところにある．本稿では特に，RDF ストリーム記述の仕様，地理空間・時間の位相幾何関係の表現のための SPARQL の拡張について詳しく述べる．","bookmark":0},
-{"presenid":"E4-6","title":" パーティクル表現を用いた曖昧位置情報に対する空間問合せ処理","abstract":"ロボット分野では自律移動ロボットに関する研究が進み，近年ではオブジェクトの自己位置推定手法に確\n率的な手法が用いられている．特にモンテカルロ位置推定と呼ばれる，パーティクルフィルタをベースにしたアルゴリズムが一般的となっている．モンテカルロ位置推定では，位置情報の推定にモンテカルロ法を用いるため，推定した位置情報がパーティクル集合で表現された確率分布となる．本研究では，このようなパーティクル集合で表現された確率分布の時系列データを対象とした時空間問合せ手法について述べる．また，効率的な問合せ処理のためのデータ構造と，データ構造を利用した問合せ処理について述べる．","bookmark":0},
-{"presenid":"E5-1","title":"クラスタリングと空間分割の併用による効率的なk-匿名化","abstract":"個人情報利用時のプライバシー保護技術として k-匿名化が用いられている．k-匿名化のためには与えられ\nたレコードの集合を k レコード以上から成るグループの集合へと分割する必要がある．その際，データの変換で生じる情報損失を抑えられるようなグループを高速に作成できることが望ましい．これまで空間分割に基づく分割手法とクラスタリングに基づく分割手法が提案されてきたが，これらは高速な処理と低い情報損失を両立できていない．本稿では 2 つの手法を提案する．1 つ目は，高速な処理と低い情報損失を両立するための，空間分割とクラスタリングの併用である．2 つ目は，レコードを頂点とするグラフの構築によりクラスタを捉え，情報損失の小さい分割を作成するアルゴリズムである．2 つの手法を組み合わせることで，既存手法より最大 10 倍高速に情報損失の小さい分割を行えることが確認された．","bookmark":0},
-{"presenid":"E5-2","title":"分類分析のためのk-匿名化テーブル評価関数の提案","abstract":"本研究では分類解析に適した k-匿名化テーブルを作成することを目的として k-匿名化テーブルを評価する\n関数を定義する．分類分析への入力となる k-匿名化テーブルを作成することを目的とした先行研究は存在するが，作成された表の評価方法は明確になっていなかった．我々は先行研究で導入されたエントロピーを利用した特殊化評価尺度を，テーブル全体を評価する関数に拡張する．","bookmark":0},
-{"presenid":"E5-3","title":"動的データテーブルの連続的匿名化の安全性について","abstract":"本研究では挿入や削除により時間の経過に従って変化する動的データテーブルの連続した匿名化における\n安全性について考察する．従来知られている静的データテーブルに対する匿名化手法を用いて動的データテーブルを匿名化した場合，複数の匿名化テーブルの情報を統合することで個人を特定できる可能性が指摘されている．本研究では動的データテーブルの連続した匿名化テーブルの列が匿名性および多様性を維持するために満たすべき性質を明らかにする．","bookmark":0},
-{"presenid":"E5-4","title":" ソーシャルネットワークデータの距離関係の変化を抑制するk匿名化アルゴリズム","abstract":"ソーシャルネットワークデータ (SN データ) を研究やデータ分析の目的で一般的に公開するためには，利用\n者のプライバシー保護のための匿名化が必要である．SN データ匿名化の一既存手法として任意のノードの隣接ノードから成るサブグラフに着目し，同型のサブグラフが少なくとも k 個存在するようにノイズエッジを追加する k-neighborという匿名化がある．しかし，k-neighbor を実現するアルゴリズムではノイズエッジの追加によりノード間の距離関係が大きく変化する．そこで，本研究では距離関係の変化を抑制する k-匿名化のアルゴリズムを提案する．","bookmark":0},
-{"presenid":"E5-5","title":" Pk-匿名化手法の一改良法の検討","abstract":"ランダム化を用いた匿名化手法の一つに Pk-匿名化 [1] [2] [3] がある. Pk-匿名化の既存手法は, k-匿名性を\n確率的指標に拡張した Pk-匿名性を保証するために, データ主体を 1/k 以上の確信度に絞り込めないように属性値にノイズを付与する. 既存手法は, 元の属性値にラプラス分布に従ったノイズを付与することで Pk-匿名化を実現し, 所望の k の下で Pk-匿名性を満たすようにラプラス分布の分散を決定している. 本稿では, より小さい分散で Pk-匿名化を実現するよう改良したアルゴリズムを提案する. 提案手法を既存手法と比較, 評価することで提案手法の優位性を示す.","bookmark":0},
-{"presenid":"E6-1","title":" 映画の実況ツイートにおける時系列毎の感情抽出手法の提案","abstract":"近年，Twitter などのマイクロブログが普及しており，自分の身近で起こったことを気軽にツイートするこ\nとができる．実際に Twitter を用いて，スポーツやドラマ，映画などのテレビ番組を視聴しながら実況ツイートをするユーザが増加している．ユーザ自身がその時視聴しているシーンに対して，興味を持ったことやどのように感じたのかツイートすることによって，同じ番組を見ている他ユーザと共有することができる．またツイートには，Twitter特有表現が多く含まれており，感情をよりわかりやすく表現するために用いられているものと考えられる．そこで本論文では Twitter 特有表現も考慮に入れた感情の抽出を行う．また，１つの番組に対して，盛り上がるシーンや見所があるが，時系列によってユーザが感じた感情が異なっていると考えられる．そこで本論文では，テレビで放送されている映画に焦点を当て，ツイートの感情を時系列に抽出し，分析を行う．","bookmark":0},
-{"presenid":"E6-2","title":" 顔文字の役割に着目したツイートの文の感情抽出手法の提案","abstract":"Twitter などのマイクロブログサービスはその手軽さから多くのユーザが気軽にツイートを投稿している.\nそういったマイクロブログサービスには今起こったことや感じたことを投稿している場合が多いので, そのユーザの感情が現れやすい傾向がある. また, ツイートには顔文字という記号を用いて人の表情を表現するようなものが多く用いられている. しかしながら, 同じ顔文字でも文との関係によって使われ方が異なる. そこで本論文では, 文と顔文字の関係を分類するとともに，その関係を役割と呼び, 役割を考慮した感情値抽出手法を提案する","bookmark":0},
-{"presenid":"E6-3","title":" Twitter特有のコミュニケーション表現の抽出","abstract":"Twitter では，「なう」や「わず」のような，特徴的で簡潔な表現が，文末に多く見られる．本研究では，こ\nのような表現を Twitter 特有の「コミュニケーション表現」と呼び，自動抽出する手法について検討する．抽出を行う上では，特徴的な表現が文末に出現しやすいことを利用する．まず，文末記号に応じてツイートに頻出する文末ひらがな 2-gram（「なう」，「あり」など）を抽出する．次に，他の文書ジャンルに頻出する文末ひらがな 2-gram と比較し，Twitter 特有の文末ひらがな 2-gram を選択する．そして，Twitter 特有の文末ひらがな 2-gram を含み，その前に接続するひらがな n-gram 表現をコミュニケーション表現候補として抽出する．さらに，コミュニケーション表現候補の絞り込みを行うために，Web 上に公開されている Twitter の用語集をサンプルとして利用し，絞り込みのための閾値の設定について検討する．","bookmark":0},
-{"presenid":"E6-4","title":" 顔文字の役割を利用したツイートの感情極性推定","abstract":"Twitter のようなテキストによる発話では，非言語情報を伝えることが困難であり，話し手・聞き手間で感\n情的なトラブルが生じやすい．よって，テキストの感情を推定し，そのようなトラブルの原因となる発話の検出に利用することができれば有用である．本研究では，ツイートのようなテキストによる発話において，非言語情報を表現する手段の一つである顔文字に注目し，それらがテキスト中に与える効果を分析する．そして，分析により得られた顔文字の役割を利用して，ツイート文の感情極性を推定する一手法を提案する．結果として，言語情報や顔文字の感情極性のみを利用するよりも，顔文字の役割を利用した方が，多くのツイート文の感情極性を正しく推定することができた．","bookmark":0},
-{"presenid":"E6-5","title":" 話題に対する多様な感情を含む網羅的検索手法の提案","abstract":"本研究では，検索キーワードに対する感情値を抽出するのと同時に，検索ワードと関連性が高く，かつ全\nての感情を網羅した検索を実現する網羅的感情検索手法を提案する．我々はこれまで検索結果のタイトルとスニペットから，我々が開発した感情辞書 [1] を用いて感情値という新たな特徴量を抽出し，感情値に基づいたリランキングシステムを提案，実装してきた [2] [3]．リランキングシステムでは検索結果から感情値を抽出し，感情分布をユーザに提示することで，検索キーワードに対するメジャーな感情を把握することができた．本研究では検索キーワードに対するメジャーな感情だけでなく，マイナーな検索など，検索キーワードとの関連性が高いかつ全ての感情を含む Webページを発見し，提示する網羅的検索手法を提案する．本論文では，網羅的検索手法を提案し，実装したシステムを検証する．","bookmark":0},
-{"presenid":"E6-6","title":" 品詞間の係り受けに着目した体験情報抽出手法の提案","abstract":"電子商取引サイ ト (EC サイ ト ) の利用拡大に伴い， 商品に対する レ ビュ ーの数が増加し 続けている ． レ\nビュ ーは一般的にその商品を 使用し た際の使用感や感想が記述さ れる も のである が， 不特定多数の利用者によ っ て記述さ れる ため， 商品を 購入する際の参考と なり えないレ ビューも 多い． 特に ， EC サイ ト のよ う な取引形態では， 実際に商品を 使用し たユーザによ る 商品の使用感や体験情報が含ま れる レ ビュ ーは， EC サイ ト 利用者にと っ て も その運営者にと っ ても 有益である ため， 商品に対する 体験情報抽出手法に対する 需要は高い． そこ で， 膨大な量のレ ビュ ーの中から レ ビュ アが実際にその商品を 利用し た際の体験情報を 含むレ ビュ ーを ， 助動詞の用法と 係り 受け関係に基づき抽出する 方法を 提案する ．","bookmark":0},
-{"presenid":"E7-1","title":" 広域災害時に利用可能な Web アプリケーションのためのDTN フレームワーク","abstract":"大規模災害時にはネットワークインフラが使用できなくなる地域が発生し，そのような地域では多くの人々\nが情報のやり取りに用いる Web アプリケーションが利用できなくなる．本研究では大規模災害時の特徴を考察し，広域的にインターネットが使用できない場合にどのような通信モデルが効率的かを検討する．広域災害時にはメッセージフェリーの存在を仮定できること，またリクエスト・レスポンス型ではない災害時特有の Web アプリケーション実装が必要であることを示し，それらの点を踏まえた Web アプリケーション実現のための DTN フレームワークを提案する．提案フレームワークを用いるための API を設計し，それを用いた Android 端末と汎用クラウドでの実機実装を紹介する．","bookmark":0},
-{"presenid":"E7-2","title":" 緊急時に利用可能なクラウドサービスの構築手法","abstract":"クラウドコンピューティングシステムを防災，減災に活用する研究はこれまでにも活発に行われてき\nた．しかし，クラウドコンピューティングシステム上で利用されるクラウドサービスは通信インフラに依存するため，従来のシステム構築手法では，災害が起きたとき、データの保全に役立つが、通信インフラが破壊された場合，サービスの提供が困難であるという問題点がある．そこで本稿では，携帯端末の Wi-Fi Direct 機能を用いた緊急時に稼働可能なクラウドサービスの構築手法について検討する．具体的には，携帯端末の Wi-Fi Direct 機能を用いたサーバおよびサービスの構築方式を提案し，提案手法に対し実装実験を行い，その有効性を検証する．","bookmark":0},
-{"presenid":"E7-3","title":" コンテキスト・コンピューティングとその応用","abstract":"人と機械が協働し，動的に変化する社会的な知識の形成を実現するコンテキスト・コンピューティン\nグ（CC：Context Computing）を提案する．コンテキスト・コンピューティングの一事例として，人と情報の関係性をデータ（コンテキスト）として記録し，利用者毎に情報を選択・集約し，個人化した情報を提供することで，人の認知を強化し，意思決定を支援するプロトタイプシステムを実現した．本プロトタイプシステムを，気象災害の防災訓練に適用し，社会的知識の蓄積と，その有用性を検証した．本論文は先端 IT 活用推進コンソーシアムの研究活動成果である．","bookmark":0},
-{"presenid":"E7-4","title":" ログによる動的なアシュアランス・ケース機構","abstract":"アシュアランス・ケースは，安全工学分野から生まれた技術文書であり，根拠を示すことで，ディペンダビ\nリティの確信を得ることに用いられる．従来，アシュアランス・ケースは，運用前にシステムのディペンダビリティを議論することに用いられており，開発時に行われるテストの結果等を根拠として用いていた．我々の目的は，アシュアランス・ケースと運用中のシステムのログを統合することで，運用時システムのディペンダビリティの議論にまでアシュアランス・ケースの利用範囲を拡大することである．本研究では，システムのログをアシュアランス・ケースと統合するためのログフォーマット，ログストレージの構成法について提案し，実際に運用中のシステムにおいてそれらの手法を利用して得られた知見について報告する．","bookmark":0},
-{"presenid":"E7-5","title":"リスクとその対策情報の分類と検索","abstract":"本論文では, リスクをその対策情報の傾向を基に分類し取得する手法を提案する. 本研究の手法でヘッド\nフォンを利用する際のリスクについて検索すると, 難聴のリスクは事前に対処すべきであり, 故障のリスクは事後に対処するものである, といった情報を得る事ができる. リスクの影響度, 発生頻度によって取るべき対策パターンが異なるという知見を利用し, 対策情報の傾向による分類でリスクを推定することが本研究の狙いである. 本研究では社会的な事故であるトラブルに関するリスクを取り扱う. Web 上に記述されるトラブルやその対策についての情報を基に,検索クエリで示される状況に即した分類済みのリスクを提示する.","bookmark":0},
-{"presenid":"E8-1","title":" Android端末におけるブロードキャストインテント情報を用いた省電力化に関する一検討","abstract":"近年スマートフォンが爆発的に普及し，スマートフォンの消費電力の低減は非常に重要な課題の一つとなっ\nている．スマートフォンのバッテリ消費の原因の一つとして考えられるのが，アプリケーションの動作によるものである．アプリケーションには，端末の無操作時においてもバックグラウンドに常駐し動作し続けるものや，ブロードキャストインテントに反応して起動したり通信を始めるものが数多く存在する．本稿では，ユーザが操作していないときにアプリケーションがトリガーとなって発行されるブロードキャストインテントの情報に着目し，その情報をもとにバッテリ消費につながるアプリケーションの振舞いや因果関係について考察を行う．さらに，その解析結果を用いて，端末のバッテリ消費の削減方法について検討していく．","bookmark":0},
-{"presenid":"E8-2","title":" アドホックネットワーク上のTop-k検索における端末のグルーピングを用いたデータ差替え攻撃端末の特定手法","abstract":"アドホックネットワークにおいて，Top-k 検索は有効な検索であるが，ネットワーク内に攻撃端末が存在す\nる場合，検索精度が低下してしまう．筆者らはこれまでに，検索結果に入る必要なデータを不要なデータと差し替えるデータ差替え攻撃を提唱し，この攻撃による検索精度の低下を防ぐ Top-k 検索手法および攻撃端末特定手法を提案した．しかし，これらの手法は基本的に攻撃端末が 1 台と想定しており，さらに攻撃端末が複数存在する場合，攻撃端末の特定に長い時間かかってしまう．そこで，本研究では，ネットワーク内の端末が特定した攻撃端末の情報を共有し，効率的に攻撃端末を特定する手法を提案する．この手法では，共有した情報の類似度に基づいて端末をグルーピングし，攻撃端末と通常端末を分類することにより，特定した攻撃端末の情報が端末間で大きく異なる場合や誤った情報を流布する端末が存在する場合でも，精度よく攻撃端末を特定できる．","bookmark":0},
-{"presenid":"E8-3","title":" 近接WLAN通信環境における公平性制御方法","abstract":"近年，モバイルルータの普及によって，個人が    \n     ネットワーク       システム  を自由に持ち運ぶことが可能となった．そのため，複数の      システムが近接する場合があり，互いの干渉が品質上の問題になっている．複数の      システムが近接する環境においては，同一もしくは近接チャネルを使用した際のフロー毎の品質特性評価がすでに行われている．これにより，端末数や通信規格などが異なる，ヘテロジニアスな通信状況では，自局の      の通信特性は，干渉相手の      との距離に大きく左右されると共に，相手の属性あるいは通信特性にも大きく左右されることが明らかになっている．このため，ユーザが望む品質公平性を得るためには，任意のスループット比率に調整可能な公平性制御を行うことが重要である．しかし，     の機能を大きく変更するような制御や，全ての端末に特殊なソフトウェアを導入することは現実的ではない．そこで，本稿では，簡易に実現できる制御を用いて，公平性を制御する方法を提案し，その有効性について述べる．","bookmark":0},
-{"presenid":"E8-4","title":"複数拠点統合型センサネットワークにおけるモバイルセンサデータの空間インデックスの構築手法","abstract":"近年，モバイルセンサデータと呼ばれる，スマートフォンなどの移動型端末から得られるセンサデータが\n注目されている．広範囲にわたる多数のモバイルセンサデータを管理するため，複数のセンサネットワーク拠点を連携させて統合的に利用する複数拠点統合型センサネットワークが利用されることがある．しかし，従来の複数拠点統合型センサネットワークでは，モバイルセンサデータの位置情報を各拠点のみが把握していたため，所望のモバイルセンサデータを有する拠点の検索に時間がかかっていた．そこで本稿では，複数拠点統合型センサネットワークにおけるモバイルセンサデータの空間インデックス構築手法を提案する．提案手法では，各拠点が有するモバイルセンサデータの位置情報の範囲を木構造を用いてインデックスサーバで管理する．評価の結果，所望のデータを有する拠点を高精度に取得しつつ，従来のインデックス構築手法より検索時間を短縮できることが分かった．","bookmark":0},
-{"presenid":"E8-5","title":" Android端末においてThick/Thinクライアントの切換え制御を行うソフトウェア実装の提案","abstract":"近年，無線通信やモバイル通信の高速化が急速に進んだことにより，クライアントでは限定的な処理のみ\nを行い，サーバ側の処理に全面的に頼る，Thin クライアントモデルとして機能する端末が増加した．一方，モバイル端末では，ガラパゴス携帯から Android をはじめとするスマートフォンへと流行が移り，近年スマートフォンの高機能化が進んでいる．スマートフォンは，クライアント側にデータを保持し計算処理も主にクライアント側で行う Thickクライアントモデルとして動作し，「持ち運べるコンピュータ」としての役割が期待されている．しかしスマートフォンのアーキテクチャは，リソースの制約や，プログラミングおよび実行環境が組込みシステム向けとなっていることなどから，汎用 PC とは大きく異なる．これまでの Thick/Thin クライアントモデルの議論も，クライアント側は基本的に汎用 PC である事が多く，サーバ側に近いアーキテクチャのコンピュータをクライアント側でも用いていた．これに対し本研究では，汎用 PC と環境が大きく異なる Android 端末において，Thick/Thin クライアントモデルを議論し，両者を切り換えて扱うことを可能にする制御ソフトウェアの実装を提案する．またこれを実現するための各要素の具体的な実装方法について議論を行い，実装した例を示す．","bookmark":0},
-{"presenid":"E8-6","title":" 無線LAN環境における移動端末間の公平性を考慮した輻輳制御手法の提案と評価","abstract":"現在，センシングデバイスはスマートフォンや自動車のようなモバイル機器には不可欠な存在となって\nいる．ユーザが，より便利，快適に使用するため，高精度なセンサが無数に搭載された移動端末は，センサ情報を収集することで，より正確で精密な周囲の環境情報を取得できる．この環境情報をコンテキストと呼ぶが，端末は，通常，取得したコンテキストを，スマートフォンの場合には，操作性の向上や高度なアプリケーションの実現等，また，自動車の場合には，車両安定制御や道路情報の把握等に利用している．本研究では，このコンテキストが，無線通信においても利用可能であると考え，移動端末のリソースを有効に活用した通信制御手法の検討を行う．本論文では，通信の上位層である TCP の輻輳制御に着目した．通常，TCP において，輻輳ウィンドウサイズは有線指向で輻輳制御アルゴリズムによりエンド・エンドで制御されているため，必ずしも周囲の状況に適した通信を行っているとは言えない．そこで，周囲の端末数に基づいて既存の TCP の輻輳ウィンドウサイズを制御する手法を提案し，提案手法を用いて改良した TCP を使用した場合のスループットおよび端末間の公平性をシミュレーションにより評価し，既存のTCP と通信性能の比較を行う．","bookmark":0},
-{"presenid":"E9-1","title":" 地図オブジェクトの形状を考慮したFocus生成システムの実現","abstract":"Focus ＋ Glue ＋ Context マップは，大縮尺の注目領域 (Focus)，小縮尺の周辺領域 (Context)，および，縮\n尺差により生じる歪みを吸収して両者を結ぶ領域（Glue) からなる．一般に，公園，神社，商店街など，ユーザが注目する地図上の区域 (地図オブジェクトと呼ぶ) は，様々な形状であるが，これまで，Focus の形状は，円形や矩形など一部の形状に限られていた．任意形状の Focus を描画しようとすると，事物の位置関係が損なわれたマップになることがある．本稿では，配置関数を用いて正しく Focus+Glue+Context マップを作成するためには，Focus の形状が準凸多角形でなければならないことを提示する．また，ユーザにより指定された地図オブジェクトに適合した準凸多角形の Focus を生成するアルゴリズムについて述べる．さらに，提案アルゴリズムを実装した準凸多角形 Focus 生成システムのプロトタイプを用いて，準凸多角形 Focus の有用性を評価する．","bookmark":0},
-{"presenid":"E9-2","title":" 特定地域に限定しない観光キーワードの自動抽出","abstract":"我々は， Web 上の観光情報に着目し，旅行者が必要とする地域の観光情報を自動抽出し同質の情報を融\n合する手法を検討している．一般的に，辞書登録のない未知語は，人手による辞書登録などコストをかけて管理・運用することが多いが，我々は，人手によりコストをかけて生成する辞書は利用せず，形態素 N-gram と RIDF による重み付けを利用して，地域サイトの情報から対象地域の観光キーワードを自動取得する手法を提案している．本稿では，複数の地域サイトから辞書登録に関係なく観光スポットなどの観光キーワードを自動取得した結果を示し，本手法を使うことにより特定地域に限定せず低コストに対象地域の有用な観光キーワードを取得できることを報告する．","bookmark":0},
-{"presenid":"E9-3","title":" 旅行者の移動履歴を利用した旅行情報のランキング手法","abstract":"近年，インターネットの普及やコンピュータの処理速度の向上などに伴い，生成される大容量のデジタルデータ\n（ビッグデータ）の活用が注目されている．代表的なビッグデータの一つとして，人間の移動履歴データがある．本研究では，旅行者の移動履歴を観光情報のランキングに活用する手法を開発することを目的とする．現在，インターネット上には様々な観光情報の検索システムが存在しており，多くの観光情報の検索システムでは，口コミ等によって検索結果をランキングしている．しかし，観光情報の中には，適切な訪問時期があるにもかかわらず，インターネット上に存在する多くの観光情報の検索システムは，適切な時期を考慮したランキングを行っていないため，ランキングされた情報が必ずしもユーザにとって有益でない場合がある．この問題を解決するために，訪問する時期を考慮にした観光情報のランキング手法が重要であると考えた．我々は，この目的のため，九州エリアにおける大量的な旅行者の存在履歴を収集し基礎的な検討を行った．本論文では，その検討結果について説明する．","bookmark":0},
-{"presenid":"E9-4","title":" 可視性に基づくランドマークの自動検出とこれを利用した道案内システム","abstract":"街を移動する際にスマートフォン等によるナビゲーションシステムを利用する人は多い．しかし，歩行者\nや二輪車で移動している人にとっては，移動中に機器の画面で経路を再確認することは危険を伴う行為である．そこで，進行方向上に見えるランドマークとなる建物を事前に教示することで，経路の再確認頻度を減らすことのできるナビゲーションシステムを提案する．本システムを実現するためにまず，都市の GIS データを 3 次元コンピュータグラフィクスにより仮想的に描画することで，各交差点からの可視性を自動判定する手法を提案する．そして，ランドマークの可視性が高く，かつ案内に用いるランドマーク数が少数であるような，提案システムに適した経路を発見するための経路探索手法を遺伝的アルゴリズムに基づき構築する．実験では，実在する都市の GIS データを用いて本手法を適用することで，案内経路の妥当性について評価する．","bookmark":0},
-{"presenid":"E9-5","title":" 観光オブジェクトに対するユーザの滞在時間の差異に基づく経路探索システム","abstract":"本研究では，ユーザの行動時間に着目して観光オブジェクトの予定コストを再計算し，新たな予定時間を\n算出し，この新しい予定時間を用いて経路を推薦する手法を提案している．本手法では観光オブジェクトの予定コストに対して長く，もしくは短く滞在した場合に，その変更理由が観光オブジェクトへの興味の有無や歩き方，観光の仕方などのユーザの特性によるものであると考えた．そこで，観光オブジェクト間に関係を定義し，同種のオブジェクトには同じく興味があると考え同様の影響を与え，異種の観光オブジェクトにはユーザの特性を考慮し少しの影響を与えるようにすることで適切な各観光オブジェクトの予定時間を算出できると考えた．本稿では，プロトタイプシステムを構築し，考察を行う．","bookmark":0},
-{"presenid":"E9-6","title":" コンテキストに基づいたフォトストリームの分割を支援するジオタグ軌跡の集約的分析","abstract":"本研究では，コンテキストに基づいてフォトストリームを階層的に分割する手法を提案する．ユーザが写\n真を撮影した時刻で分割するのではなく，周辺で撮影された全ユーザのジオタグ付き写真の移動軌跡から出入口を抽出し，数日間にわたるユーザのフォトストリームから，例えばディズニーランドそのものやディズニーランドのアトラクションの単位 (ランドマーク) で階層的に分割する．提案手法では，ランドマークの出入口を抽出するためにソーシャルメディアサイトで共有されている写真の撮影地点に基づいたクラスタリングを行い，付近で撮影された全ユーザの写真に付与されているジオタグの移動軌跡を集約し，出入口の場所を抽出し，そこでフォトストリームの分割を行う．","bookmark":0},
-{"presenid":"F1-1","title":" Javaプログラミング課題のオンライン自動採点システム","abstract":"大学でのプログラミング授業において、演習課題を採点する作業は人手で行っているのが現状である。\n多くのプログラムを手作業で採点するのは採点者にとって非常に負担となり、採点ミスも生じる。全ての採点が終わるまで学生には結果が分からず、内容を忘れてしまう学生もいるだろう。その為、本研究では課題提出と採点をウェブ上で行い、学生に即座にフィードバックを返すシステムを構築する。予め課題の模範解答を作っておき、サーブレットと JSP を用いて作成したウェブサイト上で課題を提出させる。その後コンパイルチェックおよびプログラムの実行が行い、実行結果を模範解答のものと比較することにより採点する。本システムにより、非常に高い精度での自動採点が可能になり、かつ採点時間は手動と比べ 1/7 程に短縮出来た。","bookmark":0},
-{"presenid":"F1-2","title":" 論文とプレゼンテーションスライドの部分対応付けにおける粒度の検証","abstract":"近年，学術論文の発表に伴いプレゼンテーションスライドの作成が一般的になっている．ある研究を把握\nしたい際，論文とプレゼンテーションスライドの両者を参照できる場合があるが，それぞれが一長一短の特徴を持っている．本研究では，この二つの媒体を組み合わせて用いることにより効率的に情報を得られるのではないかと考え，各スライドに対して論文の節，段落等の部分文書を対応付けする手法を考えた．特に，短時間で研究の概要を把握したい場合，スライド流し読み時に論文の対応する部分文書を補助的に参照できることは有用であると思われる．既存手法を基に，対応付けする部分文書の粒度を意識したアプローチを考察した．対応付け粒度として，論文の節単位および段落単位の両者を対応付け対象と考える場合と段落単位のみを対応付け対象と考える場合の二通りを考え，また，最初に節単位での絞り込みを行う二段階対応付け考案した．実験において対応付け精度と実行時間を調査し，二段階対応付けの有効性が確認できた．","bookmark":0},
-{"presenid":"F1-3","title":" 階層的意味を考慮したプレゼンテーションスライド図形の構造化手法の提案","abstract":"本論文では，プレゼンテーションスライドに含まれる図形を，それを構成する円・矩形・矢印などの\n基本図形に分解し，これら基本図形間の接続関係・包含関係などを分析することで，図形の意味的な階層構造を推定する手法を提案する．提案手法により，図形の持つ意味，例えば，流れ図・循環・リスト・集合関係などを推定することが可能となり，プレゼンテーションスライドに含まれる図形の検索および再利用に役立てることができる．提案手法の有効性を検証するため，既存のスライド図形に対して提案手法により抽出された図形群が，実際に行なった人間の図形認識のアンケートの結果から作成した正解データと一致するかについて，評価実験を行う．","bookmark":0},
-{"presenid":"F1-4","title":"演習問題個人化のためのユーザ添削に基づく理解箇所判定手法","abstract":"人に教える行為の中で添削という学習方法がある．添削により，教える側も知識を再確認し教えることで\n実は学習すると考えられる．しかしながら教える行為の学習効果は高いと考えられるが，教えられる側を必要とするため e-learning で実現は少ない．そこで，我々はユーザが添削をする式を仮想生徒が自動生成してくれるシステムを提案する．ユーザは，学習者なので添削を間違える可能性がある．そのため，問題中のどこを理解しどこを理解していないのかを添削を行う中で判断し提示する手法を開発する.","bookmark":0},
-{"presenid":"F1-5","title":" 講義型授業における受講状態の推定法の提案","abstract":"近年，大学等の教育機関において授業の質向上を狙いとしたファカルティ・ディベロップメント（以下 FD）\nが盛んに取り組まれている．本研究では，受講者一人一人の受講状態をリアルタイムに講師へフィードバックすることを目的に，受講者の負担が少ないセンサーを用いて受講状態を推定する手法を提案する．受講者一人一人の受講状態をモデル化し，受講者の体重移動と姿勢変位を計測するセンサを用いて受講状態をモニタリングする. それにより，受講者が講師の話に集中している「傾聴」および，演習問題などに集中して取り組んでいる「作業」など，受講状態を推定できことを，いくつかの実験によって明らかにする．","bookmark":0},
-{"presenid":"F1-6","title":" プレゼンテーションスライドに対する分割手法の提案と講義スライドへの応用","abstract":"近年，学会での発表や，講義などで，プレゼンテーションスライドが使われることが増えている．その中\nで，講義のプレゼンテーションスライド（以下，「講義スライド」と呼ぶ）は，講義を欠席した人や，後で講義を復習したい人のために，公開されていることも多い．しかし，講義スライドは，講義を聞くことを前提として作られている場合など，そのままでは理解できないことも多い．本研究では，話題ごとに講義スライドを分割 (セグメント化) することで，講義スライドの閲覧を補助することを考える．また，セグメント情報を利用して，様々な講義を比較するといった応用例についても考察する．","bookmark":0},
-{"presenid":"F2-1","title":"情報工学実験におけるソーシャルボタン機能の実践とその結果分析","abstract":"データベースと Web プログラミングの技術を学生に実践させるため、徐研究室では、Web モール実験\nシステムを開発し、2003 年度から「情報工学実験Ⅲ、Ⅳ」という３年次の科目に利用してきた。システムの機能強化と世の中の流れに沿って利用者同士が店舗を評価し合うソーシャルボタン機能を新規に追加するために、一昨年度から、一から作り直し、今年度の実験から本格的に利用している。例年にない積極的な反応が得られている。本論文では、実験を活性化させた要因を突き止めるために、ソーシャルデータに関する実験結果の解析を行う。利用者への「被アクセス数」と「いいね!数」という異なる因子に属するデータの提供が、重要な一因という結果が得られている。さらに、より教育効果を向上させるための改良点や操作履歴による推薦機能についても報告する。","bookmark":0},
-{"presenid":"F2-2","title":"ブラウザ上でのSQL学習システム","abstract":"SQL は国際標準のデータベース言語であり、情報システムに携わる技術者には最低限の知識が要求さ\nれる．本研究では SQL の基本的な操作について、初心者が自習に使える学習システムを提案する．インストラクタが用意した学習問題を学習者が解いていくという形式をとり、学習者が誤った命令文を入力したり、不適切な命令文を実行したりした場合に、分かり易いエラーメッセージの作成やデータベースの自動復元などの丁寧なフィードバックをシステム側から提供することで、初心者の自習という用途に適したシステムを実現する．","bookmark":0},
-{"presenid":"F2-3","title":"Wemu：Webブラウザ上の仮想マシンによるブラウザ機能拡張技術　教育的応用への検討","abstract":"Web のプラットフォーム化の潮流に伴い，HTML5 や Javascript を活用した Web アプリケーションの開発\nが進んでいる．Web ブラウザを利用したサービスは，端末へのソフトウェアのインストールが不要であり，デバイスフリーで利用できるなどのメリットがある．本研究では，Javascript 実装の x86 エミュレータであり，Web ブラウザ上で動く仮想マシンを実現する Javascript PC Emulator（JSlinux）に注目し，JSlinux をベースとして，Web ブラウザの機能的拡張を実現する技術である，Wemu を提案する．Wemu では，JSlinux に対し，３つの機能拡張を行っている．1 つ目は，Web ブラウザ上の仮想マシンに対する外部接続インタフェースのエミュレータの追加である．2 つ目は，エミュレートされたインタフェースから送受信されるデータを，外部ネットワークと送受信可能な状態に変換するための機能を搭載した外部モジュールの設置である．3 つ目は，Web ブラウザ上の仮想マシンと，Web アプリケーションとの Javascript 上での連携機能の追加である．Wemu により，Web ブラウザ上でこれまで実現出来なかったWeb サービスの実現が可能となる．本論文では，特に，Wemu の教育的応用への検討を示す．本技術によって，Webブラウザ上のサービスである利点を活かしつつ，従来の IT 教育環境に比べ，簡単かつ安全なプログラミングや Linuxなどの IT 教育学習環境を実現できることを示す．","bookmark":0},
-{"presenid":"F2-4","title":"生息環境の類似性を考慮した生態系学習のための動植物コンテンツの提示手法","abstract":"本稿では，生息環境の類似性を考慮した生態系学習のための動植物コンテンツの提示手法について述\nべる．本手法では，自然環境から抽出される特徴の類似性を算出することにより，その観測地点に生息する動植物のみではなく，生息環境の類似性から想起される別の観測地点に生息する動植物を学習者に提示する．本手法により，学習者は，動植物コンテンツの閲覧履歴に基づいて抽出される学習時の興味や関心に加えて，観測地点間の関連性に基づいた分析的な動植物コンテンツの獲得が可能となる．本研究では，実際に構築したプロトタイプを用いた実験により，提案手法の実現可能性を検証する．","bookmark":0},
-{"presenid":"F2-5","title":" 歴史資料の新たな利活用を目的とした小袖屏風DBの設計と高度知的検索システムの構築","abstract":"近年，国立歴史民俗博物館所蔵の歴史資料に関するデジタルアーカイブの公開が進められており，小袖屏\n風に関する多数の基礎的データや画像が公開されている．小袖屏風のデジタルアーカイブは学術調査や研究を目的とした人を対象に公開されており，高精細，高臨場感なデータが蓄積されている．このような文化財にかかわるデータの価値を広く共有するためには，歴史資料に詳しくない人でも使いやすく，多様なデータ利用が可能なシステムを構築することが望ましい．そこで我々は，歴史資料の新たな利活用と高臨場感の提供を目的とし，小袖屏風に関する特徴量の蓄積や色が与える印象による検索が可能な DB を設計した．また，DB に蓄積されたデータを用いた情報検索や解説文の類似度を用いた情報推薦が可能な高度知的検索システムを構築した．","bookmark":0},
-{"presenid":"F2-6","title":"記事アーカイブを用いた歴史的事象の言及分析","abstract":"新聞などのニュースメディアでは，日々新たな出来事が報道される．これらの出来事の中には，他の出来\n事についての記事中で，「歴史上の出来事」として参照されるものがある．しかし，出来事がいつから「歴史上の出来事」として認識されるようになったかを知るのは難しい．そこで本研究では，ニュース記事中の事象への言及に注目し，事象への言及をいくつかのクラスに分類する．この各クラスごとの言及件数の変化を見ることで，事象がいつから歴史的事象として参照されるようになったかを分析する．","bookmark":0},
-{"presenid":"F3-1","title":" 企業間取引のモデル化へ向けた付加量率推定法","abstract":"本研究では，企業間取引構造を精緻にモデル化するため，各企業に対する「付加量率」という概念を導入\nし，業種やティアなどのカテゴリごとに付加量率を推定することを試みる．企業間取引におけるモノの流れを考えた場合，各企業は親ノードから仕入れた部品・原材料を加工し，子ノードへ売り上げる．各企業は，単純に仕入れた金額分を売り上げるのではなく，付加価値を付与し売り上げている．さらに，業種やティアごとに付与する付加価値の大きさは異なると考えられる．そこで，カテゴリごとの固有の特性である付加価値に，データに反映されていない取引関係とのモノの流れ量を合わせた「付加量」を導入することで，モデルを精緻化し，付加量を推定，考察する．実際の企業間取引ネットワークを用いた評価実験により，付加量率を導入しない単純なモデルと比較して，各企業の価値を意味する売上高の推定誤差を減少させることができたことを示す．また，使用するカテゴリを変えることで，どのカテゴリで推定したときに最も推定誤差を減少できるかについても評価する．さらに，業種やティアと推定した付加量率の関係についても考察する．","bookmark":0},
-{"presenid":"F3-2","title":" 因果関係分析に基づく投資関連商品の比較手法の検討","abstract":"NISA(少額投資非課税制度) の導入など一般人が投資信託など投資関連商品を比較検討し購入する機会が\n増加している．しかし，投資関連商品は非常に多種におよび，また，商品内容は日常生活となじみがうすいため目論見書を読んだのみでは商品の理解が困難であり，各商品の特徴を理解して商品を選択することは困難である．本研究では投資関連商品と現実世界での経済事象の因果関係分析を行い，因果関係図をユーザーへ提示することで商品について現実世界との関係を踏まえ理解することを支援し，また，複数の商品を一つの因果関係図の中に含め提示することで，複数商品の中で各商品の特徴の比較・理解を容易に行えるようにする手法を検討する．","bookmark":0},
-{"presenid":"F3-3","title":" 機械学習を用いたターゲティング広告の表示回数予測","abstract":"本稿ではクリック課金型のターゲティング広告において，表示回数を予測する問題を扱う．クリック課金\n型広告は，ユーザーが広告をクリックしたときにのみ課金が発生するため，広告主にとって効率の良い集客が可能である．一方で，広告主は事前に表示回数やクリック回数を知ることができないため，予算計画を立てにくいという課題が存在する．本稿では，広告主の入稿したターゲティング広告が未来の一定期間にどの程度表示されるかを，機械学習を用いて予測する手法を提案する．本手法では実際の配信プロセスを考慮して適切に予測モデルを分割することで，ベースラインの予測精度を大きく上回ることができた．","bookmark":0},
-{"presenid":"F3-4","title":"オンライン広告におけるCVR予測モデルの素性評価","abstract":"オンライン広告はインターネットの経済を支える大きな柱の一つであり，ビジネスと学術の両方から大き\nな注目を浴びている．本稿ではオンライン広告のコンバージョン率 (conversion rate; CVR) を予測するモデル（CVR予測モデル）の素性について評価を行う．CVR 予測モデルの精度向上は広告効果の最大化に不可欠である．『Yahoo!ディスプレイアドネットワーク』の配信システムログを用いて CVR 予測モデルの素性を評価し，その有用性を検証した．","bookmark":0},
-{"presenid":"F3-5","title":" 店舗クラスタを用いた購買行動に関するライフスタイルの推定","abstract":"購買行動履歴から購買店舗に着目することで顧客のライフスタイルを高精度に推定する方法を提案\nする．提案手法では機械学習の手法を用い，複数店舗での利用状況を考慮して店舗クラスタを作成し，顧客が購入した購入商品情報とあわせてライフスタイルを推定する．調査パネルにより得た購入商品情報，アンケート情報を用い，店舗クラスタが推定精度に大きく寄与することを確認した．先行研究として，単独店舗における購買履歴と顧客クラスタを用いた顧客モデル構築技術があるが，店舗情報を加味することによってライフスタイルの推定精度がどの程度向上するかが明らかでなかった．本手法により購買行動履歴からライフスタイル推定を行うことにより，顧客のライフスタイルに合わせた商品のおすすめ等の高度なサービスが提供できる．","bookmark":0},
-{"presenid":"F3-6","title":"ビジネスコンテキストを用いた類似ユーザ分類の一考察","abstract":"企業内の IT 業務は, 標準的なワークフローに従って遂行されており, 関連する詳細情報の収集活動が頻繁に繰り返さ\nれている. 近年, この情報収集時間の増大が課題となっている. 作業者の行動履歴を基にコンテキストを推定し, 必要な情報を精度よく推薦することができれば, 情報収集にかかる時間の短縮が可能となる. これにより, 収集した情報を元にしたクリエイティブな作業に時間を充てられ, 業務品質向上が期待できる. 今回, ワークフローに従った作業の位置づけをビジネスコンテキストと定義し, サーバアクセスログにおける文書ファイルへのアクセスパターンとあわせて分析を行うことで, ユーザを分類した. これによりユーザにとって有用な情報が, ある程度推定できることがわかった.","bookmark":0},
-{"presenid":"F4-1","title":" 動向情報の根拠探索のためのテレビ番組からの図表画像検出","abstract":"テレビ番組の映像データから図表画像を検出する手法を検討する．Web コンテンツ上の情報，特に，ある\n対象の時間的変化を記述した動向情報を対象に，その信頼性判断を支援する根拠の一つとして，テレビ番組で用いられた図表画像を提示する手法を提案している．先行研究では，クエリとして入力された動向情報の根拠となりうる図表画像がテレビ番組中に存在すれば，一定の良好な精度で関連図表を検出できるという結果が得られた．しかし，一部の図表画像の検出精度やカバレッジの向上が必要という課題が残った．本稿では，図表画像の統計的な性質やエッジに基づく特徴などを考察し，様々な検出手法を比較検討する","bookmark":0},
-{"presenid":"F4-2","title":" ダイジェスト映像自動生成のための観点の入れ替わりに基づいた特徴的シーン抽出","abstract":"近年ニコニコ動画など動画共有サイトが発展し，投稿されている動画に対し，誰でもコメントが自由に書\nき込めるようになった．動画共有サイトでは，動画を視聴しながらも好きなタイミングで誰でも動画の内容に対して感じたことや動画の内容自体のことを書き込める．さらに動画のシーンによって視聴者ごとに様々な観点を持っており，それに応じたコメントが付与されている．本研究では，動画に付与されているコメントの評価を判定し，似た観点を持つ視聴者同士のクラスタリングを行い，観点の入れ替わりを抽出する．これにより，視聴者が盛り上がっている場面のみならず，視聴者が興味を示す場面の抽出を行う．","bookmark":0},
-{"presenid":"F4-3","title":" 動画共有サイトにおける動画ナビゲーションのためのコメント要約手法","abstract":"YouTube やニコニコ動画といった有名な動画共有サイトには日々膨大な動画が投稿されており，動画内容\nの簡潔な要約は視聴者にとって大変有益である．そこで本稿では，動画閲覧支援のためのコメント要約手法を提案する．提案するコメント要約の特徴は，コメントから抽出した単語にアプリオリアルゴリズムを適用して重要単語を抽出し，特徴的な感想表現により分かり易く感想を可視化する点にある．実験により感想表現の抽出性能と重要コメント抽出性能などについて評価する．","bookmark":0},
-{"presenid":"F4-4","title":" 遠隔カメラ側でのフレーム選択を用いた時刻指定動画再生システム","abstract":"カメラの低価格化，ネットワークの整備，防犯意識の高まりなどの理由から定点カメラの設置が進んでい\nるが，多数の遠隔カメラから動画データを集約再生する場合には，最新の動画圧縮技術を用いても，転送・保存のコストが問題となる。一方，半導体不揮発メモリが安価に入手できるようになり，遠隔カメラ側で一時的に動画を保存することも可能となってきている。本研究では，遠隔カメラ側に小容量に動画データのキャッシュを用意し，集約サーバ側と協調させることで，動画データの転送・保存のコストを下げて指定した時刻の動画を品質を保って再生する時刻指定遠隔カメラ動画再生システム Recarvips を提案する。動画キャッシュ制御のための効率的なフレーム間の類似比較の仕組みを取り入れて時間指定の再生を可能とする方法を実装し，対象の動きの多い場合，少ない場合の比較実験等を行った結果を報告する。","bookmark":0},
-{"presenid":"F4-5","title":"アンサンブルクラスタリングによるライフログ映像からの表情表出シーン検出","abstract":"ライフログ映像の活用を目的として，有用な出来事が起こっているシーンと考えられる，映像内の人物に\n何らかの表情が表出しているシーンの検出法を提案する．ライフログ映像中には多様な表情が現れるため，それらを識別できる表情認識法が不可欠であるが，従来の表情認識法の多くは，教師あり学習に基づいており，識別対象の表情ごとに学習用のデータセットを作成する必要があるため，非常に手間がかかる．そこで，本論文では，アンサンブルクラスタリングに基づく教師なし学習を用いて，表情表出シーンを検出する手法を提案する．提案手法は，学習用のデータを用いることなく様々な表情表出シーンを検出できるため，柔軟性と効率性の面で優れているといえる．ライフログ映像からの表情表出シーン検出実験を通じて，提案手法の有効性を示す．","bookmark":0},
-{"presenid":"F4-6","title":"多次元空間計量によるユーザ・コンテクスト対応イベント情報抽出・配信システムの構成","abstract":"本稿では，ユーザの物理的状況や嗜好に適したイベント情報を抽出・配信するシステムを提案する．\n本方式は，ユーザが過去に参加したイベント情報や現在の時間や場所といった状況をユーザ・コンテクストとして用い，多次元空間からの統合的分析により各ユーザに合ったイベントを抽出する．また抽出されたイベント情報を最適に配信する方法についても議論する．本方式により，私たちが有意義なイベント選択を行うことができ，新たな発見をすることができる情報環境の実現を目指す．","bookmark":0},
-{"presenid":"F5-1","title":" アセンブリ構造を持つ３Dモデルの投影データを用いた探索方法","abstract":"材質の違いや，部品の組み合わせ等のアセンブリ構造を考慮した 3 次元モデルの探索方法の提案とその評\n価について述べる．アセンブリ構造を特徴量として反映させるために 3 次元モデルに対し様々な角度から投影データを求める．外見が同じモデルでも中身が異なる場合は投影データは異なる結果となるため，それを特徴量としてマッチングを行うことを提案する．様々な角度らの投影データを用いることで物体が回転していてもマッチングが行える．また平行移動に対してはフーリエ変換を施し，探索を可能にした．この特徴量を入力として主に相互部分空間法を用いて 3 次元モデルのマッチングを行なった．提案手法の有効性は公開データセットによる識別実験によって検証する．","bookmark":0},
-{"presenid":"F5-2","title":" 拡張現実UIを対象とした3次元CGデータ配信機構の検討","abstract":"本稿では，拡張現実 UI を対象とした 3 次元 CG データ配信機構について述べる．本研究では特に，3\n次元 CG データ配信を Web サービスとして構築し，個々の 3 次元 CG データ配信サーバをクロールする仕組みを導入することにより，拡張現実 UI へ配信するための 3 次元 CG 情報を収集・管理するためのプラットフォームの実現方式を示す．さらに，3 次元 CG のメタデータから抽出される意味的な関連性および利用者の嗜好性に基づいて 3次元 CG を分類することにより，拡張現実 UI における 3 次元 CG 配信をパーソナライゼーションする手法を示す．本研究では，拡張現実 UI を備えたアプリケーションを用いた実験により，本機構の実現可能性を検証する．","bookmark":0},
-{"presenid":"F5-3","title":"空間段階分割したCSLBP特徴量による二次元スケッチ画像を検索質問とした三次元物体の形状類似検索","abstract":"近年，三次元物体は幅広い分野で活用されている．三次元物体の数が爆発的に増加しているにともない，三次元物\n体の形状による類似検索技術の必要性が高まっている．本稿では，ユーザが検索システムを簡単に利用できるように二次元スケッチ画像から類似した三次元物体を検索する技術の開発を目的とする．PCSLBP という特徴量を検索システムに応用した．三次元物体には，多くの利用者がスケッチする特定の視点をベストビューと推定して，視点を絞り込むことで，検索性能の向上を目指す．また，比較実験から，いくつかの従来手法よりも優れた検索性能が得られた．","bookmark":0},
-{"presenid":"F5-4","title":" 勾配情報を用いたLocal Binary Patternの改良","abstract":"Local Binary Pattern (LBP) は，画像の認識や分類に用いることのできる特徴量の一つである．LBP は，\n通常 3 × 3 の画素領域で計算され，局所的な特徴を抽出する．特に，照明の変化の影響を受けにくく，高速に計算できるという特長がある．本稿では，この LBP の考えを元にした，より高精度の画像分類が行える特徴量を提案する．本稿で提案する特徴量では，5 × 5 の領域から疎に参照点を選択し，さらに対象画素付近の輝度勾配の情報を付加することで 512 次元の特徴を表現する．LBP のほか，既存の改良手法である improved LBP や uniform LBP との比較実験を行い，顔画像の分類において本提案手法が有効であることを示した．","bookmark":0},
-{"presenid":"F5-5","title":" ROU(Region Of Uninterest)の提案と地図・画像への応用","abstract":"画像検索や画像処理の発展により, 医療やスポーツビデオ等の分野での画像内領域利用についての関心が\n高まっている. 画像内領域の中でも関心領域（Region Of Interest,ROI) に関する研究が数多く行われている. しかし,現在は利用されていない領域 (ROI ではない領域) への関心は低い. しかし,ROI ではない領域を求めることは ROI の偽陰性 (False Negative) を減少するためには重要である. また, 利用者にとって現在は関心がない領域が将来利用可能な領域であるという有用性の高い領域であるとする分野も考えられる. そこで, 本稿では, 普段利用されることが少ないが, 領域として重要な役割を果たす可能性がある領域として, 無関心領域 ROU(Region Of Uninterest) を提案する.ROU の活用例として, 地図への応用と画像への応用を取り上げ, その分野での ROU への適用例を論ずる.","bookmark":0},
-{"presenid":"F5-6","title":" 画像検索におけるファセットの自動抽出と多様性計算","abstract":"本論文では，画像検索における，画像ファセットの抽出手法と画像のファセットの多様性計算手法を提案\nする．現在，画像検索システムでは，ユーザの検索意図を検索質問にフィードバックする手法として，画像のコンテンツや画像に付与されたタグや周辺テキストを元にした適合性フィードバックが用いられている．これにより，ユーザの検索要求に合致した画像を容易に発見することができる．しかし，このような適合性フィードバックでは，“この画像の多様な観点に基づいて他の画像を探したい” という検索要求に応えることは困難である．そこで，本研究では，１つの画像から様々なファセットを抽出する手法を提案する．また，抽出されたファセットに基づき，画像のファセット多様性を計算する手法を提案する．","bookmark":0},
-{"presenid":"F6-1","title":" アクセスログを用いた診療文書間の関係抽出","abstract":"電子化された診療文書 (いわゆる電子カルテ) の普及と共に, 日々蓄積されるデータの二次利用への期待が\n高まっている. 医師が毎日の業務以外に, 学習や教育用に電子カルテを閲覧することがあるが, 現行のシステムでは IDや名前などにより患者のカルテを検索出来るものの, 自分の知らない患者が一覧として表示される膨大な検索結果から, 新たに診療の参考にしたい文書を見つけ出すことは困難であり, 新しい手法が求められる. 我々は電子カルテの閲覧を記録した既存のアクセスログを用いて, 医師が患者のカルテを閲覧した事実を二部グラフで扱い, その枝の重みを入院患者の退院後に残るアクセスログに基づいて設定し, HITS を応用することにより, 学習の参考になるカルテを抽出する手法を提案する.","bookmark":0},
-{"presenid":"F6-2","title":"電子カルテシステムの操作ログデータの時系列分析による頻出シーケンスの抽出","abstract":"近年の医療の現場では電子カルテの普及が進み、医療の効率化がなされている。しかし、電子カルテの活\n用という点においては未だ研究段階であり、蓄積された電子カルテに関するデータを分析して医療の補助とすることで、さらなる効率化を目指す事が考えられる。そこで本研究では、電子カルテの操作ログデータから医療行為の実施手順を分析し、その頻出シーケンスを抽出して医療の現場に役立てることを目標とする。ある病気に対して行われる処置・検査の典型的な流れはクリニカルパスと呼ばれる。電子カルテの操作ログ分析によって得られる医療行為の頻出シーケンスは、その医療行為の典型的な流れであると考えられるので、クリニカルパス作成の際の補助とするのはその活用例の一つである。","bookmark":0},
-{"presenid":"F6-3","title":"医療機関の大規模データ処理による認知症の早期診断","abstract":"本研究では，これまでにデータベースに蓄積された認知機能検査データおよび頭部 MRI 画像から得られる情報を\n解析し，認知症の早期診断の可能性について検討した．本研究で使用したデータは，2013 年 1 月から 12 月までの 1 年間に物忘れを主訴として川瀬神経内科クリニックを受診し，認知機能データベースにデータ登録された，MMSE1,641 データ，頭部 MRI画像 1,460 データ，CDR258 データである．CDR 別の MMSE は，CDR0 で 24.8±0.5 点，CDR0.5 で 23.9±6.6 点，CDR1 で 19.2±6.2点，CDR2 で 11.4±3.8 点，CDR3 で 7.2±3.5 点であった．特に，計算と想起の合計得点は，CDR0 で 4.0±0.8 点，CDR0.5 で 3.6±2.0点，CDR1 で 2.2±1.7 点，CDR2 で 0.6±1.0 点，CDR3 で 0.1±0.3 点であり，それぞれの群間において有意な差が認められていることから，認知症の早期診断に有用であると考えられる．また，CDR 別の脳萎縮領域の割合は CDR0 で 1.72±1.19，CDR0.5 で1.83±0.87，CDR1 で 2.50±1.19，CDR2 で 3.41±1.39，CDR3 で 3.44±0.90 であり，認知症が進行するにしたがって脳萎縮の割合も大きくなっているものと考えられた．","bookmark":0},
-{"presenid":"F6-4","title":"健康データマイニングにより自動抽出されたルールの妥当性検証","abstract":"個人の日常の健康状態と生活習慣に関わる時系列データをサーバに蓄積し, 両者の相関ルールを抽出\nする「健康データマイニング」をコア技術とした, クラウド型個人健康管理システムを開発している．「健康データマイニング」では, クラウドで自動的にルールを抽出するために, 前処理として健康状態と生活習慣の遅延期間を考慮した時系列データ間の相関分析を行っている．本稿では, ボランティアユーザについて自動抽出された相関ルールを散布図に立ち戻って検証し, 開発中の「健康データマイニング」アルゴリズムの今後の課題について考察した．","bookmark":0},
-{"presenid":"F6-5","title":" PET-CT画像を用いた全身がん自動診断システムの構築とその評価について","abstract":"現在医学会では、全身 PET(Positron Emission Tomography)画像診断が、非常に有効ながん診断法として\n注目されている。そしてさらに近年では、PET 画像と同時に CT(Computed Tomography)画像を撮影できる PET-CT装置も普及してきている。この PET-CT 画像を用いたがん診断では、一人の患者につき数百枚もの画像を見ることになるので医師に大きな負担を強いることや、専門医の不足などが問題となっている。これらの問題を解決するために情報科学的な手法を駆使した精度の高い PET-CT がん自動診断システムが求められている。本研究では、その一つの解として医師の診断手法を模倣した PET-CT がん自動診断システムを提案し、その実用性について検証を行った。","bookmark":0},
-{"presenid":"F7-1","title":" ニュースアーカイブからの似て非なる事象記事の発見と分析","abstract":"本稿ではある歴史的事象について書かれたニュース記事が与えられたときに，その事象と同カテゴリの別\nの事象において，与えられた記事と内容や位置づけの似た記事をニュースアーカイブから発見する手法を提案する．我々はこのような記事の検索を「似て非なる事象記事検索」と呼び，これにより人々が歴史に学ぶ手助けを行う．提案システムは 1 つのニュース記事と似て非なる事象記事を探すカテゴリ名の組を入力とする．我々はまずカテゴリ名を利用して事象に対応する記事集合を収集し，その後収集した記事集合の中から入力記事に対する似て非なる事象記事を発見するという 2 段階の手法により，似て非なる事象記事の検索を行う．","bookmark":0},
-{"presenid":"F7-2","title":" 社会的印象に対する根拠の発見","abstract":"本稿では，人々が共通して抱く社会的印象に対して，なぜその印象を抱いたのか，という根拠になる情報\nを Web から抽出する手法を提案する．本稿では印象として扱える根拠を対象に，根拠として扱うべき ‘対象’ を社会心理学の知見を基に収集する．また，印象間の連想関係に着目し，人が印象を抱く過程のモデル化を行った．モデル化の観点から得られた根拠を，印象をどの程度連想させるのか，他の根拠をどの程度連想させるのか，といった評価指標から根拠度の定式化を行った．提案した根拠度を用いる事で，印象を抱く際により多くの人が共通して連想元として利用したと考えられる根拠が取得出来る．","bookmark":0},
-{"presenid":"F7-4","title":"実空間での相互扶助活動を支援するディジタル社会基盤","abstract":"我々は，実空間での人々の社会貢献活動を支援するための ICT を活用した社会基盤システムを開発中である．\nFacebook に代表されるような実空間での人間関係を扱う SNS では，ユーザの知人や友人，家族などによる現実環境の友人，知人，家族等の人間関係に基づいたコミュニケーションの支援を行っている．しかし，実際には人々の間に生じる関係は，お互いに見知った同士による関係だけはなく，我々は常に見知らぬ人々とモノや場所に対する行動を介在して様々な他者とその場限りのダイナミックな関係を構築している．地域での社会貢献活動を行った人と，その恩恵を受ける不特定の人々もこのような関係を有しているが，実際にそれらの関係を認識することは困難である．提案するシステムを利用することで，ユーザは実空間における社会貢献活動を介したお互いのつながりや影響を実感するインラクションを行い，自発的な親切行動への動機付けを高めることが可能となる．","bookmark":0},
-{"presenid":"F8-1","title":" 機械学習を用いた実用的レシピの判別手法の提案","abstract":"レシピサイトにおいて，膨大な数の中からのレシピ選択は難しく，ユーザにとって分かりづらいレシピを\n選択してしまうという状況がしばしば起こっている．本研究では，ユーザにとって分かりやすく，簡潔で，内容がしっかり書かれていて，コツやポイントが詳細に記述されている “実用的レシピ” を判別することで，ユーザのレシピ選択を支援することを目的とする．10 種の料理について，クックパッドの人気レシピの内容分析を行い，「火加減の記載」や「調理時間の記載」など，内容面における 7 つの特徴を，実用的レシピ判別の素性として用いることを決定した．そして，それらを素性とした SVM 分類器による判別器の実装を行った．判別実験の結果，10 種類の料理の分類精度(accuracy) の平均は，0.813 という値であり，ベースラインとの有意差が確認された.","bookmark":0},
-{"presenid":"F8-2","title":"同一料理に対する多様なレシピ集合からの効率的な選別を目的とした可視化手法","abstract":"近年，投稿型レシピサイトが一般的に利用されるようになった．投稿型レシピサイトでは，利用\n者がレシピを投稿できるため，ひとつの料理に対して多数のレシピが存在する場合が多い．特定の料理を作ろうとしてレシピサイトでレシピを見ている利用者は，同一の料理に対する様々なレシピから自分が作るレシピを選別する必要がある．しかし，候補となる全てのレシピを閲覧することは現実的ではない．そこで，他のユーザが行った評価を利用してレシピを選別することが多い．しかしユーザの評価に基づいた選別では，新しいレシピは選別の候補にならない可能性が高く，その料理のバリエーション（料理の全体像）を把握して，自分の嗜好や目的に合致したレシピを選別したいという要求に対応できない．この問題を解決するために，本論文では，ユーザが指定した料理に対して，多数のレシピが存在する状況で，レシピの選別を支援する可視化手法を提案する．本研究では，レシピの構成要素を分析することでレシピのバラエティーを発見し，ユーザが料理の全体像が理解できるような可視化を行う．","bookmark":0},
-{"presenid":"F8-4","title":"Extraction of Naming Concepts Based on Modifiers in Recipe Titles","abstract":"On user-generated recipe-sharing sites such as Rakuten recipe, various modifiers such as “Kid-friendly”\nand “Simple” are often used in the titles of the recipes to signify thier characteristics. Although a modifier isused in a number of recipes’ titles, the underlying concepts utilized vary. In this paper, we propose a method thatextracts Naming Concepts for recipes based on modifiers in their titles. Specifically, we obtain typical ingredientsand cooking utensils by summarizing the recipes for a dish to extract the differences between the elements of recipesand the typical elements in terms of addition, deletion and exchangeability and extract additional information fromprocedures. Then, we identify Naming Concepts for the recipes by extracting feature patterns based on the differencesextracted and grouping them on the basis of the patterns. We also present a system that provides recipeswith granted Naming Concepts for readers.","bookmark":0},
-{"presenid":"F8-5","title":"誕生・使用事由によるレシピ検索 ～生い立ちレシピサーチ～","abstract":"その日何を作るかといった献立を決めることは，多くの主婦がストレスに感じる事柄の一つである [1]．料\n理を作る漠然とした事由はあっても，その事由に合った具体的な料理を思いつくのは難しい．そこで本研究は，このような事由からレシピを検索できるシステムを提案する．Web 上には，レシピと併せて，なぜそのレシピが誕生したのか，なぜそのレシピを使用したのかといった，そのレシピの “生い立ち” に相当する情報が書かれている『ブログ型レシピ』が数多く存在している．そこで，ブログ型レシピからレシピの誕生・使用事由を，『材料・料理がある』『季節・気候に合う』などのカテゴリごとに抽出する．また，ユーザにその日の気分や出来事などの日記を入力させ，そこからそのユーザが料理を決める事由となるようなキーワードを抽出する．さらに，これらを対応付けることにより，その日のユーザに適したレシピをユーザに提示する．","bookmark":0},
-{"presenid":"F8-6","title":" 酷似レシピ抽出のためのクラスタリング手法の提案","abstract":"近年，スマートフォンの普及により，「COOKPAD」や「楽天レシピ」などのユーザ投稿型のレシピ検索\nサイトの利用者が増加してきている．このようなレシピ検索サイトでキーワード検索を行うと，酷似したレシピが数多く見つかる．酷似したレシピが多数存在することにより，ユーザが求めるレシピを検索することが困難になっている．そこで，本研究では各レシピに出現する調理法，料理名，食材，調味料に注目し，GibbsLDA++，RepeatedBisection を用いクラスタリングを行い，酷似したレシピを分類する．これにより，ユーザがレシピの検索結果を閲覧，比較する手間を省き，ユーザへの負担を減らすことを目的とする．","bookmark":0},
-{"presenid":"F9-1","title":" 投稿者情報を活用した効率的なソーシャルストリームの「飛ばし聴き」手法","abstract":"Twitter 等? SNS 上で利用されるソーシャルストリーム?大量?投稿が一列に並んだストリーム型コンテンツで\nある．一般に，ユーザ?ソーシャルストリームを構成するすべて?コンテンツを読むわけで?ない．ユーザ?自分にとって興味を持ちそうなコンテンツ?み，そ?内容を正確に把握する「飛?し読み」を行う．視覚が利用できない状況や，視覚障害者がテキストコンテンツを閲覧するために，音声ブラウジングが広く利用されている．ソーシャルストリーム?音声ブラウジングを行う際に，全て?コンテンツを全部読み上げる場合に?長時間を有し，効率的な音声ブラウジングが困難であるという問題点がある．こ?問題を解決するために，我々?，ソーシャルストリーム?効率的な音声ブラウジングを行うため?「飛?し聴き」手法を開発中である．本論文で?，投稿者?情報が飛?し聴き?手がかりになるという仮説をたて，発信者をユーザと?つながりに基づいてグループ化し，グループごとに定位を変化させることで，より短時間に音声ブラウジングにおいて飛?し聴き実現する手法を提案する．","bookmark":0},
-{"presenid":"F9-2","title":" 気分誘導を目指した楽曲プレイリスト生成手法","abstract":"楽曲聴取によって気分の変動が発生する「気分誘導」と個人の気分に依存するテンポである精神テンポの\n存在が知られている．本研究では，楽曲間のつながりの良さを考慮しつつ，精神テンポから算出される気分誘導の目的となる楽曲テンポを基準としてプレイリスト生成を行う方式について提案し，試作システムによる評価を行う．精神テンポの取得にはタッピング法を用い，気分誘導の目的を選択肢で問うインタフェースを導入する．楽曲の再生履歴情報の一部である再生スキップ情報を用いて，楽曲間の推移情報を取得し，これらを合わせてプレイリスト生成を行う．","bookmark":0},
-{"presenid":"F9-3","title":" クラシック音楽の内容記述のウェブからの収集手法","abstract":"クラシック音楽を鑑賞する際には, その曲の音楽的な内容や構造に関する記述を読むことで曲に対する理\n解を深めることができる. このような内容記述は, 一般のウェブ検索では効率的に見つけることが困難である. 本研究では, クラシック音楽の楽曲に関するウェブページを 8 種類に分類するラベル付けを提案し、それを利用した LabeledLDA を用いることでクラシック音楽の内容記述をウェブから収集する手法を提案する. また, 記述中の曲名の出現位置を検出することで, 異なる曲に関する記述を排除するよう手法の改良を行う. 評価実験として, 実際にいくつかの曲に関する記述を提案手法により集め、有益な記述が効率的に得られることを検証する。","bookmark":0},
-{"presenid":"F9-4","title":" 大規模音声信号データベースに対する超高速部分一致近似検索手法","abstract":"本稿では，大規模な楽曲信号データベースに対し，音声信号をクエリとして，任意の楽曲の一部分と近似\n的に一致する箇所を高速に検索する手法について論じる．提案手法では，楽曲の音声信号から抽出された音楽指紋に対して接尾辞配列を適用し，クエリ信号からサンプリングされた多数の小片を厳密一致で検索する．その結果を統合することで高速かつ精度の良い近似検索を実現している．この手法を実現し，歌唱者の異なる同一楽曲を検索する実験を行った．大規模なデータベースに対しての速度評価を行うために，実際の音声信号に加え，およそ 10 万曲分の人工楽曲データベースを作成し，一般的な PC 上でそのデータベースに対する検索性能を評価した．その結果，84%程度の精度で，1 曲あたり 0.04 秒未満で検索できることを示した．","bookmark":0},
-{"presenid":"F9-5","title":" 画像の特徴抽出手法を利用した楽曲のセグメンテーション","abstract":"ポピュラー音楽と呼ばれるGenreの音楽には、イントロやサビといった音楽的に意味を持つ構造が存在する。現在も増加し続ける音楽データを効率よく管理するには、こうした楽曲構造を理解することが重要である。また楽曲構造を解析し抽出することによって、より高度な音楽鑑賞を行うことができる。本項では、楽曲信号から得られる自己相似性行列に潜在するブロック構造を抽出することで、楽曲の構造の切れ目を発見する手法について議論する。その際、入力された楽曲の音楽と音色それぞれを特徴量とした二種類の自己相似性行列を用いる。それらを二次元画像とみなし、数種類の画像フィルタリングと特徴構造を抽出するためのハフ変換を利用して楽曲の構造を割り出す手法を提案する。","bookmark":0},
-{"presenid":"F9-6","title":" 統計モデルに基づく楽曲動画のランキング手法","abstract":"動画共有サイト「ニコニコ動画」に投稿されている楽曲動画のランキング手法を提案する．一般に，楽曲動\n画は再生数，コメント数，マイリスト数の推移を基にランキングされるため，上位にランクインするためには，動画投稿者や動画内容に高い集客能力が求められる．故に，集客能力が乏しい楽曲動画は，楽曲そのものが優れていても，上位になることが困難である．これに対し我々は，ユーザが動画を再生してマイリストに登録する行動をベルヌーイ試行であると仮定し，動画がマイリストに登録された割合を，統計的に有意な評価値として正規化する．さらに，その評価値の推移を取ることによって，動画が有する集客能力に依存しないランキングを生成することを試みる．","bookmark":0},
-{"presenid":"P4-1","title":"多言語旅行ブログエントリを用いた観光情報提示システム","abstract":"旅行ブログエントリは，ブロガーの実体験に基づいて記載されているため，旅行情報として有益な情報源と考えられる．旅行ブログエントリを地図上にマッピングすることにより，観光地周辺の知識を持たない旅行者でも容易に情報を取得できる．しかし，旅行ブログエントリは数多く存在するため，旅行者が必要とする情報にアクセスするのが容易ではない．そこで，本研究では，日本語と英語で記述された旅行ブログエントリを対象に，これらを「買う」，「食べる」，「体験する」，「泊まる」，「見る」，「その他」の 6 種類のタイプへ自動的に分類する手法を提案する．エントリをタイプごとに地図上に提示することにより，旅行者の目的に沿った旅行ブログエントリへ容易にアクセスすることができる．本研究で提案した手法により，日本語の旅行ブログエントリの場合，精度 0.637，再現率 0.462，英語で記述の旅行ブログエントリの場合，精度 0.597，再現率 0.337 の分類精度が得られた．","bookmark":0},
-{"presenid":"P4-2","title":"観光イベントに関する動画とブログの自動収集","abstract":"旅行の計画を立てる時に，「今から訪れようとしている場所で，滞在期間中にどのようなイベントが開催されるのか」という情報は非常に重要である．しかし，開催期間が限定的なイベント関連の情報を人手で整備するのは非常にコストがかかるため，例えば，旅行会社や政府の観光局などが提供する雑誌や Web 上のポータルサイトなどでは，知名度の高いもののうちの一部を簡単に紹介するにとどまっている．そこで本研究では，あるイベントに関する動画とブログを自動的に収集し，それらを地図上にマッピングすることで，ユーザが俯瞰的にイベント情報を閲覧できるイベント参加支援システムの構築を行う．動画とブログの自動収集において，動画では精度0.855，再現率 0.834，ブログでは精度 0.820，再現率 0.937 の割合で正しく収集できた．","bookmark":0},
-{"presenid":"P4-3","title":"観光情報集約のためのユーザ検索行動に基づくスマートスクラップブックシステム","abstract":"一般に，ユーザは観光の際に目的とする観光オブジェクトについての情報を Web やガイドブックを用いて収集する．この時，まとめる必要がある多数のオブジェクトの情報を収集し，あるオブジェクトの情報について調べるとき，ユーザによっては地図で場所を得たり，Web で詳細を調べるなど，定型的な行動をとることがある．このような定型的な行動を他のオブジェクトに対しても適応することで，手軽に観光情報を収集するスマートスクラップブックを提案する．","bookmark":0},
-{"presenid":"P4-4","title":"実店舗における購買意図と販売意図を用いた電子チラシの自動生成","abstract":"ユーザの購買行動は，実店舗のチラシからの購買とネットでの購買に分かれる．実店舗のチラシは販売する側の意図が大半を占めているため，閲覧者の興味を外れた商品も表示している．しかしそれは閲覧者に新しい興味を与える可能性も秘めている．それに対してネットでの購買はユーザの購買意図に基づいた表示をすることが可能であり，また同カテゴリで比較検討することが容易である．しかしユーザの閲覧範囲が狭い為，新たな興味が生まれにくい．そこで本研究では商業施設におけるユーザの移動，購買等の行動，また事前入力によるプロファイルによりユーザの購買意図を抽出し，店舗が設定する販売意図と合わせることで複数の店舗を横断的に表示する電子チラシを生成する手法を提案する．","bookmark":0},
-{"presenid":"X3-4","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-5","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-6","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-7","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-8","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-9","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-10","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-11","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-12","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-13","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-14","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-15","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-16","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-17","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-18","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-19","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-20","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-21","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-22","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-23","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-24","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-25","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-26","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-27","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-28","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-29","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-30","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-31","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-32","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-33","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-34","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-35","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-36","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-37","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-38","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-39","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-40","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-41","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-42","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-43","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-44","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-45","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-46","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-47","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-48","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-49","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-50","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-51","title":"謎のX","abstract":"NO DATA","bookmark":0},
-{"presenid":"X3-52","title":"謎のX","abstract":"NO DATA","bookmark":0}
-];
+[ {
+    "presenid" : "E1-1",
+    "title" : "OpenFlowを用いたOpenStackクラウド環境におけるリソース転送制御に関する検討",
+    "abstract" : "近年、増大するシステムやデータの管理のためにクラウド基盤が用いられることが多い。クラウド基盤においては、負荷分散やリソースの最適配置を目的として、インスタンスマイグレーション等のリソース転送が行われる。これは大量のデータをバースト的に転送する事になり、クラウド内・クラウド間のネットワークに大きな負荷が掛かるため、帯域が不足する経路を迂回して別の経路に振り分けるなどの統計情報に基づいたデータ転送処理が必要である。そのためOpenFlowを用いた制御が有用である。本研究ではOpenStackを用いて仮想環境上にクラウド基盤を構築し、OpenFlowコントローラとしてRyuを用いてデータのマイグレーションをコントロールし、性能の向上を図る。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E1-2",
+    "title" : "緊急地震速報に基づいたハイブリッドクラウドにおけるOpenFlowによるネットワークトラフィックの最適化",
+    "abstract" : "近年、ネットワークをプログラマブルに制御可能な技術としてOpenFlow技術が注目されている。また、クラウドコンピューティングが普及し、データセンタ事業者が提供するパブリッククラウドと、オンプレミスであるプライベートクラウドを組み合わせた「ハイブリッドクラウド」が注目されている。そして、デジタルデータの急増に伴い，多種多様なデータを多角的に解析可能なビッグデータ処理基盤は社会情報基盤として注目されており、大規模な自然災害などが発生する場合、ビッグデータ処理基盤は短時間に大きな負荷がかかる。そこで本研究では，大地震の際に起こり得るバースト的な負荷変動を緊急地震速報を元に予測し、ネットワークトラフィックの最適化を行うことで、緊急災害時に発生する問題の解決を図る。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E1-3",
+    "title" : "DPN環境におけるコンテキストに基づいたネットワーク制御方式",
+    "abstract" : "現代のネットワークは、膨大で多種多様なトラフィックにより、混沌とした状態である。そのためのトラフィック制御は、従来の人手による静的な制御だけでは対処が困難になってきた。従ってソフトウェアを用いた、動的かつ柔軟に制御可能なプログラマブルなネットワークが必要不可欠となる。最近ではこのような、SDNやOpenFlowなどのソフトウェアによるトラフィック制御が実用化されている。本研究では、それらの技術をもう一歩進めたDPN環境を用いて、複雑なトラフィック変動に対処するための、高度な自動ネットワーク制御システムの構築を手がける。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E1-4",
+    "title" : "スマートフォン向けの情報拡散型デジタルサイネージの提案",
+    "abstract" : "都市の情報インフラとして定着しつつあるデジタルサイネージは、今後、広告や情報を設置周辺の人達に見せるだけではなく，センサやアクティブマーカーを用いて，ユーザが所持している端末に対して情報を拡散していくものになりうる．\r\n本報告では，アクティブマーカーを用い，スマートフォン同士もしくは，デジタルサイネージとスマートフォンで，プッシュ通信しデータのやりとりを行う情報拡散型デジタルサイネージを提案し,その利用シーンを想定して開発したプロトタイプの構造と使用感,実用に供するための課題についてまとめている．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E1-5",
+    "title" : "3軸加速度計を用いたデスクワーク中の割り込み可能性の推定",
+    "abstract" : "モバイルデバイスの普及により，ユーザへのコンタクトが四六時中可能となったが，ユーザの都合を考慮しない割り込みは迷惑である．このような背景のもと，ユーザへの割り込みの適切なタイミング，つまり割り込み可能性に関する研究が行われている．従来，スマートフォンを利用したユーザ割り込み可能性推定の研究が行われているが，ユーザがスマートフォンをデスクに置いてしまえば，推定に必要なデータを取得することができない．これに対して本研究では，リストバンド型センサの時間，3軸加速度のデータを用いて，デスクワーク中のユーザ割り込み可能性を推定する手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E1-6",
+    "title" : "モバイルWebサービスでの利用者認証のための線描軌跡を用いたユーザID(IDLS)と登録処理",
+    "abstract" : "タブレット端末等のモバイル端末を使用する機会が増加している. しかし,英数字で構成されるユーザIDをモバイル端末で入力するには,仮想キーボードを使用するため,ユーザの手間が増加する.そこで,モバイル端末での入力手間削減のため, 新たなユーザIDとその入力方法(IDLS, Graphical user-ID by line sketching)を提案する.IDLSの特徴は,ユーザIDとしてユーザの描いた軌跡を用いる点である.さらに,ユーザIDの失念や伝達への可利用性の向上を図ることができる.まず,ユーザは自分のユーザIDを登録するために指定された領域に線を描き, 線の軌跡をユーザID として登録する.ユーザ認証時に,ユーザは登録済みの軌跡を描き,ユーザの軌跡とユーザIDデータベース内の軌跡とのマッチングを行うことでユーザID登録有無をチェックする.軌跡のユーザIDは,登録データベース内では,軌跡の特徴を用いて変換されたテキストを格納する.保存した変換テキストから軌跡への逆変換を可能とする.また,ユーザへの記憶負担にならないユーザIDを推薦する機能を実現した.IDLSによりユーザが登録したユーザIDがすでに登録されていた場合,登録したユーザIDと類似したユーザIDをユーザへ推薦することでユーザへの記憶負担の軽減を可能にした.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E2-1",
+    "title" : "SNS記事の語彙的結束性の分析によるプライバシー関連語の抽出精度の向上",
+    "abstract" : "近年，個人情報がSNS上にアップロードされることによるプライバシー侵害が社会問題となりつつある．そこで，SNSを調査する事により，プライバシーに対する一般的な捉え方を捉える方式が考えられるが，現状のプライバシー侵害の定義は曖昧で，その侵害の有無は人間の判断によるしかない．我々の先の研究では，プライバシー侵害を人間が判断する支援を行うために，プライバシーに関連する語の抽出を行い効率を上げることを行った．しかし，重要キーワードの抽出原理が頻度分布によるため，定義が曖昧なプライバシーの関連語のキーワード抽出精度は十分ではなかった。\r\nそこで，本研究では，Twitterアーカイブを用いたプライバシー関連語の抽出を語彙的な結束性に注目した解析としてKeyGraphを用いて，プライバシー関連語の抽出精度向上を図った．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E2-2",
+    "title" : "高次元データ可視化のための低次元プロット表示の改良",
+    "abstract" : "高次元データの可視化手法として散布図やPCP(Parallel Coordinate Plot)などが知られているが、これらの手法をもってしても次元が非常に高いデータにおける次元間の複雑な相関関係を発見するのは容易ではない。その解決の一手段として、高次元空間を低次元空間の集合に分割し、各々の低次元空間を散布図やPCPなどのプロット手法で表示する手法が知られている。しかし高次元空間を多数の低次元プロットで可視化する際に、個々の低次元プロットが画面上で小さく表示されるために、視認性の点で問題が生じる。本報告ではPCPによる低次元プロットの改良手法を提案する。本手法ではPCPを構成する折れ線群の束化、また外れ値となる折れ線の強調描画などを採用することで、小さく表示した場合にも重要な点を見逃さないよ\r\nうな可視化を実現する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E2-3",
+    "title" : "交絡事象の発見による因果関係ネットワークの拡張",
+    "abstract" : "今日, 我々はWeb等のメディアを通じて様々な出来事について情報を入手することができる. しかし, 複数の事象が複雑に絡み合う場合, 事象間の関係を理解することは容易ではない.  事象間の因果関係を容易に把握できるように, Web検索を利用して因果関係を抽出し, それらを因果関係ネットワークとして可視化する手法が提案されている. しかし, 既存の手法では交絡している事象を抽出することができなかった. そこで本研究ではこの因果関係ネットワークを拡張し, 交絡している事象を発見することで生成される因果関係ネットワークを改善する方法を提案する.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E2-4",
+    "title" : "ヒートマップによる高次元可視化のためのクラスタリング手法の比較",
+    "abstract" : "高次元時系列データの観察のための一手段として、データを構成する次\r\n元を相関にもとづいて分類することが有効である。本報告では、相関に\r\nもとづいてクラスタリングされた高次元時系列データをヒートマップに\r\nよって可視化することを前提として、そのクラスタリング手法を比較す\r\nる。我々の試みでは、任意の2次元間距離を相関係数にもとづいて定義\r\nすることで距離行列を生成し、階層型クラスタリングまたは非階層型ク\r\nラスタリング（k-medoids法）によって次元を分類し、ヒートマップで\r\n可視化する。本報告では両手法について比較するとともに、その可視化\r\n結果について実施したユーザ主観評価結果を考察し、両者の利点や課題\r\nを議論する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E2-5",
+    "title" : "ベイジアンネットワーク構築アルゴリズムPBIL-RSの性能評価",
+    "abstract" : "ベイジアンネットワークは、事象間の因果関係の確率モデルとして、広く利用されている。ベイジアンネットワーク構築アルゴリズムとして、近年では、遺伝的アルゴリズムを用いた方法が盛んに提案されている。その中で、確率ベクトルに基づいた遺伝的アルゴリズムの一種であるPBILに基づいた方法が、高速に高品質なベイジアンネットワークを求める方法として提案されている。これに対して著者らは、PBILを更に拡張し、PBILによって探索範囲が狭まり収束してきた場合に、再び適切に探索範囲を拡張して再探索を行う仕組みを備えたPBIL-RS(PBIL-Repeated Search)を提案している。本研究では、PBIL-RSに対して詳細な評価を行い、PBIL-RSの特性と、その優れた性能を明らかにする。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E2-6",
+    "title" : "Twitterのトピック変遷の可視化法の提案",
+    "abstract" : "Twitterは現実世界の情報をリアルタイムに知るために重要な手段となりつつある反面，現在どのような話題があるのか，それらが時間とともにどのように変化しているかを把握することは難しい．\r\n例えば，潜在的ディリクレ配分法（LDA）のようなトピックモデルを用いることで，トピックを自動的に抽出することができるが，大規模なデータセットではトピック数も大きくなると共に，有用ではないと思われるトピックも多く検出されてしまう問題が存在する．\r\n本稿では，PLDAを用いて1日ごとに並列抽出したトピックをコサイン類似度に基づいてトピック系列を作成すると共に，そのトピック系列を選別・順位付けした後に，時間的変化を重視して可視化することで，ツイートアーカイブにおける話題とその変化の理解を容易にする手法を提案する．\r\nさらに，実際に東日本大震災前後の3億6千万ツイートに適用して，有効性を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E3-1",
+    "title" : "Open Dataの利活用を推進する地方公共団体のWebサイトからの表データ抽出手法の提案",
+    "abstract" : "近年のOpen Dataの流行に伴い，各国政府や，地方公共団体が公共データなどをOpen Dataとして公開しているため，Open Dataのデータセット数は増加傾向にある．\r\nしかし，Open Dataを公開する際に，RDFや，CSVなどの機械判読に適しているファイル形式で公開しているとは限らない．\r\nデータの二次利用を必要としないような一般のユーザに向け，閲覧しやすくするためHTML や，PDF などのファイル形式で公開されるOpen Dataが存在する．\r\nまた，機械判読に適したファイル形式で公開されている場合でも，地方公共団体ごとに用いているファイル形式が異なる場合がある．\r\nそのため，ユーザがそれらのOpen Dataを用いる際に，それぞれの課題に対応する必要があり，ニ次利用を妨げる要因の1つとなっている．\r\n本論文では，Open Data の利活用を推進するため，地方公共団体のWebサイト上で公開されているHTML・PDFファイルに対して，Open Dataになりうる表データを抽出する手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E3-2",
+    "title" : "スキーマ進化によって影響を受けるXSLT規則の検出手法",
+    "abstract" : "DTDに妥当なXMLデータに対して，XSLTによる変換処理を行うことを考える．\r\nDTDが更新された(スキーマ進化が生じた)場合，XSLTの規則が影響を受けるこ\r\nとがある．ここで，XSLTの規則rがスキーマ進化によって影響を受けるとは，\r\n(1)rがスキーマ進化前には適用可能であったが，進化後には適用不可能となっ\r\nた，または，(2)rがスキーマ進化前には適用不可能であったが，進化後には適\r\n用可能となった場合のことをいう．しかし，そのような規則を手作業で発見す\r\nるのは容易でない．そこで本研究では，スキーマ進化によって影響を受ける\r\nXSLT規則を検出するアルゴリズムを提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E3-3",
+    "title" : "LINQによるビューを用いたLODに対する問合せにおける結合演算のサポート",
+    "abstract" : "コンピュータによる処理を目的としたデータをWeb上で公開，共有，および利\r\n用するための方法にLinked Open Data (LOD)がある．様々な種類のデータが\r\nLODにより公開されており，LODを利用するアプリケーションの開発が強く期待\r\nされている．しかし複雑なグラフ構造であるLODへの問合せは容易ではなく，\r\nSPARQLという問合せ言語の習得が必要になる．井上らは，これらの問題を解決\r\nするために，ビューを導入し，C#言語などから利用可能なLINQを介することで\r\nLODに対する単純な問合せ（選択，射影，集約など）を容易に行うことができ\r\nるシステムを提案した.本研究では，井上らのシステムを拡張し，結合演算を\r\nサポートする．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E3-4",
+    "title" : "動的なネットワークにおける媒介中心性の高速計算手法",
+    "abstract" : "媒介中心性はグラフ上での各頂点の重要さを表し、ソーシャルネットワークの解析などにおいて最も基本的な指標の一つである。\r\n大規模なグラフにおける媒介中心性の厳密な計算は多大な時間を要するため、多くの近似手法が提案されてきた。\r\n特に、ランダムサンプリングに基づくアルゴリズムはグラフのサイズに対してほぼ線形の計算時間で高精度な近似値を得られることが知られている。\r\n一方、現実のネットワークは時間経過と共に絶えず変化しており、これらのネットワークの特性を解析する上で動的なグラフにおける媒介中心性の計算を効率良く行うことは非常に有用である。\r\nしかし、既存の近似アルゴリズムのほとんどは静的なグラフに対するものであり、ネットワークが変化する度に最初から媒介中心性の計算をやり直すことは現実的ではない。\r\nまた、動的なグラフに対する近似手法は少なく、大規模なグラフで動作するアルゴリズムは辺の挿入のみを扱うものしか知られていない。\r\n本論文では、動的なグラフにおける辺の挿入と削除の両方に対して、媒介中心性の近似値を効率よく更新していくためのデータ構造とアルゴリズムを提案する。\r\n実験によって提案手法が高いスケーラビリティを実現することを示した。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E3-5",
+    "title" : "トライ木を用いたXMLキーワード検索法の改良",
+    "abstract" : "XMLキーワード検索とは、与えられたキーワードに対し、XMLデータ中の関連する\r\n部分を見つけ出すことである。一般に、XMLデータの関連する部分として\r\nSLCA(Smallest Least Common Ancestor)が広く用いられ、SLCAを計算するための\r\n手法が開発されている。我々は、2014年に、トライ木を用いたSLCAの検索法を示したが、\r\n本研究では、トライ木を用いたより高速な検索アルゴリズムを開発し、\r\n実際にその性能を評価する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E3-6",
+    "title" : "動的木グラフの分割による格納と検索",
+    "abstract" : "本研究では動的に成長するラベル付き木グラフを対象として，その分割方式を提案し，実装・評価する．分割を効率良く扱うために，本方式では経歴・パターン法と呼ぶ多次元データセットのエンコード方式を改良して使用する．ルートノードから木グラフのノードnに至る経路をnをルートとする部分木への索引として機能させる．これにより，木構造グラフの記憶量を削減し，検索速度を向上させることを目的とする．本稿では，このためのエンコード方式改良の考え方を説明し，その問題点と対処の方法を述べた後，評価する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E4-1",
+    "title" : "非同期処理混在時のストレージシステム応答時間見積もり手法の確立",
+    "abstract" : "災害対策として実施されるディザスタ・リカバリ(DR)の一形態として，ストレージシステムが，メインサイトのデータライトと非同期にリモートサイトへのデータ転送を実行する非同期DRが用いられる．システムの性能設計に必要なストレージの応答時間見積もりにおいて非同期DR使用時の場合は，非同期処理による負荷を平均化するモデルで待ち行列M/G/1を用いると，非同期処理を適切に考慮出来ず，精度の低い見積もり結果となる問題がある．本研究では，非同期DRの応答性能予測を目的とし，非同期処理のスケジューリングを考慮した新たな見積もりモデルを提案する．本提案モデルと待ち行列シミュレーションを用いて，応答性能見積もりが精度向上することを確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E4-2",
+    "title" : "PostgreSQLをベースとしたカラムストア機構の実現検討",
+    "abstract" : "近年、トランザクション処理と高速分析処理を兼ね備えたOLXPの必要性が高まっている。我々はOSSのRDBMSであるPostgreSQLをベースとして、OLXPシステムを実現するための設計・開発を行っている。このシステムではテーブルに独自インデックスを付与することで列構造の複製テーブルを生成し、スキャン・集計処理を高速化する。ユーザは行構造テーブル、列構造テーブルの参照を意識する必要がなく、実行時に自動的に選択される。本発表ではPostgreSQLベースのOLXP実現に向けた拡張機能について概要を説明する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E4-3",
+    "title" : "分散ストリーム処理基盤Stormと言語モデリングによる新情報を含む文書の検出",
+    "abstract" : "Wikipediaなどの知識ベースは複数の編集者によって記事の編集が行われている．しかし，オンラインニュースやソーシャルメディアなど近年の情報爆発により，適切な編集・更新が追い付いていないのが現状である．そこで本論文では，ウェブ上の膨大な情報を自動的にフィルタリングし，知識ベースの記事の更新が必要となるような新情報を実時間で検出するシステムを提案する．新情報の検出には，言語モデリングを用いた2段階のフィルタを構築する．このフィルタを分散ストリーム処理基盤Storm上に実装することにより，大規模ストリームデータのフィルタリングを可能とする．TREC KBA Stream Corpusを用いた実験により，提案システムの有効性を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E4-4",
+    "title" : "Efficient Execution of Designated Event-driven Stream Processing",
+    "abstract" : "Stream processing has been an important research issue with the increase in stream data sources. To date, several stream processing engines have been developed and one thing which is common among all of them is that they process the stream data and generate query results as soon as any new data from any stream arrives. However, sometimes users are not interested in all the results but would like to get the continuous query result for a short duration after the arrival of data from a particular stream. We name this processing scheme as designated event-driven stream processing scheme. We propose an efficient query execution approach (smart approach) for the designated event-driven stream processing scheme. We performed extensive experiments to show that the proposed smart approach is capable of improving the system's through-put significantly when the designated streams' input rates are relatively lower than the non-master streams.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E4-5",
+    "title" : "DSMSのオペレータ単位コミットによる優先度逆転時間削減",
+    "abstract" : "車載システムの複雑化に伴う開発コスト削減を目的とし，車載システムへのDSMSの適用を検討している．我々は車載システムにDSMSの処理最適化を適用した場合，優先度が逆転する時間（優先度逆転時間）が大きくなることに着目し、先行研究ではクエリの処理過程で必要となるデータ（コンテキスト）をクエリ間で引き継ぐことで処理効率化を実現する。しかし従来手法ではロックの取得により処理時間が大きくなるため、本稿ではオペレータ単位でコミットを行い、オペレータ終了時にロックを取得し纏めてコンテキストを更新する手法（オペレータ単位コミット）を提案する。評価の結果、先行研究と比較し、オペレータ単位コミットによる処理時間及び優先度逆転時間の削減効果を示した。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E4-6",
+    "title" : "Android端末の状態変化時におけるブロードキャストインテントとバッテリ性能の考察",
+    "abstract" : "近年スマートフォン端末は爆発的に普及しており,バッテリの持ちは非常に重要な課題の一つとなっている.バッテリ消費の原因は主に「ディスプレイ」「通信機能」「CPU使用率」の三点があげられるが,これら全てに深く関係してくるのがアプリケーションであり,バッテリ消費に大きな影響を与えていると考えられる.本研究では,Android特有のブロードキャストインテントに着目し,ユーザー行動によるAndroid端末を取り巻く状況変化,例えば端末移動時におけるブロードキャストインテント情報を解析することで,状況変化時に応じたAndroid端末の電池消費削減を目指す.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A1-1",
+    "title" : "Copulaを用いたスコア統合手法とその有効性の検証",
+    "abstract" : "本研究では、複数の評価尺度(クエリとの適合度、文書の新鮮さなど)統合において、確率モデルであるCopulaを用いることで検索精度の向上を目指した。複数の評価尺度を用いた情報検索は、線形結合やランキング学習によって実現されているが、線形結合には評価尺度間の依存関係を考慮していないという問題があり、ランキング学習には結果に対する理由付けが難しいという問題がある。その点Copulaは評価尺度間の依存関係を考慮するために線形結合やランキング学習の問題点を解決できる。QAサイトを用いた評価実験の結果、Copulaを利用することで従来の線形結合やランキング学習と比較してより正確に検索を行うことが可能であることを示した。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A1-2",
+    "title" : "質問応答による会話的適合フィードバック",
+    "abstract" : "本論文では，システムにより生成された質問に答えることでクエリ修正を可能に\r\nする，会話的適合フィードバックシステムを提案する．\r\n本提案システムでは，検索結果や推薦されたクエリをユーザが見ることなく適合\r\nフィードバックを行うことができるため，特に音声による検索において有効であ\r\nると考えられる．会話的適合フィードバックシステム実現のために，\r\n本論文では主に効果的な検索を可能にする質問生成技術について述べる．\r\n我々は質問応答プロセスを確率モデルによって記述し，\r\nユーザの期待利得を最大化する質問を生成する方法を提案する．\r\nシミュレーションによる実験では，有名人および飲食店検索タスクにおいて\r\n提案モデルが高い精度を達成することを明らかにした．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A1-3",
+    "title" : "楽天市場の商品レビューを使用した評価軸と評価表現辞書の同時構築手法",
+    "abstract" : "CGM(Consumer Generated Media)は，消費者の購買傾向や商品の統計的な評価を知る上で有用な情報であり，これを自動的に分析する研究が盛んになっている．CGM分析は，単語の肯定・否定の情報を登録した評価表現辞書の構築や，複数の単語を意味ごとに分類するカテゴリ分類など多岐に渡るが，これらを組み合わせて活用した研究は少ない．本稿では，ユーザの商品選択支援システムの作成を目的として，楽天市場の「みんなのレビュー・口コミ情報」をコーパスとした，評価軸とそれに対応する評価表現辞書の同時構築手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A1-4",
+    "title" : "質問回答事例および検索エンジン・サジェストを用いたノウハウ知識の相補的収集",
+    "abstract" : "本論文では，検索エンジン・サジェストを索引として収集される情報に加えて質\r\n問回答サイトから得られる情報を相補的に利用し，それらを混合して集約する手\r\n法を提案する．さらに，収集対象とする知識を，特に，特定の目的のもとでのノ\r\nウハウに関する知識に制限することにより，有用性の高い知識を選択的に収集す\r\nる枠組みを実現する． 本方式においては，質問回答サイトから収集した質問回\r\n答事例および検索エンジン・サジェストを索引として収集されたウェブページの\r\n混合文書集合に対してトピックモデルを適用することにより，話題のまとまりを\r\n生成し，それらの話題のまとまりからノウハウ知識を選定する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A1-5",
+    "title" : "図書館におけるレファレンス質問とQ&Aサイトにおける質問の差異",
+    "abstract" : "QAコミュニティと図書館のレファレンスサービスとの性質の違いを明らかにすることを目的として，質問タイプ及び主題の2軸を用いて両者の質問分析を行った．結果として，両者は，質問タイプが大きく二分されること，特定の主題に質問が集中するなどの点において類似している一方で，QAコミュニティでは恋愛・人間関係について個人の意見を問うものが多いのに対して，レファレンスでは歴史等について知識や資料を求めるものが多いなど，質問が集中する主題や質問タイプに明確な差異が存在することが明らかになった．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A1-6",
+    "title" : "意図推定に基づく検索結果の多様性の向上",
+    "abstract" : "E コマースにおいてどのような順序で商品を表示するかはユーザー満足度, 収益の面で非常に重要である. 本稿では E コマースにおける複数の意図が存在する検索クエリの検索結果について,多様性を考慮したランキングを 行う. Yahoo!ショッピングの検索ログを用いてクエリ意図の推定と多様性の評価を行い, その有効性を検証する.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E5-1",
+    "title" : "冪乗則を考慮したデータ分割手法によるグラフ処理基盤の高速化",
+    "abstract" : "ソーシャルメディアにおける人の関係性を表すソーシャルグラフの分析など大規模なグラフデータの分析に対する需要が高まってきている．\r\nこのような大規模なグラフデータを処理するために，さまざまな分散処理基盤が提案されているが，いずれにおいてもグラフ全体をいかに分割し，いかに効率的に分散配置するかが性能の鍵となっている．\r\nグラフの分割手法として，辺ごとの頂点の組み合わせを使って単純に分割する2次元パーティショナと呼ばれる手法があるが，そのような単純な方式ではソーシャルグラフなどが持つPowerLaw特性が考慮されておらず効率的に処理が行えない．\r\nそこで本研究では，この2次元パーティショナを基にPowerLaw特性を考慮して頂点の複製を低減させる手法を提案する．\r\n本手法をApache Spark上のグラフ処理系であるGraphXに実装し，オリジナルの2次元パーティショナに比べて、性能が改善することを示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E5-2",
+    "title" : "分散グラフ処理におけるグラフ分割の最適化",
+    "abstract" : "現実世界で見られるグラフ構造のデータが大規模になるにつれ，それらのデータを処理するための分散グラフ処理フレームワークに対する需要が高まっている．分散グラフ処理フレームワークは入力となるグラフを分割し各計算機に割り当ててから目的の分析処理を行うが，グラフの分割がどのようになされたかによってその後の分析処理に要する時間は左右される．既存のグラフ分割手法には，グラフを高速に分割し，かつその後の分析処理も高速となるようなものが存在しない．そこで本稿では，グラフを高速に分割しかつ分析処理も高速に行えるようなグラフ分割手法を提案し，それを既存の分散グラフ処理フレームワークであるPowerGraphに組み込むことで大規模グラフを高速に処理する．提案手法は高速にグラフをクラスタ分割する技術を拡張することで，各計算機に配置されるエッジ数の等粒度化，切断されるバーテックス数の削減を実現する．そして，提案手法により分析処理に要する時間を既存のグラフ分割手法であるrandomに対し最大2.6倍，obliviousに対し最大1.2倍高速化可能であることを示した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E5-3",
+    "title" : "頂点順序の最適化によるスケーラブルなグラフ並列処理",
+    "abstract" : "Personalized PageRank (PPR) をはじめとするグラフ分析技術には情報検索や推薦など様々な応用があり、分析処理の高速化が求められている。しかしながら、グラフ処理は局所性の低いメモリアクセスパターンを示すためキャッシュ効率が悪く、マルチコアCPU上での並列処理時にメモリ帯域が飽和し低いスケーラビリティを示す。本論文では階層的なクラスタ構造を捉えたグラフデータのレイアウト変換と圧縮による、グラフ並列処理の高速化手法を提案する。既存のレイアウト手法である RCM と比較し、提案手法は PPR を最大5倍高速化することが実験により確認された。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E5-4",
+    "title" : "MapReduceによる2段階PageRank",
+    "abstract" : "ウェブグラフを再構築することで,ランキングアルゴリズムを実行する際に必要となる解析時間を短縮することが可能である.再構築手法に関しては,LittleWebと呼ばれる再構築手法が提案されており,エッジ数とノード数を削減しPageRankの解析時間を短縮することに成功している.これに対し本研究では,エッジ数とノード数の削減だけでなく,ウェブグラフをPageRankの解析が並列分散処理可能なグラフへ再構築を行い,PageRankの解析を行う際に並列分散処理を用いることで,解析に必要な時間を短縮する手法を提案する.本提案手法では,ウェブグラフのノードをSCANによりClusterとHub,Outlierに分別し,ClusterとHubで構成されるグラフとClusterに属するノードで構成されるグラフにウェブグラフを再構築する.Clusterに属するノードで構成されるグラフを解析する際,各Clusterは関係性が無いため並列分散処理が可能になり,PageRankの解析時間が短縮できる.本稿では,提案手法をMapReduceで実装し解析時間とPageRank値の差の考察を行った.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E5-5",
+    "title" : "MapReduceによる大規模なRDFデータ復号化手法の評価",
+    "abstract" : "近年、様々な情報がRDFで記述されることが増えている。RDF データが急激に増加する中、秘匿性のあるデータを保護するため、暗号化が求められる。しかし、RDFデータを解析する場合、暗号化したままで処理できることは限られており、復号化してから処理を行わなければならない場合がある。大量データに対する復号化には時間がかかり、並列処理による高速化が望まれる。本研究はMapReduceを用いた大量なRDFデータ復号化の並列化アルゴリズムを提案する。RDFは主語、述語、目的語の三つ組によって構成される。提案手法では同じ主語、述語、目的語をグループ化して、復号化をすることで実行時間の短縮を試みる。さらに、Hadoop上でプロトタイプを実装し、提案手法の処理効率を評価する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E5-6",
+    "title" : "PA-Proxy: SQL-on-Hadoopにおけるデータ集計処理を精度の劣化なく高速化するフレームワーク",
+    "abstract" : "データの集計処理はデータ分析やデータ整形に頻出する重要な処理である．本稿は，SQL-on-Hadoop にお\r\nけるデータの集計処理を高速化するフレームワークPA-Proxy を提案する．PA-Proxy は，データの集計処理を精度の\r\n劣化なしに高速化する部分集約法にもとづき，SQL-on-Hadoop におけるデータ集計処理を高速化する．部分集約法\r\nはデータを複数のブロックに分割したうえでブロックごとに集約演算結果を事前に算出し，その後の集約処理では事\r\n前に算出した集約演算結果を組み合わせることで，高速かつ柔軟に正確な処理結果を算出する．集約演算の対象と\r\nなるデータが選択演算によりフィルタされる場合であっても，ブロック毎に事前に算出した集約演算結果が利用可能\r\nかどうかをブロックのスキャンなしに判定することで，可能な限りデータI/O と計算量を削減しようとする．著名な\r\nSQL-on-Hadoop のひとつであるApache Hive へPA-Proxy を適用した結果，高速化が確認できた．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A2-1",
+    "title" : "オブジェクト比較のための経験的属性情報の発見",
+    "abstract" : "商品や飲食店，サービスなど複数のものから1つのものを選択しなければならないことがある．本研究では，そういったオブジェクトを比較するために重要な経験的属性をWeb上に存在する評判情報を用いて発見する手法を提案する．一般に，比較対象の一方に関する評判情報がWeb上に豊富に存在する場合でも，両方を実際に比較した評判情報は少ない場合が多いため，特定のオブジェクト組の比較時に重要視される情報を得ることは困難である．そこで比較オブジェクトの特徴やオブジェクト間の関係を用いて，それらの比較時に重要視される情報を推定する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A2-2",
+    "title" : "統計的意味論に基づく概念的類似度獲得手法の評価",
+    "abstract" : "近年、分布仮説に基づいた単語の概念的類似度の自動抽出手法が盛んに研究されているが，概念的な類似性は様々な観点から評価することができるものであり、抽出される単語類似度がどのような特性をもつのかは自明ではない．本研究では，word2vecと係り受け構造を考慮した類似度計算手法について、抽出される単語類似度と、人手で作成された既存の意味辞書との一致度を定量的に評価することにより、その特徴について新たな知見を得ることを目指す。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A2-3",
+    "title" : "共起関係と係り受け関係を導入した文書グラフの解析による特徴ベクトルの抽出",
+    "abstract" : "文書の特徴ベクトルの抽出法について述べる．より文書の特徴を捉えた特徴ベクトルを抽出できれば，文書の特徴を表す重要語の抽出や文書分類の精度向上が期待できる．そこで，係り受け関係と共起関係を導入した文書グラフを構築する方法を提案し，これを解析することで特徴ベクトルを抽出する．日本語の特徴を表す係り受け関係や共起関係を導入することで，頻度の低い重要語の抽出による，重要語抽出の精度向上が期待できる．実験により言語的特徴と重要語抽出の相関を評価し，既存手法との比較により提案手法を評価する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A2-4",
+    "title" : "国会議事録を用いた経済指標のナウキャスティング",
+    "abstract" : "政府による政策の効果を評価する際に様々な経済指標が使われている．しかし，既存の経済指標では，政府が統計をとり公表するまでに数ヶ月を要するため，政府による政策の効果を即座に評価することはできない．このような状況下において，近年ビッグデータを活用して足下の未公表データを予測し，景気動向を把握することが求められている．そこで本稿では，政府が将来の政策について議論した内容である国会議事録を分析することで，経済指標を予測する．具体的には，まず，政治家が発言した文章中から経済指標と相関の高いn-gramに着目し，政策運営状況を表す特徴量を得る．そして，得られた特徴量を用いて回帰分析と時系列解析との組み合わせにより経済指標を予測する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A2-5",
+    "title" : "領域依存文節分かち書き規則抽出",
+    "abstract" : "本研究では文節分かち書きを研究対象とする．文節は規則が存在し，簡単なように思えるが，曖昧性が存在している．このような曖昧性を考慮した分かち書きを行うために領域依存の規則抽出を行う．規則抽出においてはアプリオリなどが有名であるが，アプリオリでは単語の出現順序を考慮しない．日本語の出現順序には意味があるため，語の出現順を考慮する必要がある．このため，アプリオリではなく出現順序を考慮するN-gramが効果的であると考えられる．また，単語をマルチレベル，つまり品詞の構造を付随して考えることでより精度を高め，規則を抽出することが期待される．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A2-6",
+    "title" : "語の並びを考慮した意味類似度手法の提案",
+    "abstract" : "文の意味を考える上で語義や文法は重要な要素である．\r\n本研究では語義・語順を捉えるためにいくつかの距離概念を導入し，文の意味類似性（STS）に基づく類似度手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E6-1",
+    "title" : "多次元ツリー自動構成ツールMD-TACTの機能拡張と評価実験",
+    "abstract" : "近年、多くの企業や団体でコンピュータが導入され、大量の情報を電子化している。電子ファイルが蓄積してくると、それらの整理や検索が困難になり、ファイルサーバから情報を取り出すだけでも多くの時間と手間がかかってしまう。増え続けるファイル群を機能的に整理するべく多次元ツリーを用いた整理方法が提案された。本研究では単一ツリーを多次元ツリーに変換する手間を軽減する為、多次元ツリー自動構成ツールMD-TACTを開発した。MD-TACTは単一ツリーを自動的に多次元ツリーに変換し、さらに手動で洗練する機能を提供する。また、ツリーの再構成情報を利用することで、次回の自動構成にフィードバックを行うことができる。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E6-2",
+    "title" : "PageRank収束曲線を用いたネットワーク構造変化の定量化",
+    "abstract" : "本稿では，動的ネットワークの構造変化に対して，変化の影響度を定量化することを試みる．具体的には，ネットワークにおける各ノードの機能に着目する．ノードの機能をPageRank収束曲線により定義し，その変化の大きさにより定量化する．\r\n複数のネットワークを用いた評価実験より，提案指標の有効性を確認する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E6-3",
+    "title" : "動的グラフに対する密度ベースクラスタリング",
+    "abstract" : "グラフはエンティティ同士の関連性を表現する最も基本的なデータ構造であり，我々の身の回りに数多く存在している．特に近年では，短期間に構造を大きく変化させる動的グラフが登場しており，動的グラフに対する高速かつ高精度なクラスタ分析は重要な要素技術となっている．本稿では，大規模かつ動的に構造が変化するグラフに対する密度ベースのクラスタリング手法を提案する．本稿で提案する手法を用いることで，大規模な動的グラフから高速かつ高精度にクラスタを抽出することが可能になる．本稿では，提案手法の詳細と評価実験結果について示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E6-4",
+    "title" : "極大クリーク列挙を用いた高速なkクリークコミュニティのオンライン探索",
+    "abstract" : "現実世界のグラフにはコミュニティという密な部分構造が存在することが知られており，その検出はネットワークを解析する上で重要である．しかし，巨大なグラフにおいて全てのコミュニティを検出することは困難なため，近年になって指定された頂点を含むようなコミュニティを探索する問題が提唱された．kクリークコミュニティは頂点が複数のグループに属することを許すクリークに基づいたコミュニティモデルである．本論文では，クエリ頂点を含むkクリークコミュニティを列挙する問題に対して新しいアルゴリズムを提案する．提案手法は，必要な極大クリークのみを注意深く列挙しながらそれらの隣接関係を計算することにより高速なコミュニティを列挙を実現する．実験により，提案手法が既存手法より高速に動作することを示した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E6-5",
+    "title" : "クリック2部グラフ上の属性伝播と言語的素性の利用によりクエリのサブ・トピックを発見する検索意図理解方式",
+    "abstract" : "検索クリックログ派生のクリック２部グラフ上で，対象トピックに対応するシードからのRWRによる属性伝播で\r\n部分グラフを抽出し，クラスタリング，ラベル付与，サブトピック統合により，対象トピックのクエリを網羅的に収集し，\r\nより細かいサブトピックを発見し，クエリを非排他的に分類する手法を提案する．\r\n本論文では，「恋愛」.「旅」の二つの対象トピックに対して，サブトピックを識別するラベルを付与する\r\n３つの方式を比較評価して，効果を確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E6-6",
+    "title" : "時系列グラフクラスタリングによるトレンド分析",
+    "abstract" : "大規模なデータの登場に伴い，大量のデータに対する解析は重要な技術となっており，時間変化を把握するためのトレンド分析は有用な解析手法のひとつである．\r\nしかし，トレンド分析に必要な分析工程と可視化工程は連携がなされておらず，開発コストがかかってしまうという問題と，クラスタの年代長を事前にユーザが指定する必要があるという問題があり，データを活用する上での障壁となっている．\r\nそこで本稿では，分析技術と可視化技術を適切に組み合わせてトレンド分析をするシステムの開発に取り組む．\r\n提案システムでは，クラスタリングの分析結果をシームレスに可視化できるよう可視化工程との連携を行い，ユーザがデータを事前に分割せずにクラスタ分割と年代分割を同時に実行するようクラスタリングを行う．\r\n本稿では，抽出されたクラスタがトレンドに応じて異なる年代長となり，クラスタリング結果の質を表すModularityの値が最大となるようにエッジの重みを決定して時間スムージングを行えることを示した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A3-1",
+    "title" : "ソーシャルメディアからの言語横断的な話題抽出に向けたエンティティリンキング手法",
+    "abstract" : "本稿では，ソーシャルメディアのテキスト集合から言語横断的に話題を抽出するためのエンティティリンキング手法について述べる．\r\nソーシャルメディアのような短いテキストから異なる言語間で比較可能な話題を抽出する場合，エンティティリンキングにより，テキスト中に出現するエンティティを多言語な知識体系のエントリに紐付けることが有効である．\r\nこのとき，エンティティリンキングの精度およびトピック情報として付与されるエントリの意味的な粒度を均一化することが言語間のエントリの比較において重要となる．\r\n提案手法では，任意の言語で記述されたテキスト中に出現するエンティティに対して同じ言語のWikipediaの記事をトピック情報として紐付けた後，言語間リンクにより英語の記事に変換することで言語空間を統一する．\r\nまた，入力のテキスト集合中において出現するキーワードの周辺情報を用いた不適切なキーワード抽出の抑制と，記事タイトルやカテゴリ情報を用いた記事集約による意味的な粒度の均一化を行う．\r\n評価実験では，英語と日本語のソーシャルメディアのテキストを用いて，提案手法と従来手法の性能を比較・検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A3-2",
+    "title" : "An Improved Method of Keyword Search over Relational Data Streams",
+    "abstract" : "The continuous growth of information from different sources, such as news sites, various social medias,\r\nknowledge bases, etc., makes the integration of information a big challenge. Keyword search over relational data\r\nstreams plays an important role when enabling users to be able to issue queries without knowing the details about\r\nthe information sources, such as schema and query languages. This paper proposes an improved approach for keyword\r\nsearch over relational streams. Our idea is based on a novel data structure called MX-Structure. Given a\r\nset of keyword queries, we convert it into MX-Structure in such a way that it contains no redundant information\r\ncompared to the ones by related approaches, thereby allowing us to process queries more efficiently",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A3-3",
+    "title" : "Query Paraphrasing Towards Better Search by Incorporating Coordinate Relationship",
+    "abstract" : "We propose a method to acquire paraphrases from the Web in accordance with a given sentence query. For example, consider the query \"Guavas are rich in vitamin c\". Its paraphrases are expressions or sentences that convey the same\r\nmeaning but are different syntactically, such as \"Guavas are well known for their high concentration of vitamin c\", or \"Guavas are very high in vitamin c\". We aim at improving the poor performance of querying the Web by long queries, especially sentence queries, since they often result in failure. By issuing paraphrase queries to the Web, users are able to gather more search results about the given sentence query.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A3-4",
+    "title" : "Bridging the Gap between the Past and the Present: Finding Corresponding Objects Across Time",
+    "abstract" : "In the current fast-paced world, people tend to possess limited knowledge about things that existed in distant time. For example, for some young users it may not be obvious that Walkman played similar role as iPod does nowadays. In this paper, we approach the temporal correspondence problem in which, given the input object name (e.g., iPod) and the target time period (e.g. 1980s) the task is to find the counterpart object that existed in the target time. We consider the pair of entities which share similar functions or characteristics, yet which existed in different time periods, as temporal counterparts. The knowledge of temporal counterparts can help alleviate terminology gap problem for users searching within temporal document collections such as archives, can help automatic timeline construction or temporal summarization as well as can have usage in education. \r\nThe main challenge of the temporal correspondence task comes from the change of the context (in Latin: \"omnia mutantur\", i.e., \"everything changes\") that results in low overlap of context terms. Thus it is difficult to find corresponding objects by directly employing distributional semantics to capture their meaning and by comparing their context vectors. We present an unsupervised approach in which we first apply deep learning using neural network to represent the meaning of terms within different time periods. We then transform the representation of terms in different temporal spaces in order to match terms semantically similar yet having different syntactical forms over time. In other words, our method matches the terms by comparing their relative positions in vector spaces of different time periods. In addition, our solution considers user intent by suggesting different facets of queried objects and letting users choose any of them for biasing the temporal counterpart search. The experiments on New York Times annotated corpus demonstrate the effectiveness and efficiency of our approach compared to bag-of-words term representation.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A3-5",
+    "title" : "コルモゴロフ複雑性に基づくIDFの単語N-gramへの適用",
+    "abstract" : "本稿では，語の大域的重み付け手法であるIDF（Inverse Document Frequency）と，コルモゴロフ複雑性に基づく情報距離との間にある関係性を解明する．具体的には，文字列が出現するWebページをシャノン・ファノ符号によって表現したとき，空文字からの情報距離が対象の文字列のIDFとなることを発見した．また，上記の発見に基づき，単語N-gramに対する大域的重み付け手法を提案する．提案手法は，語の大域的重み付けと単語N-gramの単語間結合度の測定を一つの理論的枠組みの中で処理するため，単語と複合語との間で重みを比較できる．したがって，単語N-gramの重みのみを用いてテキストから任意の長さの特徴語を抽出できる．さらに，拡張接尾辞配列とウェーブレット木を用いた提案手法の効率的な実装方法を示す．特徴語抽出およびクエリ分割タスクにおいて，追加の技術や情報を必要とする既存手法と同等の精度を，単語N-gramの重みのみを用いて達成した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E7-1",
+    "title" : "送電系統安定化の為のデータ分析プラットフォームにおけるアーカイブアクセス技術と評価",
+    "abstract" : "大規模停電が深刻な問題である諸外国では，送電系統の安定化が求められている．その為，オペレータに停電の予兆を気づかせる必要がある．本研究では，高頻度で生成される大量なPMU(位相計測装置; Phasor Measurement\r\nUnit) データの蓄積とそれを用いた予兆パターン分析を行うアプリケーションを支援するプラットフォームを提案する．大量に蓄積されるPMU データの中から大規模停電につながる予兆パターンを見つける為には，従来は長時間かかっていたトライ＆エラーがあった．本稿では，大量データを蓄積し高速検索によりマートレス分析を可能にするデータベースと外部アーカイブファイル両方にアクセス可能な技術を開発し，その機能を用いた予兆パターン分析への適用を検討した．結果，数TB のコスト削減した蓄積を実現し，数秒での検索を確認した．これにより大量データの蓄積コスト削減と高速検索を用いた予兆パターン分析を実現する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E7-2",
+    "title" : "送電系統安定化の為のデータ分析プラットフォームにおける蓄積系データ処理技術と評価",
+    "abstract" : "大規模停電が深刻な問題である諸外国では，送電系統の安定化が求められている．その為，オペレータに停電の予兆を気づかせる必要がある．本研究では，高頻度で生成される大量のPMU(Phasor Measurement Unit) データの蓄積とそれを用いた解析を支援するデータ解析プラットフォームを提案する．本稿では，本データ解析プラットフォームの概要，及び数秒間隔で到着する大量のセンサデータを蓄積しかつ短時間で検索するためのデータ蓄積・検索技術について述べる．評価の結果，毎秒100 万件のデータ蓄積と数秒でのデータ検索が可能であることを確認した．これにより大量データの蓄積・解析を実現する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E7-3",
+    "title" : "An Improvement on Hadoop Scheduling by Utilising Analysed CPU Resource Demands",
+    "abstract" : "In Hadoop, tasks of I/O intensive workloads require much less CPU resources than CPU-intensive tasks, but current CPU scheduling assumes that each task equally saturates one physical core. This policy could lead to under-utilisation of CPU resources. We alleviate this problem by proposing a Finer Grained scheduling method that takes into account the CPU resource demands of tasks. Demand information is acquired by analysing sample tasks, and then utilised in the scheduling. To evaluate our approach we design a practical scheduling system, implement it in existing Hadoop framework, and conduct a series of experiments running mixed workloads. The results demonstrate that compared to current Hadoop CPU policy, our method improves the throughput of CPU-intensive workloads by approximately 20%, and does not compromise the performance of I/O intensive jobs.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E7-4",
+    "title" : "マテリアライズドビューを利用した分散キーバリューストアへのアクセスの効率化",
+    "abstract" : "本研究では、分散KVSにおけるデータ処理量を削減する機能として、頻繁に使用されそうなデータや処理に対しマテリアライズドビュー(MV)を作成し適用することを提案する。ビッグデータの検索や分析を行う際、分散KVSなどのNoSQLを使用することが必要となる。分散KVSにおいては基本的にインデックスやMVの機能は無く、値の検索などで大部分もしくは全体に対しての膨大なデータ処理が発生し得る。データ処理の効率化のためにビッグデータ全体に対しインデックスを作成することは、データ容量の面において現実的でない。そこで、ユーザーのデータの利用状況を分析し、比較的多く利用されるデータの範囲や処理を限定した上でMVを作成し、検索処理を効率化することを提案する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E7-5",
+    "title" : "データ仮想化システムにおけるクエリ分割実行方式の提案",
+    "abstract" : "データ仮想化は，複数のデータソース(DS)が持つデータを論理的に統合する技術である．データ仮想化システム(DVS)は，いずれかのDSもしくはDVSに中間結果を集約してクエリ処理をする．DVSを用いる場合，中間結果のサイズが物理メモリサイズを超えるほど大規模であると，ストレージアクセスが頻発するため性能が劇的に劣化する．最悪の場合にはDVSがエラー終了する．そこで本研究では，中間結果のサイズが物理メモリサイズを超える事象を回避すべく，クエリ分割実行方式を提案する．提案方式では，DVSで確実に実行可能な利用メモリサイズとなる分割クエリの生成と実行制御をすることにより，問題を解決する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E7-6",
+    "title" : "MapReduceにおける編集距離結合の負荷分散・効率化方式",
+    "abstract" : "MapReduce環境で類似結合を行う算法は\r\n多いがパラメタやデータで性能特性や優劣が異なり，\r\nUllmanらが各算法のshuffleやreduceコスト式を与えている(ICDE2012)．この研究では，\r\nそのうち subsequence算法に沿ったprefix filtering方式\r\nを使って編集距離結合を行う場合を実装し，そこでの\r\n負荷削減と効率化技法を工夫した場合を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A4-1",
+    "title" : "OSS コミュニティおよびクラウドソーシングの統合によるソフトウェア開発者の能力予測",
+    "abstract" : "ソフトウェア開発プロジェクトの成功は，開発チームに所属するソフトウェア開発者の持つ能力に依存することが知られている．\r\nしかし，一般にソフトウェア開発者のこうした能力の推定は難しいとされている．\r\n本研究ではこうしたソフトウェア開発者の能力を，オープンソースソフトウェア（以下，OSS）コミュニティとクラウドソーシングの情報を用いて予測することを試みる．\r\n提案手法では，OSS コミュニティである GitHub と，クラウドソーシングサービスである oDesk のデータを統合し，oDesk から得られる情報を教師データにした能力の予測モデルを構築する．\r\n構築した予測モデルを nDCG によって評価し，実際に両方のデータを統合したモデルが最も精度が高いことを示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A4-2",
+    "title" : "スマートフォン上でのユーザの振る舞いに基づいた\u000B効果的な商品選別手法",
+    "abstract" : "近年、高機能化の移動端末の普及によってスマートフォン上でのオンラインショッピングは日常生活の中で最も人気のある行動のひとつである。しかし、ユーザは配信された膨大な商品コンテンツストリームから興味がある商品を選択するには、大量の時間やエネルギーが必要であり、また多くの不適合アイテムを提示されている場合、ユーザが見る気を失ってしまう。本研究では、閲覧際のユーザの振舞いを利用し、まだ未閲覧アイテムに対してユーザの好みを推定し、アイテムの閲覧順序を最適化にすることにより、効率的な商品を選別する手法が実現する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A4-3",
+    "title" : "差分プライバシに基づく移動経路データの要約情報開示",
+    "abstract" : "近年モバイル、ウェアラブルデバイスの小型化、軽量化、高性能化に伴い、個々人の活動履歴などの時空間データを収集することが容易になっている。実時間で人の移動経路の集計データを開示することは非常に有意義で学術，商用の両面から価値があると期待されている。しかし、これらは個人データを分析するため、プライバシの侵害につながる危険性がある。ε-差分プライバシーは厳格な数学的な証明に基づく高い安全性が保証されている点で注目されているプライバシモデルである。一方、ユーザの移動軌跡は予測が難しく、しかも無限に生成されるため，ε-差分プライバシを用いてあらゆる移動経路を保護することは困難であると考えられる。我々はε-差分プライバシのもとで、すべでの利用者の長さlの移動経路を保護するために、 l-軌跡プライバシというモデルを提案し、実時間でデータ開示できるアルゴリズムを設計する。実データを用いる実験により、提案手法の有効性を検証している。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A4-4",
+    "title" : "Finding Appropriate Respondents to Questions at Question and Answer Sites",
+    "abstract" : "This paper proposes a method of selecting respondents who can give an appropriate answer to a question in order to eliminate mismatches between the questioners and respondents at Question and Answer sites. The proposed method uses the number of appearance of respondents and the score based on the distance between the factor scores of a question and an answer already posted. Nine factors of impressions for statements have experimentally been obtained. Factor scores have been estimated through multiple regression by using feature values of the statements. The possibility of detecting respondents capable of appropriately answering to a newly posted question has been examined. The propose method is based on this observation. It is experimentally evaluated by comparing it with the methods based on average scores and distances through precision and recall. It is shown that the proposed method outperforms the methods compared with it. It is also shown that the proposed method could successfully select the respondents that are more than almost averagely appropriate to a question.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E8-1",
+    "title" : "CRFによる様々な種類の学術論文からの参考文献文字列の自動抽出",
+    "abstract" : "学術論文が収録された電子図書館において，論文の検索等を行うためには，論文の表題や著者名といった書誌情報が必須である．特に，論文内の参考文献欄には，そういった書誌情報が多く含まれており，参考文献欄から書誌情報を抽出することは非常に有効である．しかし，論文の内容から人手で書誌情報を抽出するには膨大なコストがかかるため，論文から自動で書誌情報を抽出する研究が行われている．本研究では，様々な種類の論文の参考文献欄から個々の参考文献を表す文字列を，自動で抽出する手法を提案する．提案手法は，参考文献文字列の視覚的特徴と言語的特徴をCRFで学習し，論文から抽出する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E8-2",
+    "title" : "スキップ探索を用いた不確実データからの頻出パターン抽出",
+    "abstract" : "不確実データに対する頻出パターンマイニングの研究が進められてい\r\nる。不確実データはトランザクションが存在確率を持っているため、\r\n支持度が確率変数となる。そのため、支持度の計算の処理コストが高\r\nく、処理時間が長くなる問題があった。従来手法では不確実性を考慮\r\nしない頻出パターンマイニングにより探索候補を限定していたが、不\r\n確実性を考慮した場合には頻出とならない冗長なパターンの支持度計\r\n算を回避できなかった、本研究では、不確実性を考慮した場合に頻出\r\nとなる可能性の高いパターンから順に支持度計算を行うことによっ\r\nて、冗長なパターンの支持度計算を少なく抑える手法を提案する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E8-3",
+    "title" : "密度に基づく意味的な軌跡パターンの発見",
+    "abstract" : "近年，軌跡処理に関連した研究分野において，研究の重点は単純な移動軌跡データから意味的な移動軌跡データへ変化しつつある．特に，意味的な情報と空間的な情報を両方兼ね備える意味的な軌跡パターンの発見という新しい研究が最近出現してきた．系列パターンの発見の技術と軌跡のクラスタリングの技術の組合せが鍵となる．本研究では，先行研究を参考にした上で，密度に基づく意味的な軌跡パターンを提案する．そして，提案した意味的な軌跡パターンが持つ性質について述べる．最後に，発見した性質を利用することで効率よく意味的な軌跡データベースから全ての密度に基づく意味的な軌跡パターンを発見可能な手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E8-4",
+    "title" : "隠喩表現に着目したWeb情報検索",
+    "abstract" : "本論文では，隠喩表現に着目し，あるオブジェクトと，あるドメインが与えられたときに，\r\nそのオブジェクトについて隠喩によって表現することが可能である，\r\n与えられたドメインのオブジェクトを提示する手法を提案する．\r\n隠喩表現についての基本的な性質を確認するために，まず検索による\r\n語句パターンに則った隠喩表現の収集を行う．\r\n提案手法は，Web検索を用いて，オブジェクトの特徴を表す語から，\r\n異なるドメインにおいても使用可能であるものを選択する．\r\nさらに，それらの語とドメインから導かれる語を用いて，目的とするオブジェクトを得る．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E8-5",
+    "title" : "企業名抽出のための特徴量の検討",
+    "abstract" : "先行研究において，辞書に登録されていない名前も抽出可能な企業名の抽出方法が提案されている．この先行研究を改良することで，より正確に名前抽出が行えるようになると考えた．本研究ではこの先行研究を基にして，企業名の先頭及び末尾の文字列の情報を用いる新たな特徴量を提案した．先行研究と提案手法に対して新聞記事から企業名の抽出を行う比較実験を行なった結果，近似された適合率及び近似された再現率のそれぞれにおいて提案手法が先行研究を上回り，有意水準1％で提案手法と先行研究の有意差が認められた．以上より，提案手法を用いることで先行研究に比べ，近似された適合率及び近似された再現率を向上できることを明らかにした．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "E8-6",
+    "title" : "探索型情報検索のための未知度提示システム",
+    "abstract" : "検索目標が必ずしも明確でない状態で検索を行う探索型検索において，ユーザは複数のWebページを閲覧する．しかし，WWWには同様の内容を含むWebページが多く存在している．そのため，得られる情報量が少ないWebページを選択してしまうことがあり，効率よく情報収集を行うことができない．本論文では検索結果にWebページごとの未知度を表示し，ユーザが多くの情報を得られるように支援するシステムの提案を行う．我々はWebページにユーザが知らない情報が含まれている割合を未知度と定義した．提案手法ではユーザが閲覧したWebページの単語とまだ閲覧していないWebページの単語を比較し，未知度を算出する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A5-1",
+    "title" : "バースト時刻に基づく話題感度の高いユーザの検出",
+    "abstract" : "Twitterでは，数多くのユーザが，自身が興味を持つ話題に対してツイートを投稿している．定常時に比べて多くのツイートを投稿している期間は，ユーザが興味・関心を持つ話題に関するイベントが生起していると考えられる．本論文では，このような期間を「バースト時刻」として着目し，各ユーザのバースト時刻に基づいて，話題感度の高いユーザの検出手法を提案する．実際のユーザを用いた評価実験を行った結果，いくつかの話題で感度の高いユーザを検出できたので報告する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A5-2",
+    "title" : "大規模学術論文データベースにおける研究者のトピック推定と著者同定への応用",
+    "abstract" : "本文では，大規模学術論文データベースにおける研究者のトピック推定手法を提案する．提案手法では，代表的な確率的トピックモデルであるLatent Dirichlet Allocation (LDA) を用いて学術論文のテキスト情報の次元を削減し，各研究者の専門分野をモデル化する．具体的には，各研究者が所有する学術論文のアブストラクトをトピック分布で表現し，それらの平均を研究者の特徴ベクトルとする．また本文では，学術論文データベース整備の高効率化を目的とし，提案手法による著者同定への応用について検討する．与えられた学術論文の著者に同姓同名の研究者が存在する場合，研究者の特徴ベクトルを用いてその著者を同定する．CiNii Articlesから収集されたデータを用いた実験を行った結果，提案手法により推定したトピック情報を用いることで，同姓同名研究者の論文を正解率92.99%で同定できることを示した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A5-3",
+    "title" : "Estimating Interestingness of Images based on Viewer Data",
+    "abstract" : "Sharing images is becoming a very popular way for people to present a wide variety of interesting experiences in our lives.  Since the amount of online images is growing exponentially, recently how to estimate an image’s interestingness is drawing more attention. Traditional research works on computing interestingness of images are mostly focusing on analyzing the content of images to measure the condition or quality of the image being interesting. In this paper, we explore the role of viewers’ profile in estimating an image’s interestingness. We find that the interestingness of a same image differs based on who viewed it. Intuitively, different groups of viewers, like male and female, tend to have various preferences in terms of interest. Therefore, we investigate and identify the main factors of viewers’ profile that could have significant impact on their perceived interestingness from an image.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A5-4",
+    "title" : "時間変化を考慮した能動学習によるストリームのマルチラベル分類",
+    "abstract" : "本研究では、能動学習を用いることでストリーム中で複数のラベルを持つ文書を対象としたオンライン分類手法を提案する．ニュース記事やマイクロブログのようなストリームデータでは，扱われる話題が変化することから，時間により文書の特徴や出現するラベルは大きく異なる．ラベル無し文書は新たな特徴を持つが，ノイズを含むため分類性能が悪化する可能性がある．提案手法では能動学習により，新たに到着した文書の特徴によって選別することで分類器の更新を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A6-1",
+    "title" : "時間減衰を考慮した統計モデルに基づく動画のランキング手法",
+    "abstract" : "動画共有サイトのニコニコ動画における動画のランキング結果は，\r\n有名投稿者や人気ジャンルといった，多くのユーザを惹きつけるような\r\nソーシャル情報に強く依存している．実際，それらの強力な要因を持っている動画と\r\nそうでない動画とでは，サイト内での評価のされ方が圧倒的に違うことが\r\n容易に観測される．このような不平等性に対し，我々は，ユーザが動画をお気に入り\r\n(マイリスト)に登録する行動をベルヌーイ試行であると仮定し，\r\n時間経過によるお気に入りからの登録解除を考慮して，再生数に対する\r\nお気に入り登録数の割合を，ソーシャル情報に依存し難い評価値，即ち平等性の高い評価値に\r\n変換することを試みる．さらに我々は，既存ランキング法との比較を行う為，\r\n有意に高く(又は低く)ランキングされているカテゴリー(タグ)を抽出する\r\n問題にも取り組む．この問題については，Mann-Whitney の二群順位統計量を\r\n多群に拡張した方法を用いる．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A6-2",
+    "title" : "ネットワーク上の頂点間特徴量としての Top-k 距離とその高速なクエリ応答",
+    "abstract" : "2 頂点間の関連度や類似度を推定することは，ソーシャルネットワークをはじめとする大規模グラフデータにおける最も重要な処理の 1 つであり，ネットワーク構造予測やネットワークを考慮した情報検索などの重要な応用を持つ．本論文では (1) 関連度や類似度の新たな指標として Top-k 距離を用いることを提案し (2) Top-k 距離を高速に求めるための索引付け手法を提案する．提案する索引付け手法は，通常の距離に対する索引付け手法である枝刈りラベリング法に基づいているが，Top-k 距離への拡張を行う為に経路の数を新たに考慮する必要が生じる．特に，同じ経路を 2 度数えない為の工夫やその正しさの証明は非自明なものとなる．また応答性能やスケーラビリティの低下を防ぐための高速化手法も複数提案する．実データを用いて比較実験を行い，提案手法が索引を用いない既存の手法より最大で百万倍程度高速に Top-k 距離の計算が行えることを確認した．さらに，応用先の 1 つとしてリンク予測問題を取り上げ，提案手法によって計算した Top-k 距離が精度の向上に寄与することから，Top-k 距離が関連度指標として有用であることを確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A6-3",
+    "title" : "KL情報量に基づいたガウス分布の類似検索",
+    "abstract" : "マルチメディアデータベースやデータマイニング，バイオインフォマティクスなどの分野では，類似検索は最も重要な課題の一つになっている．一方，ガウス分布は実世界のアプリケーションでよく使われている代表的な確率分布である．本論文では，ガウス分布の類似検索について述べる．KL（カルバック・ライブラー）情報量を類似度として，与えられた問合せガウス分布と類似しているトップｋ件のガウス分布を返す．ランク集約およびスカイライン問合せの考え方を用いて二種類の処理手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A6-4",
+    "title" : "多階層のカテゴリ分類を用いたスカイライン経路検索について",
+    "abstract" : "OSR(Optimal Sequenced Route)検索は，指定されたカテゴリのPoI(point of interest)を順序通りに通過する最短経路を求める検索である．\r\nOSR検索では，PoIのカテゴリ分類を一階層と想定しているが，多階層になっていることが一般的である．多階層のカテゴリ分類を用いて，より詳細なカテゴリを指定した場合，経路長が非常に長くなり，ユーザにとって検索結果が好ましいとは限らない．そこで，本研究では，OSR検索にカテゴリの適合度と経路長を指標としたスカイライン検索の考え方を取り入れたSSR(Skyline Sequenced Route)検索，およびそれの計算アルゴリズムを提案する． リアルデータを用いた実験において，提案アルゴリズムは，OSR検索のアルゴリズムを用いた単純な方法に比べ，計算時間を大きく削減できることを確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A6-5",
+    "title" : "Memorable Landmarks Extraction based on Popularity and Visibility for Navigation Systems",
+    "abstract" : "Recently, personal navigation applications available on mobile devices become an essential tool to help people to search for routes in complicated urban areas. \r\nHowever, even with the advanced navigation systems, people often suffer from recognizing real world objects comparing to the objects on a map. Interestingly, most human way-finding depends on natural skills, abilities, and memory-based spatial knowledge. In particular, the memory-based spatial knowledge can be increased with various features of landmarks. The features include not only general properties of landmarks such as their colors, heights and functions, but also specific properties such as popularity and visibility. In this paper, we propose a system to extract memorable landmarks by considering semantic and geometric features. We classify landmarks into three types; \"point landmarks,\" \"linear landmarks,\" and \"area landmarks.\" In order to extract candidates of the landmarks respectively, we exploit crowd-sourced microblogs over Twitter and geographic data. Next, we compute the visibility of objects from respective places by analyzing a three-dimensional geographic data. Then, we construct a route graph based on the extracted landmarks and search for routes on the graph. In the experiment, we show the effectiveness of our proposed system by investigating how users can reach a destination well with a small number of landmarks.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A8-1",
+    "title" : "主観表現と客観表現を用いたTwitterにおける有益なツイートの推定",
+    "abstract" : "情報ネットワークにはリアルタイムな情報が膨大に溢れている．Twitterではユーザが呟き機能によって情報を発信することで情報の共有が行えるが，有益でない呟きの情報も多く共有される．そこで，有益な呟き情報以外を自動的に除去する必要があると考えられる．従来は機械学習を行う研究が多くされているが，学習はドメインに依存してしまう問題点がある．そこで我々は，呟きに含まれる主観表現と客観表現について解析することでドメインに依存せず即時に有益な情報度合いを計ることが可能であることを提示する．有益な呟きはリツイートされる前提で評価実験を行い，その有効性を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A8-2",
+    "title" : "Cross-lingual Tweets Recommendation Based on User Interest Using Bilingual LDA",
+    "abstract" : "Nowadays, microblogs are gaining their popularity around the world as an online social networking service. The amount of real-time tweets in different languages grows, so is their importance. However, there are still few researches about cross-lingual information retrieval on microblogs and they are not focusing on information contained by tweet itself. In this paper, we propose a cross-lingual tweets recommendation system, aiming at recommending meaningful tweets in one language for users in another language based on their interest. In particular, we use a topic model called bilingual LDA (BiLDA). BiLDA is an unsupervised model extended from LDA and it is trained by comparable corpus in two languages, which are constructed from Wikipedia article pairs. Due to the sparseness of tweet texts, BiLDA cannot get an ideal result to inference topic for tweets by BiLDA directly. So we use word-topic distribution as a cross-lingual resource. We propose two methods of recommendation. One is based cosine similarity between topic-distributions of users and candidate tweets. Another assume there is only one topic for a single tweet and recommend tweets based on word raking in each topic. Recommending tweets in a different language offers supplementary information, which is difficult for users to find by themselves. In the end, we evaluate the performance of the tweets recommendation system under different strategies and compare their performance.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A8-3",
+    "title" : "複合施設における小規模施設に関するツイート発見",
+    "abstract" : "本研究では，大型ショッピングモールや駅構内のような複合施設における各店舗などの小規模施設に関するツイート発見を行い，関連する施設のWebページを検出し，そのページ上に該当するツイートならびにツイートの集約情報を提示するシステムの構築を目指す．我々はこれまで，ツイートの発信場所とWebページの内容（場所名）を抽出することで，ツイートとWebページのマッピングに基づきWebページ上に関連するツイートを提示するシステムを構築してきた．そこで，本研究では，さらに時空間分析に基づき複合施設内の店舗ごとに関するツイートを発見する手法およびツイートの情報を集約する手法を提案する．これにより，Web閲覧ユーザはある複合施設内の各店舗に関する詳細な情報を得ることができる．本論文では，提案手法に基づき施設Webページ上にツイートの集約情報を提示するシステムを構築し，各店舗などの小規模施設に関するツイートの発見手法を検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A8-4",
+    "title" : "オンラインニュースに関連するツイートのリアルタイムな収集",
+    "abstract" : "マイクロブログの普及に伴い，多くのユーザが気軽に情報を収集・発信できるようになった． 特に，Twitterと呼ばれるマイクロブログでは，多種多様な情報がユーザ同士で共有されており，その中にはニュースに関連するものが多く存在することが知られている．また，Twitterで投稿されるツイートには，メッセージの他にユーザ情報や位置情報が付加されている．そのため，ニュースに関連のあるツイートは，ニュースに対する評価分析・ユーザ分析・地域分析などに利用することができる．そこで，本研究ではニュースと関連のあるツイートをリアルタイムに収集することを目的とする．具体的には，ニュースが掲載されるよりも過去に投稿されたツイートの傾向を用いてニュース毎に類似スコアの閾値を自動的に定める．その後，閾値以上の類似スコアをもつツイートをリアルタイムに収集する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A8-5",
+    "title" : "役割に基づく協調検索における検索行動分析",
+    "abstract" : "本研究は，協調検索におけるメンバの明示的な役割の有無が，メンバの検索行動に与える影響を明らかにする．これまで，協調検索においてグループの検索効率を向上させるための役割がいくつか提案されてきたものの，そうした役割が，クエリの選択や検索結果の閲覧といったメンバの検索行動にどのような影響を与えるのかは明らかにされてこなかった．本研究では，GathererとSurveyorという2つの役割に注目し，情報収集型と旅行計画型の2つの探索的検索タスクに関して被験者実験を行う．実験より得られ他検索行動データを分析することで，他のメンバの検索行動が，あるメンバの検索行動にどのように影響を与えるのかを分析し，役割ごとの特徴的な検索行動を明らかにする．最後に，得られた知見をもとに，それぞれの役割に応じたランキング手法を適用することで有効性を検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "A8-6",
+    "title" : "閲覧期間を考慮したTwitter上の見落とし情報抽出手法",
+    "abstract" : "世界中に多くのユーザが存在するTwitterには多種多様な情報が投稿されている．Twitterでは閲覧者が興味を持った情報発信者をフォローする事により，自身の興味のあるユーザのツイートをタイムライン上にて管理することができる．しかし多くのユーザをフォローした際には，膨大な量のツイートが表示されるタイムラインを閲覧者が常に閲覧することが困難であるため，閲覧者にとって有益な情報が見落とされてしまうことが考えられる．そこで本研究では閲覧者のタイムライン閲覧期間と，情報発信者のツイートにおける話題に着目し，見落とし期間中に存在する話題を抽出することにより，閲覧者に対して，見落とした情報を効率的に提示する手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F1-1",
+    "title" : "効果音の探索的検索支援に関する一検討：効果音の音響特徴に基づく類似性の検証",
+    "abstract" : "　本研究の目的は，効果音の探索的検索のためのインタフェースを実現することである．映像作品において，効果音がもつ心理効果は場面ごとの印象に大きな影響を与えるため，映像制作者は場面ごとに大量のデータベースから適切な効果音を慎重に検索・付与しなければならない．効果音の検索には，1) 効果音の名前や説明文の記述に留まらないという用途の多様性，2) テキストによって表現可能な音情報の限界，3) 効果音イメージの明確化の困難性，の3つの大きな問題が存在する．これらの問題に通底するのは「効果音の確認に要する多大な聴取時間」という問題である．本研究では，効果音同士の類似性を\"視覚的に” 確認しながら探索的に検索できるようにすることでこの問題の解決を目指す．\r\n　提案システムでは，オノマトペによって効果音を表現することで，a) 文脈，b) 表象，c) 音響，という３つの観点から効果音間の関係性を可視化する．ユーザは文脈や表象の情報から視覚的に検索し，おおよそのイメージに則した効果音にたどり着く．そして，音響の類似性を参照することで，より詳細なニュアンスでの絞り込み検索が可能になる．\r\n　本稿では，提案システム実現の端緒として，音響特徴量に基づいて構築された効果音クラスタとオノマトペの対応関係について実験的検証を行った．具体的には，リズムや調和性などの音響特徴量を用いた効果音の階層的クラスタリングを行う一方で，主観評価実験を通して効果音それぞれにオノマトペを対応付けた．音響特徴量によってクラスタリングされた効果音集合に見られるオノマトペの表象情報を考察した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F1-2",
+    "title" : "シーケンシャルパターンマイニング拡張による特徴的なコード進行の抽出手法",
+    "abstract" : "音楽におけるコードは，メロディーを引き立て，楽曲の調和を保つ重要な要素である．しかし，作曲の初心者においては，音楽理論をもとにこれを適切に構成することは困難である．また，経験のある作曲者にとっても，終止形などの特定のコード進行を特に重要視したり，特定の作曲者の楽曲に似せるためにコード進行を模倣したりする需要も考えられる．\r\n\r\n筆者らはこれまで，特徴的なコード進行の提示および楽曲制作の負担軽減を目的として，頻出パターンマイニングの一種であるシーケンシャルパターンマイニングを拡張し，音楽情報処理に特化したパターンマイニングができることを提案してきた．\r\n\r\n本稿ではこれに加え，アイテムの階層構造を導入して転回形を含むコード進行を抽出しやすくしたり，小節線などの疑似アイテムを付加して楽曲構造を含むパターンを抽出できるよう拡張したマイニング手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F1-3",
+    "title" : "コード進行・メタ情報・楽曲特徴量に基づく音楽可視化",
+    "abstract" : "本研究ではポップス曲の印象やアーティストの個性に大きく影響を与えるコード進行を、メタ情報や楽曲特徴量とともに可視化する一手法を提案する。本手法では各楽曲のコード進行を文字列で表現し、あらかじめ設定したコード進行頻出パターンの有無を文字列検索によって検出する。可視化には楽曲特徴量に基づいて楽曲群を配置した散布図と、コード進行やメタ情報の共起性を表現した散布図を用いる。本手法では後者の散布図によって興味があるコード進行やメタ情報を特定し、該当する楽曲を前者の散布図でハイライトする対話操作機能を有する。以上の対話操作機能を搭載した本手法は、ユーザの音楽嗜好に合った楽曲推薦や、アーティストや時代ごとの傾向分析など、さまざまな活用が想定される。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F1-4",
+    "title" : "音響音声信号検索システムの規模拡張性に関する検討",
+    "abstract" : "本稿では，大規模な楽曲データベースに対し，楽曲の一部をクエリとして，そのクエリを含む楽曲を高速に検索するシステムの規模拡張性について論じる．\r\nここで，データベースとクエリは共に，楽曲の音声音響信号から抽出された何らかの特徴ベクトルの系列として表現されているものとする．\r\n著者らがこれまでに提案したシステムでは，データやクエリの高次元特徴ベクトルを，アルファベット分割の考え方を用いて複数本の文字列データとしてとらえ，任意長の部分文字列に対する厳密一致検索が可能な索引構造を用いることで，高速な類似楽曲検索を行うことができる．このシステムを，数十万曲もの楽曲からなるデータベースに適用するための方策について検討を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F1-5",
+    "title" : "ソーシャルメディアデータ分析に基づく懐かしい楽曲の発見",
+    "abstract" : "本論文ではユーザが過去に視聴していたものの現在では忘れているような，「懐かしい」楽曲を発見する手法を提案する．提案手法では，「過去の環境が類似するユーザが懐かしいと感じる楽曲は類似する」という仮定に基づき，協調フィルタリングにより懐かしい楽曲の推定を行う．ユーザの過去の環境はソーシャルメディアデータにおける発言内容から推定され，ユーザ間の類似度は推定された過去の環境に基づいて定義される．我々は懐かしい楽曲をアンケートによって収集し，一般的な協調フィルタリングと提案手法を比較することで，提案手法における仮説の妥当性を示した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F1-6",
+    "title" : "VOCALOID音楽のジャンルと印象を用いた楽曲クリエータの検索",
+    "abstract" : "本研究では，ニコニコ動画においてVOCALOID楽曲を発表している楽曲クリエータを検索するシステムを提案する．検索には，クリエータが使用しているVOCALOID名および音楽のジャンル，楽曲に対する印象を用いる．音楽のジャンルは，汎用的なジャンルをベースとして，VOCALOID動画の視聴者が楽曲動画に付与されたタグを考慮することにより定義した．印象推定には，推定精度8割以上のF値に基づくSVMを用いた．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F2-1",
+    "title" : "支配地図を用いたサッカーのシーン推定",
+    "abstract" : "本稿では、サッカーのゲームシーンを攻守の移り変わりによって自動的に分割する手法について述べる。\r\nサッカーでは攻めの糸口を探る組み立て段階を経て、攻撃シーンに入っていく。\r\nさらにゲーム中では攻守の入れ替わりが激しく、各選手やボールは複雑な軌跡を描くため、個々人の軌跡データを解析するというアプローチでは全体の流れを把握するのは難しい。\r\n提案手法では、全選手の軌跡データから各選手の守備範囲に相当するDominant Regionを作成し、その時間毎の変化に着目することで、ゲームを攻守のシーンに自動的に分割する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F2-2",
+    "title" : "映像における話題シーン検出と話題性に基づく受動的映像視聴システム",
+    "abstract" : "VODサービスの普及により，ユーザがさまざまな映像コンテンツを視聴することが可能であるが，映像の任意の時点で話題と関連する映像を閲覧したい場合，ユーザが関連映像を検索することが必要である．そこで，本研究では，映像の話題に対してシーンを検出し，映像投稿サイトや画像検索から各シーンの話題に関するコンテンツの追加および削除が可能な受動的映像視聴システム（TV-Binder）の構築を目的とする．本システムは，映像の話題に対して各シーンの話題性と時間制約に基づき，適切なコンテンツの追加ならびにシーンの削除を判定することで，4種類の映像コンテンツを自動生成する．本論文では，映像からの話題発見に基づくシーンの検出手法を提案し，各シーンの話題性に基づき構築した受動的映像視聴システムを検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F2-3",
+    "title" : "動画解析・印象推定による動画BGMの自動生成",
+    "abstract" : "動画を撮影してSNSで公開する際に、BGMを付与して楽しむ人が増え、またそれを支援するアプリも増えてきた。本研究では動きや色の動画特徴量から印象を推定し、その結果に基づいて楽曲生成を行うことで、動画の印象に合った楽曲を付与する手法を提案する。まず動画から一定時間ごとに色および動きの特徴量を算出し、それに基づいて動画の印象を推定する。また予め用意したメロディとリズム進行についてユーザに印象を回答してもらい、動画の印象値と最も類似度の高いものを選びだし、それらを合成する。さらにコード進行を付与し、反復回数などを調整することで、動画の長さに合った楽曲を生成する。以上の処理により、印象に合った音楽を自分で探すことなく動画に付与することができる。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F2-4",
+    "title" : "３次元アセンブリモデルデータベースに対する索引構造の提案とその評価",
+    "abstract" : "近年、３次元ＣＡＤモデルの数は増加しており、大量の３次元モデルを効率よく管理するためには、３次元モデルの形状や内部構造などの情報に基づいた３次元モデルの検索が必要となる。従来の３次元モデル検索方法として複数の視点からの投影画像を用いたモデル検索がある。これは、モデル間の類似度を複数の投影画像間の類似度から算出する手法である。しかし、すべての投影画像間の類似度を計算するには時間を要する。そこで、本稿では投影画像群に対する索引構造を提案する。投影画像を形状ごとに分類し、階層構造にすることで有用な類似度のみを計算する効率的な検索を可能にした。また、３次元モデルを用いて提案手法を実験的に評価した。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F2-5",
+    "title" : "ファットクライアントを利用した動画像データ解析アプリケーションフレームワークの提案",
+    "abstract" : "近年ではカメラやセンサ等を手軽に利用できるようになり，一般家庭でもライフログを取得して，防犯対策やセキュリティ，お年寄りや子供のための安全サービスを目的としたライフログ解析アプリケーションが数多く開発されている．それらのアプリケーションを一般家庭で採用する場合は，サーバやストレージを設置して解析までを行うことは難しいため，クラウドでのライフログ解析が必要となる．しかしながら、各家庭の動画像データをすべてクラウドで収集するには、プライバシの保護と、センサとクラウド間のネットワークの帯域、およびストレージの容量が課題となる．\r\n本研究では，センサ側で動画像データの前処理を行い，前処理済みデータをクラウド側に転送して解析するアプリケーションフレームワークを提案する．動画像データはデータ量が大きく，連続的であるため，Apache Stormを用いて画像の特徴抽出を分散処理させ，前処理済みのデータ量の小さいデータをクラウドに収集して解析するフレームワークを実装する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F2-6",
+    "title" : "動向情報の根拠探索のための図表画像検出手法の改善",
+    "abstract" : "テレビ番組の映像データから図表画像を検出する手法を検討する．Webコンテンツ上の情報，特に，ある対象の時間的変化を記述した動向情報を対象に，その信頼性判断を支援する根拠として，テレビ番組中の図表画像を提示する手法を提案している．先行研究では，エッジに基づく特徴を利用することで一定の良好な精度で図表画像を検出できるという結果が得られたが、識別対象のエッジ勾配が類似したものの誤検出や、複雑な背景に対する検出漏れが問題であった．本稿では，画像の分割と学習を組み合わせることで，検出精度を改善する手法を提案する．学習データだけでなく，実際のテレビ番組に対する検出時間と精度についても評価する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F3-1",
+    "title" : "学術論文からの実験情報抽出の一手法",
+    "abstract" : "論文のサーベイにおいて，どのような実験を行ったのか，どのような結果がでたのか，という実験に関する情報を収集，整理することは，論文の内容を把握する時に必要となる．しかし，実験情報を記述する学術論文は，記述の自由度が高く，自動的に必要な情報を抽出するのは困難である．そこで本研究では，ルールを用いて論文構成要素を抽出し，その論文構成要素を用いて実験情報の表，図，段落を抽出する手法を提案する．論文構成要素抽出の実験を行ったところ，平均で再現率0.944，適合率0.945 が得られた．この論文構成要素を利用した実験情報抽出実験において，表の抽出結果は再現率0.969，適合0.902，図の抽出結果は再現率0.834，適合率0.743，段落の抽出は再現率0.702，適合率0.458 となった．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F3-2",
+    "title" : "小袖屏風に関する閲覧システムの構築と歴史資料への興味喚起を目的とした情報提示",
+    "abstract" : "近年，歴史資料を対象としたデジタルアーカイブの公開が進められ，歴史資料に関するデータを誰でも手軽に閲覧できる環境が整いつつある．しかしながら，歴史資料の価値を深く理解するためには，高度な知識などが必要となる場合も数多く存在する．そのため，歴史資料に詳しくない人にとっては，その価値を深く理解することや歴史資料の魅力を感じることが難しい場合もある．そこで本研究では，貴重な文化財である「小袖屏風」を対象とし，小袖屏風に関する多様なデータを手軽に閲覧可能なシステムの構築を行う．また，構築したシステムを用いて専門家の知見などを活用した情報提示を行い，歴史資料に対する閲覧者の興味喚起を目指す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F3-3",
+    "title" : "SNSを用いた迅速な論文の重要度の評価",
+    "abstract" : "論文の重要度の評価は，伝統的に引用関係を用いて評価されていた．しかし，この手法は，評価するために長時間要するという問題がある．この問題を解決するために，我々は，Twitterを用いた論文の重要度の評価について研究している．近年，学術会議の参加者が論文(研究発表)に対するコメントをTwitterに投稿する機会が増えている．ここで、多くコメントされている論文(研究発表)は，学術会議において強い影響を与えていると考えられる．本研究は3つのステップ，(1) 有益なツイートの自動分類(2) ツイートと論文との自動対応付け(3) ツイート数に基づく論文のランキングから構成される．提案手法の有効性を確認するため実験を行った．実験の結果，ツイートの自動分類では，再現率0.591，精度0.588を，自動対応付けでは，再現率0.483，精度0.525を，ランキングでは，ε=0.236を，それぞれ得た．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F3-4",
+    "title" : "要素技術とその効果を用いた学術論文の自動分類",
+    "abstract" : "本研究では，科学研究費助成事業データベース(KAKEN)を対象に，KAKENの分類体系に基づいて，学術論文を自動的に分類する手法を提案する．自然言語処理の分野において，文書分類は代表的な研究課題の一つであり，機械学習に基づいた手法が数多く提案されているが，学術論文固有の特徴に焦点を当てた分類手法を提案する．一般に，論文中には，新しい技術を用いて得られた新たな研究成果(効果)が記述されている．このような要素技術とその効果の対が，その論文を特徴付けていると考えることができる．本研究では，要素技術とその効果を示す表現を自動的に抽出し，素性として特徴付けることで，対象の論文に該当する研究分野を効率的に解析することを実現する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F3-5",
+    "title" : "引用意図を利用した学術論文閲覧支援のための適切な被引用箇所の特定",
+    "abstract" : "学術論文にとって引用論文とは，その論文の根拠や分野におけるその論文の位置づけなどを示す役割を持つ．\r\nそのため被引用論文を読むことは，それを引用した元の論文の理解を深めることにも繋がる．\r\nしかし，一般的に被引用文献は複数あり，それら全てを効率的に閲覧するには時間がかかる．\r\nそこで本稿では，被引用論文を引用した論文を“閲覧論文”，閲覧論文の著者が被引用論文を引用した意図を“引用意図”と呼び，\r\n被引用論文中から引用意図に合致し，論文閲覧者に提供するのに適当な内容を特定する手法を提案する．\r\nまず，閲覧論文における引用箇所の引用意図を分析する．\r\nそして，その引用意図に基づいて被引用論文に含まれる語句や，引用箇所内の語句を利用し，\r\nユーザーに提示するのに適切な被引用箇所を特定する．\r\nNTCIR-9の論文を閲覧論文とし，その被引用論文のアブストラクトと提案手法が特定した被引用箇所を被験者に比較させ，有用性が高いと判断する文章を選択させた．\r\nこの被験者実験の結果，計算式を引用している引用箇所については，適切な被引用箇所を特定できることがわかった．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F3-6",
+    "title" : "論文データベースにおけるトピックの変遷の検出",
+    "abstract" : "近年、論文データベースには膨大な論文が集約されており、そこから情報を抽出する手法は注目を集めている。中でも論文データベースにおけるトピックの抽出、およびトピックの変遷の検出に関する手法は、自分の研究がどのトピックの系統に属するか、トピックの起源となった論文が何であったかなど、様々な情報を得ることが出来る。そこで本研究では、トピックの抽出および時間経過によるトピックの変遷を検出する。論文には本文に加えて、引用情報が含まれており、トピックの抽出において有効であることが示されている。そこで本研究では引用情報を考慮した、トピックの抽出、および変遷を検出する新しい手法を提案する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F4-1",
+    "title" : "手話言語の空間的特徴を考慮した書記法の提案",
+    "abstract" : "手話言語は視覚言語の一種であり、日本語や英語等の音声言語とは異なる独自の語彙や文法体系を持つ言語とみなされている。\r\nしかし、手話言語は専ら対面会話に使用され、日常生活において手話言語を記述しコミュニケーションすることはない。\r\nそこで、本研究では、手話の「文法」、特にその空間的特徴を反映した、常用に耐えうる書記法の提案を行う。\r\nその際、手話使用者だけでなく日本語使用者も容易に使用可能となる書記法を目指すことで、手話使用者と日本語使用者の円滑なコミュニケーションの支援を可能とする。\r\n更に、日本語とは異なる発想に基づく書記法を提案することで、情報・知識の新たな表現・思考ツールにもなり得ると考える。\r\n本論文では、提案書記法の詳細について述べると共に、アンケート調査による評価実験により提案手法の有用性について検討する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F4-2",
+    "title" : "HistoryPaper:ユーザー個人のブラウザ履歴からの代表ページ選択とマガジンスタイルレイアウト",
+    "abstract" : "インターネットを毎日利用する人の閲覧履歴を要約することは，その人の行動や知識の要約につながると考えられる．\r\nしかし，現在のブラウザに実装されている閲覧履歴の表示方法だけでは，そのような情報を有用活用することは簡単ではない．\r\n本報告では，1日の閲覧履歴の中で特に重要であると判断したWebページ群を抽出し，それらを新聞のようにレイアウトすることで，ユーザーの毎日の行動や獲得知識を要約表示するシステムを提案する．\r\n提案手法ではまず，閲覧履歴を構成するWebウェブ群を文書内容でクラスタリングし，続いて滞在時間，検索キーワード，アクセス貴重度から定義される重要度を算出して各クラスタから代表Webページを選出する．\r\n続いて，最近のWebサイトに多く採用されているマガジンスタイルを模倣するレイアウトアルゴリズムによって，代表Webページ群を一画面に配置して一覧表示する．\r\nさらに，レイアウト結果を数値評価することでレイアウトアルゴリズムの妥当性を検証した結果を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F4-3",
+    "title" : "ダンサーの振る舞いデータを利用したインタラクティブなダンスチュートリアルの自動生成",
+    "abstract" : "ダンスの振りを覚える際に，動画がよく利用される．しかし，動画を見てダンスの振りを覚えるためには，再生・停止・巻戻しなどの操作が多くなり，学習者にとって非常に手間がかかる．この問題を解決するために，丁寧な解説動画を作成することが考えられるが，それは指導者にとって非常に手間となる．そこで本研究では，指導者にも学習者にも手間がかからない，インタラクティブなダンスチュートリアルを提案する．これは，撮影した動画を加速度データに基づいて覚えやすい単位に自動で分割し，その単位ごとに繰り返し再生できるシステムである．本論文では，動画を覚えやすい単位に自動で分割するための方法と，提案手法を実装したプロトタイプとその評価について述べる．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F4-4",
+    "title" : "文の感情を考慮した漫才ロボット台本自動生成手法の提案",
+    "abstract" : "近年，ロボット工学が進歩する一方で人とロボットのコミュニケーションは未だ円滑とは言えない．これまで我々は，人とロボットとの円滑なコミュニケーションの実現を目的とした漫才ロボットを行うために，漫才台本自動生成システムを提案してきた．本論文ではさらに，Webニュース記事本文の感情情報を抽出し考慮した漫才台本自動生成手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F4-5",
+    "title" : "Audio Twipp：効率的な「聴き飛ばし」を実現するTwitterクライアント",
+    "abstract" : "Twitterで利用されるソーシャルストリームは大量の投稿が一列に並んだストリーム型コンテンツである．一般に，ユーザはソーシャルストリームを構成するすべてのコンテンツを読むわけではない．ユーザは，ユーザ名，ユーザアイコン，本文の始め数文字を見てコンテンツの選別をし，興味のないものは閲覧しない，「読み飛ばし」を行う．一方，視覚が利用できない状況や，視覚障害者がテキストコンテンツを閲覧するために，音声ブラウジングが広く利用されている．ソーシャルストリームの音声ブラウジングを行う際に，すべてのコンテンツを全部読み上げる場合には，長時間を有し，効率的な音声ブラウジングが困難であるという問題点がある．この問題を解決するために，我々は，ソーシャルストリームの効率的な音声ブラウジングを行うための「聴き飛ばし」手法を提案する．投稿者の情報が「聴き飛ばし」の手がかりになるという仮説を立て，投稿者をユーザのフォロー関係に基づいてグループ化し，グループ毎に定位を変化させるアプローチを用いる．本論文では，グループ化の評価，及び提案手法を実装したプロトタイプシステムAudio Twippの評価実験について述べ，その有効性を探る．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F4-6",
+    "title" : "メタデータを利用した風景写真の時系列変化を効果的に閲覧するための世界地図インタフェース",
+    "abstract" : "本研究では，写真の時系列変化と審美性に着目し，写真に付与されているメタデータを用いて，世界各地で撮影された風景写真を効果的に閲覧するためのシステムの構築を行う．Flickrなどで共有される写真には，ジオタグやテキストタグ，Exifなどのメタデータが付与されている．これらのメタデータによって，画像処理を用いずに写真の撮影状況の把握が容易になる．また，風景写真に特化する理由は，世界各地で撮影されたジオタグ付き写真から，その撮影場所に直接訪問することなく風景を閲覧するというニーズがあるためである．本システムは，写真の時系列変化を考慮することで，撮影日時に基づく風景の見た目の変化を閲覧可能にし，一度に大量の写真を閲覧する困難性を解消する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B1-1",
+    "title" : "ソーシャルキュレーションデータからの観点抽出と画像検索への応用",
+    "abstract" : "本研究では，画像に対する観点を，ユーザが画像を見てどう捉えるかを表す概念として定義する．近年，多くのユーザに利用されているPinterestに代表される，画像のソーシャルキュレーションサービスでは，様々な人々がある観点で画像を集め，整理し，公開することができる．このようにして構築されたキュレーションデータには，画像に対するユーザの観点が強く表れていると考えられる．本研究では，多くの人々が類似した捉え方を持つ画像を探せるという観点に基づく画像検索において，ソーシャルキュレーションデータが有用であると考え，そのデータから観点を抽出し，画像の観点をクエリとするランキング手法について提案し，``cute''や``beautiful''といった，画像から受ける印象に関連する観点を表すクエリに対して，提案手法の精度を検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B1-2",
+    "title" : "クラウドソーシングヒューリスティクスの一般化選択フィルタによるモデル化と動的選択手法",
+    "abstract" : "クラウドソーシングシステムにおける重要な課題の一つとして最適化がある．\r\nクラウドソーシングシステムの多くは，ヒューリスティクスを用いた最適化を取り入れているが，\r\nどのヒューリスティクスが有効であるかは必ずしも自明でないため，\r\nプロトタイピングなどによるシステム開発者の手間の増大や，ヒューリスティクス選別のために必要なタスク数が増大するなどの問題が生じる．\r\n本論文では，本番処理中に動的にヒューリスティクスの選別を行う事により，\r\nヒューリスティクス選別のためのプロトタイピングを必要とせず，タスク数も増大しない手法を提案する．\r\n提案手法は，ヒューリスティクスを一般化選択フィルタとしてモデル化し，有効なフィルタを動的に選別する．\r\n本提案手法の特徴は，システム開発者が予めヒューリスティクスを\r\n選別する必要が無いだけでなく，\r\n動的にフィルタ結果が変わる場合やタスクの数が動的に変わる場合にも適用可能である事である．\r\n本論文では，提案手法の説明に加え，実データを用いたシミュレーションの結果を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B1-3",
+    "title" : "クラウドソーシングシステム記述での関心の分離によるシステム把握支援",
+    "abstract" : "クラウドソーシングでは，ワーカの振る舞いが，出力される結果に大きく影響を与えることが知られている．\r\nワーカが合理的であると仮定すると，彼らの振る舞いは，インセンティブ構造の設計によって決まる．\r\nしかし，これまでのデータ指向クラウドソーシング言語では，記述可能なインセンティブ構造が\r\n限定されており，より一般的なインセンティブ構造の記述が困難であった．\r\n一方，より一般的なインセンティブ構造の記述はアプリケーションロジックと密接に\r\n関連するため，記述されたコードを見てシステムの挙動を把握することは容易ではない．\r\n本論文では，クラウドソーシングのための宣言型言語CyLogに，インセンティブ構造を局所化して\r\n記述するゲームアスペクトの概念を導入することを提案する．\r\nゲームアスペクトは，ゲーム理論の用語を用いてインセンティブ構造を記述するため，\r\nゲーム理論を用いたシステムの挙動の分析が容易になる．\r\nまた，記述が局所化されているため，インセンティブ構造の管理，変更が容易になる．\r\n本論文では，実際のクラウドソーシングアプリケーションを例に，ゲームアスペクトが\r\nインセンティブ構造の理論的検証を容易にすることを示す．また，実データを用いて実験を行い，\r\n実験結果が，理論的検証結果とと一致することを示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B1-4",
+    "title" : "ソーシャルメディア上の情報拡散データのリアルタイム問合せ処理評価",
+    "abstract" : "Twitterに代表されるマイクロブログサービスでは，リアルタイムにメッセージが多く発信され，他のユーザーへの返信や再共有(リツイート，RT)等のユーザー間のやりとりも多く存在する．メッセージが多くのユーザーにRTされて情報が拡散すると，その拡散規模や内容によっては，現実社会に与えるインパクトも大きい．それゆえ，ソーシャルメディア上で今何が広く拡散しているのか，を知ることは，企業や団体にとって重要である．本論文では，情報拡散データをストリームデータとして処理してリアルタイムに分析するためのシステムのフレームワークを構築し，代表的な問合せパターンの性能評価を行う．また，ツイートの拡散収束のタイミングを，拡散モデルを用いて推定してインメモリデータストアをメンテナンスする手法を提案し，有効性を評価する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B1-5",
+    "title" : "カテゴリごとの偏りを考慮した検索結果からの知名度推定",
+    "abstract" : "あるトピックについてWeb検索結果数が多ければ、そのトピックが有名あるいは重要であるととらえる共通認識があり、その結果として検索結果数を情報の重要度などの指標として用いる研究が数多くある。\r\nしかし、実際には検索結果数が多ければ有名あるいは重要であるというのは必ずしも正しくない。\r\nそこで本研究では、Web検索結果数と有名人の知名度との関係に着目し、検索結果数を用いて知名度を推定する手法を提案する。\r\n提案手法では、有名人の属するカテゴリ情報を用いてWeb上への情報発信のされやすさを補正するモデルを設計し、知名度推定を行う。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B1-6",
+    "title" : "社会問題に関する情報カスケード検出",
+    "abstract" : "ソーシャルネットワーク上では単なる友人間の情報伝達にとどまらず，それが連鎖することによる大規模な情報カスケードが観測されるようになった．このように伝播される情報には様々な種類が存在し，マーケティングなどへの利用が考えられるが，それらの中で利用可能な社会的に影響力があるものは一部である．今回はTwitterから得られたリツイートについて伝播経路の構造を調査し，社会的に影響力のあるツイートを抽出する手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F5-1",
+    "title" : "KeyGraphによる主張点の極性評価～LDAの潜在トピックを用いて～",
+    "abstract" : "近年，企業に対する質問文書等を早急に察知し，対応することで企業に対する信頼性を向上させることが求められている．ここで，ソーシャルメディア上の投稿から書き手の感情を定量化し，分析する手法が実現出来れば，その投稿に含まれるネガティブな感情の度合いから対応する優先順位付けを行うことが期待出来る．ここで，文献[]の手法では，高頻度な単語群から語彙的結束性を用いて文章の概念を抽出し，その概念と共起する単語は文書において書き手の主張を表す重要な語としている．この単語に感情分析を適用することで，書き手の感情を定量化することが出来ると期待出来る．しかし，文章では，必ずしも高頻度な単語群に文章の概念が含まれているとは限らない．そこで，本研究では質問文書に対してLDAを適用し， 潜在的な意味に分かれた話題を抽出し，これと共起する単語を書き手の主張を表す語とする．この語に対して書き手の感情を定量化することを提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F5-2",
+    "title" : "ツイートの感情の関係に基づくTwitter感情軸の決定",
+    "abstract" : "Twitterなどのマイクロブログサービスはその手軽さから多くのユーザが気軽にツイートを投稿している.そういったマイクロブログサービスには今起こったことや感じたことを投稿している場合が多い為，そのユーザの感情が現れやすい．これまでに我々は感情軸を決定し，その感情軸それぞれに対して感情値を求めた．しかしながら，感情の関係から適切な感情軸を決定していなかったため正しい結果が得られなかった．そこで本論文では，つぶやきにおける感情の関係からTwitterに適した感情軸を決定する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F5-3",
+    "title" : "ニュースとツイート分析による話題に対する相関感情俯瞰グラフ",
+    "abstract" : "本研究では，検索キーワードに対する感情値を抽出するのと同時に，検索ワードと関連性が高いwebサイトのうちニュースサイトといった書き手側とTwitter上のつぶやきといった受け手側とでキーワードに関する感情がどう違っているのかを表現するシステムを提案する．我々はこれまで検索結果のタイトルとスニペット，つぶやきデータから，我々が開発した感情辞書を用いて感情値という新たな特徴量を抽出し，感情値に基づいたリランキングシステムを提案，実装してきた．リランキングシステムでは検索結果から感情値を抽出し，感情分布をユーザに提示することで，検索キーワードに対するメジャーな感情を把握することができた．本研究ではニュースサイトとTwitterを元にキーワードに対して感情に基づいたグラフを構築，比較検証しマスメディアとソーシャルメディアのデータ特性の相違のズレを検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F5-4",
+    "title" : "アンケート調査に基づくTwitterユーザとツイート印象の分析",
+    "abstract" : "本稿では，10,000人が参加する大規模なアンケート調査を行い，Twitterの利用状況やメリット・デメリット，Twitterを利用している理由などを尋ね，どのような人がどういう目的でTwitterを利用しているのかを明らかにする．さらに，Twitterの閲覧頻度が一定以上のユーザを対象に，ツイートからどのような印象を受けたことがあるか，どのような印象のツイートを見たいか，あるいは見たくないかを尋ねるアンケート調査（300人参加）を行い，その結果に基づいてツイートの印象をタイプ分類するとともに，それぞれの特徴を明らかにする．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F5-5",
+    "title" : "インターネット上のメディア毎の「おいしさ」表現比較分析",
+    "abstract" : "近年Twitterに代表されるマイクロブログでの情報発信が容易になり，食品の感想や紹介，宣伝を気軽に発信することが可能になっている．また，CookPadに代表されるユーザ投稿型レシピサイトも広く普及してきており，レシピ投稿者は自らのレシピを閲覧者の興味が湧くように，様々なおいしさを示す言葉を用いている．さらに，企業やレストランのWebサイトでは，自らの食品を魅力的に伝えるため，様々なおいしさを表す言葉を用いて宣伝している．\r\nこのように，「さくさく」や「芳醇」といったおいしさを表す言葉が，感想，紹介，宣伝などの目的によって異なるのではないかと考え，本論文では，インターネット上のメディア，Twitter，Web，CookPad上でのおいしさを表す言葉であるシズルワードと食品との関係の比較分析を行う．さらに，ユーザ実験を行い，メディアごとのシズルワードと食品の関係の比較分析の結果と実際の人々がこれらの関係に対して持つ印象との比較を行い，比較分析の妥当性を検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B2-1",
+    "title" : "商品推薦のための商品レビューの極性分析に基づく特徴語抽出手法",
+    "abstract" : "本稿では，ECサイト上の商品レビューから商品の特徴語を抽出し，それらを用いて商品推薦を行う手法を提案する．\r\n我々は，商品を構成する各要素のうち，賛否が分かれる要素は利用者の印象に強く残った要素であり，商品の重要な特徴であると定義した．\r\n提案手法では，商品を構成する要素への肯定評価や否定評価を表す評価表現をレビューから抽出し，評価の対象となった各要素を商品の特徴語候補とする．\r\n候補となった各要素の賛否が分かれた度合いを，肯定評価回数と否定評価回数の調和平均値で表し，単語頻度と調和平均値の積の値が高いものを商品の特徴語として抽出する．\r\n抽出した特徴語を用いて商品の特徴ベクトルを作成し，他の商品の特徴ベクトルとのコサイン類似度を計算することで類似する商品をユーザに推薦する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B2-2",
+    "title" : "Monofic: チャンネル指向型情報フィルタリングシステム",
+    "abstract" : "従来の推薦システムは、(1)自分の好みの推薦やフィルタリングを構築するまでに時間がかかる(2)推薦によるパーソナライズによって得られる情報に偏りが出る(3)ユーザの嗜好の変化に対応できない、といったいくつかの問題がある。\r\nそこで本研究では、自在な情報フィルタリングのカスタマイズを可能とするチャンネル指向型情報フィルタリングシステムMonoficの提案とその実装を行った。\r\nこのシステムでは、チャンネルと呼ばれるフィードリストに対し「フィルタグ」と呼ばれるフィルタリング機能を持ったタグを付け替えすることにより、配信されるフィードを特定の話題や自分好みにカスタマイズすることができる。\r\nまた、他ユーザのチャンネルを利用して新しくチャンネルを作成したり、他ユーザのフィルタグを共有し自分のチャンネルに取り入れるといったこともできる。このような機能により単なるパーソナライズに留まらないより広い視点での情報収集を簡単に行うことが可能となる。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B2-3",
+    "title" : "アイテムに対するCommunity内認知度とユーザ嗜好度を考慮したSerendipity 指向情報推薦方式",
+    "abstract" : "近年,単に精度の高い推薦を行うだけでなく,Serendipity の高い情報推薦技術の開発が注目されている. \r\n高いSerendipityを実現するためには,意外性を高めつつ,ユーザにとって有用性の高いアイテムを推薦する必要がある.\r\nそこで我々は，対象ユーザの興味領域における認知度は高くないものの，この対象ユーザよりも熱狂度が高いユーザグループ内では認知度が高いようなアイテムを検出し，これを対象ユーザに推薦することを特徴とする，Serendipity指向情報推薦方式を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B2-4",
+    "title" : "ウェブ資源を利用したWeb Indexにおける関連コンテンツ推薦システム",
+    "abstract" : "Web Index(WIX)とは、キーワードとURLの組み合わせであるエントリの集合(WIXファイル)を用い、Webページ内の単語へのハイパーリンクを生成するシステムである。本研究では、WikipediaなどのWeb資源から関連語を抽出することで、ユーザがクリックしたエントリに関連するエントリ集合を取得し、それを推薦する機構を実装した。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B2-5",
+    "title" : "閲覧・検索行動履歴に基づく情報再発見",
+    "abstract" : "本論文では，閲覧した複数のWebページ間の関係から，あるページと共通の目的で閲覧したページ（同位ページ）を推定する手法を提案する．ユーザはWebを利用して何らかの目的を達成する際に複数のWebページを閲覧することがある．その際には複数の検索クエリを使用したり，Webブラウザの複数のタブにそれぞれ異なるページ開いて閲覧することもある．このような閲覧情報の再発見のためにはブックマークなどの手法がある．しかし，ページ単位でのブックマークでは，作業中の文脈や閲覧した複数のページ間の関係が失われるという問題点がある．そこで，リンクやタブの切り替え，クエリの類似度といった複数のページ間の関係から，再発見を行っている際に閲覧しているページに対して同位ページを推定し能動的に推薦することで再発見を支援する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B2-6",
+    "title" : "ソーシャルメディアにおけるセレンディピティを考慮したユーザ推薦手法の提案",
+    "abstract" : "ソーシャルメディアでは、followerやfolloweeなどユーザ間のネットワーク形成が重要な課題となっている。このため、ユーザにとって発見が難しく、かつ満足度の高いセレンディピティのあるユーザの推薦が望まれている。\r\n本研究では、Twitterを題材に、ユーザが投稿したツイートとフォロー関係に基づいてセレンディピティのあるユーザを発見し、フォロー先ユーザとして推薦する手法を提案する。ツイートの内容からユーザ間の類似度を算出し、フォロワーとの類似度とセレンディピティとの相関を調査し、ユーザの満足度向上を目指している。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F6-1",
+    "title" : "ジオタグ写真を用いたユーザの訪問地のカテゴリ推定に基づくユーザの移動への意味付け",
+    "abstract" : "近年，Flickrなどのソーシャルメディアでは写真が大量にアップロードされている．これらの写真には，テキストタグやジオタグなど写真の内容を表す重要な情報が付与されている．本手法では，それらのメタデータを利用し，ジオタグが指し示すスポットのカテゴリ(レストラン，ホテル，観光スポットなど)の推定を行う．従来のカテゴリ推定は，画像や色の見た目の特徴量に着目している．そこで，本研究では，写真に付与されているテキストタグ，ジオタグから写真の撮影スポットのカテゴリを推定する．また，推定したカテゴリを用いて，ユーザが任意に選択した2つのスポット間の移動中にどのようなカテゴリをもつスポットを移動するか，どこにどのようなカテゴリをもったスポットが存在するかを閲覧可能にするシステムを構築する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F6-2",
+    "title" : "LBSNのための汎用的なオントロジフレームワークの構築",
+    "abstract" : "　GPSを搭載した機器の普及により，位置情報に基づくソーシャルネットワーク（Location-Based Social Networks，LBSN）が流行している．\r\nLBSNには「ある人物pが時刻tに座標（x，y）に存在」といった共通の機能が数多く存在している．\r\nしかし，LBSNの開発は独自に行われている場合が多い．\r\nそこで，本グループではLBSNに共通した機能を提供するLBSN共通基盤の研究開発を進めている．\r\n共通基盤では複数のイベントを組み合わせ，高次な意味的なイベント検出を図る．\r\n　本研究では，LBSNにおける様々な共通の要素を「イベント」として表すための知識体系としてオントロジに着目し，イベント処理を考慮したLBSNオントロジの構築とLBSNオントロジを活用したイベント検出について報告を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F6-3",
+    "title" : "ジオタグ付き写真の撮影者を在住者と観光者に分類することによるホットスポットの発見",
+    "abstract" : "本研究では，写真の撮影者をその地域の在住者(地域に詳しい人)と観光者(地域に詳しくない人)に分類し，ホットスポット(写真の多く撮影される地域)の発見を行う手法を提案する．撮影された写真を一様に扱い，ホットスポットの発見を行う場合，観光に来た撮影者の割合の多い観光地において，有名な観光スポットが発見される．しかし，観光に来た人の中には地域に住む人の関心や生活を知りたいというニーズが存在する．一方，地域に住む人がシステムを利用した際，新しいスポットを知ることができない．そこで，撮影者の分類ごとにホットスポットを発見し，それぞれから関心を持たれている地域を発見することが重要である．提案手法では，撮影された写真のジオタグと撮影時刻から，撮影者を在住者と観光者に分類し，それぞれの撮影者の写真のジオタグに基づき，ホットスポットの発見を行う．また，発見されたホットスポットはどのような撮影者から関心を持たれているかという情報を付与する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F6-4",
+    "title" : "Web上の画像の周辺テキストを用いた自動画像アノテーション",
+    "abstract" : "本研究では，類似画像検索技術とテキスト検索を用いた自動画像アノテーションについて述べる．\r\n提案手法は，大きく3段階に分けられる．\r\n1段階目では，Web上からクエリで指定した物体の周辺テキスト付き画像を収集する．\r\n2段階目では，収集した画像がクエリで指定した物体を表しているかどうかの分類を，\r\n類似画像検索処理で行う．\r\n3段階目では選別した画像の周辺テキストを適切な手がかり表現を使ってさらに選別する．\r\n周辺テキストは日本語を対象とする．\r\n提案手法は，犬や猫といった広いカテゴリの画像よりも\r\n柴犬やシャム猫といった狭いカテゴリの画像を対象とした場合に高い精度を示すことを示した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F6-5",
+    "title" : "小説や旅行記からの地理情報の自動抽出と編纂",
+    "abstract" : "近年，小説やドラマなどの舞台場所を訪れる観光客が増加している．このような観光が地域産業活性化に繋がり，多大な経済効果をもたらしているとの報告もある．本研究では，このような観光客を支援するために，小説や旅行記のテキストデータから重要な地理情報を自動編纂し，地図上に表示するシステムを提案する．システムは，重要な地理情報を抽出・ジオコーディングし，また，テキストデータを要約して地図上に表示することで，観光客が訪れようとしている「場所」と、関連のある「出来事」を一目で理解可能にする．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F6-6",
+    "title" : "協調型運転支援のための交通社会ダイナミックマップの提案",
+    "abstract" : "近年，自動車にカメラやGPS等の多様なセンサーが搭載されるようになり，さらに周辺車両や道路インフラからの情報取得についても研究開発が進んできている．交通に関するセンサーデータの効率的な収集・管理・活用は，安全性の向上や交通マネジメントの効率化・個別最適化に向けて大変重要となっている．我々の研究グループでは，そのための基盤システムとして交通社会ダイナミックマップの\r\n構築を行っている．本論文ではその基本構想について述べる．本システムが扱う情報は，道路情報と道路上の物体に関する静的情報，動的情報，予測情報である．道路情報は，用途ごとに必要な詳細度が異なるため，リンクレベル，レーン(車線)レベル，道路形状(点群)レベルの3階層で表現される．特にレーンレベルの詳細度は従来の道路地図では想定されていないため，新たな記述の枠組みが必要となる．静的情報はDBMSに格納された従来型データであり，動的情報はセンサーからのストリームデータ，予測情報は予測計算で求められた不確実性を持つデータである．交通アプリケーションの開発者はクエリ(Continuous QueryとOne-shot Query)を用いて，必要な情報を取得することができる．本システムを用いたアプリケーションとして，我々は合流地点や車線変更時における車両間の協調型運転支援などを想定している．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B3-1",
+    "title" : "カーナビ利用時の多種コストの考慮およびドライバーのルート選択意図に基づく経路推薦方式の実験的評価",
+    "abstract" : "カーナビゲーションシステムは非常に利便性の高いものだが，常に運転者の意向に沿った経路推薦を行えているわけではない．例えば，カーナビが提示する推薦経路に対して，運転者が意識的に別ルートを走行するケースを想定する．この際，カーナビは元の推薦経路に戻るような経路を再推薦することがしばしば起こるが，これでは運転者の意向に沿ったルートを提示しているとは言い難い．我々はこれまでに，単一コストを対象として，カーナビの推薦経路と運転者の選択経路の差異を分析することで，運転者の意向に沿ったルート推薦を可能にするアルゴリズムを開発し，良好な結果を得た．さらに，多種コストに基づき仮想的な代表コスト値を単位経路毎に算出することにより，多種コストを考慮可能にする手法についても提案した．本稿では，これら多種コストを統合する際に各コストに対する重みの計算方法を検討したので，実験結果を交えて報告する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B3-2",
+    "title" : "サーベイ論文作成支援のための引用論文推薦",
+    "abstract" : "学術情報量が爆発的に増加している今日，研究者が関連論文全てに目を通し，利用することが困難になっている．このような状況から，特定の研究分野に関連したサーベイ論文や専門書籍の必要性が高まっている．先行研究では，論文間の引用関係に着目し，引用論文データベースからサーベイ論文を自動的に検出する手法が提案されている．しかし，研究者が知りたい分野のサーベイ論文を見つけても，その論文が何年も前に執筆されたものであった場合，最新の研究動向を把握することができない．本研究では，既存サーベイ論文をもとに，そこに加えるべき新しい論文の推薦を試みる．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B3-3",
+    "title" : "確率的データストリームにおけるパターン照合結果のグループ化",
+    "abstract" : "近年，複数のイベントを組み合わせることでより高次のイベントを発見する複合イベント処理（CEP）に注目が集まっている．中でも，複合イベントを発見する手法の一つであるパターン照合は，その有用さから広く研究が行われている．しかし，各イベントに生起確率が付与される確率的データストリームでは，パターン照合を行ったとき同じ時間帯に複数のマッチが重複して発見されるという問題がある．このように重複して存在するマッチは，いずれもその時間帯にパターンが存在した可能性を示しており，個々を区別することは必ずしも適当ではない．そこで本稿では，重複したマッチをグループとしてひとまとめにする手法を提案する．まず，グループの確率的な意味について考えるために，確率的データストリームに対してパターン照合を行った際の確率空間を定義する．その後，グループを生成するためのセマンティクスとして完全オーバラップと部分オーバラップを定義し，マッチの生成と同時にグループを生成する手法を提案する．最後に，トランスデューサを用いてグループの確率を効率的に計算する手法を提案し，評価実験により本手法の有効性を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B3-4",
+    "title" : "スカイライン演算を用いたユーザ嗜好を考慮した情報推薦のランキング手法の提案",
+    "abstract" : "本稿では、情報推薦を行う際に、スカイライン演算で候補を絞った後のデータをランキングする手法を提案する。 情報量の増加に伴い大量の情報の中から必要な情報を取捨選択し、ユーザのニーズに合う様に並び替えて提示する技術が必要になってきた。しかし、ユーザの嗜好にあった情報を選び出し、それらの情報をランキング付けすることは難しい課題であった。今回スカイライン演算で得られたデータをユーザの嗜好に合わせてランキング付けを行う手法を新たに提案し、検証を行う。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B3-5",
+    "title" : "字配りの平均化による手書き文章の魅力的な文字配置方法",
+    "abstract" : "魅力的な文字を書きたいと考えている人は多い．ペン字に関する多数の書籍が販売されていたり，ペン字の通信講座があったり，書写技能検定が存在するのも，魅力的な文字を書きたいと考えている人が多いからであると考えられる．魅力的といえば，複数人の顔を平均すると魅力的になると言われている．そこで，手書き文章も平均すれば魅力的になると考えた．手書き文章の印象を左右する要素としては，文字自体の美しさと，文字間隔や行間隔，文字サイズといった，字配りが考えられる．文字自体は平均化することにより綺麗になるという報告がある．しかし，字配りに関しては我々の知る限り平均化された例はない．そこで手書き文章が与えられた際に，その文章の字配りを平均的な字配りにする手法を提案する．具体的には，手書き文章の字配りは，人それぞれが持つ固有なパラメータにより決まると考える．複数人の文章より字配りを決めるパラメータをあらかじめ抽出し，平均しておく．手書き文章が与えられた際に，あらかじめ用意したパラメータを用いて平均的な字配りを求める．実験の結果，字配りを平均化すると，読みやすい，丁寧，きれいといった印象を与えられることが分かった．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B3-6",
+    "title" : "ランク付集合ラベルデータのラベル集合への関連の強さ",
+    "abstract" : "多様化したデータの分析には階層的分類が有用である．\r\nデータの多様性により，\r\n1件のデータに複数のカテゴリのラベルが付され，\r\n各カテゴリとデータの関連性の強さは異なる場合が多い．\r\n関連性の程度を示すランクを与えたラベルの集合（ランク付集合ラベル）をデータに付すことで関連性の強弱を反映させた分析が可能になるが，\r\nラベル集合を用いて分析の対象となるデータを指定する際，\r\nラベル集合とデータとの関連の強さを評価する基準が曖昧である．\r\n本稿では，\r\n主たる関連と副次的な関連を示す2つのランクで考察することで，\r\nデータはラベル集合に対し，\r\n関連がある，\r\n主たる関連がある，\r\nラベル集合以外に対し，\r\n主たる関連がない，\r\n関連がないという4つの評価基準を導き，\r\nその順にどの評価基準までデータが満たすかでデータに関連の強さのレベルを設定できることを示した．\r\nさらに，\r\nランクの区分に制限を設けない多ランクにも拡張した．\r\n本稿の議論によりラベル集合に対する関連の強さを定性的かつ一元的に比較可能になるので，\r\n分析目的に応じてレベルごとに分析の対象とするデータの範囲を設定できるようになる．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F7-1",
+    "title" : "非常時におけるナビ利用者の経路選択意図に関する実験的考察",
+    "abstract" : "事故，渋滞，災害等の突発的な理由により，一部交通機関がマヒすることで目的地までの移動手段の選択に迷うことがある．その時の状況に応じて，ベストの選択を行うことは容易ではないが，実際のナビ利用履歴を分析すれば，比較的良好な経路を選択できたケースやそうでないケースを検出することが可能となる．我々はこれまでに，経路選択としての成功例に着目することで，経路選択における集合知獲得が可能になると考え，ユーザの最終目的地までの過程において，ナビシステムにて推薦されたが選択しなかった経路と実際に選択した経路の特徴的な差異から，ユーザの経路決定に対する意図を抽出する技術について検討した．本稿では，事故で主要経路が通行不能になった際に代替経路としてどのような経路を選択するかという実験を行い経路選択の結果と選択理由から経路選択のノウハウの抽出，また異なるユーザクラスタ間での経路選択の傾向の差異に関する分析を行った．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F7-2",
+    "title" : "鉄道運行情報配信における”可能性可視化”方式",
+    "abstract" : "本論文では、輸送障害時において旅客自身の判断を促すための可能性情報を、路線図上で列車の運転状況の統合として可視化（Possibility Visualization）する方式の具体例を提案する。本方式は、ある路線が不通になった際にそれを知らせるだけでなく、代替経路（並行する路線）がある場合にどの経路を利用するべきか、またその経路の運転状況は今後どのようになるかを統計データに基づいて計算し、旅客が予備知識なしに判断しやすいよう可視化するものである。この方式によって、旅客が自身で代替経路や運転状況を確認する必要のない鉄道情報提供が実現し、顧客満足度を向上させることが可能となる。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F7-3",
+    "title" : "多地点ダイクストラ：旅行計画問題の高速探索アルゴリズム",
+    "abstract" : "経路探索問題の中に「銀行に寄って目的地に行きたい」といったユーザの要求を満たす経由地(Point of Interest:POI)を経由し終点に到着する経路を探索する旅行計画問題という問題がある．\r\n旅行計画問題を解決する既存手法として，始点と終点からの双方向探索によってPOIまでの最短経路を探索する逐次拡大法がある．しかし逐次拡大法では，要求を満たすPOIの密度が小さい（POIの数が少ない）場合に探索効率が悪化してしまうという問題がある．そこで本稿ではPOI密度が小さい場合に効率の良い探索アルゴリズムである多地点ダイクストラ法を提案する．\r\n提案手法の特徴として，２つの点が挙げられる．１つは旅行計画問題を始点からPOIまでの最短経路探索問題とPOI から終点までの最短経路探索問題の部分問題に分割し，それぞれに対して双方向探索を行うために，始点・終点・POI の3点から探索を実行しているという点である．もう１つは各POI から探索されたノードを一元管理し，１つのノードにつき最短コストで遷移できるPOIのみを登録し他のPOIからの探索を行わないことで探索効率の向上を図っている点である．\r\n本稿では既存手法と提案手法の比較実験を行い，特に密度が小さい場合には最適解と異なる解(エラー)が求まる割合が十分低いまま探索を実行でき，探索終了までの総探索ノード数の削減が確認できた．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F7-4",
+    "title" : "ジオタグ付きツイートを用いた交通路の抽出",
+    "abstract" : "Twitterの位置情報が付加されるジオタグ付きツイートを用いて，人間の移動や観光地情報の分析などの研究がさかんに行われている．\r\nしかし，東日本大震災時に提供された「通れたマップ」のような交通経路の抽出を考えると，ツイートは散発的にしか行われないために単一ユーザの移動情報だけでは経路を再現できない上に，移動手段側ではなくユーザ側の位置情報であるためにツイート時の移動手段の利用を正確に判定できないという問題が存在する．\r\n本稿では，投稿中又は前後に高速な交通手段を利用したと思われるツイートを抽出し，対象地域を細分化した各矩形領域内で近接している二つのツイートをHough変換することで交通路の断片と思われる近似直線を求め，それらを連結・補間することで多くのユーザが利用した公共交通機関の交通路を抽出する方法を提案する．\r\n実際に，ジオタグ付ツイートアーカイブから東京及び大阪の交通路を抽出して可視化する．\r\nさらに，各路線の位置と比較することで，手法の有効性を示すと共に，その限界について分析する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F7-5",
+    "title" : "ジオタグ付き写真を用いたホットスポットを訪問する前後のユーザ行動の分析",
+    "abstract" : "本研究では，ソーシャルメディアサイトに投稿された写真に付与されているジオタグを用いて，旅行者の行動や興味・関心の把握するために，ホットスポットを訪問する人々の，前後の行動について分析する．ホットスポットとは，多くの人々が写真を撮影している地域である．本論文では，主要な観光地などの多くの人が訪れることホットスポットのような場所にのみ着目するのではなく，そのホットスポットに訪れる直前・直後に訪れている場所に着目することで，人々がまちあわせや，寄り道のために立ち寄った場所などを抽出し可視化することを目指す．また，ホットスポットと，その直前・直後に人々が多く訪れている場所を地図上に可視化するシステムを作成する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F7-6",
+    "title" : "時間帯別観光ポテンシャルマップ作成のためのFlickr写真データの時刻補正と選別",
+    "abstract" : "写真共有サイトFlickr上には旅行者が投稿した位置情報付き写真が膨大に蓄積されている．そこで筆者らはこれらを利用し，観光地内の見どころの可能性の高い場所をヒートマップとして可視化する「観光ポテンシャルマップ」の開発に取り組んできた．本研究ではこれをもとに，夜景スポットなど時間帯別の見所を描き出すマップの作成に取り組んだ．その前提として，投稿写真には，カメラ内蔵時計のずれ，タイムゾーン設定の誤り，GPS信号の捕捉タイミング，レタッチソフトによる改変等が原因で，タイムスタンプが不精確なものが多く含まれるため，これに対処する必要がある．そこで，内蔵時計時刻とGPS時刻の相互参照，ならびに投稿者の撮影時間帯別投稿頻度を手がかりに，タイムスタンプを補正できるものは補正し，補正不可能なものは排除して，写真群の時間的信頼性を向上させる手法を開発した．本技術により時間帯別観光ポテンシャルマップが実現可能になるとともに，Flickrデータを利用した行動分析や観光情報サービスの信頼性向上への寄与が期待される．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B4-1",
+    "title" : "１対多関係を検出する問題における類似度の評価",
+    "abstract" : "　出現パターンが類似する２つのラベルに関係があると考え，その２つの組をもとめる問題はデータマイニングの基本の問題である．問題によっては，２つのラベルの関係が親と子の関係にあり，一つの親ラベルに対し，多数の子ラベルが対応しすることがある．この状況において，どのような類似度が検出の性能が高いかについて，実験を行った．実験対象は，コサイン，条件付き確率，補完類似度および，あまり知られていない包含検出関数である．実験の結果，包含検出関数が１対１０以上の正解の場合に，よい性能を示した．ラベルの親と子の対応関係における出現比率は前もってわかることが多いので，比率の差が１対１０以上のときに，包含検出関数をつかうのに効果があることを報告する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B4-2",
+    "title" : "ニュース記事の理解のための背景・前提事象の抽出と分析",
+    "abstract" : "本稿では，ニュース記事から，その主題事象の記述と主題事象に対する背景・前提事象の記述を分類して抽出する手法を提案する．ニュース記事には，その記事で新たに報道される中心的な出来事について述べた主題事象記述と，その出来事の経緯や位置付けを示す過去の出来事について述べた背景・前提事象記述が含まれる．背景・前提事象記述は，主題事象の経緯や位置付けを理解するために必要な付加的情報を示すと考えられる．これらの記述を分類して抽出することは，ニュースで報道される事象間の関連や，記事の理解容易性を分析する上で役立つと考えられる．提案手法では，ニュース記事に特有の時間表現や時制などの特徴を利用することで，主題事象記述と背景・前提事象記述を分類することを試みる．また，実際に英語のニュース記事を用いて提案手法を評価するとともに，提案手法を応用してニュースを分析し，その結果について考察する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B4-3",
+    "title" : "シソーラスと大規模テキストを用いた汎化推論規則の導出",
+    "abstract" : "計算機による言語理解には多様な世界知識が必要であり，ある事象が成立するときに別の事象が成立しうるのかを推論規則の形で獲得し，知識として蓄積しておくことは重要である.現在，推論規則獲得に関する研究の多くでは，テキスト中に出現する具体的な事例に基づいて推論規則が獲得されている.しかし，このアプローチで獲得できる推論規則は，テキストに実際に書かれている事象に限定されるため，実世界の多種多様な事象の組み合わせをカバーすることは困難である.\r\nそこで本研究では，この問題を解決するために，大規模テキストから獲得した事例に基づく推論規則をシソーラスを用いて汎化する手法を提案する.提案手法では，推論規則中に含まれる名詞をより抽象的な概念に汎化するが，この際，名詞をどの概念まで汎化するかを適切に決定する必要がある.そこで，汎化先となる上位概念の下位にある概念の網羅性と多様性に基づく素性を導入し，これらを教師あり学習を用いて適切に組み合わせることで汎化の程度を自動的に決定する.\r\n実験では，大規模ブログ記事から抽出した事例に基づく推論規則に対して提案手法を適用し，汎化推論規則を得た.この汎化推論規則からシソーラスを介して展開して得られる推論規則の数は185，242 となり，汎化前の推論規則の約140 倍で，その適合率は 約84% であった.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B4-4",
+    "title" : "単語の共起関係を利用した概念的特徴ベクトルの生成",
+    "abstract" : "Web上の膨大なデータの中から有益な情報を見出そうとする試みが広く行われており，テキストデータ解析に関する多くの研究が行われている．本研究では，情報検索において必要な特徴ベクトルの生成において，語を意味によって分類・整理した分類語彙表を利用して概念的な特徴ベクトルを生成し，機械学習フレームワークの1つであるJubatusを用いてテキスト分類する．出現単語のみによる共起行列では，特徴ベクトルの次元数増大やベクトルのスパース性の問題がある．分類語彙表を用いた特徴ベクトルの生成では，次元数の抑制や，より的確なベクトル表現が期待できる．実験では，ニュース記事におけるテキスト分類を通じ，Jubatus上で複数の学習アルゴリズムを用いて分類精度を検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B4-5",
+    "title" : "動向情報の根拠探索を目的とした統計表データの自動認識",
+    "abstract" : "近年、インターネットの急速な発展・普及に伴い、膨大な量の情報が溢れている状況となっている。その中には、質が高くて役に立つ情報からデマや誤った情報など、質の高いものから低いものまでが混在し、どれが正しい情報なのかをユーザが選別することはますます困難となっている。筆者らは、ソーシャルネットワーク上の言説、特に、ある対象の時間的変化を記述した動向情報を対象に、その客観的根拠を統計表データから探索するシステムを提案している。しかし、統計表構造の認識においてはその精度を改善する課題が残っている。本稿では、統計表データの構造を自動認識する手法を提案する。ルールベースおよび機械学習ベースでいくつかの識別器を構築し、評価実験を行う。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B4-6",
+    "title" : "学術論文からの構成要素抽出手法の改良",
+    "abstract" : "近年、学術論文データベースの充実により、Web上から多数の論文を容易に入手できるようになった。そこで我々は、図や表等の論文構成要素が学術論文の検索、論文の内容の把握において有用であると考え、これらを抽出する手法を提案した。本稿では、論文構成要素を分類する際に注目する特徴を利用して、抽出精度の改良を図る。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F8-1",
+    "title" : "Convolutive NMFにおける時間フレームの間隔変化に関する一考察",
+    "abstract" : "音響信号などの時系列データからのパターン抽出に応用される技術として，畳み込み非負値行列因子分解(CNMF: Convolutive NMF)がある．CNMFは，各時間の観測データベクトルを並べることで行列の形式で表現された時系列データに対して，指定した数の，時間推移を考慮した基底に分解することにより，時間的に連続するパターン抽出を実現した手法である．しかし，従来のCNMFは連続する時間に亘るパターンにしか着目しておらず，時間フレームの間隔を含むパターンを抽出することができていない．そこで本稿では，CNMFに対する時間フレームの間隔を許容する拡張を提案する．実データに対して提案手法を適用し，時間フレームに間隔のあるパターンが抽出できることを確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F8-2",
+    "title" : "標本時系列抽出による時系列データ特異点検出方式",
+    "abstract" : "機器の異常を予知・検知するため、機器に設置されたセンサから収集された大量の時系列データから特異点を検出する手法の重要性が高まっている。ただし、既存の素朴な手法では、計算量が膨大になるという課題があった。本発表では、時系列データから抽出した標本時系列を用いた近似的な解法により、時系列データから高速に特異点を検出する手法を提案する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F8-3",
+    "title" : "Wi-Fiパケットセンサを用いた人流解析と可視化",
+    "abstract" : "スマートフォン等のWi-Fi通信機器が発信する管理パケットには機器に固有の識別子が含まれ，その識別子と地点情報を蓄積し解析することによって人流を把握することができる．我々は，Wi-Fiパケットを取得するセンサデバイスを作成し，大規模商業施設に20台設置し1ヶ月間，利用者のプライバシに配慮した上でデータを取得した．個人の移動履歴を匿名化した時系列データを用いた人流解析とその可視化手法について報告する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F8-4",
+    "title" : "Twitterにおけるユーザー同士の会話に基づいた親密度の評価と時系列的変化の可視化",
+    "abstract" : "　本研究では，Twitterを対象としたユーザー同士の会話に基づく親密度を評価し，親密度の時系列的変化を可視化するシステムの構築を行う．\r\n　従来のユーザーがもつ影響力分析では，ユーザー間のフォロー関係のみを考慮するものであった．しかし，単にフォロー関係のみでは建前的にフォローを仕返す慣習があることや，フォローしているユーザーごとに密接であることや希薄であることなどの本質的な交友関係をくみとることが不可能な問題があった．\r\n　そこで会話の内容に立ち入り，ユーザー同士の親密度を評価することで，本質的な交友関係を示す事が可能になる．本システムでは，時間変化に伴いユーザー間の親密度が直感的に理解できるものとする．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F8-5",
+    "title" : "文字列化による人流データの圧縮と可視化",
+    "abstract" : "監視カメラなどで記録された映像データから人の歩行パターンや場所ごとの特徴を発見することで交通、マーケティング、防災など多様な分野に役立つ情報を得ることが出来る。しかし、大量に蓄積した人流データの効率的な分析は未だ課題となっており、特にデータの圧縮とマイニングについて検討の余地がある。本報告では、SAX(Symbolic Aggregate Approximation)を拡張したUniversalSAXを用いる文字列化により人流データを圧縮し、次にn-gramなどの文字列用アルゴリズムを適用しマイニングを行う。最後にマイニングの結果を人流の動線描写やグラフ化によって可視化することで典型的な歩行パターンや交通量の多い場所などが特定可能になることを報告する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "F8-6",
+    "title" : "Storylineを適用した時系列データの可視化",
+    "abstract" : "我々の身の回りには数多くの時系列データが存在しており、その分析において、可視化は有効である。代表的な時系列データの可視化手法として、折れ線グラフとヒートマップがあるが、いずれの手法もデータの部分的な特徴と全体のクラスタの変遷の両方を同時に観察するのは難しい。本論文では時系列数値情報を対象に、要素間の交流や共起性の可視化手法であるstorylineを用いた可視化手法を提案する。本手法ではある期間ごとに時系列数値情報の類似度を算出し、類似した要素同士が画面内で近接するようなstorylineを描く。さらに各線分の変化に着目し、storyline上に視覚変数として与えることで、クラスタの切り替わる時間と変化量を直感的に読み取ることが可能になる。本手法を用いてクラスタの時間的変遷を観察することで、長時間にわたって類似した値/外れ値を有する要素だけでなく、ある時には特定のクラスタに属し、またある時には別のクラスタに属するようなフラフラした要素に着目しやすくなる。さらに元の数値情報やメタ情報を参照することで、クラスタの切り替えの要因を分析しやすくなると考えられる。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B5-1",
+    "title" : "図形群の意味と階層構造を用いたプレゼンテーションスライド検索システムの提案",
+    "abstract" : "本論文では，プレゼンテーションスライドに含まれる各図形間の配置や関係性などを分析することで図形群の意味や階層構造を推定し，それらを用いた図形に着目したプレゼンテーションスライド検索システムを提案する．また，図形群を階層構造で表し，図形群の階層構造形および各要素の類似度を考慮することにより，図形群同士の類似度を測ることが可能になる．提案手法の有用性を検証するために，提案手法を実装し利用者評価を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B5-2",
+    "title" : "商標権侵害・希釈化発見のための類似標章検索",
+    "abstract" : "本論文においては,類似商標発見の支援のために,ある一商標に対して類似すると判断され得る標章を生成して推薦する方法に関して検討を行う.商標は企業のビジネス上のブランドを確立するために非常に重要であるが,故意または過失による類似商標の使用により,商標権が侵害されたり,希釈化したりする結果,ビジネス上の被害が生じている.しかし,商標に関する既存研究は複数の商標の類似性を判定するものが多く,商標権の侵害や希釈化への事前対策には有為ではないのが現状である.このような状況を踏まえ,本研究では,単一の商標に対して類似の可能性がある標章の集合を,特許庁公開の商標審査基準に基づき生成した上で,それらの言語的特性や既存商標との関連による存在可能性を判定し,ランキング付けして提示する手法を提案する.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B5-3",
+    "title" : "ジオタグ付き写真を用いた知名度が低いにもかかわらず興味の度合いが高い寄り道候補の発見",
+    "abstract" : "本研究では，ソーシャルメディアサイトに投稿されたジオタグ付き写真を用いて，出発地から目的地までの移動中に立ち寄ることが可能な場所を発見する．本論文では，ソーシャルメディアサイトに投稿された写真のジオタグと撮影日時を用いて，場所に対する人々の知名度と興味の度合いを算出し，それらに基づいて出発地から目的地までの移動中に立ち寄ることが可能な場所を発見する．ユーザが指定した出発地と目的地よりも知名度が低い場所の中から，興味の度合いが最も高い場所を寄り道候補として発見し，ランキング形式で提示するシステムを構築する．これにより，ユーザが知らないにもかかわらず興味のある場所を推薦するシステムが実現可能である．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B5-4",
+    "title" : "SIGURE Hash: 数式検索のための高速な類似検索アルゴリズム",
+    "abstract" : "数式は科学技術を厳密に記述する言語として幅広く用いられている。\r\n数式は一般的に木構造に変換可能な MathML や LaTeX といった形式で記述されているが、このような数式データに対する情報検索技術は十分とはいえない。\r\n例えば、a^2 + b^2 = c^2 と x^2 + y^2 = z^2 のように同義ではあるが表記が異なる数式が存在するが、これは例えば一般的な木構造類似検索アルゴリズムでは検索できない。\r\nそこで、本研究においては数式の変数名の書き換えに対して不変な類似度計算アルゴリズムを開発し、このような表記の異なる数式を検索できるようにした。\r\nまた、このアルゴリズムは入力の大きさに対してほとんど線形時間で動作するため、高いスケーラビリティを持つ。\r\n大規模な数式データセットを用いた実験により、我々のアルゴリズムが既存の木構造類似検索アルゴリズムである pq-gram と比較して高速に索引を作成でき、検索結果の精度も向上していることが示された。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B5-5",
+    "title" : "速報性と正確性の向上を図ったTwitterからの鉄道運行情報検出システム",
+    "abstract" : "Twitterが持つ速報性に着目し，ツイートを収集することで特定のイベントの発生を検出する研究が近年増えている．これらは，Twitterを利用して迅速かつ正確にイベントを検出することを目的としている．\r\n本研究では，鉄道の遅延というイベントに対象を絞り，鉄道利用者から投稿されたツイートをもとに各路線の運行情報を推定し，配信するシステムを提案する．\r\n先行研究では，電車の遅れに言及しているツイートを3ルールに基づいて抽出し，直近20分間での抽出ツイート数が閾値を超えていれば，遅延と推定する手法を提案している．\r\n我々は，先行研究の手法に加え，ツイートの投稿に利用した端末の種類や投稿場所を推測し，それらを考慮した新たな抽出ルールを提案する．また，時間帯や路線によって閾値を変動させ，投稿時間に応じて抽出ツイートの重みづけを行う手法を提案する．そして，速報性と正確性の観点からシステムの有効性を評価する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B6-1",
+    "title" : "広域分散データストアに因果整合性を付加するミドルウェア",
+    "abstract" : "分散データストアで因果整合性を保証する機能をミドルウェア層で実装するアプローチが提案されている．このようなミドルウェアでは，データ間に生じる依存関係のグラフを管理することで，因果整合性を保つ．しかしながら，既存手法では依存関係のグラフが巨大化する場合に対応できないという問題がある．本論文では，依存関係のグラフが巨大化しても機能する手法を提案する．提案手法では，依存関係のグラフを分割して管理することで，巨大化による問題を解決している．さらに，提案手法に対する2つの最適化手法を示す．また，提案手法に基づき設計・実装を行ったミドルウェアの評価結果を報告する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B6-2",
+    "title" : "マルチラック環境におけるHDFSの効率的なレプリカ再配置手法の提案と評価",
+    "abstract" : "我々はこれまで，分散ファイルシステムの一つであるHadoop Distributed File Systemにおいて，ノード故障時などに発生する，不足レプリカを補うレプリカ再配置処理に着目し評価を行ってきた．２ラックからなるクラスタにおいて，ディスクやネットワーク負荷、耐障害性に着目し，生成元・生成先選択アルゴリズム，転送スケジューリング及び転送ストリーム数を適切に行う制御手法を提案し，その有効性を示している．本稿では，３つ以上のラックからなるクラスタにおけるレプリカ再配置処理をシミュレーション評価する．ラック間転送が行われる際，生成先のラックを複数ラックの中から選択可能になるため，生成元・生成先選択アルゴリズムを拡張し，その拡張した制御手法が有効であるか検討する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B6-3",
+    "title" : "大規模分散処理システムのシステム検証におけるテスト環境の開発アクティビティの実践",
+    "abstract" : "近年，BigDataの管理と処理が可能であり，スケールアウトが容易な大規模分散処理システムの必要性が増してきている．本稿では，筆者らが携わったプロジェクトで開発を進めている大規模分散処理システムであるCBoCタイプ2のシステム検証を実施して得られた知見について報告する．具体的には，商用の大規模分散処理システムのシステム検証における課題を明確化し，どのような技術と対応が必要になるかを説明する．特にテスト環境の開発のアクティビティにおける課題について，一番問題となった「読み書きのデータ特性や集計を集中制御可能なTP作成」，「検証作業の効率化」，「NW,Disk環境のばらつきの回避」，「マシン故障に伴う検証への影響回避」の技術的課題に対して実績のある解決方法を提案し，具体的な適用事例を通してその有効性を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B6-4",
+    "title" : "Markov Logic Networksを用いたデータ統合メディエータの提案",
+    "abstract" : "データ統合では，ソースデータベースを統合することにより，統合データベースにおいて結果的に整合性制約への違反が生じる可能性がある．統合データベースの整合性を保つため，違反するデータの削除や更新を行うことで修復を行う必要があるが，そのためソースデータベースの情報が失われるという問題がある．本稿では，データの矛盾した状態を許容したデータ統合を目的とし，マルコフ論理を用いたデータ統合メディエータシステムを提案する．マルコフ論理をデータ統合システムに応用することで，不整合なデータを含む統合データベースの構築を可能とし，整合性に違反するデータに対する問合せを可能とする．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B6-5",
+    "title" : "データベース同期ミドルウェアによる遠隔バックアップ活用手法の検討",
+    "abstract" : "近年、災害対策として遠隔バックアップの必要性が問われている。ローカルのリソースだけでシステムを運用していれば、大きな災害時にバックアップも失ってしまう。日本のような災害国では特に、広域にバックアップを置いておくことがますます重要になっている。他方でデータベースシステムは企業の基幹を成していることから、バックアップを取るべきシステムであると考える。そこで、本研究ではデータベースの遠隔バックアップに注目した。\r\n既存研究で、データベースを同期するpageaというミドルウェアがある。これを拡張していくことで遠隔バックアップを効率よく実現させる方式を提案する。またバックアップを活用し分散処理をさせる場合と，処理を分散させない場合に関して評価を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B6-6",
+    "title" : "分散データベース上でのリダクション処理",
+    "abstract" : "分散データベース上のデータを解析する際には，データベース管理システムからデータを取得し，それを解析する事になる．ここで，もし解析に用いるデータよりも解析結果の方がサイズが小さいならば，データの置かれているノードの付近で解析を行い，その結果のみを返す事で通信量を削減できる．また，データの存在する箇所それぞれで個別に解析を行うことで，通信量の削減と同時に処理の並列化が実現できると考えられる．本研究では，これらの，データベース側で解析を行う手法を提案する．この手法の有効性について評価するため，分散データベース管理システムの一つであるApache Cassandraの機能を拡張し，データを取得するための中継地点となるノード上で処理を実行する機能，及びデータの存在するノード上で指定された処理を実行するような機能の実装と，その性能への影響の評価実験を行った．この実験の結果として，提案手法が解析の高速化を達成することを確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B8-1",
+    "title" : "聴取目的に応じた音楽推薦のための歌詞からの音楽印象分類方法",
+    "abstract" : "音楽には、集中力の向上やストレスの軽減といった,運動能力向上効果、心理状態緩和効果があるといわれており,この影響を利用したスポーツや高齢者ケア等の分野での精神面のサポートが行われている.すなわち,その場の状況,精神状態に適した音楽を選択し活用することが行われている.近年,音楽情報科学として,音楽検索や分類方法に関する研究が数多く行われているが,従来の音楽分類手法では,歌詞のないクラシックの楽曲を使用したメロディ,テンポによる音楽分類が中心で,歌詞による音楽分類は少ない.しかし,歌詞にも作詞者の感情が込められておりメロディ,テンポと同様に音楽の重要な構成要素である.そこで,本論文では,歌詞情報に基づく聴取目的に応じた楽曲推薦システムの実現のために,歌詞情報に含まれる感情語に着目した音楽分類手法を提案する.歌詞に含まれる感情語の出現回数から算出した,楽曲の特徴ベクトルをクラスタリングすることで,感情別の音楽分類を実現する.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B8-2",
+    "title" : "定番映画の印象ベクトルに基づく映画推薦手法の提案",
+    "abstract" : "現在、膨大な数の映画タイトルに対して、ジャンルや出演者名などを入力として検索する 映画検索サイトが普及しているが、様々な条件を組み合わせて所望のタイトルを検索する のは難しく, 特に, その映画の存在も知らないようなタイトルを発見することは困難であっ た。映画は単なる娯楽の対象となるだけでなく、ユーザの様々な状況に応じて笑いや感動な どを与えてくれる。本論文では、そういった映画に関する感想や意見がかかれた「NAVER まとめ」記事のタイトルに含まれる印象情報と、複数の記事に共通して出現する定番映画 のタイトルとを用いて, 定番映画を与えることで未知あるいは所望の映画タイトルを検索 する映画推薦手法を提案する。実際に「NAVER まとめ」から印象を抽出した結果, 定番 映画に印象を付与することができたのでその結果を示す.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B8-3",
+    "title" : "同伴者の影響を考慮した推薦候補選出法",
+    "abstract" : "個人向けの情報推薦と違い，今回の提案は同伴者がいる場合に対する情報推薦である．同伴者の存在により，ユーザの要求が変化するならば，推薦され方も変化させる方が自然である．つまり，同伴者の影響を考慮した情報推薦を実現させるためには，ユーザ個人に推薦される候補に加えて，同伴者の存在から増加する要求を情報推薦に反映させる推薦候補の追加が必要と考えられる．また，場合によっては，追加ではなく隠蔽することも必要となる．これらの課題に対して著者らは，ユーザ個人に対する推薦と同伴者がいる場合に対する情報推薦との変化を，推薦の根拠となる属性値の変化として推薦候補選出法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B8-4",
+    "title" : "メタデータ類似度および音響的距離とセレンディピティとの関係分析",
+    "abstract" : "セレンディピティな楽曲推薦手法の確立を目指し，ユーザが好む楽曲との類似度とセレンディピティとの関係を分析する．セレンディピティな楽曲とは，ユーザが知らない，かつ好むであろう楽曲と定義する．また，ユーザが好む楽曲とのメタデータ（アーティストやアルバムなど）に基づく類似度をメタデータ類似度，音響特徴量に基づく距離を音響的距離と定義する．このとき，次の仮説について検証する．仮説 I：対象ユーザが好きな楽曲とのメタデータ類似度が高い楽曲は対象ユーザにとって既知である．仮説 II：対象ユーザが好きな楽曲との音響的距離が近い楽曲は対象ユーザに好まれる．仮説 III：メタデータ類似度が低く，かつ音響的距離が近い楽曲は，対象ユーザにとって未知であり，かつ好まれる楽曲（つまり，セレンディピティな楽曲）である．以上の仮説を検証することで，セレンディピティ指向楽曲推薦手法の設計方針について考察する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B8-5",
+    "title" : "画像広告の効率的な検索のための転置インデックス構築",
+    "abstract" : "オンライン広告はインターネットの経済を支える大きな柱の一つであり，\r\nビジネスと学術の両方から大きな注目を浴びている．\r\nオンライン広告の課題の1つに，ユーザにとって適切な広告をどのように選択するかというものがある．\r\nテキスト広告では，どれくらい単語が重複するかによって類似度を定義し，この類似度を用いて情報検索に基づく手法で選択している．\r\nしかしながら，画像広告では類似度を用いた情報検索に基づく手法を用いることができない．\r\n本稿では，オンライン広告の中でも特に画像広告を対象とし，\r\nユーザに適合するような画像広告を選択するために，ユーザ情報空間から画像広告空間への変換行列を利用し，効率的に画像広告を検索する手法を提案する．\r\n『Yahoo!ディスプレイアドネットワーク』の広告配信システムログを用いて提案した変換行列の有用性を検証した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "B8-6",
+    "title" : "ユーザの視聴履歴と投稿動画におけるタグの共起関係の差異に基づく動画推薦手法",
+    "abstract" : "近年，ニコニコ動画やYoutubeなどの動画共有サイトには非常に多くの動画が存在し，今も増え続けている．このような状況で，ユーザは興味を持つ動画を発見するのは手間がかかる．そのため，ユーザは発見が容易で，ランキング上位の現在盛り上がっている動画を目にすることが多くなる．しかし，ランキングにない動画が面白くなく，ユーザにとって興味のないものとはいえない．そこで，本研究ではユーザの視聴した動画に付与されたタグの共起関係と動画全体のタグの共起関係の差異を用いて動画を抽出し，共起回数により拡張したユーザのタグから見た片方向の一致度と動画のメタデータを用いてランキングすることで，ユーザにとっての未知性や動画の面白さを考慮した推薦手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G1-1",
+    "title" : "匿名化データの利用に関する一検討",
+    "abstract" : "パーソナルデータの分析を外部委託する場合、k-匿名化等による匿名化が求められる。しかし、匿名化によってデータ形式が変更される可能性があり、元のデータと同様に扱えないという課題がある。そこで、元のデータと同じ形式で匿名化を実現するデータ加工方式について検討し、いくつかの分析事例にてその有用性を検証する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G1-2",
+    "title" : "Pk-匿名化手法の精度改良に関する諸検討",
+    "abstract" : "ランダム化を用いた匿名化手法の一つにPk-匿名化がある。既存のPk-匿名化は、データ主体を1/k以上の確信度に絞り込めないよう、元の属性値にラプラス分布に従うノイズを付与することで実現されている。本稿では、既存手法におけるノイズが過剰に付与される点の解決策として、元の属性値を予め複数のグループに分類してからPk-匿名化を実現する手法を提案する。また、ベイズ推定を用いた再構築法を適用し、攪乱されプライバシが保護されたPk-匿名化データから統計的に有意なクロス集計結果を得ることができるかを検証する。さらに、属性値が予めグループに分類されたデータにおいても同様に再構築法を適用し、クロス集計結果を比較することで提案手法の優位性を示す。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G1-3",
+    "title" : "差分プライバシを保証した外れ値検出",
+    "abstract" : "外れ値検出はデータ解析における重要な問題である．しかし，特異な値を外れ値として検出することそのものがプライバシ侵害を招きかねず，外れ値検出におけるプライバシ保護の実現は困難な問題である．本研究では，外れ値の個数を検出するクエリに注目する．個数のような統計値からプライバシを保護する指標として差分プライバシがある．我々は外れ値の個数を検出するクエリに対して差分プライバシを保証する方法を提案する．差分プライバシを保証するために大域敏感度によるラプラスメカニズムが一般的に用いられる．しかしながら，外れ値検出にこの一般的なメカニズムを用いると出力結果の有用性を下げてしまう．この問題を克服するために，提案手法では大域敏感度の代わりに平滑敏感度を用いる．これによって，差分プライバシを満たしつつ，高い有用性を持つ出力結果を得るようにする．実験では大域敏感度を用いたときと平滑敏感度を用いたときの出力結果の有用性を比較する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G1-4",
+    "title" : "高次元データに対するMicroaggregationに基づくk-匿名化手法",
+    "abstract" : "高次元データに対するmicroaggregationに基づくk-匿名化手法を提案し、従来手法との性能比較をシミュレーション実験により行う。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G1-5",
+    "title" : "k-匿名化のための属性値に応じた属性値一般化手法の提案",
+    "abstract" : "k-匿名化技術は，企業が保有する大量の顧客データを，そのプライバシーを守りながら，データベースマーケティングなどのサービスに活用できるものとして注目されている．k-匿名化は，同じグループのレコードをk個以上にするためのk-分割の作成と，同じグループになったレコードの属性値を一般化する2フェーズに分けられる．本稿では，後者に着目して，属性のもつその属性特有の型を定義し，その型に適した形で一般化を行う方法を提案する.そして，典型的なメール，電話番号，住所，年齢などの属性が適切に一般化できることを示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G1-6",
+    "title" : "ユーザの行動プランの変更を考慮したダミーによるユーザ位置曖昧化手法",
+    "abstract" : "近年注目を集めている位置情報サービスでは，サービス利用時にユーザの位置情報をサービスプロバイダへ送信する必要があり，位置情報が第三者に流出することで，ユーザの個人情報が漏洩する可能性がある．このようなプライバシを保護するために，筆者らの研究グループでは，先行研究において，実環境における制約条件を考慮し，いくつかの地点を停止しながら移動するダミーの位置情報を生成するユーザ位置曖昧化手法を提案した．しかし，先行研究ではユーザの行動プランは既知であるとして事前にダミーの行動を決定しており，ユーザの実際の行動が既知のプランと異なると，ユーザの位置を十分に曖昧化できないことがある．そこで本稿では，既知の行動プランと異なるユーザの動きに対応してダミーの行動を修正することで，ユーザの行動が完全に既知でない状況でも対応して行動するダミーを生成する．地図上でユーザとダミーの動きをシミュレートし，先行研究の手法と比較した結果，提案手法の方が十分にユーザの位置を曖昧化できていることを確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G2-1",
+    "title" : "データやユーザの効率的な追加・削除が可能な秘匿情報アクセス手法",
+    "abstract" : "近年、災害時の情報技術活用が注目され、安否確認や情報共有を支援するためのシステムが利用されている。このようなシステムには、プライバシーやセキュリティに関して問題となり得る機微な情報が蓄積される可能性があり、必要に応じて暗号化による保護が行われるべきである。しかしながら、従来の暗号化手法では、データの保有者が全ての共有先の鍵情報を把握しなければならない上、共有先ユーザが削除される度に暗号化し直す必要があり、非効率的である。そこで本研究では、データやユーザに対してより効率的な追加や削除を行うために、共有情報に対するアクセス制御としてロジカルなクラスを単位とした暗号化を行う手法を提案し、その評価を行う。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G2-2",
+    "title" : "ウェアラブルカメラ撮影者へのコンテキストベースプライバシー侵害理由の警告サービスシステム",
+    "abstract" : "Google Glassに代表されるウェアラブルカメラの普及を妨げる要因として，盗撮や監視等のプライバシー侵害の懸念が指摘されている．この問題に対し，ウェアラブルカメラ撮影者に，撮影状況に応じたプライバシー侵害の警告を行い，プライバシー侵害を未然に防ぐサービスを提案する．予め多量のSNSアーカイブを対象としたトピック分析と階層クラスタリングによりプライバシー侵害理由を抽出しておき，撮影時には被撮影者の表情やしぐさと撮影場所などで構成されるコンテキストの変化をトリガーとしたプライバシー侵害予測を行い，そのコンテキストに対応した侵害理由の警告を行うことにより撮影者にプライバシー侵害を気付かせるサービスを実現し，その評価を行った．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G2-3",
+    "title" : "動的データセットの再公開における精確な安全性の計算方法の提案",
+    "abstract" : "動的データセットの再公開における安全指標を新たに定義し，その安全指標の値の計算方法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G2-4",
+    "title" : "アドホックネットワーク上のTop-k検索における攻撃端末検出のための認証子付き通知メッセージ作成手法",
+    "abstract" : "アドホックネットワークにおいて，Top-k 検索は有効な検索であるが，ネットワーク内に攻撃端末が存在する場合，検索精度が低下してしまう．\r\n筆者らはこれまでに，検索結果に入る必要なデータを不要なデータと差し替えるデータ差替え攻撃を提唱し，\r\nこの攻撃による検索精度の低下を防ぐTop-k 検索手法および攻撃端末特定手法を提案した．\r\n提案した手法では，攻撃端末を早急に特定するため，ネットワーク内の端末が特定した攻撃端末の情報を共有する．\r\nしかし，攻撃端末は攻撃端末の特定を妨害するために，通常端末のことを攻撃端末と偽って通知する虚偽通知攻撃を行うことが考えられる．\r\nそこで本研究では，攻撃端末が虚偽通知した際に検知できるように，通知メッセージにネットワーク内の端末のTop-k検索時の送信データの情報を認証子として添付して送信する．\r\n通知メッセージを受信した端末は，認証子より，通知された攻撃端末がデータ差替え攻撃を行っているかを確認する．\r\nこれにより，通知メッセージが偽造されていないことを把握できるため，虚偽通知攻撃を防ぎつつ，攻撃端末の情報を効果的に共有することができる．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G2-5",
+    "title" : "ビット数の大きな整数の乗算の高速化",
+    "abstract" : "ビット長の大きな整数の乗算を必要とする暗号技術などで利用される高速乗算アルゴリズムについて考察する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G2-6",
+    "title" : "DaaS 環境におけるデータとクエリ双方のプライバシ保護を実現する効率的な秘匿検索",
+    "abstract" : "クラウドコンピューティングで提供されるデータベースサーバ（DaaS）を利用し\r\nた検索サービスでは，第三者であるクラウドのサーバ管理者によるデータ漏洩やクエリ流出を防ぐため，データとクエリ双方のプライバシー保護が求められる．データとクエリ双方を秘匿した検索手法には，暗号化されたデータと検索用索引をクライアントで保持し，索引の暗号鍵をもつクラウドと通信を行いながら，探索を行なうスキームが提案\r\nされている．しかしながら，このスキームでは探索ノードの更新毎に通信を行なうため，検索処理にかなりの時間を要する．また，クライアントはデータと索引の保持に加え，検索処理の大部分を担うため負荷が大きい．そこで，本研究では索引の構造に着目し，クライアントの負荷を軽減した高速な秘匿検索手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G3-1",
+    "title" : "Efficient Set Similarity Join on Graphics Processors",
+    "abstract" : "We present a solution for set similarity join using Graphics Processing Units (GPU). The increasing amount of data generate nowadays demand faster and more efficient ways to perform set similarity over large data sets. We tackle this problem usinig a two-fold approach. First, MinHash? is employed to estimate the Jaccard similarity between sets in a space-efficient way. Second, we use GPU to improve the performance of the MinHash? implementation, as well as the join itself. Experimental results show accurate estimations with a reduced processing time, with speedups of more than 150 times compared to the serial CPU version, and more than 25 times compared to the parallel CPU version.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G3-2",
+    "title" : "データベースにおけるエージングがクエリ最適化に与える影響に関する実験的考察",
+    "abstract" : "データベースは更新が繰り返されると、格納構造が非効率化し、シーケンシャルな読み込みの性能が低下する。本論文では、そのようなエージングが、データベースにおける問い合わせ最適化に与える影響に関して、実験を行い、考察する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G3-3",
+    "title" : "LZE++: 共有辞書を用いた圧縮データに対するランダムアクセスの高速化",
+    "abstract" : "圧縮データに対する直接的で低遅延なランダムアクセスを可能にするLZE++を提案する．圧縮されたデータに対する直接的（'in-situ'）な部分データの参照は列指向DBや検索エンジンにおいてメモリのfootprintを小さくすることができる重要な要素技術である．このような操作を行う既存手法としてLZEndが提案されている．任意位置にある長さnのデータを圧縮したままO(n)で抽出することが可能だが，提案されている手法はCPUの実行効率が低く遅延が大きい問題がある．そこでLZE++では対象データから共有辞書を作成して，復元処理で活用することで局所性を改善する手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G3-4",
+    "title" : "メニーコア環境における関係表分割アルゴリズムを用いたハッシュ結合演算の評価",
+    "abstract" : "近年クロック周波数の上昇によるCPUの性能向上が限界に達し，処理の高速化のために複数コアを搭載するマルチコアCPUを利用するのが主流となった．ソフトウェア開発もマルチコアCPUを意識したものになり，データベース分野においてもマルチコアCPUを用いたデータベース処理手法が研究されている．しかし大量のコアやハードウェアスレッドを用いた評価はまだ十分に行われていない．そこで本稿ではデータベース処理のうち特に負荷の大きいハッシュ結合演算に焦点をあて，これを60コア・240ハードウェアスレッドを搭載するインテルXeon Phiコプロセッサ上で実行した際の評価を行う．ハッシュ関数による関係表分割の有無や実行スレッド数等のパラメータの変化が演算性能に与える影響について評価結果を報告する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G3-5",
+    "title" : "GPGPUによる複数の不確実時系列データに対する類似度計算の高速化",
+    "abstract" : "時系列データは日常的に最も頻繁に用いられるデータ形式の一つである．\r\n時系列データの類似検索において，従来の手法はデータの持つ誤差情報を考慮しておらず，検索精度の向上の妨げとなっている．\r\n誤差を含む時系列データ間の類似度を評価する手法はいくつか存在するが，いずれも確率計算を行うためコストが大きく，大量のデータに対して類似度計算を行うことが難しいという問題がある．\r\n本研究ではDUSTと呼ばれる類似検索手法を対象にGPGPUを用いた高速化手法を提案する．\r\n具体的には，DUST内の距離計算において必要となる積分計算や確率計算をGPU上で並列に行い，高速な処理を実現する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G3-6",
+    "title" : "GPUを用いたMapReduce による高精度検索のための高速な重み計算",
+    "abstract" : "本研究では，GPU における MapReduce を用いて，高精度な情報検索を行う上で必要となる，膨大な量の語の重み付け計算を高速に行う手法を提案する．\r\n正確な情報検索を行う上では検索対象文書に関する様々な統計量を計算する必要がある．そこで、並列処理や数値計算に効果を発揮する GPU に着目し，GPU による MapReduce のフレームワークである Mars を拡張することで，大量の語に対して高速にその重みを計算する手法を提案し，その評価を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G4-1",
+    "title" : "Co-occurrence graph based twitter hashtag sense induction",
+    "abstract" : "Twitter hashtags are used to categorize tweets for improving search categorizing topic. But the fact that people can create and use hashtags freely leads to a situation such that one hashtag may have multiple senses. In this paper, we propose a method to induce senses of a hashtag in a particular time frame. Our assumption is that for a sense of a hashtag the context words around it are similar. Then we design a method that uses a co-occurrence graph and community detection algorithm. Both words and hashtags are nodes of the co-occurrence graph, and an edge represents the relation of two nodes co-occurring in the same tweet. A list of words with a high node degree representing a sense is extracted as a community of the graph. Different from natural language words, not all of what we obtain is senses; some of them are just highly related topics, due to the arbitrary use of hashtags. We take Wikipedia disambiguation list page as word sense inventory to refine the results by removing non-sense topics. The result is evaluated by the way of information retrieval.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G4-2",
+    "title" : "非テキスト情報のみを用いたAROWによる効率的なCTR予測モデルの構築",
+    "abstract" : "オンライン広告の市場規模は近年急速に拡大している．広告効果を高めるためには，広告クリック率（Click Through Rate: CTR）の予測が重要である．これまでにCTR予測に関する研究は広く行われてきたが，その多くは独自の検索エンジンで取得したクエリのテキスト情報を利用するものである．しかし，広告配信サービスを提供する企業の多くは検索エンジンを持たない．そこで本研究では広告配信サービスから取得可能な非テキスト情報のみを用いてCTR予測を行う．CTR予測モデルには高精度かつ高速なオンライン型分類器のAROW（Adaptive Regularization of Weight Vectors）を利用する．ベースライン手法との比較を行った結果，精度を下げることなく予測モデル構築の時間を30倍以上短縮することに成功した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G4-3",
+    "title" : "動的社会ネットワークに対する混合メンバシップ・ブロックモデルのコールドスタート環境下における逐次推定",
+    "abstract" : "近年，ソーシャルメディアを典型とした種々のネットワーク構造を持つデータの増加にともなって，ネットワークに対するベイズ統計学的アプローチによる潜在変数モデリングが注目されつつある．\r\nこのような潜在変数ネットワークモデルの一つに，頂点のソフトクラスタリングを実現する混合メンバシップ・ブロックモデル（MMSB）がある．\r\nMMSBはこれまで，コミュニティ発見やリンク予測などに用いられてきており，その表現能力が高いことで知られている．\r\nしかし，MMSBの潜在変数や未知パラメータは，既存手法では観測されたネットワーク構造全体を通して学習することを仮定している．\r\nしたがって，既存手法では，時間とともに観測情報が増加するという動的環境に対応することが容易ではない．\r\nそこで本発表では，逐次的ギブスサンプラなどの逐次モンテカルロ法によるMMSBの逐次推定において，頂点の活性に着目したサブサンプリングすなわち一部の適切なサンプルのみを用いた推定手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G4-4",
+    "title" : "ソーシャルビューイングにおける 盛り上がりの効果的な提示のためのツイート集約化手法",
+    "abstract" : "近年，Twitter等のSNSを利用して感想を投稿し他者の投稿を眺めながらTV番組を見る「ソーシャルビューイング」という新しい視聴形態が注目されだしている．Twitterを利用時は，ハッシュタグを使って目的の番組に関するツイートを収集し行う．実際の実況タイムラインでは複数のユーザが同一のトピックに対してのツイートをもあり上がっているが，また同時に大量のツイートを取得してしまうので読み切ることができない。我々はこれらの盛り上がっているツイートを抽出し別の形にまとめてユーザに提示することでユーザが目にする情報量を減らすことが可能ではないかと考えた．本研究では盛り上がりを効果的に提示するため，実況ツイートから盛り上がっているツイートをトピック毎に収集選別し，盛り上がりを損ねずユーザに提示する集約化手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G4-5",
+    "title" : "マイクロブログを用いたWeb検索のパーソナライゼーション手法",
+    "abstract" : "　ソーシャルメディアネットワークサービス (以下、SNS) は、ユーザの発信する情報量の多さから、様々な場面で の活用が検討されている。本研究は Web 検索の場面でマイクロブログから得られる情報を使ったパーソナライゼーションの実 現を目的としている。\r\n　本報告では、マイクロブログサービスの一つである Twitter を用いた Web 検索のパーソナライゼーションの手法として、 Twitter のホーム画面に表示されるユーザ発言の集合(Twitter ではタイムラインという。以下、TL)を文書とした擬似レレバン ス・フィードバックによるクエリ拡張を提案する。今回著者らが行った実験では、Web 検索のデータセットとして Text Retrieval Conference (TREC) Web Track 2013 Ad Hoc Task のテストコレクションを用いた。2つの比較対照システムと提案手法によるシス テムから得られた検索結果について、TREC のテストコレクションと Twitter ユーザの目線からの主観的評価の二つの側面から 比較し、マイクロブログのツイート素性を用いたパーソナライゼーション手法の有効性について検討する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G4-6",
+    "title" : "メタデータ付与行為による情報フィルタリングとその試作",
+    "abstract" : "　マイクロブログでの情報フィルタリングは、アカウントや投稿中に含まれる語による単純な絞り込みと、時系列順の結果表示が殆どである。これは、興味トピックを適切に抽出するには不十分であり、利用者個々に異なる情報要求に応じたフィルタリング機能の提供が必要である。\r\n　本研究では、アカウント、発言それぞれへのtaggingを導入すると共に、tagging行動自体をメタデータとして取り扱える手法を提案する。taggingは単に新たな分類軸を与えるだけではなく、taggingという行動そのものが一つのメタ的な情報フィルタリングとして活用される。その結果、利用者の信頼する他アカウントの行動によるフィルタリングが実現される。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C1-1",
+    "title" : "調理レパートリー拡大のためのレシピ推薦手法の提案と評価",
+    "abstract" : "豊富なレシピと多様な検索を備えたレシピサイトの登場によって，日常的にレシピサイトを利用 するユーザが増加している．本研究では，ユーザの調理経験に基づいてレパートリーを漸増的に増やすことを狙いとしたレシピ推薦法を提案する．レシピに出現する食材と調理法の出現頻度，およびそれらの組み合わせを分析することで、未経験の食材と調理法を含むレシピの中から調理者の負担が少ないレシピを推薦できることを明らかにした．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C1-2",
+    "title" : "レシピ手順の順序関係を用いた詳細度算出手法",
+    "abstract" : "近年，クックパッドや楽天レシピのようなユーザ投稿型レシピサイトには数多くのレシピが存在し，今も増え続けている．このように，数多くのレシピの中から，ユーザが参考にしてもいいレシピを発見するのは非常に困難である．そこで，本研究ではレシピ手順に着目し，詳細に書かれたレシピを推薦することを目的としている．本手法では，レシピ間において同じ動詞が出てくる手順同士が，同じ手順を表していると仮定し対応付けを行った．対応付けの際に，動詞の出現する順序関係を考慮した．そして，対応付けした手順数の差を詳細度として算出する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C1-3",
+    "title" : "各種メタデータの特徴を考慮した未知レシピへのメタデータ自動付与方式の提案",
+    "abstract" : "レシピ推薦サービスにおいて，各レシピに対して適切なメタデータを付与することで推薦精度の向上が期待できる．我々はこれまでに，レシピ間類似度分析に基づく未知レシピへのメタデータ自動付与方式の提案を行ってきた．本稿では，レシピの特徴ベクトルの抽出方法の妥当性や問題点を検討すると共に，各種メタデータの特徴を考慮した特徴ベクトル抽出に基づいた改良型のメタデータ自動付与方式の提案を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C1-4",
+    "title" : "スマートフォンを利用したレシピ検索のための食材管理システム",
+    "abstract" : "毎日の食事における料理を考える際に，Web上のレシピ検索サイトが広く利用されている．ただし，現状の検索結果として得られるレシピには，その時々に冷蔵庫にある食材の状態が関連付けられている訳ではない．各ユーザの冷蔵庫食材と関連付けられた，より高度なレシピ検索や推薦を実現するためには，事前に食材をデータベース等に登録し，適切に管理する必要がある．本稿では，スマートフォンが普及している現状を踏まえ，バーコードを介した効率のよい食材管理システムを提案する．１次元バーコードの読み取りと食材データベースへの問い合わせをAndroidアプリとして実装し，ユーザが直感的に効率よく食材管理できるようにする．そして，手入力による食材管理手法との比較を行い，本システムの利便性を検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C1-5",
+    "title" : "ユーザ調理環境の自動登録に向けた調理道具の認識と登録",
+    "abstract" : "毎日の食事における料理を考える際に,Web 上のレシピ検索サイトが広く利用されている.ただし,現状 の検索結果として得られるレシピには,ユーザの調理環境で利用できる調理道具が考慮されている訳ではない.調理 道具を考慮したレシピ検索は,高いユーザ満足が得られることが期待されるものの,調理道具の登録に手間がかかる 点が課題となり,現状では普及に至っていない.本稿では,カメラ付き携帯端末を持つ機会が増えていることを踏ま え,調理環境の自動登録化を目的として,ユーザの所持している調理道具を認識・登録する手法を提案する.98 種類 の調理道具に対し,局所的なエッジ特徴量を用いた識別器を構築し,識別精度を比較する.また,識別がうまくいか ない場合の効率的な登録方法を調べるため,いくつかの手法で登録時間を比較する.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C1-6",
+    "title" : "根拠に基づく食の状況型推薦",
+    "abstract" : "「食」の選択．それは誰しも毎日行うことである．しかし，何か食べたいが，何も思いつかないことは多い．そのようなとき，ユーザのこれまでのツイートから，そのユーザが満足する食を推薦することを目標とする．食は，「今日は寒いから鍋にしよう」のように，その人のそのときの状況に依存して選ばれることが多いため，ユーザのこれまでのツイートからそのユーザの状況を獲得して，それに適した食を推薦する．ただし，「うどんはどう？」というように，単に食を推薦するだけで，その「根拠」を示さなければ，ユーザはなぜ「うどん」が推薦されたかわからず，その選択肢を選ぶことが自分にとって良いのか悪いのかの判断がつかない．そこで本研究では，「胃腸を休めるためにうどんはどう？」のように，「食」だけでなく，なぜそれを推薦するのかといった「根拠」も提示することにより，ユーザが納得して食を選択できる推薦システムの実現を目指す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G5-1",
+    "title" : "電子カルテシステムのオーダログデータ解析による医療行為の支援",
+    "abstract" : "近年、医療の現場では電子カルテシステムの利用が広く普及している。電子カルテシステムに蓄積されたログデータを解析することにより、様々な面での医療の支援をすることが可能である。例えば、患者毎のオーダログ中のシーケンスを解析することで医療行為の推薦や検証を行うことができる。そのような医療行為のシーケンス解析においては、医療行為の順番と同時に、行為間の間隔等の情報も重要である。本稿では、基準となる医療行為として手術に着目し、電子カルテシステムのオーダログデータに対して、術後の医療行為間の間隔を考慮したシーケンシャルパターンマイニングを行い、得られた結果を用いて医療行為の支援を行う方法に関して検討する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G5-2",
+    "title" : "個人の体脂肪率と生活習慣との相関ルール生成にデータの季節変動が及ぼす影響",
+    "abstract" : "個人の長期に亘る体脂肪率の時系列データに明瞭な季節変動が観測され、その変動を補正することにより、時系列データが正規分布に近づくことを見出した。この結果から、開発中の健康データマイニングにおいて、季節変動をバイアスとして捉え、ルール生成を行うべきことが示唆された。そこで本研究では、体脂肪率の季節変動補正が、生活習慣としての消費エネルギー/摂取エネルギーとの間の相関ルール生成に及ぼす影響を解析した。その結果、季節変動補正は、健康データマイニングのコア技術である遅延相関分析には殆ど影響を与えないものの、異なる相関ルールをもたらすことが判った。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G5-3",
+    "title" : "医薬品の既知の副作用に着目した未知の副作用推定手法の提案",
+    "abstract" : "医薬品は，医療行為において必要不可欠なものである．一方で，医薬品の服用に伴う，意図に反した有害な症状が生じる副作用が大きな問題となっている．副作用を早期に発見し対策を講じることは，医療現場において重要な課題である．しかし，医薬品の関連性が立証されていない未知の副作用の存在は，副作用の早期発見や対策の弊害となっている．未知の副作用を発見するため, 副作用の症例報告から医薬品と副作用の因果関係を推定する研究が行われている．しかし，比較的軽度の症状や発現頻度の低い症状は副作用と認識されにくく，報告がされない可能性がある．そこで本研究では，同一分類上の医薬品に発現する副作用は類似するという知見を活用し，医薬品の既知の副作用情報に着目した，未知の副作用の推定手法を提案する．未知と仮定した医薬品の既知の副作用に対する，提案手法で推定した未知の副作用における平均逆順位（MRR）は，全ての副作用において0.564であり，提案手法が有用であることを示した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G5-4",
+    "title" : "医療機関の大規模データ処理による生活習慣病と認知機能低下との関係",
+    "abstract" : "本研究では、これまでにデータベースに蓄積された認知機能検査データおよび頭部MRI画像、さらに電子カルテに蓄積された疾患情報などから、4年以上に渡って追跡調査することのできた認知症患者において、糖尿病、高血圧などの生活習慣病と認知機能低下との関係について検討した。その結果、糖尿病の既往歴のある認知症患者の認知機能は急速に低下し、さらに脳の萎縮も高度であることが分かった。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G5-5",
+    "title" : "時系列ログと職種に基づいた電子カルテの重要度評価",
+    "abstract" : "電子カルテシステムの普及と共に, 多くの診察データが蓄積され続けており, 二次利用への期待が高まっている. 既存研究の多くは, 電子カルテに記載された情報そのものである内部情報を元に電子カルテの解析を行うが, 内部情報の解析は自然言語処理や医学的知識が求められる等の困難を伴う. 本研究では, 内部情報ではなく医療従事者が実際にカルテを操作した履歴であるアクセスログを元に, カルテの重要度評価と, 一つの応用例としてケースカンファレンスに紹介される患者の予測を試みる. 医療従事者と患者の関係は, 二部グラフで表すことが出来る.我々は約7年間蓄積されたアクセスログを元に, グラフアルゴリズムを元に職種と時系列により重み付けを行う新たな手法を提案する. 得られた重要度に基づく予測精度を評価する.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G5-6",
+    "title" : "観察記録に基づいて生成した複数問い合わせによるアレルギー症状事例検索システム",
+    "abstract" : "本稿では，日々の観察記録に基づいて生成した複数の問い合わせによるアレルギー症状事例検索システムについて述べる．本システムは，日々の観察記録の文章から，複数のパターンで問い合わせを生成し，それらの検索結果を関連データとして利用者に提示する．自動生成された問い合わせを用いた場合，利用者に対してそれぞれの検索結果における検索意図が明示的でないと考えれる．本システムでは，観察記録から生成される問い合わせから重要度の高いキーワード群を抽出し，検索結果の一覧においてそのキーワードを強調表示することにより，利用者に対して自動生成された問い合わせの検索意図を提示し，利用者が検索結果から関連データを取得する際のアクセシビリティを向上させる．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C2-1",
+    "title" : "時空間的なデータ分布とその変化を考慮したモバイルセンサデータの検索支援機構について",
+    "abstract" : "近年スマートフォンなどのモバイルセンサ端末が爆発的に普及しており，これらの端末から収集したモバイルセンサデータを活用する研究に注目が集まっている．センサデータを活用する場合，ある一定の時空間領域内におけるセンサ値の分布取得や，時空間的なセンサ値の急激な変化の検出が行われるものと考えられる．しかし，モバイルセンサデータは時空間的に偏って存在する傾向があるため，上記のような要件を満たすデータを検索する場合，当該データ群が存在する時空間領域を探す手間が非常に大きくなる．このとき，センサデータの時空間的な分布を直感的に可視化することで，要件を満たすデータ群の検索を容易にできるものと考えられ，筆者らの研究グループでは，これまでにモバイルセンサデータの時空間的なデータ数の分布を可視化するシステムを構築した．しかし，このシステムはデータ数の可視化のみを行うものであり，センサ値の可視化や，上記のようなセンサ値に基づく検索を支援する機能を備えていなかった．本稿では，これまでに提案した可視化システムを基礎とし，センサ値を用いたデータ検索に要する手間の削減を目的として，モバイルセンサデータの検索支援機構を設計，実装した．提案機構では上述した2種のデータ検索を支援するため，センサ値だけでなく，センサデータを取得する時空間領域の大きさや粒度，およびデータ値の時空間的な変化量を指定した検索機能を提供する．このような検索に対し，条件を満たすデータ群が存在する時空間領域を提示することで，ユーザは所望のデータを容易に取得できる．また，検索結果となる時空間領域やセンサ値の分布を，地図インタフェースおよび時間的変化を示すグラフを用いて可視化することで，データの時空間的な特性の直感的な理解を支援する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C2-2",
+    "title" : "無線LAN-APにおけるTCP ACKパケット蓄積回避のための協調的輻輳制御手法の提案と実装",
+    "abstract" : "近年のロスベースTCPはより高いスループットを確保するためにアグレッシブな輻輳制御手法を用いているが，有線接続と比べて脆弱な無線接続環境においては、その手法によって膨大なパケットが蓄積されたり落ちてしまうという問題が生じている．\r\n本研究では，そのロスベースTCPのひとつであるTCP CUBICを輻輳制御アルゴリズムとして使用しているAndroid端末を用いて，無線LANアクセスポイントにおけるACKパケットの蓄積を回避する協調的制御手法の提案と実装を行う．\r\n本手法では，同一アクセスポイントに接続された端末数とその混み具合を示す往復遅延時間のふたつのパラメータにより，各端末の最大・最小輻輳ウィンドウ値を定める．\r\nそれにより，アクセスポイントでのACKパケットの蓄積を防ぎ、かつ端末間で可用帯域を公平に分け合うことで全体の通信速度と公平性の向上を可能にしている．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C2-3",
+    "title" : "サーバ機能付き無線LAN-APを利用した画像/動画共有方法の提案と評価",
+    "abstract" : "近年，多くの携帯端末ユーザが，旅行先やイベント会場などで写真や動画を撮影し、友人間またはイベント参加者間で共有しあうという場面が多く見られる．現在使用されている共有方法として，メッセージに添付する方法，インターネットを介してweb上のSNSや写真共有サイトにアップロード/ダウンロードする方法，Bluetoothを利用する方法などが挙げられる．しかし，これらの方法には距離的制限，データサイズの制約や通信量の増加，ネットワーク環境に通信速度が左右されるといった問題点がある．そこで，本研究では，サーバ機能を備えたWi-Fi APを利用した共有方法を提案し，シミュレーションによる従来の方法との性能比較を行った．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C2-4",
+    "title" : "異なる属性値を持つ多数の近接する移動無線LANの品質向上制御",
+    "abstract" : "近年、モバイルルータやテザリングなどの普及により個人が移動無線LAN を持ち歩き、会議の場やカフェなどのように、一箇所に密集した状態で利用する機会が増えている。すると、無線LANシステム間での干渉により大きく性能が劣化する事が考えられる。これまでは、無線LAN間距離や1つのLAN内の端末数などの属性値が全て同一の場合の性能評価と制御方法の検討を行ってきたが、現実の使用状況を想定した場合には異なる属性値の無線LANが近距離にひしめく事が考えられる。また、全てが同一の属性値の場合と異なる属性値の無線LANが混在する場合とは、通信特性も異なることが考えられる。そこで、本研究では異なる属性値を持つ多数の移動無線LANの近接時の性能評価を行った。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C2-5",
+    "title" : "密なモバイルセンサネットワークにおける観測値の時間的変化を用いた定期的な境界線検出手法",
+    "abstract" : "移動型センサ端末が密に存在するモバイルセンサネットワークにおいて，観測値が一定値以上を示す地理的な領域（イベント）の形状を要求する場合，\r\n当該イベントの境界線を検出し，その付近に位置する端末のセンサデータを収集すれば，要求を満足できる．\r\nこのようなイベント形状を定期的に取得するためには，イベント形状の変化により動的に変化する境界線を観測時刻ごとに検出する必要がある．\r\nここで，各端末の自律的な動作で境界線を検出するためには，各端末が隣接端末とセンサデータを交換する必要があるが，\r\n観測時刻のたびに全端末がセンサデータを交換すると，そのためのトラヒックが非常に大きくなってしまう．\r\n本稿では，各端末が取得した観測値の時間的変化を用いて，定期的な境界線検出を効率的に行う手法を提案する．\r\n提案手法では，各端末が境界線検出より短い間隔で自身の観測値を取得し，自身が境界線を跨いでイベントの内側に入った（あるいは外側に出た）かどうかを確認する．\r\n観測時刻間で境界線を跨いでいた場合，境界線を跨いでからの経過時間が短い端末が優先的にセンサデータを交換し，境界線検出を行う．\r\nこれにより，境界線から遠く，境界線検出に寄与しない端末のセンサデータ交換を抑制し，トラヒックを削減する．\r\nさらに本稿では，提案手法の有効性をシミュレーション実験によって検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C2-6",
+    "title" : "複数拠点統合型センサネットワークにおけるセンシング時刻の分布を考慮した時空間インデックス構築手法",
+    "abstract" : "これまでに複数拠点統合型センサネットワークにおいて，時空間インデックスを用いて所望のモバイルセンサデータを持つ拠点を高速に検索する手法が提案されている．しかし，従来手法では，データの個数に基づいて担当領域を分割し，インデックスを構築していたため，センシング間隔が異なる場合など，センシング時刻の分布に偏りがあると検索性能が低下していた．そこで本稿では，複数拠点統合型センサネットワークにおけるセンシング時刻の分布を考慮した時空間インデックス構築手法を提案する．提案手法では，各拠点が有するモバイルセンサデータの位置や時刻に関する情報の範囲を木構造を用いてインデックスサーバで管理する．インデックスを構築する時に，従来の木の分割に加えて，センシング時刻の分布を考慮した木の分割を行う．提案手法の性能を複数のデータセットを用いて評価した結果，所望のデータを有する拠点を高精度に取得しつつ，従来のインデックス構築手法より検索時間を短縮できることを確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G6-1",
+    "title" : "スコア付けを用いた特徴量抽出によるGタンパク共役受容体と化学化合物の結合予測",
+    "abstract" : "Gタンパク共役受容体(G-protein-coupled receptor，以下GPCR)と化合物の結合予測は新薬発見に欠くことができない．GPCRは，細胞外からの様々なシグナルを細胞内に伝達する役割を持ち，化合物がGPCRと結合することで，外部からの有害なシグナルが細胞内部に伝達されることを防ぐからである．新薬の候補となる化合物は大量に存在するため，計算機を用いて新たなGPCRと化合物の結合を予測する研究が行われている．GPCRと化学化合物との結合は，両者の性質によって決まるが，既存研究では化合物の性質だけで結合予測がなされているという問題がある．また，タンパク質と化合物の両方の性質を用いて結合予測をした研究もあるが，結合と関係無い性質まで用いて結合予測をしているという問題がある．そこで，本研究ではGPCRと化合物の結合予測精度向上のために，化合物と結合する部分を構成するGPCRのアミノ酸が持つ性質と化合物が持つ性質を用いて，GPCRと化合物が結合する際に頻出する特徴を抽出するアルゴリズムを提案する．SVMを用いて結合予測実験をした結果，既存手法と比較してAccuracyは12.0%向上し，AUCは0.064向上した．F値は0.115向上する結果となった．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G6-2",
+    "title" : "近赤外分光法を用いた脳血流計測データの解析と評価",
+    "abstract" : "近赤外分光法では臨床の現場における検査として広く用いられており、計測結果をデータ解析し、鑑別診断などに有用であるとされている．本研究では課題遂行時における脳血流計測を実施し、その結果についてデータ解析を行った．本研究の対象はAD（Alzheimer’s Disease）17名（男性7名、女性10名）、DLB（Dementia with Lewy Bodies）15名（男性8名、女性7名）及び学生ボランティア14名（男性4名、女性10名）の計46名である．計測部位は前頭前野領域であるFp1（左前頭局部）、Fp2（右前頭局部）とした．AD、DLB及び学生ボランティアの計測結果はFp1においてDLBと学生ボランティアの脳血流増加量で有意な差が認められた．またFp2においてADとDLB及び学生ボランティアの脳血流増加量では有意な差が認められなかった．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G6-3",
+    "title" : "近赤外光を用いた脳血液量データにおけるデータ処理とその評価",
+    "abstract" : "情報技術の発展とともに医療の場においてもデータ解析が必要となってきている．近年では，脳血液量を簡便に計測する方法として近赤外光計測装置の開発が行われている．近赤外光計測装置は侵襲性がなく，脳内のヘモグロビンの変化を簡便に計測できるものであるが，ヘモグロビンの絶対量は計測できず，個人差やバラツキも大きい．本研究では頭部近赤外光計測装置(HOT121B)を用いてアルツハイマー型認知症患者と健常高齢者における前頭前野の脳血液量を計測し，データの補正を行うとともに，補正をかけたデータと生データについて比較，検討を行った．また，近赤外光計測によるデータ補正の有用性について検討を行った．データ処理を行うことで，診断精度が向上する可能性が示唆された．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G6-4",
+    "title" : "ユーザのアクティビティに基づいた健康支援システムの提案",
+    "abstract" : "近年,メタボリックシンドロームや糖尿病などを中心とした健康問題が深刻化し\r\nてきている。\r\n本研究では、食習慣や運動習慣を継続的に改善していくことを目的に、\r\n食事レシピや運動メニューの推薦を行なう健康支援システムを提案する.\r\n食事や運動などユーザが実際にとったアクティビティに関する簡易な入力と、\r\nウェアラブルデバイスで得られる情報とを組み合わせることで、\r\n効果的な推薦が行えるシステムを実装したので報告する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G6-5",
+    "title" : "心拍変動を用いた時間依存睡眠段階遷移モデル",
+    "abstract" : "本研究では，脳の中枢神経系の活動状態から定義される睡眠段階を，心拍変動から推定する睡眠段階分類器を新たに提案する．従来は，サポートベクタマシンなどの機械学習モデルを分類器として利用する際に有効な素性を抽出するための素性エンジニアリング研究が主であった．本研究では，従来研究の成果である有効素性を利用した上で，睡眠段階の出現分布と遷移確率が就床からの経過時間に応じて変動するという睡眠の性質に着目して生成モデルを構築し，ギブスサンプリングにより睡眠段階を推論する時間依存睡眠段階遷移モデルを新たに提案する．45名の健常者の覚醒・レム睡眠・ノンレム睡眠の三段階を分類する評価実験により，提案手法がサポートベクタマシンとナイーブベイズモデルに比べて高い精度で分類できたことを示す．本研究は，ユーザの計測負担の低い心拍センサを用いた日常的な健康モニタリングの品質向上に貢献するものである．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G6-6",
+    "title" : "健康を意識した代替食材の発見手法",
+    "abstract" : "近年，糖尿病や肥満などの生活習慣病の増加により，食に対する健康意識が高くなっている．また，レシピサイトやブログ型レシピサイトなどの普及により，健康を目的としたレシピの取得が容易となってきている．しかし，それらのレシピは日常的に作る料理ではないことが多い．\r\n　本研究では，日常的に作る料理の食材の一部を他の食材に代替することで，健康を目的としたアレンジを加えることを目的とする．食材の食感，効能を抽出し，他の食材との類似度を算出することで，健康目的別に代替可能な食材を提示する手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C3-1",
+    "title" : "多数台ディスク環境でのデータベース処理実行時におけるストレージ省電力手法の提案と評価",
+    "abstract" : "近年デジタル情報量は爆発的に急増しており，今後10年で約44倍になるとも言われている．これに伴いストレージの出荷容量も急増していることからストレージの管理運用コストは見過ごせないものとなっており，データの効率的管理に注目が集まっている．データセンタのエネルギー消費量は2050年には2010年度の日本の発電電力量の約3倍になると予測されており，社会全体での節電が求められる中でデータセンタの消費電力を削減することは急務になっている.また，データセンタの消費電力割合の中でストレージの消費電力比率は約13%を占めていることから，ストレージの消費電力を削減することでデータセンタ全体の省電力化が可能であると言える．そこで本研究ではデータの効率的管理という点からクラウド上のデータベースの省電力化を考え，アプリケーションのSLA (Service Level Agreement) を考慮した，ストレージ省電力手法の提案を研究目的とする本稿では業界標準のデータベースベンチマークであるTPC-Hを利用し，TPC-H実行時におけるストレージの省電力化に向けて，実行時のシステム性能と消費電力量の解析を行った．さらに，大規模システム環境を想定し，TPC-H実行時のシステム性能評価，および本研究の提案手法のデータ配置制御手法の評価を多数台ディスク環境にて行った．また，SLAを考慮した提案手法の評価を行い，ディスク容量に架空の制限を設け，その制限内で出来るだけ消費電力を削減しながらも性能劣化が少ないデータ配置方法を求めた．今後は，本提案手法のさらに詳細な評価として，他のデータ配置方法での評価を行う．これに加えて，より大規模なデータサイズで評価をおこない，提案手法が有効であることを示したい．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C3-2",
+    "title" : "ランプ対策を目的としたウィンドファーム発電量予測に関する検討",
+    "abstract" : "　現在、国内では風力発電の導入が積極的に推進されており、2014年現在の導入実績が270万kWであるのに対し、2050年には最大約7000万kWの導入目標が掲げられている。一方で、風力発電は天候に伴って変化する不安定な電源であるため、大量導入時の電力系統への影響が懸念されている。特に、発電量の急変（ランプ）現象は系統全体の需給バランスを崩し、系統電力の周波数変動の要因となる。このような状況下でこれまでと同様の電力の安定供給を維持するためには、この急変を適切に予測し、この急変を緩和するような予備の発電機、蓄エネルギー機器の運用計画を適切にたてることが重要となる。本稿ではウィンドファームの発電量のランプに着目し、広域な地域において観測された気象観測量の時系列データを用いたRandom Forestsに基づく予測のアプローチを提案し、その精度の比較検証結果などを報告する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C3-3",
+    "title" : "オフィス環境における状況別電力可視化のためのUHF帯RFIDを用いた状況推定",
+    "abstract" : "現在社会的に電力削減要求が高まっており，オフィスなどの業務部門においても効果的な電力削減が求められている．オフィスにおける業務内容は，デスクワークのような個人作業と，突発的に起こる相談や大人数で行う会議といった共同作業に分けられる．個人作業時における電化製品の消費電力は適切に仕事に使用されているといえる．一方，共同作業時における個人利用の電化製品の消費電力は仕事に使用されない無駄な電力といえる．本研究ではUHF帯RFIDを用いて，個人作業と共同作業を区別できるシステムを提案する．リーダを着用したユーザが他のユーザのタグを認識することで，リーダを持つユーザの状況を取得する．これと電化製品の電力ログを紐付けることで，無駄に使われた電力量を算出することが可能となる．また，実際に妥当性の検証を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C3-4",
+    "title" : "ライフログデータを用いた利用者行動情報に基づく電化製品消費電力の可視化と予測",
+    "abstract" : "社会的な電力削減要求が高まる中，オフィスなどの業務部門においては，生産性を損なわず，なおかつ効果的\r\n\r\nな電力削減が求められている．しかし，現在の電力管理システムにおける電力可視化は，部屋単位や建物単位\r\n\r\nなど大きな単位でしか集約できず，利用者個人の細い状況などを考慮した情報を示すことができない．そこで\r\n\r\n本研究では，ウェアラブル端末から得られるライフログを用いて人・モノ・環境の状況を取得し，それを電化\r\n\r\n製品の消費電力ログに紐付けることで，電力使用時の状況をキーとした検索・集約により消費電力を可視化す\r\n\r\nるシステムを構築した．また，消費電力ログとライフログを用いて，節電行動がどれほどの効果を望めるのか\r\n\r\n予測を行い，実際に検証を行った．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C3-5",
+    "title" : "車載センサを用いたEVエネルギー消費ログDBの精度検証",
+    "abstract" : "環境に配慮したモビリティとして電気自動車（EV）が挙げられるが，EVはバッテリーを搭載していることからスマートグリッドでの応用が期待されている．このためにはEVからどれくらい電力を取り出せるか把握する必要がある．そこで我々は既存の自動車の走行ログから，仮にEVに置き換えた際の走行エネルギー量を推定・蓄積するデータベースを構築した．本研究では評価のために実車EVを用いてモータ出力データを半年に渡って収集した．これらを正解データとして，推定されたエネルギー量の精度検証を行う．本研究の成果として，長期に渡るライフログがスマートグリッド実現のための事前評価に有用であることを示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G7-1",
+    "title" : "SNSによる文化と風土の可視化",
+    "abstract" : "人々が日々の生活の中で撮る写真には、その人の興味や関心が、潜在的に反映されると考えられる。近年、SNSへの写真投稿の急増に伴い、その膨大な写真データを特定の尺度で分析・可視化し、社会的な傾向の分析を図ろうとする研究が活発に行われている。我々は、ユーザの興味や関心があらわれる写真というメディアを体系的に可視化することによって、テキストからは抽出することが困難な、ユーザの住む社会の持つ文化と風土を明らかにできる可能性があると考え、本研究では、代表的な写真専用SNSであるInstagramを利用し、特定の地域で投稿された膨大な写真データを視覚的な観点から分析し、地域の見どころと見頃を動的に分かりやすく伝える可視化表現を自動的に生成するシステムを開発する。これにより、様々な地域社会の、時間とともに変化する多様な魅力に対する人々の理解と関心を深められ、観光等様々な応用につながることが期待できる。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G7-2",
+    "title" : "Wikipediaを用いた観光オブジェクトの属性抽出に基づく対応Webページの特定手法",
+    "abstract" : "一般に，ユーザが観光の計画を立てる際，ガイドブックやWebから情報を収集するが，観光に関する情報は多数存在し，情報同士の関連付けがされてないことが多いため，情報収集のために手動で閲覧し取捨選択しなければならない．\r\nこういった手間の削減のために，ユーザの定型的な行動を他オブジェクトに対しても適応することで，手軽に情報を収集できるスマートスクラップブックシステムを提案した．\r\n本稿では，ユーザが，あるWebサイトにおける概要やアクセス情報などのWebページの一部を保存した場合，他オブジェクトのWebサイトにおいて，保存したWebページの一部に対応するWebページを特定する手法を提案する．\r\n具体的には，種類に応じた対応情報の特定を行う．\r\nユーザが手動で保存した内容と，その観光オブジェクトに対応するWikipediaページの概要，歴史などの各項目との類似度を測る．最も類似する項目名を保存内容の属性として抽出する．\r\n次に，他オブジェクトのWikipediaページ内にある，該当属性の項目内容と類似するWebページを抽出する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G7-3",
+    "title" : "場所に焦点を当てた複数旅行ブログの自動要約",
+    "abstract" : "我々は，ブログ集合から，旅行ブログエントリを自動的に検出し，さらに各エントリを地図上でアイコンとして表示するシステムを構築している．ある地点を訪れた複数の旅行者が，それぞれ旅行ブログエントリを書いた場合，我々のシステム上ではある1点に旅行ブログエントリが重なって表示されてしまうため，その地点で何ができるのかがユーザにとって分かりにくいという問題がある．そこで，ある地点に関する複数の旅行ブログエントリの要約を試みる．自動要約技術においては，様々な手法が提案されている一方で，グラフベースの文書要約技術の有用性が知られている．本研究では様々なグラフベースの要約技術を用いてエントリ中のテキストだけでなく画像の要約も行い，その地点における代表画像付きの要約を出力するため，内容の理解が容易になると考えられる．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G7-4",
+    "title" : "観光イベントに関する動画およびブログ検索システムの開発",
+    "abstract" : "旅行者が訪れようとしている場所で，滞在期間中にどのようなイベントが開催されるのかという情報は，旅行の計画を立てる時に非常に重要である．しかし，イベント関連の情報を人手で整備するのは非常にコストがかかる．一般に，有名なイベントや伝統的なイベントの情報は，新聞やWeb上のポータルサイト，旅行ガイドブックなどから得られるものの，それらは旅行関連イベント全体のごく一部にすぎない．そこで本研究では，あるイベントに関する動画とブログを自動的に収集し，それらを同時に地図上へマッピングすることで，ユーザが俯瞰的にイベント情報を閲覧できるイベント参加支援システムの構築を行う．また，機械学習を用いてイベント情報の判定を行うことにより，システムとしての精度向上を目指す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G7-5",
+    "title" : "旅行ブログエントリの属性情報に基づいた旅行者の行動分析",
+    "abstract" : "旅行ブログエントリは，ブロガーの実体験に基づいて記載されており，旅行に関する情報の収集や交換する場として重要な役割を果たしている．そのため，観光地のマーケティングを行う際に，旅行ブログエントリは有益な情報源であると考えられる．本研究では，旅行ブログエントリを用いて，観光目的や年齢、性別などの分析の対象となる情報(属性情報)を自動的に抽出し，抽出された属性情報の統計を採り，観光地の分析を行う．具体的には，「宮島では，景観を目的とした若い人たちによる訪問が多い」と分かれば，ターゲットを絞って観光地を活性化していくことができる．このように，観光地のマーケティングを行うことによって，観光施策の展開を支援することが可能となる．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G7-6",
+    "title" : "Twitter を利用した観光ルート推薦の一手法",
+    "abstract" : "Twitter に代表されるマイクロブログの普及に伴い，今日では様々な情報が発信されている．それらの情報の中には，Twitter ユーザ自身が実際にどのような場所を訪れ，どのような体験をしたかといった観光体験情報も多く存在する．実際の観光体験に基づくこれらの情報は，これから観光する者にとって重要な情報源となる．そこで本稿では，まず Twitter から実際の観光体験に基づいてつぶやかれたツイートを収集する．観光体験に関わるツイートかどうかの判定には，旅行者のツイートに頻繁に現れる特徴や手がかり語の有無を利用する．\r\nそして，収集したツイートを「食事」，「景観」，「行動」，「土産」の 4 つのカテゴリに分類し，それらの結果を用いて観光ルートを推薦する手法を提案する．実験では，人手で判定した正解データとの比較により観光ツイートの抽出精度と分類精度を評価した．また，推薦した観光ルートを分析し，その有効性について考察した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C4-1",
+    "title" : "過去の投稿を活用したマイクロブログユーザの現在位置推定",
+    "abstract" : "マイクロブログの投稿には，実世界に関するリアルタイム性の高い情報が含まれているが，イベントや災害など，空間的局所性の高い情報を利活用するためには，その情報がどの場所にいるユーザから発信されたか知っておくことが重要となる．本研究ではユーザの過去の投稿を利用し，文中に含まれる名詞のBag of Wordsだけでなく，推定対象のツイートとの時間近接性や名詞BOWと係り受け関係にある動詞，時間表現を素性に含めることで，より高精度なマイクロブログユーザの位置推定を行う手法を提案する．実験ではgeotag付きツイートに提案手法を適用し，その有効性を確認する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C4-2",
+    "title" : "時空間的出現特性の違いを考慮した位置を示す語の抽出によるツイートの発信位置推定",
+    "abstract" : "マイクロブログの代表であるTwitterに投稿されるツイートは発信位置の緯度経度情報をジオタグとして付与できるが、ジオタグ付きツイートは約1%に過ぎない。そこでジオタグの付与されていないツイートの発信位置を、ツイートに含まれる位置を示すローカル語に基づき推定する。ローカル語は自身が示す空間において局所的に用いられるため、ジオタグ付きツイートに含まれる単語の空間的局所性に基づき抽出できる。ローカル語には場所名など常に同一の空間を示す語とイベント名など経時的に示す空間が変化する語があり、各単語の出現間隔も大きく異なる。提案手法は、ジオタグ付きツイートが投稿されるごとに、ツイート内の単語の出現履歴を更新することにより、各単語の出現特性に応じて空間的局所性を解析する時区間を設定し、多様かつ信頼度の高いローカル語の抽出を目指す。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C4-3",
+    "title" : "外国人Twitterユーザの観光訪問先の属性別分析",
+    "abstract" : "近年，ウェブ上の情報を用いて，観光に関連する情報を抽出する研究が活発である．しかし，ユーザの国籍や，滞在期間などのユーザの属性によって，日本での訪問先や，その感想には差異があることが予想されるが，日本人，在日外国人，および訪日外国人を区別して観光に関連する情報を抽出する研究は少ない．そこで，本研究では，ツイートされた時間や，付与された位置情報に着目することで，外国語を用いるユーザが，訪日外国人なのか，在日外国人なのかを判別する手法を提案する．さらに，観光情報を抽出する手法を適用する場合に，分析に用いるデータに含まれるユーザ群の属性が異なることが原因で結果に差異があることを確認するため，日本人ユーザ，訪日外国人ユーザ，および在日外国人ユーザに対して同一の手法で観光情報を抽出し，考察を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C4-4",
+    "title" : "変化点に着目したTwitterユーザの購買行動フェーズ推定手法",
+    "abstract" : "近年SNS上で，商品やサービスに関して自身の購買行動に関する状態（○○欲しい，××買った等）を投稿するユーザが増えている．これらの投稿から，特定の商材に関して言及したユーザに広告を配信することが可能となる．しかし，当該商材に対するユーザの購買行動プロセスのフェーズを適切に把握しなければ，広告配信の十分な効果が得られない．そこで本研究では，Twitter上の商材に関する投稿から，ユーザは当該商材を知っているだけなのか，興味を持っているのか，購入したのかという購買行動プロセスのフェーズを推定する手法を提案する．提案手法では，同一ユーザの投稿を時系列に追跡し，フェーズの変化点に特徴的に出現する語を検出することで，各投稿のフェーズ推定を行う．評価実験の結果，提案手法は，変化点を考慮しない手法よりも高い推定精度であることを確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C4-5",
+    "title" : "同時進行性のあるチャット対話における発話タイプ推定",
+    "abstract" : "本研究では，チャット対話における発話タイプの推定手法を提案する．Twitterなどのソーシャルメディアにおけるユーザ同士の対話では，ひとつの投稿につき複数の発話が含まれており，それぞれの発話の話題は異なる．チャット対話には話題の連鎖が並行して進行する同時進行性という性質を持つため，1つの投稿を複数の発話に分割した上で，発話タイプを推定する必要がある．発話タイプは前後の依存関係が強いことから隠れマルコフモデルが有効であるが，同時進行性により系列データの作成において発話を限定する必要があるため，隠れマルコフモデルを拡張したモデルを提案し，連鎖関係の情報が既知のものであるとして，すべての発話に対して高い精度での発話タイプ推定を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G8-1",
+    "title" : "ツイート投稿位置推定のためのノイズとなる単語の除去手法",
+    "abstract" : "ツイートから特徴を抽出し、投稿位置と対応をさせることで、Twitter を実世界を観測するリアルタイムセンサと考えることができる。しかし多くのツイートには位置情報が付加されていないために、Twitter をリアルタイムセンサとして活用することは困難である。そこで本研究では、ツイートの投稿位置を推定することで、より多くの ツイートに位置情報を付加する問題に取り組む。提案する手法では、1件のツイート内容のみを使用して推定を行う。 また、ツイート中の単語から地理的な分布に偏りのない単語を除く手法を提案し、推定精度が向上することを示す。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G8-2",
+    "title" : "Wikipedia記事の言語間差異抽出手法の提案",
+    "abstract" : "オンライン百科事典であるWikipediaでは，一つの対象について述べている記事が多言語で展開されている．しかし，それらの内容は書かれている言語によって異なる場合がある．そのため一つの言語の記事を読むだけでは，ユーザが求めている情報を全て得られるとは限らない．本研究では，同じ対象について述べている日本語と英語の記事を比較し，日本語の記事には書かれていない内容を含む部分を文単位で英語記事から抽出し，ユーザへの提示を行っている．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G8-3",
+    "title" : "能動態・受動態の出現頻度に基づくブログ記事ごとの立場推定手法の提案",
+    "abstract" : "本研究では，記事ごとにブロガーの立場を推定する手法を提案する．これまでに，ソーシャルメディア上に投影された情報を用いて，ユーザの属性を推定する研究が盛んに行われている．これらの研究では，単一のソーシャルメディアにおけるユーザの属性は一意であると仮定し，ユーザごとに属性を推定している．しかしながら，ソーシャルメディアにおいて，実際に，あるイベントに参加したユーザが，別のイベントでは主催者であったというように，異なる立場からの記事が混在して投稿されている．そこで，本研究では，立場ごとの記事内容の違いに着目することで，記事ごとにブロガーの立場の推定を行う．提案手法として，記事内容の差に着目した特徴ベクトルを用いてSVMで分類を行う手法と能動態や受動態の用いられ方に基づいて作成した行為極性辞書を用いて分類を行う手法を提案する．実験では，それらの手法を用いた推定の性能の比較を行った．また，提案手法のアプリケーションへの応用として，イベントに関するブログ記事を立場ごとに閲覧可能なシステムを作成した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G8-4",
+    "title" : "マイクロブログにおける単語間の依存性を考慮した語義曖昧性解消",
+    "abstract" : "近年，Twitterなどに代表されるマイクロブログサービスに対し，企業のマーケティング戦略や評判分析などの情報源としての期待が高まっている．そのため，マイクロブログに投稿されたメッセージの文意を正確に把握することが必要となる．特に，複数の語義を持つ単語が含まれている場合，その語義を正しく判別することは重要である．しかし，既存の語義曖昧性解消の手法は，マイクロブログに投稿されたメッセージに対しては短い文章であるため得られる特徴語が少なく，また表記揺れなどのノイズの影響が顕著であるため，語義の判別の精度が下がるという問題点がある．そこで本稿では，これらの問題を解決するため，1)単語間の依存性を考慮した特徴語への重み付けを行い，2)学習データと大規模Webデータから求めた単語間の依存度を併用することでノイズの影響を抑える．既存手法との比較実験により，提案手法の優位性を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G8-5",
+    "title" : "Twitterユーザに向けたコミュニケーション支援のための言い換え表現の抽出",
+    "abstract" : "本研究は，Twitterにおいて，「かたい」ツイートから「やわらかい」ツイートへの言い換え表現の抽出を行う．「かたい」ツイート，「やわらかい」ツイートは，それぞれTwitterユーザにとって親しみづらいツイート，親しみやすいツイートを指す．企業やお役所のアカウントの「かたい」ツイートに対して，一般ユーザはフォローやリプライをしづらい傾向にある．本研究では，この課題の解決を目指し，イベントごとに収集されたツイート集合から，ニュース系のツイート，その他のツイートを分けて，言い換えできるような「かたい」表現と「やわらかい」表現を抽出する．また，およそ20件のイベントについてツイートを分類し，言い換え表現の抽出の有効性について検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "G8-6",
+    "title" : "Twitterにおけるイベントモニタリングのためのノイズ除去",
+    "abstract" : "イベントに関する人々の声を収集するための情報源としてTwitterが着目されている．Twitterからイベント関連のツイートを収集するには，事前に定義したイベント関連語を含むツイートを抽出するアプローチが一般的だが，収集したツイートには対象イベントと関係のないノイズツイートが多く含まれるという問題がある．このようなノイズツイートを除去するために，対象イベントと関係がないことを示唆するノイズキーワードを，ある時期に集中してイベント関連語について言及している\"ホットユーザー\"を利用して自動的に特定する手法を提案する．提案手法は，人手で作成した教師データやWikipediaなどの知識ベースを必要とせずにイベントとの関連性を判定できる点で新しい．また，イベント関連語で収集したツイートのみを用い，追加でデータを取得する必要がないことから，現実問題に対して適用可能な実用性の高い手法である．評価実験では，「東京モーターショー2013」を対象イベントとして収集したツイートに対して，高精度でノイズツイートが除去できることを確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C5-1",
+    "title" : "SuperSQLクエリ作成支援システムSSeditの拡張",
+    "abstract" : "遠山によって開発され、遠山研究室において研究を行っているSuperSQL。これは関係データベースの出力結果を構造化し、多様なレイアウト表現を可能とするSQLの拡張言語である。このSuperSQLのクエリ作成支援システムであるSSeditについて、ユーザのクエリ作成時における時間と手間の短縮や誤入力を防止するなどのユーザがエラーを起こしにくい環境づくりを目的とした拡張機能を提案する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C5-2",
+    "title" : "直接操作によるSuperSQLクエリ作成支援",
+    "abstract" : "SuperSQLはSQLの拡張言語であり、独自のクエリを記述することによって関係データベースの出力結果を構造化し、多様なレイアウト表現を可能とすることができる。しかし、より多彩な表現を行おうとすると、複雑なクエリとなってしまい、エラーを起こしやすくなってしまう。\r\nそこで、ユーザの直接操作によってレイアウト構造の変更や属性の追加などを行うことができ、またその情報を反映して自動的にSuperSQLクエリを生成することができる支援システムを提案する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C5-3",
+    "title" : "上位下位関係に基づく複合クエリの集約手法",
+    "abstract" : "Web検索を行う際，言葉では言い表せるが検索クエリとしては適切に表現することができない場合がある．そのような状況の場合，ユーザは，ANDやNOTなどのブール検索を用いてクエリの拡張を繰り返して目的とする情報を見つけなければならない．本稿では，拡張した複合クエリを下位概念となる語へ置き換えることができると仮定し，ユーザが拡張した複合クエリを1語に置き換える手法を提案する．我々は，下位概念となる語をWeb検索に用いると，多義性のない具体的な検索結果となり，無関係なWebページを結果から除外することができることから，複合クエリと同様の検索結果を得られると考えた．ユーザは，本手法を用いることによって，複合クエリとは異なる観点から検索を行うこと，および複雑な複合クエリを理解しやすい語に置き換えることができる．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C5-4",
+    "title" : "用途に基づくオブジェクト検索のためのクエリ拡張",
+    "abstract" : "本論文では，ある用途で用いることに適したオブジェクトを発見する手法を提案する．\r\n提案手法では，あるオブジェクトを特定の用途で利用した際に人々が満足しているかどうかを，\r\nユーザ投稿型サイトにて公開されているレビューから推定する．\r\nまた，与えられた用途に言及するレビューが少ない場合において，\r\n用途を上位語や下位語，同位語に変換することでクエリ拡張を行い，\r\n類似する別の用途に言及しているレビューを用いて元の用途に適したオブジェクトを発見する方法について述べる．\r\n我々は提案するクエリ拡張の有効性を実際のレビューデータによって検証し，\r\n得られるレビューが少ない場合においても，ある用途に適したオブジェクトを発見できることを示した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C5-5",
+    "title" : "ハウツー検索のための質問パラフレージングとランキング",
+    "abstract" : "本研究では, ハウツー情報を求めるクエリが与えられたときに, \r\nWebでのハウツー検索を円滑に行うために必要なクエリを生成する手法, \r\nおよび, 検索結果の構造化・ランキング手法を提案する. \r\n与えられたクエリから意味的に同等のクエリを生成する質問パラフレージング手法では, \r\n例えば, 「ゴルフ 上達」というような, 動作を表す名詞と動詞からなる\r\nクエリが与えられた場合には, (シャンク, 直す), (距離感, 掴む) という語の組を生成する. \r\n具体的には, ブートストラップ法による動詞から名詞の検索, 名詞から動詞の検索の繰り返しを行った後に, 名詞と動詞を組み合わせクエリを生成する. \r\nその際に, 具体的でないクエリを排除する手法を用いて, 生成されるクエリが具体的なものになる\r\nようにする. \r\nランキング手法では, 具体的かつ典型的なクエリが上位にくるようにクエリにスコアを付ける. \r\nまた, 上位のクエリで得られる情報を多くするために, 検索結果多様化の手法を用いる.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C6-1",
+    "title" : "マイクロタスク型クラウドソーシングにおける質問文改善の支援手法",
+    "abstract" : "マイクロタスク型クラウドソーシングの問題の一つとして，ワーカによるタスク文面の解釈が異なる事により，必ずしもリクエスタの要求する結果が得られるとは限らない事が知られている．これは，タスク文面を解釈するコンテキストがワーカ毎に異なる事による判断基準の違いが原因であるが，これらの判断基準をリクエスタがあらかじめ把握する事は難しい．本論文では，ワーカがマイクロタスクを処理する際の様々な判断基準を，クラウドソーシングにより求める手法を提案する．本手法は，次の3 ステップで行われる．(1) タスクの質問に「判断の理由」を問う欄を追加し，ワーカの「判断の理由」を収集する．(2) 収集した「判断の理由」のクラスタリングを行い，同じ判断基準を持つクラスタを求める．(3) 各クラスタ毎に，そのクラスタが表す判断基準を求める．評価では，提案手法が質問文改善に有効な判断基準を列挙できることを示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C6-2",
+    "title" : "不十分な情報から開始するデータグルーピングのためのマイクロタスク設計",
+    "abstract" : "不十分な情報から開始するデータグルーピングは，広い応用を持つが，計算機だけでは解決出来ない問題の一つである．本論文は，この問題を「本棚問題」としてモデル化し，マイクロタスク型のクラウドソーシングによるアプローチを試みる．本棚問題とは，入力として，本の集合B，タグ集合T，本とタグの関係R，本の棚の数Nが与えられたとき，次の3つの制約を満たすグループの集合G = {g1, g2, …, gN} を出力する問題である．(1) 作成されるグループ数はN個である．(2) 各グループに含まれる本の数は，最大⌈|B|/N⌉個である．(3) 同じグループに含まれる全ての本は，共通のタグを少なくともひとつ持つ．ただし，入力として与えられるタグ集合T と本とタグの関係Rだけでは，(1)から(3)の条件を満たす解は存在しない．本論文では，本棚問題を解くための2種類のマイクロタスクを用いた解法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C6-3",
+    "title" : "クラウドソーシングを用いたSkylineポイントの収集",
+    "abstract" : "膨大なデータポイントから他のデータポイントに支配されていないものを検索するSkyline問合せの研究がこれまで数多く行われてきた．ここで，Skyline上のデータポイントをSkylineポイントと呼ぶ．本論文では，一般のSkyline問合せと異なり，既知のデータがほぼ存在しない状態から，マイクロタスク型のクラウドソーシングを用いてSkylineポイントの収集を行う問題を扱う．この問題は多くのアプリケーションを持つ．単純な手法は，全体のデータポイントを収集し，次に既知のSkyline問合せ処理手法を適用する事である．しかし，それでは膨大なデータポイントの収集タスクが必要になる．本論文では，より少ないタスク数でSkylineポイントを収集するための手法について提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C6-4",
+    "title" : "クラウドソーシングの時空間拡張におけるワーカの時間制約を考慮したタスク割当て手法",
+    "abstract" : "本研究は，動的に変化する時空間情報を出来るだけ早く収集することで，ユーザの行動決定に関わる利便性を向上させることを目的とする．\r\nそこで，低コストで不特定多数の群衆に仕事を委託する枠組みであるクラウドソーシングに着目し，これを用いて動的な時空間情報を収集するシステムを提案する．\r\n提案システム実現のため，データ収集の短納期と高い網羅性の2つを要件とし，タスクをワーカに割当てる手法に取り組む．\r\n既存手法では，ワーカは常にタスクが実行出来るという想定での最適化を行っているが，現実ではワーカの働く時間は限られており，ワーカの位置も頻繁に変化する．\r\nそこで本研究ではワーカの将来行動を把握した上で将来にわたってのタスク割当てを行うことで，移動範囲の広いワーカに優先的にタスクを割当てることを可能にする．\r\n評価実験の結果，提案手法は従来手法と比較して割当てタスク数を約7\\%増加させ，平均タスク所要時間が約8\\%削減させることを確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C6-5",
+    "title" : "参加型センシングのためのタスク割当手法",
+    "abstract" : "参加型センシングにおけるデータ収集では，空間距離は参加者の意欲とタスクの完成時間を影響する一方，参加者の属性や背景知識が収集されたデータの質や価値に影響する可能性があるため，データの質と空間コスト両方とも考慮したタスク割り当て手法を提案した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C6-6",
+    "title" : "地域貢献は価値ある情報か？ -地域の恊働を支援する新しいSNSの実現に向けて-",
+    "abstract" : "実空間での人々の間に実際生じている関係は，既存の（見知った）人間関係だけで構成されているのではなく，実空間でのモノや場所を介在して見ず知らずの人々の間に構築される，その場限りの関係も存在する．このようなダイナミックな関係を我々は「実空間上の間接的な影響関係」と呼んでいる.　我々はこのような影響関係が，地域貢献活動を行う人々と，その貢献の影響を受ける人々の間に存在していると考えており，この関係に基づき，両者に価値ある情報を配信するためのSNSを開発することを目的としている．本論文では，進行中の研究の部分的成果として，上記のつながりにおいて，どのような情報が地域のユーザに価値を感じさせるかを報告する．実験の結果，ユーザの生活圏を考慮した配信方法を用いることで，ユーザは貢献情報にコンテンツとしての意味や価値を見出すことが明らかになった．この知見は，地域住民間で互恵的な関係を築くことのできるディジタルな社会基盤システムの十分な実現可能性を示唆するものである．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C7-1",
+    "title" : "災害時の密集地からの避難行動による混雑場所の可視化システムの提案",
+    "abstract" : "災害が発生した際に，人々は，行政機関が指定した避難場所に移動する．災害時の混乱の原因のひとつとして，避難場所への移動があげられる．たとえば，東京都の新宿駅などでは，災害時に10万人以上の人々が避難場所に対して一斉に移動することになる．そのような場所からの避難場所への移動では，人々の移動に伴い新たな密集地が発生し，避難場所への円滑な移動を妨げる可能性がある．そのため，本論文では，Twitterを用いて，人々が密集している場所を抽出し，その密集地から避難場所への避難行動で発生する可能性がある新たな密集地を可視化するシステムを提案する．提案システムでは，密集地から避難場所への避難道路の交差点や道路を可視化する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C7-2",
+    "title" : "非線形回帰モデルに基づく価格誘導型デマンドレスポンスの効果の評価",
+    "abstract" : "東日本大震災以降、日本では原子力発電所の停止に伴う電力需給逼迫が問題となっている。この問題に対し、電力を安定に供給するための新たな予備力の一つとしてデマンドレスポンスが注目されている。デマンドレスポンスとは、電力需給逼迫の際、インセンティブや多様な電気料金メニューを需要家に提示することで需要家が電力消費行動を控える、または消費行動の実施を別の時間帯にシフトすることで需給バランスを保つという考え方である。\r\n　近年国内ではデマンドレスポンスに関する大規模実証試験が行われているが、例えばどのような条件下でどのような電気料金メニューをどのような需要家にどのような形で提示することでピーク時間帯の電力需要がどのように変動するのかという関係性を実証結果から得られた知見として整理しておくことが、今後のデマンドレスポンスの実用化にあたっては重要になる。\r\n　本稿では、約700軒の需要家が参加したけいはんな地域での実証におけるデマンドレスポンスの効果の検証を目的とし、温湿度などの環境条件や提示料金メニュー、需要家のデモグラフィック属性等を説明変数としたピーク時間帯の電力需要を見積もるために非線形回帰モデルの一種であるRandom Forestsを構築し、見積もり精度の比較検証、及び変数重要度の観点からデマンドレスポンスの効果に影響する要因の検討を行ったため、これを報告する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C7-3",
+    "title" : "大規模災害時におけるTwitterを用いたネットワークシステム制御に有用な情報の抽出",
+    "abstract" : "地震や台風などの大規模災害が発生すると、電話やインターネットが繋がりにくくなる。このような緊急時に電話やインターネットが利用可能であることは重要である。現在、人間が見て判断可能な単純なネットワーク制御は行われている。しかし、大規模災害時のようにデータの種類や量が桁違いに多くなると、少数のネットワーク管理者が多数の障害を手作業で検知するのに限界がある。\r\nこの問題を解決するために、本研究は、ソーシャルネットワークサービス(SNS)による集合知を利用した障害検知を迅速かつ高精度に行うシステムを提案する。マイクロブログサービスの一つであるTwitterは人々の生活の一部として定着しており、Twitterから得ることのできるソーシャル情報は実世界の動きを反映していると言うことができる。そこで本研究では、Twitterを用いた障害検知を行う。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C7-4",
+    "title" : "Twitterを用いた災害時の住民感情の分析",
+    "abstract" : "災害時の住民の感情を地域と共に捉えることは、自治体などが避難を指示・誘導する際に参考になる。しかしながら、災害の警戒時期や初期段階では、住民はそれぞれの自宅・職場などにいるため、そのような情報を集めるのは困難である。そのため、SNSなどに投稿された情報から住民の不安や要望を得ることは意義があると考えられるが、さらに、近年のプライバシーを保護する考えにより、位置情報つきのメッセージをソーシャルに投稿しなくなったために、投稿時の場所を推定することが困難である。本論文では、投稿されたメッセージ内における言語的手がかりによって、どの地域の住民が災害に対しどのような感情を持っているのかを推定する技術について解説する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C7-5",
+    "title" : "災害時のDTN対応安否確認アプリケーションの実装と予備評価",
+    "abstract" : "インターネットは情報交換・共有システムとして社会・経済のインフラともいえる役割をはたしており、社会のネットワーク依存度は高まってきている。それに伴い、地震などの災害でその機能や性能が低下・停止した場合の緊急代替情報交換手段を事前に設計・準備しておくことが必要となり、また、防災・減災を考える上でも大変重要になってくる。\r\n本研究では、地域的にインターネットが機能しない劣悪な条件下でも、部分的に稼動しているサーバ機能付 Wi-Fi アクセスポイントと Delay/Disruption Tolerant Network(DTN) 技術を利用して安否確認が行える通信アプリケーションを開発し、その実装の予備 評価を行う。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C7-6",
+    "title" : "SIBM - 避難場所情報に対するRDFデータセットベンチマークツール",
+    "abstract" : "世界中で毎年、災害による損失や市民生活への影響が問題となっている．災害発生時には、避難情報を元に避難することが必要であるが、災害発生後に、避難に関する情報やデータの量は急速に増加する．このため、適切な災害・避難情報の管理が求められる．一方、近年RDF形式で記述されたデータが幅広く使用され、災害情報などを含む様々なデータがRDF形式で保存されることが増えている．RDF形式を利用すると、情報の細かな管理やアクセス制限を適切に行うことができるが、既存の災害情報のRDF表現では、被災者個人間の関係や被災者と医者、ボランティアなどの支援者との関係や、どの支援者がどの被災者にどのような作業を行って良いかといった関係を表現できていない．そこで、本研究では、これらの詳細な関係をRDF形式で記述した災害・避難情報のデータセットSIBMを提案する．SIBMの目的は、被災地における被災者-支援者間のデータ共有方式の妥当性の評価を可能にすることである．具体的には、被災者の怪我の程度などの個人情報は医療従事者にのみ開示し、他の被災者には個人情報へのアクセスを許可しないなどのデータ共有方式の性能や秘匿情報保護能力をSIBMによって計測できるようになることを目指す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C8-1",
+    "title" : "ソーシャルメディア上に投影されたイベントの周期性の発見とそれに基づいた写真閲覧システムの提案",
+    "abstract" : "Flickrなどの写真共有サイトに投稿されている写真にはテキストタグが付与されており，その中には，ある周期で付与される写真枚数が増加するものが存在する．例えば，``moon\"は，29日周期で付与される写真枚数が増加する．これは満月の周期にほぼ一致する．このことから，周期性をもつテキストタグは，周期的に繰り返されるイベントを示していると考えられる．既存研究では，テキストタグの時間的な特徴を抽出する際，1年間でのテキストタグを利用したユーザ数の変遷のみを考慮しており，イベントの繰り返しについては考慮されていないため，満月など発見が困難なイベントが存在する．そこで，本研究では，テキストタグを用いて様々な繰り返しをもつイベントを発見し，さらに，イベントの繰り返し度合いに基づき，イベントの主要な周期の写真を閲覧できるようなシステムを提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C8-2",
+    "title" : "忘却の概念を利用したLocal Expertランキングの地域ブログサイトへの導入",
+    "abstract" : "我々は，ブログ記事内で言及している場所(Venue)を発見し，各Venueに詳しいブログユーザ(Local Expert)をランキング形式で提示するシステムを構築した．そして，実際に，株式会社シーポイントが運営する「ありがとう」の地域プラットフォーム[LINK]に導入した．ランキングの作成の際，情報の鮮度を考慮するため，時間とともに情報価値が減っていくことを忘却の概念を利用してモデル化した．忘却の概念を利用することで，新しいブログ記事ほど，ランキングに影響を持つことになる．また，本システムではブログ記事に含まれる画像もランキングに反映する．Local Expertをランキング形式で提示することにより，ブログユーザにとっては，Venueについての意見や感想を含むブログ記事を投稿するモチベーションとなり，Venueに関する情報を取得したいユーザにとっては，参考になるブログ記事が増加することが期待される．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C8-3",
+    "title" : "位置情報付きソーシャルコンテンツの多面的な分類手法の検討",
+    "abstract" : "InstagramやTwitterなどのSNSに投稿された位置情報付きコンテンツ（写真およびテキスト）は，ユーザが感じた地域の印象を表していると考えられる．本研究の目的は，一定の地域の位置情報を持つコンテンツを，多様性を損なうことなく多面的に分類し，地域の印象の包括的な把握を支援することである．本稿では，2012年7月1日から2012年9月30日までに投稿された埼玉県川越市付近の位置情報を持つコンテンツ（約3,000件）を，投稿の時間帯，ユーザ，投稿に使用されたWebサービスなどを素性としてクラスタリングし，分類結果に対する各素性の影響を検討する．また，人手による実地調査データ（約300件）と定量的に比較し，地域の印象の包括的な把握における位置情報付きコンテンツの有用性および利用上の課題を検討する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C8-4",
+    "title" : "オントロジとデータベース技術を活用した\u000B複合イベント処理システム",
+    "abstract" : "近年，Web 上で生成されるデータだけでなく，実世界で生成されたデータなども含めた，様々な情報が利用可能になってきている．特に，スマートフォンなどのモバイルデバイスを利用すれば，SNSなどへリアルタイムに情報を発信できるだけではなく，搭載されたセンサを使用することで，位置情報などの実世界のデータを利用することも可能である．\r\n本研究では，このようにして得られる情報をイベントと呼び，これらを処理することで，より高次な複合イベントを検出するシステムの開発を目指している．本システムでは，イベントストリームに対して，オントロジとリレーショナルデータベースの技術を活用することで，イベント検出を実現する",
+    "bookmark" : 0
+  }, {
+    "presenid" : "C8-5",
+    "title" : "イベントデータベースとブログの自動対応付け",
+    "abstract" : "インターネットの普及により，ユーザが自由に意見や感想を記載できるブログの数が増加している．その膨大なブログの中から，あるイベントについて言及されたブログを人手で何のイベントなのかを判定し，開催日や開催地などのイベント情報を調べるには多大なコストがかかると考えられる．そこで，我々はまず全国のイベント情報が記載されているYahoo!ロコから予めイベント情報をデータベースに登録する．次にブログからイベント名や施設名といった情報を抽出し，抽出した情報をもとにブログをデータベースと対応付けることで特定のイベントに関する詳細な情報を得ることを目的とする．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P1-1",
+    "title" : "ドライバーの振る舞いとコンテキスト分析に基づく先読み情報推薦方式の提案",
+    "abstract" : "現在のカーナビゲーションシステムは、駐車場や商業施設など様々なスポット情報が表示可能である。また、ドライバーの運転によってその地域に合致したスポット情報が推薦される。しかし、提示されるスポット情報は、ドライバーの意図や目的とは無関係に表示される。本研究では、過去のドライバーの振る舞いを分析することでドライバーの特性分析を行うと共に、季節・天気・気温・時間帯・曜日・同伴者などのコンテキスト情報と、現在地までのドライバーの振る舞いを分析することでドライバーの意図や目的の推定を目指す。さらに、推定したドライバーの意図や目的に基づき、意向の走行経路付近もしくは目的地付近における有益な情報を先読みして提示することが可能な推薦方式の提案を行う。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P1-2",
+    "title" : "推薦受領者および被推薦者の立場を同時に考慮するパートナー相互推薦方式の提案",
+    "abstract" : "従来の情報推薦システムでは，推薦を受けるユーザと推薦されるアイテムは別物である．しかしながら，結婚相談所等にて行われるパートナー推薦では，登録ユーザは推薦を受ける立場と，推薦される被推薦者としての立場の両方を有する．したがって，相互パートナー推薦においては，従来の推薦技術をそのまま適用することはできない．そこで本稿では，カップル成立の成功率を考慮した有力なパートナー候補の選定を行い，これにより得られる有力なパートナー候補者の推薦を受けると同時に，このパートナー候補者に自分が推薦されるような，相互パートナー推薦方式を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P1-3",
+    "title" : "歩行者ナビ・自転車ナビにおけるSerendipityな寄り道推薦方式の提案",
+    "abstract" : "スマートフォンの普及に伴い利用者が増えている歩行者ナビは，出発地から目的\r\n地までの最短経路を算出してユーザに推薦することが可能である．一方，情報推\r\n薦において意外かつ有用な情報を提供するようなSerendipity指向情報推薦が注\r\n目されている．そこで我々は，周辺地域の中でSerendipity度が高いスポットを\r\n抽出し，これを経由しつつタイムロスが少ない経路を見つけて，ユーザに対して\r\n推薦することを可能とするSerendipityな寄り道推薦方式の提案を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P1-4",
+    "title" : "パーチェスファネルに基づくWeb広告推薦手法の提案",
+    "abstract" : "企業が行う製品やサービスのために行う宣伝活動の一形態として,Web 広告が注目されている.Web 広告 には,検索キーワードに対応した広告が表示されるリスティング広告や,閲覧中のコンテンツの内容や過去の閲覧履 歴に関連する広告を表示させる興味関心連動型広告が存在する.しかし,ユーザが購入までに至る意識の変化や思考 を考慮した深い分析は行われておらず,Web 広告を通じて購入に至るまでには,十分効果的ではない.そこで我々は, 推薦対象ユーザの購買欲求フェーズに対応する Web 広告を推薦する手法を提案する.具体的には,ユーザの Web 閲 覧履歴を分析し,対象となる商品について,「未知」「既知」「検討」「購入」のどのような状態かを分類し,状態に応じ た適切な施策(Web 広告の推薦)を行うことを目指す.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P1-5",
+    "title" : "対話型商品検索レコメンドを対象とした問い合わせ自動生成システム",
+    "abstract" : "　本稿は、商品に紐づいている文書情報をテキストマイニングして量的データに変換し、多次元空間計量を行うことで、問い合わせ自体とその結果を自動生成するシステムを提案する。\r\n　本方式は、商品情報の一部である説明文を解析し、出現数を調べる。条件に合致しかつ出現数が高いものは、重要な単語としてそれら同士の関連度を計算する。その後に、これらの情報から質問を自動生成する。これにより、既存では人力で作成している条件分岐による問診型検索を自動生成でき、労力を低減することを目指す。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P2-1",
+    "title" : "隠れマルコフモデルを用いた軌跡データに対するカーネルの設計",
+    "abstract" : "本稿では，道路ネットワーク上を移動する二つの移動体の軌跡データ間の新しい類似度指標を提案する．そのために，道路ネットワーク上の物体の移動軌跡に関する生成モデルとして，二次元平面上の軌跡に確率を割り当てる，軌跡隠れマルコフモデル(軌跡HMM)を導入する．軌跡HMMは，隠れ変数として道路ネットワーク内で通過したパスをもち，パスを生成するリンク間の遷移確率と，物体の真の位置からGPSの観測点を生成する観測確率の組である．ここでは，軌跡HMMを用いた2つの軌跡データにおける類似度の計算について議論する．とくに，この軌跡HMMに周辺化カーネル(Tsuda, Kin, Asai, Bioinformatics, Vol.18, 2002)を適用することで，軌跡データのための類似度として，軌跡カーネルを与える．さらに，軌跡カーネルを用いた軌跡上の予測について議論する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P2-2",
+    "title" : "マルチヘッド接尾辞トライを用いた低メモリ型マルチストリーム索引の構築",
+    "abstract" : "本稿では，多数のストリームを非同期に管理し，到着した個別のデータを同時に処理できる索引構造を与える．最近，ユーザのtwitterメッセージや，多数のセンサーからのセンサーログ，都市中を走行する車からのGPSなど，何万という多数のクライアントからリアルタイムに入力が届くようなマルチストリームデータが増大している．そこで，Ukkonenのオンライン構築手法を拡張し，複数クライアントからの入力に対応できるようなマルチヘッド接尾辞トライを提案する．また，限定メモリで適応的な管理を行うため，ストリーム頻出要素発見問題のための最適メモリ管理手法を用いて，不要な枝を刈り込みしながらマルチヘッド接尾辞トライを構築するアルゴリズムを与え，計算機実験による性能評価の結果を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P2-3",
+    "title" : "音楽メディア・クリエイションのための時系列相関計量システム",
+    "abstract" : "本システムは、コンピュータを用いた音楽クリエイションをより創造的に支援することを目的とし、音楽メディアの時系列変化を分析する。\r\nコンピュータを用いた音楽クリエイションにおいて重要なスキルとして、作曲者が典型的なフレーズを数多く認識・言語化していることが挙げられる。そこで、本システムでは、\"フレーズデータベース\"を構築し、作曲者がそれまで言語化することのなかったフレーズを、本人が参考にしたいと考えている楽曲との相関を時系列で計量しながら明らかにする。\r\nまた、本システムを通じ、固有名詞・コンテクストありきの音楽リスニングスタイルが見直されることも期待される。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P2-4",
+    "title" : "時系列画像からのオブジェクトベースデータマイニング -オブジェクトの抽出とデータベース化-",
+    "abstract" : "近年様々な分野で大量蓄積されている時系列画像においては時間とともに形を変えながら移動する対象物,“オブジェクト”を含む問題が多く出現する。膨大な時系列画像からオブジェクトを抽出してその発達過程や相互作用のパターンを求めることができれば，自然・社会現象の動態把握に活用できると期待される。本研究では，時系列画像から多変量正規混合分布によるモデリングを用いて，時間発展履歴を保持しながら半自動的かつ高速にオブジェクトを抽出し，その特徴を記述する手法を提案する。またオブジェクトの誕生，分裂，融合，消滅や相互作用を記述するオブジェクトのデータモデルについても述べ，さらに気象画像への適用例も示す。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P2-5",
+    "title" : "時空間データからの相関イベントクラスタの共起性の抽出",
+    "abstract" : "　近年様々な分野で時系列画像などの時空間データが大量に蓄積されている。このような大量の時空間データから，ある点で特徴的変化がおこったとき，近傍で同じような変化がおこりうるかを予測することができれば，様々な分野で活用することができるだろう。本研究では，時空間データに対してある基準時系列を与えたとき，これと高い正または負の相関係数を示す時系列を抽出してクラスタ化し，さらにそのようなクラスタが共起しうる部分時空間領域を相関ルールの評価指標を用いて定量的に評価してホットスポットとして可視化する手法について検討した。またこの手法の有効性について気象画像への適用例を示しながら報告する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P3-1",
+    "title" : "コスメアイテムの使用感および嗜好度判定を目的としたレビュー分析手法の提案",
+    "abstract" : "既存の評判情報投稿サイトから得られた評価値と自由記述文による口コミ情報から，アイテムごとに口コミ情報を分析し，評価値と特徴的な表現から，コスメアイテムの使用感および嗜好度に関する評価表現を抽出する．評価表現を軸として，各軸に対する評価値を推定し，新規の口コミ情報がポジティブな評価なのか，ネガティブな評価なのかを判定する手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P3-2",
+    "title" : "先読みブロガーによる投稿記事の分析に基づく流行語予測手法の提案",
+    "abstract" : "一般的に，流行語は世間で話題になってから知る事が多く，流行前に知る事は困難である．\r\n一方で，流行を早期に知る事は，マーケティング等の観点において，重要だと考えられる．\r\nそこで，我々は，流行に敏感な先読みブロガーを発見し，そのブロガーを監視する事で，流行を先取りする手法を開発してきた．\r\nしかし，先読みブロガーから流行語候補を抽出する具体的な手法については未検討であった．\r\nよって，本稿では，先読みブロガーから流行語候補を抽出する手法を提案する．\r\n具体的には，先読み度の高さ，及び先読みブロガーが，ある一定期間毎に投稿するキーワードを考慮した流行語抽出手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P3-3",
+    "title" : "A Students’ Mutual Evaluation Method for Online Reports using Groupware",
+    "abstract" : "Nowadays, many universities utilize groupware support for students post and share their reports, and the students can browse and vote other students’ reports in e-learning. Teachers then need to evaluate all students’ online reports, but this will require a great deal of time. Therefore, we propose a students’ mutual evaluation method for their online reports by considering the relationship between voting and posting time of the reports, to support teachers’ evaluation. The method can provide scores of reports based on a voting graph of the reports by analyzing students who vote the reports. In particular, we perform students’ mutual evaluation using groupware based on voting with a “Like” function in a course practice. As a result, it was able to not only provide an overall rating of reports by counting the number of votes, but also, by considering when the reports are posted to prevent unfair votes, since the students of the last posted reports always refer to the prior ones, we need to low the scores of the last posted reports. In this paper, we discuss the results of our students’ mutual evaluation method comparing with teachers’ evaluation.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P3-4",
+    "title" : "料理レシピを対象とした検索質問のキーワード自動分類",
+    "abstract" : "料理レシピに関するアドホックな質問に対し，質問に含まれる語を自動的に分類することにより，より精度の高いレシピ検索システムの試作を行った．\r\nまた，キーワードから拡張を行い，より広い検索質問に対応している．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P3-5",
+    "title" : "画像・感性データベースを用いたコラージュ作品における素材決定方式",
+    "abstract" : "コラージュとは、複数の素材を取捨選択して切り貼りし、１つの作品を完成させる技法である。選ばれた素材が制作者の趣味・思想に沿ったものになる、という知見は先行研究で示されている。しかし、選ばれていない素材と制作者の感性との関係についてはあまり示されていない。本稿では、「コラージュ制作において、人はどのようにして素材を選択するか」「選択されなかった素材は、制作者に対して特別な意味があるのか」という２点を主軸に、画像と感性を含めたデータベースを中心に考察する。本方式により、人間の「好き」「嫌い」「無関心」という３つの感情と意思決定について新たな知見獲得を目指す。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P3-6",
+    "title" : "言語の分散表現による文脈情報を利用した言語横断情報検索",
+    "abstract" : "複数言語にわたる関連ドキュメントを検索する言語横断情報検索において、クエリ翻訳のこれまでのアプローチとしては、ソース言語で集めたドキュメント群からキーワードを抽出して翻訳・検索を行うpre-translation expansionと、元のクエリを翻訳・検索後にターゲット言語のドキュメント群からキーワードを抽出するpost-translation expansionの2つがあった。しかしこれらは翻訳能力依存であり、文脈情報を保つのは難しい。そこで今回の提案手法では、単語の文脈情報を強く持っていると言われるskip-gramによる分散表現を複数言語にわたって求める。そして得られた言語ベクトル間のマッピングを行い、クエリ翻訳のデータベースとして用いることで、文脈情報を含んだ言語横断情報検索の精度を評価する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P4-1",
+    "title" : "高齢者のための見守り部屋の構築",
+    "abstract" : "近年、少子高齢化の社会に突入している日本においては、高齢者の一人暮らしが増加しており孤独死のリスクが高まっている。この問題を解決する一つの試みとして本研究では遠隔で高齢者の住まいをリアルタイムで状況把握可能な高齢者見守り部屋の構築方法について提案を行う。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P4-2",
+    "title" : "持続可能な果樹農業を支援するための気象情報取得システムの構築",
+    "abstract" : "現在、果樹園農家の高齢化や後継者問題、輸入果物との価格競争など様々な要因により、果樹園農家の数や果樹面積が年々減少している。この問題の解決には、高品質な農作物を生産し、利益率を向上させることが重要である。そこで、我々は農作物の品質向上に寄与する気象データを取得するために、超小型PCと各種センサを利用した気象情報取得システムの構築方法について述べる。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P4-3",
+    "title" : "オフライン環境のためのモバイル端末を用いた地図拡張システム",
+    "abstract" : "近年,外国人観光客などが増えつつあるが,滞在期間の短い観光客は,\u000Bスマートフォンなどを持っていても,オフラインの可能性が高い.\r\nそこで我々は,オフライン環境でも現在地や目的地を確認できる地図拡張システムを提案する.\r\nこのシステムでは,先ず駅や道路端などの公共空間に設置された,地図をスマートフォン等で撮影する.\r\n次に,地図の左上と右下の緯度経度座標を,撮影した写真のピクセルに当てはめる.このことにより,サイネージなどの地図コンテンツをモバイル端末で拡張することができる.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P4-4",
+    "title" : "生体・環境情報を含む多次元実データの円滑な共有と再利用",
+    "abstract" : "神経科学の分野では脳情報データのみならず行動データなどを含む多種多様な計測データが取得され、データ共有して有効に再利用する事が検討されている。しかし、計測方法・データ・解析方法の研究知的財産権、データフォーマットの統一性などの問題があり、データの共有・再利用の障壁となっている。また、計測される実験参加者の脳活動は実験参加者のパーソナルデータになり得る可能性があり、プライバシーへの考慮も必要である。そこで我々は、上述の問題を解決するために「データ解析サーバ」と「データストアサーバ」の2つからなるデータ共有システムを提案する。データ解析サーバはデータの利用者側から見えるサービス提供システムであり、データストアサーバは研究者などのデータ提供者側から見えるシステムである。本論文では、相互のシステム間の情報通信を制御することで、それぞれの立場を円滑につなぐサービス提供のシステムを提案する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "P4-5",
+    "title" : "写真共有サイトを用いた穴場スポットの抽出",
+    "abstract" : "観光スポットには，景観がよいものの，知名度が低い地点が存在する．我々は，このような，知名度が低いが他の地点と比べて同等以上の満足が得られる地点を穴場スポットと定義した．本研究では，画像共有サイトflickrより，タグおよび位置情報が付与された写真データを抽出しクラスタリングを行うことである地点周辺の穴場スポットの候補を得る．そして，クラスタごとにお気に入り数と写真数を用いて穴場スポット度を算出することで，穴場スポットを得る手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D1-1",
+    "title" : "最大エントロピーモデルとデータマイニングを用いた多重ラベル分類",
+    "abstract" : "ニュースコーパスを対象に,多重ラベル分類の手法を提案する.データマイニング手法を用いて,学習データを生成する.生成したデータから,最大エントロピーモデルを用いた分類器を構築する.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D1-2",
+    "title" : "ニュース記事クラスタの知的ラベル付け",
+    "abstract" : "近年，インターネットで電子書籍が一般的になっている中，膨大な量の情報からユーザに有益な情報を提示することが困難である．そこで，文書集合のラベル付けを行う．ラベル付けにより，素早く文書集合の内容を把握可能である．従来，文書集合のラベル付けは考えられてきたが，ラベルの意味を考えずに行われてきた．ラベルの意味を考えるために，文書集合の中の単語を使用し，その上位語を用いることで単語の抽象化をする．単語の抽象化を行うことにより，文書集合全体の意味を含むと考えられる．今回ニュース記事を対象に，上位語を用いた文書集合の自動ラベル付けを提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D1-3",
+    "title" : "検索順位に基づいたクラスタリング手法",
+    "abstract" : "　現在，膨大な数のデータが日々作成，利用，蓄積されている．これらのデータを活用するためには，データを分類するためのクラスタリング技術が必要である．クラスタリング手法では，データ間の類似性を測る尺度として様々な尺度を用いている．尺度は大きく分けて距離の公理を満たす距離と距離の公理を満たさない類似度がある．本稿では尺度が距離の公理を満たしていなくても実行できるクラスタリング手法を提案する．\r\n　提案するクラスタリング手法の主なアイデアは，データ集合中のデータAとデータBをそれぞれ問い合わせとして検索を実行し，検索順位が相互に上位になる場合，二つのデータは同一クラスタに属するという仮定に基づくものである．\r\n　上記のアイデアを実現するための具体的な手法は，5つの手続きからなり，それらは，(1)データ間の類似度を算出し，これに基づき各データに対する被検索データの検索順位を算出する，(2)頂点に各データを割り当てたグラフを生成し，算出した検索順位において相互に上位となるデータが割り当てられた頂点間にリンクを接続する（生成されたグラフを本稿では相互隣接グラフと呼ぶ），(3)生成されたグラフからクリークを抽出し，これを一つの頂点として再度相互隣接グラフを生成する，(4)終了条件を満たすまで(3)を繰り返し行う，(5)出力された部分グラフ集合内で類似するもの同士を結合しこれをクラスタとして出力する，である．\r\n　提案するクラスタリング手法を評価するため，10個のトピックに関するWebニュース記事各10件，全100件を用いて文書クラスタリング実験を行った．提案手法によって出力されたクラスタにおいて各クラスタに属する文書中最も多いトピックの記事の割合の最大値，最小値，平均値がそれぞれ1.00，0.91，0.99という結果を得た．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D1-4",
+    "title" : "潜在的ディリクレ法におけるラベリング自動化",
+    "abstract" : "近年，Web アプリケーションの利用の広がりに伴い，Webブラウザ上での操作に不慣れな利用者から多くの問合せがヘルプデスクに寄せられる．ヘルプデスクのオペレータ業務ではユーザーが抱える問題に対して原因を的確に特定し，顧客満足度を向上させることが求められている．ここで，ヘルプデスクの業務経験が十分でないオペレータが，適切な解決方法を限られた時間内に見つけ出すことが困難であるという問題がある．この問題に対し，ヘルプデスクに寄せられる問い合わせ文書に対してトピックのラベリングを自動で行うことでユーザーが抱える問題に対しての対応の優先度合いの指標になる．また，解決策を早く見つけ出すことで回答作業の効率が向上することが期待される．そこで本研究ではAppleのヘルプデスクに寄せられる問い合わせ文書に対してLDAを適用させ，それらにTwitterを用いたラベリングの自動化を行うことでヘルプデスクの作業効率の向上を目指す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D1-5",
+    "title" : "パブリックコメント投稿者を支援するための行政関係文書の分割",
+    "abstract" : "本研究では，パブリックコメント投稿者が参考とする行政関係文書を読む負荷を軽減するため，文書をトピックごとに分割する手法を提案する．行政に関するトピックについては，白書を訓練コーパスとしたLDAにより抽出する．テキストの分割には，LDAを利用した分割手法であるTopicTilingを採用した．また，従来のテキスト分割手法との比較実験を行い，提案するテキスト分割手法の有効性について考察した．さらに，ニュース記事を用いて訓練コーパスとした場合との比較を行なうこと\r\nで，白書を使用して構築した訓練コーパスの妥当性を確認した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D1-6",
+    "title" : "多重同時関係を考慮した多重ラベル分類",
+    "abstract" : "本研究では文書の自動分類手法，特に各データが複数カテゴリに同時に所属する場合における分類手法を扱う．本稿の主たるアイデアは，ラベル間の依存性を確率的に考慮することにある．学習データ中に出現するデータの構成要素間の関係，ラベル間の関係，およびデータ集合とラベル集合の間の関係を扱う．データマイニング手法によりこれら特徴量を抽出し確率分布関数を推定することで，多重ラベル分類を行う．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D2-1",
+    "title" : "顧客経験マップを利用したポスター案内アプリの顧客行動分析",
+    "abstract" : "ソフトウエア開発では対象ユーザの利用シナリオを設計しそれに基づいて開発を行うが，開発時に想定したシナリオが実際の顧客の行動と一致するとは限らない．そのため，プロトタイプシステムや反復型開発等でリリースされたプロダクトを元にレビューを行い，実際の顧客の利用シナリオにあうプロダクトに改善する必要がある．\r\n　本稿では，我々が現在開発中であるDEIM2015でのインタラクティブセッション案内アプリのプロダクト改善のために行った，事前試行時の利用ログ解析によるプロダクトの改善策の発見について述べる．我々は開発者が想定した顧客経験マップに対して，利用ログから導出される顧客行動を照らし合わせ，開発者の想定した顧客行動と実際の行動の違いを分析した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D2-2",
+    "title" : "EPUBを対象としたソーシャルリーディングシステムにおけるユーザ分析",
+    "abstract" : "近年，ネットワーク上で様々な情報を公開・共有するソーシャル・ネットワーキング・サービス（SNS）が数多く登場し，広く利用されている．ソーシャルリーディングサービスは新たなSNSの一つであり，インターネット上で読書に関する情報を多人数で共有することができる．本研究では，読書に関する情報の共有と分析を目的としたソーシャルリーディングシステムを開発し，ユーザ分析を行なう．具体的には，読者が付与するブックマークやアノテーションを収集すると同時に読書時の操作履歴を収集する．本稿では開発したシステムを用いて実験とユーザ分析を行なった．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D2-3",
+    "title" : "ドライブレコーダデータを利用した運転者ごとの挙動傾向把握の試み",
+    "abstract" : "車に搭載して事故や危険運転時の状況を自動的に記録するドライブレコーダは、\r\n安全運転のために役立つとして営業車を中心に普及し始めている。\r\n事故時の記録画像を後から人間が確認することで、原因の調査、\r\nドライバー教育などに役立っているが、\r\n記録された運転動作を解析するなどの方法で、事故を未然に防ぐような\r\nさらなる発展が現在望まれている。\r\n我々は、運送会社が持つ配送車に取り付けられたドライブレコーダデータを利用し、\r\nドライバーごとの運転動作の傾向を抽出することで、\r\n事故につながるようなドライバーの危険運転動作の理解を試みる。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D2-4",
+    "title" : "Cプログラミング演習の演習履歴を用いた解答時間推定システム",
+    "abstract" : "プログラミング演習設計には参考として利用可能な解答時間があるとより受講者に適切な課題を設計することが可能となる．そこでその解答時間を推定するため，実際の演習より演習履歴を用いて推定を行いたい．しかし，演習履歴を用いて行う場合は，実測するものと違い，実際に操作，思考していた解答時間を，中断や受講環境に考慮して推定するのは困難である．そこで本論文では，実際の解答時間に近い解答時間を推定する解答時間推定システムを提案し，その各機能の実現法を示す．さらにプロトタイプシステムを作成し，実際に解答時間推定を行い，評価実験にてその出力される解答時間は，実際の解答時間と近い傾向を持つ解答時間となったこと，受講時間帯ごとの特徴を得てフィルタ適応の有用な課題の特徴，異常提出検出による解答時間推定の正確性の向上への有用性を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D2-5",
+    "title" : "3次元時空間可視化によるドライブレコーダデータからの危険領域探索",
+    "abstract" : "交通事故を予防するために、多くの自治体が聞き込み調査等でヒヤリハット地図を作成しているが、広い範囲における時間まで考慮したヒヤリハット地図を作成することは従来困難であった。近年、運送会社などでは安全運転促進の目的でドライブレコーダを導入し、多くの操作ログが利用可能になりつつある。ドライブレコーダのデータを用いることにより、どの場所で、どの時間帯に荒い運転が発生しやすいか解析可能になる。本稿では、ドライブレコーダデータに含まれるハンドル操作やブレーキ操作などの操作ログから危険度を算出し、時空間ヒヤリハット地図を生成可能にする探索インタフェースを提案する。生成されるヒヤリハット地図はインタラクティブな3次元時空間に可視化され、より詳細な情報が探索可能になる。実データとして、運送業者の文京営業所のドライブレコーダデータ約１ヶ月分を用いて検証を行った。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D2-6",
+    "title" : "マイクロブログを用いた英語圏ユーザの日本食に対する印象",
+    "abstract" : "2013年に，「和食」がユネスコ無形文化遺産に登録されるなど，日本食に対して世界的に注目が集まっている.また,同年のGoogleの英語での食文化に関連する検索ワードの2位に「edamame」が入っており,寿司や,天ぷら以外の新たな日本食の人気が外国人に高まっている.そこで,本研究では,外国人の間で流行する新たな日本食を早期に発見することに繋げるために,英語圏ユーザがそれぞれの日本食に対してどのような印象を持っているかを分析する.分析の際には,Twitterから取得した英語圏ユーザに対して複数の印象軸を考慮した分析を行う.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D3-1",
+    "title" : "検索エンジン・サジェストの統計分布を用いた市場シェア推定",
+    "abstract" : "本論文では，検索エンジン・サジェストによって測定される関心事項の情報を最\r\n大限に有効活用するタスクとして，特定商品ジャンルにおける製品・サービス等\r\nの供給者である複数の企業の間で，検索における関心の度合いを比較するという\r\nタスクを設定する．そして，検索における関心の度合いが，実社会における売れ\r\n行きシェア統計との間でどの程度の相関を持つのかについて分析を行う．また，\r\n両者の間の中間的な統計情報として，価格.com 等の商品比較レビューサイトに\r\nおけるページビュー統計との間の相関の有無についての分析も併せて行う．そし\r\nて，これらの分析の結果をふまえて，検索エンジン・サジェストによって得られ\r\nる統計分布に基づいて市場シェアを予測する手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D3-2",
+    "title" : "レビュアのプロファイルと評価観点の推定に基づくオブジェクト検索",
+    "abstract" : "商品検索の導線としてレビュアの情報を利用することが有用な場面は少なくない．\r\n例えば，化粧水を探している乾燥肌のユーザが「化粧水」というクエリで検索している時，「乾燥肌の人がいいと言っている化粧水」という意味が暗に含まれていることがある．\r\nしかし，「乾燥肌」といったレビュアのプロファイルを表す情報は，同じ「乾燥肌」でも個々人によって千差万別であり，ある乾燥肌のレビュアが高い評点を付けていてもその観点自体が乾燥肌の改善に関するものではないかもしれない．\r\nそこで本研究では，レビュアの属性とそのレビュアが記述したレビューの評価観点を推定する技術に取り組む．\r\n具体的には，異なる属性間のレビュアの評点の差に注目し，評価観点に特徴的な語を発見する．\r\nまた実際に，提案手法を実装し，「@cosme」のデータを対象に実験を行い，有用性を検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D3-3",
+    "title" : "比較に基づいたオブジェクト選別支援ためのレビューランキング手法",
+    "abstract" : "近年，インターネット上で，映画や書籍などのオブジェクトの選別が行われるようになった．オブジェクトの選別においてユーザレビューは重要な役割を果たす．しかし，ユーザレビューが大量に存在する場合には，選別に効果的なレビューを見つけることが困難である．本研究では，ユーザが検索や推薦などによって絞りこまれた２個の候補オブジェクトから１個を選別することを支援するために，ユーザレビューをランキングする手法の開発を目標としている．本論文では，候補オブジェクトの共通特徴と固有特徴という観点から単語の重み付けをする手法を提案する．そして，その重み付け手法を用いて，レビューをランキングする手法を検討する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D3-4",
+    "title" : "名詞の共起グラフを用いたユーザビリティに対するレビュー文の抽出手法",
+    "abstract" : "近年，Amazon.co.jpなどのオンラインで商品を購入することができるサイトの利用が増加しており，ユーザは商品購入の際にユーザレビューを参考にすることが多い．しかし，ユーザによって欲しい情報は違い，すべてのユーザレビューを読むことも難しい．本研究では，使われる形容詞・形容動詞の違いでレビュー文を分類できると考える．そこで，形態素解析，係り受け解析，および共起グラフを用いて，作品の使いやすさの評価を観点としたレビュー文をユーザビリティに対するレビュー文と呼び，抽出する手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D3-5",
+    "title" : "経験的属性によるオブジェクト検索",
+    "abstract" : "本研究ではウェブ上のユーザレビュー文からオブジェクトの経験的属性を推定し発見する手法を提案する．既存の検索システムで「持ち運びに便利なカメラ」や「夜景に強いカメラ」といった経験的属性に基づく検索を行った場合，オブジェクトの関連文書に経験的属性が記述されていなければオブジェクトを発見することができない．また，スペック情報に含まれるような探索的属性から経験的属性を直接推定するのは，専門知識が必要となるためすべての人にとって簡単なタスクではない．本研究では収集したユーザレビュー文中の比較表現や接続詞などにより構成される論理構造を手がかりに，ある探索的・経験的属性と異なる経験的属性の間の対応規則を学習する．オブジェクトの探索的属性情報からそのオブジェクトのもつ経験的属性を推定することで，経験的属性に基づいた検索を実現する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D3-6",
+    "title" : "初期レビューを用いた長期間評価推定",
+    "abstract" : "レビューサイトの評価は消費者にとって有益である．\r\nしかし．商品やサービスの提供開始すぐの段階では限られた数のレビューしか投稿されず，これらの初期レビューは長期的な評価とは異なっていることがある．\r\n特に，レビュー数が少ない場合，悪意あるレビュアーなどによる特異なレビューの影響を受けやすい．\r\n本研究では，初期レビューから長期的な評価を予測する手法を提案する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D4-1",
+    "title" : "Evaluating Information Credibility on Twitter via Topical Features",
+    "abstract" : "With the fast development of Social Networking Services (SNS) such as Twitter, which enable users to exchange short messages online, people can get information not only from the traditional news media but also from the masses of SNS users.\r\nHowever, SNS users sometimes propagate spurious or misleading information, so an effective way to automatically assess the credibility of information is required.\r\nIn this paper, we propose methods to assess information credibility on Twitter, methods that utilize the \"tweet topic\" and \"user topic\" features derived from the Latent Dirichlet Allocation (LDA) model.\r\nWe collected two thousand tweets labeled by seven annotators each, and designed effective features for our classifier on the basis of data analysis results.\r\nAn experiment we conducted showed a 3% improvement in Area Under Curve (AUC) scores compared with existing methods, leading us to conclude that using topical features is an effective way to assess tweet credibility.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D4-2",
+    "title" : "参照情報を利用したWikipedia記事の信頼性評価の一手法",
+    "abstract" : "本稿では，参照情報を利用したWikipedia記事の信頼性評価の一手法を提案する．Wikipediaの各記事には，記述の参照情報として多数の外部URLや書籍情報などが記載されており，信頼性の高い情報源を多く参照している記事は信頼性が高いと考えられる．そこで本研究では参照された情報を評価し，その評価を用いて記事の信頼性を評価する．日本語版Wikipediaで公開されている「秀逸な記事」，「良質な記事」を信頼度の高い記事としてその他の記事と比較することで，信頼度を評価する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D4-3",
+    "title" : "共同編集コンテンツにおける編集者関係グラフに基づいた編集者の質予測",
+    "abstract" : "Web 上には Wikipedia などの共同編集コンテンツが多数存在する．共同編集コンテンツにおいては，不特定多数のユーザが編集に参加するという特徴から，コンテンツの質が問題視されている．そこで本研究では，共同編集コンテンツにおいて，未参加のコンテンツに対する編集者の質を予測するというタスクに取り組む．コンテンツに対して質の高い編集が予測される編集者を呼びこむことによって，コンテンツの質の向上が期待できる．提案手法では，編集履歴の解析によって編集者間の関係グラフを構築し，グラフ構造に基づいて未参加のコンテンツに対する編集者の質を予測する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D4-4",
+    "title" : "SNS上での拡散を誘発するwebニュース説明文の調査と自動選択",
+    "abstract" : "SNSの隆盛によりニュース消費に大きな変化が起きている．読者は，新聞，テレビから一方的にニュースを受け取るのではなく，SNS上から読者の関心に合わせてニュースを選択するようになっている．この変化により，ニュースメディアは記事をSNS上で拡散する必要に迫られているが，その方法は確立されていない．本研究では．SNS上で多くの読者の目を引きつけるニュースの説明文を自動的に生成し配信することを目指す．この目標に向け，ニュースサイトのSNS利用と反応を分析・抽出した拡散要因を用い，適切な説明文を候補文の中から自動的に選択する，ランキング学習に基づく手法を提案し，実際のTwitterの投稿と記事を用いた実験により，その有効性を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D4-5",
+    "title" : "マイクロブログにおけるインタラクション構造及び変化に基づくリンク誘導型スパムユーザ検出",
+    "abstract" : "マイクロブログが普及するにつれて、マイクロブログを媒体とするスパムも増加している。本研究では代表的なマイクロブログのひとつであるTwitter を対象としたスパム検出に取り組んだ。スパムユーザは自身のWebページへの誘導リンクを多くの一般ユーザの目に触れさせる工夫として複数のアカウント同士で相互にインタラクションを行うという傾向があり、そのようなアカウント周辺のインタラクションの構造に着目すると特異な構造が観測できる。加えて、一般にアカウントの特徴量は時間に非依存であることからインタラクション構造とその変化に関する特徴量を用いてスパムを判定する手法を提案する。2014 年6 月から7 月までの期間の100 万人規模の実際の投稿\r\nからリツイートの多いユーザを候補ユーザとし、アカウントの投稿および挙動を実際に確認して正解データを人手で作成し、このデータセットを用いて実験を行い、手法の有効性を示した。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D4-6",
+    "title" : "カスタマイズ可能な信頼度基準に基づく実用的Twitter検索",
+    "abstract" : "現在のインターネット上では，大量の情報のためにユーザが有用な情報を思うように取得しにくい状況があり，この問題は特にリアルタイムメディアであるTwitterにおいて起こっている。この問題に対する一つの方策として信頼度（credibility）を用いるものがある。C.Castilloら（WWW2011）は，ツイートおよびその発信者に対する信頼度について分析し，どのような要素が信頼度に貢献するかを示している。\r\n我々はこの手法に基づいて，あるトピックに対するTwitter上の検索結果に対し，信頼度を構成する要素間の順位と重みを動的に，ユーザの興味に応じて変更可能にして，「信頼値」を求めた上で，その値によってソートされた検索結果をユーザにリアルタイムに提供するというシステムを構成した。この方法によって，リツイート数に依存しないツイートを抽出できる。また，発信者を一部に片寄らずに幅広く抽出可能である。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D5-1",
+    "title" : "Detection of text-based advertising and promotion in Wikipedia by deep learning method",
+    "abstract" : "Wikipedia is an open Internet encyclopedia that everyone can access and edit. Due to its “written from a neutral point of view” policy, neither advertising nor promotion is strictly forbidden in Wikipedia, and advertising articles will be deleted by administrators manually. Currently most researches about spamming in Wikipedia are focusing on editing behavior and making use of user’s edit history to do feature-based judging. In this paper, we propose a pure text-based method to automatically detect advertising and promotion articles in Wikipedia. In order to apply learning algorithms to training corpus, we need to transform text articles into vector form. Rather than traditional bag-of-words document vector representation which was proved to be inefficient, we employ a deep learning method to obtain a word vector for each word and then apply a sliding window on each document to gradually gain the document vector. Furthermore, we implement an improved deep-learning structure which can directly give us a document vector for each document. We then construct a supervised SVM classifier on the document vectors to obtain the final results. Our method was tested on several datasets and produced better performance than bag-of-words and neural network models in both precision and recall measurements.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D5-2",
+    "title" : "Automatic Construction and Ranking of Keyphrases on Wikipedia Article Sections",
+    "abstract" : "Wikipedia articles tend to be so long that it is difficult to capture main information instantly and given article section titles are so short that they cannot reflect comprehensive information. Recent work has shown the effectiveness of automatic topic labeling using seen words which occur in the article. However, how to automatically generate topic labels containing unseen words which have not occurred in the article is still an open problem. Meanwhile, the existing automatic topic labeling approaches focus only on the whole article, not on article sections. In this paper, we propose a new method to label Wikipedia article sections using related articles as an external target of information. We use FP-growth to mine frequent word sets, then generate candidate key phrases for each section. Then apply LDA to obtain probabilities of seen words in the target article sections as well as unseen words from the related articles. After sorting them by the probabilities of key phrases in the section, we can obtain top-K key phrases to label the target sections. We show results of experiments on evaluating several strategies.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D5-3",
+    "title" : "Web Indexにおける同義語処理機構の実現",
+    "abstract" : "Web Index（WIX）とは、キーワードとURLの組み合わせであるエントリの集合（WIXファイル）を用い、Webページ内の単語へのハイパーリンクを生成するシステムである。現在のWIXでは、既存のキーワードに対する同義語は、WIXファイルに新たに追加しなければアタッチすることが出来ない。そこで、本研究ではWikipediaのリダイレクト関係を利用した同義語データベースを構築し、同義語アタッチ機構を実現した。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D5-4",
+    "title" : "Improving Document Similarity Computation by Model Performance Prediction",
+    "abstract" : "Semantic similarity of text document pairs can be used for valuable applications like document-based search and recommendation. There are various existing models proposed for representing the document content and evaluating document similarity. Each model performs difference in different scenarios. In this paper, for a given document pair from a given document collection, we select a proper model which has best performance among the models for this document pair. We address two challenges for this topic. The first challenge is model categorization to seek the models with best performance by utilizing human ratings. We propose an approach to reach global optimized performance for all document pairs in the collection. The second challenge is model performance prediction without human ratings to select the models with best performance for a specific document pair. We use the results in the first challenge as the training data to propose a learning approach. We use a public news document collection to verify our approaches.",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D5-5",
+    "title" : "Recursive Autoencoderにもとづいた移動軌跡からの特徴量自動抽出手法の提案",
+    "abstract" : "本研究では，ユーザのコンテキスト解析研究の一つである移動軌跡にもとづいた移動手段判定に着目をする．\r\n移動手段判定は移動軌跡分割と移動手段推定という二つの工程に分かれ，本研究は移動手段推定に取り組む．\r\n移動手段推定を行う際に，従来の手法では移動軌跡から人が経験にもとづいて分類に有効な特徴量を考えていた．\r\nしかし人手による有効な特徴量抽出は時間がかかり，また全てを網羅することは難しい．\r\nそこで特徴量を自動で抽出することが出来るrepresentation learningの一つであるdeep learningに着目する．\r\nDeep learningは，ニューラルネットワークを多層にし，従来よりも表現力を向上させたものであり，本研究では実装手法の一つであるrecursive autoencoderを用いた．\r\n本研究では，このrecursive autoencoderに次元圧縮調節と正解ラベル学習の機能を加えた\r\nN-transformed supervised recursive autoencoderを提案する．\r\nMicrosoft GeoLifeデータセットに本手法を適用させた結果，従来の手法より高い推定精度を示し，本手法によって有効な特徴量を自動抽出できることを示した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D5-6",
+    "title" : "ペアワイズ分類における深層学習の検証",
+    "abstract" : "本研究では，ペアワイズ分類にDropout正則化付き深層学習を用いた際の性能について検証する．\r\nペアワイズ分類は与えられた二つのデータ間にある関係が成り立つか否かを判定する問題であり，その代表的な例として著者同定等のエンティティ解決問題がある．従来，ペアワイズ分類においては，異なる素性の組み合わせを計算するカーネルを用いたSVMによる方法等，機械学習によって分類器を獲得する方法が提案されている． 一方近年，様々な問題に対して，深層学習を用いる方法がSVM等の従来の方法を上回る分類精度を示すことが報告されている．そこで本研究では，ペアワイズ分類に対して深層学習を用いる方法を提案する．その際特に、スパースなペアデータを対象とする深層学習におけるDropout正則化の有効性について検証する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D6-1",
+    "title" : "乗換案内での経路選択のためのファセットナビゲーション",
+    "abstract" : "　日本における多くの乗換案内は、発着駅、日時、料金順等条件を入力とし、結果経路を複数個のみ提示するため、単純な要求にしか対応できず、時間と料金のバランス、路線、列車、乗換時間など複数の利用者要求を満たす経路を検索することが困難である。\r\n　本研究で提案するインタフェースでは、候補経路の一部を変更することによる経路変更についてもその概要を示すことで、利用者が経路変更を比較検討することを容易とし、利用者に現地の経路知識がない場合においても所望経路の発見を容易とする。画面上において候補経路から変更経路への直観的動作による変更操作も提供する。これにより、利用者がより快適に所望経路に辿りつくことを目的とする。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D6-2",
+    "title" : "セル結合を含む表のデータモデル",
+    "abstract" : "セル結合を含む表は，Webページやスプレッドシートなどの電子データをはじめ，一般の印刷物でも多用される．属性値の冗長性が低下する，集約値を記録できるなど，セル結合の利用は人間にとって利点が多い一方，結合セルの値が何を表すのかというセマンティクスを明示できないため再利用性が低く，機械的な利用が困難だという欠点もある．本研究で提案するデータモデルでは，集約関数によりセル結合のセマンティクスを表現できることに加え，OLAPで用いられるroll-up/drill-down操作を導入してセルの階層関係を操作できる．これにより，セルの結合や分割を機械的に行えるため，セル結合を含むままで集計処理を行える．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D6-3",
+    "title" : "高変動時系列整数データの圧縮手法",
+    "abstract" : "本発表では，センサデータのように時系列として生成される整数データ列に特化した圧縮手法を提案する．時系列整数データはある程度の連続性を持つ傾向にあるため，その連続性を利用してデータを圧縮するのが一般的である．しかしながら，高周波ノイズを含む信号データなど，変動が大きいデータに関しては，圧縮が困難という課題があった．提案手法では，ビット分割の手法を様々な符号化方式と併用することで，変動が大きい整数データ列に対し，従来手法より高い圧縮率が得られる．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D6-4",
+    "title" : "有用性が高い分析結果を生み出す部分データの効率的探索",
+    "abstract" : "ビッグデータと呼ばれる大量のデータから有益な情報を抽出する手法が重要な技術となっている．ビジネスデータの解析においては，データ全体の特徴を分析するOLAP(online analytical processing) 型の処理が頻繁に用いられているが，販売データの地域性や時期性の影響を見て販売戦略を決める場合などでは，特定の分析処理に対して有用性が高い分析結果を生み出す部分データを探索する問題が重要である．このような部分データを探索する問題において，部分データを手動で総当りするには膨大な時間を要する．そこで本稿では，事前に与えられた集約・グループ化処理に関して，全体データの分析結果に対して有用性が高い分析結果を生み出す部分データを探索する処理と探索した分析結果の可視化の自動化を行う．さらに，有用性が高い分析結果を生み出す部分データを探索する処理において，4つの方法を用いて高速化を実現する．実際の販売データに対して有用性が高い部分データ上位5件を探索する処理の実行時間を計測する実験を行った．複数クエリの共有化による高速化では2.7倍の高速化に成功し，スケーラビリティが高い手法であることを確認した．部分計算結果の再利用による高速化，探索範囲の削減による高速化では，乖離度を数値化する処理においてそれぞれ23.9%，27.3%の実行時間削減に成功した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D6-5",
+    "title" : "StreamOLAPにおける問合せの最適化手法",
+    "abstract" : "近年，ストリームデータの増加に伴いストリーム処理エンジン(SPE)等の各種技術が開発されている．ストリーム処理においては，フィルタリング等の他，より高度な集約分析が重要である．静的データに対する代表的集約分析の手法としてOLAPがある．OLAPをストリームデータに対して適用する提案がこれまでにもあるが，SPEの利用を考慮しておらず，また，問合せに数多くの制約があるという課題がある．本研究では，SPEとストリーム OLAPエンジンを連携させたシステムアーキテクチャを示し，さらに，コストモデルに基づくストリームOLAP処理の最適化手法を提案する．具体的には，提案アーキテクチャにおいて，OLAP問合せ結果の効率的な導出を実現する最適化アルゴリズムを提案し，実験により提案手法の有効性を示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D7-1",
+    "title" : "重心動揺と姿勢計測による学習状態の推定",
+    "abstract" : "e-learningの広がりによって，コンピュータを使った非同期の遠隔学習が一般的になり，そのインタラクティブ化の研究も行われている．そこでは学習者の状態を客観的に測定することが重要になっている．本研究では，設定した複数の学習状態について，学習者の状態を重心センサと距離センサ，荷重センサを用いて計測を行った．主として周波数スペクトルの時間変化について分析したので，結果を報告する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D7-2",
+    "title" : "検索エンジンを用いた英文名詞句誤りの修正支援",
+    "abstract" : "英語を母語としない日本人が作成した英文には，冠詞の誤りや名詞の誤り，つまり名詞句に関する誤りが多く含まれる．本研究では，冠詞の用法と検索エンジンから得られる検索結果数を用いて，英文中の名詞句に関する誤りを検出し，可能であれば修正するシステムを提案する．本研究では，名詞句に関する誤りの中でも，冠詞の誤り，名詞の単複誤り，名詞の語彙選択の誤りを対象とする．冠詞の誤り，名詞の単複誤りについては検出と修正をともに行い，名詞の語彙選択の誤りについては検出のみ行う．実験では，それぞれの誤りに対する検出性能，修正性能を評価した．名詞句に関する誤り(冠詞誤りと名詞の単複誤りが混在)の修正性能はF値0.393，名詞の語彙選択誤りの検出はF値0.441という結果であった．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D7-3",
+    "title" : "紙媒体と電子媒体を行き来可能なコースウェアの実装",
+    "abstract" : "　我々は，メディア教育の再構築を目的とした項目独立型の教科書「メディアカード」の作成，および紙媒体の試作を行っている．本研究はその電子化の取り組みとして位置付けられ，本論文ではMediawikiを核としたコースウェアの実装について述べる．\r\n　メディアカードは，項目ごとに教員らによる協働的な編集が行われる．紙媒体と電子媒体を併用した利用形態が想定されるため，紙媒体の一覧性と電子媒体の更新の手軽さ共に持つシステムであるのが望ましい．\r\n　具体的には，コースウェア上の任意の項目から印刷媒体を動的に発行するPDF生成機能を実装し，そのPDFには電子媒体の項目へのリンクを示すQRコードを埋め込むことで，媒体間のスムーズな移行による高度な学習のインタラクティブ性を実現する．今後は，学生を対象としたシステムの実証実験と評価を行う予定である．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D7-4",
+    "title" : "RMXにおけるルール記述に基づく送信許可機構",
+    "abstract" : "RMXは管理者が予め定義した配送ルールを組み合わせてメールアドレスを作成することで、柔軟にメールの配送先を指定できるシステムである。配送先はデータベース問い合わせを行い決定するため、動的なメーリングリストの管理を可能とする。 このRMXシステムでは、配送ルールが分かれば誰でもメールを送ることができるため、簡単にスパムメールが送られてしまう可能性や、パラメータやアドレスの誤記述による送り間違いが発生することが考えられる。そこで、スパムメールの防止や送信の制限のために、配送ルールと同様に予め記述する許可ルールに基づき送信の許可、不許可を判断し、不許可であれば送信者に警告を送る送信許可機構を導入した。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D7-5",
+    "title" : "生物季節観測のための位置情報付きマイクロブログの分析手法の検討",
+    "abstract" : "我々は，リアルタイム性のある情報発信が可能であり近年急速に普及し注目されているマイクロブログであるTwitterの位置情報付きツイートに着目し，季節に応じて話題となる生物に関するツイートの時間的変化についてツイート数と位置情報の分析を行い，気象庁が全国の気象官署で統一基準により観測されている生物季節観測の実データと比較することで，マイクロブログを利用した季節変化の開始・ピーク期・終了の傾向を推定する手法を検討した．本手法により，日本国内の各地域における観光情報などそれぞれの地域の季節変化に応じた情報推薦が必要となる分野での適応の可能性について報告する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D7-6",
+    "title" : "RMXの応用による各種情報サービスの構築",
+    "abstract" : "RMX(Rule-based e-Mail eXchange system)とはあらかじめ設定されたルールに基づき、自動的にメールを転送するメール転送エージェントのことである。同窓会、車のディーラー、アルバイトの情報をそれぞれ管理する3つのアプリケーションを作成し、それらにRMXを組み込むことでRMXを用いることの有用性について検証した。また、今後の目標として、WEB アプリケーションに対して RMX を埋め込むことのできる、RMX の WEB アプリケーションフレームワークの作成を検討している。この実装のため、3つのWEB アプリケーションの動作とコードの共通部分について比較・評価を行い、フレームワーク化する部分を決定する。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D8-1",
+    "title" : "マイクロブログを対象とした100,000人レベルでの著者推定手法の提案",
+    "abstract" : "近年，インターネットを利用した犯罪の捜査などの目的で，web上の文章に対する著者推定手法の研究が盛んに行われている．しかし，近年人気のwebコンテンツとなっている，マイクロブログへ投稿された文章に対し著者推定技術を用いる場合，ブログなどと比べて一文が140字と非常に短く，話題に一貫性がないため，推定精度が低下するという問題がある．さらに，マイクロブログの利用者は刻々と増加しているため，著者推定技術を使用する際の候補者となる利用者は日本ユーザのみでも1,000万人を越えている．そのため，大規模な候補者群から著者を推定することを前提として，より高速に計算を行うアルゴリズムが必要とされている．そこで本稿では，1) 文章中から取得したn-gramに対しnの大きさに応じた重みをかける．2) 推定対象文章と類似する話題分布となる訓練データの選択を行い，推定精度を保ちつつ使用する文章量を削減する．これらの手法を用いて，文章中から著者の特徴を追加抽出することにより，より精度が高く，かつ高速な著者推定手法を提案する．100,000ユーザによる評価実験の結果，既存手法と比べ高い精度での推定を行うことができた．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D8-2",
+    "title" : "ソーシャルネットワークを利用し構築したWi-Fiアドホックネットワークの 親密性に基づく通信制御による性能評価",
+    "abstract" : "近年、Wi-Fiダイレクトを用いた仮想マルチホップ網の構成技術などにより、マルチホップネットワークの実現性が高まってきた。また、FacebookやTwitterといったツールの充実により、ソーシャル・ネットワーキング・サービス(SNS)へのユーザの意識が高まっている。これらSNSでのやり取りのデータから、友人関係の親密度は数値化することができ、ユーザ自身よりもコンピュータのほうが友人関係を把握できているともいえる。こうした背景から、本研究では、ユーザ間の友人関係のネットワークを効果的に活用することにより、あるエリア内のユーザの通信可能性を高め、満足度を高めることを目標とする。直接の知り合いでなくともデータ転送することを可能としたときについてスループットの評価をおこなった。",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D8-3",
+    "title" : "Twitterユーザのソーシャル化支援手法の提案",
+    "abstract" : "身近な情報を発信・共有するTwitterの利用を継続する要因としてFollower/Followeeからなるユーザネットワークの形成が重要となる．本研究では，ネットワーク成長が不十分な新規ユーザに対して，聞き役となるユーザを推薦し，ネットワークの成長を促す手法を提案する．ユーザのネットワークの（継続的な）成長率を評価尺度に導入し，聞き役の推薦とその効果について検証したので報告する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D8-4",
+    "title" : "フォロイーのツイートパターン分析に基づいたユーザ推薦システム",
+    "abstract" : "近年マイクロブログのユーザが増加傾向にある．その一つであるTwitterでは，他のユーザをフォローすることで，そのユーザの記事（ツイート）を見ることができるようになる．しかしながら，Twitterのユーザは膨大であるため，誰をフォローすればよいかが分からない．このことから，Twitter上でフォローするべきユーザを推薦する研究が数多くあるが，フォローが多すぎても，目に入る情報量が多くなり，閲覧しづらくなる．\r\nそこで，本研究ではより精度の高い推薦を実現するべく，フォロイーのツイートの分類を行い，推薦に加味することを提案する．また，本手法の有効性を確かめるべく，普段からTwitterを利用しているユーザに協力してもらい，評価実験を行った．その実験の結果と考察についても報告する．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D8-5",
+    "title" : "Twitterユーザを対象とした属性推定の精度向上-周辺ユーザの属性補完を利用して-",
+    "abstract" : "Twitterのような大規模なソーシャルサービスにおいて，ユーザの興味や所属などの属性を知ることは，効果的なマーケティングを行う上で重要である．従来の属性推定手法の多くは，特徴量として推定対象ユーザとフォローやメンション関係を持つ，周辺ユーザの属性情報を利用している．しかしTwitterユーザのプロフィールに含まれる属性情報は限定的であるため，周辺ユーザが公開している属性情報のみでは推定対象ユーザの属性を推定するには不十分である．そこで本研究では，周辺ユーザに対しても属性推定手法を予め適用し，周辺ユーザの不足している属性情報を補うことで，推定対象ユーザの属性推定精度を向上させる手法を提案する．周辺ユーザの属性補完を行わない手法をベースラインとして比較実験を行った結果，フォロー情報を利用してソーシャルグラフを構築した場合にPrecision@10が0.67から0.87に，MRRが2.39から2.77に向上し，メンション情報を利用した場合にPrecision@10が0.53から0.73に，MRRが2.11から2.37に向上した．また推定の結果として得られた属性情報の多様性についても評価を行い，ベースラインの手法と比較して，提案手法ではより多様な属性を推定できることを示す．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "D8-6",
+    "title" : "アーリーアダプター推定による優良Twitterアカウントの早期発見",
+    "abstract" : "Webでは日々新しい話題が生まれ，その話題に関する情報を発信する情報源も新たに出現し続けている．加えて，昔からある話題であっても，新しい情報源が継続的に出現する．更に，近年急速に成長しているSNSやマイクロブログにおいては，日々多くの新しいアカウントが作成され，多くの情報を発信している．ある話題について優良な情報を発信している情報源を見つけるときに，このような新しい情報源を見逃すべきではない．しかし，新しいがゆえにそれらの新規情報源の評判は定まっておらず，優良かどうかを判断することは難しい．本論文では，新規情報源の優良さをランク付けする手法を提案する．新規情報源の将来の人気度をその情報源本来の優良さであると考え，将来の人気度を高精度で推定する方法を示す．提案手法では，他者に先駆けて優良な情報源を発見する能力に優れたユーザ，すなわちアーリーアダプターを発見し，アーリーアダプターに注目されている新規情報源は将来人気が出るという仮定に基づき，将来の人気度を推定する．アーリーアダプターを発見するために，我々は参照の模倣に注目する．参照を他ユーザに模倣されるユーザは，他ユーザに先駆けて優良な情報源を発見するアーリーアダプターだと考えられる．手法の評価に際して，Twitter上の実データを用いて，実験を行った．過去のTwitter上のスナップショットを用いてランク付けし，それが現在のTwitterでの人気度をどれだけ推定できているかを評価した．実験の結果，我々の手法は比較手法よりも良い性能を示した．",
+    "bookmark" : 0
+  }, {
+    "presenid" : "X1-1",
+    "title" : "No Poster Is Assigned To This Panel.",
+    "abstract" : "NO DATA",
+    "bookmark" : 0
+  }, {
+    "presenid" : "X1-2",
+    "title" : "No Poster Is Assigned To This Panel.",
+    "abstract" : "NO DATA",
+    "bookmark" : 0
+  }, {
+    "presenid" : "X1-3",
+    "title" : "No Poster Is Assigned To This Panel.",
+    "abstract" : "NO DATA",
+    "bookmark" : 0
+  }, {
+    "presenid" : "X1-4",
+    "title" : "No Poster Is Assigned To This Panel.",
+    "abstract" : "NO DATA",
+    "bookmark" : 0
+  }, {
+    "presenid" : "X1-5",
+    "title" : "No Poster Is Assigned To This Panel.",
+    "abstract" : "NO DATA",
+    "bookmark" : 0
+  } ];
 
 presents = 
-[
-{"sessionid":"A1","presenid":"A1-1"},
-{"sessionid":"A1","presenid":"A1-2"},
-{"sessionid":"A1","presenid":"A1-3"},
-{"sessionid":"A1","presenid":"A1-4"},
-{"sessionid":"A1","presenid":"A1-5"},
-{"sessionid":"A2","presenid":"A2-1"},
-{"sessionid":"A2","presenid":"A2-2"},
-{"sessionid":"A2","presenid":"A2-3"},
-{"sessionid":"A2","presenid":"A2-4"},
-{"sessionid":"A2","presenid":"A2-5"},
-{"sessionid":"A4","presenid":"A4-1"},
-{"sessionid":"A4","presenid":"A4-2"},
-{"sessionid":"A4","presenid":"A4-3"},
-{"sessionid":"A4","presenid":"A4-4"},
-{"sessionid":"A4","presenid":"A4-5"},
-{"sessionid":"A5","presenid":"A5-1"},
-{"sessionid":"A5","presenid":"A5-2"},
-{"sessionid":"A5","presenid":"A5-3"},
-{"sessionid":"A5","presenid":"A5-4"},
-{"sessionid":"A5","presenid":"A5-5"},
-{"sessionid":"A8","presenid":"A8-1"},
-{"sessionid":"A8","presenid":"A8-2"},
-{"sessionid":"A8","presenid":"A8-3"},
-{"sessionid":"A8","presenid":"A8-4"},
-{"sessionid":"A8","presenid":"A8-5"},
-{"sessionid":"A9","presenid":"A9-1"},
-{"sessionid":"A9","presenid":"A9-2"},
-{"sessionid":"A9","presenid":"A9-3"},
-{"sessionid":"A9","presenid":"A9-4"},
-{"sessionid":"B1","presenid":"B1-1"},
-{"sessionid":"B1","presenid":"B1-2"},
-{"sessionid":"B1","presenid":"B1-3"},
-{"sessionid":"B1","presenid":"B1-4"},
-{"sessionid":"B1","presenid":"B1-5"},
-{"sessionid":"B2","presenid":"B2-1"},
-{"sessionid":"B2","presenid":"B2-2"},
-{"sessionid":"B2","presenid":"B2-3"},
-{"sessionid":"B2","presenid":"B2-4"},
-{"sessionid":"B2","presenid":"B2-5"},
-{"sessionid":"B2","presenid":"B2-6"},
-{"sessionid":"B3","presenid":"B3-1"},
-{"sessionid":"B3","presenid":"B3-2"},
-{"sessionid":"B3","presenid":"B3-3"},
-{"sessionid":"B3","presenid":"B3-4"},
-{"sessionid":"B3","presenid":"B3-5"},
-{"sessionid":"B3","presenid":"B3-6"},
-{"sessionid":"B4","presenid":"B4-1"},
-{"sessionid":"B4","presenid":"B4-2"},
-{"sessionid":"B4","presenid":"B4-3"},
-{"sessionid":"B4","presenid":"B4-4"},
-{"sessionid":"B4","presenid":"B4-5"},
-{"sessionid":"B4","presenid":"B4-6"},
-{"sessionid":"B5","presenid":"B5-1"},
-{"sessionid":"B5","presenid":"B5-2"},
-{"sessionid":"B5","presenid":"B5-3"},
-{"sessionid":"B5","presenid":"B5-4"},
-{"sessionid":"B5","presenid":"B5-5"},
-{"sessionid":"B5","presenid":"B5-6"},
-{"sessionid":"B6","presenid":"B6-1"},
-{"sessionid":"B6","presenid":"B6-2"},
-{"sessionid":"B6","presenid":"B6-3"},
-{"sessionid":"B6","presenid":"B6-4"},
-{"sessionid":"B6","presenid":"B6-5"},
-{"sessionid":"B6","presenid":"B6-6"},
-{"sessionid":"B7","presenid":"B7-1"},
-{"sessionid":"B7","presenid":"B7-2"},
-{"sessionid":"B7","presenid":"B7-3"},
-{"sessionid":"B7","presenid":"B7-4"},
-{"sessionid":"B7","presenid":"B7-5"},
-{"sessionid":"B8","presenid":"B8-1"},
-{"sessionid":"B8","presenid":"B8-2"},
-{"sessionid":"B8","presenid":"B8-3"},
-{"sessionid":"B8","presenid":"B8-4"},
-{"sessionid":"B8","presenid":"B8-5"},
-{"sessionid":"B8","presenid":"B8-6"},
-{"sessionid":"B9","presenid":"B9-1"},
-{"sessionid":"B9","presenid":"B9-2"},
-{"sessionid":"B9","presenid":"B9-3"},
-{"sessionid":"B9","presenid":"B9-4"},
-{"sessionid":"B9","presenid":"B9-5"},
-{"sessionid":"B9","presenid":"B9-6"},
-{"sessionid":"C1","presenid":"C1-1"},
-{"sessionid":"C1","presenid":"C1-2"},
-{"sessionid":"C1","presenid":"C1-3"},
-{"sessionid":"C1","presenid":"C1-4"},
-{"sessionid":"C1","presenid":"C1-5"},
-{"sessionid":"C1","presenid":"C1-6"},
-{"sessionid":"C2","presenid":"C2-1"},
-{"sessionid":"C2","presenid":"C2-2"},
-{"sessionid":"C2","presenid":"C2-3"},
-{"sessionid":"C2","presenid":"C2-4"},
-{"sessionid":"C2","presenid":"C2-5"},
-{"sessionid":"C3","presenid":"C3-1"},
-{"sessionid":"C3","presenid":"C3-2"},
-{"sessionid":"C3","presenid":"C3-3"},
-{"sessionid":"C3","presenid":"C3-4"},
-{"sessionid":"C3","presenid":"C3-5"},
-{"sessionid":"C3","presenid":"C3-6"},
-{"sessionid":"C4","presenid":"C4-1"},
-{"sessionid":"C4","presenid":"C4-2"},
-{"sessionid":"C4","presenid":"C4-3"},
-{"sessionid":"C4","presenid":"C4-5"},
-{"sessionid":"C4","presenid":"C4-6"},
-{"sessionid":"C5","presenid":"C5-1"},
-{"sessionid":"C5","presenid":"C5-2"},
-{"sessionid":"C5","presenid":"C5-3"},
-{"sessionid":"C5","presenid":"C5-4"},
-{"sessionid":"C5","presenid":"C5-5"},
-{"sessionid":"C5","presenid":"C5-6"},
-{"sessionid":"C6","presenid":"C6-1"},
-{"sessionid":"C6","presenid":"C6-2"},
-{"sessionid":"C6","presenid":"C6-3"},
-{"sessionid":"C6","presenid":"C6-4"},
-{"sessionid":"C6","presenid":"C6-5"},
-{"sessionid":"C6","presenid":"C6-6"},
-{"sessionid":"C7","presenid":"C7-1"},
-{"sessionid":"C7","presenid":"C7-2"},
-{"sessionid":"C7","presenid":"C7-3"},
-{"sessionid":"C7","presenid":"C7-4"},
-{"sessionid":"C8","presenid":"C8-1"},
-{"sessionid":"C8","presenid":"C8-2"},
-{"sessionid":"C8","presenid":"C8-3"},
-{"sessionid":"C8","presenid":"C8-4"},
-{"sessionid":"C8","presenid":"C8-5"},
-{"sessionid":"C8","presenid":"C8-6"},
-{"sessionid":"C9","presenid":"C9-1"},
-{"sessionid":"C9","presenid":"C9-2"},
-{"sessionid":"C9","presenid":"C9-3"},
-{"sessionid":"C9","presenid":"C9-4"},
-{"sessionid":"C9","presenid":"C9-5"},
-{"sessionid":"C9","presenid":"C9-6"},
-{"sessionid":"D1","presenid":"D1-1"},
-{"sessionid":"D1","presenid":"D1-2"},
-{"sessionid":"D1","presenid":"D1-3"},
-{"sessionid":"D1","presenid":"D1-4"},
-{"sessionid":"D1","presenid":"D1-5"},
-{"sessionid":"D1","presenid":"D1-6"},
-{"sessionid":"D2","presenid":"D2-1"},
-{"sessionid":"D2","presenid":"D2-2"},
-{"sessionid":"D2","presenid":"D2-3"},
-{"sessionid":"D2","presenid":"D2-4"},
-{"sessionid":"D2","presenid":"D2-5"},
-{"sessionid":"D2","presenid":"D2-6"},
-{"sessionid":"D3","presenid":"D3-1"},
-{"sessionid":"D3","presenid":"D3-2"},
-{"sessionid":"D3","presenid":"D3-3"},
-{"sessionid":"D3","presenid":"D3-4"},
-{"sessionid":"D3","presenid":"D3-5"},
-{"sessionid":"D3","presenid":"D3-6"},
-{"sessionid":"D4","presenid":"D4-1"},
-{"sessionid":"D4","presenid":"D4-2"},
-{"sessionid":"D4","presenid":"D4-3"},
-{"sessionid":"D4","presenid":"D4-4"},
-{"sessionid":"D4","presenid":"D4-5"},
-{"sessionid":"D4","presenid":"D4-6"},
-{"sessionid":"D5","presenid":"D5-1"},
-{"sessionid":"D5","presenid":"D5-2"},
-{"sessionid":"D5","presenid":"D5-3"},
-{"sessionid":"D5","presenid":"D5-4"},
-{"sessionid":"D5","presenid":"D5-5"},
-{"sessionid":"D6","presenid":"D6-1"},
-{"sessionid":"D6","presenid":"D6-2"},
-{"sessionid":"D6","presenid":"D6-3"},
-{"sessionid":"D6","presenid":"D6-4"},
-{"sessionid":"D6","presenid":"D6-5"},
-{"sessionid":"D6","presenid":"D6-6"},
-{"sessionid":"D7","presenid":"D7-1"},
-{"sessionid":"D7","presenid":"D7-2"},
-{"sessionid":"D7","presenid":"D7-3"},
-{"sessionid":"D7","presenid":"D7-4"},
-{"sessionid":"D7","presenid":"D7-5"},
-{"sessionid":"D8","presenid":"D8-1"},
-{"sessionid":"D8","presenid":"D8-2"},
-{"sessionid":"D8","presenid":"D8-3"},
-{"sessionid":"D8","presenid":"D8-4"},
-{"sessionid":"D8","presenid":"D8-5"},
-{"sessionid":"D8","presenid":"D8-6"},
-{"sessionid":"D9","presenid":"D9-1"},
-{"sessionid":"D9","presenid":"D9-2"},
-{"sessionid":"D9","presenid":"D9-3"},
-{"sessionid":"D9","presenid":"D9-4"},
-{"sessionid":"D9","presenid":"D9-5"},
-{"sessionid":"D9","presenid":"D9-6"},
-{"sessionid":"E1","presenid":"E1-1"},
-{"sessionid":"E1","presenid":"E1-2"},
-{"sessionid":"E1","presenid":"E1-3"},
-{"sessionid":"E1","presenid":"E1-4"},
-{"sessionid":"E1","presenid":"E1-5"},
-{"sessionid":"E1","presenid":"E1-6"},
-{"sessionid":"E2","presenid":"E2-1"},
-{"sessionid":"E2","presenid":"E2-2"},
-{"sessionid":"E2","presenid":"E2-3"},
-{"sessionid":"E2","presenid":"E2-4"},
-{"sessionid":"E2","presenid":"E2-5"},
-{"sessionid":"E3","presenid":"E3-1"},
-{"sessionid":"E3","presenid":"E3-2"},
-{"sessionid":"E3","presenid":"E3-3"},
-{"sessionid":"E3","presenid":"E3-4"},
-{"sessionid":"E3","presenid":"E3-5"},
-{"sessionid":"E3","presenid":"E3-6"},
-{"sessionid":"E4","presenid":"E4-1"},
-{"sessionid":"E4","presenid":"E4-2"},
-{"sessionid":"E4","presenid":"E4-3"},
-{"sessionid":"E4","presenid":"E4-4"},
-{"sessionid":"E4","presenid":"E4-5"},
-{"sessionid":"E4","presenid":"E4-6"},
-{"sessionid":"E5","presenid":"E5-1"},
-{"sessionid":"E5","presenid":"E5-2"},
-{"sessionid":"E5","presenid":"E5-3"},
-{"sessionid":"E5","presenid":"E5-4"},
-{"sessionid":"E5","presenid":"E5-5"},
-{"sessionid":"E6","presenid":"E6-1"},
-{"sessionid":"E6","presenid":"E6-2"},
-{"sessionid":"E6","presenid":"E6-3"},
-{"sessionid":"E6","presenid":"E6-4"},
-{"sessionid":"E6","presenid":"E6-5"},
-{"sessionid":"E6","presenid":"E6-6"},
-{"sessionid":"E7","presenid":"E7-1"},
-{"sessionid":"E7","presenid":"E7-2"},
-{"sessionid":"E7","presenid":"E7-3"},
-{"sessionid":"E7","presenid":"E7-4"},
-{"sessionid":"E7","presenid":"E7-5"},
-{"sessionid":"E8","presenid":"E8-1"},
-{"sessionid":"E8","presenid":"E8-2"},
-{"sessionid":"E8","presenid":"E8-3"},
-{"sessionid":"E8","presenid":"E8-4"},
-{"sessionid":"E8","presenid":"E8-5"},
-{"sessionid":"E8","presenid":"E8-6"},
-{"sessionid":"E9","presenid":"E9-1"},
-{"sessionid":"E9","presenid":"E9-2"},
-{"sessionid":"E9","presenid":"E9-3"},
-{"sessionid":"E9","presenid":"E9-4"},
-{"sessionid":"E9","presenid":"E9-5"},
-{"sessionid":"E9","presenid":"E9-6"},
-{"sessionid":"F1","presenid":"F1-1"},
-{"sessionid":"F1","presenid":"F1-2"},
-{"sessionid":"F1","presenid":"F1-3"},
-{"sessionid":"F1","presenid":"F1-4"},
-{"sessionid":"F1","presenid":"F1-5"},
-{"sessionid":"F1","presenid":"F1-6"},
-{"sessionid":"F2","presenid":"F2-1"},
-{"sessionid":"F2","presenid":"F2-2"},
-{"sessionid":"F2","presenid":"F2-3"},
-{"sessionid":"F2","presenid":"F2-4"},
-{"sessionid":"F2","presenid":"F2-5"},
-{"sessionid":"F2","presenid":"F2-6"},
-{"sessionid":"F3","presenid":"F3-1"},
-{"sessionid":"F3","presenid":"F3-2"},
-{"sessionid":"F3","presenid":"F3-3"},
-{"sessionid":"F3","presenid":"F3-4"},
-{"sessionid":"F3","presenid":"F3-5"},
-{"sessionid":"F3","presenid":"F3-6"},
-{"sessionid":"F4","presenid":"F4-1"},
-{"sessionid":"F4","presenid":"F4-2"},
-{"sessionid":"F4","presenid":"F4-3"},
-{"sessionid":"F4","presenid":"F4-4"},
-{"sessionid":"F4","presenid":"F4-5"},
-{"sessionid":"F4","presenid":"F4-6"},
-{"sessionid":"F5","presenid":"F5-1"},
-{"sessionid":"F5","presenid":"F5-2"},
-{"sessionid":"F5","presenid":"F5-3"},
-{"sessionid":"F5","presenid":"F5-4"},
-{"sessionid":"F5","presenid":"F5-5"},
-{"sessionid":"F5","presenid":"F5-6"},
-{"sessionid":"F6","presenid":"F6-1"},
-{"sessionid":"F6","presenid":"F6-2"},
-{"sessionid":"F6","presenid":"F6-3"},
-{"sessionid":"F6","presenid":"F6-4"},
-{"sessionid":"F6","presenid":"F6-5"},
-{"sessionid":"F7","presenid":"F7-1"},
-{"sessionid":"F7","presenid":"F7-2"},
-{"sessionid":"F7","presenid":"F7-4"},
-{"sessionid":"F8","presenid":"F8-1"},
-{"sessionid":"F8","presenid":"F8-2"},
-{"sessionid":"F8","presenid":"F8-4"},
-{"sessionid":"F8","presenid":"F8-5"},
-{"sessionid":"F8","presenid":"F8-6"},
-{"sessionid":"F9","presenid":"F9-1"},
-{"sessionid":"F9","presenid":"F9-2"},
-{"sessionid":"F9","presenid":"F9-3"},
-{"sessionid":"F9","presenid":"F9-4"},
-{"sessionid":"F9","presenid":"F9-5"},
-{"sessionid":"F9","presenid":"F9-6"},
-{"sessionid":"P1","presenid":"P1-1"},
-{"sessionid":"P1","presenid":"P1-2"},
-{"sessionid":"P1","presenid":"P1-3"},
-{"sessionid":"P1","presenid":"P1-4"},
-{"sessionid":"P1","presenid":"P1-5"},
-{"sessionid":"P2","presenid":"P2-1"},
-{"sessionid":"P2","presenid":"P2-2"},
-{"sessionid":"P2","presenid":"P2-3"},
-{"sessionid":"P2","presenid":"P2-4"},
-{"sessionid":"P2","presenid":"P2-5"},
-{"sessionid":"P3","presenid":"P3-1"},
-{"sessionid":"P3","presenid":"P3-2"},
-{"sessionid":"P3","presenid":"P3-3"},
-{"sessionid":"P3","presenid":"P3-4"},
-{"sessionid":"P3","presenid":"P3-5"},
-{"sessionid":"X3","presenid":"X3-4"},
-{"sessionid":"X3","presenid":"X3-5"},
-{"sessionid":"X3","presenid":"X3-6"},
-{"sessionid":"X3","presenid":"X3-7"},
-{"sessionid":"X3","presenid":"X3-8"},
-{"sessionid":"X3","presenid":"X3-9"},
-{"sessionid":"X3","presenid":"X3-10"},
-{"sessionid":"X3","presenid":"X3-11"},
-{"sessionid":"X3","presenid":"X3-12"},
-{"sessionid":"X3","presenid":"X3-13"},
-{"sessionid":"X3","presenid":"X3-14"},
-{"sessionid":"X3","presenid":"X3-15"},
-{"sessionid":"X3","presenid":"X3-16"},
-{"sessionid":"X3","presenid":"X3-17"},
-{"sessionid":"X3","presenid":"X3-18"},
-{"sessionid":"X3","presenid":"X3-19"},
-{"sessionid":"X3","presenid":"X3-20"},
-{"sessionid":"X3","presenid":"X3-21"},
-{"sessionid":"X3","presenid":"X3-22"},
-{"sessionid":"X3","presenid":"X3-23"},
-{"sessionid":"X3","presenid":"X3-24"},
-{"sessionid":"X3","presenid":"X3-25"},
-{"sessionid":"X3","presenid":"X3-26"},
-{"sessionid":"X3","presenid":"X3-27"},
-{"sessionid":"X3","presenid":"X3-28"},
-{"sessionid":"X3","presenid":"X3-29"},
-{"sessionid":"X3","presenid":"X3-30"},
-{"sessionid":"X3","presenid":"X3-31"},
-{"sessionid":"X3","presenid":"X3-32"},
-{"sessionid":"X3","presenid":"X3-33"},
-{"sessionid":"X3","presenid":"X3-34"},
-{"sessionid":"X3","presenid":"X3-35"},
-{"sessionid":"X3","presenid":"X3-36"},
-{"sessionid":"X3","presenid":"X3-37"},
-{"sessionid":"X3","presenid":"X3-38"},
-{"sessionid":"X3","presenid":"X3-39"},
-{"sessionid":"X3","presenid":"X3-40"},
-{"sessionid":"X3","presenid":"X3-41"},
-{"sessionid":"X3","presenid":"X3-42"},
-{"sessionid":"X3","presenid":"X3-43"},
-{"sessionid":"X3","presenid":"X3-44"},
-{"sessionid":"X3","presenid":"X3-45"},
-{"sessionid":"X3","presenid":"X3-46"},
-{"sessionid":"X3","presenid":"X3-47"},
-{"sessionid":"X3","presenid":"X3-48"},
-{"sessionid":"X3","presenid":"X3-49"},
-{"sessionid":"X3","presenid":"X3-50"},
-{"sessionid":"X3","presenid":"X3-51"},
-{"sessionid":"X3","presenid":"X3-52"}
-];
+[ {
+    "sessionid" : "E1",
+    "presenid" : "E1-1"
+  }, {
+    "sessionid" : "E1",
+    "presenid" : "E1-2"
+  }, {
+    "sessionid" : "E1",
+    "presenid" : "E1-3"
+  }, {
+    "sessionid" : "E1",
+    "presenid" : "E1-4"
+  }, {
+    "sessionid" : "E1",
+    "presenid" : "E1-5"
+  }, {
+    "sessionid" : "E1",
+    "presenid" : "E1-6"
+  }, {
+    "sessionid" : "E2",
+    "presenid" : "E2-1"
+  }, {
+    "sessionid" : "E2",
+    "presenid" : "E2-2"
+  }, {
+    "sessionid" : "E2",
+    "presenid" : "E2-3"
+  }, {
+    "sessionid" : "E2",
+    "presenid" : "E2-4"
+  }, {
+    "sessionid" : "E2",
+    "presenid" : "E2-5"
+  }, {
+    "sessionid" : "E2",
+    "presenid" : "E2-6"
+  }, {
+    "sessionid" : "E3",
+    "presenid" : "E3-1"
+  }, {
+    "sessionid" : "E3",
+    "presenid" : "E3-2"
+  }, {
+    "sessionid" : "E3",
+    "presenid" : "E3-3"
+  }, {
+    "sessionid" : "E3",
+    "presenid" : "E3-4"
+  }, {
+    "sessionid" : "E3",
+    "presenid" : "E3-5"
+  }, {
+    "sessionid" : "E3",
+    "presenid" : "E3-6"
+  }, {
+    "sessionid" : "E4",
+    "presenid" : "E4-1"
+  }, {
+    "sessionid" : "E4",
+    "presenid" : "E4-2"
+  }, {
+    "sessionid" : "E4",
+    "presenid" : "E4-3"
+  }, {
+    "sessionid" : "E4",
+    "presenid" : "E4-4"
+  }, {
+    "sessionid" : "E4",
+    "presenid" : "E4-5"
+  }, {
+    "sessionid" : "E4",
+    "presenid" : "E4-6"
+  }, {
+    "sessionid" : "A1",
+    "presenid" : "A1-1"
+  }, {
+    "sessionid" : "A1",
+    "presenid" : "A1-2"
+  }, {
+    "sessionid" : "A1",
+    "presenid" : "A1-3"
+  }, {
+    "sessionid" : "A1",
+    "presenid" : "A1-4"
+  }, {
+    "sessionid" : "A1",
+    "presenid" : "A1-5"
+  }, {
+    "sessionid" : "A1",
+    "presenid" : "A1-6"
+  }, {
+    "sessionid" : "E5",
+    "presenid" : "E5-1"
+  }, {
+    "sessionid" : "E5",
+    "presenid" : "E5-2"
+  }, {
+    "sessionid" : "E5",
+    "presenid" : "E5-3"
+  }, {
+    "sessionid" : "E5",
+    "presenid" : "E5-4"
+  }, {
+    "sessionid" : "E5",
+    "presenid" : "E5-5"
+  }, {
+    "sessionid" : "E5",
+    "presenid" : "E5-6"
+  }, {
+    "sessionid" : "A2",
+    "presenid" : "A2-1"
+  }, {
+    "sessionid" : "A2",
+    "presenid" : "A2-2"
+  }, {
+    "sessionid" : "A2",
+    "presenid" : "A2-3"
+  }, {
+    "sessionid" : "A2",
+    "presenid" : "A2-4"
+  }, {
+    "sessionid" : "A2",
+    "presenid" : "A2-5"
+  }, {
+    "sessionid" : "A2",
+    "presenid" : "A2-6"
+  }, {
+    "sessionid" : "E6",
+    "presenid" : "E6-1"
+  }, {
+    "sessionid" : "E6",
+    "presenid" : "E6-2"
+  }, {
+    "sessionid" : "E6",
+    "presenid" : "E6-3"
+  }, {
+    "sessionid" : "E6",
+    "presenid" : "E6-4"
+  }, {
+    "sessionid" : "E6",
+    "presenid" : "E6-5"
+  }, {
+    "sessionid" : "E6",
+    "presenid" : "E6-6"
+  }, {
+    "sessionid" : "A3",
+    "presenid" : "A3-1"
+  }, {
+    "sessionid" : "A3",
+    "presenid" : "A3-2"
+  }, {
+    "sessionid" : "A3",
+    "presenid" : "A3-3"
+  }, {
+    "sessionid" : "A3",
+    "presenid" : "A3-4"
+  }, {
+    "sessionid" : "A3",
+    "presenid" : "A3-5"
+  }, {
+    "sessionid" : "E7",
+    "presenid" : "E7-1"
+  }, {
+    "sessionid" : "E7",
+    "presenid" : "E7-2"
+  }, {
+    "sessionid" : "E7",
+    "presenid" : "E7-3"
+  }, {
+    "sessionid" : "E7",
+    "presenid" : "E7-4"
+  }, {
+    "sessionid" : "E7",
+    "presenid" : "E7-5"
+  }, {
+    "sessionid" : "E7",
+    "presenid" : "E7-6"
+  }, {
+    "sessionid" : "A4",
+    "presenid" : "A4-1"
+  }, {
+    "sessionid" : "A4",
+    "presenid" : "A4-2"
+  }, {
+    "sessionid" : "A4",
+    "presenid" : "A4-3"
+  }, {
+    "sessionid" : "A4",
+    "presenid" : "A4-4"
+  }, {
+    "sessionid" : "E8",
+    "presenid" : "E8-1"
+  }, {
+    "sessionid" : "E8",
+    "presenid" : "E8-2"
+  }, {
+    "sessionid" : "E8",
+    "presenid" : "E8-3"
+  }, {
+    "sessionid" : "E8",
+    "presenid" : "E8-4"
+  }, {
+    "sessionid" : "E8",
+    "presenid" : "E8-5"
+  }, {
+    "sessionid" : "E8",
+    "presenid" : "E8-6"
+  }, {
+    "sessionid" : "A5",
+    "presenid" : "A5-1"
+  }, {
+    "sessionid" : "A5",
+    "presenid" : "A5-2"
+  }, {
+    "sessionid" : "A5",
+    "presenid" : "A5-3"
+  }, {
+    "sessionid" : "A5",
+    "presenid" : "A5-4"
+  }, {
+    "sessionid" : "A6",
+    "presenid" : "A6-1"
+  }, {
+    "sessionid" : "A6",
+    "presenid" : "A6-2"
+  }, {
+    "sessionid" : "A6",
+    "presenid" : "A6-3"
+  }, {
+    "sessionid" : "A6",
+    "presenid" : "A6-4"
+  }, {
+    "sessionid" : "A6",
+    "presenid" : "A6-5"
+  }, {
+    "sessionid" : "A8",
+    "presenid" : "A8-1"
+  }, {
+    "sessionid" : "A8",
+    "presenid" : "A8-2"
+  }, {
+    "sessionid" : "A8",
+    "presenid" : "A8-3"
+  }, {
+    "sessionid" : "A8",
+    "presenid" : "A8-4"
+  }, {
+    "sessionid" : "A8",
+    "presenid" : "A8-5"
+  }, {
+    "sessionid" : "A8",
+    "presenid" : "A8-6"
+  }, {
+    "sessionid" : "F1",
+    "presenid" : "F1-1"
+  }, {
+    "sessionid" : "F1",
+    "presenid" : "F1-2"
+  }, {
+    "sessionid" : "F1",
+    "presenid" : "F1-3"
+  }, {
+    "sessionid" : "F1",
+    "presenid" : "F1-4"
+  }, {
+    "sessionid" : "F1",
+    "presenid" : "F1-5"
+  }, {
+    "sessionid" : "F1",
+    "presenid" : "F1-6"
+  }, {
+    "sessionid" : "F2",
+    "presenid" : "F2-1"
+  }, {
+    "sessionid" : "F2",
+    "presenid" : "F2-2"
+  }, {
+    "sessionid" : "F2",
+    "presenid" : "F2-3"
+  }, {
+    "sessionid" : "F2",
+    "presenid" : "F2-4"
+  }, {
+    "sessionid" : "F2",
+    "presenid" : "F2-5"
+  }, {
+    "sessionid" : "F2",
+    "presenid" : "F2-6"
+  }, {
+    "sessionid" : "F3",
+    "presenid" : "F3-1"
+  }, {
+    "sessionid" : "F3",
+    "presenid" : "F3-2"
+  }, {
+    "sessionid" : "F3",
+    "presenid" : "F3-3"
+  }, {
+    "sessionid" : "F3",
+    "presenid" : "F3-4"
+  }, {
+    "sessionid" : "F3",
+    "presenid" : "F3-5"
+  }, {
+    "sessionid" : "F3",
+    "presenid" : "F3-6"
+  }, {
+    "sessionid" : "F4",
+    "presenid" : "F4-1"
+  }, {
+    "sessionid" : "F4",
+    "presenid" : "F4-2"
+  }, {
+    "sessionid" : "F4",
+    "presenid" : "F4-3"
+  }, {
+    "sessionid" : "F4",
+    "presenid" : "F4-4"
+  }, {
+    "sessionid" : "F4",
+    "presenid" : "F4-5"
+  }, {
+    "sessionid" : "F4",
+    "presenid" : "F4-6"
+  }, {
+    "sessionid" : "B1",
+    "presenid" : "B1-1"
+  }, {
+    "sessionid" : "B1",
+    "presenid" : "B1-2"
+  }, {
+    "sessionid" : "B1",
+    "presenid" : "B1-3"
+  }, {
+    "sessionid" : "B1",
+    "presenid" : "B1-4"
+  }, {
+    "sessionid" : "B1",
+    "presenid" : "B1-5"
+  }, {
+    "sessionid" : "B1",
+    "presenid" : "B1-6"
+  }, {
+    "sessionid" : "F5",
+    "presenid" : "F5-1"
+  }, {
+    "sessionid" : "F5",
+    "presenid" : "F5-2"
+  }, {
+    "sessionid" : "F5",
+    "presenid" : "F5-3"
+  }, {
+    "sessionid" : "F5",
+    "presenid" : "F5-4"
+  }, {
+    "sessionid" : "F5",
+    "presenid" : "F5-5"
+  }, {
+    "sessionid" : "B2",
+    "presenid" : "B2-1"
+  }, {
+    "sessionid" : "B2",
+    "presenid" : "B2-2"
+  }, {
+    "sessionid" : "B2",
+    "presenid" : "B2-3"
+  }, {
+    "sessionid" : "B2",
+    "presenid" : "B2-4"
+  }, {
+    "sessionid" : "B2",
+    "presenid" : "B2-5"
+  }, {
+    "sessionid" : "B2",
+    "presenid" : "B2-6"
+  }, {
+    "sessionid" : "F6",
+    "presenid" : "F6-1"
+  }, {
+    "sessionid" : "F6",
+    "presenid" : "F6-2"
+  }, {
+    "sessionid" : "F6",
+    "presenid" : "F6-3"
+  }, {
+    "sessionid" : "F6",
+    "presenid" : "F6-4"
+  }, {
+    "sessionid" : "F6",
+    "presenid" : "F6-5"
+  }, {
+    "sessionid" : "F6",
+    "presenid" : "F6-6"
+  }, {
+    "sessionid" : "B3",
+    "presenid" : "B3-1"
+  }, {
+    "sessionid" : "B3",
+    "presenid" : "B3-2"
+  }, {
+    "sessionid" : "B3",
+    "presenid" : "B3-3"
+  }, {
+    "sessionid" : "B3",
+    "presenid" : "B3-4"
+  }, {
+    "sessionid" : "B3",
+    "presenid" : "B3-5"
+  }, {
+    "sessionid" : "B3",
+    "presenid" : "B3-6"
+  }, {
+    "sessionid" : "F7",
+    "presenid" : "F7-1"
+  }, {
+    "sessionid" : "F7",
+    "presenid" : "F7-2"
+  }, {
+    "sessionid" : "F7",
+    "presenid" : "F7-3"
+  }, {
+    "sessionid" : "F7",
+    "presenid" : "F7-4"
+  }, {
+    "sessionid" : "F7",
+    "presenid" : "F7-5"
+  }, {
+    "sessionid" : "F7",
+    "presenid" : "F7-6"
+  }, {
+    "sessionid" : "B4",
+    "presenid" : "B4-1"
+  }, {
+    "sessionid" : "B4",
+    "presenid" : "B4-2"
+  }, {
+    "sessionid" : "B4",
+    "presenid" : "B4-3"
+  }, {
+    "sessionid" : "B4",
+    "presenid" : "B4-4"
+  }, {
+    "sessionid" : "B4",
+    "presenid" : "B4-5"
+  }, {
+    "sessionid" : "B4",
+    "presenid" : "B4-6"
+  }, {
+    "sessionid" : "F8",
+    "presenid" : "F8-1"
+  }, {
+    "sessionid" : "F8",
+    "presenid" : "F8-2"
+  }, {
+    "sessionid" : "F8",
+    "presenid" : "F8-3"
+  }, {
+    "sessionid" : "F8",
+    "presenid" : "F8-4"
+  }, {
+    "sessionid" : "F8",
+    "presenid" : "F8-5"
+  }, {
+    "sessionid" : "F8",
+    "presenid" : "F8-6"
+  }, {
+    "sessionid" : "B5",
+    "presenid" : "B5-1"
+  }, {
+    "sessionid" : "B5",
+    "presenid" : "B5-2"
+  }, {
+    "sessionid" : "B5",
+    "presenid" : "B5-3"
+  }, {
+    "sessionid" : "B5",
+    "presenid" : "B5-4"
+  }, {
+    "sessionid" : "B5",
+    "presenid" : "B5-5"
+  }, {
+    "sessionid" : "B6",
+    "presenid" : "B6-1"
+  }, {
+    "sessionid" : "B6",
+    "presenid" : "B6-2"
+  }, {
+    "sessionid" : "B6",
+    "presenid" : "B6-3"
+  }, {
+    "sessionid" : "B6",
+    "presenid" : "B6-4"
+  }, {
+    "sessionid" : "B6",
+    "presenid" : "B6-5"
+  }, {
+    "sessionid" : "B6",
+    "presenid" : "B6-6"
+  }, {
+    "sessionid" : "B8",
+    "presenid" : "B8-1"
+  }, {
+    "sessionid" : "B8",
+    "presenid" : "B8-2"
+  }, {
+    "sessionid" : "B8",
+    "presenid" : "B8-3"
+  }, {
+    "sessionid" : "B8",
+    "presenid" : "B8-4"
+  }, {
+    "sessionid" : "B8",
+    "presenid" : "B8-5"
+  }, {
+    "sessionid" : "B8",
+    "presenid" : "B8-6"
+  }, {
+    "sessionid" : "G1",
+    "presenid" : "G1-1"
+  }, {
+    "sessionid" : "G1",
+    "presenid" : "G1-2"
+  }, {
+    "sessionid" : "G1",
+    "presenid" : "G1-3"
+  }, {
+    "sessionid" : "G1",
+    "presenid" : "G1-4"
+  }, {
+    "sessionid" : "G1",
+    "presenid" : "G1-5"
+  }, {
+    "sessionid" : "G1",
+    "presenid" : "G1-6"
+  }, {
+    "sessionid" : "G2",
+    "presenid" : "G2-1"
+  }, {
+    "sessionid" : "G2",
+    "presenid" : "G2-2"
+  }, {
+    "sessionid" : "G2",
+    "presenid" : "G2-3"
+  }, {
+    "sessionid" : "G2",
+    "presenid" : "G2-4"
+  }, {
+    "sessionid" : "G2",
+    "presenid" : "G2-5"
+  }, {
+    "sessionid" : "G2",
+    "presenid" : "G2-6"
+  }, {
+    "sessionid" : "G3",
+    "presenid" : "G3-1"
+  }, {
+    "sessionid" : "G3",
+    "presenid" : "G3-2"
+  }, {
+    "sessionid" : "G3",
+    "presenid" : "G3-3"
+  }, {
+    "sessionid" : "G3",
+    "presenid" : "G3-4"
+  }, {
+    "sessionid" : "G3",
+    "presenid" : "G3-5"
+  }, {
+    "sessionid" : "G3",
+    "presenid" : "G3-6"
+  }, {
+    "sessionid" : "G4",
+    "presenid" : "G4-1"
+  }, {
+    "sessionid" : "G4",
+    "presenid" : "G4-2"
+  }, {
+    "sessionid" : "G4",
+    "presenid" : "G4-3"
+  }, {
+    "sessionid" : "G4",
+    "presenid" : "G4-4"
+  }, {
+    "sessionid" : "G4",
+    "presenid" : "G4-5"
+  }, {
+    "sessionid" : "G4",
+    "presenid" : "G4-6"
+  }, {
+    "sessionid" : "C1",
+    "presenid" : "C1-1"
+  }, {
+    "sessionid" : "C1",
+    "presenid" : "C1-2"
+  }, {
+    "sessionid" : "C1",
+    "presenid" : "C1-3"
+  }, {
+    "sessionid" : "C1",
+    "presenid" : "C1-4"
+  }, {
+    "sessionid" : "C1",
+    "presenid" : "C1-5"
+  }, {
+    "sessionid" : "C1",
+    "presenid" : "C1-6"
+  }, {
+    "sessionid" : "G5",
+    "presenid" : "G5-1"
+  }, {
+    "sessionid" : "G5",
+    "presenid" : "G5-2"
+  }, {
+    "sessionid" : "G5",
+    "presenid" : "G5-3"
+  }, {
+    "sessionid" : "G5",
+    "presenid" : "G5-4"
+  }, {
+    "sessionid" : "G5",
+    "presenid" : "G5-5"
+  }, {
+    "sessionid" : "G5",
+    "presenid" : "G5-6"
+  }, {
+    "sessionid" : "C2",
+    "presenid" : "C2-1"
+  }, {
+    "sessionid" : "C2",
+    "presenid" : "C2-2"
+  }, {
+    "sessionid" : "C2",
+    "presenid" : "C2-3"
+  }, {
+    "sessionid" : "C2",
+    "presenid" : "C2-4"
+  }, {
+    "sessionid" : "C2",
+    "presenid" : "C2-5"
+  }, {
+    "sessionid" : "C2",
+    "presenid" : "C2-6"
+  }, {
+    "sessionid" : "G6",
+    "presenid" : "G6-1"
+  }, {
+    "sessionid" : "G6",
+    "presenid" : "G6-2"
+  }, {
+    "sessionid" : "G6",
+    "presenid" : "G6-3"
+  }, {
+    "sessionid" : "G6",
+    "presenid" : "G6-4"
+  }, {
+    "sessionid" : "G6",
+    "presenid" : "G6-5"
+  }, {
+    "sessionid" : "G6",
+    "presenid" : "G6-6"
+  }, {
+    "sessionid" : "C3",
+    "presenid" : "C3-1"
+  }, {
+    "sessionid" : "C3",
+    "presenid" : "C3-2"
+  }, {
+    "sessionid" : "C3",
+    "presenid" : "C3-3"
+  }, {
+    "sessionid" : "C3",
+    "presenid" : "C3-4"
+  }, {
+    "sessionid" : "C3",
+    "presenid" : "C3-5"
+  }, {
+    "sessionid" : "G7",
+    "presenid" : "G7-1"
+  }, {
+    "sessionid" : "G7",
+    "presenid" : "G7-2"
+  }, {
+    "sessionid" : "G7",
+    "presenid" : "G7-3"
+  }, {
+    "sessionid" : "G7",
+    "presenid" : "G7-4"
+  }, {
+    "sessionid" : "G7",
+    "presenid" : "G7-5"
+  }, {
+    "sessionid" : "G7",
+    "presenid" : "G7-6"
+  }, {
+    "sessionid" : "C4",
+    "presenid" : "C4-1"
+  }, {
+    "sessionid" : "C4",
+    "presenid" : "C4-2"
+  }, {
+    "sessionid" : "C4",
+    "presenid" : "C4-3"
+  }, {
+    "sessionid" : "C4",
+    "presenid" : "C4-4"
+  }, {
+    "sessionid" : "C4",
+    "presenid" : "C4-5"
+  }, {
+    "sessionid" : "G8",
+    "presenid" : "G8-1"
+  }, {
+    "sessionid" : "G8",
+    "presenid" : "G8-2"
+  }, {
+    "sessionid" : "G8",
+    "presenid" : "G8-3"
+  }, {
+    "sessionid" : "G8",
+    "presenid" : "G8-4"
+  }, {
+    "sessionid" : "G8",
+    "presenid" : "G8-5"
+  }, {
+    "sessionid" : "G8",
+    "presenid" : "G8-6"
+  }, {
+    "sessionid" : "C5",
+    "presenid" : "C5-1"
+  }, {
+    "sessionid" : "C5",
+    "presenid" : "C5-2"
+  }, {
+    "sessionid" : "C5",
+    "presenid" : "C5-3"
+  }, {
+    "sessionid" : "C5",
+    "presenid" : "C5-4"
+  }, {
+    "sessionid" : "C5",
+    "presenid" : "C5-5"
+  }, {
+    "sessionid" : "C6",
+    "presenid" : "C6-1"
+  }, {
+    "sessionid" : "C6",
+    "presenid" : "C6-2"
+  }, {
+    "sessionid" : "C6",
+    "presenid" : "C6-3"
+  }, {
+    "sessionid" : "C6",
+    "presenid" : "C6-4"
+  }, {
+    "sessionid" : "C6",
+    "presenid" : "C6-5"
+  }, {
+    "sessionid" : "C6",
+    "presenid" : "C6-6"
+  }, {
+    "sessionid" : "C7",
+    "presenid" : "C7-1"
+  }, {
+    "sessionid" : "C7",
+    "presenid" : "C7-2"
+  }, {
+    "sessionid" : "C7",
+    "presenid" : "C7-3"
+  }, {
+    "sessionid" : "C7",
+    "presenid" : "C7-4"
+  }, {
+    "sessionid" : "C7",
+    "presenid" : "C7-5"
+  }, {
+    "sessionid" : "C7",
+    "presenid" : "C7-6"
+  }, {
+    "sessionid" : "C8",
+    "presenid" : "C8-1"
+  }, {
+    "sessionid" : "C8",
+    "presenid" : "C8-2"
+  }, {
+    "sessionid" : "C8",
+    "presenid" : "C8-3"
+  }, {
+    "sessionid" : "C8",
+    "presenid" : "C8-4"
+  }, {
+    "sessionid" : "C8",
+    "presenid" : "C8-5"
+  }, {
+    "sessionid" : "P1",
+    "presenid" : "P1-1"
+  }, {
+    "sessionid" : "P1",
+    "presenid" : "P1-2"
+  }, {
+    "sessionid" : "P1",
+    "presenid" : "P1-3"
+  }, {
+    "sessionid" : "P1",
+    "presenid" : "P1-4"
+  }, {
+    "sessionid" : "P1",
+    "presenid" : "P1-5"
+  }, {
+    "sessionid" : "P2",
+    "presenid" : "P2-1"
+  }, {
+    "sessionid" : "P2",
+    "presenid" : "P2-2"
+  }, {
+    "sessionid" : "P2",
+    "presenid" : "P2-3"
+  }, {
+    "sessionid" : "P2",
+    "presenid" : "P2-4"
+  }, {
+    "sessionid" : "P2",
+    "presenid" : "P2-5"
+  }, {
+    "sessionid" : "P3",
+    "presenid" : "P3-1"
+  }, {
+    "sessionid" : "P3",
+    "presenid" : "P3-2"
+  }, {
+    "sessionid" : "P3",
+    "presenid" : "P3-3"
+  }, {
+    "sessionid" : "P3",
+    "presenid" : "P3-4"
+  }, {
+    "sessionid" : "P3",
+    "presenid" : "P3-5"
+  }, {
+    "sessionid" : "P3",
+    "presenid" : "P3-6"
+  }, {
+    "sessionid" : "P4",
+    "presenid" : "P4-1"
+  }, {
+    "sessionid" : "P4",
+    "presenid" : "P4-2"
+  }, {
+    "sessionid" : "P4",
+    "presenid" : "P4-3"
+  }, {
+    "sessionid" : "P4",
+    "presenid" : "P4-4"
+  }, {
+    "sessionid" : "P4",
+    "presenid" : "P4-5"
+  }, {
+    "sessionid" : "D1",
+    "presenid" : "D1-1"
+  }, {
+    "sessionid" : "D1",
+    "presenid" : "D1-2"
+  }, {
+    "sessionid" : "D1",
+    "presenid" : "D1-3"
+  }, {
+    "sessionid" : "D1",
+    "presenid" : "D1-4"
+  }, {
+    "sessionid" : "D1",
+    "presenid" : "D1-5"
+  }, {
+    "sessionid" : "D1",
+    "presenid" : "D1-6"
+  }, {
+    "sessionid" : "D2",
+    "presenid" : "D2-1"
+  }, {
+    "sessionid" : "D2",
+    "presenid" : "D2-2"
+  }, {
+    "sessionid" : "D2",
+    "presenid" : "D2-3"
+  }, {
+    "sessionid" : "D2",
+    "presenid" : "D2-4"
+  }, {
+    "sessionid" : "D2",
+    "presenid" : "D2-5"
+  }, {
+    "sessionid" : "D2",
+    "presenid" : "D2-6"
+  }, {
+    "sessionid" : "D3",
+    "presenid" : "D3-1"
+  }, {
+    "sessionid" : "D3",
+    "presenid" : "D3-2"
+  }, {
+    "sessionid" : "D3",
+    "presenid" : "D3-3"
+  }, {
+    "sessionid" : "D3",
+    "presenid" : "D3-4"
+  }, {
+    "sessionid" : "D3",
+    "presenid" : "D3-5"
+  }, {
+    "sessionid" : "D3",
+    "presenid" : "D3-6"
+  }, {
+    "sessionid" : "D4",
+    "presenid" : "D4-1"
+  }, {
+    "sessionid" : "D4",
+    "presenid" : "D4-2"
+  }, {
+    "sessionid" : "D4",
+    "presenid" : "D4-3"
+  }, {
+    "sessionid" : "D4",
+    "presenid" : "D4-4"
+  }, {
+    "sessionid" : "D4",
+    "presenid" : "D4-5"
+  }, {
+    "sessionid" : "D4",
+    "presenid" : "D4-6"
+  }, {
+    "sessionid" : "D5",
+    "presenid" : "D5-1"
+  }, {
+    "sessionid" : "D5",
+    "presenid" : "D5-2"
+  }, {
+    "sessionid" : "D5",
+    "presenid" : "D5-3"
+  }, {
+    "sessionid" : "D5",
+    "presenid" : "D5-4"
+  }, {
+    "sessionid" : "D5",
+    "presenid" : "D5-5"
+  }, {
+    "sessionid" : "D5",
+    "presenid" : "D5-6"
+  }, {
+    "sessionid" : "D6",
+    "presenid" : "D6-1"
+  }, {
+    "sessionid" : "D6",
+    "presenid" : "D6-2"
+  }, {
+    "sessionid" : "D6",
+    "presenid" : "D6-3"
+  }, {
+    "sessionid" : "D6",
+    "presenid" : "D6-4"
+  }, {
+    "sessionid" : "D6",
+    "presenid" : "D6-5"
+  }, {
+    "sessionid" : "D7",
+    "presenid" : "D7-1"
+  }, {
+    "sessionid" : "D7",
+    "presenid" : "D7-2"
+  }, {
+    "sessionid" : "D7",
+    "presenid" : "D7-3"
+  }, {
+    "sessionid" : "D7",
+    "presenid" : "D7-4"
+  }, {
+    "sessionid" : "D7",
+    "presenid" : "D7-5"
+  }, {
+    "sessionid" : "D7",
+    "presenid" : "D7-6"
+  }, {
+    "sessionid" : "D8",
+    "presenid" : "D8-1"
+  }, {
+    "sessionid" : "D8",
+    "presenid" : "D8-2"
+  }, {
+    "sessionid" : "D8",
+    "presenid" : "D8-3"
+  }, {
+    "sessionid" : "D8",
+    "presenid" : "D8-4"
+  }, {
+    "sessionid" : "D8",
+    "presenid" : "D8-5"
+  }, {
+    "sessionid" : "D8",
+    "presenid" : "D8-6"
+  }, {
+    "sessionid" : "X1",
+    "presenid" : "X1-1"
+  }, {
+    "sessionid" : "X1",
+    "presenid" : "X1-2"
+  }, {
+    "sessionid" : "X1",
+    "presenid" : "X1-3"
+  }, {
+    "sessionid" : "X1",
+    "presenid" : "X1-4"
+  }, {
+    "sessionid" : "X1",
+    "presenid" : "X1-5"
+  } ];
 
 session =  
-[
-{"sessionid":"A1","title":"Wikipedia・XML（Ph.Dセッション）","chairpersonname":"山名 早人","charipersonbelongs":"早稲田大学"},
-{"sessionid":"B1","title":"SNS","chairpersonname":"熊本 忠彦","charipersonbelongs":"千葉工業大学"},
-{"sessionid":"C1","title":"Web情報抽出","chairpersonname":"土方 嘉徳","charipersonbelongs":"大阪大学"},
-{"sessionid":"D1","title":"MapReduce・分散処理","chairpersonname":"藤原 真二","charipersonbelongs":"日立製作所"},
-{"sessionid":"E1","title":"情報可視化","chairpersonname":"上善 恒雄","charipersonbelongs":"大阪電気通信大学"},
-{"sessionid":"F1","title":"eラーニング(1)","chairpersonname":"角谷 和俊","charipersonbelongs":"兵庫県立大学"},
-{"sessionid":"A2","title":"高性能DB（Ph.Dセッション）","chairpersonname":"川越 恭二","charipersonbelongs":"立命館大学"},
-{"sessionid":"B2","title":"SNSとプロファイリング","chairpersonname":"宇津呂 武仁","charipersonbelongs":"筑波大学"},
-{"sessionid":"C2","title":"コンテンツ","chairpersonname":"太田 学","charipersonbelongs":"岡山大学"},
-{"sessionid":"D2","title":"ストレージ・P2P","chairpersonname":"宮崎 純","charipersonbelongs":"東京工業大学"},
-{"sessionid":"E2","title":"クラウドソーシング・HCI","chairpersonname":"陳 幸生","charipersonbelongs":"神奈川工科大学"},
-{"sessionid":"F2","title":"eラーニング(2)","chairpersonname":"飯沢 篤志","charipersonbelongs":"リコー"},
-{"sessionid":"A3","title":"NULL","chairpersonname":"NULL","charipersonbelongs":"NULL"},
-{"sessionid":"B3","title":"SNSと地域情報","chairpersonname":"土田 正明","charipersonbelongs":"NEC"},
-{"sessionid":"C3","title":"自然言語処理","chairpersonname":"難波 英嗣","charipersonbelongs":"広島市立大学"},
-{"sessionid":"D3","title":"ストリーム","chairpersonname":"藤原 靖宏","charipersonbelongs":"ＮＴＴソフトウェアイノベーションセンタ"},
-{"sessionid":"E3","title":"ユーザインタフェース","chairpersonname":"佐藤 哲司","charipersonbelongs":"筑波大学"},
-{"sessionid":"F3","title":"企業情報・広告","chairpersonname":"横田 裕介","charipersonbelongs":"立命館大学"},
-{"sessionid":"A4","title":"HCI（Ph.Dセッション）","chairpersonname":"増永 良文","charipersonbelongs":"お茶の水女子大学名誉教授"},
-{"sessionid":"B4","title":"ソーシャルメディア分析","chairpersonname":"松本 一則","charipersonbelongs":"KDDI研究所"},
-{"sessionid":"C4","title":"トピックモデル","chairpersonname":"有次 正義","charipersonbelongs":"熊本大学"},
-{"sessionid":"D4","title":"時系列データ","chairpersonname":"北川 博之","charipersonbelongs":"筑波大学"},
-{"sessionid":"E4","title":"地理・時空間(1)","chairpersonname":"原 隆浩","charipersonbelongs":"大阪大学"},
-{"sessionid":"F4","title":"マルチメディア(1)","chairpersonname":"吉田 尚史","charipersonbelongs":"駒澤大学"},
-{"sessionid":"A5","title":"SNS（Ph.Dセッション）","chairpersonname":"田中 克己","charipersonbelongs":"京都大学"},
-{"sessionid":"B5","title":"ユーザレビュー","chairpersonname":"庄司 裕子","charipersonbelongs":"中央大学"},
-{"sessionid":"C5","title":"文献情報マイニング","chairpersonname":"大塚 真吾","charipersonbelongs":"神奈川工科大学"},
-{"sessionid":"D5","title":"時系列データ・クラスタリング","chairpersonname":"江口 浩二","charipersonbelongs":"神戸大学"},
-{"sessionid":"E5","title":"プライバシ","chairpersonname":"秋山 豊和","charipersonbelongs":"京都産業大学"},
-{"sessionid":"F5","title":"マルチメディア(2)","chairpersonname":"宮森 恒","charipersonbelongs":"京都産業大学"},
-{"sessionid":"A6","title":"NULL","chairpersonname":"NULL","charipersonbelongs":"NULL"},
-{"sessionid":"B6","title":"マイクロブログ(1)","chairpersonname":"岩井原 瑞穂","charipersonbelongs":"早稲田大学"},
-{"sessionid":"C6","title":"データマイニング","chairpersonname":"櫻井 保志","charipersonbelongs":"熊本大学"},
-{"sessionid":"D6","title":"グラフ","chairpersonname":"田島 敬史","charipersonbelongs":"京都大学"},
-{"sessionid":"E6","title":"感性・感情","chairpersonname":"春本 要","charipersonbelongs":"大阪大学"},
-{"sessionid":"F6","title":"ヘルスケア","chairpersonname":"新谷 隆彦","charipersonbelongs":"電気通信大学"},
-{"sessionid":"A7","title":"NULL","chairpersonname":"NULL","charipersonbelongs":"NULL"},
-{"sessionid":"B7","title":"マイクロブログ(2)","chairpersonname":"戸田 浩之","charipersonbelongs":"NTT"},
-{"sessionid":"C7","title":"類似検索","chairpersonname":"有澤 博","charipersonbelongs":"横浜国立大学"},
-{"sessionid":"D7","title":"Linked Open Data・XML","chairpersonname":"鬼塚 真","charipersonbelongs":"NTT"},
-{"sessionid":"E7","title":"防災・リスクマネジメント","chairpersonname":"是津 耕司","charipersonbelongs":"NICT"},
-{"sessionid":"F7","title":"社会情報","chairpersonname":"中野 美由紀","charipersonbelongs":"芝浦工業大学"},
-{"sessionid":"A8","title":"Webマイニング（Ph.Dセッション）","chairpersonname":"神門 典子","charipersonbelongs":"国立情報学研究所"},
-{"sessionid":"B8","title":"情報推薦(1)","chairpersonname":"河合 由起子","charipersonbelongs":"京都産業大学"},
-{"sessionid":"C8","title":"Web情報システム","chairpersonname":"鈴木 伸崇","charipersonbelongs":"筑波大学"},
-{"sessionid":"D8","title":"問合せ処理","chairpersonname":"横田 治夫","charipersonbelongs":"東京工業大学"},
-{"sessionid":"E8","title":"モバイル","chairpersonname":"谷崎 正明","charipersonbelongs":"京都大学、日立製作所"},
-{"sessionid":"F8","title":"レシピ","chairpersonname":"前田 亮","charipersonbelongs":"立命館大学"},
-{"sessionid":"A9","title":"トピックモデル（Ph.Dセッション）","chairpersonname":"石川 博","charipersonbelongs":"首都大学東京"},
-{"sessionid":"B9","title":"情報推薦(2)","chairpersonname":"天笠 俊之","charipersonbelongs":"筑波大学"},
-{"sessionid":"C9","title":"ネットワーク","chairpersonname":"山口 実靖","charipersonbelongs":"工学院大学"},
-{"sessionid":"D9","title":"データアナリティクス・DBコア技術","chairpersonname":"土田 正士","charipersonbelongs":"日立製作所"},
-{"sessionid":"E9","title":"地理・時空間(2)","chairpersonname":"細川 宜秀","charipersonbelongs":"群馬大学"},
-{"sessionid":"F9","title":"音楽","chairpersonname":"渡辺 知恵美","charipersonbelongs":"筑波大学"},
-{"sessionid":"P1","title":"ソーシャルメディア・ブログ","chairpersonname":"牛尼 剛聡","charipersonbelongs":"九州大学"},
-{"sessionid":"P2","title":"情報推薦・マイニング","chairpersonname":"平手 勇宇","charipersonbelongs":"楽天"},
-{"sessionid":"P3","title":"ユーザインタフェース","chairpersonname":"義久 智樹","charipersonbelongs":"大阪大学"},
-{"sessionid":"P4","title":"観光・地理情報","chairpersonname":"前川 卓也","charipersonbelongs":"大阪大学"},
-{"sessionid":"X3","title":"ダミーセッション","chairpersonname":"Xさん","chairpersonbelongs":"X大学"}
-];
+[ {
+    "sessionid" : "E1",
+    "title" : "クラウド・IoT",
+    "chairpersonname" : "春本 要",
+    "chairpersonbelongs" : "阪大"
+  }, {
+    "sessionid" : "E2",
+    "title" : "マイニング・可視化",
+    "chairpersonname" : "上善 恒雄",
+    "chairpersonbelongs" : "OECU"
+  }, {
+    "sessionid" : "E3",
+    "title" : "半構造データ・オープンデータ",
+    "chairpersonname" : "藤原 靖宏",
+    "chairpersonbelongs" : "NTT"
+  }, {
+    "sessionid" : "E4",
+    "title" : "データ処理基盤",
+    "chairpersonname" : "宮崎 純",
+    "chairpersonbelongs" : "東工大"
+  }, {
+    "sessionid" : "A1",
+    "title" : "QA・ECサイト",
+    "chairpersonname" : "石川 博",
+    "chairpersonbelongs" : "首都大学東京"
+  }, {
+    "sessionid" : "E5",
+    "title" : "グラフと分散処理",
+    "chairpersonname" : "原 隆浩",
+    "chairpersonbelongs" : "阪大"
+  }, {
+    "sessionid" : "A2",
+    "title" : "テキストマイニング",
+    "chairpersonname" : "関 洋平",
+    "chairpersonbelongs" : "筑波大"
+  }, {
+    "sessionid" : "E6",
+    "title" : "グラフマイニング",
+    "chairpersonname" : "片山 薫",
+    "chairpersonbelongs" : "首都大学東京"
+  }, {
+    "sessionid" : "A3",
+    "title" : "情報検索（Ph.Dセッション）",
+    "chairpersonname" : "田島 敬史",
+    "chairpersonbelongs" : "京大"
+  }, {
+    "sessionid" : "E7",
+    "title" : "プラットフォーム技術",
+    "chairpersonname" : "渡辺 陽介",
+    "chairpersonbelongs" : "名大"
+  }, {
+    "sessionid" : "A4",
+    "title" : "Web情報システム（Ph.Dセッション）",
+    "chairpersonname" : "田中 克己",
+    "chairpersonbelongs" : "京大"
+  }, {
+    "sessionid" : "E8",
+    "title" : "情報抽出・検索",
+    "chairpersonname" : "是津 耕司",
+    "chairpersonbelongs" : "NICT"
+  }, {
+    "sessionid" : "A5",
+    "title" : "データマイニング(1)（Ph.Dセッション）",
+    "chairpersonname" : "喜田 拓也",
+    "chairpersonbelongs" : "北大"
+  }, {
+    "sessionid" : "A6",
+    "title" : "データマイニング(2)（Ph.Dセッション）",
+    "chairpersonname" : "増永 良文",
+    "chairpersonbelongs" : "お茶大"
+  }, {
+    "sessionid" : "A8",
+    "title" : "マイクロブログ(2)",
+    "chairpersonname" : "豊田 正史",
+    "chairpersonbelongs" : "東大"
+  }, {
+    "sessionid" : "F1",
+    "title" : "音楽情報処理",
+    "chairpersonname" : "井上 潮",
+    "chairpersonbelongs" : "電大"
+  }, {
+    "sessionid" : "F2",
+    "title" : "動画像データ分析",
+    "chairpersonname" : "安川 雅紀",
+    "chairpersonbelongs" : "東大"
+  }, {
+    "sessionid" : "F3",
+    "title" : "学術情報",
+    "chairpersonname" : "佐藤 哲司",
+    "chairpersonbelongs" : "筑波大"
+  }, {
+    "sessionid" : "F4",
+    "title" : "HCI",
+    "chairpersonname" : "渡辺 知恵美",
+    "chairpersonbelongs" : "筑波大"
+  }, {
+    "sessionid" : "B1",
+    "title" : "情報伝搬・クラウドソーシング",
+    "chairpersonname" : "牛尼 剛聡",
+    "chairpersonbelongs" : "九大"
+  }, {
+    "sessionid" : "F5",
+    "title" : "感情と感性",
+    "chairpersonname" : "太田 学",
+    "chairpersonbelongs" : "岡大"
+  }, {
+    "sessionid" : "B2",
+    "title" : "情報推薦(1)",
+    "chairpersonname" : "鈴木 優",
+    "chairpersonbelongs" : "NAIST"
+  }, {
+    "sessionid" : "F6",
+    "title" : "位置情報",
+    "chairpersonname" : "前川 卓也",
+    "chairpersonbelongs" : "阪大"
+  }, {
+    "sessionid" : "B3",
+    "title" : "情報推薦(2)",
+    "chairpersonname" : "庄司 裕子",
+    "chairpersonbelongs" : "中大"
+  }, {
+    "sessionid" : "F7",
+    "title" : "地理・観光",
+    "chairpersonname" : "灘本 明代",
+    "chairpersonbelongs" : "甲南大"
+  }, {
+    "sessionid" : "B4",
+    "title" : "情報抽出",
+    "chairpersonname" : "神門 典子",
+    "chairpersonbelongs" : "NII"
+  }, {
+    "sessionid" : "F8",
+    "title" : "時系列データ",
+    "chairpersonname" : "波多野 賢治",
+    "chairpersonbelongs" : "同大"
+  }, {
+    "sessionid" : "B5",
+    "title" : "情報検索応用",
+    "chairpersonname" : "宮森 恒",
+    "chairpersonbelongs" : "京都産業大学"
+  }, {
+    "sessionid" : "B6",
+    "title" : "分散処理・管理",
+    "chairpersonname" : "横田 治夫",
+    "chairpersonbelongs" : "東工大"
+  }, {
+    "sessionid" : "B8",
+    "title" : "音楽・動画推薦",
+    "chairpersonname" : "富井 尚志",
+    "chairpersonbelongs" : "横浜国大"
+  }, {
+    "sessionid" : "G1",
+    "title" : "プライバシー(1)",
+    "chairpersonname" : "北川 博之",
+    "chairpersonbelongs" : "筑波大"
+  }, {
+    "sessionid" : "G2",
+    "title" : "プライバシー(2)",
+    "chairpersonname" : "川本 淳平",
+    "chairpersonbelongs" : "九大"
+  }, {
+    "sessionid" : "G3",
+    "title" : "GPU・ストレージ",
+    "chairpersonname" : "的野 晃整",
+    "chairpersonbelongs" : "産総研、AIST"
+  }, {
+    "sessionid" : "G4",
+    "title" : "データマイニング・マイクロブログ",
+    "chairpersonname" : "新谷 隆彦",
+    "chairpersonbelongs" : "電通大"
+  }, {
+    "sessionid" : "C1",
+    "title" : "食・レシピ情報",
+    "chairpersonname" : "金子 邦彦",
+    "chairpersonbelongs" : "九大"
+  }, {
+    "sessionid" : "G5",
+    "title" : "医療情報",
+    "chairpersonname" : "合田 和生",
+    "chairpersonbelongs" : "東大"
+  }, {
+    "sessionid" : "C2",
+    "title" : "ネットワーク・センシング",
+    "chairpersonname" : "谷崎 正明",
+    "chairpersonbelongs" : "日立、京大"
+  }, {
+    "sessionid" : "G6",
+    "title" : "科学・医療データマイニング",
+    "chairpersonname" : "伊藤 貴之",
+    "chairpersonbelongs" : "お茶大"
+  }, {
+    "sessionid" : "C3",
+    "title" : "省電力",
+    "chairpersonname" : "川島 英之",
+    "chairpersonbelongs" : "筑波大"
+  }, {
+    "sessionid" : "G7",
+    "title" : "観光情報",
+    "chairpersonname" : "梅村 恭司",
+    "chairpersonbelongs" : "豊技大"
+  }, {
+    "sessionid" : "C4",
+    "title" : "マイクロブログ(1)",
+    "chairpersonname" : "大向 一輝",
+    "chairpersonbelongs" : "国立情報学研究所"
+  }, {
+    "sessionid" : "G8",
+    "title" : "自然言語処理",
+    "chairpersonname" : "加藤 誠",
+    "chairpersonbelongs" : "京大"
+  }, {
+    "sessionid" : "C5",
+    "title" : "クエリ高度化",
+    "chairpersonname" : "鎌原 淳三",
+    "chairpersonbelongs" : "神大"
+  }, {
+    "sessionid" : "C6",
+    "title" : "クラウドソーシング・SNS",
+    "chairpersonname" : "金政 泰彦",
+    "chairpersonbelongs" : "富士通研"
+  }, {
+    "sessionid" : "C7",
+    "title" : "災害情報",
+    "chairpersonname" : "奥 健太",
+    "chairpersonbelongs" : "立命館大"
+  }, {
+    "sessionid" : "C8",
+    "title" : "イベント抽出と地理情報",
+    "chairpersonname" : "森本 康彦",
+    "chairpersonbelongs" : "広大"
+  }, {
+    "sessionid" : "P1",
+    "title" : "情報推薦",
+    "chairpersonname" : "上田 真由美",
+    "chairpersonbelongs" : "流科大"
+  }, {
+    "sessionid" : "P2",
+    "title" : "時系列・時空間データ",
+    "chairpersonname" : "義久 智樹",
+    "chairpersonbelongs" : "阪大"
+  }, {
+    "sessionid" : "P3",
+    "title" : "先進的データ応用",
+    "chairpersonname" : "前田 亮",
+    "chairpersonbelongs" : "立命館大"
+  }, {
+    "sessionid" : "P4",
+    "title" : "ライフログと地理情報",
+    "chairpersonname" : "難波 英嗣",
+    "chairpersonbelongs" : "広市大"
+  }, {
+    "sessionid" : "D1",
+    "title" : "トピック分類",
+    "chairpersonname" : "横山 大作",
+    "chairpersonbelongs" : "東大"
+  }, {
+    "sessionid" : "D2",
+    "title" : "データ分析",
+    "chairpersonname" : "山本 岳洋",
+    "chairpersonbelongs" : "京大"
+  }, {
+    "sessionid" : "D3",
+    "title" : "ユーザーレビュー",
+    "chairpersonname" : "清水 敏之",
+    "chairpersonbelongs" : "京大"
+  }, {
+    "sessionid" : "D4",
+    "title" : "情報信頼性",
+    "chairpersonname" : "北山 大輔",
+    "chairpersonbelongs" : "工学院大学"
+  }, {
+    "sessionid" : "D5",
+    "title" : "ドキュメントと機械学習",
+    "chairpersonname" : "宇津呂 武仁",
+    "chairpersonbelongs" : "筑波大"
+  }, {
+    "sessionid" : "D6",
+    "title" : "OLAP",
+    "chairpersonname" : "藤原 真二",
+    "chairpersonbelongs" : "日立"
+  }, {
+    "sessionid" : "D7",
+    "title" : "先進的応用",
+    "chairpersonname" : "飯沢 篤志",
+    "chairpersonbelongs" : "リコー"
+  }, {
+    "sessionid" : "D8",
+    "title" : "SNSユーザ情報",
+    "chairpersonname" : "油井 誠",
+    "chairpersonbelongs" : "産総研"
+  }, {
+    "sessionid" : "X1",
+    "title" : "Dummy Session",
+    "chairpersonname" : "Someone",
+    "chairpersonbelongs" : "Somewhere"
+  } ];
 
 commentator = 
-[
-{"sessionid":"A1","name":"田島 敬史","belongs":"京都大学"},
-{"sessionid":"A1","name":"森嶋 厚行","belongs":"筑波大学"},
-{"sessionid":"B1","name":"湯本 高行","belongs":"兵庫県立大学"},
-{"sessionid":"B1","name":"浅野 泰仁","belongs":"京都大学"},
-{"sessionid":"C1","name":"清光 英成","belongs":"神戸大学"},
-{"sessionid":"C1","name":"荒牧 英治","belongs":"京都大学"},
-{"sessionid":"D1","name":"横山 大作","belongs":"東京大学"},
-{"sessionid":"D1","name":"石川 佳治","belongs":"名古屋大学"},
-{"sessionid":"E1","name":"村尾 和哉","belongs":"神戸大学"},
-{"sessionid":"E1","name":"豊田 正史","belongs":"東京大学"},
-{"sessionid":"F1","name":"大本 英徹","belongs":"京都産業大学"},
-{"sessionid":"F1","name":"鷹野 孝典","belongs":"神奈川工科大学"},
-{"sessionid":"A2","name":"宝珍 輝尚","belongs":"京都工芸繊維大学"},
-{"sessionid":"A2","name":"小口 正人","belongs":"お茶の水女子大学"},
-{"sessionid":"B2","name":"福原 知宏","belongs":"産業技術総合研究所"},
-{"sessionid":"B2","name":"陳 漢雄","belongs":"筑波大学"},
-{"sessionid":"C2","name":"波多野 賢治","belongs":"同志社大学"},
-{"sessionid":"C2","name":"白川 真澄","belongs":"大阪大学"},
-{"sessionid":"D2","name":"吉廣 卓哉","belongs":"和歌山大学"},
-{"sessionid":"D2","name":"横田 治夫","belongs":"東京工業大学"},
-{"sessionid":"E2","name":"横山 昌平","belongs":"静岡大学"},
-{"sessionid":"E2","name":"安川 雅紀","belongs":"東京大学"},
-{"sessionid":"F2","name":"若宮 翔子","belongs":"兵庫県立大学"},
-{"sessionid":"F2","name":"上田 真由美","belongs":"流通科学大学"},
-{"sessionid":"A3","name":"NULL","belongs":"NULL"},
-{"sessionid":"A3","name":"NULL","belongs":"NULL"},
-{"sessionid":"B3","name":"牛尼 剛聡","belongs":"九州大学"},
-{"sessionid":"B3","name":"細川 宜秀","belongs":"群馬大学"},
-{"sessionid":"C3","name":"若林 啓","belongs":"筑波大学"},
-{"sessionid":"C3","name":"木村 文則","belongs":"立命館大学"},
-{"sessionid":"D3","name":"西澤 格","belongs":"日立製作所"},
-{"sessionid":"D3","name":"豊田 真智子","belongs":"NTT"},
-{"sessionid":"E3","name":"山本 岳洋","belongs":"京都大学"},
-{"sessionid":"E3","name":"義久 智樹","belongs":"大阪大学"},
-{"sessionid":"F3","name":"平手 勇宇","belongs":"楽天"},
-{"sessionid":"F3","name":"大島 裕明","belongs":"京都大学"},
-{"sessionid":"A4","name":"神門 典子","belongs":"国立情報学研究所"},
-{"sessionid":"A4","name":"熊本 忠彦","belongs":"千葉工業大学"},
-{"sessionid":"B4","name":"小林 亜樹","belongs":"工学院大学"},
-{"sessionid":"B4","name":"井口 誠","belongs":"Kii"},
-{"sessionid":"C4","name":"三浦 孝夫","belongs":"法政大学"},
-{"sessionid":"C4","name":"関 洋平","belongs":"筑波大学"},
-{"sessionid":"D4","name":"黒川 茂莉","belongs":"KDDI研究所"},
-{"sessionid":"D4","name":"藤原 靖宏","belongs":"ＮＴＴ"},
-{"sessionid":"E4","name":"谷崎 正明","belongs":"京都大学、日立製作所"},
-{"sessionid":"E4","name":"池田 哲夫","belongs":"静岡県立大学"},
-{"sessionid":"F4","name":"片山 薫","belongs":"首都大学東京"},
-{"sessionid":"F4","name":"劉 健全","belongs":"NEC"},
-{"sessionid":"A5","name":"中島 伸介","belongs":"京都産業大学"},
-{"sessionid":"A5","name":"土方 嘉徳","belongs":"大阪大学"},
-{"sessionid":"B5","name":"張 建偉","belongs":"筑波技術大学"},
-{"sessionid":"B5","name":"森本 康彦","belongs":"広島大学"},
-{"sessionid":"C5","name":"前田 亮","belongs":"立命館大学"},
-{"sessionid":"C5","name":"都司 達夫","belongs":"福井大学"},
-{"sessionid":"D5","name":"新谷 隆彦","belongs":"電気通信大学"},
-{"sessionid":"D5","name":"野宮 浩揮","belongs":"京都工芸繊維大学"},
-{"sessionid":"E5","name":"川本 淳平","belongs":"九州大学"},
-{"sessionid":"E5","name":"石原 靖哲","belongs":"大阪大学"},
-{"sessionid":"F5","name":"富井 尚志","belongs":"横浜国立大学"},
-{"sessionid":"F5","name":"北山 大輔","belongs":"工学院大学"},
-{"sessionid":"A6","name":"NULL","belongs":"NULL"},
-{"sessionid":"A6","name":"NULL","belongs":"NULL"},
-{"sessionid":"B6","name":"井上 潮","belongs":"東京電機大学"},
-{"sessionid":"B6","name":"渡辺 知恵美","belongs":"筑波大学"},
-{"sessionid":"C6","name":"青野 雅樹","belongs":"豊橋技術科学大学"},
-{"sessionid":"C6","name":"鈴木 伸崇","belongs":"筑波大学"},
-{"sessionid":"D6","name":"金政 泰彦","belongs":"富士通研究所"},
-{"sessionid":"D6","name":"国島 丈生","belongs":"岡山県立大学"},
-{"sessionid":"E6","name":"大島 裕明","belongs":"京都大学"},
-{"sessionid":"E6","name":"前川 卓也","belongs":"大阪大学"},
-{"sessionid":"F6","name":"小杉 尚子","belongs":"NTT"},
-{"sessionid":"F6","name":"吉田 尚史","belongs":"駒澤大学"},
-{"sessionid":"A7","name":"NULL","belongs":"NULL"},
-{"sessionid":"A7","name":"NULL","belongs":"NULL"},
-{"sessionid":"B7","name":"白石 優旗","belongs":"筑波技術大学"},
-{"sessionid":"B7","name":"灘本 明代","belongs":"甲南大学"},
-{"sessionid":"C7","name":"河合 由起子","belongs":"京都産業大学"},
-{"sessionid":"C7","name":"山口 実靖","belongs":"工学院大学"},
-{"sessionid":"D7","name":"清水 敏之","belongs":"京都大学"},
-{"sessionid":"D7","name":"喜田 拓也","belongs":"北海道大学"},
-{"sessionid":"E7","name":"折田 明子","belongs":"関東学院大学"},
-{"sessionid":"E7","name":"三島 健","belongs":"NTT"},
-{"sessionid":"F7","name":"上土井 陽子","belongs":"広島市立大学"},
-{"sessionid":"F7","name":"河野 浩之","belongs":"南山大学"},
-{"sessionid":"A8","name":"木俵 豊","belongs":"NICT"},
-{"sessionid":"A8","name":"飯沢 篤志","belongs":"リコー"},
-{"sessionid":"B8","name":"宮崎 純","belongs":"東京工業大学"},
-{"sessionid":"B8","name":"森本 康彦","belongs":"広島大学"},
-{"sessionid":"C8","name":"大野 成義","belongs":"職業能力開発総合大学校"},
-{"sessionid":"C8","name":"増永 良文","belongs":"お茶の水女子大学名誉教授"},
-{"sessionid":"D8","name":"的野 晃整","belongs":"産業技術総合研究所"},
-{"sessionid":"D8","name":"劉 健全","belongs":"NEC"},
-{"sessionid":"E8","name":"陳 幸生","belongs":"神奈川工科大学"},
-{"sessionid":"E8","name":"有次 正義","belongs":"熊本大学"},
-{"sessionid":"F8","name":"佐藤 哲司","belongs":"筑波大学"},
-{"sessionid":"F8","name":"岩井原 瑞穂","belongs":"早稲田大学"},
-{"sessionid":"A9","name":"戸田 浩之","belongs":"NTT"},
-{"sessionid":"A9","name":"江口 浩二","belongs":"神戸大学"},
-{"sessionid":"B9","name":"奥 健太","belongs":"立命館大学"},
-{"sessionid":"B9","name":"松本 一則","belongs":"KDDI研究所"},
-{"sessionid":"C9","name":"神崎 映光","belongs":"大阪大学"},
-{"sessionid":"C9","name":"油井 誠","belongs":"産業技術総合研究所"},
-{"sessionid":"D9","name":"樋口 健","belongs":"福井大学"},
-{"sessionid":"D9","name":"渡辺 陽介","belongs":"東京工業大学"},
-{"sessionid":"E9","name":"田中 克己","belongs":"京都大学"},
-{"sessionid":"E9","name":"富井 尚志","belongs":"横浜国立大学"},
-{"sessionid":"F9","name":"加藤 誠","belongs":"京都大学"},
-{"sessionid":"F9","name":"宮森 恒","belongs":"京都産業大学"},
-{"sessionid":"P1","name":"波多野 賢治","belongs":"同志社大学"},
-{"sessionid":"P1","name":"土田 正明","belongs":"NEC"},
-{"sessionid":"P2","name":"加藤 誠","belongs":"京都大学"},
-{"sessionid":"P2","name":"木村 文則","belongs":"立命館大学"},
-{"sessionid":"P3","name":"山本 岳洋","belongs":"京都大学"},
-{"sessionid":"P3","name":"村尾 和哉","belongs":"神戸大学"},
-{"sessionid":"X3","name":"Xさん","belongs":"X大学"}
-];
+[ {
+    "sessionid" : "E1",
+    "name" : "小林 亜樹",
+    "belongs" : "工学院大"
+  }, {
+    "sessionid" : "E1",
+    "name" : "中野 美由紀",
+    "belongs" : "芝工大"
+  }, {
+    "sessionid" : "E2",
+    "name" : "熊本 忠彦",
+    "belongs" : "千葉工大"
+  }, {
+    "sessionid" : "E2",
+    "name" : "野宮 浩揮",
+    "belongs" : "京都工芸繊維大学"
+  }, {
+    "sessionid" : "E3",
+    "name" : "平手 勇宇",
+    "belongs" : "楽天"
+  }, {
+    "sessionid" : "E3",
+    "name" : "森本 康彦",
+    "belongs" : "広大"
+  }, {
+    "sessionid" : "E4",
+    "name" : "三島 健",
+    "belongs" : "NTT"
+  }, {
+    "sessionid" : "E4",
+    "name" : "油井 誠",
+    "belongs" : "産総研"
+  }, {
+    "sessionid" : "A1",
+    "name" : "鈴木 伸崇",
+    "belongs" : "筑波大"
+  }, {
+    "sessionid" : "A1",
+    "name" : "清水 敏之",
+    "belongs" : "京大"
+  }, {
+    "sessionid" : "E5",
+    "name" : "上土井 陽子",
+    "belongs" : "広市大"
+  }, {
+    "sessionid" : "E5",
+    "name" : "横山 大作",
+    "belongs" : "東大"
+  }, {
+    "sessionid" : "A2",
+    "name" : "木村 昌臣",
+    "belongs" : "芝浦工大"
+  }, {
+    "sessionid" : "A2",
+    "name" : "櫻井 茂明",
+    "belongs" : "東芝"
+  }, {
+    "sessionid" : "E6",
+    "name" : "江口 浩二",
+    "belongs" : "神戸大"
+  }, {
+    "sessionid" : "E6",
+    "name" : "劉 健全",
+    "belongs" : "NEC"
+  }, {
+    "sessionid" : "A3",
+    "name" : "土田 正明",
+    "belongs" : "ＮＥＣ"
+  }, {
+    "sessionid" : "A3",
+    "name" : "奥 健太",
+    "belongs" : "立命館大"
+  }, {
+    "sessionid" : "E7",
+    "name" : "村上 直",
+    "belongs" : "KEK"
+  }, {
+    "sessionid" : "E7",
+    "name" : "的野 晃整",
+    "belongs" : "産総研、AIST"
+  }, {
+    "sessionid" : "A4",
+    "name" : "松本 一則",
+    "belongs" : "KDDI研"
+  }, {
+    "sessionid" : "A4",
+    "name" : "森嶋 厚行",
+    "belongs" : "筑波大"
+  }, {
+    "sessionid" : "E8",
+    "name" : "国島 丈生",
+    "belongs" : "岡山県大"
+  }, {
+    "sessionid" : "E8",
+    "name" : "大野 成義",
+    "belongs" : "職業大"
+  }, {
+    "sessionid" : "A5",
+    "name" : "小杉 尚子",
+    "belongs" : "高崎健康福祉大学"
+  }, {
+    "sessionid" : "A5",
+    "name" : "渡辺 陽介",
+    "belongs" : "名大"
+  }, {
+    "sessionid" : "A6",
+    "name" : "櫻井 茂明",
+    "belongs" : "東芝"
+  }, {
+    "sessionid" : "A6",
+    "name" : "佐久間 淳",
+    "belongs" : "筑波大"
+  }, {
+    "sessionid" : "A8",
+    "name" : "熊本 忠彦",
+    "belongs" : "千葉工大"
+  }, {
+    "sessionid" : "A8",
+    "name" : "劉 健全",
+    "belongs" : "NEC"
+  }, {
+    "sessionid" : "F1",
+    "name" : "吉廣 卓哉",
+    "belongs" : "和大"
+  }, {
+    "sessionid" : "F1",
+    "name" : "松本 一則",
+    "belongs" : "KDDI研"
+  }, {
+    "sessionid" : "F2",
+    "name" : "豊田 真智子",
+    "belongs" : "NTT"
+  }, {
+    "sessionid" : "F2",
+    "name" : "白川 真澄",
+    "belongs" : "阪大"
+  }, {
+    "sessionid" : "F3",
+    "name" : "伊藤 一成",
+    "belongs" : "青学大"
+  }, {
+    "sessionid" : "F3",
+    "name" : "上田 真由美",
+    "belongs" : "流科大"
+  }, {
+    "sessionid" : "F4",
+    "name" : "王 元元",
+    "belongs" : "京都産業大学"
+  }, {
+    "sessionid" : "F4",
+    "name" : "上善 恒雄",
+    "belongs" : "OECU"
+  }, {
+    "sessionid" : "B1",
+    "name" : "大島 裕明",
+    "belongs" : "京大"
+  }, {
+    "sessionid" : "B1",
+    "name" : "金政 泰彦",
+    "belongs" : "富士通研"
+  }, {
+    "sessionid" : "F5",
+    "name" : "野宮 浩揮",
+    "belongs" : "京都工芸繊維大学"
+  }, {
+    "sessionid" : "F5",
+    "name" : "庄司 裕子",
+    "belongs" : "中大"
+  }, {
+    "sessionid" : "B2",
+    "name" : "欅 惇志",
+    "belongs" : "東工大"
+  }, {
+    "sessionid" : "B2",
+    "name" : "宇津呂 武仁",
+    "belongs" : "筑波大"
+  }, {
+    "sessionid" : "F6",
+    "name" : "王 元元",
+    "belongs" : "京都産業大学"
+  }, {
+    "sessionid" : "F6",
+    "name" : "谷崎 正明",
+    "belongs" : "日立、京大"
+  }, {
+    "sessionid" : "B3",
+    "name" : "清光 英成",
+    "belongs" : "神戸大"
+  }, {
+    "sessionid" : "B3",
+    "name" : "豊田 正史",
+    "belongs" : "東大"
+  }, {
+    "sessionid" : "F7",
+    "name" : "上土井 陽子",
+    "belongs" : "広市大"
+  }, {
+    "sessionid" : "F7",
+    "name" : "豊田 真智子",
+    "belongs" : "NTT"
+  }, {
+    "sessionid" : "B4",
+    "name" : "木村 昌臣",
+    "belongs" : "芝浦工大"
+  }, {
+    "sessionid" : "B4",
+    "name" : "吉田 尚史",
+    "belongs" : "駒大"
+  }, {
+    "sessionid" : "F8",
+    "name" : "江口 浩二",
+    "belongs" : "神戸大"
+  }, {
+    "sessionid" : "F8",
+    "name" : "鷹野 孝典",
+    "belongs" : "神奈工"
+  }, {
+    "sessionid" : "B5",
+    "name" : "関 和広",
+    "belongs" : "甲南大"
+  }, {
+    "sessionid" : "B5",
+    "name" : "山本 岳洋",
+    "belongs" : "京大"
+  }, {
+    "sessionid" : "B6",
+    "name" : "宮崎 収兄",
+    "belongs" : "千葉工大"
+  }, {
+    "sessionid" : "B6",
+    "name" : "飯沢 篤志",
+    "belongs" : "リコー"
+  }, {
+    "sessionid" : "B8",
+    "name" : "大本 英徹",
+    "belongs" : "京産大"
+  }, {
+    "sessionid" : "B8",
+    "name" : "牛尼 剛聡",
+    "belongs" : "九大"
+  }, {
+    "sessionid" : "G1",
+    "name" : "丸橋 弘治",
+    "belongs" : "富士通研"
+  }, {
+    "sessionid" : "G1",
+    "name" : "小杉 尚子",
+    "belongs" : "高崎健康福祉大学"
+  }, {
+    "sessionid" : "G2",
+    "name" : "高橋 翼",
+    "belongs" : "NEC"
+  }, {
+    "sessionid" : "G2",
+    "name" : "新谷 隆彦",
+    "belongs" : "電通大"
+  }, {
+    "sessionid" : "G3",
+    "name" : "三島 健",
+    "belongs" : "NTT"
+  }, {
+    "sessionid" : "G3",
+    "name" : "藤原 真二",
+    "belongs" : "日立"
+  }, {
+    "sessionid" : "G4",
+    "name" : "三浦 孝夫",
+    "belongs" : "法大"
+  }, {
+    "sessionid" : "G4",
+    "name" : "井上 潮",
+    "belongs" : "電大"
+  }, {
+    "sessionid" : "C1",
+    "name" : "都司 達夫",
+    "belongs" : "福井大学"
+  }, {
+    "sessionid" : "C1",
+    "name" : "藤原 靖宏",
+    "belongs" : "NTT"
+  }, {
+    "sessionid" : "G5",
+    "name" : "高橋 翼",
+    "belongs" : "NEC"
+  }, {
+    "sessionid" : "G5",
+    "name" : "金子 邦彦",
+    "belongs" : "九大"
+  }, {
+    "sessionid" : "C2",
+    "name" : "佐々木 勇和",
+    "belongs" : "名大"
+  }, {
+    "sessionid" : "C2",
+    "name" : "鎌原 淳三",
+    "belongs" : "神大"
+  }, {
+    "sessionid" : "G6",
+    "name" : "吉廣 卓哉",
+    "belongs" : "和大"
+  }, {
+    "sessionid" : "G6",
+    "name" : "富井 尚志",
+    "belongs" : "横浜国大"
+  }, {
+    "sessionid" : "C3",
+    "name" : "小林 亜樹",
+    "belongs" : "工学院大"
+  }, {
+    "sessionid" : "C3",
+    "name" : "吉田 尚史",
+    "belongs" : "駒大"
+  }, {
+    "sessionid" : "G7",
+    "name" : "木村 文則",
+    "belongs" : "立命館大学"
+  }, {
+    "sessionid" : "G7",
+    "name" : "大向 一輝",
+    "belongs" : "国立情報学研究所"
+  }, {
+    "sessionid" : "C4",
+    "name" : "伊藤 一成",
+    "belongs" : "青学大"
+  }, {
+    "sessionid" : "C4",
+    "name" : "河合 由起子",
+    "belongs" : "京産大"
+  }, {
+    "sessionid" : "G8",
+    "name" : "若林 啓",
+    "belongs" : "筑波大"
+  }, {
+    "sessionid" : "G8",
+    "name" : "戸田 浩之",
+    "belongs" : "NTT"
+  }, {
+    "sessionid" : "C5",
+    "name" : "欅 惇志",
+    "belongs" : "東工大"
+  }, {
+    "sessionid" : "C5",
+    "name" : "是津 耕司",
+    "belongs" : "NICT"
+  }, {
+    "sessionid" : "C6",
+    "name" : "大島 裕明",
+    "belongs" : "京大"
+  }, {
+    "sessionid" : "C6",
+    "name" : "安川 雅紀",
+    "belongs" : "東大"
+  }, {
+    "sessionid" : "C7",
+    "name" : "田中 克己",
+    "belongs" : "京大"
+  }, {
+    "sessionid" : "C7",
+    "name" : "鈴木 優",
+    "belongs" : "NAIST"
+  }, {
+    "sessionid" : "C8",
+    "name" : "白石 優旗",
+    "belongs" : "筑波技大"
+  }, {
+    "sessionid" : "C8",
+    "name" : "原 隆浩",
+    "belongs" : "阪大"
+  }, {
+    "sessionid" : "P1",
+    "name" : "清光 英成",
+    "belongs" : "神戸大"
+  }, {
+    "sessionid" : "P1",
+    "name" : "北山 大輔",
+    "belongs" : "工学院大学"
+  }, {
+    "sessionid" : "P2",
+    "name" : "三浦 孝夫",
+    "belongs" : "法大"
+  }, {
+    "sessionid" : "P2",
+    "name" : "平手 勇宇",
+    "belongs" : "楽天"
+  }, {
+    "sessionid" : "P3",
+    "name" : "大本 英徹",
+    "belongs" : "京産大"
+  }, {
+    "sessionid" : "P3",
+    "name" : "渡辺 知恵美",
+    "belongs" : "筑波大"
+  }, {
+    "sessionid" : "P4",
+    "name" : "若宮 翔子",
+    "belongs" : "京都産業大学"
+  }, {
+    "sessionid" : "P4",
+    "name" : "小口 正人",
+    "belongs" : "お茶大"
+  }, {
+    "sessionid" : "D1",
+    "name" : "土田 正明",
+    "belongs" : "ＮＥＣ"
+  }, {
+    "sessionid" : "D1",
+    "name" : "太田 学",
+    "belongs" : "岡大"
+  }, {
+    "sessionid" : "D2",
+    "name" : "橋本 隆子",
+    "belongs" : "CUC"
+  }, {
+    "sessionid" : "D2",
+    "name" : "加藤 誠",
+    "belongs" : "京大"
+  }, {
+    "sessionid" : "D3",
+    "name" : "戸田 浩之",
+    "belongs" : "NTT"
+  }, {
+    "sessionid" : "D3",
+    "name" : "春本 要",
+    "belongs" : "阪大"
+  }, {
+    "sessionid" : "D4",
+    "name" : "Kim Kyoungsook",
+    "belongs" : "AIST"
+  }, {
+    "sessionid" : "D4",
+    "name" : "佐藤 哲司",
+    "belongs" : "筑波大"
+  }, {
+    "sessionid" : "D5",
+    "name" : "橋本 隆子",
+    "belongs" : "CUC"
+  }, {
+    "sessionid" : "D5",
+    "name" : "関 洋平",
+    "belongs" : "筑波大"
+  }, {
+    "sessionid" : "D6",
+    "name" : "大森 匡",
+    "belongs" : "電通大"
+  }, {
+    "sessionid" : "D6",
+    "name" : "義久 智樹",
+    "belongs" : "阪大"
+  }, {
+    "sessionid" : "D7",
+    "name" : "白川 真澄",
+    "belongs" : "阪大"
+  }, {
+    "sessionid" : "D7",
+    "name" : "前田 亮",
+    "belongs" : "立命館大"
+  }, {
+    "sessionid" : "D8",
+    "name" : "川本 淳平",
+    "belongs" : "九大"
+  }, {
+    "sessionid" : "D8",
+    "name" : "中野 美由紀",
+    "belongs" : "芝工大"
+  }, {
+    "sessionid" : "X1-1",
+    "name" : "Anyone",
+    "belongs" : "Anywhere"
+  }, {
+    "sessionid" : "X1-2",
+    "name" : "Anyone",
+    "belongs" : "Anywhere"
+  }, {
+    "sessionid" : "X1-3",
+    "name" : "Anyone",
+    "belongs" : "Anywhere"
+  }, {
+    "sessionid" : "X1-4",
+    "name" : "Anyone",
+    "belongs" : "Anywhere"
+  }, {
+    "sessionid" : "X1-5",
+    "name" : "Anyone",
+    "belongs" : "Anywhere"
+  } ];
 

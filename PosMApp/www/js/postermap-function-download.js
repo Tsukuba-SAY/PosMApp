@@ -69,6 +69,7 @@ function ajaxdownload(pageName){
 					$("#reDownloadDIVList").css("display", "none");
 					$("#reDownloadDIVMap").css("display", "none");
 					localStorage.removeItem("downloadResult");
+					
 					// 再描画
 					init();
 					$("#posters").show();
